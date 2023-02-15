@@ -1,0 +1,57 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 18px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+line{
+  content:'';
+  display:block;
+  width:75%;
+  border:1px solid;
+  margin-bottom: 4px;
+}
+a {
+  text-decoration: none;
+  color: indigo;
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: darkblue;
+}
+h1 {
+  text-align: center;
+}
+.certificate {
+  display: inline-flex;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+    color: darkred;
+  }
+  .block {
+    border: 1px solid rgba(112, 111, 111, 0.6);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 3px 3px 4px 0 lightgrey;
+  }
+}
+
+@media(max-width:1020px) {
+  line {
+    width: 100%;
+  }
+}
+@media(max-width:768px) {
+  line {
+    width: 100%;
+  }
+}
