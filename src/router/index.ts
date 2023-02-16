@@ -7,6 +7,7 @@ import Skills from "@/views/SkillsView.vue";
 import Certificates from "@/views/CertificatesView.vue";
 import Backend from "@/views/BackendView.vue";
 import Frontend from "@/views/FrontendView.vue";
+import Database from "@/views/DatabaseView.vue"
 import Designer from "@/views/DesignerView.vue";
 import Pm from "@/views/PmView.vue";
 import English from "@/views/EnglishView.vue";
@@ -54,6 +55,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/certificates/frontend',
     name: 'frontend',
     component: Frontend,
+  },
+  {
+    path: '/certificates/database',
+    name: 'database',
+    component: Database,
   },
   {
     path: '/certificates/designer',

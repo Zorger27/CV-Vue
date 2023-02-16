@@ -7,7 +7,6 @@ export default class Header extends Vue {
     this.$router.push("about");
   }
 }
-
 </script>
 
 <template>
@@ -23,11 +22,11 @@ export default class Header extends Vue {
       <router-link to="/experience">Experience</router-link>
       <router-link to="/skills">Skills</router-link>
         <div class="dropdown">
-<!--          <a href=# class="dropbtn">Certificates<span class="fa fa-angle-down"></span></a>-->
           <router-link to="/certificates" class="dropbtn">Certificates<span class="fa fa-angle-down"></span></router-link>
           <div class="dropdown-content">
             <router-link to="/certificates/backend">Backend</router-link>
             <router-link to="/certificates/frontend">Frontend</router-link>
+            <router-link to="/certificates/database">Database</router-link>
             <router-link to="/certificates/designer">Designer</router-link>
             <router-link to="/certificates/pm">PM</router-link>
             <router-link to="/certificates/english">English</router-link>

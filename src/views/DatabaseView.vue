@@ -1,33 +1,33 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import designerStore from "@/store/modules/designerStore";
+import databaseStore from "@/store/modules/databaseStore";
 @Options({
   computed: {
-    designerStore() {
-      return designerStore
+    databaseStore() {
+      return databaseStore
     }
   },
   components: {},})
-export default class designer extends Vue {}
+export default class database extends Vue {}
 </script>
 
 <template>
-  <div class="designer">
-    <h1>Designer certificates</h1>
+  <div class="database">
+    <h1>DataBase Developer certificates</h1>
     <line></line>
-    <div v-for="sert in designerStore.state.designerStore" class="certificate">
+    <div v-for="sert in databaseStore.state.databaseStore" class="certificate">
       <div class="block">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
         <div>Level: <strong>{{ sert.regnumber }}</strong></div>
         <div>Grade: <strong>{{ sert.grade }}</strong></div>
         <div>Exam date: {{ sert.examdate }}</div>
         <a href={{sert.image}} target="_blank" title="Certificate...">Certificate Link</a>
-<!--        <div style="font-size: 0.7rem">{{ sert.image }}</div>-->
+        <!--        <div style="font-size: 0.7rem">{{ sert.image }}</div>-->
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.designer {flex: 1 0 auto;}
+.database {flex: 1 0 auto;}
 </style>
