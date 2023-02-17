@@ -23,9 +23,10 @@
         Programming helps to realise this desire.<br>
       </p>
       <p>
-        Since <b>2016</b>, I have combined the administrative work as CEO with the work of Digital Marketer (Google Ads, Google Analytics, Search Engine Marketing), Web Designer (Photoshop, Illustrator, Figma) and Frontend Developer (Javascript / HTML / CSS).<br>
+        Since <b>2016</b>, I have combined the administrative work as CEO with the work of Digital Marketer (Google Ads, Analytics, SEM), Web Designer (Photoshop, Illustrator, Figma) and Frontend Developer (Javascript / HTML / CSS).<br>
         In <b>2020</b>, I took up intensive study of Backend (Java, Scala, Kotlin).<br>
         In <b>2021</b>, I restored and updated my knowledge of Frontend (Vue, Angular, React).<br>
+        In <b>2022</b>, I continued my IT education (PHP, Python, Ruby).<br>
       </p>
       <p>
         I'm easy learning.<br>
