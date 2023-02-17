@@ -21,16 +21,12 @@ export default class other extends Vue {
     <line></line>
     <!--    <router-view>-->
       <div v-for="sert in otherStore.state.otherStore" class="certificate">
-        <div class="block">
+        <a class="block" :href="sert.image" title="Certificate..." target="_blank">
           <h3>{{ sert.id }}. {{ sert.title }}</h3>
-          <!--        <h3>{{ sert.id }}. <a href="{{sert.image}}" title="Certificate..." target="_blank">{{ sert.title }}</a></h3>-->
           <div>Number: <strong>{{ sert.regnumber }}</strong></div>
           <div>Grade: <strong>{{ sert.grade }}</strong></div>
           <div>Exam date: {{ sert.examdate }}</div>
-          <!--        <div>Certificate Link: {{ sert.image }}</div>-->
-          <a href="{{sert.image}}" title="Certificate..." target="_blank">Certificate Link</a>
-          <!--        <img src={{sert.image}} alt="certificate picture"/>-->
-        </div>
+        </a>
       </div>
 <!--    </router-view>-->
 <!--    <div v-for="item in otherStore" v-bind:key="item"></div>-->

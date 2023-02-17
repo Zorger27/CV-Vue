@@ -5,14 +5,14 @@ import {Options, Vue} from "vue-class-component";
 
 export default class Footer extends Vue {
   logoFooter() {
-    this.$router.push("projects");
+    this.$router.push("certificates");
   }
 }
 </script>
 
 <template>
   <footer>
-    <img src="@/assets/img/footer-logo.svg" alt="logo" class="footer-logo" @click="logoFooter" title="Go to Projects page">
+    <img src="@/assets/img/footer-logo.svg" alt="logo" class="footer-logo" @click="logoFooter" title="Go to Certificates page">
     <p class="footer-text">Designed By <b><a href="https://zorger27.github.io" title="CV (Landing Page)" target="_blank">Zorger</a></b> for Project № 14 (07.02.2023)</p>
   </footer>
 </template>

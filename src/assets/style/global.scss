@@ -32,10 +32,21 @@ h1 {
   display: inline-flex;
   padding: 1rem 1.5rem;
   text-align: left;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:hover {
+    border: 1px solid lightskyblue;
+    box-shadow: 3px 3px 4px 0 lightblue;
+    h3 {
+      color: darkblue;
+    }
+  }
   h3 {
     margin-bottom: 0;
     margin-top: 0;
-    color: darkred;
+    color: darkgreen;
   }
   .block {
     border: 1px solid rgba(112, 111, 111, 0.6);
@@ -44,7 +55,12 @@ h1 {
     box-shadow: 3px 3px 4px 0 lightgrey;
   }
 }
-
+.attention{
+  color: #a20909;
+}
+.attention:hover{
+  color: red;
+}
 @media(max-width:1020px) {
   line {
     width: 100%;

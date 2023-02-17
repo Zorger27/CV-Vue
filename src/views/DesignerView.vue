@@ -16,14 +16,12 @@ export default class designer extends Vue {}
     <h1>Designer certificates</h1>
     <line></line>
     <div v-for="sert in designerStore.state.designerStore" class="certificate">
-      <div class="block">
+      <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
-        <div>Level: <strong>{{ sert.regnumber }}</strong></div>
+        <div>Number: <strong>{{ sert.regnumber }}</strong></div>
         <div>Grade: <strong>{{ sert.grade }}</strong></div>
         <div>Exam date: {{ sert.examdate }}</div>
-        <a href={{sert.image}} target="_blank" title="Certificate...">Certificate Link</a>
-<!--        <div style="font-size: 0.7rem">{{ sert.image }}</div>-->
-      </div>
+      </a>
     </div>
   </div>
 </template>

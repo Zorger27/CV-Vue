@@ -16,7 +16,7 @@ export default class Header extends Vue {
       <img src="@/assets/img/header-logo.svg" alt="logo" @click="logo" title="Go to About page">
     </div>
     <div class="menu">
-      <router-link to="/">Home</router-link>
+      <router-link to="/">Main</router-link>
       <router-link to="/projects">Projects</router-link>
       <router-link to="/education">Education</router-link>
       <router-link to="/experience">Experience</router-link>

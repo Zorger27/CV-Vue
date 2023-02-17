@@ -4,7 +4,8 @@ import englishStore from "@/store/modules/englishStore";
 import pmStore from "@/store/modules/pmStore";
 import designerStore from "@/store/modules/designerStore";
 import databaseStore from "@/store/modules/databaseStore";
+import javaStore from "@/store/modules/javaStore";
 
 export default createStore({
-  modules: { otherStore, englishStore, pmStore, designerStore, databaseStore }
+  modules: { otherStore, englishStore, pmStore, designerStore, databaseStore, javaStore }
 })

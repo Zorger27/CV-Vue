@@ -6,7 +6,7 @@
         09.1994 - 01.1999<br>
         <b>Kyiv national university of trade and economics (KNUTE)</b><br>
         <a href="https://zorger27.github.io/img/knute.jpg" title="Certificate..." target="_blank">Accounting and Related Services</a><br>
-<!--        <a href="src/assets/doc/knute.jpg" title="Certificate..." target="_blank">Accounting and Related Services</a><br>-->
+<!--        <a :href="`~@/assets/doc/knute.jpg`" title="Certificate..." target="_blank">Accounting and Related Services</a><br>-->
       </p>
       <p>
         04.2017 - 11.2017<br>
