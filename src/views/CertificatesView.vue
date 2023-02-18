@@ -40,7 +40,6 @@ export default class certificates extends Vue {}
 <style lang="scss" scoped>
 .certificates {
   flex: 1 0 auto;
-  font-size: larger;
   li {
     text-align: left;
     list-style-type: upper-roman;
