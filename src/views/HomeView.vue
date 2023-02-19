@@ -14,7 +14,7 @@
         <a href="https://www.linkedin.com/in/anatolii-zorin/" title="My LinkedIn profile..." target="_blank"><img class=logo-image src="@/assets/ico/linkedin.svg" alt="LinkedIn"></a>
         <a href="https://github.com/Zorger27" title="My Github profile..." target="_blank"><img class=logo-image src="@/assets/ico/github.svg" alt="Github"></a>
         <a href="https://profile.codersrank.io/user/zorger27" title="My CodersRank profile..." target="_blank"><img class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>
-        <a href="https://zorger27.github.io/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img class=logo-image src="@/assets/ico/download.png" alt="Download file"></a>
+        <a href="/assets/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img class=logo-image src="@/assets/ico/download.png" alt="Download file"></a>
       </p>
     </div>
     <div class="info">

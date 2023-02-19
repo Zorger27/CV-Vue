@@ -5,14 +5,13 @@
       <p>
         09.1994 - 01.1999<br>
         <b>Kyiv national university of trade and economics (KNUTE)</b><br>
-        <a href="https://zorger27.github.io/img/knute.jpg" title="Certificate..." target="_blank">Accounting and Related Services</a><br>
-<!--        <a :href="`~@/assets/doc/knute.jpg`" title="Certificate..." target="_blank">Accounting and Related Services</a><br>-->
+        <a href="/assets/doc/knute.jpg" title="Certificate..." target="_blank">Accounting and Related Services</a><br>
       </p>
       <p>
         04.2017 - 11.2017<br>
         <b>PROG.kiev.ua</b><br>
-        <a href="https://zorger27.github.io/img/designer.jpg" title="Certificate..." target="_blank">Web-Designer (UI/UX Designer)</a><br>
-        <a href="https://zorger27.github.io/img/frontend.jpg" title="Certificate..." target="_blank">Frontend Developer</a><br>
+        <a href="/assets/doc/designer.jpg" title="Certificate..." target="_blank">Web-Designer (UI/UX Designer)</a><br>
+        <a href="/assets/doc/frontend.jpg" title="Certificate..." target="_blank">Frontend Developer</a><br>
       </p>
       <p>
         11.2020 - present<br>
@@ -40,8 +39,7 @@
     <h1>Languages</h1>
     <line></line>
     <p>English – <a href="https://www.englishdom.com/cn/fbc6541a" title="Certificate..." target="_blank">Upper-Intermediate</a></p>
-    <p>Spanish – <a href="https://zorger27.github.io/img/spanish.jpg" title="Certificate..." target="_blank">Upper-Intermediate</a></p>
-<!--    <p>Spanish – <a href="src/assets/doc/spanish.jpg" title="Certificate..." target="_blank">Upper-Intermediate</a></p>-->
+    <p>Spanish – <a href="/assets/doc/spanish.jpg" title="Certificate..." target="_blank">Upper-Intermediate</a></p>
   </div>
 
 </template>
