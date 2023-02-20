@@ -5,14 +5,14 @@ import {Options, Vue} from "vue-class-component";
 
 export default class Footer extends Vue {
   logoFooter() {
-    this.$router.push("certificates");
+    this.$router.push("projects");
   }
 }
 </script>
 
 <template>
   <footer>
-    <img src="@/assets/img/footer-logo.svg" alt="logo" class="footer-logo" @click="logoFooter" title="Go to Certificates page">
+    <img src="@/assets/img/footer-logo.svg" alt="logo" class="footer-logo" @click="logoFooter" title="Go to Projects page">
     <p class="footer-text">Designed By <b><a href="https://zorger27.github.io" title="CV (Landing Page)" target="_blank">Zorger</a></b> for Project № 14 (07.02.2023)</p>
   </footer>
 </template>
@@ -24,7 +24,7 @@ footer {
   flex: 0 0 auto;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 0.5rem;
   //background: linear-gradient(to top, rgba(204, 204, 204, 0.5), rgba(107, 106, 106, 0.9));
   background-color:hsla(0, 100%, 50%, 1);
   background-image:
@@ -41,6 +41,7 @@ footer {
     height: 4rem;
     max-height:100%;
     cursor: pointer;
+    padding-right: 0.7rem;
   }
   //img:hover {
   //  box-shadow: 3px 3px 4px 0 floralwhite;
@@ -50,9 +51,10 @@ footer {
   }
 }
 .footer-logo {
-  margin-right: 20px;
+  //margin-right: 20px;
   @media (max-width: 768px) {
-    margin-bottom: 10px;
+    margin: auto 0 auto 0;
+    //margin-bottom: 10px;
   }
 }
 .footer-text {

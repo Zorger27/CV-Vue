@@ -15,6 +15,7 @@ export default class pm extends Vue {}
   <div class="pm">
     <h1>Project Management certificates</h1>
     <line></line>
+<!--    <Certificate v-for="certificate in pmStore.state.pmStore" :key="certificate.id" :certificate="certificate" />-->
     <div v-for="sert in pmStore.state.pmStore" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>

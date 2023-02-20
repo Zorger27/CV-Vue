@@ -101,6 +101,13 @@ h1 {
   line {
     width: 100%;
   }
+  .header-logo {
+    image {
+      max-width: 100%;
+      height: 4rem;
+      max-height:100%;
+    }
+  }
   .certificates {
     ol {
       font-size: 1.1rem;
