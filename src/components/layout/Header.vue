@@ -4,9 +4,21 @@ import {Options, Vue} from "vue-class-component";
 
 export default class Header extends Vue {
   showDropdownContent = false;
-  static showDropdownContent: boolean;
+  clickOutsideHandler(event: MouseEvent) {
+    if (
+        this.showDropdownContent &&
+        !(event.target as HTMLElement).closest(".dropdown")
+    ) {
+      this.showDropdownContent = false;
+    }
+  }
+  mounted() {
+    document.addEventListener("click", this.clickOutsideHandler);
+  }
+  beforeUnmount() {
+    document.removeEventListener("click", this.clickOutsideHandler);
+  }
   logo() {
-    this.showDropdownContent = false;
     this.$router.push("about");
   }
 }
@@ -19,11 +31,11 @@ export default class Header extends Vue {
       <img src="@/assets/img/header-logo.svg" alt="logo" @click="logo" title="Go to About page">
     </div>
     <div class="menu">
-      <router-link to="/" @click="showDropdownContent = false">Main</router-link>
-      <router-link to="/projects" @click="showDropdownContent = false">Projects</router-link>
-      <router-link to="/education" @click="showDropdownContent = false">Education</router-link>
-      <router-link to="/experience" @click="showDropdownContent = false">Experience</router-link>
-      <router-link to="/skills" @click="showDropdownContent = false">Skills</router-link>
+      <router-link to="/">Main</router-link>
+      <router-link to="/projects">Projects</router-link>
+      <router-link to="/education">Education</router-link>
+      <router-link to="/experience">Experience</router-link>
+      <router-link to="/skills">Skills</router-link>
         <div class="dropdown" @click="showDropdownContent = !showDropdownContent">
           <router-link to="/certificates" class="dropbtn">Certificates<span class="fa fa-angle-down"></span></router-link>
           <div class="dropdown-content" v-show="showDropdownContent">
@@ -36,7 +48,7 @@ export default class Header extends Vue {
             <router-link to="/certificates/other" @click=!showDropdownContent>Other</router-link>
           </div>
         </div>
-      <router-link to="/about" @click="showDropdownContent = false">About</router-link>
+      <router-link to="/about">About</router-link>
     </div>
   </header>
 </template>
