@@ -1,53 +1,81 @@
+<script lang="ts">
+import {Options, Vue} from "vue-class-component";
+import englishdomStore from "@/store/modules/diplomas/englishdomStore";
+import languagesStore from "@/store/modules/diplomas/languagesStore";
+import itvdnStore from "@/store/modules/diplomas/itvdnStore";
+import progStore from "@/store/modules/diplomas/progStore";
+import knuteStore from "@/store/modules/diplomas/knuteStore";
+@Options({
+  computed: {
+    knuteStore() {return knuteStore},
+    progStore() {return progStore},
+    itvdnStore() {return itvdnStore},
+    languagesStore() {return languagesStore},
+    englishdomStore() {return englishdomStore}},
+  components: {},})
+export default class education extends Vue {}
+</script>
+
 <template>
   <div class="education">
     <h1>Education</h1>
     <line></line>
-      <p>
-        09.1994 - 01.1999<br>
-        <b>Kyiv national university of trade and economics (KNUTE)</b><br>
-        <a href="/assets/doc/knute.jpg" title="Certificate..." target="_blank">Accounting and Related Services</a><br>
-      </p>
-      <p>
-        04.2017 - 11.2017<br>
-        <b>PROG.kiev.ua</b><br>
-        <a href="/assets/doc/designer.jpg" title="Certificate..." target="_blank">Web-Designer (UI/UX Designer)</a><br>
-        <a href="/assets/doc/frontend.jpg" title="Certificate..." target="_blank">Frontend Developer</a><br>
-      </p>
-      <p>
-        11.2020 - present<br>
-        <b>ITVDN - IT Video Developers Network</b><br>
-        <a href="https://testprovider.com/ru/search-certificate/tp31617068d" title="Diploma..." target="_blank">Java Developer</a><br>
-        <a href="https://testprovider.com/ru/search-certificate/tp24303907d" title="Diploma..." target="_blank">HTML Coder</a><br>
-        <a href="https://testprovider.com/ru/search-certificate/tp84806711d" title="Diploma..." target="_blank">JavaScript Developer</a><br>
-        <a href="https://testprovider.com/ru/search-certificate/tp31003654d" title="Diploma..." target="_blank">Angular Developer</a><br>
-        <a href="https://testprovider.com/ru/search-certificate/tp37723782d" title="Diploma..." target="_blank">React Developer</a><br>
-        <a href="https://testprovider.com/ru/search-certificate/tp77692345d" title="Diploma..." target="_blank">Frontend Developer</a><br>
-        <a href="https://testprovider.com/ru/search-certificate/tp88892276d" title="Diploma..." target="_blank">PHP Developer</a><br>
-        <a href="https://testprovider.com/ru/search-certificate/tp45473683d" title="Diploma..." target="_blank">Python Developer</a><br>
-        <a href="https://testprovider.com/ru/search-certificate/tp63925579d" title="Diploma..." target="_blank">Ruby Developer</a><br>
-      </p>
-      <p>
-        11.2021 - present<br>
-        <b>EnglishDom - English language</b><br>
-        <!--            <a href="https://www.englishdom.com/cn/a7aad5cd" title="Certificate..." target="_blank">Elementary</a><br>-->
-        <a href="https://www.englishdom.com/cn/c100d53f" title="Certificate..." target="_blank">Pre-Intermediate</a><br>
-        <a href="https://www.englishdom.com/cn/9d6c54e8" title="Certificate..." target="_blank">Intermediate</a><br>
-        <a href="https://www.englishdom.com/cn/fbc6541a" title="Certificate..." target="_blank">Upper-Intermediate</a><br>
-      </p>
+    <h2><span>09.1994 - 01.1999</span><br>
+      <b>Kyiv national university of trade and economics</b>
+    </h2>
+    <div v-for="sert in knuteStore.state.knuteStore" class="diploma">
+      <a class="block" :href="sert.image" title="Diploma..." target="_blank">
+        <h3>{{ sert.id }}. {{ sert.title }}</h3>
+        <div>Number: <strong>{{ sert.regnumber }}</strong></div>
+        <div>Grade: <strong>{{ sert.grade }}</strong></div>
+        <div>Date of graduation: {{ sert.examdate }}</div>
+      </a>
+    </div>
+    <h2><span>04.2017 - 11.2017</span><br>
+      <b>PROG.kiev.ua</b>
+    </h2>
+    <div v-for="sert in progStore.state.progStore" class="diploma">
+      <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+        <h3>{{ sert.id }}. {{ sert.title }}</h3>
+        <div>Status: <strong>{{ sert.grade }}</strong></div>
+        <div>Exam date: {{ sert.examdate }}</div>
+      </a>
+    </div>
+    <h2><span>11.2020 - present</span><br>
+      <b>ITVDN - IT Video Developers Network</b>
+    </h2>
+    <div v-for="sert in itvdnStore.state.itvdnStore" class="diploma">
+      <a class="block" :href="sert.image" title="Diploma..." target="_blank">
+        <h3>{{ sert.id }}. {{ sert.title }}</h3>
+        <div>Number: <strong>{{ sert.regnumber }}</strong></div>
+        <div>Grade: <strong>{{ sert.grade }}</strong></div>
+        <div>Exam date: {{ sert.examdate }}</div>
+      </a>
+    </div>
+    <h2><span>11.2021 - present</span><br>
+      <b>EnglishDom - English language</b>
+    </h2>
+    <div v-for="sert in englishdomStore.state.englishdomStore" class="diploma">
+      <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+        <h3>{{ sert.id }}. {{ sert.title }}</h3>
+        <div>Level: <strong>{{ sert.regnumber }}</strong></div>
+        <div>Exam date: {{ sert.examdate }}</div>
+      </a>
+    </div>
   </div>
   <div class="languages">
     <h1>Languages</h1>
     <line></line>
-    <p>English – <a href="https://www.englishdom.com/cn/fbc6541a" title="Certificate..." target="_blank">Upper-Intermediate</a></p>
-    <p>Spanish – <a href="/assets/doc/spanish.jpg" title="Certificate..." target="_blank">Upper-Intermediate</a></p>
+    <div v-for="sert in languagesStore.state.languagesStore" class="diploma">
+      <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+        <h3>{{ sert.id }}. {{ sert.title }}</h3>
+        <div>Level: <strong>{{ sert.regnumber }}</strong></div>
+        <div>Exam date: {{ sert.examdate }}</div>
+      </a>
+    </div>
   </div>
 
 </template>
-
-<script>
-import {Vue} from "vue-class-component";
-export default class education extends Vue {}
-</script>
 
 <style lang="scss" scoped>
 p {
@@ -56,6 +84,15 @@ p {
 .education {
   flex: 1 0 auto;
   text-align: left;
+  span {
+    color: black;
+  }
+  h2 {
+    color: #0303af;
+    font-size: x-large;
+    margin-bottom: 0;
+    padding-left: 1rem;
+  }
 }
 .languages {
   margin-top: -1rem;
@@ -64,6 +101,28 @@ p {
   //margin: -2rem 0;
   p {
     margin: 0.5rem 0.3rem 0 0;
+  }
+}
+@media(max-width:1020px) {
+  .education {
+    h2 {
+      font-size: larger;
+      padding-left: 0.5rem;
+    }
+  }
+  .languages {
+    text-align: center;
+  }
+}
+@media(max-width:768px) {
+  .education {
+    h2 {
+      font-size: medium;
+      padding-left: 0.3rem;
+    }
+  }
+  .languages {
+    text-align: center;
   }
 }
 </style>

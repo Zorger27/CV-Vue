@@ -2,8 +2,8 @@
   <div class="skills">
     <h1>Hard & Soft skills</h1>
     <line></line>
-    <codersrank-skills-chart username="zorger27" labels="true" legend="true" active-skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>
     <div class="container">
+      <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>
       <div class="type-skills">
         <div class="hard-skills">
           <h3>Hard skills</h3>
@@ -39,6 +39,7 @@ export default class skills extends Vue {}
   text-align: left;
   h3 {
     text-decoration: underline;
+    color: deeppink;
     margin-bottom: -0.7rem;
     padding: 0 0 0.3rem 1.5rem;
   }
@@ -46,11 +47,16 @@ export default class skills extends Vue {}
     margin-right: 0.5rem;
   }
   .container {
-    display: flex;
-    justify-content: left;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-auto-flow: column;
+    grid-template-areas: "codersrank-skills-chart type-skills";
   }
   .type-skills {
-    display: inline-flex;
+    grid-area: type-skills;
+    //display: inline-flex;
     margin-right: 0.5rem;
   }
   .hard-skills ul {
@@ -59,22 +65,44 @@ export default class skills extends Vue {}
   }
   .soft-skills ul {
     list-style: none;
-    padding: 0 0 0.3rem 1.5rem;  }
+    padding: 0 0 0.3rem 1.5rem;
+  }
 
   codersrank-skills-chart {
+    grid-area: codersrank-skills-chart;
     margin-top: 1rem;
     padding-right: 0.5rem;
-    width: 75%;
+    width: 100%;
   }
-  @media(max-width:1200px) {
-    codersrank-skills-chart {
-      width: 100%;
+}
+
+@media(max-width:1020px) {
+  .skills {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "codersrank-skills-chart"
+        "type-skills";
     }
   }
-  @media(max-width:768px) {
-    codersrank-skills-chart {
-      width: 100%;
+  .type-skills {
+    display: inline-flex;
+    justify-content: space-around;
+  }
+}
+
+@media(max-width:768px) {
+  .skills {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "codersrank-skills-chart"
+        "type-skills";
     }
+  }
+  .type-skills {
+    display: grid;
+    justify-content: left;
   }
 }
 </style>

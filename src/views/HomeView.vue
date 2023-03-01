@@ -7,7 +7,6 @@
       <img src="@/assets/img/photo.svg" alt="My photo" title="My photo">
     </div>
     <div class="icons">
-      <p>
         <a href="tel:+380504411801" title="Call me: +380 50 441-18-01" target="_blank"><img class=logo-image src="@/assets/ico/phone.svg" alt="Mobile phone"></a>
         <a href="mailto:zorger27@gmail.com" title="Write me: Zorger27@GMail.com" target="_blank"><img class=logo-image src="@/assets/ico/gmail.svg" alt="E-mail"></a>
         <a href="skype:anatoliy.zorin?call" title="Call me by Skype: anatoliy.zorin" target="_blank"><img class=logo-image src="@/assets/ico/skype.svg" alt="Skype"></a>
@@ -15,7 +14,6 @@
         <a href="https://github.com/Zorger27" title="My Github profile..." target="_blank"><img class=logo-image src="@/assets/ico/github.svg" alt="Github"></a>
         <a href="https://profile.codersrank.io/user/zorger27" title="My CodersRank profile..." target="_blank"><img class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>
         <a href="/assets/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img class=logo-image src="@/assets/ico/download.png" alt="Download file"></a>
-      </p>
     </div>
     <div class="info">
       <p>
@@ -85,7 +83,7 @@ h1 {
 }
 @media(max-width:1020px) {
   .home {
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "photo icons"
         "info info";
@@ -95,11 +93,14 @@ h1 {
       height: 22rem;
     }
   }
+  .icons {
+    align-self: center;
+  }
 }
 
 @media(max-width:768px) {
   .home {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
         "photo"
         "icons"
@@ -109,6 +110,9 @@ h1 {
     img {
     height: 22rem;
     }
+  }
+  .icons {
+    align-self: center;
   }
 }
 </style>

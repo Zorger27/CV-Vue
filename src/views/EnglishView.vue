@@ -22,14 +22,6 @@ export default class english extends Vue {
         <div>Level: <strong>{{ sert.regnumber }}</strong></div>
         <div>Exam date: {{ sert.examdate }}</div>
       </a>
-<!--      <div class="block">-->
-<!--        <h3>{{ sert.id }}. {{ sert.title }}</h3>-->
-<!--        <div>Level: <strong>{{ sert.regnumber }}</strong></div>-->
-<!--&lt;!&ndash;        <div>Grade: <strong>{{ sert.grade }}</strong></div>&ndash;&gt;-->
-<!--        <div>Exam date: {{ sert.examdate }}</div>-->
-<!--&lt;!&ndash;        <img src="{{ sert.image }}"  alt="certificate"><br>&ndash;&gt;-->
-<!--        <a :href="sert.image" title="Certificate..." target="_blank">Certificate Link</a>-->
-<!--      </div>-->
     </div>
   </div>
 </template>
