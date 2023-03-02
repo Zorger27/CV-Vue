@@ -33,14 +33,14 @@ export default class Header extends Vue {
 <template>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <header>
-    <div class="header-logo">
-      <img src="@/assets/img/header-logo.svg" alt="logo" @click="logo" title="Go to About page">
+    <div class="burger-menu" @click="showMenu = !showMenu">
+      <i class="fa fa-bars burger-menu-icon"></i>
     </div>
     <div class="title">
       <h2>My CV mobile</h2>
     </div>
-    <div class="burger-menu" @click="showMenu = !showMenu">
-      <i class="fa fa-bars burger-menu-icon"></i>
+    <div class="header-logo">
+      <img src="@/assets/img/header-logo.svg" alt="logo" @click="logo" title="Go to About page">
     </div>
     <div class="menu" :class="{ 'is-active': showMenu }">
       <router-link to="/" @click="hideMenu">Main</router-link>
@@ -86,7 +86,7 @@ header {
       align-self: center;
       padding: 0.5rem 1rem;
       cursor: pointer;
-      margin-right: 1rem;
+      margin-left: 0.7rem;
       .burger-menu-icon {
         color: darkblue;
         background-color: inherit;
@@ -95,7 +95,7 @@ header {
       }
     }
     .burger-menu:hover {
-      background-color: rgba(236, 236, 235, 0.2);
+      background-color: inherit;
       border: 1px solid rgba(112, 111, 111, 0.9);
       box-shadow: 3px 3px 4px 0 lightgrey;
       .burger-menu-icon {
@@ -135,7 +135,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
     color: white;
     text-shadow: 3px 3px 4px darkblue;
     background-color: inherit;
@@ -151,30 +151,29 @@ header {
   align-items: center;
   margin: 10px;
   @media (max-width: 768px) {
-    position: absolute;
-    top: 90%;
-    //left: 0;
-    right: 0;
     display: none;
+    position: absolute;
     flex-direction: column;
-    padding: 0.6rem 1.2rem;
-    //justify-content: start;
     align-items: start;
     width: max-content;
+    top: 90%;
+    left: 0;
+    //right: 0;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1rem;
     background-color: #f1f1f1;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    border: none;
+    box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(59, 58, 58, 0.9);
+    border-radius: 5px;
     text-decoration: none;
     &.is-active {
       display: flex;
-      border: none;
       text-decoration: none;
       z-index: 1;
       a:hover {
         border: none;
         text-decoration: none;
         box-shadow: none;
-        //display: block;
       }
       a:focus {
         box-shadow: none;
@@ -183,9 +182,6 @@ header {
       }
       .fa.fa-angle-down {
         display: none;
-        //pointer-events: none;
-        //cursor: initial;
-        //opacity: 0;
       }
     }
   }
@@ -202,9 +198,6 @@ header {
     @media(max-width: 1020px) {
       font-size: 1.3rem;
     }
-    //@media(max-width: 768px) {
-    //  font-size: 1rem;
-    //}
   }
 
   a:hover {
@@ -237,7 +230,6 @@ header {
       background-color: #f1f1f1;
       border-radius: 5px;
       width: max-content;
-      //overflow: auto;
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       z-index: 1;
 
