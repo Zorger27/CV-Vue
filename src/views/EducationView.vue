@@ -66,7 +66,7 @@ export default class education extends Vue {}
   <div class="languages">
     <h1>Languages</h1>
     <line></line>
-    <div v-for="sert in languagesStore.state.languagesStore" class="diploma">
+    <div v-for="sert in languagesStore.state.languagesStore" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
         <div>Level: <strong>{{ sert.regnumber }}</strong></div>
@@ -86,6 +86,7 @@ p {
   text-align: left;
   span {
     color: black;
+    font-style: italic;
   }
   h2 {
     color: #0303af;

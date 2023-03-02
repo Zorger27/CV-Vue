@@ -3,15 +3,21 @@ import {Options, Vue} from "vue-class-component";
 @Options({components: {},})
 
 export default class Header extends Vue {
+  showMenu = false;
   showDropdownContent = false;
-  clickOutsideHandler(event: MouseEvent) {
-    if (
-        this.showDropdownContent &&
-        !(event.target as HTMLElement).closest(".dropdown")
-    ) {
-      this.showDropdownContent = false;
-    }
+
+  hideMenu() {
+    this.showMenu = false;
   }
+  clickOutsideHandler(event: MouseEvent) {
+    if (this.showMenu && !(event.target as HTMLElement).closest(".burger-menu"))
+    {this.showMenu = false;}
+    else if (this.showDropdownContent && !(event.target as HTMLElement).closest(".dropdown"))
+    {this.showDropdownContent = false;}
+  }
+  //   if (this.showDropdownContent && !(event.target as HTMLElement).closest(".dropdown"))
+  //   {this.showDropdownContent = false;}
+  // }
   mounted() {
     document.addEventListener("click", this.clickOutsideHandler);
   }
@@ -30,25 +36,31 @@ export default class Header extends Vue {
     <div class="header-logo">
       <img src="@/assets/img/header-logo.svg" alt="logo" @click="logo" title="Go to About page">
     </div>
-    <div class="menu">
-      <router-link to="/">Main</router-link>
-      <router-link to="/projects">Projects</router-link>
-      <router-link to="/education">Education</router-link>
-      <router-link to="/experience">Experience</router-link>
-      <router-link to="/skills">Skills</router-link>
+    <div class="title">
+      <h2>My CV mobile</h2>
+    </div>
+    <div class="burger-menu" @click="showMenu = !showMenu">
+      <i class="fa fa-bars burger-menu-icon"></i>
+    </div>
+    <div class="menu" :class="{ 'is-active': showMenu }">
+      <router-link to="/" @click="hideMenu">Main</router-link>
+      <router-link to="/projects" @click="hideMenu">Projects</router-link>
+      <router-link to="/education" @click="hideMenu">Education</router-link>
+      <router-link to="/experience" @click="hideMenu">Experience</router-link>
+      <router-link to="/skills" @click="hideMenu">Skills</router-link>
         <div class="dropdown" @click="showDropdownContent = !showDropdownContent">
           <router-link to="/certificates" class="dropbtn">Certificates<span class="fa fa-angle-down"></span></router-link>
           <div class="dropdown-content" v-show="showDropdownContent">
-            <router-link to="/certificates/backend" @click=!showDropdownContent>Backend</router-link>
-            <router-link to="/certificates/frontend" @click=!showDropdownContent>Frontend</router-link>
-            <router-link to="/certificates/database" @click=!showDropdownContent>Database</router-link>
-            <router-link to="/certificates/designer" @click=!showDropdownContent>Designer</router-link>
-            <router-link to="/certificates/pm" @click=!showDropdownContent>PM</router-link>
-            <router-link to="/certificates/english" @click=!showDropdownContent>English</router-link>
-            <router-link to="/certificates/other" @click=!showDropdownContent>Other</router-link>
+            <router-link to="/certificates/backend" @click="hideMenu">Backend</router-link>
+            <router-link to="/certificates/frontend" @click="hideMenu">Frontend</router-link>
+            <router-link to="/certificates/database" @click="hideMenu">Database</router-link>
+            <router-link to="/certificates/designer" @click="hideMenu">Designer</router-link>
+            <router-link to="/certificates/pm" @click="hideMenu">PM</router-link>
+            <router-link to="/certificates/english" @click="hideMenu">English</router-link>
+            <router-link to="/certificates/other" @click="hideMenu">Other</router-link>
           </div>
         </div>
-      <router-link to="/about">About</router-link>
+      <router-link to="/about" @click="hideMenu">About</router-link>
     </div>
   </header>
 </template>
@@ -61,21 +73,51 @@ header {
   position: relative;
   justify-content: space-between;
   background: linear-gradient(to bottom, rgba(229, 228, 228, 0.5), rgba(59, 58, 58, 0.9));
+  .burger-menu {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block;
+      background-color: inherit;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      //box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      align-self: center;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      margin-right: 1rem;
+      .burger-menu-icon {
+        color: darkblue;
+        background-color: inherit;
+        text-shadow: 2px 2px 4px white;
+        font-size: 2.5rem;
+      }
+    }
+    .burger-menu:hover {
+      background-color: rgba(236, 236, 235, 0.2);
+      border: 1px solid rgba(112, 111, 111, 0.9);
+      box-shadow: 3px 3px 4px 0 lightgrey;
+      .burger-menu-icon {
+        color: red;
+      }
+    }
+  }
 }
 
 .header-logo {
   margin: 10px;
   display: flex;
   img {
-    margin: auto 1rem auto 0;
+    margin: auto 0.2rem auto 0;
     max-width: 100%;
     height: 4rem;
     max-height:100%;
     cursor: pointer;
   }
-  img:hover {
-    box-shadow: 3px 3px 4px 0 purple;
-  }
+  //img:hover {
+  //  box-shadow: 3px 3px 4px 0 purple;
+  //}
   @media(max-width:1200px) {
     img {
       height: 5rem;
@@ -83,8 +125,21 @@ header {
   }
   @media(max-width:768px) {
       img {
-        height: 6rem;
+        height: 4rem;
       }
+  }
+}
+.title {
+  display: none;
+  @media(max-width:768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1rem;
+    color: white;
+    text-shadow: 3px 3px 4px darkblue;
+    background-color: inherit;
+    //padding-right: 2rem;
   }
 }
 
@@ -95,6 +150,45 @@ header {
   justify-content: flex-end;
   align-items: center;
   margin: 10px;
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 90%;
+    //left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    padding: 0.6rem 1.2rem;
+    //justify-content: start;
+    align-items: start;
+    width: max-content;
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border: none;
+    text-decoration: none;
+    &.is-active {
+      display: flex;
+      border: none;
+      text-decoration: none;
+      z-index: 1;
+      a:hover {
+        border: none;
+        text-decoration: none;
+        box-shadow: none;
+        //display: block;
+      }
+      a:focus {
+        box-shadow: none;
+        border: none;
+        text-decoration: none;
+      }
+      .fa.fa-angle-down {
+        display: none;
+        //pointer-events: none;
+        //cursor: initial;
+        //opacity: 0;
+      }
+    }
+  }
 
   a {
     border: 1px solid transparent;
@@ -108,9 +202,9 @@ header {
     @media(max-width: 1020px) {
       font-size: 1.3rem;
     }
-    @media(max-width: 768px) {
-      font-size: 1rem;
-    }
+    //@media(max-width: 768px) {
+    //  font-size: 1rem;
+    //}
   }
 
   a:hover {
@@ -138,15 +232,12 @@ header {
 
     .dropdown-content {
       position: absolute;
-      //visibility: hidden;
-      //opacity: 0;
-      //transition: 0.6s opacity, 0.6s visibility;
       margin-top: 0.3rem;
       text-align: left;
       background-color: #f1f1f1;
       border-radius: 5px;
       width: max-content;
-      overflow: auto;
+      //overflow: auto;
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       z-index: 1;
 
@@ -175,13 +266,5 @@ header {
       }
     }
   }
-
-  //.dropdown:hover .dropbtn {
-  //  color: red;
-  //}
-  //.dropdown:hover > .dropdown-content {
-  //  visibility: visible;
-  //  opacity: 1;
-  //}
 }
 </style>

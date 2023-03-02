@@ -18,7 +18,7 @@ export default class backend extends Vue {}
   <div class="backend">
     <h1>Backend Diplomas & Certificates</h1>
     <line></line>
-      <h2 class="diplom"><span>✅ </span><b><a class="attention" href="https://testprovider.com/ru/search-certificate/tp31617068d" title="Diploma..." target="_blank">Java Developer</a></b></h2>
+      <h2 class="diplom"><span>✅ </span><b><a class="attention" id="java" href="https://testprovider.com/ru/search-certificate/tp31617068d" title="Diploma..." target="_blank">Java Developer</a></b></h2>
         <div v-for="sert in javaStore.state.javaStore" class="certificate">
 <!--          <certificate></certificate>-->
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
