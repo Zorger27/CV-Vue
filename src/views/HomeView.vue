@@ -7,15 +7,19 @@ export default class home extends Vue {
     return {
       sliderImages: [
         require('@/assets/diploma/TP24303907D.jpg'),
+        require('@/assets/english/02 Conversational English.jpg'),
         require('@/assets/diploma/TP31003654D.jpg'),
         require('@/assets/diploma/TP31617068D.jpg'),
         require('@/assets/doc/designer.jpg'),
         require('@/assets/diploma/TP37723782D.jpg'),
+        require('@/assets/english/07 Intermediate level of English.jpg'),
         require('@/assets/diploma/TP45473683D.jpg'),
         require('@/assets/diploma/TP63925579D.jpg'),
         require('@/assets/doc/frontend.jpg'),
         require('@/assets/diploma/TP77692345D.jpg'),
+        require('@/assets/img/seashore.jpg'),
         require('@/assets/diploma/TP84806711D.jpg'),
+        require('@/assets/english/10 English for advanced.jpg'),
         require('@/assets/diploma/TP88892276D.jpg'),
       ],
     }
@@ -73,7 +77,8 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 4fr;
   grid-template-rows: auto;
-  grid-gap: 1rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 0;
   grid-auto-flow: column;
   grid-template-areas:
       "photo icons info"
@@ -108,18 +113,9 @@ h1 {
 
   .slider {
     grid-area: slider;
-    width: 45%;
     justify-self: center;
-    overflow: hidden;
-    box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.2);
-    margin-bottom: 1rem;
-    @media(max-width:1020px) {
-      width: 85%;
-    }
-    @media(max-width:768px) {
-      width: 98%;
-      margin-bottom: 0.2rem;
-    }
+    //margin-top: -1.5rem;
+    margin-bottom: 0.3rem;
   }
 }
 @media(max-width:1020px) {
@@ -155,6 +151,7 @@ h1 {
     }
   }
   .icons {
+    padding-top: 1rem;
     align-self: center;
   }
 }

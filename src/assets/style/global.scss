@@ -28,6 +28,20 @@ a:hover {
 h1 {
   text-align: center;
 }
+.slider {
+  width: 45%;
+  overflow: hidden;
+  border: 1px solid rgba(112, 111, 111, 0.9);
+  box-shadow: 3px 3px 4px 0 lightgrey;
+  padding: 0.5rem;
+  @media(max-width:1020px) {
+    width: 85%;
+  }
+  @media(max-width:768px) {
+    width: 95%;
+  }
+}
+
 .certificates {
   ol {
     font-size: 1.4rem;

@@ -82,56 +82,50 @@ export default {
   overflow: hidden;
   width: 100%;
   height: 100%;
-}
-
-.slider-wrapper {
-  display: flex;
-  transition: transform 0.5s ease-out;
-}
-
-.slider-item {
-  flex: 0 0 100%;
-}
-
-.slider-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slider-controls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-.left-control, .right-control {
-  pointer-events: all;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  border: none;
-  background: transparent;
-  color: darkred;
-  font-size: 2.5rem;
-  cursor: pointer;
-  @media(max-width:1020px) {
-    font-size: 2.0rem;
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-out;
+    .slider-item {
+      flex: 0 0 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
-  @media(max-width:768px) {
-    font-size: 1.5rem;
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    .left-control, .right-control {
+      pointer-events: all;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border: none;
+      background: transparent;
+      color: darkred;
+      font-size: 2.5rem;
+      cursor: pointer;
+      @media(max-width:1020px) {
+        font-size: 2.0rem;
+      }
+      @media(max-width:768px) {
+        font-size: 1.5rem;
+      }
+    }
+    .left-control {
+      left: 0.3rem;
+    }
+    .right-control {
+      right: 0.3rem;
+    }
   }
-
 }
-.left-control {
-  left: 1rem;
-}
-.right-control {
-  right: 1rem;
-}
-
 </style>
