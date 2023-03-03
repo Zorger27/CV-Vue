@@ -50,12 +50,6 @@ export default class certificates extends Vue {}
       margin: 0;
     }
   }
-  .attention{
-    color: #a20909;
-  }
-  .attention:hover{
-    color: red;
-  }
   .diplom{
     list-style-type: decimal;
     color: black;

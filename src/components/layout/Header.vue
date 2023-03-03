@@ -34,7 +34,8 @@ export default class Header extends Vue {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <header>
     <div class="burger-menu" @click="showMenu = !showMenu">
-      <i class="fa fa-bars burger-menu-icon"></i>
+<!--      <i class="fa fa-bars burger-menu-icon"></i>-->
+      <i :class="['fa', showMenu ? 'fa-times' : 'fa-bars', 'burger-menu-icon']"></i>
     </div>
     <div class="title">
       <h2>My CV mobile</h2>
@@ -49,7 +50,9 @@ export default class Header extends Vue {
       <router-link to="/experience" @click="hideMenu">Experience</router-link>
       <router-link to="/skills" @click="hideMenu">Skills</router-link>
         <div class="dropdown" @click="showDropdownContent = !showDropdownContent">
-          <router-link to="/certificates" class="dropbtn">Certificates<span class="fa fa-angle-down"></span></router-link>
+<!--          <a class="dropbtn">Certificates<span class="fa fa-angle-down"></span></a>-->
+          <a class="dropbtn">Certificates<span :class="['fa', showDropdownContent ? 'fa-caret-up' : 'fa-caret-down']"></span></a>
+          <router-link to="/certificates" class="dropbtnMob">Certificates</router-link>
           <div class="dropdown-content" v-show="showDropdownContent">
             <router-link to="/certificates/backend" @click="hideMenu">Backend</router-link>
             <router-link to="/certificates/frontend" @click="hideMenu">Frontend</router-link>
@@ -75,6 +78,18 @@ header {
   background: linear-gradient(to bottom, rgba(229, 228, 228, 0.5), rgba(59, 58, 58, 0.9));
   .burger-menu {
     display: none;
+  }
+  .dropbtn {
+    display: flex;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .dropbtnMob {
+    display: none;
+    @media (max-width: 768px) {
+      display: flex;
+    }
   }
   @media (max-width: 768px) {
     .burger-menu {
@@ -115,9 +130,6 @@ header {
     max-height:100%;
     cursor: pointer;
   }
-  //img:hover {
-  //  box-shadow: 3px 3px 4px 0 purple;
-  //}
   @media(max-width:1200px) {
     img {
       height: 5rem;
@@ -163,25 +175,24 @@ header {
     padding: 0.6rem 1rem;
     background-color: #f1f1f1;
     box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(59, 58, 58, 0.9);
     border-radius: 5px;
     text-decoration: none;
     &.is-active {
       display: flex;
       text-decoration: none;
       z-index: 1;
+      a {
+        border: none;
+      }
       a:hover {
         border: none;
-        text-decoration: none;
+        text-decoration: underline;
         box-shadow: none;
       }
       a:focus {
         box-shadow: none;
         border: none;
         text-decoration: none;
-      }
-      .fa.fa-angle-down {
-        display: none;
       }
     }
   }
@@ -205,6 +216,7 @@ header {
     border: 1px solid rgba(112, 111, 111, 0.9);
     box-shadow: 3px 3px 4px 0 lightgrey;
     color: darkcyan;
+    cursor: pointer;
   }
 
   a:focus {
@@ -215,8 +227,11 @@ header {
   }
 
   .fa {
-    margin-left: 5px;
-    color: inherit;
+    margin-left: 0.3rem;
+    margin-top: 0.2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px white;
+    color: red;
   }
 
   .dropdown {

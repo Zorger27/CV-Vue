@@ -1,3 +1,28 @@
+<script lang="ts">
+import {Options, Vue} from 'vue-class-component';
+import Slider from "@/components/Slider.vue";
+@Options({components: {Slider},})
+export default class home extends Vue {
+  data() {
+    return {
+      sliderImages: [
+        require('@/assets/diploma/TP24303907D.jpg'),
+        require('@/assets/diploma/TP31003654D.jpg'),
+        require('@/assets/diploma/TP31617068D.jpg'),
+        require('@/assets/doc/designer.jpg'),
+        require('@/assets/diploma/TP37723782D.jpg'),
+        require('@/assets/diploma/TP45473683D.jpg'),
+        require('@/assets/diploma/TP63925579D.jpg'),
+        require('@/assets/doc/frontend.jpg'),
+        require('@/assets/diploma/TP77692345D.jpg'),
+        require('@/assets/diploma/TP84806711D.jpg'),
+        require('@/assets/diploma/TP88892276D.jpg'),
+      ],
+    }
+  }
+};
+</script>
+
 <template>
   <h1>Anatolii Zorin</h1>
   <h2>— Web Developer —</h2>
@@ -32,13 +57,11 @@
         I'm comfortable working in a team or solo.
       </p>
     </div>
+    <div class="slider">
+      <Slider :images=sliderImages></Slider>
+    </div>
   </div>
 </template>
-
-<script lang="ts">
-import {Vue} from 'vue-class-component';
-export default class home extends Vue {};
-</script>
 
 <style lang="scss" scoped>
 h1 {
@@ -52,7 +75,9 @@ h1 {
   grid-template-rows: auto;
   grid-gap: 1rem;
   grid-auto-flow: column;
-  grid-template-areas: "photo icons info";
+  grid-template-areas:
+      "photo icons info"
+      "slider slider slider";
 
   .photo {
     margin-top: -2rem;
@@ -80,13 +105,30 @@ h1 {
     grid-area: info;
     text-align: left;
   }
+
+  .slider {
+    grid-area: slider;
+    width: 45%;
+    justify-self: center;
+    overflow: hidden;
+    box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    @media(max-width:1020px) {
+      width: 85%;
+    }
+    @media(max-width:768px) {
+      width: 98%;
+      margin-bottom: 0.2rem;
+    }
+  }
 }
 @media(max-width:1020px) {
   .home {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "photo icons"
-        "info info";
+        "info info"
+        "slider slider";
   }
   .photo {
     img {
@@ -104,7 +146,8 @@ h1 {
     grid-template-areas:
         "photo"
         "icons"
-        "info";
+        "info"
+        "slider";
   }
   .photo {
     img {
