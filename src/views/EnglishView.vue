@@ -10,22 +10,24 @@ import Slider from "@/components/Slider.vue";
   },
   components: {Slider},})
 export default class english extends Vue {
-  data() {
-    return {
-      sliderImages: [
-        require('@/assets/english/01 English for beginners.jpg'),
-        require('@/assets/english/02 Conversational English.jpg'),
-        require('@/assets/english/03 English for traveling.jpg'),
-        require('@/assets/english/04 English for IT.jpg'),
-        require('@/assets/english/05 Interview in English.jpg'),
-        require('@/assets/english/06 Business English.jpg'),
-        require('@/assets/english/07 Intermediate level of English.jpg'),
-        require('@/assets/english/08 Irregular Verbs.jpg'),
-        require('@/assets/english/09 English with native speaker.jpg'),
-        require('@/assets/english/10 English for advanced.jpg'),
-      ],
-    }
-  }
+  images = require.context('@/assets/english/', false, /\.jpg$/)
+  sliderImages = this.images.keys().map(key => this.images(key))
+  // data() {
+  //   return {
+  //     sliderImages: [
+  //       require('@/assets/english/01 English for beginners.jpg'),
+  //       require('@/assets/english/02 Conversational English.jpg'),
+  //       require('@/assets/english/03 English for traveling.jpg'),
+  //       require('@/assets/english/04 English for IT.jpg'),
+  //       require('@/assets/english/05 Interview in English.jpg'),
+  //       require('@/assets/english/06 Business English.jpg'),
+  //       require('@/assets/english/07 Intermediate level of English.jpg'),
+  //       require('@/assets/english/08 Irregular Verbs.jpg'),
+  //       require('@/assets/english/09 English with native speaker.jpg'),
+  //       require('@/assets/english/10 English for advanced.jpg'),
+  //     ],
+  //   }
+  // }
 }
 </script>
 

@@ -130,16 +130,6 @@ header {
     max-height:100%;
     cursor: pointer;
   }
-  @media(max-width:1200px) {
-    img {
-      height: 5rem;
-    }
-  }
-  @media(max-width:768px) {
-      img {
-        height: 4rem;
-      }
-  }
 }
 .title {
   display: none;
@@ -175,6 +165,7 @@ header {
     padding: 0.6rem 1rem;
     background-color: #f1f1f1;
     box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(59, 58, 58, 0.9);
     border-radius: 5px;
     text-decoration: none;
     &.is-active {
@@ -207,7 +198,7 @@ header {
     padding: 5px;
     color: darkblue;
     @media(max-width: 1020px) {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
   }
 
@@ -240,13 +231,17 @@ header {
 
     .dropdown-content {
       position: absolute;
-      margin-top: 0.3rem;
+      margin-top: 1.2rem;
       text-align: left;
       background-color: #f1f1f1;
+      border: 1px solid rgba(59, 58, 58, 0.9);
       border-radius: 5px;
       width: max-content;
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       z-index: 1;
+      @media(max-width: 1020px) {
+        margin-top: 1.45rem;
+      }
 
       a {
         color: darkblue;

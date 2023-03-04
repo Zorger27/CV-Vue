@@ -3,6 +3,13 @@ import {Options, Vue} from 'vue-class-component';
 import Slider from "@/components/Slider.vue";
 @Options({components: {Slider},})
 export default class home extends Vue {
+  // images: { folder: string; file: string }[] = [
+  //   { folder: '@/assets/diploma/', file: 'TP24303907D.jpg' },
+  //   { folder: '@/assets/english/', file: '02 Conversational English.jpg' },
+  //   { folder: '@/assets/diploma/', file: 'TP31003654D.jpg' },
+  // ];
+  // sliderImages: string[] = this.images.map(({ folder, file }) => require(`${folder}${file}`));
+
   data() {
     return {
       sliderImages: [
