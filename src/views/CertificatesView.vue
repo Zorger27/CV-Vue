@@ -2,33 +2,26 @@
   <div class="certificates">
     <h1>Certificates</h1>
     <line></line>
-<!--    <h4>Сделать карусель дипломов</h4>-->
-<!--    <line></line>-->
-    <ol>
-      <li><b><router-link to="/certificates/backend">Backend Diplomas & Certificates</router-link></b>
-        <ol>
-<!--          <li class="diplom"><p><b><a class="attention" href="https://testprovider.com/ru/search-certificate/tp31617068d" title="Diploma..." target="_blank">Java Developer</a></b></p></li>-->
-          <li class="diplom"><p><b><router-link to="/certificates/backend">Java Developer</router-link></b></p></li>
-          <li class="diplom"><p><b><router-link to="/certificates/backend">PHP Developer</router-link></b></p></li>
-          <li class="diplom"><p><b><router-link to="/certificates/backend">Python Developer</router-link></b></p></li>
-          <li class="diplom"><p><b><router-link to="/certificates/backend">Ruby Developer</router-link></b></p></li>
-        </ol>
-      </li>
-      <li><b><router-link to="/certificates/frontend">Frontend Diplomas & Certificates</router-link></b>
-        <ol>
-          <li class="diplom"><p><b><router-link to="/certificates/frontend">HTML Coder</router-link></b></p></li>
-          <li class="diplom"><p><b><router-link to="/certificates/frontend">JavaScript Developer</router-link></b></p></li>
-          <li class="diplom"><p><b><router-link to="/certificates/frontend">Angular Developer</router-link></b></p></li>
-          <li class="diplom"><p><b><router-link to="/certificates/frontend">React Developer</router-link></b></p></li>
-          <li class="diplom"><p><b><router-link to="/certificates/frontend">Frontend Developer</router-link></b></p></li>
-        </ol>
-      </li>
-      <li><b><router-link to="/certificates/database">DataBase Developer Certificates</router-link></b></li>
-      <li><b><router-link to="/certificates/designer">UX/UI Designer Certificates</router-link></b></li>
-      <li><b><router-link to="/certificates/pm">Project Management Certificates</router-link></b></li>
-      <li><b><router-link to="/certificates/other">Other Certificates</router-link></b></li>
-      <li><b><router-link to="/certificates/english">English language Certificates</router-link></b></li>
-    </ol>
+      <div class="prj back"><router-link class="block" to="/certificates/backend">
+        <b>Backend Diplomas & Certificates:</b><br>
+        <i>1) Java Developer<br>
+        2) PHP Developer<br>
+        3) Python Developer<br>
+        4) Ruby Developer</i>
+      </router-link></div>
+      <div class="prj front"><router-link class="block" to="/certificates/frontend">
+        <b>Frontend Diplomas & Certificates:</b><br>
+        <i>1) HTML Coder<br>
+        2) JavaScript Developer<br>
+        3) Angular Developer<br>
+        4) React Developer<br>
+        5) Frontend Developer</i>
+      </router-link></div>
+      <div class="prj"><b><router-link class="block" to="/certificates/database">DataBase Developer Certificates</router-link></b></div>
+      <div class="prj"><b><router-link class="block" to="/certificates/designer">UX/UI Designer Certificates</router-link></b></div>
+      <div class="prj"><b><router-link class="block" to="/certificates/pm">Project Management Certificates</router-link></b></div>
+      <div class="prj"><b><router-link class="block" to="/certificates/other">Other Certificates</router-link></b></div>
+      <div class="prj eng"><b><router-link class="block" to="/certificates/english">English language Certificates</router-link></b></div>
   </div>
 </template>
 
@@ -41,27 +34,41 @@ export default class certificates extends Vue {}
 <style lang="scss" scoped>
 .certificates {
   flex: 1 0 auto;
-  li {
-    text-align: left;
-    color: black;
-    font-weight: bold;
-    list-style-type: upper-roman;
-    p{
-      margin: 0;
+   .prj {
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      b {
+        color: darkred;
+      }
     }
-  }
-  .diplom{
-    list-style-type: decimal;
-    color: black;
-    font-weight: bold;
-    p {
-      a {color: #a20909;}
-      a:hover {
+  .prj:hover {
+    .block {
+      background: rgba(211, 239, 211, 0.2);
+    }
+      b {
         color: red;
-        text-transform: uppercase;
         text-decoration: none;
       }
     }
+
+  .front, .back {
+      b {
+        text-decoration: underline;
+      }
+    }
+  .eng {
+    b {
+      color: darkgreen;
+    }
+    b:hover{
+      color: green;
+    }
   }
+  .block {
+      font-size: 1.2rem;
+  }
+
 }
 </style>
