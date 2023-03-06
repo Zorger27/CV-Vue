@@ -1,9 +1,13 @@
 const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
-    transpileDependencies: true
+    transpileDependencies: true,
+    configureWebpack: {
+        performance: {
+            maxAssetSize: 5000000
+        }
+    }
 })
-
 // module.exports = {
 //   chainWebpack: config => {
 //     const imagesRule = config.module.rule('images')

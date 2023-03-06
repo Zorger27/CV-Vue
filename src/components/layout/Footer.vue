@@ -64,6 +64,7 @@ footer {
   color: #fff;
   @media (max-width: 768px) {
     font-size: 1rem;
+    padding-right: 1rem;
   }
 }
 </style>
