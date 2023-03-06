@@ -7,7 +7,7 @@ knuteStore:
           regnumber: "KB 10682421",
           grade: "Honors degree",
           examdate: "29.01.1999",
-          image: "/assets/doc/knute1.jpg",
+          image: "/doc/knute1.jpg",
       },
       {
           id: 2,
@@ -15,7 +15,7 @@ knuteStore:
           regnumber: "KB 10682421",
           grade: "Honors degree",
           examdate: "29.01.1999",
-          image: "/assets/doc/knute2.jpg",
+          image: "/doc/knute2.jpg",
       }
   ]
 };

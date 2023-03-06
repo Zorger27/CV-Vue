@@ -15,7 +15,7 @@ projectStore:
           type: "Single page application",
           techno: "Vue.JS, VueX, HTML5, CSS3, TypeScript",
           sourcelink: "https://github.com/Zorger27/CV-Vue",
-          demolink: ""
+          demolink: "https://cv-on-vue.vercel.app"
       },
       {
           id: 3,

@@ -9,7 +9,8 @@
 <script lang="ts">
 import Header from "@/components/layout/Header.vue";
 import Footer from "@/components/layout/Footer.vue";
-import "@/assets/style/global.scss";
+import "../public/style/global.scss";
+// import "@/assets/style/global.scss";
 
 export default {
   name: "app", components: {
