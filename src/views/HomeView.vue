@@ -13,21 +13,21 @@ export default class home extends Vue {
   data() {
     return {
       sliderImages: [
-        require('/public/diploma/TP24303907D.jpg'),
-        require('/public/english/02 Conversational English.jpg'),
-        require('/public/diploma/TP31003654D.jpg'),
-        require('/public/diploma/TP31617068D.jpg'),
-        require('/public/doc/designer.jpg'),
-        require('/public/diploma/TP37723782D.jpg'),
-        require('/public/english/07 Intermediate level of English.jpg'),
-        require('/public/diploma/TP45473683D.jpg'),
-        require('/public/diploma/TP63925579D.jpg'),
-        require('/public/doc/frontend.jpg'),
-        require('/public/diploma/TP77692345D.jpg'),
-        require('/public/img/seashore.jpg'),
-        require('/public/diploma/TP84806711D.jpg'),
-        require('/public/english/10 English for advanced.jpg'),
-        require('/public/diploma/TP88892276D.jpg'),
+        require('@/assets/diploma/TP24303907D.jpg'),
+        require('@/assets/english/02 Conversational English.jpg'),
+        require('@/assets/diploma/TP31003654D.jpg'),
+        require('@/assets/diploma/TP31617068D.jpg'),
+        require('@/assets/doc/designer.jpg'),
+        require('@/assets/diploma/TP37723782D.jpg'),
+        require('@/assets/english/07 Intermediate level of English.jpg'),
+        require('@/assets/diploma/TP45473683D.jpg'),
+        require('@/assets/diploma/TP63925579D.jpg'),
+        require('@/assets/doc/frontend.jpg'),
+        require('@/assets/diploma/TP77692345D.jpg'),
+        require('@/assets/img/seashore.jpg'),
+        require('@/assets/diploma/TP84806711D.jpg'),
+        require('@/assets/english/10 English for advanced.jpg'),
+        require('@/assets/diploma/TP88892276D.jpg'),
       ],
     }
   }
@@ -40,16 +40,16 @@ export default class home extends Vue {
   <line></line>
   <div class="home">
     <div class="photo">
-      <img src="../../public/img/photo.svg" alt="My photo" title="My photo">
+      <img src="@/assets/img/photo.svg" alt="My photo" title="My photo">
     </div>
     <div class="icons">
-        <a href="tel:+380504411801" title="Call me: +380 50 441-18-01" target="_blank"><img class=logo-image src="../../public/ico/phone.svg" alt="Mobile phone"></a>
-        <a href="mailto:zorger27@gmail.com" title="Write me: Zorger27@GMail.com" target="_blank"><img class=logo-image src="../../public/ico/gmail.svg" alt="E-mail"></a>
-        <a href="skype:anatoliy.zorin?call" title="Call me by Skype: anatoliy.zorin" target="_blank"><img class=logo-image src="../../public/ico/skype.svg" alt="Skype"></a>
-        <a href="https://www.linkedin.com/in/anatolii-zorin/" title="My LinkedIn profile..." target="_blank"><img class=logo-image src="../../public/ico/linkedin.svg" alt="LinkedIn"></a>
-        <a href="https://github.com/Zorger27" title="My Github profile..." target="_blank"><img class=logo-image src="../../public/ico/github.svg" alt="Github"></a>
-        <a href="https://profile.codersrank.io/user/zorger27" title="My CodersRank profile..." target="_blank"><img class=logo-image src="../../public/ico/codersrank.svg" alt="CodersRank.io"></a>
-        <a href="/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img class=logo-image src="../../public/ico/download.png" alt="Download file"></a>
+        <a href="tel:+380504411801" title="Call me: +380 50 441-18-01" target="_blank"><img class=logo-image src="@/assets/ico/phone.svg" alt="Mobile phone"></a>
+        <a href="mailto:zorger27@gmail.com" title="Write me: Zorger27@GMail.com" target="_blank"><img class=logo-image src="@/assets/ico/gmail.svg" alt="E-mail"></a>
+        <a href="skype:anatoliy.zorin?call" title="Call me by Skype: anatoliy.zorin" target="_blank"><img class=logo-image src="@/assets/ico/skype.svg" alt="Skype"></a>
+        <a href="https://www.linkedin.com/in/anatolii-zorin/" title="My LinkedIn profile..." target="_blank"><img class=logo-image src="@/assets/ico/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://github.com/Zorger27" title="My Github profile..." target="_blank"><img class=logo-image src="@/assets/ico/github.svg" alt="Github"></a>
+        <a href="https://profile.codersrank.io/user/zorger27" title="My CodersRank profile..." target="_blank"><img class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>
+        <a href="/assets/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img class=logo-image src="@/assets/ico/download.png" alt="Download file"></a>
     </div>
     <div class="info">
       <p>

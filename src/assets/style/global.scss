@@ -1,0 +1,179 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 18px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+line{
+  content:'';
+  display:block;
+  width:75%;
+  border:1px solid;
+  margin-bottom: 4px;
+}
+a {
+  text-decoration: none;
+  color: indigo;
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: darkblue;
+}
+h1 {
+  text-align: center;
+}
+.slider {
+  width: 45%;
+  overflow: hidden;
+  border: 1px solid rgba(112, 111, 111, 0.9);
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px 0 lightgrey;
+  padding: 0.5rem;
+  @media(max-width:1020px) {
+    width: 85%;
+  }
+  @media(max-width:768px) {
+    width: 95%;
+  }
+}
+
+.certificates {
+  ol {
+    font-size: 1.4rem;
+    li {
+      padding: 0.2rem;
+    }
+  }
+}
+.certificate, .diploma, .prj{
+  display: inline-flex;
+  padding: 1rem;
+  text-align: left;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .block {
+    border: 1px solid rgba(112, 111, 111, 0.6);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 3px 3px 4px 0 lightgrey;
+  }
+}
+
+.diploma {
+  a:hover {
+    border: 1px solid #780485;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(27, 27, 217, 0.3));
+    box-shadow: 3px 3px 4px 0 #cc1cc3;
+    h3 {
+      color: black;
+    }
+  }
+  h3 {
+    color: red;
+  }
+  .block {
+    background: #f1f1f1;
+  }
+}
+.certificate {
+  a:hover {
+    border: 1px solid lightskyblue;
+    box-shadow: 3px 3px 4px 0 lightblue;
+    h3 {
+      color: darkblue;
+    }
+  }
+  h3 {
+    color: darkgreen;
+  }
+  .block {
+    background: none;
+  }
+}
+.prj {
+  a:hover {
+    border: 1px solid goldenrod;
+    background: none;
+    box-shadow: 3px 3px 4px 0 lightgoldenrodyellow;
+    h3 {
+      color: #493606;
+    }
+  }
+  h3 {
+    color: #af0661;
+  }
+  .block {
+    background: rgba(194, 211, 250, 0.1);
+  }
+}
+.attention{
+  color: #a20909;
+}
+.attention:hover{
+  color: red;
+}
+@media(max-width:1020px) {
+  line {
+    width: 100%;
+  }
+  .header-logo {
+    image {
+      max-width: 100%;
+      height: 4rem;
+      max-height:100%;
+    }
+  }
+  .certificates {
+    ol {
+      font-size: 1.3rem;
+      li {
+        padding: 0.3rem;
+      }
+    }
+  }
+  .diploma, .certificate, .prj {
+    padding: 0.6rem;
+    .block {
+      font-size: 1rem;
+      padding: 0.6rem;
+    }
+  }
+}
+@media(max-width:768px) {
+  line {
+    width: 100%;
+  }
+  h1 {
+    font-size: xx-large;
+  }
+  h2 {
+    font-size: x-large;
+  }
+  .certificates {
+    ol {
+      font-size: 1.2rem;
+      li {
+        padding: 0.3rem;
+      }
+    }
+  }
+  .diploma, .certificate, .prj {
+    padding: 0.3rem;
+    .block {
+      font-size: 0.78rem;
+      padding: 0.4rem;
+    }
+  }
+}

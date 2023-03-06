@@ -41,7 +41,7 @@ export default class Header extends Vue {
       <h2>My CV mobile</h2>
     </div>
     <div class="header-logo">
-      <img src="/img/header-logo.svg" alt="logo" @click="logo" title="Go to About page">
+      <img src="@/assets/img/header-logo.svg" alt="logo" @click="logo" title="Go to About page">
     </div>
     <div class="menu" :class="{ 'is-active': showMenu }">
       <router-link to="/" @click="hideMenu">Main</router-link>
