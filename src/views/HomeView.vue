@@ -139,6 +139,10 @@ h1 {
   }
   .icons {
     align-self: center;
+    padding-right: 1rem;
+  }
+  .info {
+    padding: 0 0.5rem;
   }
 }
 
@@ -159,6 +163,9 @@ h1 {
   .icons {
     padding-top: 1rem;
     align-self: center;
+  }
+  .info {
+    padding: 0 0.3rem;
   }
 }
 </style>
