@@ -1,9 +1,5 @@
 {
   "version": 2,
-  "files": [
-    "public/**/*",
-    "README.md"
-  ],
   "cleanUrls": true,
   "trailingSlash": true,
   "routes": [
