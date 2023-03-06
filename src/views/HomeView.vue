@@ -9,7 +9,6 @@ export default class home extends Vue {
   //   { folder: '@/assets/diploma/', file: 'TP31003654D.jpg' },
   // ];
   // sliderImages: string[] = this.images.map(({ folder, file }) => require(`${folder}${file}`));
-
   data() {
     return {
       sliderImages: [
