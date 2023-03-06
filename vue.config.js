@@ -5,16 +5,22 @@ module.exports = defineConfig({
     configureWebpack: {
         performance: {
             maxAssetSize: 5000000
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.(png|jpe?g|gif)$/i,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: 5000000
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-    },
-    chainWebpack: config => {
-        config.module
-            .rule('images')
-            .use('url-loader')
-            .tap(options => {
-                options.limit = 5000000;
-                return options;
-            });
     }
 })
 // module.exports = {
