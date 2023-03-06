@@ -6,6 +6,15 @@ module.exports = defineConfig({
         performance: {
             maxAssetSize: 5000000
         }
+    },
+    chainWebpack: config => {
+        config.module
+            .rule('images')
+            .use('url-loader')
+            .tap(options => {
+                options.limit = 5000000;
+                return options;
+            });
     }
 })
 // module.exports = {
