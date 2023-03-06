@@ -1,7 +1,8 @@
 # MY Curriculum VITAE (SPA) #
 ### You can view my web-site (Landing Page) here: [Curriculum VITAE](https://zorger27.github.io)❗️ ###
 ### Technologies: [Vue.JS v.3.2](https://v3.ru.vuejs.org), [Vuex](https://vuex.vuejs.org), HTML5, CSS3, FlexBox CSS, Grid CSS, JavaScript, TypeScript. ###
-![Screen 18-02-2023](https://user-images.githubusercontent.com/30940416/219830886-d239a49c-b4fd-41c1-a6ba-efa0381e0073.gif)
+![02 Screen 06-03-2023](https://user-images.githubusercontent.com/30940416/223004436-afa889bb-deba-4036-ab2f-f686a962a6bb.gif)
+
 
 ## Project setup
 ```
