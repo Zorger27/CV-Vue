@@ -6,5 +6,5 @@ module.exports = defineConfig({
         performance: {
             maxAssetSize: 5000000
         }
-    }
+    },
 })
