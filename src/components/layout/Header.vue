@@ -219,7 +219,7 @@ header {
   a:hover {
     background-color: rgba(236, 236, 235, 0.2);
     border: 1px solid rgba(112, 111, 111, 0.9);
-    box-shadow: 3px 3px 4px 0 lightgrey;
+    box-shadow: 3px 3px 4px 0 white;
     color: darkcyan;
     cursor: pointer;
   }
@@ -227,7 +227,7 @@ header {
   a:focus {
     background-color: rgba(236, 236, 235, 0.2);
     border: 1px solid rgba(112, 111, 111, 0.9);
-    box-shadow: 3px 3px 4px 0 lightgrey;
+    box-shadow: 3px 3px 4px 0 white;
     color: darkred;
   }
 
