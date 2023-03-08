@@ -16,6 +16,11 @@ line{
   border:1px solid;
   margin-bottom: 4px;
 }
+svg{
+  max-width: 100%;
+  height: auto;
+  max-height:100%
+}
 a {
   text-decoration: none;
   color: indigo;
@@ -129,7 +134,7 @@ h1 {
     width: 100%;
   }
   .header-logo {
-    image {
+    svg {
       max-width: 100%;
       height: 4rem;
       max-height:100%;
