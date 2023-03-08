@@ -3,7 +3,7 @@
     <h1>Hard & Soft skills</h1>
     <line></line>
     <div class="container">
-      <img src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=zorger27&labels=true&legend=true&skills=JSON,JavaScript,Vue,CSS,SCSS,HTML,TypeScript&branding=false"
+      <img class="codersrank-skills-chart" src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=zorger27&labels=true&legend=true&skills=JSON,JavaScript,Vue,CSS,SCSS,HTML,TypeScript&branding=false"
        alt="Codersrank skills chart"/>
 <!--      <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>-->
       <div class="type-skills">

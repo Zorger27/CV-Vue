@@ -6,13 +6,13 @@ module.exports = defineConfig({
     configureWebpack: {
         performance: {
             maxAssetSize: 5000000
-        },
-        plugins: [
-            new HtmlWebpackPlugin({
-                filename: 'my-index.html',
-                template: 'public/index.html',
-                title: 'My Curriculum VITAE (SPA)'
-            }),
-        ]
+        }
+        // plugins: [
+        //     new HtmlWebpackPlugin({
+        //         filename: 'my-index.html',
+        //         template: 'public/index.html',
+        //         title: 'My Curriculum VITAE (SPA)'
+        //     }),
+        // ]
     }
 })
