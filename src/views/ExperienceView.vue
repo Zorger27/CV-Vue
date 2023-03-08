@@ -1,5 +1,5 @@
 <script lang="ts">
-import {Vue} from "vue-class-component";
+import {Options, Vue} from "vue-class-component";
 export default class experience extends Vue {};
 </script>
 
@@ -7,7 +7,9 @@ export default class experience extends Vue {};
   <div class="experience">
     <h1>Experience</h1>
     <line></line>
-    <codersrank-summary username="zorger27" layout="horizontal" branding="false"></codersrank-summary>
+    <img src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=zorger27&badges=3&show-avatar=true&branding=false&style=--border-radius:5px"
+     alt="CodersrankSummary"/>
+<!--    <codersrank-summary username="zorger27" layout="horizontal" branding="false"></codersrank-summary>-->
     <p>15.01.2001 - 13.01.2023<br>
         <b>LIS Ltd.</b><br>
         CEO<br>
@@ -28,17 +30,18 @@ export default class experience extends Vue {};
   p {
     padding: 0 0 0.3rem 1.5rem;
   }
-  codersrank-summary {
-    margin-top: 1rem;
+  img {
+    margin-top: 0.5rem;
     width: 75%;
+    //box-shadow: 3px 3px 4px 0 lightgrey;
   }
   @media(max-width:1200px) {
-    codersrank-summary {
+    img {
       width: 100%;
     }
   }
   @media(max-width:768px) {
-    codersrank-summary {
+    img {
       width: 100%;
     }
   }

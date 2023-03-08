@@ -3,7 +3,9 @@
     <h1>Hard & Soft skills</h1>
     <line></line>
     <div class="container">
-      <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>
+      <img src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=zorger27&labels=true&legend=true&skills=JSON,JavaScript,Vue,CSS,SCSS,HTML,TypeScript&branding=false"
+       alt="Codersrank skills chart"/>
+<!--      <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>-->
       <div class="type-skills">
         <div class="hard-skills">
           <h3>Hard skills</h3>
@@ -68,7 +70,7 @@ export default class skills extends Vue {}
     padding: 0 0 0.3rem 1.5rem;
   }
 
-  codersrank-skills-chart {
+  img {
     grid-area: codersrank-skills-chart;
     margin-top: 1rem;
     padding-right: 0.5rem;
