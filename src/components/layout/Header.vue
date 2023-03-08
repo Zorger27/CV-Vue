@@ -75,8 +75,15 @@ header {
   display: flex;
   position: relative;
   justify-content: space-between;
-  background: linear-gradient(to bottom, rgba(229, 228, 228, 0.5), rgba(59, 58, 58, 0.9));
-  .burger-menu {
+  //background: linear-gradient(to bottom, rgba(229, 228, 228, 0.5), rgba(59, 58, 58, 0.9));
+  background-image:
+      radial-gradient(at 0% 100%, hsla(189,100%,56%,1) 0px, transparent 50%),
+      radial-gradient(at 0% 0%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsla(28,100%, 74%,1) 0px, transparent 50%),
+      radial-gradient(at 79% 100%, hsla(343,100%, 76%, 1) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, hsla(355,100%, 93%, 1) 0px, transparent 50%);
+
+.burger-menu {
     display: none;
   }
   .dropbtn {
@@ -112,7 +119,7 @@ header {
     .burger-menu:hover {
       background-color: inherit;
       border: 1px solid rgba(112, 111, 111, 0.9);
-      box-shadow: 3px 3px 4px 0 lightgrey;
+      box-shadow: 3px 3px 4px 0 white;
       .burger-menu-icon {
         color: red;
       }
@@ -129,6 +136,13 @@ header {
     height: 4rem;
     max-height:100%;
     cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    padding-right: 0;
+    margin-right: 0;
+    img {
+      padding-right: 0.5rem;
+    }
   }
 }
 .title {

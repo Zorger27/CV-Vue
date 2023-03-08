@@ -28,14 +28,11 @@ footer {
   //background: linear-gradient(to top, rgba(204, 204, 204, 0.5), rgba(107, 106, 106, 0.9));
   //background-color:hsla(0, 100%, 50%, 1);
   background-image:
-      radial-gradient(at 40% 20%, hsla(28,100%, 74%,1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(28,100%, 74%,1) 0px, transparent 50%),
       radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
-      radial-gradient(at 0% 50%, hsla(355,100%, 93%, 1) 0px, transparent 50%),
-      //radial-gradient(at 76% 52%, hsla(340,100%,76%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsla(22,100%, 77%, 1) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, hsla(355,100%, 93%, 1) 0px, transparent 50%),
       radial-gradient(at 79% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
       radial-gradient(at 0% 0%, hsla(343,100%, 76%, 1) 0px, transparent 50%);
-  //background-color: #9b9b9b;
   img {
     max-width: 100%;
     height: 4rem;
@@ -48,6 +45,9 @@ footer {
   //}
   @media (max-width: 768px) {
     padding: 10px 0;
+    img {
+      padding-left: 0.5rem;
+    }
   }
 }
 .footer-logo {
