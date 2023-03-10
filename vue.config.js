@@ -1,6 +1,6 @@
 const {defineConfig} = require('@vue/cli-service')
 // const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+// const CopyWebpackPlugin = require('copy-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = defineConfig({
@@ -15,14 +15,14 @@ module.exports = defineConfig({
     },
     configureWebpack: {
         plugins: [
-            new CopyWebpackPlugin({
-                patterns: [
-                    {
-                        from: `./public/assets`,
-                        to: 'assets'
-                    }
-                ]
-            }),
+            // new CopyWebpackPlugin({
+            //     patterns: [
+            //         {
+            //             from: `./public/assets`,
+            //             to: 'assets'
+            //         }
+            //     ]
+            // }),
             // new HtmlWebpackPlugin({
             //     title: 'Webpack',
             //     // favicon: './public/favicon.png',
