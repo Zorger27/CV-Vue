@@ -20,7 +20,7 @@ export default {
   //   link: [
   //     {
   //       rel: "icon",
-  //       href: require(".//assets/favicon-32x32.png")
+  //       href: require(".//assets/favicon.png")
   //     },
   //   ]
   // }
