@@ -1,6 +1,6 @@
 {
-    "name": "Blog",
-    "short_name": "Blog",
+    "name": "My Curriculum VITAE (SPA) on Vue.JS",
+    "short_name": "CV on Vue",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
