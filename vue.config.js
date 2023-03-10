@@ -15,7 +15,7 @@ module.exports = defineConfig({
     },
     configureWebpack: {
         plugins: [
-            new CopyWebpackPlugin({
+            new CopyWebpackPlugin({ //СУПЕР-ВАЖНАЯ штука!!!
                 patterns: [
                     {
                         from: `src/assets`,

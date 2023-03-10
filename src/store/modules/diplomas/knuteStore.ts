@@ -7,8 +7,8 @@ knuteStore:
           regnumber: "KB 10682421",
           grade: "Honors degree",
           examdate: "29.01.1999",
-          // image: "/assets/doc/knute1.jpg",
-          image: "https://zorger27.github.io/img/knute1.jpg",
+          image: "/assets/doc/knute1.jpg",
+          // image: "https://zorger27.github.io/img/knute1.jpg",
       },
       {
           id: 2,
@@ -16,7 +16,8 @@ knuteStore:
           regnumber: "KB 10682421",
           grade: "Honors degree",
           examdate: "29.01.1999",
-          image: "https://zorger27.github.io/img/knute2.jpg",
+          image: "/assets/doc/knute2.jpg",
+          // image: "https://zorger27.github.io/img/knute2.jpg",
       }
   ]
 };
