@@ -31,6 +31,8 @@ module.exports = defineConfig({
             // }),
             new FaviconsWebpackPlugin({
                 logo: './src/assets/favicon/favbig.png',
+                mode: 'webapp', // optional can be 'webapp', 'light' or 'auto' - 'auto' by default
+                devMode: 'webapp', // optional can be 'webapp' or 'light' - 'light' by default
                 favicons: {
                     appName: 'CV on Vue',
                     appDescription: 'My Curriculum VITAE (SPA) on Vue.JS',
