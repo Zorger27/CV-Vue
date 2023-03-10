@@ -19,7 +19,7 @@ module.exports = defineConfig({
                 patterns: [
                     {
                         from: `src/assets`,
-                        to: 'documents'
+                        to: 'assets'
                     }
                 ]
             }),

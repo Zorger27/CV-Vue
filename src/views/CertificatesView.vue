@@ -45,7 +45,9 @@ export default class certificates extends Vue {}
     }
   .prj:hover {
     .block {
-      background: rgba(211, 239, 211, 0.2);
+      background: lightblue;
+      box-shadow: 3px 3px 4px 0 lightgrey;
+      border-color: lightskyblue;
     }
       b {
         color: red;
