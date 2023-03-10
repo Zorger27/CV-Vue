@@ -19,6 +19,7 @@
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "favicons": "^7.1.1",
     "favicons-webpack-plugin": "^6.0.0",
     "html-webpack-plugin": "^5.5.0",
