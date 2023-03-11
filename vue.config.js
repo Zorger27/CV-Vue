@@ -34,7 +34,7 @@ module.exports = defineConfig({
                 logo: './src/assets/favicon/favbig.png',
                 mode: 'webapp',
                 devMode: 'webapp',
-                outputPath: '/assets/favs',
+                outputPath: '../assets/favicon-img',
                 favicons: {
                     appName: 'CV on Vue',
                     appDescription: 'My Curriculum VITAE (SPA) on Vue.JS',
