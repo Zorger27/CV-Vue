@@ -5,6 +5,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = defineConfig({
     transpileDependencies: true,
+    // publicPath: '/',
     pages: {
         index: {
             entry: 'src/main.ts',
@@ -24,10 +25,10 @@ module.exports = defineConfig({
                 ]
             }),
             // new HtmlWebpackPlugin({
-            //     title: 'Webpack',
+            //     title: 'Curriculum VITAE (SPA)',
             //     // favicon: './public/favicon.png',
-            //     template: '/public/index.html',
-            //     filename: 'index.html'
+            //     template: 'public/index.html',
+            //     filename: '/index1.html'
             // }),
             new FaviconsWebpackPlugin({
                 logo: './src/assets/favicon/favbig.png',
