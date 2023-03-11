@@ -16,7 +16,7 @@ module.exports = defineConfig({
     },
     configureWebpack: {
         plugins: [
-            new CopyWebpackPlugin({ //СУПЕР-ВАЖНАЯ штука!!!
+            new CopyWebpackPlugin({ //СУПЕР-ВАЖНАЯ штука для ссылок на файлы (pdf или картинки), расположенные на самом сервере!!!
                 patterns: [
                     {
                         from: `src/assets`,
@@ -34,13 +34,13 @@ module.exports = defineConfig({
                 logo: './src/assets/favicon/favbig.png',
                 mode: 'webapp',
                 devMode: 'webapp',
-                outputPath: 'assets/favicon-img/',
-                prefix: 'assets/favicon-img/',
+                outputPath: 'assets/favicon-img/', // Куда будут на сервере скидываться созданные favicon-ки
+                prefix: 'assets/favicon-img/', // Этот префикс для файла index.html, чтобы правильно прописать пути иконок с сервера!
                 favicons: {
                     appName: 'CV on Vue',
                     appDescription: 'My Curriculum VITAE (SPA) on Vue.JS',
                     developerName: 'Zorger',
-                    developerURL: 'https://zorger27.github.io'
+                    developerURL: null
                 }
             })
         ]
