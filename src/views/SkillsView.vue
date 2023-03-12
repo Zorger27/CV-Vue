@@ -39,6 +39,7 @@ export default class skills extends Vue {}
 .skills {
   flex: 1 0 auto;
   text-align: left;
+  font-size: x-large;
   h3 {
     text-decoration: underline;
     color: deeppink;
@@ -50,7 +51,7 @@ export default class skills extends Vue {}
   }
   .container {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
     grid-gap: 1rem;
     grid-auto-flow: column;
@@ -58,6 +59,8 @@ export default class skills extends Vue {}
   }
   .type-skills {
     grid-area: type-skills;
+    //font-size: xx-large;
+    //justify-content: space-around;
     //display: inline-flex;
     margin-right: 0.5rem;
   }
@@ -90,6 +93,7 @@ export default class skills extends Vue {}
   .type-skills {
     display: inline-flex;
     justify-content: space-around;
+    //font-size: x-large;
   }
 }
 
@@ -105,6 +109,7 @@ export default class skills extends Vue {}
   .type-skills {
     display: grid;
     justify-content: left;
+    //font-size: large;
   }
 }
 </style>

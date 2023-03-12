@@ -16,14 +16,6 @@ export default {
     Header,
     Footer,
   }
-  // head: {
-  //   link: [
-  //     {
-  //       rel: "icon",
-  //       href: require(".//assets/favicon.png")
-  //     },
-  //   ]
-  // }
 };
 </script>
 

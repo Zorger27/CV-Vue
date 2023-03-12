@@ -1,5 +1,6 @@
 {
   "name": "cv-on-vue",
+  "description": "My Curriculum VITAE (SPA)",
   "version": "0.1.0",
   "private": true,
   "scripts": {
