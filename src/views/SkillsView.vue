@@ -39,10 +39,10 @@ export default class skills extends Vue {}
 .skills {
   flex: 1 0 auto;
   text-align: left;
-  font-size: x-large;
   h3 {
     text-decoration: underline;
     color: deeppink;
+    margin-top: 0.5rem;
     margin-bottom: -0.7rem;
     padding: 0 0 0.3rem 1.5rem;
   }
@@ -57,13 +57,6 @@ export default class skills extends Vue {}
     grid-auto-flow: column;
     grid-template-areas: "codersrank-skills-chart type-skills";
   }
-  .type-skills {
-    grid-area: type-skills;
-    //font-size: xx-large;
-    //justify-content: space-around;
-    //display: inline-flex;
-    margin-right: 0.5rem;
-  }
   .hard-skills ul {
     list-style: none;
     padding: 0 0 0.3rem 1.5rem;
@@ -72,13 +65,17 @@ export default class skills extends Vue {}
     list-style: none;
     padding: 0 0 0.3rem 1.5rem;
   }
+}
+img {
+  grid-area: codersrank-skills-chart;
+  margin-top: 0.5rem;
+  width: 100%;
+}
 
-  img {
-    grid-area: codersrank-skills-chart;
-    margin-top: 1rem;
-    padding-right: 0.5rem;
-    width: 100%;
-  }
+.type-skills {
+  grid-area: type-skills;
+  margin: 0 0.5rem 0 0;
+  font-size: xx-large;
 }
 
 @media(max-width:1020px) {
@@ -93,7 +90,7 @@ export default class skills extends Vue {}
   .type-skills {
     display: inline-flex;
     justify-content: space-around;
-    //font-size: x-large;
+    font-size: x-large;
   }
 }
 
@@ -109,7 +106,7 @@ export default class skills extends Vue {}
   .type-skills {
     display: grid;
     justify-content: left;
-    //font-size: large;
+    font-size: large;
   }
 }
 </style>

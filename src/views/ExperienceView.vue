@@ -35,7 +35,6 @@ export default class experience extends Vue {
   flex: 1 0 auto;
   text-align: left;
   font-size: x-large;
-
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -44,21 +43,21 @@ export default class experience extends Vue {
     grid-auto-flow: column;
     grid-template-areas: "codersrank-summary work";
   }
+}
 
-  .work {
-    grid-area: work;
-
-    p {
-      padding: 0 0 0.3rem 1.5rem;
-    }
-  }
-
-  img {
-    grid-area: codersrank-summary;
+.work {
+  grid-area: work;
+  font-size: xx-large;
+  p {
     margin-top: 0.5rem;
-    width: 100%;
-    //box-shadow: 3px 3px 4px 0 lightgrey;
+    padding: 0 0 0.3rem 1.5rem;
   }
+}
+
+img {
+  grid-area: codersrank-summary;
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 @media(max-width: 1200px) {
@@ -73,6 +72,7 @@ export default class experience extends Vue {
   .work {
     display: inline-flex;
     justify-content: space-around;
+    font-size: x-large;
   }
 }
 
@@ -88,6 +88,7 @@ export default class experience extends Vue {
   .work {
     display: grid;
     justify-content: left;
+    font-size: large;
   }
 }
 </style>
