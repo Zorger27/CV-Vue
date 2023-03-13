@@ -21,6 +21,10 @@ module.exports = defineConfig({
                     {
                         from: `src/assets`,
                         to: 'assets'
+                    },
+                    {
+                        from: `src/assets/search`,
+                        to: '/'
                     }
                 ]
             }),
