@@ -24,15 +24,18 @@ module.exports = defineConfig({
                     },
                     {
                         from: `src/assets/search`,
-                        to: '/dist/'
+                        to: '/dist'
                     }
                 ]
             }),
             // new HtmlWebpackPlugin({
-            //     title: 'Curriculum VITAE (SPA)',
-            //     // favicon: './public/favicon.png',
-            //     template: 'public/index.html',
-            //     filename: '/index1.html'
+            //     'meta': {
+            //         'google-site-verification': 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'
+            //     }
+                // title: 'Curriculum VITAE (SPA)',
+                // favicon: './public/favicon.png',
+                // template: 'public/index.html',
+                // filename: '/index1.html'
             // }),
             new FaviconsWebpackPlugin({
                 logo: './src/assets/favicon/favbig.png',
