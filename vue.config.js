@@ -24,7 +24,7 @@ module.exports = defineConfig({
                     },
                     {
                         from: `src/assets/search`,
-                        to: '/'
+                        to: '/dist/'
                     }
                 ]
             }),
