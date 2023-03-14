@@ -1,4 +1,5 @@
 <template>
+  <meta name="google-site-verification" content="Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y" />
   <div>
 <!--    <script :src="https://www.googletagmanager.com/gtag/js?id=G-RZXQRX8XR0" async></script>-->
     <!--    &lt;!&ndash; Google tag (gtag.js) &ndash;&gt;-->
@@ -14,7 +15,7 @@
 </template>
 
 <script>
-import * as https from "https";
+// import * as https from "https";
 // async src="https://www.googletagmanager.com/gtag/js?id=G-RZXQRX8XR0"
 
 window.dataLayer = window.dataLayer || [];
