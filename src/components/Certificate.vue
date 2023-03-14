@@ -1,6 +1,11 @@
+<!--<script lang="ts">-->
+<!--export default {-->
+<!--  name: "Certificate"-->
+<!--}-->
+<!--</script>-->
+
 <script lang="ts">
 import {Vue} from "vue-class-component";
-
 export default class Certificate extends Vue{
   certificate!: any;
 }
