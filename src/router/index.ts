@@ -147,9 +147,11 @@ const routes: Array<RouteRecordRaw> = [
 
 const router = createRouter({
   history: createWebHashHistory(),
+  // base: process.env.BASE_URL,
   routes
 })
 
+// https://www.digitalocean.com/community/tutorials/vuejs-vue-router-modify-head
 // This callback runs before every route change, including on page load.
 router.beforeEach((to, from, next) => {
   // This goes through the matched routes from last to first, finding the closest route with a title.
