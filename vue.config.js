@@ -21,22 +21,17 @@ module.exports = defineConfig({
                     {
                         from: `src/assets`,
                         to: 'assets'
-                    },
-                    {
-                        from: `src/assets/search`,
-                        to: '/dist'
                     }
                 ]
             }),
             // new HtmlWebpackPlugin({
-            //     'meta': {
-            //         'google-site-verification': 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'
+            //     template: 'public/index.html',
+            //     title: 'Curriculum VITAE (SPA)',
+            //     meta: {
+            //         'google-site-verification': 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y',
             //     }
-                // title: 'Curriculum VITAE (SPA)',
-                // favicon: './public/favicon.png',
-                // template: 'public/index.html',
-                // filename: '/index1.html'
-            // }),
+            //     // favicon: './public/favicon.png',
+            // })
             new FaviconsWebpackPlugin({
                 logo: './src/assets/favicon/favbig.png',
                 mode: 'webapp',
