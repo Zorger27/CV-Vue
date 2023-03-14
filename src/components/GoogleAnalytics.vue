@@ -25,11 +25,6 @@ gtag('config', 'G-RZXQRX8XR0');
 
 export default {
   name: "GoogleAnalytics",
-  computed: {
-    https() {
-      return https
-    }
-  }
 }
 </script>
 
