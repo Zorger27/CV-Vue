@@ -1,8 +1,8 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import GoogleAnalytics from "@/components/GoogleAnalytics.vue";
+// import GoogleAnalytics from "@/components/GoogleAnalytics.vue";
 
-@Options({components: {GoogleAnalytics},})
+@Options({components: {},})
 
 export default class Footer extends Vue {
   logoFooter() {
@@ -20,7 +20,7 @@ export default class Footer extends Vue {
       </svg>
     </div>
     <p class="footer-text">Designed By <b><a href="https://zorger27.github.io" title="CV (Landing Page)" target="_blank">Zorger</a></b> for Project № 14 (07.02.2023)</p>
-    <google-analytics></google-analytics>
+<!--    <google-analytics></google-analytics>-->
   </footer>
 </template>
 
