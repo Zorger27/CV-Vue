@@ -22,16 +22,16 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
     meta: {
       title: 'Curriculum VITAE (SPA)',
-      metaTags: [
-        {
-          name: 'google-site-verification',
-          content: 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'
-        }
+      // metaTags: [
+      //   {
+      //     name: 'google-site-verification',
+      //     content: 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'
+      //   }
         // {
         //   property: 'og:description',
         //   content: 'The home page of our example app.'
         // }
-      ]
+      // ]
     }
   },
   {

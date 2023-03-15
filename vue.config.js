@@ -28,14 +28,14 @@ module.exports = defineConfig({
                     }
                 ]
             }),
-            // new HtmlWebpackPlugin(),
             new HtmlWebpackTagsPlugin({
+                scripts: ['https://www.googletagmanager.com/gtag/js?id=G-RZXQRX8XR0', '/assets/analytics/ganal.js'],
+                append: true,
+                publicPath: false,
+                useHash: false,
                 metas: [
                     {
-                        // name: 'google-site-verification',
-                        // path: 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y',
                         attributes: {
-                            // name: 'google-site-verification'
                             name: 'google-site-verification',
                             content: 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'
                         }
