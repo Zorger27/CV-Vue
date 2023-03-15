@@ -6,7 +6,6 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = defineConfig({
     transpileDependencies: true,
-    // publicPath: '/',
     pages: {
         index: {
             entry: 'src/main.ts',
@@ -16,9 +15,6 @@ module.exports = defineConfig({
         }
     },
     configureWebpack: {
-        output: {
-            // publicPath: true
-        },
         plugins: [
             new CopyWebpackPlugin({ //СУПЕР-ВАЖНАЯ штука для ссылок на файлы (pdf или картинки), расположенные на самом сервере!!!
                 patterns: [
@@ -29,7 +25,10 @@ module.exports = defineConfig({
                 ]
             }),
             new HtmlWebpackTagsPlugin({
-                scripts: ['https://www.googletagmanager.com/gtag/js?id=G-RZXQRX8XR0', '/assets/analytics/ganal.js'],
+                scripts: [
+                    'https://www.googletagmanager.com/gtag/js?id=G-RZXQRX8XR0',
+                    '/assets/analytics/ganal.js'
+                ],
                 append: true,
                 publicPath: false,
                 useHash: false,
