@@ -153,16 +153,23 @@ h1 {
 @media(max-width: 1020px) {
   .home {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
         "photo icons"
         "info info"
         "slider slider";
   }
+  .photo {
+    grid-area: photo;
+    align-self: unset;
+  }
   .icons {
+    grid-area: icons;
     align-self: center;
     padding-right: 1rem;
   }
   .info {
+    grid-area: info;
     font-size: 1.27rem;
     padding: 0 0.5rem;
   }
@@ -171,16 +178,23 @@ h1 {
 @media(max-width: 768px) {
   .home {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
         "photo"
         "icons"
         "info"
         "slider";
   }
+  .photo {
+    grid-area: photo;
+    align-self: unset;
+  }
   .icons {
+    grid-area: icons;
     align-self: center;
   }
   .info {
+    grid-area: info;
     padding: 0 0.3rem;
     font-size: 1.17rem;
   }
