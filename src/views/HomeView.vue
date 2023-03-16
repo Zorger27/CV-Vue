@@ -122,7 +122,7 @@ h1 {
 .photo {
   grid-area: photo;
   text-align: center;
-  align-self: center;
+  //align-self: center;
   svg {
     height: 24rem;
   }
@@ -161,7 +161,7 @@ h1 {
   }
   .photo {
     grid-area: photo;
-    align-self: unset;
+    //align-self: unset;
   }
   .icons {
     grid-area: icons;
@@ -187,7 +187,7 @@ h1 {
   }
   .photo {
     grid-area: photo;
-    align-self: unset;
+    //align-self: unset;
   }
   .icons {
     grid-area: icons;
