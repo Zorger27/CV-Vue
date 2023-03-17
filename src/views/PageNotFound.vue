@@ -1,20 +1,15 @@
 <script lang="ts">
 import {Vue} from "vue-class-component";
+
 export default class PageNotFound extends Vue {}
 </script>
 
 <template>
   <div class="container">
     <div class="inner">
-      <h1>
-        404
-      </h1>
-      <p>Page not found, back to home page</p>
-      <a>
-        <button>
-          <router-link to="/">Back to HOME</router-link>
-        </button>
-      </a>
+      <h1>404</h1>
+      <p>Page not found, back to main page</p>
+      <router-link to="/">Back to MAIN</router-link>
     </div>
   </div>
 </template>
@@ -22,21 +17,39 @@ export default class PageNotFound extends Vue {}
 <style lang="scss" scoped>
 .container {
   display: flex;
-  height: 100%;
+  flex: 1 0 auto;
+
+  .inner {
+    margin: 10rem auto;
+
+    h1 {
+      font-size: 7rem;
+      letter-spacing: 1rem;
+      margin: 2rem;
+    }
+  }
 }
-.inner {
-  margin: 10rem auto;
-}
-h1 {
-  font-size: 130px;
-  letter-spacing: 20px;
-  margin: 20px;
-}
+
 p {
-  font-size: 18px;
+  font-size: 1.2rem;
+  padding: 1rem;
 }
+
 a {
+  font-size: 1.3rem;
   text-decoration: none;
+  font-weight: bold;
   color: inherit;
+  border: 1px solid rgba(112, 111, 111, 0.6);
+  border-radius: 5px;
+  padding: 0.8rem;
+  box-shadow: 3px 3px 4px 0 lightgrey;
+}
+
+a:hover {
+  color: darkred;
+  border: 1px solid #780485;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(27, 27, 217, 0.3));
+  box-shadow: 3px 3px 4px 0 #cc1cc3;
 }
 </style>

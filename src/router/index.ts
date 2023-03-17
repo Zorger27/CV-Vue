@@ -139,15 +139,17 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/404',
+    path: '/:catchAll(.*)',
     name: 'PageNotFound',
     component: PageNotFound,
+    meta: {
+      title: 'Page NOT Found',
+    }
   }
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  // base: process.env.BASE_URL,
+  history: createWebHashHistory(process.env.BASE_URL),
   routes
 })
 
