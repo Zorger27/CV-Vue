@@ -1,20 +1,23 @@
 <template>
   <div id="app">
-    <Header v-if="$router.name !== 'PageNotFound'"></Header>
-        <router-view></router-view>
-    <Footer v-if="$router.name !== 'PageNotFound'"></Footer>
+    <Header v-if="!is404Page"/>
+      <router-view></router-view>
+    <Footer v-if="!is404Page"/>
   </div>
 </template>
 
 <script lang="ts">
+import {Options, Vue} from 'vue-class-component';
+import {useRoute} from 'vue-router';
 import Header from "@/components/layout/Header.vue";
 import Footer from "@/components/layout/Footer.vue";
 import "@/assets/style/global.scss";
 
-export default {
-  name: "app", components: {
-    Header,
-    Footer,
+@Options({components: {Header, Footer},})
+export default class App extends Vue {
+  route = useRoute();
+  get is404Page() {
+    return this.route.name === 'PageNotFound';
   }
 };
 </script>
