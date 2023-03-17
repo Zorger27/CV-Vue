@@ -1,19 +1,26 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import designerStore from "@/store/modules/designerStore";
+
 @Options({
   computed: {
     designerStore() {
       return designerStore
     }
   },
-  components: {},})
-export default class designer extends Vue {}
+  components: {},
+})
+export default class designer extends Vue {
+}
 </script>
 
 <template>
   <div class="designer">
-    <h1>Designer certificates</h1>
+    <h1>
+      <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
+      </router-link>
+      Designer certificates
+    </h1>
     <line></line>
     <div v-for="sert in designerStore.state.designerStore" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
@@ -27,5 +34,15 @@ export default class designer extends Vue {}
 </template>
 
 <style lang="scss" scoped>
-.designer {flex: 1 0 auto;}
+.designer {
+  flex: 1 0 auto;
+  .back {
+    display: none;
+    @media (max-width: 768px) {
+      display: inline-flex;
+      text-decoration: none;
+      margin-right: 0.1rem;
+    }
+  }
+}
 </style>

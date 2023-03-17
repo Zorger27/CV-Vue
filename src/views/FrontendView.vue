@@ -19,7 +19,11 @@ export default class frontend extends Vue {}
 
 <template>
   <div class="frontend">
-    <h1>Frontend Diplomas & Certificates</h1>
+    <h1>
+      <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
+      </router-link>
+      Frontend Diplomas & Certificates
+    </h1>
     <line></line>
       <h2 class="diplom"><span>✅ </span><b><a class="attention" href="https://testprovider.com/ru/search-certificate/tp24303907d" title="Diploma..." target="_blank">HTML Coder</a></b></h2>
     <div v-for="sert in htmlStore.state.htmlStore" class="certificate">
@@ -72,5 +76,13 @@ export default class frontend extends Vue {}
 <style lang="scss" scoped>
 .frontend {
   flex: 1 0 auto;
+  .back {
+    display: none;
+    @media (max-width: 768px) {
+      display: inline-flex;
+      text-decoration: none;
+      margin-right: 0.1rem;
+    }
+  }
 }
 </style>

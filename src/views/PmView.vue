@@ -13,7 +13,11 @@ export default class pm extends Vue {}
 
 <template>
   <div class="pm">
-    <h1>Project Management certificates</h1>
+    <h1>
+      <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
+      </router-link>
+      Project Management certificates
+    </h1>
     <line></line>
 <!--    <Certificate v-for="certificate in pmStore.state.pmStore" :key="certificate.id" :certificate="certificate" />-->
     <div v-for="sert in pmStore.state.pmStore" class="certificate">
@@ -28,5 +32,15 @@ export default class pm extends Vue {}
 </template>
 
 <style lang="scss" scoped>
-.pm {flex: 1 0 auto;}
+.pm {
+  flex: 1 0 auto;
+  .back {
+    display: none;
+    @media (max-width: 768px) {
+      display: inline-flex;
+      text-decoration: none;
+      margin-right: 0.1rem;
+    }
+  }
+}
 </style>

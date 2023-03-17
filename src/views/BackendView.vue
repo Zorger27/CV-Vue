@@ -16,7 +16,11 @@ export default class backend extends Vue {}
 
 <template>
   <div class="backend">
-    <h1>Backend Diplomas & Certificates</h1>
+    <h1>
+      <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
+      </router-link>
+      Backend Diplomas & Certificates
+    </h1>
     <line></line>
       <h2 class="diplom"><span>✅ </span><b><a class="attention" id="java" href="https://testprovider.com/ru/search-certificate/tp31617068d" title="Diploma..." target="_blank">Java Developer</a></b></h2>
         <div v-for="sert in javaStore.state.javaStore" class="certificate">
@@ -61,5 +65,13 @@ export default class backend extends Vue {}
 <style lang="scss" scoped>
 .backend {
   flex: 1 0 auto;
+  .back {
+    display: none;
+    @media (max-width: 768px) {
+      display: inline-flex;
+      text-decoration: none;
+      margin-right: 0.1rem;
+    }
+  }
 }
 </style>

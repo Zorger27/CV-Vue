@@ -7,10 +7,14 @@ import otherStore from "@/store/modules/otherStore";
   components: {},})
 export default class other extends Vue {}
 </script>
-<!---->
+
 <template>
   <div class="other">
-    <h1>Other certificates</h1>
+    <h1>
+      <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
+      </router-link>
+      Other certificates
+    </h1>
     <line></line>
       <div v-for="sert in otherStore.state.otherStore" class="certificate">
         <a class="block" :href="sert.image" title="Certificate..." target="_blank">
@@ -24,5 +28,15 @@ export default class other extends Vue {}
 </template>
 
 <style lang="scss" scoped>
-.other {flex: 1 0 auto;}
+.other {
+  flex: 1 0 auto;
+  .back {
+    display: none;
+    @media (max-width: 768px) {
+      display: inline-flex;
+      text-decoration: none;
+      margin-right: 0.1rem;
+    }
+  }
+}
 </style>
