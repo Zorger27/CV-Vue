@@ -60,7 +60,11 @@ export default class english extends Vue {
     @media (max-width: 768px) {
       display: inline-flex;
       text-decoration: none;
+      color: limegreen;
       margin-right: 0.1rem;
+      i:hover {
+        color: green;
+      }
     }
   }
   .slider {
