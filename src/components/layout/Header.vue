@@ -136,7 +136,7 @@ header {
   svg {
     margin: auto 0.2rem auto 0;
     max-width: 100%;
-    height: 4rem;
+    width: 4rem;
     max-height:100%;
     cursor: pointer;
   }
@@ -144,8 +144,7 @@ header {
     padding-right: 0;
     margin-right: 0;
     svg {
-      padding-right: 0;
-      margin-right: -2rem;
+      margin-right: 0.5rem;
     }
   }
 }

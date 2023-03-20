@@ -44,7 +44,7 @@ footer {
       radial-gradient(at 0% 0%, hsla(343,100%, 76%, 1) 0px, transparent 50%);
   svg {
     max-width: 100%;
-    height: 4rem;
+    width: 4rem;
     max-height:100%;
     cursor: pointer;
     padding-right: 0.2rem;
