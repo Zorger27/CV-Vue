@@ -48,6 +48,7 @@ footer {
     max-height:100%;
     cursor: pointer;
     padding-right: 0.2rem;
+    margin: auto 0.2rem auto 0;
   }
   p {
     margin: 0;
@@ -57,19 +58,6 @@ footer {
 .footer-logo {
   margin: 10px;
   display: flex;
-  svg {
-    margin: auto 0.2rem auto 0;
-    max-width: 100%;
-    height: 4rem;
-    max-height:100%;
-    cursor: pointer;
-  }
-  @media (max-width: 768px) {
-    svg {
-      display: flex;
-      padding: 0;
-    }
-  }
 }
 .footer-text {
   font-size: 1.5rem;
@@ -80,6 +68,17 @@ footer {
     padding: 0 1rem 0 0;
     margin: 0;
     font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer-logo {
+    margin: 0.5rem;
+    padding: 0;
+    svg {
+      min-width: 100%;
+      width: 4rem;
+      min-height:100%;
+    }
   }
 }
 </style>
