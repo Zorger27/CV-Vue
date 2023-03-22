@@ -18,7 +18,7 @@ export default class education extends Vue {}
 
 <template>
   <div class="education">
-    <h1>Education</h1>
+    <h1>{{$t ('education.title')}}</h1>
     <line></line>
     <h2><span>09.1994 - 01.1999</span><br>
       <b>Kyiv national university of trade and economics</b>
@@ -64,7 +64,7 @@ export default class education extends Vue {}
     </div>
   </div>
   <div class="languages">
-    <h1>Languages</h1>
+    <h1>{{$t ('education.languages')}}</h1>
     <line></line>
     <div v-for="sert in languagesStore.state.languagesStore" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">

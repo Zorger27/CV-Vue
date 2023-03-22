@@ -25,5 +25,51 @@
     "text1": "Designed By ",
     "text2": "Zorger",
     "text3": ". Project № 14 (07.02.2023)."
+  },
+  "main": {
+    "name": "Anatolii Zorin",
+    "job": "Web Developer",
+    "info": {
+      "text01": "I've always enjoyed creating something new.",
+      "text02": "Programming helps to realise this desire.",
+      "text03": "Since",
+      "text04": ", I have combined the administrative work as CEO with the work of Digital Marketer (Google Ads, Analytics, SEM), Web Designer (Photoshop, Illustrator, Figma) and Frontend Developer (Javascript / HTML / CSS).",
+      "text05": "In",
+      "text06": ", I took up intensive study of Backend (Java, Scala, Kotlin).",
+      "text07": ", I restored and updated my knowledge of Frontend (Vue, Angular, React).",
+      "text08": ", I continued my IT education (PHP, Python, Ruby).",
+      "text09": "I'm easy learning.",
+      "text10": "I have good analytical skills.",
+      "text11": "I'm comfortable working in a team or solo."
+    }
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "education": {
+    "title": "Education",
+    "languages": "Languages"
+  },
+  "experience": {
+    "title": "Experience",
+    "lis": "LIS Ltd.",
+    "yugov": "Yugov & D Ltd.",
+    "rang": "CEO",
+    "job": "Full enterprise management."
+  },
+  "skills": {
+    "title": "Hard & Soft skills",
+    "hard": "Hard skills",
+    "soft": {
+      "sskills": "Soft skills",
+      "management": "Management",
+      "strategic": "Strategic Thinking",
+      "critical": "Critical Thinking",
+      "negotiation": "Negotiation"
+    }
+  },
+  "about": {
+    "title": "MY Curriculum VITAE on Vue.JS",
+    "technologies": "Technologies"
   }
 }

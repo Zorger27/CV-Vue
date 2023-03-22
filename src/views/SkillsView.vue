@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <h1>Hard & Soft skills</h1>
+    <h1>{{$t('skills.title')}}</h1>
     <line></line>
     <div class="container">
       <img class="codersrank-skills-chart" src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=zorger27&labels=true&legend=true&skills=JSON,JavaScript,Vue,CSS,SCSS,HTML,TypeScript&branding=false"
@@ -8,7 +8,7 @@
 <!--      <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>-->
       <div class="type-skills">
         <div class="hard-skills">
-          <h3>Hard skills</h3>
+          <h3>{{$t('skills.hard')}}</h3>
           <ul>
             <li><span>&#9745;</span>Html5, CSS3, JavaScript</li>
             <li><span>&#9745;</span>Vue.JS, Angular</li>
@@ -17,12 +17,12 @@
           </ul>
         </div>
         <div class="soft-skills">
-          <h3>Soft skills</h3>
+          <h3>{{$t('skills.soft.sskills')}}</h3>
           <ul>
-            <li><span>&#9745;</span>Management</li>
-            <li><span>&#9745;</span>Strategic Thinking</li>
-            <li><span>&#9745;</span>Critical Thinking</li>
-            <li><span>&#9745;</span>Negotiation</li>
+            <li><span>&#9745;</span>{{$t('skills.soft.management')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.soft.strategic')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.soft.critical')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.soft.negotiation')}}</li>
           </ul>
         </div>
       </div>

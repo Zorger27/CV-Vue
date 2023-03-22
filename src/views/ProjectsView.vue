@@ -14,7 +14,7 @@ export default class projects extends Vue {}
 
 <template>
   <div class="projects">
-      <h1>Projects</h1>
+      <h1>{{$t ('projects.title')}}</h1>
       <line></line>
     <div v-for="prj in projectStore.state.projectStore" class="prj">
       <a class="block" :href="prj.sourcelink" title="Project at GitHub..." target="_blank">

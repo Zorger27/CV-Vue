@@ -35,8 +35,8 @@ export default class home extends Vue {
 </script>
 
 <template>
-  <h1>Anatolii Zorin</h1>
-  <h2>— Web Developer —</h2>
+  <h1>{{ $t ('main.name')}}</h1>
+  <h2>— {{ $t ('main.job')}} —</h2>
   <line></line>
   <div class="home">
     <div class="photo">
@@ -70,21 +70,19 @@ export default class home extends Vue {
     </div>
     <div class="info">
       <p>
-        I've always enjoyed creating something new.<br>
-        Programming helps to realise this desire.<br>
+        {{ $t ('main.info.text01')}}<br>
+        {{ $t ('main.info.text02')}}<br>
       </p>
       <p>
-        Since <b>2016</b>, I have combined the administrative work as CEO with the work of Digital Marketer (Google Ads,
-        Analytics, SEM), Web Designer (Photoshop, Illustrator, Figma) and Frontend Developer (Javascript / HTML /
-        CSS).<br>
-        In <b>2020</b>, I took up intensive study of Backend (Java, Scala, Kotlin).<br>
-        In <b>2021</b>, I restored and updated my knowledge of Frontend (Vue, Angular, React).<br>
-        In <b>2022</b>, I continued my IT education (PHP, Python, Ruby).<br>
+        {{ $t ('main.info.text03')}} <b>2016</b>{{ $t ('main.info.text04')}}<br>
+        {{ $t ('main.info.text05')}} <b>2020</b>{{ $t ('main.info.text06')}}<br>
+        {{ $t ('main.info.text05')}} <b>2021</b>{{ $t ('main.info.text07')}}<br>
+        {{ $t ('main.info.text05')}} <b>2022</b>{{ $t ('main.info.text08')}}<br>
       </p>
       <p>
-        I'm easy learning.<br>
-        I have good analytical skills.<br>
-        I'm comfortable working in a team or solo.
+        {{ $t ('main.info.text09')}}<br>
+        {{ $t ('main.info.text10')}}<br>
+        {{ $t ('main.info.text11')}}
       </p>
     </div>
     <div class="slider">

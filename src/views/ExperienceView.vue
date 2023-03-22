@@ -7,7 +7,7 @@ export default class experience extends Vue {
 
 <template>
   <div class="experience">
-    <h1>Experience</h1>
+    <h1>{{$t ('experience.title')}}</h1>
     <line></line>
     <div class="container">
       <img class="codersrank-summary"
@@ -16,14 +16,14 @@ export default class experience extends Vue {
       <!--    <codersrank-summary username="zorger27" layout="horizontal" branding="false"></codersrank-summary>-->
       <div class="work">
         <p>15.01.2001 - 13.01.2023<br>
-          <b>LIS Ltd.</b><br>
-          CEO<br>
-          <i>Full enterprise management.</i><br>
+          <b>{{$t ('experience.lis')}}</b><br>
+          {{$t ('experience.rang')}}<br>
+          <i>{{$t ('experience.job')}}</i><br>
         </p>
         <p>27.12.2016 - 13.01.2023<br>
-          <b>Yugov & D Ltd.</b><br>
-          CEO<br>
-          <i>Full enterprise management.</i><br>
+          <b>{{$t ('experience.yugov')}}</b><br>
+          {{$t ('experience.rang')}}<br>
+          <i>{{$t ('experience.job')}}</i><br>
         </p>
       </div>
     </div>
@@ -34,8 +34,8 @@ export default class experience extends Vue {
 .experience {
   flex: 1 0 auto;
   text-align: left;
-  font-size: x-large;
   .container {
+    font-size: x-large;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
