@@ -14,6 +14,11 @@ export default {
     const { t, locale, availableLocales } = useI18n()
     return { t, locale, availableLocales }
   }
+  // savelocale () {
+  //   const currentLocale = sLocale
+  //   document.querySelector("html").setAttribute("lang", sLocale)
+  //   localStorage.setItem("user-locale", sLocale)
+  // }
 }
 </script>
 
@@ -23,9 +28,6 @@ select {
   border: none;
   padding: 0;
   //outline: 0 !important;
-  //box-shadow: inherit;
-  //border: 0;
-  //user-select: none;
   //appearance: none;
 }
 select:focus {
