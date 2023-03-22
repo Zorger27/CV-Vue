@@ -1,0 +1,20 @@
+{
+  "locale": {
+    "en": "English",
+    "ua": "Ukrainian"
+  },
+  "header": {
+    "main": "Main",
+    "projects": "Projects",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Skills",
+    "certificates": "Certificates",
+    "about": "About"
+  },
+  "footer": {
+    "text1": "Designed By ",
+    "text2": "Zorger",
+    "text3": " for Project № 14 (07.02.2023)"
+  }
+}

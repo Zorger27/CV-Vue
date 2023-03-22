@@ -3,6 +3,7 @@ const {defineConfig} = require('@vue/cli-service')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+// const VueI18nPlugin = require('@intlify/unplugin-vue-i18n/webpack')
 
 module.exports = defineConfig({
     transpileDependencies: true,
