@@ -9,12 +9,21 @@
     "education": "Освіта",
     "experience": "Досвід",
     "skills": "Навички",
-    "certificates": "Сертифікати",
+    "certificates": {
+      "cert": "Сертифікати",
+      "backend": "Бекенд",
+      "frontend": "Фронтенд",
+      "database": "Бази даних",
+      "designer": "Дизайн",
+      "pm": "ПМ",
+      "english": "Англійська",
+      "other": "Інші"
+    },
     "about": "Про проект"
   },
   "footer": {
     "text1": "Спроектовано ",
     "text2": "Zorger-ом",
-    "text3": " для проекту № 14 (07.02.2023)"
+    "text3": ". Проект № 14 (07.02.2023)."
   }
 }

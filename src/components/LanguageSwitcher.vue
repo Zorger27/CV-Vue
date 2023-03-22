@@ -1,18 +1,20 @@
 <template>
   <select v-model="locale">
-    <option v-for="sLocale in availableLocales" :key="`locale.${sLocale}`" :value="sLocale" :selected="locale === sLocale">
+    <option v-for="sLocale in availableLocales" :key="`locale.${sLocale}`" :value="sLocale"
+            :selected="locale === sLocale">
       {{ t(`locale.${sLocale}`) }}
     </option>
   </select>
 </template>
 
 <script lang="ts">
-import { useI18n } from "vue-i18n";
+import {useI18n} from "vue-i18n";
+
 export default {
   name: "LanguageSwitcher",
-  setup () {
-    const { t, locale, availableLocales } = useI18n()
-    return { t, locale, availableLocales }
+  setup() {
+    const {t, locale, availableLocales} = useI18n()
+    return {t, locale, availableLocales}
   }
   // savelocale () {
   //   const currentLocale = sLocale
@@ -30,6 +32,7 @@ select {
   //outline: 0 !important;
   //appearance: none;
 }
+
 select:focus {
   border: none;
 }

@@ -5,7 +5,7 @@ import ua from "./locales/ua.json"
 
 export default createI18n({
     locale: 'en',
-    fallbackLocale: 'ua',
+    fallbackLocale: 'en',
     legacy: false,
     globalInjection: true,
     messages: { en, ua }

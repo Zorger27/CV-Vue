@@ -9,12 +9,21 @@
     "education": "Education",
     "experience": "Experience",
     "skills": "Skills",
-    "certificates": "Certificates",
+    "certificates": {
+      "cert": "Certificates",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "database": "Database",
+      "designer": "Designer",
+      "pm": "PM",
+      "english": "English",
+      "other": "Other"
+    },
     "about": "About"
   },
   "footer": {
     "text1": "Designed By ",
     "text2": "Zorger",
-    "text3": " for Project № 14 (07.02.2023)"
+    "text3": ". Project № 14 (07.02.2023)."
   }
 }

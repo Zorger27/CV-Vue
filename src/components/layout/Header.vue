@@ -1,8 +1,7 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import languageSwitcher from "@/components/LanguageSwitcher.vue";
-
-import {useI18n} from "vue-i18n";
+// import {useI18n} from "vue-i18n";
 
 @Options({components: {languageSwitcher},})
 
@@ -72,17 +71,17 @@ export default class Header extends Vue {
       <router-link to="/skills" @click="hideMenu">{{ $t('header.skills') }}</router-link>
       <div class="dropdown" @click="showDropdownContent = !showDropdownContent">
         <!--          <a class="dropbtn">Certificates<span class="fa fa-angle-down"></span></a>-->
-        <a class="dropbtn">{{ $t('header.certificates') }}<span
+        <a class="dropbtn">{{ $t('header.certificates.cert') }}<span
             :class="['fa', showDropdownContent ? 'fa-caret-up' : 'fa-caret-down']"></span></a>
-        <router-link to="/certificates" class="dropbtnMob">{{ $t('header.certificates') }}</router-link>
+        <router-link to="/certificates" class="dropbtnMob">{{ $t('header.certificates.cert') }}</router-link>
         <div class="dropdown-content" v-show="showDropdownContent">
-          <router-link to="/certificates/backend" @click="hideMenu">Backend</router-link>
-          <router-link to="/certificates/frontend" @click="hideMenu">Frontend</router-link>
-          <router-link to="/certificates/database" @click="hideMenu">Database</router-link>
-          <router-link to="/certificates/designer" @click="hideMenu">Designer</router-link>
-          <router-link to="/certificates/pm" @click="hideMenu">PM</router-link>
-          <router-link to="/certificates/english" @click="hideMenu">English</router-link>
-          <router-link to="/certificates/other" @click="hideMenu">Other</router-link>
+          <router-link to="/certificates/backend" @click="hideMenu">{{ $t('header.certificates.backend') }}</router-link>
+          <router-link to="/certificates/frontend" @click="hideMenu">{{ $t('header.certificates.frontend') }}</router-link>
+          <router-link to="/certificates/database" @click="hideMenu">{{ $t('header.certificates.database') }}</router-link>
+          <router-link to="/certificates/designer" @click="hideMenu">{{ $t('header.certificates.designer') }}</router-link>
+          <router-link to="/certificates/pm" @click="hideMenu">{{ $t('header.certificates.pm') }}</router-link>
+          <router-link to="/certificates/english" @click="hideMenu">{{ $t('header.certificates.english') }}</router-link>
+          <router-link to="/certificates/other" @click="hideMenu">{{ $t('header.certificates.other') }}</router-link>
         </div>
       </div>
       <!--      <router-link to="/about" @click="hideMenu">About</router-link>-->
@@ -179,28 +178,50 @@ header {
   }
 
   .language {
-    padding: 0;
+    //padding: 0;
     margin-left: 0.5rem;
-    color: deeppink;
-    box-shadow: inherit;
-    text-decoration: underline;
+    align-self: center;
+    padding: 0.5rem;
+    color: red;
+    border: 1px solid transparent;
+    //border-radius: 5px;
+    //box-shadow: 3px 3px 4px 0 white;
+    //box-shadow: inherit;
+    //text-decoration: underline;
     font-weight: bold;
     font-size: medium;
     outline: 0 !important;
     appearance: none;
+  }
+  .language:hover {
+    color: deeppink;
+    border: 1px solid darkslategray;
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px 0 white;
   }
 
   @media (max-width: 768px) {
     padding-right: 0;
     margin-right: -0.5rem;
     .language-mob {
+      align-self: center;
+      padding: 0.5rem;
       color: darkblue;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      //box-shadow: 3px 3px 4px 0 white;
       //text-shadow: 3px 3px 4px white;
       font-weight: bold;
       font-size: medium;
-      text-decoration: underline;
+      //text-decoration: underline;
       outline: 0 !important;
       appearance: none;
+    }
+    .language-mob:hover {
+      color: blue;
+      border: 1px solid dodgerblue;
+      border-radius: 5px;
+      box-shadow: 3px 3px 4px 0 lightyellow;
     }
     svg {
       padding: 0;
