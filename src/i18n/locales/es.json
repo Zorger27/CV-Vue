@@ -1,0 +1,121 @@
+{
+  "locale": {
+    "en": "Inglés",
+    "ua": "Ukraniano",
+    "es": "Español"
+  },
+  "header": {
+    "main": "Principal",
+    "projects": "Proyectos",
+    "education": "Educación",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "certificates": {
+      "cert": "Certificados",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "database": "Base de datos",
+      "designer": "Designado",
+      "pm": "PM",
+      "english": "Inglés",
+      "other": "Otro"
+    },
+    "about": "Sobre"
+  },
+  "footer": {
+    "text1": "Diseñado por ",
+    "text2": "Zorger",
+    "text3": ". Proyecto № 14 (07.02.2023)."
+  },
+  "main": {
+    "name": "Anatolii Zorin",
+    "job": "Desarrollador web",
+    "info": {
+      "text01": "Siempre me ha gustado crear algo nuevo.",
+      "text02": "La programación ayuda a realizar este deseo.",
+      "text03": "Desde",
+      "text04": ", He combinado el trabajo administrativo como CEO con el trabajo de Marketer Digital (Google Ads, Analytics, SEM), Diseñador Web (Photoshop, Illustrator, Figma) y Desarrollador Frontend (Javascript/HTML/CSS).",
+      "text05": "En",
+      "text06": ", Empecé un estudio intensivo de Backend (Java, Scala, Kotlin).",
+      "text07": ", Restauré y actualicé mis conocimientos de Frontend (Vue, Angular, React).",
+      "text08": ", Continué mi educación en TI (PHP, Python, Ruby).",
+      "text09": "Soy fácil de aprender.",
+      "text10": "Tengo buenas habilidades analíticas.",
+      "text11": "Me siento cómodo trabajando en equipo o solo."
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "type": "Tipo: ",
+    "technologies": "Tecnologías: ",
+    "link": "Enlace al proyecto"
+  },
+  "education": {
+    "title": "Educación",
+    "knute": "Universidad Nacional de Comercio y Economía de Kiev",
+    "languages": "Idiomas",
+    "status": "Estado: ",
+    "graduation": "Fecha de graduación: ",
+    "honors": "Matrícula de honor"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "lis": "\"LYS\" SRL",
+    "yugov": "\"Yugov & D\" SRL",
+    "rang": "CEO",
+    "job": "Gestión empresarial completa."
+  },
+  "skills": {
+    "title": "Habilidades duras y blandas",
+    "hard": "Habilidades duras",
+    "soft": {
+      "sskills": "Habilidades blandas",
+      "management": "Gestión",
+      "strategic": "Pensamiento estrategico",
+      "critical": "Pensamiento crítico",
+      "negotiation": "Negociación"
+    }
+  },
+  "cert": {
+    "title": "Certificados",
+    "number": "Número: ",
+    "grade": "Grado: ",
+    "date": "Fecha del examen: ",
+    "level": "Nivel: ",
+    "back": {
+      "backend": "Diplomas y certificados Backend:",
+      "h1": "Diplomas y certificados Backend",
+      "java": "1) Desarrollador Java",
+      "java1": "Desarrollador Java",
+      "php": "2) Desarrollador PHP",
+      "php1": "Desarrollador PHP",
+      "python": "3) Desarrollador Python",
+      "python1": "Desarrollador Python",
+      "ruby": "4) Desarrollador Ruby",
+      "ruby1": "Desarrollador Ruby"
+    },
+    "front": {
+      "frontend": "Diplomas y Certificados Frontend:",
+      "h1": "Diplomas y Certificados Frontend",
+      "html": "1) Constructor del sitio",
+      "html1": "Constructor del sitio",
+      "javascript": "2) Desarrollador de JavaScript",
+      "javascript1": "Desarrollador de JavaScript",
+      "angular": "3) Desarrollador Angular",
+      "angular1": "Desarrollador Angular",
+      "react": "4) Desarrollador React",
+      "react1": "Desarrollador React",
+      "frontend2": "5) Desarrollador Frontend",
+      "frontend1": "Desarrollador Frontend"
+    },
+    "database": "Certificados de desarrollador de base de datos",
+    "designer": "Certificados de diseñador UX/UI",
+    "project": "Certificados de gestión de proyectos",
+    "other": "Otros certificados",
+    "english": "Certificados de idioma inglés"
+  },
+  "about": {
+    "title": "MI Curriculum VITAE en Vue.JS",
+    "technologies": "Tecnologías"
+  }
+}
