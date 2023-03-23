@@ -54,7 +54,8 @@
     "knute": "Kyiv national university of trade and economics",
     "languages": "Languages",
     "status": "Status: ",
-    "graduation": "Date of graduation: "
+    "graduation": "Date of graduation: ",
+    "honors": "Honors degree"
   },
   "experience": {
     "title": "Experience",
