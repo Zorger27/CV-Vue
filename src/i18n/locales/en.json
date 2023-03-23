@@ -44,11 +44,17 @@
     }
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "type": "Type: ",
+    "technologies": "Technologies: ",
+    "link": "Link to the project"
   },
   "education": {
     "title": "Education",
-    "languages": "Languages"
+    "knute": "Kyiv national university of trade and economics",
+    "languages": "Languages",
+    "status": "Status: ",
+    "graduation": "Date of graduation: "
   },
   "experience": {
     "title": "Experience",
@@ -67,6 +73,44 @@
       "critical": "Critical Thinking",
       "negotiation": "Negotiation"
     }
+  },
+  "cert": {
+    "title": "Certificates",
+    "number": "Number: ",
+    "grade": "Grade: ",
+    "date": "Exam date: ",
+    "level": "Level: ",
+    "back": {
+      "backend": "Backend Diplomas & Certificates:",
+      "h1": "Backend Diplomas & Certificates",
+      "java": "1) Java Developer",
+      "java1": "Java Developer",
+      "php": "2) PHP Developer",
+      "php1": "PHP Developer",
+      "python": "3) Python Developer",
+      "python1": "Python Developer",
+      "ruby": "4) Ruby Developer",
+      "ruby1": "Ruby Developer"
+    },
+    "front": {
+      "frontend": "Frontend Diplomas & Certificates:",
+      "h1": "Frontend Diplomas & Certificates",
+      "html": "1) HTML Coder",
+      "html1": "HTML Coder",
+      "javascript": "2) JavaScript Developer",
+      "javascript1": "JavaScript Developer",
+      "angular": "3) Angular Developer",
+      "angular1": "Angular Developer",
+      "react": "4) React Developer",
+      "react1": "React Developer",
+      "frontend2": "5) Frontend Developer",
+      "frontend1": "Frontend Developer"
+    },
+    "database": "DataBase Developer Certificates",
+    "designer": "UX/UI Designer Certificates",
+    "project": "Project Management Certificates",
+    "other": "Other Certificates",
+    "english": "English language Certificates"
   },
   "about": {
     "title": "MY Curriculum VITAE on Vue.JS",

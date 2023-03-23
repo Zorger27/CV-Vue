@@ -16,16 +16,16 @@ export default class pm extends Vue {}
     <h1>
       <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      Project Management certificates
+      {{ $t('cert.project') }}
     </h1>
     <line></line>
 <!--    <Certificate v-for="certificate in pmStore.state.pmStore" :key="certificate.id" :certificate="certificate" />-->
     <div v-for="sert in pmStore.state.pmStore" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
-        <div>Number: <strong>{{ sert.regnumber }}</strong></div>
-        <div>Grade: <strong>{{ sert.grade }}</strong></div>
-        <div>Exam date: {{ sert.examdate }}</div>
+        <div>{{ $t('cert.number') }}<strong>{{ sert.regnumber }}</strong></div>
+        <div>{{ $t('cert.grade') }}<strong>{{ sert.grade }}</strong></div>
+        <div>{{ $t('cert.date') }}{{ sert.examdate }}</div>
       </a>
     </div>
   </div>

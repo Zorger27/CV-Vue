@@ -1,27 +1,27 @@
 <template>
   <div class="certificates">
-    <h1>Certificates</h1>
+    <h1>{{ $t('cert.title') }}</h1>
     <line></line>
       <div class="prj back"><router-link class="block" to="/certificates/backend">
-        <b>Backend Diplomas & Certificates:</b><br>
-        <i>1) Java Developer<br>
-        2) PHP Developer<br>
-        3) Python Developer<br>
-        4) Ruby Developer</i>
+        <b>{{ $t('cert.back.backend') }}</b><br>
+        <i>{{ $t('cert.back.java') }}<br>
+          {{ $t('cert.back.php') }}<br>
+          {{ $t('cert.back.python') }}<br>
+          {{ $t('cert.back.ruby') }}</i>
       </router-link></div>
       <div class="prj front"><router-link class="block" to="/certificates/frontend">
-        <b>Frontend Diplomas & Certificates:</b><br>
-        <i>1) HTML Coder<br>
-        2) JavaScript Developer<br>
-        3) Angular Developer<br>
-        4) React Developer<br>
-        5) Frontend Developer</i>
+        <b>{{ $t('cert.front.frontend') }}</b><br>
+        <i>{{ $t('cert.front.html') }}<br>
+          {{ $t('cert.front.javascript') }}<br>
+          {{ $t('cert.front.angular') }}<br>
+          {{ $t('cert.front.react') }}<br>
+          {{ $t('cert.front.frontend2') }}</i>
       </router-link></div>
-      <div class="prj"><router-link class="block" to="/certificates/database"><b>DataBase Developer Certificates</b></router-link></div>
-      <div class="prj"><router-link class="block" to="/certificates/designer"><b>UX/UI Designer Certificates</b></router-link></div>
-      <div class="prj"><router-link class="block" to="/certificates/pm"><b>Project Management Certificates</b></router-link></div>
-      <div class="prj"><router-link class="block" to="/certificates/other"><b>Other Certificates</b></router-link></div>
-      <div class="prj eng"><router-link class="block" to="/certificates/english"><b>English language Certificates</b></router-link></div>
+      <div class="prj"><router-link class="block" to="/certificates/database"><b>{{ $t('cert.database') }}</b></router-link></div>
+      <div class="prj"><router-link class="block" to="/certificates/designer"><b>{{ $t('cert.designer') }}</b></router-link></div>
+      <div class="prj"><router-link class="block" to="/certificates/pm"><b>{{ $t('cert.project') }}</b></router-link></div>
+      <div class="prj"><router-link class="block" to="/certificates/other"><b>{{ $t('cert.other') }}</b></router-link></div>
+      <div class="prj eng"><router-link class="block" to="/certificates/english"><b>{{ $t('cert.english') }}</b></router-link></div>
   </div>
 </template>
 

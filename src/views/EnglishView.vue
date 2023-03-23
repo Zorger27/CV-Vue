@@ -36,14 +36,14 @@ export default class english extends Vue {
     <h1>
       <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      English language certificates
+      {{ $t('cert.english') }}
     </h1>
     <line></line>
     <div v-for="sert in englishStore.state.englishStore" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
-        <div>Level: <strong>{{ sert.regnumber }}</strong></div>
-        <div>Exam date: {{ sert.examdate }}</div>
+        <div>{{ $t('cert.level') }}<strong>{{ sert.regnumber }}</strong></div>
+        <div>{{ $t('cert.date') }}{{ sert.examdate }}</div>
       </a>
     </div>
     <div class="slider">
