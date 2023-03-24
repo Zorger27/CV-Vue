@@ -4,7 +4,8 @@ progStore:
       {
           id: 1,
           title: "Web-Designer (UI/UX Designer)",
-          grade: "successfully completed",
+          grade: "Successfully completed",
+          gradeua: "Успішно завершено",
           examdate: "06.07.2017",
           image: "/assets/doc/designer.jpg",
           // image: "https://zorger27.github.io/img/designer.jpg",
@@ -12,7 +13,8 @@ progStore:
       {
           id: 2,
           title: "Frontend Developer",
-          grade: "successfully completed",
+          grade: "Successfully completed",
+          gradeua: "Успішно завершено",
           examdate: "23.10.2017",
           image: "/assets/doc/frontend.jpg",
           // image: "https://zorger27.github.io/img/frontend.jpg",
