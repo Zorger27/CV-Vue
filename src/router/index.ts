@@ -14,8 +14,17 @@ import English from "@/views/EnglishView.vue";
 import Other from "@/views/OtherView.vue";
 import About from "@/views/AboutView.vue";
 import PageNotFound from "@/views/PageNotFound.vue";
+import LoginPage from "@/views/LoginPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginPage,
+    meta: {
+      title: 'CV - Login page',
+    }
+  },
   {
     path: '/',
     name: 'home',
