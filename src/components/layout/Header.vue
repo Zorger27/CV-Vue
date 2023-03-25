@@ -178,14 +178,14 @@ header {
 
   @media (max-width: 768px) {
     display: grid;
-    grid-template-columns: 9fr 1fr 1fr 3fr;
+    grid-template-columns: 9fr 1fr 1fr 6fr;
     grid-template-rows: auto;
     grid-template-areas: "burger-menu language login logo";
     grid-column-gap: 0.5rem;
     grid-row-gap: 0;
     grid-auto-flow: column;
     padding-right: 0;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 
     .burger-menu {
       display: grid;
@@ -196,7 +196,7 @@ header {
       //box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       align-self: center;
       justify-self: left;
-      padding: 0.5rem;
+      padding: 0.1rem 0.5rem 0.2rem 0.5rem;
       cursor: pointer;
       //margin-left: 0.5rem;
 
