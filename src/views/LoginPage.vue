@@ -43,7 +43,7 @@ export default class LoginPage extends Vue {
     //top: 50%;
     //left: 50%;
     //transform: translate(-50%, -50%);
-    max-width: 400px;
+    max-width: 420px;
     width: 100%;
     background: #fff;
     padding: 2rem;
