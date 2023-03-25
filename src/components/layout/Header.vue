@@ -170,9 +170,9 @@ header {
 
   .language:hover {
     color: red;
-    border: 1px solid rgba(112, 111, 111, 0.9);
-    border-radius: 5px;
-    box-shadow: 3px 3px 4px 0 white;
+    //border: 1px solid rgba(112, 111, 111, 0.9);
+    //border-radius: 5px;
+    //box-shadow: 3px 3px 4px 0 white;
     cursor: pointer;
   }
 
@@ -209,9 +209,9 @@ header {
     }
     .burger-menu:hover {
       background-color: inherit;
-      border: 1px solid rgba(112, 111, 111, 0.9);
-      border-radius: 5px;
-      box-shadow: 3px 3px 4px 0 white;
+      //border: 1px solid rgba(112, 111, 111, 0.9);
+      //border-radius: 5px;
+      //box-shadow: 3px 3px 4px 0 white;
 
       .burger-menu-icon {
         color: red;
