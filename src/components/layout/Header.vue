@@ -76,7 +76,6 @@ export default class Header extends Vue {
           <router-link to="/certificates/other" @click="hideMenu">{{ $t('header.certificates.other') }}</router-link>
         </div>
       </div>
-      <!--      <router-link to="/about" @click="hideMenu">About</router-link>-->
       <router-link to="/about" @click="hideMenu">{{ $t('header.about') }}</router-link>
     </div>
   </header>
@@ -143,7 +142,7 @@ header {
     margin: auto 0.2rem auto 0;
     padding: 0.5rem;
     max-width: 100%;
-    width: 3.3rem;
+    width: 3.1rem;
     max-height: 100%;
     cursor: pointer;
 
@@ -179,7 +178,7 @@ header {
 
   @media (max-width: 768px) {
     display: grid;
-    grid-template-columns: 3fr 1fr 2fr 2fr;
+    grid-template-columns: 9fr 1fr 1fr 3fr;
     grid-template-rows: auto;
     grid-template-areas: "burger-menu language login logo";
     grid-column-gap: 0.5rem;
@@ -197,9 +196,9 @@ header {
       //box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       align-self: center;
       justify-self: left;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem;
       cursor: pointer;
-      margin-left: 0.7rem;
+      //margin-left: 0.5rem;
 
       .burger-menu-icon {
         color: darkblue;
@@ -232,7 +231,7 @@ header {
 
   .login, .login:hover {
     align-self: center;
-    justify-self: right;
+    justify-self: center;
     padding: 0;
     a, a:hover, a:focus {
       border: none;
