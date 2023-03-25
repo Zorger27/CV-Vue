@@ -117,5 +117,12 @@
   "about": {
     "title": "MY Curriculum VITAE on Vue.JS",
     "technologies": "Technologies"
+  },
+  "login": {
+    "h1": "Section is under construction! Works in the test mode! \uD83D\uDE09",
+    "title": "Login, please...",
+    "email": "E-mail: ",
+    "password": "Password: ",
+    "submit": "Log In"
   }
 }

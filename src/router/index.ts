@@ -163,19 +163,19 @@ const router = createRouter({
 })
 
 // https://www.digitalocean.com/community/tutorials/vuejs-vue-router-modify-head
-// This callback runs before every route change, including on page load.
+// Этот callback запускается перед каждым изменением маршрута, в том числе при загрузке страницы.
 router.beforeEach((to, from, next) => {
-  // This goes through the matched routes from last to first, finding the closest route with a title.
-  // e.g., if we have `/some/deep/nested/route` and `/some`, `/deep`, and `/nested` have titles,
-  // `/nested`'s will be chosen.
+// Это просматривает совпадающие маршруты от последнего к первому, находя ближайший маршрут с заголовком.
+// Например, если у нас есть `/some/deep/nested/route`, и `/some`, `/deep` и `/nested` имеют заголовки,
+// будут выбраны `/nested`.
   const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
 
-  // Find the nearest route element with meta tags.
+  // Находим ближайший элемент маршрута с метатегами.
   const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
 
   const previousNearestWithMeta = from.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
 
-  // If a route with a title was found, set the document (page) title to that value.
+  // Если маршрут с заголовком был найден, устанавливает заголовок документа (страницы) в это значение.
   if(nearestWithTitle) {
     // @ts-ignore
     document.title = nearestWithTitle.meta.title;
@@ -184,14 +184,14 @@ router.beforeEach((to, from, next) => {
     document.title = previousNearestWithMeta.meta.title;
   }
 
-  // Remove any stale meta tags from the document using the key attribute we set below.
+  // Удаляем все устаревшие метатеги из документа, используя ключевой атрибут, который мы установили ниже.
   // @ts-ignore
   Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(el => el.parentNode.removeChild(el));
 
-  // Skip rendering meta tags if there are none.
+  // Пропускаем метатеги рендеринга, если их нет.
   if(!nearestWithMeta) return next();
 
-  // Turn the meta tag definitions into actual elements in the head.
+  // Превращаем определения метатегов в реальные элементы в теге head.
   // @ts-ignore
   nearestWithMeta.meta.metaTags.map(tagDef => {
     const tag = document.createElement('meta');
@@ -200,12 +200,12 @@ router.beforeEach((to, from, next) => {
       tag.setAttribute(key, tagDef[key]);
     });
 
-    // We use this to track which meta tags we create, so we don't interfere with other ones.
+    // Используем это, чтобы отслеживать, какие метатеги мы создаем, чтобы не мешать другим.
     tag.setAttribute('data-vue-router-controlled', '');
 
     return tag;
   })
-      // Add the meta tags to the document head.
+      // Добавляем метатеги в тег head документа.
       .forEach(tag => document.head.appendChild(tag));
 
   next();
