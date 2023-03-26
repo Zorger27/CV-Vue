@@ -1,6 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import otherStore from "@/store/modules/otherStore";
+import otherStore from "@/store/modules/certificates/otherStore";
 
 @Options({
   computed: {otherStore() {return otherStore}},

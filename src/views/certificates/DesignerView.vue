@@ -1,6 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import designerStore from "@/store/modules/designerStore";
+import designerStore from "@/store/modules/certificates/designerStore";
 
 @Options({
   computed: {

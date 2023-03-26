@@ -1,6 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import databaseStore from "@/store/modules/databaseStore";
+import databaseStore from "@/store/modules/certificates/databaseStore";
 @Options({
   computed: {
     databaseStore() {

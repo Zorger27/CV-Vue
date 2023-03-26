@@ -1,6 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import languageSwitcher from "@/components/LanguageSwitcher.vue";
+import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
 
 @Options({components: {languageSwitcher},})
 

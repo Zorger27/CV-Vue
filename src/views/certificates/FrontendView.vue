@@ -1,10 +1,10 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import htmlStore from "@/store/modules/frontend/htmlStore";
-import javascriptStore from "@/store/modules/frontend/javascriptStore";
-import angularStore from "@/store/modules/frontend/angularStore";
-import reactStore from "@/store/modules/frontend/reactStore";
-import frontStore from "@/store/modules/frontend/frontStore";
+import htmlStore from "@/store/modules/certificates/frontend/htmlStore";
+import javascriptStore from "@/store/modules/certificates/frontend/javascriptStore";
+import angularStore from "@/store/modules/certificates/frontend/angularStore";
+import reactStore from "@/store/modules/certificates/frontend/reactStore";
+import frontStore from "@/store/modules/certificates/frontend/frontStore";
 
 @Options({
   computed: {

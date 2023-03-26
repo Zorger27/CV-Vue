@@ -1,6 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import pmStore from "@/store/modules/pmStore";
+import pmStore from "@/store/modules/certificates/pmStore";
 @Options({
   computed: {
     pmStore() {

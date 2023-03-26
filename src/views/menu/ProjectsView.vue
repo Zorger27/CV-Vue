@@ -1,6 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import projectStore from "@/store/modules/projectStore";
+import projectStore from "@/store/modules/project/projectStore";
 @Options({
   computed: {
     projectStore() {

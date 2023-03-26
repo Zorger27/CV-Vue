@@ -1,7 +1,7 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import englishStore from "@/store/modules/englishStore";
-import Slider from "@/components/Slider.vue";
+import englishStore from "@/store/modules/certificates/englishStore";
+import Slider from "@/components/util/Slider.vue";
 @Options({
   computed: {
     englishStore() {

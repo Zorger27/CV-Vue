@@ -1,20 +1,20 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import Home from "@/views/HomeView.vue";
-import Projects from "@/views/ProjectsView.vue";
-import Education from "@/views/EducationView.vue";
-import Experience from "@/views/ExperienceView.vue";
-import Skills from "@/views/SkillsView.vue";
-import Certificates from "@/views/CertificatesView.vue";
-import Backend from "@/views/BackendView.vue";
-import Frontend from "@/views/FrontendView.vue";
-import Database from "@/views/DatabaseView.vue"
-import Designer from "@/views/DesignerView.vue";
-import Pm from "@/views/PmView.vue";
-import English from "@/views/EnglishView.vue";
-import Other from "@/views/OtherView.vue";
-import About from "@/views/AboutView.vue";
-import PageNotFound from "@/views/PageNotFound.vue";
-import LoginPage from "@/views/LoginPage.vue";
+import Home from "@/views/menu/HomeView.vue";
+import Projects from "@/views/menu/ProjectsView.vue";
+import Education from "@/views/menu/EducationView.vue";
+import Experience from "@/views/menu/ExperienceView.vue";
+import Skills from "@/views/menu/SkillsView.vue";
+import Certificates from "@/views/certificates/CertificatesView.vue";
+import Backend from "@/views/certificates/BackendView.vue";
+import Frontend from "@/views/certificates/FrontendView.vue";
+import Database from "@/views/certificates/DatabaseView.vue"
+import Designer from "@/views/certificates/DesignerView.vue";
+import Pm from "@/views/certificates/PmView.vue";
+import English from "@/views/certificates/EnglishView.vue";
+import Other from "@/views/certificates/OtherView.vue";
+import About from "@/views/menu/AboutView.vue";
+import PageNotFound from "@/views/service/PageNotFound.vue";
+import LoginPage from "@/views/service/LoginPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -80,7 +80,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'certificates',
     component: Certificates,
     meta: {
-      title: 'All diplomas & certificates',
+      title: 'All education & certificates',
     }
   },
   {

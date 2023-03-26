@@ -1,10 +1,10 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import englishdomStore from "@/store/modules/diplomas/englishdomStore";
-import languagesStore from "@/store/modules/diplomas/languagesStore";
-import itvdnStore from "@/store/modules/diplomas/itvdnStore";
-import progStore from "@/store/modules/diplomas/progStore";
-import knuteStore from "@/store/modules/diplomas/knuteStore";
+import englishdomStore from "@/store/modules/education/englishdomStore";
+import languagesStore from "@/store/modules/education/languagesStore";
+import itvdnStore from "@/store/modules/education/itvdnStore";
+import progStore from "@/store/modules/education/progStore";
+import knuteStore from "@/store/modules/education/knuteStore";
 @Options({
   computed: {
     knuteStore() {return knuteStore},

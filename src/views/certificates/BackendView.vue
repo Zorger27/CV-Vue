@@ -1,9 +1,9 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import javaStore from "@/store/modules/backend/javaStore";
-import phpStore from "@/store/modules/backend/phpStore";
-import pythonStore from "@/store/modules/backend/pythonStore";
-import rubyStore from "@/store/modules/backend/rubyStore";
+import javaStore from "@/store/modules/certificates/backend/javaStore";
+import phpStore from "@/store/modules/certificates/backend/phpStore";
+import pythonStore from "@/store/modules/certificates/backend/pythonStore";
+import rubyStore from "@/store/modules/certificates/backend/rubyStore";
 
 @Options({
   computed: {

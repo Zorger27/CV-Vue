@@ -1,6 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
-import Slider from "@/components/Slider.vue";
+import Slider from "@/components/util/Slider.vue";
 
 @Options({components: {Slider},})
 export default class home extends Vue {
