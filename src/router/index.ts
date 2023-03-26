@@ -80,7 +80,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'certificates',
     component: Certificates,
     meta: {
-      title: 'All education & certificates',
+      title: 'All diplomas & certificates',
     }
   },
   {
