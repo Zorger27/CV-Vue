@@ -115,7 +115,7 @@ header {
   }
 }
 .header-logo {
-  margin: 5px;
+  margin: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
