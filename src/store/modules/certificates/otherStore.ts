@@ -83,7 +83,11 @@ const state = {
             },
         ]
 };
-const getters = {};
+const getters = {
+    // getById: (state, getters) => (id) => {
+    //     return state.otherStore.find(item => item.id === parseInt(id));
+    // }
+};
 const mutations = {};
 const actions = {};
 export default {

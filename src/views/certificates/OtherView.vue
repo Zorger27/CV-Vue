@@ -1,10 +1,11 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import otherStore from "@/store/modules/certificates/otherStore";
+import Slider from "@/components/util/Slider.vue";
 
 @Options({
   computed: {otherStore() {return otherStore}},
-  components: {},})
+  components: {Slider},})
 export default class other extends Vue {}
 </script>
 
