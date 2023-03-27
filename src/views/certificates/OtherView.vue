@@ -18,9 +18,9 @@ export default class other extends Vue {}
     <line></line>
       <div v-for="sert in otherStore.state.otherStore" class="certificate">
         <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-          <h3>{{ sert.id }}. {{ sert.title }}</h3>
+          <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.titleua : sert.title }}</h3>
           <div>{{ $t('cert.number') }}<strong>{{ sert.regnumber }}</strong></div>
-          <div>{{ $t('cert.grade') }}<strong>{{ sert.grade }}</strong></div>
+          <div>{{ $t('cert.grade') }}<strong>{{ this.$i18n.locale === "ua" ? sert.gradeua : sert.grade }}</strong></div>
           <div>{{ $t('cert.date') }}{{ sert.examdate }}</div>
         </a>
       </div>
