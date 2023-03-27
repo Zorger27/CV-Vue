@@ -79,7 +79,6 @@ export default class LoginPage extends Vue {
       text-align: center;
       width: 43%;
       outline: none;
-      //background: darkslategray;
       background-color:hsla(0, 100%, 50%, 1);
       background-image:
           radial-gradient(at 40% 20%, hsla(28,100%, 74%,1) 0px, transparent 50%),
@@ -101,8 +100,6 @@ export default class LoginPage extends Vue {
       background: linear-gradient(to bottom, rgba(253, 253, 253, 0.5), rgba(72, 72, 171, 0.5));
       color: darkblue;
       border: 1px solid darkslateblue;
-      //background-color: darkblue;
-      //box-shadow: 3px 3px 20px 0 lightskyblue;
       outline: none;
     }
     @media (max-width: 768px) {
