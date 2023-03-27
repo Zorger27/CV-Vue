@@ -30,6 +30,7 @@ export default class other extends Vue {}
 <style lang="scss" scoped>
 .other {
   flex: 1 0 auto;
+
   .back {
     display: none;
     @media (max-width: 768px) {
