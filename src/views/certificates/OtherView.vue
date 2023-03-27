@@ -6,7 +6,10 @@ import Slider from "@/components/util/Slider.vue";
 @Options({
   computed: {otherStore() {return otherStore}},
   components: {Slider},})
-export default class other extends Vue {}
+export default class other extends Vue {
+  images = require.context('@/assets/other/', false, /\.jpg$/)
+  sliderImages = this.images.keys().map(key => this.images(key))
+}
 </script>
 
 <template>
@@ -25,13 +28,15 @@ export default class other extends Vue {}
           <div>{{ $t('cert.date') }}{{ sert.examdate }}</div>
         </a>
       </div>
+    <div class="slider">
+      <Slider :images=sliderImages></Slider>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .other {
   flex: 1 0 auto;
-
   .back {
     display: none;
     @media (max-width: 768px) {
@@ -39,6 +44,9 @@ export default class other extends Vue {}
       text-decoration: none;
       margin-right: 0.1rem;
     }
+  }
+  .slider {
+    margin: 0.3rem auto 0.3rem auto;
   }
 }
 </style>
