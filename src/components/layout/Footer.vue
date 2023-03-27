@@ -65,6 +65,9 @@ footer {
   font-style: italic;
   letter-spacing: 1px;
   color: saddlebrown;
+  @media(max-width: 1020px) {
+    font-size: 1.1rem;
+  }
   @media (max-width: 768px) {
     padding: 0 1rem 0 0;
     margin: 0;
