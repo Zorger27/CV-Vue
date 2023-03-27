@@ -92,6 +92,7 @@ export default class LoginPage extends Vue {
       //text-transform: uppercase;
       //letter-spacing: 2px;
       font-weight: bold;
+      font-size: large;
       border-radius: 25px;
       cursor: pointer;
     }
