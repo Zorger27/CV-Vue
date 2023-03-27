@@ -65,6 +65,7 @@ export default class LoginPage extends Vue {
       }
       input[type="email"], input[type="password"] {
         border: 1px solid #e0e0e0;
+        font-size: large;
         border-radius: 5px;
         width: 93%;
         padding: 0.6rem;
@@ -105,6 +106,15 @@ export default class LoginPage extends Vue {
     }
     @media (max-width: 768px) {
       max-width: 240px;
+      .input_field {
+        input[type="email"], input[type="password"] {
+          border: 1px solid #e0e0e0;
+          font-size: medium;
+          border-radius: 5px;
+          width: 93%;
+          padding: 0.6rem;
+        }
+      }
     }
   }
 }
