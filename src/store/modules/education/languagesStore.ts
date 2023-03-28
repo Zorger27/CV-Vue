@@ -13,7 +13,7 @@ languagesStore:
           title: "Spanish",
           regnumber: "Upper-Intermediate",
           examdate: "05.08.2016",
-          image: "/assets/doc/spanish.jpg",
+          image: "/assets/documents/spanish.jpg",
           // image: "https://zorger27.github.io/img/spanish.jpg",
       }
   ]

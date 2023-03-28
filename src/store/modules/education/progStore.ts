@@ -7,7 +7,7 @@ progStore:
           grade: "Successfully completed",
           gradeua: "Успішно завершено",
           examdate: "06.07.2017",
-          image: "/assets/doc/designer.jpg",
+          image: "/assets/documents/designer.jpg",
           // image: "https://zorger27.github.io/img/designer.jpg",
       },
       {
@@ -16,7 +16,7 @@ progStore:
           grade: "Successfully completed",
           gradeua: "Успішно завершено",
           examdate: "23.10.2017",
-          image: "/assets/doc/frontend.jpg",
+          image: "/assets/documents/frontend.jpg",
           // image: "https://zorger27.github.io/img/frontend.jpg",
       }
   ]

@@ -39,7 +39,7 @@ const state = {
                 grade: "Successfully passed the exam",
                 gradeua: "Успішно складено іспит",
                 examdate: "18.02.2020",
-                image: "/assets/other/01 Google Display Network Ads.jpg",
+                image: "/assets/certificates/other/Google_Display_Network_Ads.jpg",
             },
             {
                 id: 5,
@@ -49,7 +49,7 @@ const state = {
                 grade: "Successfully passed the exam",
                 gradeua: "Успішно складено іспит",
                 examdate: "20.02.2020",
-                image: "/assets/other/02 Google Shopping Campaign.jpg",
+                image: "/assets/certificates/other/Google_Shopping_Campaign.jpg",
             },
             {
                 id: 6,
@@ -59,7 +59,7 @@ const state = {
                 grade: "Successfully passed the exam",
                 gradeua: "Успішно складено іспит",
                 examdate: "16.03.2020",
-                image: "/assets/other/03 Google Search Campaign.jpg",
+                image: "/assets/certificates/other/Google_Search_Campaign.jpg",
             },
             {
                 id: 7,
@@ -69,7 +69,7 @@ const state = {
                 grade: "Successfully passed the exam",
                 gradeua: "Успішно складено іспит",
                 examdate: "17.03.2020",
-                image: "/assets/other/04 Google Video Campaign.jpg",
+                image: "/assets/certificates/other/Google_Video_Campaign.jpg",
             },
             {
                 id: 8,
@@ -79,7 +79,7 @@ const state = {
                 grade: "Successfully completed",
                 gradeua: "Успішно завершено",
                 examdate: "07.12.2020",
-                image: "/assets/other/Critical Thinking.jpg",
+                image: "/assets/certificates/other/Critical_Thinking.jpg",
             },
         ]
 };

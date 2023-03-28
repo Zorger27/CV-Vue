@@ -6,29 +6,29 @@ import Slider from "@/components/util/Slider.vue";
 export default class home extends Vue {
   // images: { folder: string; file: string }[] = [
   //   { folder: '@/assets/diploma/', file: 'TP24303907D.jpg' },
-  //   { folder: '@/assets/english/', file: '02 Conversational English.jpg' },
+  //   { folder: '@/assets/english/', file: '02_Conversational_English.jpg' },
   //   { folder: '@/assets/diploma/', file: 'TP31003654D.jpg' },
   // ];
   // sliderImages: string[] = this.images.map(({ folder, file }) => require(`${folder}${file}`));
   data() {
     return {
       sliderImages: [
-        require('@/assets/diploma/TP24303907D.jpg'),
-        require('@/assets/english/02 Conversational English.jpg'),
-        require('@/assets/diploma/TP31003654D.jpg'),
-        require('@/assets/other/Critical Thinking.jpg'),
-        require('@/assets/diploma/TP31617068D.jpg'),
-        require('@/assets/doc/designer.jpg'),
-        require('@/assets/diploma/TP37723782D.jpg'),
-        require('@/assets/english/07 Intermediate level of English.jpg'),
-        require('@/assets/diploma/TP45473683D.jpg'),
-        require('@/assets/diploma/TP63925579D.jpg'),
-        require('@/assets/doc/frontend.jpg'),
-        require('@/assets/diploma/TP77692345D.jpg'),
+        require('@/assets/certificates/diploma/TP24303907D.jpg'),
+        require('@/assets/certificates/english/02_Conversational_English.jpg'),
+        require('@/assets/certificates/diploma/TP31003654D.jpg'),
+        require('@/assets/certificates/other/Critical_Thinking.jpg'),
+        require('@/assets/certificates/diploma/TP31617068D.jpg'),
+        require('@/assets/documents/designer.jpg'),
+        require('@/assets/certificates/diploma/TP37723782D.jpg'),
+        require('@/assets/certificates/english/07_Intermediate_level_of_English.jpg'),
+        require('@/assets/certificates/diploma/TP45473683D.jpg'),
+        require('@/assets/certificates/diploma/TP63925579D.jpg'),
+        require('@/assets/documents/frontend.jpg'),
+        require('@/assets/certificates/diploma/TP77692345D.jpg'),
         require('@/assets/img/seashore.jpg'),
-        require('@/assets/diploma/TP84806711D.jpg'),
-        require('@/assets/english/10 English for advanced.jpg'),
-        require('@/assets/diploma/TP88892276D.jpg'),
+        require('@/assets/certificates/diploma/TP84806711D.jpg'),
+        require('@/assets/certificates/english/10_English_for_advanced.jpg'),
+        require('@/assets/certificates/diploma/TP88892276D.jpg'),
       ],
     }
   }

@@ -9,7 +9,7 @@ knuteStore:
           grade: "Honors degree",
           gradeua: "З відзнакою",
           examdate: "29.01.1999",
-          image: "/assets/doc/knute1.jpg",
+          image: "/assets/documents/knute1.jpg",
           // image: "https://zorger27.github.io/img/knute1.jpg",
       },
       {
@@ -20,7 +20,7 @@ knuteStore:
           grade: "Honors degree",
           gradeua: "З відзнакою",
           examdate: "29.01.1999",
-          image: "/assets/doc/knute2.jpg",
+          image: "/assets/documents/knute2.jpg",
           // image: "https://zorger27.github.io/img/knute2.jpg",
       }
   ]
