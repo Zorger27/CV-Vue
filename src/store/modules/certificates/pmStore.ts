@@ -3,7 +3,7 @@ const state = {
         [
             {
                 id: 1,
-                title: "Introduction to Project Management",
+                title: "Introduction to PM",
                 titleua: "Введення в управління проектами",
                 regnumber: "TP84744235",
                 grade: "938 / 1000",
@@ -13,7 +13,7 @@ const state = {
             },
             {
                 id: 2,
-                title: "Scrum and Project Management Methodologies",
+                title: "Scrum and PM Methodologies",
                 titleua: "Scrum та методології управління проектами",
                 regnumber: "TP14623786",
                 grade: "1000 / 1000",
