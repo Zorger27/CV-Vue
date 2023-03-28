@@ -16,7 +16,7 @@ export default class home extends Vue {
         require('@/assets/certificates/diploma/TP24303907D.jpg'),
         require('@/assets/certificates/english/02_Conversational_English.jpg'),
         require('@/assets/certificates/diploma/TP31003654D.jpg'),
-        require('@/assets/certificates/other/Critical_Thinking.jpg'),
+        require('@/assets/certificates/pm/Critical_Thinking.jpg'),
         require('@/assets/certificates/diploma/TP31617068D.jpg'),
         require('@/assets/documents/designer.jpg'),
         require('@/assets/certificates/diploma/TP37723782D.jpg'),
@@ -86,9 +86,9 @@ export default class home extends Vue {
         {{ $t ('main.info.text11')}}
       </p>
     </div>
-    <div class="slider">
-      <Slider :images=sliderImages></Slider>
-    </div>
+  </div>
+  <div class="slider">
+    <Slider :images=sliderImages></Slider>
   </div>
 </template>
 
@@ -111,9 +111,9 @@ h1 {
 }
 .slider {
   grid-area: slider;
-  justify-self: center;
+  //justify-self: center;
   //margin-top: -1.5rem;
-  margin-bottom: 0.3rem;
+  //margin-bottom: 0.3rem;
 }
 .photo {
   grid-area: photo;

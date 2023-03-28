@@ -1,6 +1,7 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import designerStore from "@/store/modules/certificates/designerStore";
+import Slider from "@/components/util/Slider.vue";
 
 @Options({
   computed: {
@@ -8,9 +9,11 @@ import designerStore from "@/store/modules/certificates/designerStore";
       return designerStore
     }
   },
-  components: {},
+  components: {Slider},
 })
 export default class designer extends Vue {
+  images = require.context('@/assets/certificates/designer/', false, /\.jpg$/)
+  sliderImages = this.images.keys().map(key => this.images(key))
 }
 </script>
 
@@ -30,6 +33,9 @@ export default class designer extends Vue {
         <div>{{ $t('cert.date') }}{{ sert.examdate }}</div>
       </a>
     </div>
+  </div>
+  <div class="slider">
+    <Slider :images=sliderImages></Slider>
   </div>
 </template>
 

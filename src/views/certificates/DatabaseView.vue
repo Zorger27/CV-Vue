@@ -1,14 +1,18 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import databaseStore from "@/store/modules/certificates/databaseStore";
+import Slider from "@/components/util/Slider.vue";
 @Options({
   computed: {
     databaseStore() {
       return databaseStore
     }
   },
-  components: {},})
-export default class database extends Vue {}
+  components: {Slider},})
+export default class database extends Vue {
+  images = require.context('@/assets/certificates/database/', false, /\.jpg$/)
+  sliderImages = this.images.keys().map(key => this.images(key))
+}
 </script>
 
 <template>
@@ -27,6 +31,9 @@ export default class database extends Vue {}
         <div>{{ $t('cert.date') }}{{ sert.examdate }}</div>
       </a>
     </div>
+  </div>
+  <div class="slider">
+    <Slider :images=sliderImages></Slider>
   </div>
 </template>
 

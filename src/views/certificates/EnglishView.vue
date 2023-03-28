@@ -46,9 +46,9 @@ export default class english extends Vue {
         <div>{{ $t('cert.date') }}{{ sert.examdate }}</div>
       </a>
     </div>
-    <div class="slider">
-      <Slider :images=sliderImages></Slider>
-    </div>
+  </div>
+  <div class="slider">
+    <Slider :images=sliderImages></Slider>
   </div>
 </template>
 
@@ -67,8 +67,8 @@ export default class english extends Vue {
       }
     }
   }
-  .slider {
-    margin: 0.3rem auto 0.3rem auto;
-  }
+  //.slider {
+  //  margin: 0.3rem auto 0.3rem auto;
+  //}
 }
 </style>

@@ -70,17 +70,7 @@ const state = {
                 gradeua: "Успішно складено іспит",
                 examdate: "17.03.2020",
                 image: "/assets/certificates/other/Google_Video_Campaign.jpg",
-            },
-            {
-                id: 8,
-                title: "Critical Thinking",
-                titleua: "Критичне мислення",
-                regnumber: "ASweZoJp",
-                grade: "Successfully completed",
-                gradeua: "Успішно завершено",
-                examdate: "07.12.2020",
-                image: "/assets/certificates/other/Critical_Thinking.jpg",
-            },
+            }
         ]
 };
 const getters = {
