@@ -36,14 +36,18 @@ export default class LoginPage extends Vue {
 .container {
   display: flex;
   justify-content: center;
-  margin: 5% 0 auto 0;
+  margin: 1.5rem 0 auto 0;
 }
   .inner {
     //position: absolute;
     //top: 50%;
     //left: 50%;
     //transform: translate(-50%, -50%);
-    max-width: 420px;
+    //max-width: 420px;
+    max-width: 33rem;
+    h1 {
+      font-size: xxx-large;
+    }
     width: 100%;
     background: #fff;
     padding: 2rem;
@@ -62,6 +66,7 @@ export default class LoginPage extends Vue {
       label {
         font-weight: bold;
         color: dodgerblue;
+        font-size: large;
       }
       input[type="email"], input[type="password"] {
         border: 1px solid #e0e0e0;
@@ -104,9 +109,17 @@ export default class LoginPage extends Vue {
       border: 1px solid darkslateblue;
       outline: none;
     }
-    @media (max-width: 768px) {
-      max-width: 240px;
+  }
+  @media(max-width: 1020px) {
+    .inner {
+      max-width: 50%;
+      h1 {
+        font-size: xx-large;
+      }
       .input_field {
+        label {
+          font-size: medium;
+        }
         input[type="email"], input[type="password"] {
           border: 1px solid #e0e0e0;
           font-size: medium;
@@ -115,7 +128,35 @@ export default class LoginPage extends Vue {
           padding: 0.6rem;
         }
       }
+      .submit {
+        font-size: medium;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .inner {
+      max-width: 60%;
+      h1 {
+        font-size: x-large;
+      }
+      .input_field {
+        label {
+          font-size: small;
+        }
+        input[type="email"], input[type="password"] {
+          border: 1px solid #e0e0e0;
+          font-size: small;
+          border-radius: 5px;
+          width: 93%;
+          padding: 0.6rem;
+        }
+      }
+      .submit {
+        font-size: small;
+      }
     }
   }
 }
+
 </style>
