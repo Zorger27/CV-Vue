@@ -29,7 +29,7 @@ const state = {
                 grade: "Successfully completed",
                 gradeua: "Успішно завершено",
                 examdate: "07.12.2020",
-                image: "/assets/certificates/pm/Critical_Thinking.jpg",
+                image: "/assets/certificates/pm/03_Critical_Thinking.jpg",
             },
 
         ]

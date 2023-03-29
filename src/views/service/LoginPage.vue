@@ -10,9 +10,6 @@ export default class LoginPage extends Vue {
   <div class="login">
     <h2>{{$t ('login.h1')}}</h2>
     <line></line>
-    <!--    <h3>Иконка "вход": <i class="fas fa-sign-in-alt"></i></h3>-->
-    <!--    <h3>Иконка "выход": <i class="fas fa-sign-out-alt"></i></h3>-->
-    <!--    <h1>Login, please...</h1>-->
     <div class="container">
       <div class="inner">
         <h1>{{$t ('login.title')}}</h1>
@@ -156,6 +153,9 @@ export default class LoginPage extends Vue {
         font-size: small;
       }
     }
+  //<!--    <h3>Иконка "вход": <i class="fas fa-sign-in-alt"></i></h3>-->
+  //<!--    <h3>Иконка "выход": <i class="fas fa-sign-out-alt"></i></h3>-->
+  //<!--    <h1>Login, please...</h1>-->
   }
 }
 

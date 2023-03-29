@@ -16,7 +16,7 @@ export default class home extends Vue {
         require('@/assets/certificates/diploma/TP24303907D.jpg'),
         require('@/assets/certificates/english/02_Conversational_English.jpg'),
         require('@/assets/certificates/diploma/TP31003654D.jpg'),
-        require('@/assets/certificates/pm/Critical_Thinking.jpg'),
+        require('@/assets/certificates/pm/03_Critical_Thinking.jpg'),
         require('@/assets/certificates/diploma/TP31617068D.jpg'),
         require('@/assets/documents/designer.jpg'),
         require('@/assets/certificates/diploma/TP37723782D.jpg'),
