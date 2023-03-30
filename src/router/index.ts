@@ -16,6 +16,7 @@ import About from "@/views/menu/AboutView.vue";
 import PageNotFound from "@/views/service/PageNotFound.vue";
 import LoginPage from "@/views/service/LoginPage.vue";
 import Extra from "@/views/menu/ExtraView.vue";
+import store from "@/store";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -154,6 +155,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Extra,
     meta: {
       title: 'CV - Extra page',
+      requiresAuth: true
     }
   },
   {
@@ -177,6 +179,14 @@ router.beforeEach((to, from, next) => {
 // Это просматривает совпадающие маршруты от последнего к первому, находя ближайший маршрут с заголовком.
 // Например, если у нас есть `/some/deep/nested/route`, и `/some`, `/deep` и `/nested` имеют заголовки,
 // будут выбраны `/nested`.
+
+  const loggedIn = localStorage.getItem('email') // Проверяем, авторизован ли пользователь
+  if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
+    next('/login') // Если пользователь не авторизован, перенаправляем его на страницу логина
+  } else {
+    next()
+  }
+
   const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
 
   // Находим ближайший элемент маршрута с метатегами.

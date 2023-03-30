@@ -2,23 +2,25 @@
 import {Options, Vue} from "vue-class-component";
 import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
 import loginStore from "@/store/modules/service/loginStore";
+import { mapState } from "vuex";
 
 @Options({
   computed: {
     loginStore() {
       return loginStore
     },
-    isAuthenticated() {
-      return this.$store.state.isAuthenticated;
-    }
+    // isAuthenticated() {
+    //   return this.$store.state.isAuthenticated;
+    // },
+    ...mapState({
+      isAuthenticated: (state) => loginStore.state.isAuthenticated,
+    }),
   },
   components: {languageSwitcher},})
 
 export default class Header extends Vue {
   showMenu = false;
   showDropdownContent = false;
-  // isAuthenticated = false;
-
   hideMenu() {
     this.showMenu = false;
   }
@@ -34,10 +36,9 @@ export default class Header extends Vue {
   }
   beforeUnmount() {
     document.removeEventListener("click", this.clickOutsideHandler);
+    localStorage.removeItem('email');
+    localStorage.removeItem('password');
   }
-  // logo() {
-  //   this.$router.push("about");
-  // }
 }
 </script>
 
@@ -88,7 +89,8 @@ export default class Header extends Vue {
       </div>
       <router-link to="/about" @click="hideMenu">{{ $t('header.about') }}</router-link>
       <router-link v-if="loginStore.state.isAuthenticated" to="/extra" @click="hideMenu">{{ $t('header.extra') }}</router-link>
-<!--      <router-link to="/extra" @click="hideMenu">{{ $t('header.extra') }}</router-link>-->
+<!--      <router-link v-if="isAuthenticated" to="/extra" @click="hideMenu">{{ $t('header.extra') }}</router-link>-->
+      <!--      <router-link to="/extra" @click="hideMenu">{{ $t('header.extra') }}</router-link>-->
     </div>
   </header>
 </template>

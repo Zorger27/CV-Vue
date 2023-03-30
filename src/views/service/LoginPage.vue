@@ -2,7 +2,12 @@
 import {Options, Vue} from "vue-class-component";
 import {Store, mapActions} from "vuex";
 import loginStore from "@/store/modules/service/loginStore";
+import ExtraView from "@/views/menu/ExtraView.vue";
+import Header from "@/components/layout/Header.vue";
 
+interface IState {
+  isAuthenticated: boolean;
+}
 @Options({
   computed: {
     loginStore() {
@@ -10,9 +15,6 @@ import loginStore from "@/store/modules/service/loginStore";
     },
     isAuthenticated() {
       return this.$store.state.isAuthenticated;
-    },
-    Store() {
-      return Store
     }
   },
   components: {},
@@ -23,16 +25,22 @@ import loginStore from "@/store/modules/service/loginStore";
 export default class LoginPage extends Vue {
   email = "";
   password = "";
-  $store!: Store<any>; // добавляем тип
+  // $store!: Store<any>; // добавляем тип
+  $store!: Store<IState>; // добавляем тип
   handleSubmit() {
     this.$store.commit("setUserCredentials", { email: this.email, password: this.password });
     this.$store.dispatch("login", { email: this.email, password: this.password });
+    this.$store.commit("IsAuthenticated", true);
+    localStorage.setItem('email', this.email);
+    // localStorage.setItem('password', this.password);
+    this.$forceUpdate(); // принудительно обновляем компонент
     // if (this.$store.state.isAuthenticated) {
     //   console.log("Пользователь авторизован");
     // } else {
     //   console.log("Ошибка авторизации");
     // }
   }
+  // Слушаем событие update-header
 }
 </script>
 
@@ -44,7 +52,7 @@ export default class LoginPage extends Vue {
 <!--    <div class="container">-->
       <div class="inner">
         <h1>{{$t ('login.title')}}</h1>
-        <form action="" @submit.prevent="handleSubmit">
+        <form @submit.prevent="handleSubmit">
           <div class="input_field">
             <label>{{$t ('login.email')}}<input v-model="email" type="email" placeholder="E-mail, ex.: info@gmail.com"/></label>
           </div>
@@ -56,10 +64,7 @@ export default class LoginPage extends Vue {
       </div>
     </div>
     <div v-else>
-<!--    <div v-if="loginStore.state.isAuthenticated">-->
-      <!--      Привет, {{ $store.state.currentUser.name }}!-->
-<!--      Привет, {{ loginStore.state.loginStore.currentUser.name }}!-->
-      <h1>Hello world!</h1>
+      <h1>Hello {{ loginStore.state.loginStore[0].user }}!!!</h1>
     </div>
   </div>
 </template>

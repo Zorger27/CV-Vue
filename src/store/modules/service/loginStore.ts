@@ -1,29 +1,27 @@
 const state = {
+    isAuthenticated: false,
     loginStore:
         [
             {
                 id: 1,
-                currentUser: "Anatolii",
-                email: "z27@g.com",
-                password: "1234567",
+                user: "Anatolii",
+                email: "admin1@admin.com",
+                password: "1234",
                 date: "30.03.2023",
-                isAuthenticated: true,
             },
             {
                 id: 2,
-                currentUser: "Tolya",
+                user: "Tolya",
                 email: "dir@gmail.com",
                 password: "121121",
                 date: "30.03.2023",
-                isAuthenticated: true,
             },
             {
                 id: 3,
-                currentUser: "Zorger121",
+                user: "Zorger121",
                 email: "reg@gmail.com",
                 password: "zorg121",
                 date: "30.03.2023",
-                isAuthenticated: true,
             },
 
         ]
@@ -50,6 +48,8 @@ const actions = {
         if (user) {
             commit('setUserCredentials', { email, password });
             commit('setIsAuthenticated', true);
+            // @ts-ignore
+            // this.$router.push('/extra');
             console.log("Пользователь авторизован");
         } else {
             console.log("Ошибка авторизации");
