@@ -15,6 +15,7 @@ import Other from "@/views/certificates/OtherView.vue";
 import About from "@/views/menu/AboutView.vue";
 import PageNotFound from "@/views/service/PageNotFound.vue";
 import LoginPage from "@/views/service/LoginPage.vue";
+import Extra from "@/views/menu/ExtraView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -145,6 +146,14 @@ const routes: Array<RouteRecordRaw> = [
     component: About,
     meta: {
       title: 'About this project',
+    }
+  },
+  {
+    path: '/extra',
+    name: 'extra',
+    component: Extra,
+    meta: {
+      title: 'CV - Extra page',
     }
   },
   {

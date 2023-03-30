@@ -1,8 +1,38 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import {Store, mapActions} from "vuex";
+import loginStore from "@/store/modules/service/loginStore";
 
-@Options({components: {},})
+@Options({
+  computed: {
+    loginStore() {
+      return loginStore
+    },
+    isAuthenticated() {
+      return this.$store.state.isAuthenticated;
+    },
+    Store() {
+      return Store
+    }
+  },
+  components: {},
+  methods: {
+    ...mapActions(["login"])
+  }
+})
 export default class LoginPage extends Vue {
+  email = "";
+  password = "";
+  $store!: Store<any>; // добавляем тип
+  handleSubmit() {
+    this.$store.commit("setUserCredentials", { email: this.email, password: this.password });
+    this.$store.dispatch("login", { email: this.email, password: this.password });
+    // if (this.$store.state.isAuthenticated) {
+    //   console.log("Пользователь авторизован");
+    // } else {
+    //   console.log("Ошибка авторизации");
+    // }
+  }
 }
 </script>
 
@@ -10,19 +40,26 @@ export default class LoginPage extends Vue {
   <div class="login">
     <h2>{{$t ('login.h1')}}</h2>
     <line></line>
-    <div class="container">
+    <div v-if="!loginStore.state.isAuthenticated" class="container">
+<!--    <div class="container">-->
       <div class="inner">
         <h1>{{$t ('login.title')}}</h1>
-        <form action="" onsubmit="">
+        <form action="" @submit.prevent="handleSubmit">
           <div class="input_field">
-            <label>{{$t ('login.email')}}<input type="email" placeholder="E-mail, ex.: info@gmail.com"/></label>
+            <label>{{$t ('login.email')}}<input v-model="email" type="email" placeholder="E-mail, ex.: info@gmail.com"/></label>
           </div>
           <div class="input_field">
-            <label>{{$t ('login.password')}}<input type="password" placeholder="Password, min. 5 symbols"/></label>
+            <label>{{$t ('login.password')}}<input v-model="password" type="password" placeholder="Password, min. 5 symbols"/></label>
           </div>
           <button class="submit" type="submit">{{$t ('login.submit')}}</button>
         </form>
       </div>
+    </div>
+    <div v-else>
+<!--    <div v-if="loginStore.state.isAuthenticated">-->
+      <!--      Привет, {{ $store.state.currentUser.name }}!-->
+<!--      Привет, {{ loginStore.state.loginStore.currentUser.name }}!-->
+      <h1>Hello world!</h1>
     </div>
   </div>
 </template>

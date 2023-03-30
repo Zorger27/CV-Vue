@@ -20,7 +20,8 @@
       "english": "English",
       "other": "Other"
     },
-    "about": "About"
+    "about": "About",
+    "extra": "Extra"
   },
   "footer": {
     "text1": "Designed By ",
@@ -124,5 +125,8 @@
     "email": "E-mail: ",
     "password": "Password: ",
     "submit": "Log In"
+  },
+  "extra": {
+    "h1": "Section is under construction! Works in the test mode! \uD83D\uDE07\uD83E\uDD13"
   }
 }

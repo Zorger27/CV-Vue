@@ -1,12 +1,23 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
+import loginStore from "@/store/modules/service/loginStore";
 
-@Options({components: {languageSwitcher},})
+@Options({
+  computed: {
+    loginStore() {
+      return loginStore
+    },
+    isAuthenticated() {
+      return this.$store.state.isAuthenticated;
+    }
+  },
+  components: {languageSwitcher},})
 
 export default class Header extends Vue {
   showMenu = false;
   showDropdownContent = false;
+  // isAuthenticated = false;
 
   hideMenu() {
     this.showMenu = false;
@@ -76,6 +87,8 @@ export default class Header extends Vue {
         </div>
       </div>
       <router-link to="/about" @click="hideMenu">{{ $t('header.about') }}</router-link>
+      <router-link v-if="loginStore.state.isAuthenticated" to="/extra" @click="hideMenu">{{ $t('header.extra') }}</router-link>
+<!--      <router-link to="/extra" @click="hideMenu">{{ $t('header.extra') }}</router-link>-->
     </div>
   </header>
 </template>
