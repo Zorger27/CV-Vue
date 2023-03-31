@@ -5,8 +5,8 @@ const state = {
             {
                 id: 1,
                 user: "Anatolii",
-                email: "admin1@admin.com",
-                password: "1234",
+                email: "zorg@gmail.com",
+                password: "1234qwer",
                 date: "30.03.2023",
             },
             {
