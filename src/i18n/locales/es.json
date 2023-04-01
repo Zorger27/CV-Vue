@@ -127,6 +127,15 @@
     "submit": "Acceso"
   },
   "extra": {
-    "h1": "¡La sección está en construcción! ¡Funciona en el modo de prueba! \uD83D\uDE07\uD83E\uDD13"
+    "h1": "¡La sección está en construcción! ¡Funciona en el modo de prueba! \uD83D\uDE07\uD83E\uDD13",
+    "calculator": "Calculadora",
+    "cryptocur": "Criptomonedas",
+    "cube": "El cubo giratorio",
+    "exchange": "Los tipos de cambio",
+    "game": "Juego",
+    "notes": "Notas",
+    "tasks": "Tareas JS",
+    "todo": "Lista de quehaceres",
+    "weather": "Clima"
   }
 }

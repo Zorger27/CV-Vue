@@ -15,8 +15,16 @@ import Other from "@/views/certificates/OtherView.vue";
 import About from "@/views/menu/AboutView.vue";
 import PageNotFound from "@/views/service/PageNotFound.vue";
 import LoginPage from "@/views/service/LoginPage.vue";
-import Extra from "@/views/menu/ExtraView.vue";
-import store from "@/store";
+import Extra from "@/views/extra/ExtraView.vue";
+import Calculator from "@/views/extra/CalculatorView.vue";
+import Cryptocur from "@/views/extra/CryptocurView.vue";
+import Cube from "@/views/extra/CubeView.vue";
+import Exchange from "@/views/extra/ExchangeView.vue";
+import Game from "@/views/extra/GameView.vue";
+import Notes from "@/views/extra/NotesView.vue";
+import Tasks from "@/views/extra/TasksView.vue";
+import Todo from "@/views/extra/TodoView.vue";
+import Weather from "@/views/extra/WeatherView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -155,6 +163,87 @@ const routes: Array<RouteRecordRaw> = [
     component: Extra,
     meta: {
       title: 'CV - Extra page',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/calculator',
+    name: 'calculator',
+    component: Calculator,
+    meta: {
+      title: 'CV Extra - Calculator',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/cryptocur',
+    name: 'cryptocur',
+    component: Cryptocur,
+    meta: {
+      title: 'CV Extra - Cryptocurrencies',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/cube',
+    name: 'cube',
+    component: Cube,
+    meta: {
+      title: 'CV Extra - Spinning cube',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/exchange',
+    name: 'exchange',
+    component: Exchange,
+    meta: {
+      title: 'CV Extra - Exchange rates',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/game',
+    name: 'game',
+    component: Game,
+    meta: {
+      title: 'CV Extra - Game',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/notes',
+    name: 'notes',
+    component: Notes,
+    meta: {
+      title: 'CV Extra - Notes',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/tasks',
+    name: 'tasks',
+    component: Tasks,
+    meta: {
+      title: 'CV Extra - JS tasks',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/todo',
+    name: 'todo',
+    component: Todo,
+    meta: {
+      title: 'CV Extra - To-do list',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/weather',
+    name: 'weather',
+    component: Weather,
+    meta: {
+      title: 'CV Extra - Weather',
       requiresAuth: true
     }
   },

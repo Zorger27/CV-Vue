@@ -21,6 +21,7 @@ import { mapState } from "vuex";
 export default class Header extends Vue {
   showMenu = false;
   showDropdownContent = false;
+  showExtraContent = false;
   hideMenu() {
     this.showMenu = false;
   }
@@ -29,6 +30,8 @@ export default class Header extends Vue {
       this.showMenu = false;
     } else if (this.showDropdownContent && !(event.target as HTMLElement).closest(".dropdown")) {
       this.showDropdownContent = false;
+    } else if (this.showExtraContent && !(event.target as HTMLElement).closest(".dropdown")) {
+      this.showExtraContent = false;
     }
   }
   mounted() {
@@ -69,6 +72,22 @@ export default class Header extends Vue {
       <!--      <router-link to="/" @click="hideMenu">Main</router-link>-->
       <router-link to="/" @click="hideMenu">{{ $t('header.main') }}</router-link>
       <router-link to="/projects" @click="hideMenu">{{ $t('header.projects') }}</router-link>
+      <div v-if="loginStore.state.isAuthenticated" class="dropdown" @click="showExtraContent = !showExtraContent">
+        <a class="dropbtn">{{ $t('header.extra') }}<span
+            :class="['fa', showExtraContent ? 'fa-caret-up' : 'fa-caret-down']"></span></a>
+        <router-link to="/extra" class="dropbtnMob">{{ $t('header.extra') }}</router-link>
+        <div class="dropdown-content" v-show="showExtraContent">
+          <router-link to="/extra/calculator" @click="hideMenu">{{ $t('extra.calculator') }}</router-link>
+          <router-link to="/extra/cryptocur" @click="hideMenu">{{ $t('extra.cryptocur') }}</router-link>
+          <router-link to="/extra/cube" @click="hideMenu">{{ $t('extra.cube') }}</router-link>
+          <router-link to="/extra/exchange" @click="hideMenu">{{ $t('extra.exchange') }}</router-link>
+          <router-link to="/extra/game" @click="hideMenu">{{ $t('extra.game') }}</router-link>
+          <router-link to="/extra/notes" @click="hideMenu">{{ $t('extra.notes') }}</router-link>
+          <router-link to="/extra/tasks" @click="hideMenu">{{ $t('extra.tasks') }}</router-link>
+          <router-link to="/extra/todo" @click="hideMenu">{{ $t('extra.todo') }}</router-link>
+          <router-link to="/extra/weather" @click="hideMenu">{{ $t('extra.weather') }}</router-link>
+        </div>
+      </div>
       <router-link to="/education" @click="hideMenu">{{ $t('header.education') }}</router-link>
       <router-link to="/experience" @click="hideMenu">{{ $t('header.experience') }}</router-link>
       <router-link to="/skills" @click="hideMenu">{{ $t('header.skills') }}</router-link>
@@ -88,7 +107,8 @@ export default class Header extends Vue {
         </div>
       </div>
       <router-link to="/about" @click="hideMenu">{{ $t('header.about') }}</router-link>
-      <router-link v-if="loginStore.state.isAuthenticated" to="/extra" @click="hideMenu">{{ $t('header.extra') }}</router-link>
+<!--      <router-link v-if="!loginStore.state.isAuthenticated" to="/about" @click="hideMenu">{{ $t('header.about') }}</router-link>-->
+<!--      <router-link v-if="loginStore.state.isAuthenticated" to="/extra" @click="hideMenu">{{ $t('header.extra') }}</router-link>-->
 <!--      <router-link v-if="isAuthenticated" to="/extra" @click="hideMenu">{{ $t('header.extra') }}</router-link>-->
       <!--      <router-link to="/extra" @click="hideMenu">{{ $t('header.extra') }}</router-link>-->
     </div>
