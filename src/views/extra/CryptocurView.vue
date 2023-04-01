@@ -11,7 +11,7 @@ export default class CryptocurView extends Vue {
     <h1>
       <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.cryptocur') }}
+      {{ $t('extra.h1m.cryptocur') }}
     </h1>
     <line></line>
   </div>

@@ -128,6 +128,17 @@
   },
   "extra": {
     "h1": "¡La sección está en construcción! ¡Funciona en el modo de prueba! \uD83D\uDE07\uD83E\uDD13",
+    "h1m": {
+      "calculator": "Calculadora",
+      "cryptocur": "Criptomonedas",
+      "cube": "El cubo giratorio \uD83D\uDE09\uD83D\uDE43",
+      "exchange": "Los tipos de cambio",
+      "game": "Juego",
+      "notes": "Notas",
+      "tasks": "Tareas JS",
+      "todo": "Lista de quehaceres",
+      "weather": "Clima"
+    },
     "calculator": "Calculadora",
     "cryptocur": "Criptomonedas",
     "cube": "El cubo giratorio",

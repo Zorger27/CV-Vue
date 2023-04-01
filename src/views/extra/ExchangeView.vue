@@ -11,7 +11,7 @@ export default class ExchangeView extends Vue {
     <h1>
       <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.exchange') }}
+      {{ $t('extra.h1m.exchange') }}
     </h1>
     <line></line>
   </div>

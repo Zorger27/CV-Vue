@@ -11,7 +11,7 @@ export default class GameView extends Vue {
     <h1>
       <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.game') }}
+      {{ $t('extra.h1m.game') }}
     </h1>
     <line></line>
   </div>

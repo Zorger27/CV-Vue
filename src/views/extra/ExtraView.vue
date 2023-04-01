@@ -11,7 +11,7 @@ export default class LoginPage extends Vue {}
     <line></line>
     <div class="container">
       <div class="prj calculator">
-        <router-link class="block" to="/extra/calculator"><b>{{ $t('extra.calculator') }} ✅</b></router-link>
+        <router-link class="block" to="/extra/calculator"><b>{{ $t('extra.calculator') }}</b></router-link>
       </div>
       <div class="prj cryptocur">
         <router-link class="block" to="/extra/cryptocur"><b>{{ $t('extra.cryptocur') }}</b></router-link>
@@ -23,7 +23,7 @@ export default class LoginPage extends Vue {}
         <router-link class="block" to="/extra/exchange"><b>{{ $t('extra.exchange') }}</b></router-link>
       </div>
       <div class="prj game">
-        <router-link class="block" to="/extra/game"><b>{{ $t('extra.game') }} ✅</b></router-link>
+        <router-link class="block" to="/extra/game"><b>{{ $t('extra.game') }}</b></router-link>
       </div>
       <div class="prj notes">
         <router-link class="block" to="/extra/notes"><b>{{ $t('extra.notes') }}</b></router-link>
