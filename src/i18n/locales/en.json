@@ -127,7 +127,7 @@
     "submit": "Log In"
   },
   "extra": {
-    "h1": "Section is under construction! Works in the test mode! \uD83D\uDE07\uD83E\uDD13",
+    "h1": "Extra (hidden) section",
     "h1m": {
       "calculator": "Calculator",
       "cryptocur": "Cryptocurrencies",

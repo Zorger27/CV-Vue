@@ -77,9 +77,9 @@ export default class Header extends Vue {
             :class="['fa', showExtraContent ? 'fa-caret-up' : 'fa-caret-down']"></span></a>
         <router-link to="/extra" class="dropbtnMob">{{ $t('header.extra') }}</router-link>
         <div class="dropdown-content" v-show="showExtraContent">
+          <router-link to="/extra/cube" @click="hideMenu">{{ $t('extra.cube') }}</router-link>
           <router-link to="/extra/calculator" @click="hideMenu">{{ $t('extra.calculator') }}</router-link>
           <router-link to="/extra/cryptocur" @click="hideMenu">{{ $t('extra.cryptocur') }}</router-link>
-          <router-link to="/extra/cube" @click="hideMenu">{{ $t('extra.cube') }}</router-link>
           <router-link to="/extra/exchange" @click="hideMenu">{{ $t('extra.exchange') }}</router-link>
           <router-link to="/extra/game" @click="hideMenu">{{ $t('extra.game') }}</router-link>
           <router-link to="/extra/notes" @click="hideMenu">{{ $t('extra.notes') }}</router-link>
