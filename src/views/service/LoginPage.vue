@@ -46,7 +46,7 @@ export default class LoginPage extends Vue {
 
 <template>
   <div class="login">
-    <h2>{{ $t('login.h1') }}{{ $t('login.h2') }}</h2>
+    <h1>{{ $t('login.h1') }}</h1>
 <!--    <h2>{{ $t('login.h2') }}</h2>-->
     <line></line>
     <div v-if="!loginStore.state.isAuthenticated" class="container">
