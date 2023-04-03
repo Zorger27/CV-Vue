@@ -13,29 +13,29 @@ export default class LoginPage extends Vue {}
       <div class="prj calculator">
         <router-link class="block" to="/extra/calculator"><b>{{ $t('extra.calculator') }}</b></router-link>
       </div>
-      <div class="prj cryptocur">
-        <router-link class="block" to="/extra/cryptocur"><b>{{ $t('extra.cryptocur') }}</b></router-link>
-      </div>
-      <div class="prj cube">
-        <router-link class="block" to="/extra/cube"><b>{{ $t('extra.cube') }}</b></router-link>
-      </div>
-      <div class="prj exchange">
-        <router-link class="block" to="/extra/exchange"><b>{{ $t('extra.exchange') }}</b></router-link>
-      </div>
-      <div class="prj game">
-        <router-link class="block" to="/extra/game"><b>{{ $t('extra.game') }}</b></router-link>
+      <div class="prj todo">
+        <router-link class="block" to="/extra/todo"><b>{{ $t('extra.todo') }}</b></router-link>
       </div>
       <div class="prj notes">
         <router-link class="block" to="/extra/notes"><b>{{ $t('extra.notes') }}</b></router-link>
       </div>
+      <div class="prj weather">
+        <router-link class="block" to="/extra/weather"><b>{{ $t('extra.weather') }}</b></router-link>
+      </div>
+      <div class="prj exchange">
+        <router-link class="block" to="/extra/exchange"><b>{{ $t('extra.exchange') }}</b></router-link>
+      </div>
+      <div class="prj cryptocur">
+        <router-link class="block" to="/extra/cryptocur"><b>{{ $t('extra.cryptocur') }}</b></router-link>
+      </div>
       <div class="prj tasks">
         <router-link class="block" to="/extra/tasks"><b>{{ $t('extra.tasks') }}</b></router-link>
       </div>
-      <div class="prj todo">
-        <router-link class="block" to="/extra/todo"><b>{{ $t('extra.todo') }}</b></router-link>
+      <div class="prj cube">
+        <router-link class="block" to="/extra/cube"><b>{{ $t('extra.cube') }}</b></router-link>
       </div>
-      <div class="prj weather">
-        <router-link class="block" to="/extra/weather"><b>{{ $t('extra.weather') }}</b></router-link>
+      <div class="prj game">
+        <router-link class="block" to="/extra/game"><b>{{ $t('extra.game') }}</b></router-link>
       </div>
     </div>
   </div>
@@ -49,7 +49,6 @@ export default class LoginPage extends Vue {}
     justify-items: center;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    //grid-template-rows: auto;
     grid-template-areas:
       "calculator todo notes"
       "weather exchange cryptocur"
@@ -95,21 +94,24 @@ export default class LoginPage extends Vue {}
 @media (max-width: 768px) {
   .extra {
     .container {
-      display: grid;
-      justify-items: center;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto;
-      grid-template-areas:
-      "calculator weather"
-      "todo notes"
-      "exchange cryptocur"
-      "tasks cube"
-      "game game";
-      grid-column-gap: 0.5rem;
-      grid-row-gap: 0;
-      grid-auto-flow: column;
-
-      .block {font-size: 1.2rem;}
+      display: inherit;
+      //display: inline-grid;
+      //justify-items: center;
+      //grid-template-columns: 1fr 1fr;
+      //grid-template-rows: auto;
+      //grid-template-areas:
+      //"calculator weather"
+      //"todo notes"
+      //"exchange cryptocur"
+      //"tasks cube"
+      //"game game";
+      //grid-column-gap: 0.5rem;
+      //grid-row-gap: 0;
+      //grid-auto-flow: column;
+      //
+      .block {
+        font-size: 1.2rem;
+      }
     }
   }
 }

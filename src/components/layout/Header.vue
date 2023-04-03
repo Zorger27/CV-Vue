@@ -9,9 +9,6 @@ import { mapState } from "vuex";
     loginStore() {
       return loginStore
     },
-    // isAuthenticated() {
-    //   return this.$store.state.isAuthenticated;
-    // },
     ...mapState({
       isAuthenticated: (state) => loginStore.state.isAuthenticated,
     }),
@@ -77,15 +74,15 @@ export default class Header extends Vue {
             :class="['fa', showExtraContent ? 'fa-caret-up' : 'fa-caret-down']"></span></a>
         <router-link to="/extra" class="dropbtnMob">{{ $t('header.extra') }}</router-link>
         <div class="dropdown-content" v-show="showExtraContent">
-          <router-link to="/extra/cube" @click="hideMenu">{{ $t('extra.cube') }}</router-link>
           <router-link to="/extra/calculator" @click="hideMenu">{{ $t('extra.calculator') }}</router-link>
-          <router-link to="/extra/cryptocur" @click="hideMenu">{{ $t('extra.cryptocur') }}</router-link>
-          <router-link to="/extra/exchange" @click="hideMenu">{{ $t('extra.exchange') }}</router-link>
-          <router-link to="/extra/game" @click="hideMenu">{{ $t('extra.game') }}</router-link>
-          <router-link to="/extra/notes" @click="hideMenu">{{ $t('extra.notes') }}</router-link>
-          <router-link to="/extra/tasks" @click="hideMenu">{{ $t('extra.tasks') }}</router-link>
           <router-link to="/extra/todo" @click="hideMenu">{{ $t('extra.todo') }}</router-link>
+          <router-link to="/extra/notes" @click="hideMenu">{{ $t('extra.notes') }}</router-link>
           <router-link to="/extra/weather" @click="hideMenu">{{ $t('extra.weather') }}</router-link>
+          <router-link to="/extra/exchange" @click="hideMenu">{{ $t('extra.exchange') }}</router-link>
+          <router-link to="/extra/cryptocur" @click="hideMenu">{{ $t('extra.cryptocur') }}</router-link>
+          <router-link to="/extra/tasks" @click="hideMenu">{{ $t('extra.tasks') }}</router-link>
+          <router-link to="/extra/cube" @click="hideMenu">{{ $t('extra.cube') }}</router-link>
+          <router-link to="/extra/game" @click="hideMenu">{{ $t('extra.game') }}</router-link>
         </div>
       </div>
       <router-link to="/education" @click="hideMenu">{{ $t('header.education') }}</router-link>

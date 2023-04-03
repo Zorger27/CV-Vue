@@ -39,9 +39,9 @@ export default class CubeView extends Vue {
     }
   }
   .body {
-    height: 350px;
-    width: 350px;
-    margin: 3% auto;
+    height: 10rem;
+    width: 10rem;
+    margin: 6rem auto;
     //border: 1px solid blue;
     //border-radius: 5%;
     //box-shadow: inset 0 0 15px 0 lightblue;
@@ -108,6 +108,13 @@ export default class CubeView extends Vue {
     100%{
       transform: rotatex(360deg) rotateY(360deg) rotateZ(360deg);
       /*transform: rotateY(360deg);*/
+    }
+  }
+}
+@media (max-width: 768px) {
+  .cube {
+    .body {
+      margin: 6rem auto;
     }
   }
 }

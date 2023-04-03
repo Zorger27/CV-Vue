@@ -121,6 +121,7 @@
   },
   "login": {
     "h1": "Section is under construction! Works in the test mode! \uD83D\uDE09",
+    "h2": "E-mail: dir@gmail.com & Password: 121121",
     "title": "Login, please...",
     "email": "E-mail: ",
     "password": "Password: ",

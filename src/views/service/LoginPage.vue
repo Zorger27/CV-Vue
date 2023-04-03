@@ -15,7 +15,10 @@ interface IState {
     },
     isAuthenticated() {
       return this.$store.state.isAuthenticated;
-    }
+    },
+    currentuser() {
+      return this.$store.state.user;
+    },
   },
   components: {},
   methods: {
@@ -32,6 +35,7 @@ export default class LoginPage extends Vue {
     this.$store.dispatch("login", { email: this.email, password: this.password });
     this.$store.commit("IsAuthenticated", true);
     localStorage.setItem('email', this.email);
+    this.$router.push('/extra');
     // localStorage.setItem('password', this.password);
     this.$forceUpdate(); // принудительно обновляем компонент
     // this.$router.push('/extra');
@@ -47,7 +51,8 @@ export default class LoginPage extends Vue {
 
 <template>
   <div class="login">
-    <h2>{{$t ('login.h1')}}</h2>
+    <h1>{{$t ('login.h1')}}</h1>
+    <h2>{{$t ('login.h2')}}</h2>
     <line></line>
     <div v-if="!loginStore.state.isAuthenticated" class="container">
 <!--    <div class="container">-->
@@ -65,7 +70,9 @@ export default class LoginPage extends Vue {
       </div>
     </div>
     <div v-else>
-      <h1>Hello {{ loginStore.state.loginStore[0].user }}!!!</h1>
+<!--      <router-link v-else to="/extra">{{ $t('header.extra') }}</router-link>-->
+<!--      <h1>Hello {{ // loginStore.state.loginStore[0].user }}!!!</h1>-->
+      <h1>Hello my dear user!</h1>
     </div>
   </div>
 </template>
