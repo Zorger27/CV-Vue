@@ -293,7 +293,7 @@ export default class CalculatorView extends Vue {
     border-radius: 3px;
     /*width: 17%;*/
     text-align: center;
-    padding: 47px 10px;
+    padding: 50px 10px;
     margin: 10px 4px 10px 0;
     cursor: pointer;
     color: #FFF;
@@ -316,6 +316,53 @@ export default class CalculatorView extends Vue {
   div.clear:hover{
     background-color: #4bd2ca;
     border-color: #4bd2ca;
+  }
+  @media (max-width: 768px) {
+    .body{
+      width: 305px;
+      margin: 4% auto;
+      font-size: 1.2rem;
+    }
+    .calculator{
+      padding: 0.5rem;
+    }
+    .input{
+      height: 30px;
+      padding-right: 15px;
+      padding-top: 10px;
+      text-align: right;
+      margin-right: 6px;
+      font-size: 1.5rem;
+      overflow-x: auto;
+      transition: all .2s ease-in-out;
+    }
+    .buttons{}
+    .operators{}
+    .operators div{
+      width: 40px;
+      padding: 10px;
+      margin: 10px 4px 5px 0;
+    }
+    .leftPanel{
+      display: inline-block;
+    }
+    .numbers div{
+      width: 40px;
+      padding: 10px;
+      margin: 5px 4px 5px 0;
+    }
+    .rightPanel div{
+      width: 40px;
+      padding: 10px;
+      margin: 5px 4px 5px 0;
+    }
+    .rightPanel div:nth-child(1){
+      margin-bottom: 10px;
+    }
+    div.equal{
+      padding: 39px 10px;
+      margin: 5px 4px 5px 0;
+    }
   }
 }
 </style>
