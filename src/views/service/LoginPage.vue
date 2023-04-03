@@ -51,28 +51,28 @@ export default class LoginPage extends Vue {
     <h1>{{ $t('login.h1') }}</h1>
     <h2>{{ $t('login.h2') }}</h2>
     <line></line>
-    <div v-if="!loginStore.state.isAuthenticated" class="container">
-      <!--    <div class="container">-->
-      <div class="inner">
-        <h1>{{ $t('login.title') }}</h1>
-        <form @submit.prevent="handleSubmit">
-          <div class="input_field">
-            <label>{{ $t('login.email') }}<input v-model="email" type="email"
-                                                 placeholder="E-mail, ex.: info@gmail.com"/></label>
-          </div>
-          <div class="input_field">
-            <label>{{ $t('login.password') }}<input v-model="password" type="password"
-                                                    placeholder="Password, min. 5 symbols"/></label>
-          </div>
-          <button class="submit" type="submit">{{ $t('login.submit') }}</button>
-        </form>
-      </div>
-    </div>
-    <div v-else>
-      <!--      <router-link v-else to="/extra">{{ $t('header.extra') }}</router-link>-->
-      <!--      <h1>Hello {{ // loginStore.state.loginStore[0].user }}!!!</h1>-->
-      <h1>Hello my dear user!!!</h1>
-    </div>
+<!--    <div v-if="!loginStore.state.isAuthenticated" class="container">-->
+<!--      &lt;!&ndash;    <div class="container">&ndash;&gt;-->
+<!--      <div class="inner">-->
+<!--        <h1>{{ $t('login.title') }}</h1>-->
+<!--        <form @submit.prevent="handleSubmit">-->
+<!--          <div class="input_field">-->
+<!--            <label>{{ $t('login.email') }}<input v-model="email" type="email"-->
+<!--                                                 placeholder="E-mail, ex.: info@gmail.com"/></label>-->
+<!--          </div>-->
+<!--          <div class="input_field">-->
+<!--            <label>{{ $t('login.password') }}<input v-model="password" type="password"-->
+<!--                                                    placeholder="Password, min. 5 symbols"/></label>-->
+<!--          </div>-->
+<!--          <button class="submit" type="submit">{{ $t('login.submit') }}</button>-->
+<!--        </form>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div v-else>-->
+<!--      &lt;!&ndash;      <router-link v-else to="/extra">{{ $t('header.extra') }}</router-link>&ndash;&gt;-->
+<!--      &lt;!&ndash;      <h1>Hello {{ // loginStore.state.loginStore[0].user }}!!!</h1>&ndash;&gt;-->
+<!--      <h1>Hello my dear user!!!</h1>-->
+<!--    </div>-->
   </div>
 </template>
 
