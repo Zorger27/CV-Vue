@@ -15,10 +15,6 @@ interface IState {
     },
     isAuthenticated() {
       return this.$store.state.isAuthenticated;
-    },
-    currentuser() {
-      return this.$store.state.user;
-    },
   },
   components: {},
   methods: {
