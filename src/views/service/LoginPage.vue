@@ -70,7 +70,7 @@ export default class LoginPage extends Vue {
     <div v-else>
       <!--      <router-link v-else to="/extra">{{ $t('header.extra') }}</router-link>-->
       <!--      <h1>Hello {{ // loginStore.state.loginStore[0].user }}!!!</h1>-->
-      <h1>{{ $t('login.h3') }}</h1>
+      <h1>Hello my Dear User!!!</h1>
     </div>
   </div>
 </template>
