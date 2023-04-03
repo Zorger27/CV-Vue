@@ -53,7 +53,7 @@ export default class LoginPage extends Vue {
       <!--    <div class="container">-->
       <div class="inner">
         <h1>{{ $t('login.title') }}</h1>
-        <h3>({{ $t('login.h2') }})</h3>
+<!--        <h3>({{ $t('login.h2') }})</h3>-->
         <form @submit.prevent="handleSubmit">
           <div class="input_field">
             <label>{{ $t('login.email') }}<input v-model="email" type="email"
