@@ -2,8 +2,6 @@
 import {Options, Vue} from "vue-class-component";
 import {Store, mapActions} from "vuex";
 import loginStore from "@/store/modules/service/loginStore";
-import ExtraView from "@/views/extra/ExtraView.vue";
-import Header from "@/components/layout/Header.vue";
 
 interface IState {
   isAuthenticated: boolean;
