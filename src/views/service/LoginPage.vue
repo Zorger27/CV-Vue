@@ -1,26 +1,26 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import {Store, mapActions} from "vuex";
-import loginStore from "@/store/modules/service/loginStore";
+// import {Store, mapActions} from "vuex";
+// import loginStore from "@/store/modules/service/loginStore";
 
-interface IState {
-  isAuthenticated: boolean;
-}
+// interface IState {
+//   isAuthenticated: boolean;
+// }
 
-@Options({
-  computed: {
-    loginStore() {
-      return loginStore
-    },
-    isAuthenticated() {
-      return this.$store.state.isAuthenticated;
-    },
-  },
-  components: {},
-  methods: {
-    ...mapActions(["login"])
-  }
-})
+// @Options({
+//   computed: {
+//     loginStore() {
+//       return loginStore
+//     },
+//     isAuthenticated() {
+//       return this.$store.state.isAuthenticated;
+//     },
+//   },
+//   components: {},
+//   methods: {
+//     ...mapActions(["login"])
+//   }
+// })
 export default class LoginPage extends Vue {
   // email = "";
   // password = "";
@@ -49,7 +49,7 @@ export default class LoginPage extends Vue {
 <template>
   <div class="login">
     <h1>{{ $t('login.h1') }}</h1>
-    <h2>{{ $t('login.h2') }}</h2>
+<!--    <h2>{{ $t('login.h2') }}</h2>-->
     <line></line>
 <!--    <div v-if="!loginStore.state.isAuthenticated" class="container">-->
 <!--      &lt;!&ndash;    <div class="container">&ndash;&gt;-->
