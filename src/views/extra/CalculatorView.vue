@@ -189,7 +189,7 @@ export default class CalculatorView extends Vue {
   }
   .body{
     width: 505px;
-    margin: 4% auto;
+    margin: 2% auto;
     letter-spacing: 5px;
     font-size: 1.8rem;
   }

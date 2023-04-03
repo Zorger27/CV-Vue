@@ -7,7 +7,7 @@ export default class LoginPage extends Vue {}
 
 <template>
   <div class="extra">
-    <h2>{{ $t('extra.h1') }}</h2>
+    <h1>{{ $t('extra.h1') }}</h1>
     <line></line>
     <div class="container">
       <div class="prj calculator">
