@@ -15,6 +15,7 @@ interface IState {
     },
     isAuthenticated() {
       return this.$store.state.isAuthenticated;
+    }
   },
   components: {},
   methods: {
