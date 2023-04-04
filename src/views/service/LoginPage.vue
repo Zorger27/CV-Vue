@@ -31,8 +31,8 @@ export default class LoginPage extends Vue {
     this.$store.dispatch("login", {email: this.email, password: this.password});
     this.$store.commit("IsAuthenticated", true);
     localStorage.setItem('email', this.email);
+    localStorage.setItem('password', this.password);
     this.$router.push('/extra');
-    // localStorage.setItem('password', this.password);
     this.$forceUpdate(); // принудительно обновляем компонент
     // this.$router.push('/extra');
     // if (this.$store.state.isAuthenticated) {
