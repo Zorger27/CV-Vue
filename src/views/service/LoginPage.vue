@@ -17,11 +17,6 @@ interface IState {
     }
   },
   components: {},
-  // data() {
-  //   return {
-  //     showPassword: false,
-  //   };
-  // },
   methods: {
     ...mapActions(["login"])
   },
@@ -131,15 +126,16 @@ export default class LoginPage extends Vue {
         border: 1px solid #e0e0e0;
         font-size: large;
         border-radius: 5px;
+        //background-clip: text;
         width: 93%;
         padding: 0.6rem;
       }
+
       span {
         position: absolute;
         top: 50%;
         right: 1.2rem;
         color: red;
-        background-color: inherit;
         //transform: translateY(-50%);
         cursor: pointer;
       }
@@ -246,4 +242,10 @@ export default class LoginPage extends Vue {
     //<!--    <h1>Login, please...</h1>-->
   }
 }
+
+//.fa-eye-slash::before, .fa-eye::before {
+//  transform: translateZ(0);
+//  color: green;
+//}
+
 </style>
