@@ -14,17 +14,22 @@ interface IState {
     },
     isAuthenticated() {
       return this.$store.state.isAuthenticated;
-    },
+    }
   },
   components: {},
+  // data() {
+  //   return {
+  //     showPassword: false,
+  //   };
+  // },
   methods: {
     ...mapActions(["login"])
-  }
+  },
 })
 export default class LoginPage extends Vue {
   email = "";
   password = "";
-  // $store!: Store<any>; // добавляем тип
+  showPassword = false;
   $store!: Store<IState>; // добавляем тип
   handleSubmit() {
     this.$store.commit("setUserCredentials", {email: this.email, password: this.password});
@@ -32,44 +37,51 @@ export default class LoginPage extends Vue {
     this.$store.commit("IsAuthenticated", true);
     localStorage.setItem('email', this.email);
     localStorage.setItem('password', this.password);
-    this.$router.push('/extra');
     this.$forceUpdate(); // принудительно обновляем компонент
-    // this.$router.push('/extra');
-    // if (this.$store.state.isAuthenticated) {
-    //   console.log("Пользователь авторизован");
-    // } else {
-    //   console.log("Ошибка авторизации");
-    // }
+    if (loginStore.state.isAuthenticated) {
+      console.log("Пользователь авторизован");
+      this.$router.push('/extra');
+    } else {
+      console.log("Ошибка авторизации");
+    }
   }
-}
+};
 </script>
 
 <template>
   <div class="login">
     <h1>{{ $t('login.h1') }}</h1>
-<!--    <h2>{{ $t('login.h2') }}</h2>-->
     <line></line>
     <div v-if="!loginStore.state.isAuthenticated" class="container">
-      <!--    <div class="container">-->
       <div class="inner">
         <h1>{{ $t('login.title') }}</h1>
-<!--        <h3>({{ $t('login.h2') }})</h3>-->
         <form @submit.prevent="handleSubmit">
           <div class="input_field">
-            <label>{{ $t('login.email') }}<input v-model="email" type="email"
-                                                 placeholder="E-mail, ex.: info@gmail.com"/></label>
+            <label>{{ $t('login.email') }}
+              <input
+                  v-model="email"
+                  type="email"
+                  placeholder="E-mail, ex.: info@gmail.com"
+              />
+            </label>
           </div>
           <div class="input_field">
-            <label>{{ $t('login.password') }}<input v-model="password" type="password"
-                                                    placeholder="Password, min. 5 symbols"/></label>
+            <label>{{ $t('login.password') }}
+              <input
+                  v-model="password"
+                  :type="showPassword ? 'text' : 'password'"
+                  placeholder="Password, min. 5 symbols"
+              />
+              <span @click="showPassword = !showPassword">
+                <i :class="showPassword ? 'far fa-eye' : 'far fa-eye-slash'"></i>
+              </span>
+            </label>
           </div>
           <button class="submit" type="submit">{{ $t('login.submit') }}</button>
         </form>
       </div>
     </div>
     <div v-else>
-      <!--      <router-link v-else to="/extra">{{ $t('header.extra') }}</router-link>-->
-      <!--      <h1>Hello {{ // loginStore.state.loginStore[0].user }}!!!</h1>-->
       <h1>{{ $t('login.h3') }}</h1>
     </div>
   </div>
@@ -87,6 +99,7 @@ export default class LoginPage extends Vue {
 
   .inner {
     max-width: 33rem;
+
     h1 {
       font-size: xxx-large;
     }
@@ -106,6 +119,7 @@ export default class LoginPage extends Vue {
 
     .input_field {
       margin-bottom: 0.6rem;
+      position: relative;
 
       label {
         font-weight: bold;
@@ -113,12 +127,20 @@ export default class LoginPage extends Vue {
         font-size: large;
       }
 
-      input[type="email"], input[type="password"] {
+      input[type="email"], input[type="password"], input[type="text"] {
         border: 1px solid #e0e0e0;
         font-size: large;
         border-radius: 5px;
         width: 93%;
         padding: 0.6rem;
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        color: red;
+        //transform: translateY(-50%);
+        cursor: pointer;
       }
     }
 
@@ -139,8 +161,6 @@ export default class LoginPage extends Vue {
       radial-gradient(at 79% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
       radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
       color: white;
-      //text-transform: uppercase;
-      //letter-spacing: 2px;
       font-weight: bold;
       font-size: large;
       border-radius: 25px;

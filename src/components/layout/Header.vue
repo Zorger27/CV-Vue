@@ -2,7 +2,6 @@
 import {Options, Vue} from "vue-class-component";
 import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
 import loginStore from "@/store/modules/service/loginStore";
-// import { mapState } from "vuex";
 
 @Options({
   computed: {
@@ -11,9 +10,6 @@ import loginStore from "@/store/modules/service/loginStore";
     },
     isAuthenticated() {return this.$store.state.isAuthenticated;},
     // isAuthenticated() {return {isAuthenticated: false};},
-    // ...mapState({
-    //   isAuthenticated: (state) => loginStore.state.isAuthenticated,
-    // }),
   },
   methods: {
     login() {
