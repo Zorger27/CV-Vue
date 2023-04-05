@@ -2,19 +2,13 @@
 import {Options, Vue} from "vue-class-component";
 import {Store, mapActions} from "vuex";
 import loginStore from "@/store/modules/service/loginStore";
-
-interface IState {
-  isAuthenticated: boolean;
-}
+import {IState} from "@/store/types";
 
 @Options({
   computed: {
     loginStore() {
       return loginStore
     },
-    isAuthenticated() {
-      return this.$store.state.isAuthenticated;
-    }
   },
   components: {},
   methods: {
@@ -22,19 +16,20 @@ interface IState {
   },
 })
 export default class LoginPage extends Vue {
+  $store!: Store<IState>; // добавляем тип
   email = "";
   password = "";
   showPassword = false;
-  $store!: Store<IState>; // добавляем тип
   handleSubmit() {
     this.$store.commit("setUserCredentials", {email: this.email, password: this.password});
     this.$store.dispatch("login", {email: this.email, password: this.password});
     this.$store.commit("IsAuthenticated", true);
     localStorage.setItem('email', this.email);
     localStorage.setItem('password', this.password);
-    this.$forceUpdate(); // принудительно обновляем компонент
-    if (loginStore.state.isAuthenticated) {
-      console.log("Пользователь авторизован");
+    // this.$forceUpdate(); // принудительно обновляем компонент
+    // if (loginStore.state.isAuthenticated) {
+    if (this.$store.getters.isAuthenticated) {
+        console.log("Пользователь авторизован");
       this.$router.push('/extra');
     } else {
       console.log("Ошибка авторизации");

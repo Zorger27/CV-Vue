@@ -1,32 +1,26 @@
+import { GetterTree } from "vuex";
+import { IState } from "@/store/types";
+
 const state = {
     isAuthenticated: false,
     loginStore:
         [
             {
-                id: 1,
-                user: "Anatolii",
                 email: "zorg@gmail.com",
                 password: "1234qwer",
-                date: "30.03.2023",
             },
             {
-                id: 2,
-                user: "Tolya",
                 email: "dir@gmail.com",
                 password: "121121",
-                date: "30.03.2023",
             },
             {
-                id: 3,
-                user: "Zorger121",
                 email: "reg@gmail.com",
                 password: "zorg121",
-                date: "30.03.2023",
             },
-
         ]
 };
-const getters = {
+const getters: GetterTree<IState, IState> = {
+    isAuthenticated: (state) => state.isAuthenticated,
     getUserByEmailAndPassword: (state) => (email, password) => {
         return state.loginStore.find(user => user.email === email && user.password === password);
     }
@@ -48,13 +42,11 @@ const actions = {
         if (user) {
             commit('setUserCredentials', { email, password });
             commit('setIsAuthenticated', true);
-            // @ts-ignore
-            // this.$router.push('/extra');
-            console.log("Пользователь авторизован");
-        } else {
-            console.log("Ошибка авторизации");
+        //     console.log('Пользователь авторизован');
+        // } else {
+        //     console.log('Ошибка авторизации');
         }
-    }
+    },
 };
 export default {
     state,
