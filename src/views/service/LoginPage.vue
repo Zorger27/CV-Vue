@@ -137,8 +137,9 @@ export default class LoginPage extends Vue {
       span {
         position: absolute;
         top: 50%;
-        right: 1.5rem;
+        right: 1.2rem;
         color: red;
+        background-color: inherit;
         //transform: translateY(-50%);
         cursor: pointer;
       }
@@ -189,12 +190,17 @@ export default class LoginPage extends Vue {
           font-size: medium;
         }
 
-        input[type="email"], input[type="password"] {
+        input[type="email"], input[type="password"], input[type="text"] {
           border: 1px solid #e0e0e0;
           font-size: medium;
           border-radius: 5px;
           width: 93%;
           padding: 0.6rem;
+        }
+        span {
+          top: 52%;
+          right: 1rem;
+          font-size: large;
         }
       }
 
@@ -217,12 +223,17 @@ export default class LoginPage extends Vue {
           font-size: small;
         }
 
-        input[type="email"], input[type="password"] {
+        input[type="email"], input[type="password"], input[type="text"] {
           border: 1px solid #e0e0e0;
           font-size: small;
           border-radius: 5px;
           width: 93%;
           padding: 0.6rem;
+        }
+        span {
+          top: 55%;
+          right: 0.8rem;
+          font-size: medium;
         }
       }
 
