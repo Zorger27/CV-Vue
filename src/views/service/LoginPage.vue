@@ -21,19 +21,18 @@ export default class LoginPage extends Vue {
   password = "";
   showPassword = false;
   handleSubmit() {
+    const expiration = new Date().getTime() + 24 * 60 * 60 * 1000; // время через 1 день
     this.$store.commit("setUserCredentials", {email: this.email, password: this.password});
     this.$store.dispatch("login", {email: this.email, password: this.password});
     this.$store.commit("IsAuthenticated", true);
 
-    // сохраняем email и password в локальном хранилище с временной меткой
-    const expiration = new Date().getTime() + 24 * 60 * 60 * 1000; // время через 1 день
-    localStorage.setItem('email', this.email);
-    localStorage.setItem('password', this.password);
-    localStorage.setItem('expiration', expiration.toString());
-
     // если пользователь авторизован, перенаправляем на страницу extra
     if (this.$store.getters.isAuthenticated) {
       console.log("Пользователь авторизован");
+      // сохраняем email и password в локальном хранилище с временной меткой
+      localStorage.setItem('email', this.email);
+      localStorage.setItem('password', this.password);
+      localStorage.setItem('expiration', expiration.toString());
       this.$router.push('/extra');
     } else {
       console.log("Ошибка авторизации");

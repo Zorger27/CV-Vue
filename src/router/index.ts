@@ -269,7 +269,7 @@ router.beforeEach((to, from, next) => {
 // Например, если у нас есть `/some/deep/nested/route`, и `/some`, `/deep` и `/nested` имеют заголовки,
 // будут выбраны `/nested`.
 
-  const loggedIn = localStorage.getItem('email') // Проверяем, авторизован ли пользователь
+  const loggedIn = localStorage.getItem('expiration') // Проверяем, авторизован ли пользователь
   if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
     next('/login') // Если пользователь не авторизован, перенаправляем его на страницу логина
   } else {

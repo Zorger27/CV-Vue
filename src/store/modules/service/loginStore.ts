@@ -35,9 +35,9 @@ const mutations = {
     setIsAuthenticated: (state, isAuthenticated) => {
         state.isAuthenticated = isAuthenticated;
     },
-    addNewUser: (state, { email, password }) => {
-        state.loginStore.push({ email, password });
-    }
+    // addNewUser: (state, { email, password }) => {
+    //     state.loginStore.push({ email, password });
+    // }
 };
 const actions = {
     login: ({ getters, commit }, { email, password }) => {
