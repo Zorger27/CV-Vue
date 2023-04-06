@@ -35,6 +35,9 @@ const mutations = {
     setIsAuthenticated: (state, isAuthenticated) => {
         state.isAuthenticated = isAuthenticated;
     },
+    addNewUser: (state, { email, password }) => {
+        state.loginStore.push({ email, password });
+    }
 };
 const actions = {
     login: ({ getters, commit }, { email, password }) => {
@@ -42,10 +45,14 @@ const actions = {
         if (user) {
             commit('setUserCredentials', { email, password });
             commit('setIsAuthenticated', true);
+        // } else {
+        //     commit('addNewUser', { email, password });
+        //     commit('setUserCredentials', { email, password });
+        //     commit('setIsAuthenticated', true);
+        }
         //     console.log('Пользователь авторизован');
         // } else {
         //     console.log('Ошибка авторизации');
-        }
     },
 };
 export default {
