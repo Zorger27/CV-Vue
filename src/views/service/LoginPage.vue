@@ -20,21 +20,34 @@ export default class LoginPage extends Vue {
   email = "";
   password = "";
   showPassword = false;
+  expiration = new Date().getTime() + 60 * 60 * 1000; // время через 1 час
   handleSubmit() {
     this.$store.commit("setUserCredentials", {email: this.email, password: this.password});
     this.$store.dispatch("login", {email: this.email, password: this.password});
     this.$store.commit("IsAuthenticated", true);
+
+    // сохраняем email и password в локальном хранилище с временной меткой
+    const expiration = new Date().getTime() + 24 * 60 * 60 * 1000; // время через 1 день
     localStorage.setItem('email', this.email);
     localStorage.setItem('password', this.password);
-    // this.$forceUpdate(); // принудительно обновляем компонент
-    // if (loginStore.state.isAuthenticated) {
+    localStorage.setItem('expiration', expiration.toString());
+
+    // если пользователь авторизован, перенаправляем на страницу extra
     if (this.$store.getters.isAuthenticated) {
-        console.log("Пользователь авторизован");
+      console.log("Пользователь авторизован");
       this.$router.push('/extra');
     } else {
       console.log("Ошибка авторизации");
     }
-  }
+
+    // устанавливаем таймер для удаления данных из локального хранилища
+    setTimeout(() => {
+      localStorage.removeItem('email');
+      localStorage.removeItem('password');
+      localStorage.removeItem('expiration');
+      location.reload();
+    }, 24 * 60 * 60 * 1000);
+}
 };
 </script>
 
@@ -188,6 +201,7 @@ export default class LoginPage extends Vue {
           width: 93%;
           padding: 0.6rem;
         }
+
         span {
           top: 52%;
           right: 1rem;
@@ -221,6 +235,7 @@ export default class LoginPage extends Vue {
           width: 93%;
           padding: 0.6rem;
         }
+
         span {
           top: 55%;
           right: 0.8rem;
