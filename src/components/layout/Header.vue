@@ -56,7 +56,7 @@ export default class Header extends Vue {
         <!--      <i class="fa fa-bars burger-menu-icon"></i>-->
         <i :class="['fa', showMenu ? 'fa-times' : 'fa-bars', 'burger-menu-icon']"></i>
       </div>
-      <router-link class="logo" to="/about">
+      <router-link class="logo" to="/extra">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="125" height="121"
                viewBox="0 0 125 121">
             <image id="Слой_1" data-name="Слой 1" width="125" height="121"
