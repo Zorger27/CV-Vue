@@ -20,7 +20,6 @@ export default class LoginPage extends Vue {
   email = "";
   password = "";
   showPassword = false;
-  expiration = new Date().getTime() + 60 * 60 * 1000; // время через 1 час
   handleSubmit() {
     this.$store.commit("setUserCredentials", {email: this.email, password: this.password});
     this.$store.dispatch("login", {email: this.email, password: this.password});
@@ -238,7 +237,7 @@ export default class LoginPage extends Vue {
 
         span {
           top: 55%;
-          right: 0.8rem;
+          right: 0.5rem;
           font-size: medium;
         }
       }
