@@ -6,16 +6,34 @@ const state = {
     loginStore:
         [
             {
+                id: 1,
+                name: "Anatolii",
+                surname: "Zorin",
                 email: "zorg@gmail.com",
                 password: "1234qwer",
+                birthdate: "30.04.1976",
+                regDate: "30.03.2023",
+                admin: true
             },
             {
+                id: 2,
+                name: "Olga",
+                surname: "Zorina",
                 email: "dir@gmail.com",
                 password: "121121",
+                birthdate: "24.05.1951",
+                regDate: "30.03.2023",
+                admin: true
             },
             {
+                id: 3,
+                name: "Petr",
+                surname: "Zorin",
                 email: "reg@gmail.com",
                 password: "zorg121",
+                birthdate: "11.08.1944",
+                regDate: "30.03.2023",
+                admin: true
             },
         ]
 };
@@ -35,9 +53,6 @@ const mutations = {
     setIsAuthenticated: (state, isAuthenticated) => {
         state.isAuthenticated = isAuthenticated;
     },
-    // addNewUser: (state, { email, password }) => {
-    //     state.loginStore.push({ email, password });
-    // }
 };
 const actions = {
     login: ({ getters, commit }, { email, password }) => {
@@ -45,14 +60,7 @@ const actions = {
         if (user) {
             commit('setUserCredentials', { email, password });
             commit('setIsAuthenticated', true);
-        // } else {
-        //     commit('addNewUser', { email, password });
-        //     commit('setUserCredentials', { email, password });
-        //     commit('setIsAuthenticated', true);
         }
-        //     console.log('Пользователь авторизован');
-        // } else {
-        //     console.log('Ошибка авторизации');
     },
 };
 export default {

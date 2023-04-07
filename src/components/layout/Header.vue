@@ -53,7 +53,6 @@ export default class Header extends Vue {
   <header>
     <div class="header-logo">
       <div class="burger-menu" @click="showMenu = !showMenu">
-        <!--      <i class="fa fa-bars burger-menu-icon"></i>-->
         <i :class="['fa', showMenu ? 'fa-times' : 'fa-bars', 'burger-menu-icon']"></i>
       </div>
       <router-link class="logo" to="/extra">
