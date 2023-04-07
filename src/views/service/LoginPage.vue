@@ -19,12 +19,38 @@ export default class LoginPage extends Vue {
   $store!: Store<IState>; // добавляем тип
   email = "";
   password = "";
+  emailError = "";
+  passwordError = "";
   showPassword = false;
+
+  checkPassword() {
+    if (this.password.length < 5) {
+      this.passwordError = `${this.$t('login.passwordError')}`;
+    } else {
+      this.passwordError = "";
+    }
+  }
+
+  checkEmail() {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email)) {
+      this.emailError = `${this.$t('login.emailError')}`;
+    } else {
+      this.emailError = "";
+    }
+  }
+
   handleSubmit() {
+    // Проверяем, есть ли ошибки ввода данных
+    if (!this.emailError && !this.passwordError) {
+      // Отправка данных в хранилище
+      this.$store.dispatch('login', {email: this.email, password: this.password});
+      this.$store.commit("setUserCredentials", {email: this.email, password: this.password});
+      this.$store.commit("IsAuthenticated", true)
+      // Если авторизация прошла успешно, сохраняем данные пользователя
+    } else
+      console.log('Ошибка в e-mail и/или password');
+
     const expiration = new Date().getTime() + 24 * 60 * 60 * 1000; // время через 1 день
-    this.$store.commit("setUserCredentials", {email: this.email, password: this.password});
-    this.$store.dispatch("login", {email: this.email, password: this.password});
-    this.$store.commit("IsAuthenticated", true);
 
     // если пользователь авторизован, перенаправляем на страницу extra
     if (this.$store.getters.isAuthenticated) {
@@ -45,7 +71,7 @@ export default class LoginPage extends Vue {
       localStorage.removeItem('expiration');
       location.reload();
     }, 24 * 60 * 60 * 1000);
-}
+  }
 };
 </script>
 
@@ -62,15 +88,18 @@ export default class LoginPage extends Vue {
               <input
                   v-model="email"
                   type="email"
+                  @input="checkEmail"
                   placeholder="E-mail, ex.: info@gmail.com"
               />
             </label>
           </div>
+          <p v-if="emailError" class="error-message">{{ emailError }}</p>
           <div class="input_field">
             <label>{{ $t('login.password') }}
               <input
                   v-model="password"
                   :type="showPassword ? 'text' : 'password'"
+                  @input="checkPassword"
                   placeholder="Password, min. 5 symbols"
               />
               <span @click="showPassword = !showPassword">
@@ -78,6 +107,7 @@ export default class LoginPage extends Vue {
               </span>
             </label>
           </div>
+          <p v-if="passwordError" class="error-message">{{ passwordError }}</p>
           <button class="submit" type="submit">{{ $t('login.submit') }}</button>
         </form>
       </div>
@@ -141,10 +171,16 @@ export default class LoginPage extends Vue {
         position: absolute;
         top: 50%;
         right: 1.2rem;
-        color: red;
+        color: darkred;
         //transform: translateY(-50%);
         cursor: pointer;
       }
+    }
+    .error-message {
+      font-size: medium;
+      font-style: italic;
+      color: red;
+      margin: -0.2rem auto 1rem auto;
     }
 
     .submit {
@@ -206,6 +242,10 @@ export default class LoginPage extends Vue {
           font-size: large;
         }
       }
+      .error-message {
+        font-size: small;
+        margin: -0.2rem auto 1rem auto;
+      }
 
       .submit {
         font-size: medium;
@@ -239,6 +279,10 @@ export default class LoginPage extends Vue {
           right: 0.5rem;
           font-size: medium;
         }
+      }
+      .error-message {
+        font-size: x-small;
+        margin: -0.2rem auto 1rem auto;
       }
 
       .submit {

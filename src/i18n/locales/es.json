@@ -124,7 +124,9 @@
     "h3": "Hola mi Querido usuario!!!",
     "title": "Ingresa, por favor...",
     "email": "Correo electrónico: ",
+    "emailError": "Correo electrónico ingresado incorrectamente",
     "password": "Contraseña: ",
+    "passwordError": "La contraseña debe contener al menos 5 caracteres",
     "submit": "Acceso"
   },
   "extra": {

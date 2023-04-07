@@ -124,7 +124,9 @@
     "h3": "Hello my Dear User!!!",
     "title": "Login, please...",
     "email": "E-mail: ",
+    "emailError": "E-mail entered incorrectly",
     "password": "Password: ",
+    "passwordError": "Password must contain at least 5 characters",
     "submit": "Log In"
   },
   "extra": {
