@@ -121,7 +121,7 @@
   },
   "login": {
     "h1": "¡La sección está en construcción! ¡Funciona en el modo de prueba! \uD83D\uDE09",
-    "h3": "Hola mi Querido usuario!!!",
+    "h3": "Hola mi Querido ",
     "title": "Ingresa, por favor...",
     "email": "Correo electrónico: ",
     "emailError": "Correo electrónico ingresado incorrectamente",
@@ -130,7 +130,7 @@
     "submit": "Acceso"
   },
   "extra": {
-    "h1": "Sección extra (oculta)",
+    "h1": "Sección extra (oculta) para ",
     "h1m": {
       "calculator": "Calculadora",
       "cryptocur": "Criptomonedas",

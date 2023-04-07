@@ -272,9 +272,13 @@ router.beforeEach((to, from, next) => {
   const loggedIn = localStorage.getItem('expiration') // Проверяем, авторизован ли пользователь
   if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
     next('/login') // Если пользователь не авторизован, перенаправляем его на страницу логина
-  } else {
-    next()
   }
+
+  // if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
+  //   next('/login') // Если пользователь не авторизован, перенаправляем его на страницу логина
+  // } else {
+  //   next()
+  // }
 
   const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
 

@@ -1,13 +1,27 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import loginStore from "../../store/modules/service/loginStore";
+import { mapGetters } from "vuex";
 
-@Options({components: {},})
+@Options({
+  computed: {loginStore() {return loginStore}},
+  components: {},
+  methods: {
+    ...mapGetters(["getCurrentUser"]),
+    currentUser() {return this.getCurrentUser || {};}
+  },
+})
 export default class LoginPage extends Vue {}
 </script>
 
 <template>
   <div class="extra">
-    <h1>{{ $t('extra.h1') }}</h1>
+    <h1>
+      {{ $t('extra.h1') }}
+      <span class="currentUser">
+       {{ loginStore.state.currentUser.name }} {{ loginStore.state.currentUser.surname }}
+      </span>
+    </h1>
     <line></line>
     <div class="container">
       <div class="prj calculator">

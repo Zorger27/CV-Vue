@@ -42,13 +42,15 @@ const getters: GetterTree<IState, IState> = {
     isAuthenticated: (state) => state.isAuthenticated,
     getUserByEmailAndPassword: (state) => (email, password) => {
         return state.loginStore.find(user => user.email === email && user.password === password);
-    }
+    },
+    getCurrentUser: (state) => state.currentUser
 };
 const mutations = {
     setUserCredentials: (state, { email, password }) => {
         const user = state.loginStore.find(user => user.email === email && user.password === password);
         if (user) {
             user.isAuthenticated = true;
+            state.currentUser = user;
         }
     },
     setIsAuthenticated: (state, isAuthenticated) => {

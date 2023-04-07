@@ -1,6 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import {Store, mapActions} from "vuex";
+import {Store, mapGetters, mapActions} from "vuex";
 import loginStore from "@/store/modules/service/loginStore";
 import {IState} from "@/store/types";
 
@@ -12,6 +12,8 @@ import {IState} from "@/store/types";
   },
   components: {},
   methods: {
+    ...mapGetters(["isAuthenticated", "getCurrentUser"]),
+    currentUser() {return this.getCurrentUser || {};},
     ...mapActions(["login"])
   },
 })
@@ -113,7 +115,12 @@ export default class LoginPage extends Vue {
       </div>
     </div>
     <div v-else>
-      <h1>{{ $t('login.h3') }}</h1>
+      <h1>
+        {{ $t('login.h3') }}
+        <span class="currentUser">
+          {{ loginStore.state.currentUser.name }} {{ loginStore.state.currentUser.surname }}
+        </span>!!!
+      </h1>
     </div>
   </div>
 </template>
