@@ -3,6 +3,7 @@ import { IState } from "@/store/types";
 
 const state = {
     isAuthenticated: false,
+    currentUser: null,
     loginStore:
         [
             {
