@@ -43,9 +43,9 @@ export default class LoginPage extends Vue {
     // Проверяем, есть ли ошибки ввода данных
     if (!this.emailError && !this.passwordError) {
       // Отправка данных в хранилище
-      this.$store.dispatch('login', {email: this.email, password: this.password});
-      this.$store.commit("setUserCredentials", {email: this.email, password: this.password});
-      this.$store.commit("IsAuthenticated", true)
+      this.$store.dispatch('login', {email: this.email, password: this.password})
+      // this.$store.commit("setUserCredentials", {email: this.email, password: this.password});
+      // this.$store.commit("IsAuthenticated", true)
       // Если авторизация прошла успешно, сохраняем данные пользователя
     } else
       console.log('Ошибка в e-mail и/или password');
