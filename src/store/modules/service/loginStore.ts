@@ -51,7 +51,10 @@ const mutations = {
         if (user) {
             user.isAuthenticated = true;
             state.currentUser = user;
+        } else {
+            state.currentUser = null; // очищаем currentUser, если пользователь не найден
         }
+        state.isAuthenticated = Boolean(user); // устанавливаем isAuthenticated в зависимости от результата поиска пользователя
     },
     setIsAuthenticated: (state, isAuthenticated) => {
         state.isAuthenticated = isAuthenticated;
