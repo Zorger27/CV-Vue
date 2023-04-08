@@ -14,7 +14,7 @@ import {IState} from "@/store/types";
   methods: {
     ...mapGetters(["isAuthenticated", "getCurrentUser"]),
     currentUser() {return this.getCurrentUser || {};},
-    ...mapActions(["login"])
+    ...mapActions(["login"]),
   },
 })
 export default class LoginPage extends Vue {
@@ -24,7 +24,6 @@ export default class LoginPage extends Vue {
   emailError = "";
   passwordError = "";
   showPassword = false;
-
   checkPassword() {
     if (this.password.length < 5) {
       this.passwordError = `${this.$t('login.passwordError')}`;
@@ -72,7 +71,7 @@ export default class LoginPage extends Vue {
       localStorage.removeItem('password');
       localStorage.removeItem('expiration');
       location.reload();
-    }, 24 * 60 * 60 * 1000);
+    }, 48 * 60 * 60 * 1000);
   }
 };
 </script>
