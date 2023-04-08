@@ -1,5 +1,5 @@
 <template>
-  <select v-model="locale">
+  <select v-model="locale" @change="savelocale(locale)">
     <option v-for="sLocale in availableLocales" :key="`locale.${sLocale}`" :value="sLocale"
             :selected="locale === sLocale">
       {{ t(`locale.${sLocale}`) }}
@@ -8,19 +8,30 @@
 </template>
 
 <script lang="ts">
+import {onMounted} from "vue";
 import {useI18n} from "vue-i18n";
 
 export default {
   name: "LanguageSwitcher",
   setup() {
     const {t, locale, availableLocales} = useI18n()
-    return {t, locale, availableLocales}
-  }
-  // savelocale () {
-  //   const currentLocale = sLocale
-  //   document.querySelector("html").setAttribute("lang", sLocale)
-  //   localStorage.setItem("user-locale", sLocale)
-  // }
+    const savelocale = (sLocale) => {
+      localStorage.setItem("user-locale", sLocale);
+    }
+
+    // при инициализации компонента попробуем загрузить значение из localStorage
+    const savedLocale = localStorage.getItem("user-locale")
+    if (savedLocale && availableLocales.includes(savedLocale)) {
+      locale.value = savedLocale
+    }
+
+    // const htmlElement = document.querySelector("html");
+    // if (htmlElement) {
+    //   htmlElement.setAttribute("lang", locale.value);
+    // }
+
+    return {t, locale, availableLocales, savelocale}
+  },
 }
 </script>
 
@@ -29,8 +40,6 @@ select {
   background: inherit;
   border: none;
   padding: 0;
-  //outline: 0 !important;
-  //appearance: none;
 }
 
 select:focus {

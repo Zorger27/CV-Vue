@@ -16,7 +16,10 @@ import loginStore from "@/store/modules/service/loginStore";
       // this.$forceUpdate();
     },
     logout() {
-      localStorage.clear();
+      // localStorage.clear();
+      localStorage.removeItem('email');
+      localStorage.removeItem('password');
+      localStorage.removeItem('expiration');
       this.$store.commit('setIsAuthenticated', false);
       location.reload();
     },
