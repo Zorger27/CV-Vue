@@ -68,47 +68,47 @@ export default class CalculatorView extends Vue {
       state.input = '';
     };
   }
-    // const resultClicked = () => {
-    //   const resultElement = document.getElementById("result");
-    //   const expression = resultElement.value;
-    //   const [numbers, operators] = parseExpression(expression);
-    //
-    //   const calculate = (numbers, operators) => {
-    //     const priority1 = ["*", "/", "%"];
-    //     const priority2 = ["+", "-"];
-    //
-    //     for (const operator of priority1) {
-    //       let i = 0;
-    //       while (i < operators.length) {
-    //         if (operators[i] === operator) {
-    //           const result = eval(`${numbers[i]}${operator}${numbers[i + 1]}`);
-    //           numbers.splice(i, 2, result);
-    //           operators.splice(i, 1);
-    //         } else {
-    //           i++;
-    //         }
-    //       }
-    //     }
-    //
-    //     for (const operator of priority2) {
-    //       let i = 0;
-    //       while (i < operators.length) {
-    //         if (operators[i] === operator) {
-    //           const result = eval(`${numbers[i]}${operator}${numbers[i + 1]}`);
-    //           numbers.splice(i, 2, result);
-    //           operators.splice(i, 1);
-    //         } else {
-    //           i++;
-    //         }
-    //       }
-    //     }
-    //
-    //     return numbers[0];
-    //   };
-    //
-    //   const result = calculate(numbers, operators);
-    //   resultElement.value = result.toString();
-    // };
+    resultClicked = () => {
+      const resultElement = document.getElementById("result");
+      // const expression = resultElement.value;
+      // const [numbers, operators] = parseExpression(expression);
+
+      const calculate = (numbers, operators) => {
+        const priority1 = ["*", "/", "%"];
+        const priority2 = ["+", "-"];
+
+        for (const operator of priority1) {
+          let i = 0;
+          while (i < operators.length) {
+            if (operators[i] === operator) {
+              const result = eval(`${numbers[i]}${operator}${numbers[i + 1]}`);
+              numbers.splice(i, 2, result);
+              operators.splice(i, 1);
+            } else {
+              i++;
+            }
+          }
+        }
+
+        for (const operator of priority2) {
+          let i = 0;
+          while (i < operators.length) {
+            if (operators[i] === operator) {
+              const result = eval(`${numbers[i]}${operator}${numbers[i + 1]}`);
+              numbers.splice(i, 2, result);
+              operators.splice(i, 1);
+            } else {
+              i++;
+            }
+          }
+        }
+
+        return numbers[0];
+      };
+
+      // const result = calculate(numbers, operators);
+      // resultElement.value = result.toString();
+    };
 }
 </script>
 
