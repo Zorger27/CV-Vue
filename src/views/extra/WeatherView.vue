@@ -157,7 +157,6 @@ export default class WeatherView extends Vue {
           }
         }
       }
-
       .widget {
         display: flex;
         justify-content: center;
