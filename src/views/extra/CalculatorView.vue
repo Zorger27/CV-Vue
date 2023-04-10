@@ -16,99 +16,99 @@ interface CalculatorState {
 export default class CalculatorView extends Vue {
   showContent = false;
 
-  setup() {
-    const state = reactive<CalculatorState>({
-      input: '',
-      numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'],
-      operators: ['+', '-', '×', '÷'],
-      resultDisplayed: false,
-    });
-    const addNumber = (number: string) => {
-      let currentString = state.input;
-      let lastChar = currentString[currentString.length - 1];
-      if (state.resultDisplayed === false) {
-        state.input += number;
-      } else if (
-          state.resultDisplayed &&
-          (lastChar === '+' ||
-              lastChar === '-' ||
-              lastChar === '×' ||
-              lastChar === '÷' ||
-              lastChar === '√' ||
-              lastChar === '^')
-      ) {
-        state.resultDisplayed = false;
-        state.input += number;
-      } else {
-        state.resultDisplayed = false;
-        state.input = '';
-        state.input += number;
-      }
-    };
-    const addOperator = (operator: string) => {
-      let currentString = state.input;
-      let lastChar = currentString[currentString.length - 1];
-      if (
-          lastChar === '+' ||
-          lastChar === '-' ||
-          lastChar === '×' ||
-          lastChar === '÷' ||
-          lastChar === '√' ||
-          lastChar === '^'
-      ) {
-        state.input = currentString.substring(0, currentString.length - 1) + operator;
-      } else if (currentString.length === 0) {
-        console.log('Enter a number first!');
-      } else {
-        state.input += operator;
-      }
-    };
-
-    const clear = () => {
-      state.input = '';
-    };
-  }
-    resultClicked = () => {
-      const resultElement = document.getElementById("result");
-      // const expression = resultElement.value;
-      // const [numbers, operators] = parseExpression(expression);
-
-      const calculate = (numbers, operators) => {
-        const priority1 = ["*", "/", "%"];
-        const priority2 = ["+", "-"];
-
-        for (const operator of priority1) {
-          let i = 0;
-          while (i < operators.length) {
-            if (operators[i] === operator) {
-              const result = eval(`${numbers[i]}${operator}${numbers[i + 1]}`);
-              numbers.splice(i, 2, result);
-              operators.splice(i, 1);
-            } else {
-              i++;
-            }
-          }
-        }
-
-        for (const operator of priority2) {
-          let i = 0;
-          while (i < operators.length) {
-            if (operators[i] === operator) {
-              const result = eval(`${numbers[i]}${operator}${numbers[i + 1]}`);
-              numbers.splice(i, 2, result);
-              operators.splice(i, 1);
-            } else {
-              i++;
-            }
-          }
-        }
-
-        return numbers[0];
-      };
+  // setup() {
+  //   const state = reactive<CalculatorState>({
+  //     input: '',
+  //     numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'],
+  //     operators: ['+', '-', '×', '÷'],
+  //     resultDisplayed: false,
+  //   });
+  //   const addNumber = (number: string) => {
+  //     let currentString = state.input;
+  //     let lastChar = currentString[currentString.length - 1];
+  //     if (state.resultDisplayed === false) {
+  //       state.input += number;
+  //     } else if (
+  //         state.resultDisplayed &&
+  //         (lastChar === '+' ||
+  //             lastChar === '-' ||
+  //             lastChar === '×' ||
+  //             lastChar === '÷' ||
+  //             lastChar === '√' ||
+  //             lastChar === '^')
+  //     ) {
+  //       state.resultDisplayed = false;
+  //       state.input += number;
+  //     } else {
+  //       state.resultDisplayed = false;
+  //       state.input = '';
+  //       state.input += number;
+  //     }
+  //   };
+  //   const addOperator = (operator: string) => {
+  //     let currentString = state.input;
+  //     let lastChar = currentString[currentString.length - 1];
+  //     if (
+  //         lastChar === '+' ||
+  //         lastChar === '-' ||
+  //         lastChar === '×' ||
+  //         lastChar === '÷' ||
+  //         lastChar === '√' ||
+  //         lastChar === '^'
+  //     ) {
+  //       state.input = currentString.substring(0, currentString.length - 1) + operator;
+  //     } else if (currentString.length === 0) {
+  //       console.log('Enter a number first!');
+  //     } else {
+  //       state.input += operator;
+  //     }
+  //   };
+  //
+  //   const clear = () => {
+  //     state.input = '';
+  //   };
+  // }
+  //   resultClicked = () => {
+  //     const resultElement = document.getElementById("result");
+  //     // const expression = resultElement.value;
+  //     // const [numbers, operators] = parseExpression(expression);
+  //
+  //     const calculate = (numbers, operators) => {
+  //       const priority1 = ["*", "/", "%"];
+  //       const priority2 = ["+", "-"];
+  //
+  //       for (const operator of priority1) {
+  //         let i = 0;
+  //         while (i < operators.length) {
+  //           if (operators[i] === operator) {
+  //             const result = eval(`${numbers[i]}${operator}${numbers[i + 1]}`);
+  //             numbers.splice(i, 2, result);
+  //             operators.splice(i, 1);
+  //           } else {
+  //             i++;
+  //           }
+  //         }
+  //       }
+  //
+  //       for (const operator of priority2) {
+  //         let i = 0;
+  //         while (i < operators.length) {
+  //           if (operators[i] === operator) {
+  //             const result = eval(`${numbers[i]}${operator}${numbers[i + 1]}`);
+  //             numbers.splice(i, 2, result);
+  //             operators.splice(i, 1);
+  //           } else {
+  //             i++;
+  //           }
+  //         }
+  //       }
+  //
+  //       return numbers[0];
+  //     };
 
       // const result = calculate(numbers, operators);
       // resultElement.value = result.toString();
-    };
+    // };
 }
 </script>
 
@@ -121,25 +121,25 @@ export default class CalculatorView extends Vue {
       <a title="Other view"><i @click="showContent = !showContent" class="fa fa-arrow-circle-down"></i></a>
     </h1>
     <line></line>
-    <div v-if="showContent === true" class="container">
-      <div class="input">{{ input }}</div>
-      <div class="calculator">
-        <div class="row">
-          <div class="numbers">
-            <div v-for="number in numbers" :key="number" @click="addNumber(number)">{{ number }}</div>
-          </div>
-          <div class="operators">
-            <div v-for="operator in operators" :key="operator" @click="addOperator(operator)">{{ operator }}</div>
-            <div class="specific" @click="addOperator('^')">^</div>
-            <div class="specific" @click="addOperator('√')">√</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="clear" @click="clear()">C</div>
-          <div class="equal" @click="calculate()">=</div>
-        </div>
-      </div>
-    </div>
+<!--    <div v-if="showContent === true" class="container">-->
+<!--      <div class="input">{{ input }}</div>-->
+<!--      <div class="calculator">-->
+<!--        <div class="row">-->
+<!--          <div class="numbers">-->
+<!--            <div v-for="number in numbers" :key="number" @click="addNumber(number)">{{ number }}</div>-->
+<!--          </div>-->
+<!--          <div class="operators">-->
+<!--            <div v-for="operator in operators" :key="operator" @click="addOperator(operator)">{{ operator }}</div>-->
+<!--            <div class="specific" @click="addOperator('^')">^</div>-->
+<!--            <div class="specific" @click="addOperator('√')">√</div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--          <div class="clear" @click="clear()">C</div>-->
+<!--          <div class="equal" @click="calculate()">=</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
     <div v-else class="body">
       <div class="calculator">
         <div class="input"></div>
