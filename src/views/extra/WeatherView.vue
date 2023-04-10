@@ -79,7 +79,7 @@ export default class WeatherView extends Vue {
         </div>
       </div>
       <div class="widget">
-        <Weather :widgetId="15" :cityId="'703448'" :appId="'19ad8a076c538b3807d373633618d6d7'" :units="'metric'"/>
+        <Weather :widgetId="15" :cityId="'703448'"/>
         <!--        <Weather :widgetId="15" :cityId="'2643743'"/>-->
         <!--        <Weather :widgetId="15" :cityId="'2520645'"/>-->
         <!--        <Weather :widgetId="15" :cityId="'2509954'"/>-->
