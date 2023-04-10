@@ -35,9 +35,7 @@ import Weather from "@/components/other/Weather.vue";
 export default class WeatherView extends Vue {
   error: string | null | undefined;
   loading: boolean | undefined;
-  // weather: any;
   weather: WeatherData | null = null;
-
   mounted() {
     const openWeatherMapToken = process.env.VUE_APP_OPENWEATHERMAP_TOKEN;
     axios
@@ -81,7 +79,7 @@ export default class WeatherView extends Vue {
         </div>
       </div>
       <div class="widget">
-        <Weather :widgetId="15" :cityId="'703448'"/>
+        <Weather :widgetId="15" :cityId="'703448'" :appId="'19ad8a076c538b3807d373633618d6d7'" :units="'metric'"/>
         <!--        <Weather :widgetId="15" :cityId="'2643743'"/>-->
         <!--        <Weather :widgetId="15" :cityId="'2520645'"/>-->
         <!--        <Weather :widgetId="15" :cityId="'2509954'"/>-->
@@ -93,7 +91,6 @@ export default class WeatherView extends Vue {
 <style lang="scss" scoped>
 .weather {
   flex: 1 0 auto;
-
   .back {
     display: none;
     @media (max-width: 768px) {
@@ -102,12 +99,10 @@ export default class WeatherView extends Vue {
       margin-right: 0.1rem;
     }
   }
-
   .inner {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
     .city {
       display: inline-flex;
       flex-direction: column;
@@ -116,64 +111,52 @@ export default class WeatherView extends Vue {
       border: 1px solid rgba(112, 111, 111, 0.6);
       border-radius: 5px;
       box-shadow: 3px 3px 4px 0 lightgrey;
-
       h1 {
         text-decoration: underline;
         color: darkblue;
         margin: 0.5rem;
       }
-
       h2 {
         margin: 0.5rem;
         color: darkmagenta;
       }
-
       h2:first-letter {
         text-transform: capitalize;
       }
-
       .indicators {
         display: inline-flex;
         flex-direction: column;
         align-items: start;
         padding: 0 1rem 0 1rem;
-
         p {
           margin: 0.5rem;
         }
       }
     }
-
     .widget {
       display: flex;
       justify-content: center;
       margin: 1rem;
     }
   }
-
   @media (max-width: 768px) {
     .inner {
       display: flex;
       flex-direction: column;
-
       .city {
         h1 {
           margin: 0.5rem 0 0.2rem 0;
         }
-
         h2 {
           margin: 0.2rem 0;
         }
-
         .indicators {
           padding: 0;
-
           p {
             margin: 0.2rem 0;
           }
         }
       }
-
       .widget {
         display: flex;
         justify-content: center;
