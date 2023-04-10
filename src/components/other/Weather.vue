@@ -7,7 +7,7 @@
 <script>
 const openWeatherMapToken = process.env.VUE_APP_OPENWEATHERMAP_TOKEN;
 export default {
-  name: 'WeatherWidget',
+  name: 'Weather',
   props: {
     widgetId: {
       type: Number,

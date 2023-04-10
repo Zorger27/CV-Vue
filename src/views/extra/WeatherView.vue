@@ -3,34 +3,17 @@ import axios from "axios";
 import {Options, Vue} from "vue-class-component";
 import {WeatherData} from "@/store/types";
 import Weather from "@/components/other/Weather.vue";
+import CurrentDate from "@/components/util/CurrentDate.vue";
 
 @Options({
   data() {
     return {
-      currentDate: new Date(),
       loading: true,
       error: null
     };
   },
-  computed: {
-    formattedDate(): string {
-      const locale = localStorage.getItem('user-locale') ?? 'en';
-      const dateOptions = {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      };
-      if (locale === 'es') {
-        return this.currentDate.toLocaleDateString('es-ES', dateOptions);
-      } else if (locale === 'ua') {
-        return this.currentDate.toLocaleDateString('uk-UA', dateOptions);
-      } else {
-        return this.currentDate.toLocaleDateString('en-US', dateOptions);
-      }
-    }
-  },
-  components: {Weather},
+  computed: {},
+  components: {CurrentDate, Weather},
 })
 export default class WeatherView extends Vue {
   error: string | null | undefined;
@@ -66,7 +49,7 @@ export default class WeatherView extends Vue {
     <div class="inner">
       <div class="city">
         <h1>{{ $t('extra.weather.h1') }}</h1>
-        <h2>{{ formattedDate }}</h2>
+        <CurrentDate></CurrentDate>
         <div v-if="loading">{{ $t('extra.loading') }}</div>
         <div v-if="error">{{ error }}</div>
         <div class="indicators" v-if="weather">
@@ -83,6 +66,7 @@ export default class WeatherView extends Vue {
         <!--        <Weather :widgetId="15" :cityId="'2643743'"/>-->
         <!--        <Weather :widgetId="15" :cityId="'2520645'"/>-->
         <!--        <Weather :widgetId="15" :cityId="'2509954'"/>-->
+<!--        <Weather :widgetId="15" :cityId="'703448'" :appId="'openWeatherMapToken'" :units="'metric'"/>-->
       </div>
     </div>
   </div>
@@ -116,17 +100,10 @@ export default class WeatherView extends Vue {
         color: darkblue;
         margin: 0.5rem;
       }
-      h2 {
-        margin: 0.5rem;
-        color: darkmagenta;
-      }
-      h2:first-letter {
-        text-transform: capitalize;
-      }
       .indicators {
         display: inline-flex;
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
         padding: 0 1rem 0 1rem;
         p {
           margin: 0.5rem;
@@ -146,9 +123,6 @@ export default class WeatherView extends Vue {
       .city {
         h1 {
           margin: 0.5rem 0 0.2rem 0;
-        }
-        h2 {
-          margin: 0.2rem 0;
         }
         .indicators {
           padding: 0;

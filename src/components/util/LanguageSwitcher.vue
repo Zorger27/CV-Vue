@@ -31,7 +31,7 @@ export default {
     // }
 
     return {t, locale, availableLocales, savelocale}
-  },
+  }
 }
 </script>
 
