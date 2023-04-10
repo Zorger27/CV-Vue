@@ -34,7 +34,7 @@ export default class LoginPage extends Vue {}
         <router-link class="block" to="/extra/notes"><b>{{ $t('extra.notes') }}</b></router-link>
       </div>
       <div class="prj weather">
-        <router-link class="block" to="/extra/weather"><b>{{ $t('extra.weather') }}</b></router-link>
+        <router-link class="block" to="/extra/weather"><b>{{ $t('extra.weather.title') }}</b></router-link>
       </div>
       <div class="prj exchange">
         <router-link class="block" to="/extra/exchange"><b>{{ $t('extra.exchange') }}</b></router-link>

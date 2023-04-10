@@ -131,6 +131,7 @@
   },
   "extra": {
     "h1": "Extra (hidden) section for ",
+    "loading": "loading...",
     "h1m": {
       "calculator": "Calculator",
       "cryptocur": "Cryptocurrencies",
@@ -150,6 +151,16 @@
     "notes": "Notes",
     "tasks": "JS tasks",
     "todo": "To-do list",
-    "weather": "Weather"
+    "weather": {
+      "title": "Weather",
+      "h1": "Weather in Kyiv",
+      "temp": "Temperature",
+      "feels": "Feels like",
+      "speed": "Wind speed",
+      "direction": "Direction of the wind",
+      "humidity": "Humidity",
+      "pressure": "Pressure",
+      "error": "Failed to load weather data."
+    }
   }
 }

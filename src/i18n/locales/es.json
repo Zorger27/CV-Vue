@@ -131,6 +131,7 @@
   },
   "extra": {
     "h1": "Sección extra (oculta) para ",
+    "loading": "sobreprima...",
     "h1m": {
       "calculator": "Calculadora",
       "cryptocur": "Criptomonedas",
@@ -150,6 +151,16 @@
     "notes": "Notas",
     "tasks": "Tareas JS",
     "todo": "Lista de quehaceres",
-    "weather": "Clima"
+    "weather": {
+      "title": "Clima",
+      "h1": "Tiempo en Kyiv",
+      "temp": "Temperatura",
+      "feels": "Se siente como",
+      "speed": "Velocidad del viento",
+      "direction": "Dirección del viento",
+      "humidity": "Humedad",
+      "pressure": "Presión",
+      "error": "No se pudieron cargar los datos meteorológicos."
+    }
   }
 }
