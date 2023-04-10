@@ -5,6 +5,7 @@
 </template>
 
 <script>
+const openWeatherMapToken = process.env.VUE_APP_OPENWEATHERMAP_TOKEN;
 export default {
   name: 'WeatherWidget',
   props: {
@@ -18,7 +19,7 @@ export default {
     },
     appId: {
       type: String,
-      default: '19ad8a076c538b3807d373633618d6d7' // Ключ API по умолчанию
+      default: openWeatherMapToken // Ключ API по умолчанию
     },
     units: {
       type: String,

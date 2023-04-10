@@ -39,9 +39,10 @@ export default class WeatherView extends Vue {
   weather: WeatherData | null = null;
 
   mounted() {
+    const openWeatherMapToken = process.env.VUE_APP_OPENWEATHERMAP_TOKEN;
     axios
         .get(
-            "https://api.openweathermap.org/data/2.5/weather?q=Kiev&units=metric&lang=ru&appid=19ad8a076c538b3807d373633618d6d7"
+            `https://api.openweathermap.org/data/2.5/weather?q=Kiev&units=metric&lang=ru&appid=${openWeatherMapToken}`
         )
         .then(response => {
           this.weather = response.data;
@@ -80,10 +81,10 @@ export default class WeatherView extends Vue {
         </div>
       </div>
       <div class="widget">
-        <Weather :widgetId="15" :cityId="'703448'" :appId="'19ad8a076c538b3807d373633618d6d7'" :units="'metric'"/>
-<!--        <Weather :widgetId="15" :cityId="'2643743'"/>-->
-<!--        <Weather :widgetId="15" :cityId="'2520645'"/>-->
-<!--        <Weather :widgetId="15" :cityId="'2509954'"/>-->
+        <Weather :widgetId="15" :cityId="'703448'"/>
+        <!--        <Weather :widgetId="15" :cityId="'2643743'"/>-->
+        <!--        <Weather :widgetId="15" :cityId="'2520645'"/>-->
+        <!--        <Weather :widgetId="15" :cityId="'2509954'"/>-->
       </div>
     </div>
   </div>
@@ -154,6 +155,7 @@ export default class WeatherView extends Vue {
     .inner {
       display: flex;
       flex-direction: column;
+
       .city {
         h1 {
           margin: 0.5rem 0 0.2rem 0;
@@ -171,6 +173,7 @@ export default class WeatherView extends Vue {
           }
         }
       }
+
       .widget {
         display: flex;
         justify-content: center;
