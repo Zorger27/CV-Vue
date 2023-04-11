@@ -16,6 +16,7 @@ export default class CalculatorView extends Vue {}
       {{ $t('extra.h1m.calculator') }}
     </h1>
     <line></line>
+    <div class="body">
       <div class="calculator">
         <div class="input"></div>
         <div class="buttons">
@@ -56,6 +57,7 @@ export default class CalculatorView extends Vue {}
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
