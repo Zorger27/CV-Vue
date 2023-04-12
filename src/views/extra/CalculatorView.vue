@@ -40,7 +40,12 @@ import {Options, Vue} from "vue-class-component";
       this.operatorClicked = true;
     },
     divide() {
-      this.operator = (a, b) => a / b;
+      this.operator = (a, b) => {
+        if (b === 0) {
+          return "🧐😉🙃😂🤣";
+        }
+        return a / b;
+      };
       this.setPrevious();
     },
     times() {
@@ -56,10 +61,7 @@ import {Options, Vue} from "vue-class-component";
       this.setPrevious();
     },
     equal() {
-      this.current = `${this.operator(
-          parseFloat(this.current),
-          parseFloat(this.previous)
-      )}`;
+      this.current = `${this.operator(parseFloat(this.previous), parseFloat(this.current))}`;
       this.previous = null;
     }
   },
