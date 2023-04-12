@@ -2,14 +2,76 @@
 import {Options, Vue} from "vue-class-component";
 
 @Options({
+  data() {
+    return {
+      current: "",
+      previous: null,
+      operator: null,
+      operatorClicked: false
+    };
+  },
+  methods: {
+    clear() {
+      this.current = "";
+    },
+    sign() {
+      this.current =
+          this.current.charAt(0) === "-"
+              ? this.current.slice(1)
+              : `-${this.current}`;
+    },
+    percent() {
+      this.current = `${parseFloat(this.current) / 100}`;
+    },
+    append(number) {
+      if (this.operatorClicked) {
+        this.current = "";
+        this.operatorClicked = false;
+      }
+      this.current = `${this.current}${number}`;
+    },
+    dot() {
+      if (this.current.indexOf(".") === -1) {
+        this.append(".");
+      }
+    },
+    setPrevious() {
+      this.previous = this.current;
+      this.operatorClicked = true;
+    },
+    divide() {
+      this.operator = (a, b) => a / b;
+      this.setPrevious();
+    },
+    times() {
+      this.operator = (a, b) => a * b;
+      this.setPrevious();
+    },
+    minus() {
+      this.operator = (a, b) => a - b;
+      this.setPrevious();
+    },
+    add() {
+      this.operator = (a, b) => a + b;
+      this.setPrevious();
+    },
+    equal() {
+      this.current = `${this.operator(
+          parseFloat(this.current),
+          parseFloat(this.previous)
+      )}`;
+      this.previous = null;
+    }
+  },
   computed: {},
   components: {},
 })
-export default class CalculatorView extends Vue {}
+export default class CalculatorView extends Vue {
+}
 </script>
 
 <template>
-  <div class="calculator">
+  <div class="calc">
     <h1>
       <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
@@ -18,50 +80,33 @@ export default class CalculatorView extends Vue {}
     <line></line>
     <div class="body">
       <div class="calculator">
-        <div class="input"></div>
-        <div class="buttons">
-          <div class="operators">
-            <div>+</div>
-            <div>-</div>
-            <div>&times;</div>
-            <div>&divide;</div>
-          </div>
-          <div class="leftPanel">
-            <div class="numbers">
-              <div>7</div>
-              <div>8</div>
-              <div>9</div>
-            </div>
-            <div class="numbers">
-              <div>4</div>
-              <div>5</div>
-              <div>6</div>
-            </div>
-            <div class="numbers">
-              <div>1</div>
-              <div>2</div>
-              <div>3</div>
-            </div>
-            <div class="numbers">
-              <div>0</div>
-              <div>.</div>
-              <div class="clear" title="Очистить поле ВВОДА">C</div>
-            </div>
-          </div>
-          <div class="rightPanel">
-            <div class="specific" title="Квадратный корень из числа">&radic;</div>
-            <div class="specific" title="Число в квадратной степени">&Hat;</div>
-            <!--            Если продолжить, то можно создать инженерный калькулятор! :)) -->
-            <div class="equal">=</div>
-          </div>
-        </div>
+        <div class="display">{{ current || "0" }}</div>
+        <div @click="clear" class="btn clear">AC</div>
+        <div @click="sign" class="btn">+/-</div>
+        <div @click="percent" class="btn">%</div>
+        <div @click="divide" class="btn operator">÷</div>
+        <div @click="append('7')" class="btn">7</div>
+        <div @click="append('8')" class="btn">8</div>
+        <div @click="append('9')" class="btn">9</div>
+        <div @click="times" class="btn operator">x</div>
+        <div @click="append('4')" class="btn">4</div>
+        <div @click="append('5')" class="btn">5</div>
+        <div @click="append('6')" class="btn">6</div>
+        <div @click="minus" class="btn operator">-</div>
+        <div @click="append('1')" class="btn">1</div>
+        <div @click="append('2')" class="btn">2</div>
+        <div @click="append('3')" class="btn">3</div>
+        <div @click="add" class="btn operator">+</div>
+        <div @click="append('0')" class="btn zero">0</div>
+        <div @click="dot" class="btn">.</div>
+        <div @click="equal" class="btn operator equal">=</div>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.calculator {
+.calc {
   flex: 1 0 auto;
   .back {
     display: none;
@@ -71,181 +116,103 @@ export default class CalculatorView extends Vue {}
       margin-right: 0.1rem;
     }
   }
-  .body{
-    width: 505px;
-    margin: 2% auto;
-    letter-spacing: 5px;
-    font-size: 1.8rem;
-  }
-  .calculator{
-    padding: 20px;
-    box-shadow: 0 1px 4px 0 lightgrey;
-    border-radius: 3px;
-  }
-  .input{
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    height: 60px;
-    padding-right: 15px;
-    padding-top: 10px;
-    text-align: right;
-    margin-right: 6px;
-    font-size: 2.5rem;
-    overflow-x: auto;
-    transition: all .2s ease-in-out;
-  }
-  .input:hover{
-    border: 1px solid #bbb;
-    box-shadow: inset 0 1px 4px 0 lightgrey;
-  }
-  .buttons{}
-  .operators{}
-  .operators div{
-    display: inline-block;
-    border: 1px solid lightsteelblue;
-    border-radius: 3px;
-    width: 80px;
-    text-align: center;
-    padding: 10px;
-    margin: 20px 4px 10px 0;
-    cursor: pointer;
-    background-color: lightsteelblue;
-    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-  }
-  .operators div:hover{
-    background-color: lightskyblue;
-    box-shadow: 3px 3px 4px 0 lightgrey;
-    border-color: lightskyblue;
-  }
-  .operators div:active{
-    font-weight: bold;
-  }
-  .leftPanel{
-    display: inline-block;
-  }
-  .numbers div{
-    display: inline-block;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    width: 80px;
-    text-align: center;
-    padding: 10px;
-    margin: 10px 4px 10px 0;
-    cursor: pointer;
-    background-color: #f9f9f9;
-    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-  }
-  .numbers div:hover{
-    background-color: #f1f1f1;
-    box-shadow: 3px 3px 4px 0 lightgrey;
-    border-color: #bbb;
-  }
-  .numbers div:active{
-    font-weight: bold;
-  }
-  .rightPanel{
-    display: inline-block;
-    vertical-align: top;
-  }
-  .rightPanel div{
-    border: 1px solid darkred;
-    border-radius: 3px;
-    width: 80px;
-    text-align: center;
-    padding: 10px;
-    margin: 10px 4px 10px 0;
-    cursor: pointer;
-    color: #FFF;
-    background-color: darkred;
-    transition: all .2s ease-in-out;
-  }
-  .rightPanel div:hover{
-    background-color: lightcoral;
-    box-shadow: 3px 3px 4px 0 lightgrey;
-    border-color: lightcoral;
-  }
-  .rightPanel div:active{
-    font-weight: bold;
-    /*box-shadow: -3px -3px 4px 0 lightgrey;*/
-  }
-  .rightPanel div:nth-child(1){
-    margin-bottom: 20px;
-  }
-  div.equal{
-    display: inline-block;
-    border: 1px solid darkblue;
-    border-radius: 3px;
-    /*width: 17%;*/
-    text-align: center;
-    padding: 50px 10px;
-    margin: 10px 4px 10px 0;
-    cursor: pointer;
-    color: #FFF;
-    background-color: darkblue;
-    transition: all .2s ease-in-out;
-  }
-  div.equal:hover{
-    background-color: mediumblue;
-    box-shadow: 3px 3px 4px 0 lightgrey;
-    border-color: mediumblue;
-  }
-  div.equal:active {
-    font-weight: bold;
-  }
-  div.clear{
-    color: #FFF;
-    background-color: lightseagreen;
-    transition: all .2s ease-in-out;
-  }
-  div.clear:hover{
-    background-color: #4bd2ca;
-    border-color: #4bd2ca;
-  }
-  @media (max-width: 768px) {
-    .body{
-      width: 305px;
-      margin: 4% auto;
-      font-size: 1.2rem;
+
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .calculator {
+      text-align: center;
+      width: 400px;
+      margin: 1rem auto;
+      padding: 1.5rem;
+      font-size: 2.2rem;
+      border-radius: 3px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      //grid-auto-rows: minmax(50px, auto);
+      grid-column-gap: 0.5rem;
+      box-shadow: 0 1px 4px 0 lightgrey;
+      .display {
+        grid-column: 1 / 5;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        font-size: 2.7rem;
+        font-weight: bold;
+        padding: 0.5rem 0.75rem;
+        margin-bottom: 1rem;
+        text-align: right;
+        overflow-x: auto;
+        transition: all .2s ease-in-out;
+      }
+      .display:hover {
+        border: 1px solid #bbb;
+        box-shadow: inset 0 1px 4px 0 lightgrey;
+      }
+      .btn {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        text-align: center;
+        padding: 0.2rem;
+        margin: 10px 4px 10px 0;
+        cursor: pointer;
+        transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+      }
+      .btn:hover {
+        background-color: #f1f1f1;
+        box-shadow: 3px 3px 4px 0 lightgrey;
+      }
+      .btn:active {
+        font-weight: bold;
+      }
+      .zero {
+        grid-column: 1 / 3;
+      }
+      .operator {
+        border: 1px solid lightsteelblue;
+        background-color: lightsteelblue;
+        color: white;
+      }
+      .operator:hover {
+        background-color: lightskyblue;
+        border-color: lightskyblue;
+      }
+      .clear {
+        background-color: lightseagreen;
+        transition: all .2s ease-in-out;
+      }
+      .clear:hover {
+        background-color: #4bd2ca;
+        border-color: #4bd2ca;
+      }
+      .equal {
+        border: 1px solid darkblue;
+        background-color: darkblue;
+        transition: all .2s ease-in-out;
+      }
+      .equal:hover {
+        background-color: mediumblue;
+        border-color: mediumblue;
+      }
     }
-    .calculator{
-      padding: 0.5rem;
-    }
-    .input{
-      height: 30px;
-      padding-right: 15px;
-      padding-top: 10px;
-      text-align: right;
-      margin-right: 6px;
-      font-size: 1.5rem;
-      overflow-x: auto;
-      transition: all .2s ease-in-out;
-    }
-    .buttons{}
-    .operators{}
-    .operators div{
-      width: 40px;
-      padding: 10px;
-      margin: 10px 4px 5px 0;
-    }
-    .leftPanel{
-      display: inline-block;
-    }
-    .numbers div{
-      width: 40px;
-      padding: 10px;
-      margin: 5px 4px 5px 0;
-    }
-    .rightPanel div{
-      width: 40px;
-      padding: 10px;
-      margin: 5px 4px 5px 0;
-    }
-    .rightPanel div:nth-child(1){
-      margin-bottom: 10px;
-    }
-    div.equal{
-      padding: 39px 10px;
-      margin: 5px 4px 5px 0;
+
+    @media (max-width: 768px) {
+      .calculator {
+        margin: 0.5rem auto;
+        padding: 0.8rem;
+        font-size: 1.8rem;
+        grid-column-gap: 0.3rem;
+        .display {
+          font-size: 2rem;
+          margin-bottom: 0.3rem;
+        }
+        .btn {
+          margin: 5px 2px 5px 0;
+        }
+
+      }
     }
   }
 }
