@@ -60,6 +60,10 @@ import {Options, Vue} from "vue-class-component";
       this.operator = (a, b) => a + b;
       this.setPrevious();
     },
+    sqrt() {
+      // this.current = `${Math.sqrt(parseFloat(this.current))}`;
+      this.current = parseFloat(this.current) ** (1/2);
+    },
     equal() {
       this.current = `${this.operator(parseFloat(this.previous), parseFloat(this.current))}`;
       this.previous = null;
@@ -102,6 +106,7 @@ export default class CalculatorView extends Vue {
         <div @click="append('0')" class="btn zero">0</div>
         <div @click="dot" class="btn">.</div>
         <div @click="equal" class="btn operator equal">=</div>
+        <div @click="sqrt" class="btn operator sqrt">√</div>
       </div>
     </div>
   </div>
@@ -169,11 +174,11 @@ export default class CalculatorView extends Vue {
       .btn:active {
         font-weight: bold;
       }
-      .zero {
-        grid-column: 1 / 3;
-      }
+      //.zero {
+      //  grid-column: 1 / 3;
+      //}
       .operator {
-        border: 1px solid lightsteelblue;
+        border-color: lightsteelblue;
         background-color: lightsteelblue;
         color: white;
       }
@@ -183,6 +188,7 @@ export default class CalculatorView extends Vue {
       }
       .clear {
         background-color: lightseagreen;
+        border-color: lightseagreen;
         transition: all .2s ease-in-out;
       }
       .clear:hover {
@@ -190,13 +196,21 @@ export default class CalculatorView extends Vue {
         border-color: #4bd2ca;
       }
       .equal {
-        border: 1px solid darkblue;
+        border-color: darkblue;
         background-color: darkblue;
         transition: all .2s ease-in-out;
       }
       .equal:hover {
         background-color: mediumblue;
         border-color: mediumblue;
+      }
+      .sqrt {
+        border-color: darkred;
+        background-color: darkred;
+      }
+      .sqrt:hover {
+        background-color: lightcoral;
+        border-color: lightcoral;
       }
     }
 
