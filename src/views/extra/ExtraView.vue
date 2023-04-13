@@ -40,7 +40,7 @@ export default class LoginPage extends Vue {}
         <router-link class="block" to="/extra/exchange"><b>{{ $t('extra.exchange') }}</b></router-link>
       </div>
       <div class="prj cryptocur">
-        <router-link class="block" to="/extra/cryptocur"><b>{{ $t('extra.cryptocur') }}</b></router-link>
+        <router-link class="block" to="/extra/cryptocur"><b>{{ $t('extra.cryptocur.title') }}</b></router-link>
       </div>
       <div class="prj tasks">
         <router-link class="block" to="/extra/tasks"><b>{{ $t('extra.tasks') }}</b></router-link>

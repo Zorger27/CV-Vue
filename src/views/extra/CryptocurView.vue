@@ -1,7 +1,10 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import Cryptocurrencies from "@/components/other/Cryptocurrencies.vue";
 
-@Options({components: {},})
+@Options({
+  components: {Cryptocurrencies},
+})
 export default class CryptocurView extends Vue {
 }
 </script>
@@ -11,9 +14,10 @@ export default class CryptocurView extends Vue {
     <h1>
       <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.h1m.cryptocur') }}
+      {{ $t('extra.cryptocur.title') }}
     </h1>
     <line></line>
+    <Cryptocurrencies></Cryptocurrencies>
   </div>
 </template>
 

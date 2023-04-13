@@ -144,7 +144,10 @@
       "weather": "Clima"
     },
     "calculator": "Calculadora",
-    "cryptocur": "Criptomonedas",
+    "cryptocur": {
+      "title": "Criptomonedas",
+      "h1": "Desarrollado por"
+    },
     "cube": "El cubo giratorio",
     "exchange": "Los tipos de cambio",
     "game": "Juego",

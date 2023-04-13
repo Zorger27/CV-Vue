@@ -144,7 +144,10 @@
       "weather": "Weather"
     },
     "calculator": "Calculator",
-    "cryptocur": "Cryptocurrencies",
+    "cryptocur": {
+      "title": "Cryptocurrencies",
+      "h1": "Powered by"
+    },
     "cube": "Spinning cube",
     "exchange": "Exchange rates",
     "game": "Game",
