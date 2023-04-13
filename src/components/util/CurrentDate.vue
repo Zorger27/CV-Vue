@@ -43,7 +43,7 @@ export default class CurrentDate extends Vue {
 
 <style lang="scss" scoped>
 .data {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   h2 {
     border: 1px solid rgba(112, 111, 111, 0.6);
@@ -56,7 +56,7 @@ export default class CurrentDate extends Vue {
   h2:first-letter {text-transform: capitalize;}
 
   @media (max-width: 768px) {
-    h2 {margin: 0.2rem; padding: 0.2rem;}
+    h2 {margin: 0.2rem; padding: 0.3rem;}
   }
 }
 </style>

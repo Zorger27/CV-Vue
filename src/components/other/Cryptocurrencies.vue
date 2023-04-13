@@ -1,6 +1,7 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import axios from "axios";
+import CurrentDate from "@/components/util/CurrentDate.vue";
 
 @Options({
   data() {
@@ -34,7 +35,7 @@ import axios from "axios";
           });
     },
   },
-  components: {},
+  components: {CurrentDate},
 })
 export default class Cryptocurrencies extends Vue {
 }
@@ -42,6 +43,7 @@ export default class Cryptocurrencies extends Vue {
 
 <template>
   <h2>{{ $t('extra.cryptocur.h1') }} <a href="https://www.coingecko.com" target="_blank">CoinGecko</a></h2>
+  <CurrentDate></CurrentDate>
   <div v-for="(crypto, index) in cryptos" :key="index">
     <p class="crypto"><span class="name">{{ crypto.name }}</span>=<span class="price">{{ crypto.price }}</span>usd</p>
   </div>
