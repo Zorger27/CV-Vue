@@ -78,11 +78,11 @@ export default class LoginPage extends Vue {
 
 <template>
   <div class="login">
-    <h1>{{ $t('login.h1') }}</h1>
-    <line></line>
+    <h1 v-if="!loginStore.state.isAuthenticated">{{ $t('login.h2') }}</h1>
+    <line v-if="!loginStore.state.isAuthenticated"></line>
     <div v-if="!loginStore.state.isAuthenticated" class="container">
       <div class="inner">
-        <h1>{{ $t('login.title') }}</h1>
+      <h1>{{ $t('login.title') }}</h1>
         <form @submit.prevent="handleSubmit">
           <div class="input_field">
             <label>{{ $t('login.email') }}
@@ -120,6 +120,7 @@ export default class LoginPage extends Vue {
           {{ loginStore.state.currentUser.name }} {{ loginStore.state.currentUser.surname }}
         </span>!!!
       </h1>
+      <line></line>
     </div>
   </div>
 </template>
