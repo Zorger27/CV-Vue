@@ -8,7 +8,7 @@ import axios from "axios";
       cryptos: [
         {id: 'bitcoin-cash', name: 'Bitcoin Cash', price: 0},
         {id: 'binancecoin', name: 'Binance Coin', price: 0},
-        {id: 'avalanche-2', name: 'Avalanche', price: 0},
+        {id: 'dogecoin', name: 'Dogecoin', price: 0},
       ],
     };
   },
@@ -21,7 +21,7 @@ import axios from "axios";
       // Получаем данные о курсах криптовалют через API CoinGecko
       axios
           .get(
-              'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,binancecoin,avalanche-2&vs_currencies=usd'
+              'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,binancecoin,dogecoin&vs_currencies=usd'
           )
           .then((response) => {
             // Обновляем курсы криптовалют в нашем компоненте

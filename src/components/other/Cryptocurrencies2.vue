@@ -7,7 +7,7 @@ import axios from "axios";
     return {
       cryptos: [
         {id: 'tether', name: 'Tether', price: 0},
-        {id: 'dogecoin', name: 'Dogecoin', price: 0},
+        {id: 'avalanche-2', name: 'Avalanche', price: 0},
         {id: 'filecoin', name: 'Filecoin', price: 0},
       ],
     };
@@ -21,7 +21,7 @@ import axios from "axios";
       // Получаем данные о курсах криптовалют через API CoinGecko
       axios
           .get(
-              'https://api.coingecko.com/api/v3/simple/price?ids=tether,dogecoin,filecoin&vs_currencies=usd'
+              'https://api.coingecko.com/api/v3/simple/price?ids=tether,avalanche-2,filecoin&vs_currencies=usd'
           )
           .then((response) => {
             // Обновляем курсы криптовалют в нашем компоненте
@@ -74,7 +74,7 @@ export default class Cryptocurrencies2 extends Vue {
 }
 @media(max-width:1020px) {
   .crypto {
-    font-size: 1.65rem;
+    font-size: 1.75rem;
     padding: 0.8rem;
     margin: 0.5rem;
   }
@@ -82,7 +82,7 @@ export default class Cryptocurrencies2 extends Vue {
 
 @media (max-width: 768px) {
   .crypto {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     padding: 0.6rem;
     margin: 0.4rem;
   }
