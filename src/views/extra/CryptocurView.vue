@@ -1,12 +1,10 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import CurrentDate from "@/components/util/CurrentDate.vue";
-import Cryptocurrencies1 from "@/components/other/Cryptocurrencies1.vue";
-import Cryptocurrencies2 from "@/components/other/Cryptocurrencies2.vue";
-import Cryptocurrencies3 from "@/components/other/Cryptocurrencies3.vue";
+import Cryptocurrencies from "@/components/other/Cryptocurrencies.vue";
 
 @Options({
-  components: {Cryptocurrencies3, Cryptocurrencies2, CurrentDate, Cryptocurrencies1},
+  components: {CurrentDate, Cryptocurrencies},
 })
 export default class CryptocurView extends Vue {
 }
@@ -22,9 +20,7 @@ export default class CryptocurView extends Vue {
     <line></line>
     <h2>{{ $t('extra.cryptocur.h1') }} <a href="https://www.coingecko.com" target="_blank">CoinGecko</a></h2>
     <div><CurrentDate></CurrentDate></div>
-    <div><Cryptocurrencies1></Cryptocurrencies1></div>
-    <div><Cryptocurrencies2></Cryptocurrencies2></div>
-    <div><Cryptocurrencies3></Cryptocurrencies3></div>
+    <div><Cryptocurrencies></Cryptocurrencies></div>
   </div>
 </template>
 

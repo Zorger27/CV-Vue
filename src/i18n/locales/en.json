@@ -147,7 +147,9 @@
     "calculator": "Calculator",
     "cryptocur": {
       "title": "Cryptocurrencies",
-      "h1": "Powered by"
+      "h1": "Powered by",
+      "name": "Name",
+      "price": "Price"
     },
     "cube": "Spinning cube",
     "exchange": "Exchange rates",

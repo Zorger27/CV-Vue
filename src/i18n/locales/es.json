@@ -147,7 +147,9 @@
     "calculator": "Calculadora",
     "cryptocur": {
       "title": "Criptomonedas",
-      "h1": "Desarrollado por"
+      "h1": "Desarrollado por",
+      "name": "Nombre",
+      "price": "Precio"
     },
     "cube": "El cubo giratorio",
     "exchange": "Los tipos de cambio",
