@@ -92,7 +92,7 @@ export default class WeatherView extends Vue {
       flex-direction: column;
       padding: 0 1rem 1rem 1rem;
       margin: 1rem;
-      border: 1px solid rgba(112, 111, 111, 0.6);
+      border: 1px solid #ddd;
       border-radius: 5px;
       box-shadow: 3px 3px 4px 0 lightgrey;
       h1 {

@@ -48,7 +48,8 @@ export default class CurrentDate extends Vue {
 
   h2 {
     font-size: 1.5rem;
-    border: 1px solid rgba(112, 111, 111, 0.6);
+    //border: 1px solid rgba(112, 111, 111, 0.6);
+    border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 3px 3px 4px 0 lightgrey;
     padding: 0.5rem;

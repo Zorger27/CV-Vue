@@ -58,7 +58,7 @@ export default class Cryptocurrencies extends Vue {
       </thead>
       <tbody>
       <tr v-for="(crypto, index) in cryptos" :key="crypto.id">
-        <td>{{ index + 1 }}</td>
+        <td class="nomer">{{ index + 1 }}</td>
         <td class="name">{{ crypto.name }}</td>
         <td class="price">{{ crypto.price }} <span style="color: black">usd</span></td>
       </tr>
@@ -95,15 +95,20 @@ export default class Cryptocurrencies extends Vue {
     padding: 0.5rem;
   }
 
+  .nomer {
+    width: 70px;
+  }
+
   .name {
     text-align: left;
     color: deepskyblue;
-    width: 280px;
+    width: 300px;
   }
 
   .price {
     text-align: right;
     color: deeppink;
+    width: 250px;
   }
 }
 
@@ -137,6 +142,15 @@ export default class Cryptocurrencies extends Vue {
     padding: 0.8rem;
     margin: 0.5rem;
   }
+  .table {
+    font-size: 1.55rem;
+    padding: 0.8rem;
+    margin: 0.5rem;
+
+    tr, td, th {
+      padding: 0.4rem;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -155,9 +169,15 @@ export default class Cryptocurrencies extends Vue {
     tr, td, th {
       padding: 0.3rem;
     }
-
+    .nomer {
+      width: max-content;
+    }
     .name {
       width: max-content;
+    }
+    .price {
+      width: max-content;
+
     }
   }
 }
