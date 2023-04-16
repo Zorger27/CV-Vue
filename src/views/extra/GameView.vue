@@ -14,6 +14,7 @@ export default class GameView extends Vue {
       {{ $t('extra.h1m.game') }}
     </h1>
     <line></line>
+    <h1>{{ $t('login.h1') }}</h1>
   </div>
 </template>
 

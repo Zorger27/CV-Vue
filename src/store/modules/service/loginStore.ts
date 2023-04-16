@@ -36,6 +36,16 @@ const state = {
                 regDate: "30.03.2023",
                 admin: true
             },
+            {
+                id: 4,
+                name: "Unknown",
+                surname: "Person",
+                email: "",
+                password: "",
+                birthdate: "07.07.2020",
+                regDate: "15.04.2023",
+                admin: true
+            },
         ]
 };
 const getters: GetterTree<IState, IState> = {

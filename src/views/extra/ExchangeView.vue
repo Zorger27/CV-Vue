@@ -14,6 +14,7 @@ export default class ExchangeView extends Vue {
       {{ $t('extra.h1m.exchange') }}
     </h1>
     <line></line>
+    <h1>{{ $t('login.h1') }}</h1>
   </div>
 </template>
 
