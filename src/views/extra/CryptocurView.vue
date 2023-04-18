@@ -2,7 +2,6 @@
 import {Options, Vue} from "vue-class-component";
 import CurrentDate from "@/components/util/CurrentDate.vue";
 import Cryptocurrencies from "@/components/other/Cryptocurrencies.vue";
-import {ref} from "vue";
 
 @Options({
     data() {
