@@ -141,20 +141,13 @@ export default class Header extends Vue {
           :class="['fa', showDropdownContent ? 'fa-caret-up' : 'fa-caret-down']"></span></a>
         <router-link to="/certificates" class="dropbtnMob">{{ $t('header.certificates.cert') }}</router-link>
         <div class="dropdown-content" v-show="showDropdownContent">
-          <router-link to="/certificates/backend" @click="hideMenu">{{ $t('header.certificates.backend') }}
-          </router-link>
-          <router-link to="/certificates/frontend" @click="hideMenu">{{ $t('header.certificates.frontend') }}
-          </router-link>
-          <router-link to="/certificates/database" @click="hideMenu">{{ $t('header.certificates.database') }}
-          </router-link>
-          <router-link to="/certificates/designer" @click="hideMenu">{{ $t('header.certificates.designer') }}
-          </router-link>
-          <router-link to="/certificates/pm" @click="hideMenu">{{ $t('header.certificates.pm') }}
-          </router-link>
-          <router-link to="/certificates/english" @click="hideMenu">{{ $t('header.certificates.english') }}
-          </router-link>
-          <router-link to="/certificates/other" @click="hideMenu">{{ $t('header.certificates.other') }}
-          </router-link>
+          <router-link to="/certificates/backend" @click="hideMenu">{{ $t('header.certificates.backend') }}</router-link>
+          <router-link to="/certificates/frontend" @click="hideMenu">{{ $t('header.certificates.frontend') }}</router-link>
+          <router-link to="/certificates/database" @click="hideMenu">{{ $t('header.certificates.database') }}</router-link>
+          <router-link to="/certificates/designer" @click="hideMenu">{{ $t('header.certificates.designer') }}</router-link>
+          <router-link to="/certificates/pm" @click="hideMenu">{{ $t('header.certificates.pm') }}</router-link>
+          <router-link to="/certificates/english" @click="hideMenu">{{ $t('header.certificates.english') }}</router-link>
+          <router-link to="/certificates/other" @click="hideMenu">{{ $t('header.certificates.other') }}</router-link>
         </div>
       </div>
       <router-link to="/about" @click="hideMenu">{{ $t('header.about') }}</router-link>
