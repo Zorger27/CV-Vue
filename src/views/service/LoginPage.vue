@@ -13,7 +13,9 @@ import {IState} from "@/store/types";
   components: {},
   methods: {
     ...mapGetters(["isAuthenticated", "getCurrentUser"]),
-    currentUser() {return this.getCurrentUser || {};},
+    currentUser() {
+      return this.getCurrentUser || {};
+    },
     ...mapActions(["login"]),
   },
 })
@@ -24,6 +26,7 @@ export default class LoginPage extends Vue {
   emailError = "";
   passwordError = "";
   showPassword = false;
+
   checkPassword() {
     if (this.password.length < 5) {
       this.passwordError = `${this.$t('login.passwordError')}`;
@@ -44,9 +47,8 @@ export default class LoginPage extends Vue {
     // Проверяем, есть ли ошибки ввода данных
     if (!this.emailError && !this.passwordError) {
       // Отправка данных в хранилище
-      this.$store.dispatch('login', {email: this.email, password: this.password})
-      // this.$store.commit("setUserCredentials", {email: this.email, password: this.password});
-      // this.$store.commit("IsAuthenticated", true)
+      this.$store.dispatch('login', {email: this.email, password: this.password});
+      // this.$store.dispatch('setShowExtraContent', true);
       // Если авторизация прошла успешно, сохраняем данные пользователя
     } else
       console.log('Ошибка в e-mail и/или password');
@@ -82,15 +84,15 @@ export default class LoginPage extends Vue {
     <line v-if="!loginStore.state.isAuthenticated"></line>
     <div v-if="!loginStore.state.isAuthenticated" class="container">
       <div class="inner">
-      <h1>{{ $t('login.title') }}</h1>
+        <h1>{{ $t('login.title') }}</h1>
         <form @submit.prevent="handleSubmit">
           <div class="input_field">
             <label>{{ $t('login.email') }}
               <input
-                  v-model="email"
-                  type="email"
-                  @input="checkEmail"
-                  placeholder="E-mail, ex.: info@gmail.com"
+                v-model="email"
+                type="email"
+                @input="checkEmail"
+                placeholder="E-mail, ex.: info@gmail.com"
               />
             </label>
           </div>
@@ -98,10 +100,10 @@ export default class LoginPage extends Vue {
           <div class="input_field">
             <label>{{ $t('login.password') }}
               <input
-                  v-model="password"
-                  :type="showPassword ? 'text' : 'password'"
-                  @input="checkPassword"
-                  placeholder="Password, min. 5 symbols"
+                v-model="password"
+                :type="showPassword ? 'text' : 'password'"
+                @input="checkPassword"
+                placeholder="Password, min. 5 symbols"
               />
               <span @click="showPassword = !showPassword">
                 <i :class="showPassword ? 'far fa-eye' : 'far fa-eye-slash'"></i>
@@ -183,6 +185,7 @@ export default class LoginPage extends Vue {
         cursor: pointer;
       }
     }
+
     .error-message {
       font-size: medium;
       font-style: italic;
@@ -249,6 +252,7 @@ export default class LoginPage extends Vue {
           font-size: large;
         }
       }
+
       .error-message {
         font-size: small;
         margin: -0.2rem auto 1rem auto;
@@ -287,6 +291,7 @@ export default class LoginPage extends Vue {
           font-size: medium;
         }
       }
+
       .error-message {
         font-size: x-small;
         margin: -0.2rem auto 1rem auto;
