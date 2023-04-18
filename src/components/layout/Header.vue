@@ -12,12 +12,6 @@ import loginStore from "@/store/modules/service/loginStore";
       return this.$store.getters.isAuthenticated;
     },
   },
-  // props: {
-  //     showExtraProp: {
-  //         type: Boolean,
-  //         default: false,
-  //     },
-  // },
   methods: {
     login() {
       this.$router.push('/login');
@@ -112,9 +106,7 @@ export default class Header extends Vue {
       <router-link to="/projects" @click="hideMenu">{{ $t('header.projects') }}</router-link>
       <div v-if="loginStore.state.isAuthenticated" class="dropdown" @click="showExtraContent = !showExtraContent">
         <a class="dropbtn">{{ $t('header.extra') }}
-          <span
-            :class="['fa', showExtraContent ? 'fa-caret-up' : 'fa-caret-down']">
-                    </span>
+          <span :class="['fa', showExtraContent ? 'fa-caret-up' : 'fa-caret-down']"></span>
         </a>
         <router-link to="/extra" class="dropbtnMob">{{ $t('header.extra') }}</router-link>
         <div class="dropdown-content" v-show="showExtraContent">
@@ -134,8 +126,9 @@ export default class Header extends Vue {
       <router-link to="/skills" @click="hideMenu">{{ $t('header.skills') }}</router-link>
       <div class="dropdown" @click="showDropdownContent = !showDropdownContent">
         <!--          <a class="dropbtn">Certificates<span class="fa fa-angle-down"></span></a>-->
-        <a class="dropbtn">{{ $t('header.certificates.cert') }}<span
-          :class="['fa', showDropdownContent ? 'fa-caret-up' : 'fa-caret-down']"></span></a>
+        <a class="dropbtn">{{ $t('header.certificates.cert') }}
+          <span :class="['fa', showDropdownContent ? 'fa-caret-up' : 'fa-caret-down']"></span>
+        </a>
         <router-link to="/certificates" class="dropbtnMob">{{ $t('header.certificates.cert') }}</router-link>
         <div class="dropdown-content" v-show="showDropdownContent">
           <router-link to="/certificates/backend" @click="hideMenu">{{ $t('header.certificates.backend') }}</router-link>
