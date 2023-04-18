@@ -11,9 +11,6 @@ import loginStore from "@/store/modules/service/loginStore";
     isAuthenticated() {
       return this.$store.getters.isAuthenticated;
     },
-    // showExtraContent() {
-    //     return this.$store.getters.showExtraContent;
-    // }
   },
   // props: {
   //     showExtraProp: {

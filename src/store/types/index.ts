@@ -1,8 +1,6 @@
 export interface IState {
     loginStore: User[];
-    // loginStore: any;
     isAuthenticated: boolean;
-    // showExtraContent: boolean;
     currentUser: User | null;
 }
 

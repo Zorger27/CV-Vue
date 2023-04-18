@@ -3,7 +3,6 @@ import {IState} from "@/store/types";
 
 const state = {
   isAuthenticated: false,
-  // showExtraContent: false,
   currentUser: null,
   loginStore:
     [
@@ -51,7 +50,6 @@ const state = {
 };
 const getters: GetterTree<IState, IState> = {
   isAuthenticated: (state) => state.isAuthenticated,
-  // showExtraContent: (state) => state.showExtraContent,
   getUserByEmailAndPassword: (state) => (email, password) => {
     return state.loginStore.find(user => user.email === email && user.password === password);
   },
@@ -62,20 +60,15 @@ const mutations = {
     const user = state.loginStore.find(user => user.email === email && user.password === password);
     if (user) {
       user.isAuthenticated = true;
-      // user.showExtraContent = true;
       state.currentUser = user;
     } else {
       state.currentUser = null; // очищаем currentUser, если пользователь не найден
     }
     state.isAuthenticated = Boolean(user); // устанавливаем isAuthenticated в зависимости от результата поиска пользователя
-    // state.showExtraContent = Boolean(user);
   },
   setIsAuthenticated: (state, isAuthenticated) => {
     state.isAuthenticated = isAuthenticated;
-  },
-  // setShowExtraContent: (state, showExtraContent) => {
-  //     state.showExtraContent = showExtraContent;
-  // }
+  }
 };
 const actions = {
   login: ({getters, commit}, {email, password}) => {
@@ -83,9 +76,8 @@ const actions = {
     if (user) {
       commit('setUserCredentials', {email, password});
       commit('setIsAuthenticated', true);
-      // commit('setShowExtraContent', true);
     }
-  },
+  }
 };
 export default {
   state,

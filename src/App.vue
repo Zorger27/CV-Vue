@@ -13,7 +13,9 @@ import Header from "@/components/layout/Header.vue";
 import Footer from "@/components/layout/Footer.vue";
 import "@/assets/style/global.scss";
 
-@Options({components: {Header, Footer},})
+@Options({
+  components: {Header, Footer},
+})
 export default class App extends Vue {
   route = useRoute();
   get is404Page() {
