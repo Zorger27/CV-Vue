@@ -16,8 +16,8 @@ import {IState} from "@/store/types";
     currentUser() {
       return this.getCurrentUser || {};
     },
-    ...mapActions(["login"]),
-  },
+    ...mapActions(["login"])
+  }
 })
 export default class LoginPage extends Vue {
   $store!: Store<IState>; // добавляем тип
