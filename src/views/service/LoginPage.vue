@@ -62,7 +62,7 @@ export default class LoginPage extends Vue {
       localStorage.setItem('password', this.password);
       localStorage.setItem('expiration', expiration.toString());
       this.$router.push('/extra');
-      this.$emit('show-extra-content', true) // вызов события
+      // this.$emit('show-extra-content', true) // вызов события
     } else {
       console.log("Ошибка авторизации");
     }
