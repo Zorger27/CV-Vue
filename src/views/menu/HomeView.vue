@@ -2,14 +2,7 @@
 import {Options, Vue} from 'vue-class-component';
 import Slider from "@/components/util/Slider.vue";
 
-@Options({components: {Slider},})
-export default class Home extends Vue {
-  // images: { folder: string; file: string }[] = [
-  //   { folder: '@/assets/diploma/', file: 'TP24303907D.jpg' },
-  //   { folder: '@/assets/english/', file: '02_Conversational_English.jpg' },
-  //   { folder: '@/assets/diploma/', file: 'TP31003654D.jpg' },
-  // ];
-  // sliderImages: string[] = this.images.map(({ folder, file }) => require(`${folder}${file}`));
+@Options({
   data() {
     return {
       sliderImages: [
@@ -31,7 +24,10 @@ export default class Home extends Vue {
         require('@/assets/certificates/diploma/TP88892276D.jpg'),
       ],
     }
-  }
+  },
+  components: {Slider},
+})
+export default class Home extends Vue {
 };
 </script>
 
