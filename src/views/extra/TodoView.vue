@@ -4,7 +4,7 @@ import {Options, Vue} from "vue-class-component";
 @Options({
   components: {},
 })
-export default class TodoView extends Vue {
+export default class Todo extends Vue {
 }
 </script>
 

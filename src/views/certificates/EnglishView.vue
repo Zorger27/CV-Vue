@@ -9,7 +9,7 @@ import Slider from "@/components/util/Slider.vue";
     }
   },
   components: {Slider},})
-export default class english extends Vue {
+export default class English extends Vue {
   images = require.context('@/assets/certificates/english/', false, /\.jpg$/)
   sliderImages = this.images.keys().map(key => this.images(key))
   // data() {

@@ -9,7 +9,7 @@ import projectStore from "@/store/modules/project/projectStore";
   },
   components: {},})
 
-export default class projects extends Vue {}
+export default class Projects extends Vue {}
 </script>
 
 <template>

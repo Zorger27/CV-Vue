@@ -3,7 +3,7 @@ import {Options, Vue} from 'vue-class-component';
 import Slider from "@/components/util/Slider.vue";
 
 @Options({components: {Slider},})
-export default class home extends Vue {
+export default class Home extends Vue {
   // images: { folder: string; file: string }[] = [
   //   { folder: '@/assets/diploma/', file: 'TP24303907D.jpg' },
   //   { folder: '@/assets/english/', file: '02_Conversational_English.jpg' },

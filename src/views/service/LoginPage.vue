@@ -3,6 +3,7 @@ import {Options, Vue} from "vue-class-component";
 import {Store, mapGetters, mapActions} from "vuex";
 import loginStore from "@/store/modules/service/loginStore";
 import {IState} from "@/store/types";
+import Extra from "@/views/extra/ExtraView.vue";
 
 @Options({
   computed: {
@@ -10,7 +11,7 @@ import {IState} from "@/store/types";
       return loginStore
     },
   },
-  components: {},
+  components: {Extra},
   methods: {
     ...mapGetters(["isAuthenticated", "getCurrentUser"]),
     currentUser() {
@@ -116,13 +117,14 @@ export default class LoginPage extends Vue {
       </div>
     </div>
     <div v-else>
-      <h1>
-        {{ $t('login.h3') }}
-        <span class="currentUser">
-          {{ loginStore.state.currentUser.name }} {{ loginStore.state.currentUser.surname }}
-        </span>!!!
-      </h1>
-      <line></line>
+      <Extra></Extra>
+<!--      <h1>-->
+<!--        {{ $t('login.h3') }}-->
+<!--        <span class="currentUser">-->
+<!--          {{ loginStore.state.currentUser.name }} {{ loginStore.state.currentUser.surname }}-->
+<!--        </span>!!!-->
+<!--      </h1>-->
+<!--      <line></line>-->
     </div>
   </div>
 </template>

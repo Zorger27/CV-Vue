@@ -16,7 +16,7 @@ import About from "@/views/menu/AboutView.vue";
 import PageNotFound from "@/views/service/PageNotFound.vue";
 import LoginPage from "@/views/service/LoginPage.vue";
 import Extra from "@/views/extra/ExtraView.vue";
-import Calculator from "@/views/extra/CalculatorView.vue";
+import CalculatorView from "@/views/extra/CalculatorView.vue";
 import Cryptocur from "@/views/extra/CryptocurView.vue";
 import Cube from "@/views/extra/CubeView.vue";
 import Exchange from "@/views/extra/ExchangeView.vue";
@@ -24,7 +24,7 @@ import Game from "@/views/extra/GameView.vue";
 import Notes from "@/views/extra/NotesView.vue";
 import Tasks from "@/views/extra/TasksView.vue";
 import Todo from "@/views/extra/TodoView.vue";
-import Weather from "@/views/extra/WeatherView.vue";
+import WeatherView from "@/views/extra/WeatherView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -169,7 +169,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/extra/calculator',
     name: 'calculator',
-    component: Calculator,
+    component: CalculatorView,
     meta: {
       title: 'CV Extra - Calculator',
       requiresAuth: true
@@ -241,7 +241,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/extra/weather',
     name: 'weather',
-    component: Weather,
+    component: WeatherView,
     meta: {
       title: 'CV Extra - Weather',
       requiresAuth: true

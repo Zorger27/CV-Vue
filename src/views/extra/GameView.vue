@@ -2,7 +2,7 @@
 import {Options, Vue} from "vue-class-component";
 
 @Options({components: {},})
-export default class GameView extends Vue {
+export default class Game extends Vue {
 }
 </script>
 

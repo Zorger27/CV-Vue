@@ -13,7 +13,7 @@ import knuteStore from "@/store/modules/education/knuteStore";
     languagesStore() {return languagesStore},
     englishdomStore() {return englishdomStore}},
   components: {},})
-export default class education extends Vue {}
+export default class Education extends Vue {}
 </script>
 
 <template>

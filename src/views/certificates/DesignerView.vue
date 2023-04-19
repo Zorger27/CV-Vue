@@ -11,7 +11,7 @@ import Slider from "@/components/util/Slider.vue";
   },
   components: {Slider},
 })
-export default class designer extends Vue {
+export default class Designer extends Vue {
   images = require.context('@/assets/certificates/designer/', false, /\.jpg$/)
   sliderImages = this.images.keys().map(key => this.images(key))
 }

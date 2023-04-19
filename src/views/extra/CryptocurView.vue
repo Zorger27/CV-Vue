@@ -16,7 +16,7 @@ import Cryptocurrencies from "@/components/other/Cryptocurrencies.vue";
     },
     components: {CurrentDate, Cryptocurrencies},
 })
-export default class CryptocurView extends Vue {
+export default class Cryptocur extends Vue {
 }
 </script>
 

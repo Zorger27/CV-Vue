@@ -32,7 +32,7 @@
 
 <script>
 import {Vue} from "vue-class-component";
-export default class skills extends Vue {}
+export default class Skills extends Vue {}
 </script>
 
 <style lang="scss" scoped>

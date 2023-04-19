@@ -22,7 +22,7 @@ import rubyStore from "@/store/modules/certificates/backend/rubyStore";
   },
   components: {},
 })
-export default class backend extends Vue {
+export default class Backend extends Vue {
 }
 </script>
 

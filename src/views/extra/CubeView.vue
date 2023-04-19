@@ -2,7 +2,7 @@
 import {Options, Vue} from "vue-class-component";
 
 @Options({components: {},})
-export default class CubeView extends Vue {
+export default class Cube extends Vue {
 }
 </script>
 

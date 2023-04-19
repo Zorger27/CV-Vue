@@ -1,7 +1,7 @@
 <script lang="ts">
 import { Vue } from "vue-class-component";
 
-export default class experience extends Vue {
+export default class Experience extends Vue {
 };
 </script>
 

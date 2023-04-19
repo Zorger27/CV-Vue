@@ -2,7 +2,7 @@
 import {Options, Vue} from "vue-class-component";
 
 @Options({components: {},})
-export default class NotesView extends Vue {
+export default class Notes extends Vue {
 }
 </script>
 

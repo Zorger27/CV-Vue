@@ -1,8 +1,10 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 
-@Options({components: {},})
-export default class ExchangeView extends Vue {
+@Options({
+  components: {},
+})
+export default class Exchange extends Vue {
 }
 </script>
 

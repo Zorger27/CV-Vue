@@ -6,7 +6,7 @@ import Slider from "@/components/util/Slider.vue";
 @Options({
   computed: {otherStore() {return otherStore}},
   components: {Slider},})
-export default class other extends Vue {
+export default class Other extends Vue {
   images = require.context('@/assets/certificates/other/', false, /\.jpg$/)
   sliderImages = this.images.keys().map(key => this.images(key))
 }

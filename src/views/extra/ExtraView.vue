@@ -11,7 +11,7 @@ import { mapGetters } from "vuex";
     currentUser() {return this.getCurrentUser || {};}
   },
 })
-export default class LoginPage extends Vue {}
+export default class Extra extends Vue {}
 </script>
 
 <template>

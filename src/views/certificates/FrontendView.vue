@@ -27,7 +27,7 @@ import frontStore from "@/store/modules/certificates/frontend/frontStore";
   components: {},
 })
 
-export default class frontend extends Vue {
+export default class Frontend extends Vue {
 }
 </script>
 
