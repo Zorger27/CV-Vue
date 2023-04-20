@@ -117,7 +117,9 @@
   },
   "about": {
     "title": "MY Curriculum VITAE on Vue.JS",
-    "technologies": "Technologies"
+    "technologies": "technologies",
+    "name": "Name",
+    "version": "Version"
   },
   "login": {
     "h1": "Section is under construction! Works in the test mode! \uD83D\uDE09",

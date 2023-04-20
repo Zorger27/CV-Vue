@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex'
 import otherStore from "@/store/modules/certificates/otherStore";
 import englishStore from "@/store/modules/certificates/englishStore";
 import englishdomStore from "@/store/modules/education/englishdomStore";
@@ -19,9 +19,32 @@ import languagesStore from "@/store/modules/education/languagesStore";
 import itvdnStore from "@/store/modules/education/itvdnStore";
 import progStore from "@/store/modules/education/progStore";
 import knuteStore from "@/store/modules/education/knuteStore";
-import login from "@/store/modules/service/loginStore";
+import loginStore from "@/store/modules/service/loginStore";
+import infoStore from "@/store/modules/service/infoStore";
 
 export default createStore({
-  modules: { otherStore, englishStore, englishdomStore, pmStore, designerStore, databaseStore, javaStore, phpStore, pythonStore, rubyStore,
-    htmlStore, javascriptStore, angularStore, reactStore, frontStore, projectStore, languagesStore, itvdnStore, progStore, knuteStore, login}
+  modules: {
+    otherStore,
+    englishStore,
+    englishdomStore,
+    pmStore,
+    designerStore,
+    databaseStore,
+    javaStore,
+    phpStore,
+    pythonStore,
+    rubyStore,
+    htmlStore,
+    javascriptStore,
+    angularStore,
+    reactStore,
+    frontStore,
+    projectStore,
+    languagesStore,
+    itvdnStore,
+    progStore,
+    knuteStore,
+    loginStore,
+    infoStore
+  }
 })

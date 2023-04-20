@@ -1,59 +1,156 @@
-<template>
-  <div class="about">
-    <h1>{{$t ('about.title')}}</h1>
-        <line></line>
-    <h2>{{$t ('about.technologies')}}</h2>
-    <ol>
-      <li><a href="https://v3.ru.vuejs.org" title="Vue.JS" target="_blank">Vue.JS v.3.2.13</a></li>
-      <li><a href="https://vuex.vuejs.org" title="Vuex" target="_blank">Vuex v.4.0.0</a></li>
-      <li><a href="https://vue-i18n.intlify.dev" title="i18n" target="_blank">i18n v.9.2.2</a></li>
-      <li><a href="https://axios-http.com" title="Axios" target="_blank">Axios v.1.3.5</a></li>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox" title="FlexBox CSS" target="_blank">FlexBox CSS</a></li>
-      <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout" title="Grid CSS" target="_blank">Grid CSS</a></li>
-      <li>JavaScript</li>
-      <li>TypeScript v.4.5.5</li>
-      <li><a href="https://openweathermap.org" title="OpenWeather" target="_blank">OpenWeatherMap API</a></li>
-      <li><a href="https://www.coingecko.com" title="CoinGecko" target="_blank">CoinGecko API</a></li>
-      <li><a href="https://api.privatbank.ua/#p24/exchange" title="PrivatBank" target="_blank">PrivatBank API</a></li>
-    </ol>
-<!--    <line></line>-->
-<!--    <h3>Project setup: <strong>npm install</strong></h3>-->
-<!--    <h3>Compiles and hot-reloads for development: <strong>npm run serve</strong></h3>-->
-<!--    <h3>Compiles and minifies for production: <strong>npm run build</strong></h3>-->
-<!--    <line></line>-->
-  </div>
-</template>
-
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-@Options({components: {},})
+import infoStore from "@/store/modules/service/infoStore";
+
+@Options({
+  computed: {
+    infoStore() {
+      return infoStore
+    }
+  },
+  data() {
+    return {
+      tableView: false
+    }
+  },
+  methods: {
+    changeView() {
+      this.tableView = !this.tableView;
+    }
+  },
+  components: {},
+})
 
 export default class About extends Vue {}
 </script>
 
+<template>
+  <div class="about">
+<!--    <h1>{{$t ('about.title')}}</h1>-->
+    <h1>
+      {{$t ('about.title')}} <span style="color: darkgoldenrod"> ({{ $t('about.technologies') }})</span> <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
+    </h1>
+    <line></line>
+    <!--    <h2>{{$t ('about.technologies')}}</h2>-->
+    <div v-if="tableView" class="table">
+      <table>
+        <thead>
+        <tr>
+          <th>№</th>
+          <th>{{ $t('about.name') }}</th>
+          <th>{{ $t('about.version') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="info in infoStore.state.infoStore">
+          <td class="nomer">{{ info.id }}</td>
+          <td class="name"><a :href="info.url" title="In more detail..." target="_blank">{{ info.title }}</a></td>
+          <td class="version">{{ info.version }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div v-else v-for="info in infoStore.state.infoStore" class="prj">
+      <a class="block" :href="info.url" title="In more detail..." target="_blank">
+        <h3>
+          <span style="color: black">{{ info.id }}.</span> <span>{{ info.title }}</span> <span
+          style="color: red">{{ info.version ? 'v.' + info.version : info.version }}</span>
+        </h3>
+      </a>
+    </div>
+  </div>
+</template>
+
 <style lang="scss" scoped>
 .about {
   flex: 1 0 auto;
-  text-align: left;
+  text-align: center;
+
   h1 {
     color: mediumvioletred;
   }
-  h2 {
-    margin-bottom: 1px;
-    text-decoration: underline;
-    padding: 0 0 0.3rem 1.5rem;
+
+  .fa.fa-th {
+    color: deepskyblue;
   }
-  h3 {
-    margin-bottom: 2px;
-    padding: 0 0 0.3rem 1.5rem;
+
+  .fa.fa-list {
+    color: mediumvioletred;
   }
-  ol {
-    margin-top: 1px;
+
+  .table {
+    display: inline-flex;
+    font-size: 2rem;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    background-color: rgba(220, 219, 219, 0.2);
+    box-shadow: 3px 3px 4px 0 lightgrey;
+
+    table {
+      border-collapse: collapse;
+    }
+
+    tr, td, th {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+    }
+
+    .nomer {
+      width: 70px;
+    }
+
+    .name {
+      text-align: left;
+      color: deepskyblue;
+      width: 350px;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #2e768d;
+      }
+    }
+
+    .version {
+      text-align: right;
+      color: deeppink;
+      width: 200px;
+    }
   }
-  strong {
-    color: darkred;
+
+  @media(max-width: 1020px) {
+    .table {
+      font-size: 1.55rem;
+      padding: 0.8rem;
+      margin: 0.5rem;
+
+      tr, td, th {
+        padding: 0.4rem;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .table {
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0.3rem;
+      border: none;
+      border-radius: unset;
+
+      tr, td, th {
+        padding: 0.3rem;
+      }
+
+      .nomer, .name, .version {
+        width: max-content;
+      }
+    }
   }
 }
 </style>
