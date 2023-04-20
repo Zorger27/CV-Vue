@@ -152,7 +152,13 @@
       "price": "Precio"
     },
     "cube": "El cubo giratorio",
-    "exchange": "Los tipos de cambio",
+    "exchange": {
+      "title": "Los tipos de cambio",
+      "bank": "API de PrivatBank",
+      "currency": "Moneda",
+      "purchase": "Compra",
+      "sale": "Venta"
+    },
     "game": "Juego",
     "notes": "Notas",
     "tasks": "Tareas JS",

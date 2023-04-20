@@ -152,7 +152,13 @@
       "price": "Price"
     },
     "cube": "Spinning cube",
-    "exchange": "Exchange rates",
+    "exchange": {
+      "title": "Exchange rates",
+      "bank": "PrivatBank API",
+      "currency": "Currency",
+      "purchase": "Purchase",
+      "sale": "Sale"
+    },
     "game": "Game",
     "notes": "Notes",
     "tasks": "JS tasks",

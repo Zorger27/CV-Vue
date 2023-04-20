@@ -1,11 +1,14 @@
-<script lang="ts">
+<script>
 import {Options, Vue} from "vue-class-component";
+import CurrentDate from "@/components/util/CurrentDate.vue";
+import PrivatBankRates from "@/components/other/PrivatBankRates.vue";
 
 @Options({
-  components: {},
+  components: {PrivatBankRates, CurrentDate},
 })
-export default class Exchange extends Vue {
+export default class CurrencyRates extends Vue {
 }
+
 </script>
 
 <template>
@@ -16,7 +19,8 @@ export default class Exchange extends Vue {
       {{ $t('extra.h1m.exchange') }}
     </h1>
     <line></line>
-    <h1>{{ $t('login.h1') }}</h1>
+    <div><CurrentDate></CurrentDate></div>
+    <div><PrivatBankRates></PrivatBankRates></div>
   </div>
 </template>
 

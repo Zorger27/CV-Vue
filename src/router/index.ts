@@ -19,7 +19,7 @@ import Extra from "@/views/extra/ExtraView.vue";
 import CalculatorView from "@/views/extra/CalculatorView.vue";
 import Cryptocur from "@/views/extra/CryptocurView.vue";
 import Cube from "@/views/extra/CubeView.vue";
-import Exchange from "@/views/extra/ExchangeView.vue";
+import CurrencyRates from "@/views/extra/CurrencyRatesView.vue";
 import Game from "@/views/extra/GameView.vue";
 import Notes from "@/views/extra/NotesView.vue";
 import Tasks from "@/views/extra/TasksView.vue";
@@ -194,11 +194,11 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/extra/exchange',
-    name: 'exchange',
-    component: Exchange,
+    path: '/extra/rates',
+    name: 'rates',
+    component: CurrencyRates,
     meta: {
-      title: 'CV Extra - Exchange rates',
+      title: 'CV Extra - Currency Rates',
       requiresAuth: true
     }
   },

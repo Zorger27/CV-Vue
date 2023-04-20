@@ -1,17 +1,24 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import loginStore from "../../store/modules/service/loginStore";
-import { mapGetters } from "vuex";
+import {mapGetters} from "vuex";
 
 @Options({
-  computed: {loginStore() {return loginStore}},
+  computed: {
+    loginStore() {
+      return loginStore
+    }
+  },
   components: {},
   methods: {
     ...mapGetters(["getCurrentUser"]),
-    currentUser() {return this.getCurrentUser || {};}
+    currentUser() {
+      return this.getCurrentUser || {};
+    }
   },
 })
-export default class Extra extends Vue {}
+export default class Extra extends Vue {
+}
 </script>
 
 <template>
@@ -37,7 +44,7 @@ export default class Extra extends Vue {}
         <router-link class="block" to="/extra/weather"><b>{{ $t('extra.weather.title') }}</b></router-link>
       </div>
       <div class="prj exchange">
-        <router-link class="block" to="/extra/exchange"><b>{{ $t('extra.exchange') }}</b></router-link>
+        <router-link class="block" to="/extra/rates"><b>{{ $t('extra.exchange.title') }}</b></router-link>
       </div>
       <div class="prj cryptocur">
         <router-link class="block" to="/extra/cryptocur"><b>{{ $t('extra.cryptocur.title') }}</b></router-link>
@@ -58,6 +65,7 @@ export default class Extra extends Vue {}
 <style lang="scss" scoped>
 .extra {
   flex: 1 0 auto;
+
   .container {
     display: inline-grid;
     justify-items: center;
@@ -71,21 +79,50 @@ export default class Extra extends Vue {}
     grid-row-gap: 0;
     grid-auto-flow: column;
 
-    .calculator {grid-area: calculator;}
-    .todo {grid-area: todo;}
-    .notes {grid-area: notes;}
-    .weather {grid-area: weather;}
-    .exchange {grid-area: exchange;}
-    .cryptocur {grid-area: cryptocur;}
-    .tasks {grid-area: tasks;}
-    .cube {grid-area: cube;}
-    .game {grid-area: game;}
+    .calculator {
+      grid-area: calculator;
+    }
 
-    .block {font-size: 1.5rem;}
+    .todo {
+      grid-area: todo;
+    }
+
+    .notes {
+      grid-area: notes;
+    }
+
+    .weather {
+      grid-area: weather;
+    }
+
+    .exchange {
+      grid-area: exchange;
+    }
+
+    .cryptocur {
+      grid-area: cryptocur;
+    }
+
+    .tasks {
+      grid-area: tasks;
+    }
+
+    .cube {
+      grid-area: cube;
+    }
+
+    .game {
+      grid-area: game;
+    }
+
+    .block {
+      font-size: 1.5rem;
+    }
 
     .prj {
       font-size: 1.5rem;
       margin-bottom: 1rem;
+
       b {
         color: darkred;
       }
@@ -97,6 +134,7 @@ export default class Extra extends Vue {}
         box-shadow: 3px 3px 4px 0 lightgrey;
         border-color: lightskyblue;
       }
+
       b {
         color: red;
         text-decoration: none;
