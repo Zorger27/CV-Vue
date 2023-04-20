@@ -16,6 +16,7 @@
       <li>TypeScript v.4.5.5</li>
       <li><a href="https://openweathermap.org" title="OpenWeather" target="_blank">OpenWeatherMap API</a></li>
       <li><a href="https://www.coingecko.com" title="CoinGecko" target="_blank">CoinGecko API</a></li>
+      <li><a href="https://api.privatbank.ua/#p24/exchange" title="PrivatBank" target="_blank">PrivatBank API</a></li>
     </ol>
 <!--    <line></line>-->
 <!--    <h3>Project setup: <strong>npm install</strong></h3>-->
