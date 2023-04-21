@@ -28,13 +28,16 @@ export default class About extends Vue {}
   <div class="about">
 <!--    <h1>{{$t ('about.title')}}</h1>-->
     <h1>
-      {{$t ('about.title')}} <span style="color: darkgoldenrod"> ({{ $t('about.technologies') }})</span> <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
+      {{$t ('about.title')}} <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
     </h1>
     <line></line>
     <!--    <h2>{{$t ('about.technologies')}}</h2>-->
     <div v-if="tableView" class="table">
       <table>
         <thead>
+        <tr>
+          <th style="color: darkgoldenrod" colspan="3">{{ $t('about.technologies') }}</th>
+        </tr>
         <tr>
           <th>№</th>
           <th>{{ $t('about.name') }}</th>
@@ -50,13 +53,16 @@ export default class About extends Vue {}
         </tbody>
       </table>
     </div>
-    <div v-else v-for="info in infoStore.state.infoStore" class="prj">
-      <a class="block" :href="info.url" title="In more detail..." target="_blank">
-        <h3>
-          <span style="color: black">{{ info.id }}.</span> <span>{{ info.title }}</span> <span
-          style="color: red">{{ info.version ? 'v.' + info.version : info.version }}</span>
-        </h3>
-      </a>
+    <div v-else>
+      <h1 style="color: darkgoldenrod; text-decoration: underline">{{ $t('about.technologies') }}</h1>
+      <div v-for="info in infoStore.state.infoStore" class="prj">
+        <a class="block" :href="info.url" title="In more detail..." target="_blank">
+          <h3>
+            <span style="color: black">{{ info.id }}.</span> <span>{{ info.title }}</span> <span
+            style="color: red">{{ info.version ? 'v.' + info.version : info.version }}</span>
+          </h3>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -75,7 +81,7 @@ export default class About extends Vue {}
   }
 
   .fa.fa-list {
-    color: mediumvioletred;
+    color: green;
   }
 
   .table {
