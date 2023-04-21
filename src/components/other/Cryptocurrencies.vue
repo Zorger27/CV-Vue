@@ -81,53 +81,6 @@ export default class Cryptocurrencies extends Vue {
 </template>
 
 <style lang="scss" scoped>
-
-.table {
-  display: inline-flex;
-  font-size: 2rem;
-  color: black;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  margin: 0.5rem;
-  border-radius: 5px;
-  background-color: rgba(220, 219, 219, 0.2);
-  box-shadow: 3px 3px 4px 0 lightgrey;
-
-  table {
-    border-collapse: collapse;
-  }
-
-  tr, td, th {
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-  }
-
-  .nomer {
-    width: 70px;
-  }
-
-  .name {
-    text-align: left;
-    color: deepskyblue;
-    width: 300px;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #2e768d;
-    }
-  }
-
-  .price {
-    text-align: right;
-    color: deeppink;
-    width: 250px;
-  }
-}
-
 .crypto {
   display: inline-flex;
   font-size: 2rem;
@@ -137,19 +90,14 @@ export default class Cryptocurrencies extends Vue {
   border-radius: 5px;
   background-color: #f1f1f1;
   box-shadow: 3px 3px 4px 0 lightgrey;
-
-  a {
-    text-decoration: none;
-  }
+  a {text-decoration: none;}
 
   .name {
-    font-weight: bold;
     margin-right: 5px;
     color: deepskyblue;
   }
 
   .price {
-    font-weight: bold;
     margin-right: 5px;
     margin-left: 5px;
     color: deeppink;
@@ -167,47 +115,12 @@ export default class Cryptocurrencies extends Vue {
     padding: 0.8rem;
     margin: 0.5rem;
   }
-  .table {
-    font-size: 1.55rem;
-    padding: 0.8rem;
-    margin: 0.5rem;
-
-    tr, td, th {
-      padding: 0.4rem;
-    }
-  }
 }
-
 @media (max-width: 768px) {
   .crypto {
     font-size: 1.3rem;
     padding: 0.6rem;
     margin: 0.4rem;
   }
-  .table {
-    font-size: 1.3rem;
-    padding: 0;
-    margin: 0.3rem;
-    border: none;
-    border-radius: unset;
-
-    tr, td, th {
-      padding: 0.3rem;
-    }
-
-    .nomer {
-      width: max-content;
-    }
-
-    .name {
-      width: max-content;
-    }
-
-    .price {
-      width: max-content;
-
-    }
-  }
 }
-
 </style>

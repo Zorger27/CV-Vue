@@ -51,15 +51,8 @@ export default class Cryptocur extends Vue {
       margin-right: 0.1rem;
     }
   }
-
-  .fa.fa-th {
-    color: deepskyblue;
-  }
-
-  .fa.fa-list {
-    color: deeppink;
-  }
-
+  .fa.fa-th {color: deepskyblue;}
+  .fa.fa-list {color: deeppink;}
   h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;

@@ -21,18 +21,9 @@ svg{
   height: auto;
   max-height:100%
 }
-a {
-  text-decoration: none;
-  color: indigo;
-}
-a:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  color: darkblue;
-}
-h1 {
-  text-align: center;
-}
+a {text-decoration: none;color: indigo;}
+a:hover {cursor: pointer;text-decoration: underline;color: darkblue;}
+h1 {text-align: center;}
 .slider {
   width: 45%;
   overflow: hidden;
@@ -41,36 +32,22 @@ h1 {
   border-radius: 5px;
   box-shadow: 3px 3px 4px 0 lightgrey;
   padding: 0.5rem;
-  @media(max-width:1020px) {
-    width: 85%;
-  }
-  @media(max-width:768px) {
-    width: 95%;
-  }
+  @media(max-width:1020px) {width: 85%;}
+  @media(max-width:768px) {width: 95%;}
 }
-.currentUser {
-  color: mediumvioletred;
-}
+.currentUser {color: mediumvioletred;}
 .certificates {
   ol {
     font-size: 1.4rem;
-    li {
-      padding: 0.2rem;
-    }
+    li {padding: 0.2rem;}
   }
 }
 .certificate, .diploma, .prj{
   display: inline-flex;
   padding: 1rem;
   text-align: left;
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  h3 {
-    margin-bottom: 0;
-    margin-top: 0;
-  }
+  a {text-decoration: none;color: inherit;}
+  h3 {margin-bottom: 0;margin-top: 0;}
   .block {
     border: 1px solid rgba(112, 111, 111, 0.6);
     border-radius: 5px;
@@ -82,60 +59,66 @@ h1 {
 .diploma {
   a:hover {
     border: 1px solid #780485;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(27, 27, 217, 0.3));
-    box-shadow: 3px 3px 4px 0 #cc1cc3;
-    h3 {
-      color: black;
-    }
+    //background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(27, 27, 217, 0.3));
+    background: radial-gradient(at 0% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(343, 100%, 76%, 1) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
+    box-shadow: 3px 3px 4px 0 rgba(178, 25, 170, 0.5);
+    h3 {color: black;}
   }
-  h3 {
-    color: red;
-  }
-  .block {
-    background: #f1f1f1;
-  }
+  h3 {color: red;}
+  .block {background: #f1f1f1;}
 }
 .certificate {
   a:hover {
     border: 1px solid lightskyblue;
     box-shadow: 3px 3px 4px 0 lightblue;
-    h3 {
-      color: darkblue;
-    }
+    h3 {color: darkblue;}
   }
-  h3 {
-    color: darkgreen;
-  }
-  .block {
-    background: none;
-  }
+  h3 {color: darkgreen;}
+  .block {background: none;}
 }
 .prj {
   a:hover {
     border: 1px solid goldenrod;
     background: none;
     box-shadow: 3px 3px 4px 0 lightgoldenrodyellow;
-    h3 {
-      color: #493606;
-    }
+    h3 {color: #493606;}
   }
-  h3 {
-    color: #af0661;
+  h3 {color: #af0661;}
+  .block {background: rgba(194, 211, 250, 0.1);}
+}
+.attention {color: #a20909;}
+.attention:hover {color: red;}
+.fa.fa-th {color: deepskyblue;}
+.fa.fa-list {color: green;}
+
+.table {
+  display: inline-flex;
+  font-size: 2rem;
+  color: black;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  background-color: rgba(220, 219, 219, 0.2);
+  box-shadow: 3px 3px 4px 0 lightgrey;
+  table {border-collapse: collapse;}
+  tr, td, th {border: 1px solid #ddd;padding: 0.5rem;}
+  .nomer {width: 70px;}
+  .name {
+    text-align: left;
+    color: deepskyblue;
+    width: 350px;
+    a {color: inherit;text-decoration: none;}
+    a:hover {color: #2e768d;}
   }
-  .block {
-    background: rgba(194, 211, 250, 0.1);
-  }
+  .version, .price {text-align: right;color: deeppink;width: 200px;}
 }
-.attention{
-  color: #a20909;
-}
-.attention:hover{
-  color: red;
-}
+
 @media(max-width:1020px) {
-  line {
-    width: 100%;
-  }
+  line {width: 100%;}
   .header-logo {
     svg {
       max-width: 100%;
@@ -146,42 +129,41 @@ h1 {
   .certificates {
     ol {
       font-size: 1.3rem;
-      li {
-        padding: 0.3rem;
-      }
+      li {padding: 0.3rem;}
     }
   }
   .diploma, .certificate, .prj {
     padding: 0.6rem;
-    .block {
-      font-size: 1rem;
-      padding: 0.6rem;
-    }
+    .block {font-size: 1rem;padding: 0.6rem;}
+  }
+  .table {
+    font-size: 1.55rem;
+    padding: 0.8rem;
+    margin: 0.5rem;
+    tr, td, th {padding: 0.4rem;}
   }
 }
 @media(max-width:768px) {
-  line {
-    width: 100%;
-  }
-  h1 {
-    font-size: xx-large;
-  }
-  h2 {
-    font-size: x-large;
-  }
+  line {width: 100%;}
+  h1 {font-size: xx-large;}
+  h2 {font-size: x-large;}
   .certificates {
     ol {
       font-size: 1.2rem;
-      li {
-        padding: 0.3rem;
-      }
+      li {padding: 0.3rem;}
     }
   }
   .diploma, .certificate, .prj {
     padding: 0.3rem;
-    .block {
-      font-size: 0.78rem;
-      padding: 0.4rem;
-    }
+    .block {font-size: 0.78rem;padding: 0.4rem;}
+  }
+  .table {
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0.3rem;
+    border: none;
+    border-radius: unset;
+    tr, td, th {padding: 0.3rem;}
+    .nomer, .name, .version, .price {width: max-content;}
   }
 }
