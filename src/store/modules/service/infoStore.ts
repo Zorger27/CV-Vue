@@ -63,18 +63,30 @@ const state = {
       },
       {
         id: 11,
+        title: "Google Search Console",
+        version: "",
+        url: "https://search.google.com/search-console"
+      },
+      {
+        id: 12,
+        title: "Google Analytics",
+        version: "4.0",
+        url: "https://analytics.google.com"
+      },
+      {
+        id: 13,
         title: "OpenWeather Map API",
         version: "",
         url: "https://openweathermap.org"
       },
       {
-        id: 12,
+        id: 14,
         title: "CoinGecko API",
         version: "",
         url: "https://www.coingecko.com"
       },
       {
-        id: 13,
+        id: 15,
         title: "PrivatBank API",
         version: "",
         url: "https://api.privatbank.ua/#p24/exchange"
