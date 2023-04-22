@@ -87,9 +87,9 @@ const state = {
       },
       {
         id: 15,
-        title: "PrivatBank API",
+        title: "NBU API",
         version: "",
-        url: "https://api.privatbank.ua/#p24/exchange"
+        url: "https://portal.bank.gov.ua/uk/8"
       },
     ]
 };

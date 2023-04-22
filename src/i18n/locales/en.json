@@ -157,9 +157,14 @@
     "exchange": {
       "title": "Exchange rates",
       "bank": "PrivatBank API",
+      "nbu": "National Bank of Ukraine",
+      "code": "Code",
       "currency": "Currency",
+      "rate": "Rate",
       "purchase": "Purchase",
-      "sale": "Sale"
+      "sale": "Sale",
+      "uah": "uah",
+      "usd": "usd"
     },
     "game": "Game",
     "notes": "Notes",

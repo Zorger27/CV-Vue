@@ -157,9 +157,14 @@
     "exchange": {
       "title": "Los tipos de cambio",
       "bank": "API de PrivatBank",
+      "nbu": "Banco Nacional de Ucrania",
+      "code": "Código",
       "currency": "Moneda",
+      "rate": "Curso",
       "purchase": "Compra",
-      "sale": "Venta"
+      "sale": "Venta",
+      "uah": "uah",
+      "usd": "usd"
     },
     "game": "Juego",
     "notes": "Notas",

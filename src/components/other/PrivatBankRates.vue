@@ -78,28 +78,11 @@ export default class PrivatBankRates extends Vue {
 
 <style lang="scss" scoped>
 .table {
-  display: inline-flex;
-  font-size: 2rem;
-  color: black;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  margin: 0.5rem;
-  border-radius: 5px;
-  background-color: rgba(220, 219, 219, 0.2);
-  box-shadow: 3px 3px 4px 0 lightgrey;
-
-  table {
-    border-collapse: collapse;
-  }
-
-  tr, td, th {
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-  }
-
   .bank {
     font-size: 2.5rem;
     color: black;
+    a {text-decoration: none;}
+    a:hover {color: cornflowerblue;}
   }
   .name {
     text-align: center;
@@ -122,36 +105,14 @@ export default class PrivatBankRates extends Vue {
 
 @media(max-width: 1020px) {
   .table {
-    font-size: 1.55rem;
-    padding: 0.8rem;
-    margin: 0.5rem;
-
-    tr, td, th {
-      padding: 0.4rem;
-    }
-    .bank {
-      font-size: 2rem;
-    }
+    .bank {font-size: 2rem;}
   }
 }
 
 @media (max-width: 768px) {
   .table {
-    font-size: 1.3rem;
-    padding: 0;
-    margin: 0.3rem;
-    border: none;
-    border-radius: unset;
-
-    tr, td, th {
-      padding: 0.3rem;
-    }
-    .bank {
-      font-size: 1.6rem;
-    }
-    .name, .buy, .sale {
-      width: max-content;
-    }
+    .bank {font-size: 1.6rem;}
+    .name, .buy, .sale {width: max-content;}
   }
 }
 </style>
