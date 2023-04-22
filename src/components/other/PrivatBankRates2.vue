@@ -7,8 +7,8 @@ import axios from "axios";
     return {
       loading: false,
       rates: [
-        {ccy: "EUR", base_ccy: "UAH", buy: 0, sale: 0},
-        {ccy: "USD", base_ccy: "UAH", buy: 0, sale: 0},
+        {ccy: "EUR", base_ccy: "UAH", buy: "", sale: ""},
+        {ccy: "USD", base_ccy: "UAH", buy: "", sale: ""},
       ],
     };
   },
@@ -46,7 +46,7 @@ import axios from "axios";
   },
   components: {},
 })
-export default class PrivatBankRates extends Vue {
+export default class PrivatBankRates2 extends Vue {
 }
 
 </script>

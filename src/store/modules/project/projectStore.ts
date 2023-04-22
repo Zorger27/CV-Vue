@@ -11,7 +11,7 @@ projectStore:
       },
       {
           id: 2,
-          title: "MY Curriculum VITAE",
+          title: "MY Portfolio",
           type: "Single page application",
           techno: "Vue.JS, VueX, HTML5, CSS3, TypeScript",
           sourcelink: "https://github.com/Zorger27/CV-Vue",

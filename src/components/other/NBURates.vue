@@ -12,6 +12,7 @@ interface ExchangeRate {
   data() {
     return {
       rates: [] as ExchangeRate[],
+      tableView: true
     }
   },
   created() {
@@ -39,11 +40,8 @@ interface ExchangeRate {
         console.error(error)
       }
     },
-  },
-  props: {
-    tableView2: {
-      type: Boolean,
-      required: true
+    changeView() {
+      this.tableView = !this.tableView;
     }
   },
   components: {},
@@ -52,12 +50,14 @@ export default class NBURates extends Vue {}
 </script>
 
 <template>
-  <div v-if="tableView2" class="table">
+  <h1 class="bank">
+    <a href="https://portal.bank.gov.ua/uk/8" title="In more detail..." target="_blank">
+      {{ $t('extra.exchange.nbu') }}
+    </a> <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
+  </h1>
+  <div v-if="tableView" class="table">
     <table>
       <thead>
-      <tr>
-        <th class="bank" colspan="4"><a href="https://portal.bank.gov.ua/uk/8" title="In more detail..." target="_blank">{{ $t('extra.exchange.nbu') }}</a></th>
-      </tr>
       <tr>
         <th>№</th>
         <th>{{ $t('extra.exchange.code') }}</th>
@@ -76,7 +76,6 @@ export default class NBURates extends Vue {}
     </table>
   </div>
   <div v-else>
-    <h1 class="bank"><a href="https://portal.bank.gov.ua/uk/8" title="In more detail..." target="_blank">{{ $t('extra.exchange.nbu') }}</a></h1>
     <div v-for="(rate, index) in rates" :key="index" class="rates">
       <span class="name">{{ rate.txt }}</span>=<span class="price">{{ rate.rate.toFixed(2) }}</span>{{ $t('extra.exchange.uah') }}
     </div>
@@ -87,6 +86,7 @@ export default class NBURates extends Vue {}
 .bank {
   font-size: 2.5rem;
   color: black;
+  margin: 0;
   a {text-decoration: none;}
   a:hover {color: cornflowerblue;}
 }

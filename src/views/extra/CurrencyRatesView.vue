@@ -1,21 +1,10 @@
 <script>
 import {Options, Vue} from "vue-class-component";
 import CurrentDate from "@/components/util/CurrentDate.vue";
-import PrivatBankRates from "@/components/other/PrivatBankRates.vue";
 import NBURates from "@/components/other/NBURates.vue";
 
 @Options({
-  data() {
-    return {
-      tableView2: true
-    }
-  },
-  methods: {
-    changeView() {
-      this.tableView2 = !this.tableView2;
-    }
-  },
-  components: {NBURates, PrivatBankRates, CurrentDate},
+  components: {NBURates, CurrentDate},
 })
 export default class CurrencyRates extends Vue {
 }
@@ -28,12 +17,10 @@ export default class CurrencyRates extends Vue {
       <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('extra.h1m.exchange') }}
-      <i @click="changeView"><span :class="['fa', tableView2 ? 'fa-th' : 'fa-list']"></span></i>
     </h1>
     <line></line>
     <div><CurrentDate></CurrentDate></div>
-    <div><NBURates :table-view2="tableView2" table-view></NBURates></div>
-<!--    <div><PrivatBankRates></PrivatBankRates></div>-->
+    <div><NBURates></NBURates></div>
   </div>
 </template>
 
