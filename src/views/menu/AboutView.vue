@@ -27,7 +27,7 @@ export default class About extends Vue {}
 <template>
   <div class="about">
 <!--    <h1>{{$t ('about.title')}}</h1>-->
-    <h1>
+    <h1 class="main">
       {{$t ('about.title')}} <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
     </h1>
     <line></line>
@@ -36,7 +36,7 @@ export default class About extends Vue {}
       <table>
         <thead>
         <tr>
-          <th style="color: darkgoldenrod" colspan="3">{{ $t('about.technologies') }}</th>
+          <th class="title" colspan="3">{{ $t('about.technologies') }}</th>
         </tr>
         <tr>
           <th>№</th>
@@ -54,7 +54,7 @@ export default class About extends Vue {}
       </table>
     </div>
     <div v-else>
-      <h1 style="color: darkgoldenrod; text-decoration: underline">{{ $t('about.technologies') }}</h1>
+      <h1 class="title" style="text-decoration: underline">{{ $t('about.technologies') }}</h1>
       <div v-for="info in infoStore.state.infoStore" class="prj">
         <a class="block" :href="info.url" title="In more detail..." target="_blank">
           <h3>
@@ -71,8 +71,18 @@ export default class About extends Vue {}
 .about {
   flex: 1 0 auto;
   text-align: center;
-  h1 {color: mediumvioletred;}
+  .main {color: mediumvioletred;}
   .name {width: 400px;}
   .version {width: 150px;}
+}
+.title {
+  color: darkgoldenrod;
+  font-size: 2.5rem;
+}
+@media(max-width: 1020px) {
+  .title {font-size: 2rem;}
+}
+@media (max-width: 768px) {
+  .title {font-size: 1.6rem;}
 }
 </style>
