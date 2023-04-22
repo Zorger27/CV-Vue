@@ -74,8 +74,7 @@ export default class Cryptocurrencies extends Vue {
   </div>
   <div v-else v-for="(crypto, index) in cryptos" :key="crypto.id" class="crypto">
     <a :href="crypto.url" title="In more detail..." target="_blank">
-      <span class="name">{{ crypto.name }}</span>=
-      <span class="price">{{ crypto.price }}</span>{{ $t('extra.exchange.usd') }}
+      <span class="name">{{ crypto.name }}</span>=<span class="price">{{ crypto.price }}</span>{{ $t('extra.exchange.usd') }}
     </a>
   </div>
 </template>
