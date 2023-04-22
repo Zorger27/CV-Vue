@@ -110,11 +110,11 @@ h1 {text-align: center;}
   .name {
     text-align: left;
     color: deepskyblue;
-    width: 350px;
+    width: 320px;
     a {color: inherit;text-decoration: none;}
     a:hover {color: #2e768d;}
   }
-  .version, .price {text-align: right;color: deeppink;width: 200px;}
+  .version, .price {text-align: right;color: deeppink;width: 230px;}
 }
 
 @media(max-width:1020px) {

@@ -71,7 +71,8 @@ export default class About extends Vue {}
 .about {
   flex: 1 0 auto;
   text-align: center;
-
   h1 {color: mediumvioletred;}
+  .name {width: 400px;}
+  .version {width: 150px;}
 }
 </style>
