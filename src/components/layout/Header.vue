@@ -236,9 +236,6 @@ header {
 
   .language:hover {
     color: red;
-    //border: 1px solid rgba(112, 111, 111, 0.9);
-    //border-radius: 5px;
-    //box-shadow: 3px 3px 4px 0 white;
     cursor: pointer;
   }
 
@@ -257,14 +254,10 @@ header {
       display: grid;
       grid-area: burger-menu;
       background-color: inherit;
-      //border: 1px solid transparent;
-      //border-radius: 5px;
-      //box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       align-self: center;
       justify-self: left;
       padding: 0.1rem 0.5rem 0.2rem 0.5rem;
       cursor: pointer;
-      //margin-left: 0.5rem;
 
       .burger-menu-icon {
         color: darkblue;
@@ -275,13 +268,7 @@ header {
     }
     .burger-menu:hover {
       background-color: inherit;
-      //border: 1px solid rgba(112, 111, 111, 0.9);
-      //border-radius: 5px;
-      //box-shadow: 3px 3px 4px 0 white;
-
-      .burger-menu-icon {
-        color: red;
-      }
+      .burger-menu-icon {color: red;}
     }
   }
 
