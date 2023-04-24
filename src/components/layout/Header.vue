@@ -111,7 +111,7 @@ export default class Header extends Vue {
         <router-link to="/extra" class="dropbtnMob">{{ $t('header.extra') }}</router-link>
         <div class="dropdown-content" v-show="showExtraContent">
           <router-link to="/extra/calculator" @click="hideMenu">{{ $t('extra.calculator') }}</router-link>
-          <router-link to="/extra/todo" @click="hideMenu">{{ $t('extra.todo') }}</router-link>
+          <router-link to="/extra/todo" @click="hideMenu">{{ $t('extra.todo.title') }}</router-link>
           <router-link to="/extra/notes" @click="hideMenu">{{ $t('extra.notes') }}</router-link>
           <router-link to="/extra/weather" @click="hideMenu">{{ $t('extra.weather.title') }}</router-link>
           <router-link to="/extra/rates" @click="hideMenu">{{ $t('extra.exchange.title') }}</router-link>

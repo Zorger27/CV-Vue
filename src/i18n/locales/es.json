@@ -169,7 +169,17 @@
     "game": "Juego",
     "notes": "Notas",
     "tasks": "Tareas JS",
-    "todo": "Lista de quehaceres",
+    "todo": {
+      "title": "Lista de quehaceres",
+      "add-task": "Añadir tarea",
+      "add": "Añadir",
+      "task": "Nombre de tarea",
+      "status": "Estatus",
+      "actions": "Acciones",
+      "edit": "Corregir",
+      "delete": "Borrar",
+      "delete-all": "Borrar todas las tareas"
+    },
     "weather": {
       "title": "Clima",
       "h1": "Tiempo en Kyiv",

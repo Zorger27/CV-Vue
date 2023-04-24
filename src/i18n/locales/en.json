@@ -169,7 +169,17 @@
     "game": "Game",
     "notes": "Notes",
     "tasks": "JS tasks",
-    "todo": "To-do list",
+    "todo": {
+      "title": "To-do list",
+      "add-task": "Add task",
+      "add": "Add",
+      "task": "Task Name",
+      "status": "Status",
+      "actions": "Actions",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete-all": "Delete all tasks"
+    },
     "weather": {
       "title": "Weather",
       "h1": "Weather in Kyiv",

@@ -1,8 +1,9 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import TodoList from "@/components/other/TodoList.vue";
 
 @Options({
-  components: {},
+  components: {TodoList},
 })
 export default class Todo extends Vue {
 }
@@ -16,7 +17,7 @@ export default class Todo extends Vue {
       {{ $t('extra.h1m.todo') }}
     </h1>
     <line></line>
-    <h1>{{ $t('login.h1') }}</h1>
+    <TodoList></TodoList>
   </div>
 </template>
 
