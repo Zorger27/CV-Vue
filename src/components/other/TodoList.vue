@@ -81,7 +81,7 @@ export default class TodoList extends Vue {
           <form @submit.prevent="addTask">
             <input type="text" v-model="newTask" :placeholder="$t('extra.todo.add-task')"/>
             <!--            <textarea v-model="newTask" :placeholder="$t('extra.todo.add-task')"/>-->
-            <button class="add-task"><i class="fas fa-tasks"></i></button>
+            <button class="add-task"><i class="fas fa-plus"></i></button>
           </form>
         </th>
       </tr>
