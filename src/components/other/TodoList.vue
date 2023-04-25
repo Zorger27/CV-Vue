@@ -145,7 +145,7 @@ export default class TodoList extends Vue {
       border-radius: 5px;
       width: 600px;
       padding: 0.6rem;
-      margin-right: 5px;
+      margin: 0 5px;
     }
     input:active, :focus {
       outline: 1px solid lightskyblue;
@@ -153,10 +153,10 @@ export default class TodoList extends Vue {
       box-shadow: 3px 3px 4px 0 lightgrey;
     }
     .add-task {
-      display: inline-flex;
       border: none;
       border-radius: 50%;
       background-color: inherit;
+      text-align: left;
       margin: 0 0 0 5px;
       color: steelblue;
       font-size: 3rem;
@@ -221,7 +221,7 @@ export default class TodoList extends Vue {
         font-size: 1.8rem;
         width: 550px;
         padding: 0.5rem;
-        margin-right: 5px;
+        margin: 0 5px;
       }
       .add-task {
         margin-left: 5px;
@@ -247,12 +247,11 @@ export default class TodoList extends Vue {
     form {
       input[type="text"] {
         font-size: 1rem;
-        width: 200px;
+        width: 235px;
         padding: 0.3rem;
-        margin-right: 3px;
+        margin: 0 0 0 3px;
       }
       .add-task {
-        margin-left: 3px;
         font-size: 1.6rem;
       }
     }
