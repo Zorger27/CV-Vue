@@ -81,7 +81,7 @@ export default class TodoList extends Vue {
           <form @submit.prevent="addTask">
             <input type="text" v-model="newTask" :placeholder="$t('extra.todo.add-task')"/>
             <!--            <textarea v-model="newTask" :placeholder="$t('extra.todo.add-task')"/>-->
-            <button class="add-task">+</button>
+            <button class="add-task"><i class="fas fa-plus"></i></button>
           </form>
         </th>
       </tr>
@@ -199,14 +199,17 @@ export default class TodoList extends Vue {
     background: steelblue;
     margin-left: 5px;
     color: white;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bolder;
-    text-align: center;
     cursor: pointer;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
   }
 
-  .add-task:hover {box-shadow: 3px 3px 4px 0 lightgrey;}
+  .add-task:hover {
+    border-color: blue;
+    background: blue;
+
+  }
 }
 
 @media(max-width: 1020px) {
