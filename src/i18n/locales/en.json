@@ -178,6 +178,7 @@
       "actions": "Actions",
       "edit": "Edit",
       "delete": "Delete",
+      "delete-msg": "Are you sure you want to do this?",
       "delete-all": "Delete all tasks"
     },
     "weather": {

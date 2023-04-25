@@ -178,6 +178,7 @@
       "actions": "Acciones",
       "edit": "Corregir",
       "delete": "Borrar",
+      "delete-msg": "¿Estás seguro de que quieres hacer esto?",
       "delete-all": "Borrar todas las tareas"
     },
     "weather": {

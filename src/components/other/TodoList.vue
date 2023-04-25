@@ -38,13 +38,17 @@ interface Task {
       this.saveTasks();
     },
     deleteTask(index: number) {
-      this.tasks.splice(index, 1);
-      this.saveTasks();
+      if (confirm(this.$t('extra.todo.delete-msg'))) {
+        this.tasks.splice(index, 1);
+        this.saveTasks();
+      }
     },
     deleteAllTasks() {
-      this.tasks = [];
-      this.saveTasks();
-      localStorage.removeItem('tasks');
+      if (confirm(this.$t('extra.todo.delete-msg'))) {
+        this.tasks = [];
+        this.saveTasks();
+        localStorage.removeItem('tasks');
+      }
     },
     toggleCompleted(task: Task) {
       task.completed = !task.completed;
