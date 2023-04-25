@@ -80,8 +80,7 @@ export default class TodoList extends Vue {
         <th colspan="4">
           <form @submit.prevent="addTask">
             <input type="text" v-model="newTask" :placeholder="$t('extra.todo.add-task')"/>
-            <!--            <textarea v-model="newTask" :placeholder="$t('extra.todo.add-task')"/>-->
-            <button class="add-task"><i class="fas fa-plus"></i></button>
+            <button class="add-task"><i class="fas fa-plus-circle"></i></button>
           </form>
         </th>
       </tr>
@@ -137,7 +136,39 @@ export default class TodoList extends Vue {
     filter: blur(1.5px);
     color: steelblue;
   }
-
+  form {
+    display: inline-flex;
+    align-items: center;
+    input[type="text"] {
+      border: 1px solid #e0e0e0;
+      font-size: 2rem;
+      border-radius: 5px;
+      width: 600px;
+      padding: 0.6rem;
+      margin-right: 5px;
+    }
+    input:active, :focus {
+      outline: 1px solid lightskyblue;
+      outline-offset: 0;
+      box-shadow: 3px 3px 4px 0 lightgrey;
+    }
+    .add-task {
+      display: inline-flex;
+      border: none;
+      border-radius: 50%;
+      background-color: inherit;
+      margin: 0 0 0 5px;
+      color: steelblue;
+      font-size: 3rem;
+      font-weight: bolder;
+      cursor: pointer;
+      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    }
+    .add-task:hover {
+      background: inherit;
+      color: blue;
+    }
+  }
   .name {
     color: black;
     max-width: 550px; /* задаётся ширина контейнера для задания */
@@ -150,21 +181,6 @@ export default class TodoList extends Vue {
   .action {
     max-width: 250px;
     word-wrap: break-word;
-  }
-
-  input:active, :focus {
-    outline: 1px solid lightskyblue;
-    outline-offset: 0;
-    box-shadow: 3px 3px 4px 0 lightgrey;
-  }
-
-  input[type="text"] {
-    border: 1px solid #e0e0e0;
-    font-size: 2rem;
-    border-radius: 5px;
-    width: 75%;
-    padding: 0.6rem;
-    margin-right: 5px;
   }
 
   .btn {
@@ -190,28 +206,6 @@ export default class TodoList extends Vue {
   .danger:hover {color: red;background-color: white;}
   .norm {color: lightseagreen;}
   .norm:hover {color: limegreen;background-color: white;}
-
-  .add-task {
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid steelblue;
-    border-radius: 50%;
-    background: steelblue;
-    margin-left: 5px;
-    color: white;
-    font-size: 2rem;
-    font-weight: bolder;
-    cursor: pointer;
-    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-  }
-
-  .add-task:hover {
-    border-color: blue;
-    background: blue;
-  }
-  .fa-plus {
-    color: white;
-  }
 }
 
 @media(max-width: 1020px) {
@@ -222,11 +216,17 @@ export default class TodoList extends Vue {
     .icon {display: none;}
     .action {max-width: 180px;}
 
-    input[type="text"] {
-      font-size: 1.8rem;
-      width: 75%;
-      padding: 0.5rem;
-      margin-right: 5px;
+    form {
+      input[type="text"] {
+        font-size: 1.8rem;
+        width: 550px;
+        padding: 0.5rem;
+        margin-right: 5px;
+      }
+      .add-task {
+        margin-left: 5px;
+        font-size: 2.8rem;
+      }
     }
 
     .btn {
@@ -235,12 +235,6 @@ export default class TodoList extends Vue {
       margin: 5px 5px;
     }
 
-    .add-task {
-      width: 2.8rem;
-      height: 2.8rem;
-      margin-left: 5px;
-      font-size: 1.8rem;
-    }
   }
 }
 
@@ -250,24 +244,23 @@ export default class TodoList extends Vue {
     .name {max-width: 170px;}
     .action {max-width: 150px;}
 
-    input[type="text"] {
-      font-size: 1rem;
-      width: 75%;
-      padding: 0.3rem;
-      margin-right: 3px;
+    form {
+      input[type="text"] {
+        font-size: 1rem;
+        width: 200px;
+        padding: 0.3rem;
+        margin-right: 3px;
+      }
+      .add-task {
+        margin-left: 3px;
+        font-size: 1.6rem;
+      }
     }
 
     .btn {
       font-size: 1rem;
       padding: 0.3rem;
       margin: 3px 3px;
-    }
-
-    .add-task {
-      width: 1.8rem;
-      height: 1.8rem;
-      margin-left: 3px;
-      font-size: 1rem;
     }
 
     .txt {display: none;}
