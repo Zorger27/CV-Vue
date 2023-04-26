@@ -173,6 +173,19 @@ export default class TodoList extends Vue {
     color: black;
     max-width: 550px; /* задаётся ширина контейнера для задания */
     word-wrap: break-word; /* перенос слов */
+    input[type="text"] {
+      border: 1px solid #e0e0e0;
+      font-size: 2rem;
+      border-radius: 5px;
+      width: 500px;
+      padding: 0.6rem;
+      margin: 0 5px;
+    }
+    input:active, :focus {
+      outline: 1px solid lightskyblue;
+      outline-offset: 0;
+      box-shadow: 3px 3px 4px 0 lightgrey;
+    }
   }
 
   .icon {display: none;}
@@ -211,7 +224,15 @@ export default class TodoList extends Vue {
 @media(max-width: 1020px) {
   .table {
     font-size: 1.8rem;
-    .name {max-width: 355px;}
+    .name {
+      max-width: 355px;
+      input[type="text"] {
+        font-size: 1.8rem;
+        width: 300px;
+        padding: 0.5rem;
+        margin: 0 4px;
+      }
+    }
     .txt {display: inline-block;}
     .icon {display: none;}
     .action {max-width: 180px;}
@@ -241,7 +262,15 @@ export default class TodoList extends Vue {
 @media (max-width: 768px) {
   .table {
     font-size: 1rem;
-    .name {max-width: 230px;}
+    .name {
+      max-width: 230px;
+      input[type="text"] {
+        font-size: 1rem;
+        width: 200px;
+        padding: 0.3rem;
+        margin: 0 2px;
+      }
+    }
     .action {max-width: 100px;}
 
     form {
