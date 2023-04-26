@@ -40,6 +40,10 @@ interface Note {
   },
   methods: {
     addNote() {
+      if (this.newNote.trim() === "") {
+        return; // если новая заметка пустая, то не добавляем ее
+      }
+
       const newNote = {
         id: this.notes.length + 1,
         text: this.newNote,
@@ -162,13 +166,13 @@ export default class Notes extends Vue {
       outline-offset: 0;
       box-shadow: 3px 3px 4px 0 lightgrey;
     }
-
     .add-note {
       border: none;
       border-radius: 50%;
       background-color: inherit;
       text-align: left;
       margin: 0 0 0 5px;
+      outline: none;
       color: steelblue;
       font-size: 3rem;
       font-weight: bolder;
@@ -176,6 +180,9 @@ export default class Notes extends Vue {
       transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
     }
 
+    .add-note:active, :focus {
+      box-shadow: none;
+    }
     .add-note:hover {
       background: inherit;
       color: hotpink;
@@ -207,7 +214,7 @@ export default class Notes extends Vue {
   .txt {display: inline-block;}
 
   .updatedAt {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     max-width: 180px;
     word-wrap: break-word;
   }
