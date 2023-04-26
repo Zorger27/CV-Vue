@@ -117,7 +117,7 @@ export default class NBURates extends Vue {}
 @media(max-width: 1020px) {
   .bank {font-size: 2rem;}
   .rates {
-    font-size: 1.55rem;
+    font-size: 1.6rem;
     padding: 0.8rem;
     margin: 0.5rem;
   }
@@ -125,7 +125,7 @@ export default class NBURates extends Vue {}
 @media (max-width: 768px) {
   .bank {font-size: 1.6rem;}
   .rates {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 0.6rem;
     margin: 0.4rem;
   }

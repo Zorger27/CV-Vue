@@ -1,8 +1,9 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import Notes from "@/components/other/Notes.vue";
 
-@Options({components: {},})
-export default class Notes extends Vue {
+@Options({components: {Notes},})
+export default class NotesView extends Vue {
 }
 </script>
 
@@ -14,7 +15,7 @@ export default class Notes extends Vue {
       {{ $t('extra.h1m.notes') }}
     </h1>
     <line></line>
-    <h1>{{ $t('login.h1') }}</h1>
+    <Notes></Notes>
   </div>
 </template>
 

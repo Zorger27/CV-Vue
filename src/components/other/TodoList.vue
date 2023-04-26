@@ -194,7 +194,7 @@ export default class TodoList extends Vue {
     cursor: pointer;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
     .fa-check {color: darkgoldenrod;}
-    .fa-clock {color: darkred;}
+    .fa-clock {color: darkviolet;}
   }
 
   .btn:hover {
@@ -241,8 +241,8 @@ export default class TodoList extends Vue {
 @media (max-width: 768px) {
   .table {
     font-size: 1rem;
-    .name {max-width: 170px;}
-    .action {max-width: 150px;}
+    .name {max-width: 230px;}
+    .action {max-width: 100px;}
 
     form {
       input[type="text"] {

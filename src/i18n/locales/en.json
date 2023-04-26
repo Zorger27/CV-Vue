@@ -167,7 +167,18 @@
       "usd": "usd"
     },
     "game": "Game",
-    "notes": "Notes",
+    "notes": {
+      "title": "Notes",
+      "add-notes": "Add notes",
+      "add": "Add",
+      "note": "The note",
+      "modified": "Modified",
+      "actions": "Actions",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete-msg": "Are you sure you want to do this? \uD83E\uDDD0\uD83D\uDE32\uD83D\uDE09",
+      "delete-all": "Delete all notes"
+    },
     "tasks": "JS tasks",
     "todo": {
       "title": "To-do list",

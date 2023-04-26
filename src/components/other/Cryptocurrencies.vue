@@ -110,14 +110,14 @@ export default class Cryptocurrencies extends Vue {
 
 @media(max-width: 1020px) {
   .crypto {
-    font-size: 1.55rem;
+    font-size: 1.6rem;
     padding: 0.8rem;
     margin: 0.5rem;
   }
 }
 @media (max-width: 768px) {
   .crypto {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 0.6rem;
     margin: 0.4rem;
   }

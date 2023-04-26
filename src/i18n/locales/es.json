@@ -167,7 +167,18 @@
       "usd": "usd"
     },
     "game": "Juego",
-    "notes": "Notas",
+    "notes": {
+      "title": "Notas",
+      "add-note": "Añadir notas",
+      "add": "Añadir",
+      "note": "Nota",
+      "modified": "Modificado",
+      "actions": "Acciones",
+      "edit": "Corregir",
+      "delete": "Borrar",
+      "delete-msg": "¿Estás seguro de que quieres hacer esto? \uD83E\uDDD0\uD83D\uDE32\uD83D\uDE09",
+      "delete-all": "Borrar todas las notas"
+    },
     "tasks": "Tareas JS",
     "todo": {
       "title": "Lista de quehaceres",

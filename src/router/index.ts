@@ -21,7 +21,7 @@ import Cryptocur from "@/views/extra/CryptocurView.vue";
 import Cube from "@/views/extra/CubeView.vue";
 import CurrencyRates from "@/views/extra/CurrencyRatesView.vue";
 import Game from "@/views/extra/GameView.vue";
-import Notes from "@/views/extra/NotesView.vue";
+import NotesView from "@/views/extra/NotesView.vue";
 import Tasks from "@/views/extra/TasksView.vue";
 import Todo from "@/views/extra/TodoView.vue";
 import WeatherView from "@/views/extra/WeatherView.vue";
@@ -214,7 +214,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/extra/notes',
     name: 'notes',
-    component: Notes,
+    component: NotesView,
     meta: {
       title: 'CV Extra - Notes',
       requiresAuth: true
