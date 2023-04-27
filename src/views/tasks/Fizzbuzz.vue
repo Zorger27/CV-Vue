@@ -17,6 +17,7 @@ export default class Fizzbuzz extends Vue {
     <p>{{ $t('extra.tasks.fizz-des01') }}<br>{{ $t('extra.tasks.fizz-des02') }}<br>{{
         $t('extra.tasks.fizz-des03')
       }}<br>{{ $t('extra.tasks.fizz-des04') }}</p>
+    <line></line>
   </div>
 </template>
 

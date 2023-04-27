@@ -15,6 +15,7 @@ export default class Palindrome extends Vue {
     </h1>
     <line></line>
     <p>{{ $t('extra.tasks.pal-des01') }}<br>{{ $t('extra.tasks.pal-des02') }}</p>
+    <line></line>
   </div>
 </template>
 

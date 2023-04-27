@@ -15,6 +15,7 @@ export default class Anagram extends Vue {
     </h1>
     <line></line>
     <p>{{ $t('extra.tasks.an-des01') }}<br>{{ $t('extra.tasks.an-des02') }}<br>{{ $t('extra.tasks.an-des03') }}</p>
+    <line></line>
   </div>
 </template>
 

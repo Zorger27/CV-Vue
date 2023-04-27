@@ -15,6 +15,7 @@ export default class Findvowels extends Vue {
     </h1>
     <line></line>
     <p>{{ $t('extra.tasks.find-des01') }}<br>{{ $t('extra.tasks.find-des02') }}</p>
+    <line></line>
   </div>
 </template>
 
