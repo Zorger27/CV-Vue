@@ -25,6 +25,11 @@ import NotesView from "@/views/extra/NotesView.vue";
 import Tasks from "@/views/extra/TasksView.vue";
 import Todo from "@/views/extra/TodoView.vue";
 import WeatherView from "@/views/extra/WeatherView.vue";
+import Palindrome from "@/views/tasks/Palindrome.vue";
+import Fizzbuzz from "@/views/tasks/Fizzbuzz.vue";
+import Anagram from "@/views/tasks/Anagram.vue";
+import Findvowels from "@/views/tasks/Findvowels.vue";
+import Fibonacci from "@/views/tasks/Fibonacci.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -244,6 +249,51 @@ const routes: Array<RouteRecordRaw> = [
     component: WeatherView,
     meta: {
       title: 'CV Extra - Weather',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/tasks/palindrome',
+    name: 'palindrome',
+    component: Palindrome,
+    meta: {
+      title: 'CV Extra - JS tasks - Palindrome',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/tasks/fizzbuzz',
+    name: 'fizzbuzz',
+    component: Fizzbuzz,
+    meta: {
+      title: 'CV Extra - JS tasks - Fizzbuzz',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/tasks/anagram',
+    name: 'anagram',
+    component: Anagram,
+    meta: {
+      title: 'CV Extra - JS tasks - Anagram',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/tasks/findvowels',
+    name: 'findvowels',
+    component: Findvowels,
+    meta: {
+      title: 'CV Extra - JS tasks - Find vowels',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/tasks/fibonacci',
+    name: 'fibonacci',
+    component: Fibonacci,
+    meta: {
+      title: 'CV Extra - JS tasks - Fibonacci',
       requiresAuth: true
     }
   },

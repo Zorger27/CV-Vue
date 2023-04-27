@@ -142,7 +142,15 @@
       "exchange": "Los tipos de cambio",
       "game": "Juego",
       "notes": "Notas",
-      "tasks": "Tareas JS",
+      "tasks": {
+        "title": "Tareas típicas de entrevistas en JavaScript",
+        "name": "Nombre de la tarea",
+        "palindrome": "Palíndromo",
+        "fizzbuzz": "FizzBuzz",
+        "anagram": "Anagrama",
+        "findvowels": "Encontrar vocales",
+        "fibonacci": "Fibonacci"
+      },
       "todo": "Lista de quehaceres",
       "weather": "Clima"
     },
@@ -179,7 +187,25 @@
       "delete-msg": "¿Estás seguro de que quieres hacer esto? \uD83E\uDDD0\uD83D\uDE32\uD83D\uDE09",
       "delete-all": "Borrar todas las notas"
     },
-    "tasks": "Tareas JS",
+    "tasks": {
+      "title": "Tareas JS",
+      "fib-des01": "La sucesión de Fibonacci es una serie de números, donde cada subsiguiente es la suma de los dos anteriores. Entonces, los primeros diez números se ven así: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34.",
+      "fib-des02": "Una función que devuelve el enésimo registro en una determinada secuencia, donde n es un número que se pasa como argumento a la función.",
+      "fib-des03": "Ingrese un número para encontrar el número de Fibonacci correspondiente:",
+      "fib-des04": "El número de Fibonacci para el número ",
+      "fib-des05": " es ",
+      "an-des01": "Un anagrama es una palabra que contiene todas las letras de otra palabra en el mismo número pero en diferente orden.",
+      "an-des02": "Una función que verifica si dos cadenas son anagramas, sin distinción entre mayúsculas y minúsculas.",
+      "an-des03": "Solo cuentan los caracteres; no se tienen en cuenta los espacios ni los signos de puntuación.",
+      "find-des01": "Una función que toma una cadena como argumento y devuelve el número de vocales que contiene la cadena.",
+      "find-des02": "Las vocales son \"a\", \"e\", \"i\", \"o\", \"u\".",
+      "fizz-des01": "Una función que genera números del 1 al n, donde n es un número entero que la función toma como parámetro, con las siguientes condiciones:",
+      "fizz-des02": "1) mostrando \"fizz\" en lugar de números que son múltiplos de 3;",
+      "fizz-des03": "2) mostrando \"buzz\" en lugar de números que son múltiplos de 5;",
+      "fizz-des04": "3) mostrando \"fizzbuzz\" en lugar de números que son múltiplos de 3 y 5.",
+      "pal-des01": "Un palíndromo es una palabra, oración o secuencia de caracteres que se lee exactamente de la misma manera tanto en la dirección habitual como en la dirección opuesta.",
+      "pal-des02": "Por ejemplo, \"Anna\" es un palíndromo, pero \"table\" y \"John\" no lo son."
+    },
     "todo": {
       "title": "Lista de quehaceres",
       "add-task": "Añadir tarea",

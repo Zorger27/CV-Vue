@@ -21,6 +21,7 @@ import progStore from "@/store/modules/education/progStore";
 import knuteStore from "@/store/modules/education/knuteStore";
 import loginStore from "@/store/modules/service/loginStore";
 import infoStore from "@/store/modules/service/infoStore";
+import tasksStore from "@/store/modules/project/tasksStore";
 
 export default createStore({
   modules: {
@@ -45,6 +46,7 @@ export default createStore({
     progStore,
     knuteStore,
     loginStore,
-    infoStore
+    infoStore,
+    tasksStore
   }
 })
