@@ -4,30 +4,39 @@ import {Options, Vue} from "vue-class-component";
 @Options({
   data() {
     return {
-      inputNumber: 0,
-      cache: new Map<number, number>(),
+      inputNumber: "",
+      memoizedFibonacci: new Map<number, number>(),
     };
   },
-  methods: {
-    fibonacci(n: number): number {
-      if (n === 0) return 0;
-      if (n === 1) return 1;
-
-      if (this.cache.has(n)) {
-        return this.cache.get(n)!;
+  computed: {
+    fibonacci(): number | undefined {
+      const n = parseInt(this.inputNumber);
+      if (!Number.isNaN(n) && n >= 0) {
+        if (this.memoizedFibonacci.has(n)) {
+          return this.memoizedFibonacci.get(n);
+        }
+        let a = 0;
+        let b = 1;
+        for (let i = 0; i < n; i++) {
+          const c = a + b;
+          a = b;
+          b = c;
+        }
+        this.memoizedFibonacci.set(n, a);
+        return a;
       }
-
-      const result = this.fibonacci(n - 1) + this.fibonacci(n - 2);
-      this.cache.set(n, result);
-
-      return result;
+    },
+  },
+  methods: {
+    onInput(): void {
+      this.memoizedFibonacci.clear();
     },
   },
   components: {}
 })
-export default class Fibonacci extends Vue {
-}
+export default class Fibonacci extends Vue {}
 </script>
+
 
 <template>
   <div class="fibonacci">
@@ -41,12 +50,12 @@ export default class Fibonacci extends Vue {
     <line></line>
     <div>
       <h3 class="title">{{ $t('extra.tasks.fib-des03') }}</h3>
-      <input type="number" v-model="inputNumber">
+      <input type="text" v-model="inputNumber" @input="onInput">
       <h3 class="result">
         {{ $t('extra.tasks.fib-des04') }}
-        <span style="color: lightseagreen; font-weight: bolder">{{ inputNumber }}</span>
+        <span style="color: lightseagreen;">{{ inputNumber }}</span>
         {{ $t('extra.tasks.fib-des05') }}
-        <span style="color: red; font-weight: bolder">{{ fibonacci(inputNumber) }}</span>
+        <span style="color: red;">{{ fibonacci }}</span>
       </h3>
     </div>
   </div>
@@ -61,11 +70,11 @@ export default class Fibonacci extends Vue {
     text-decoration: none;
     margin-right: 0.1rem;
   }
-  input[type="number"] {
+  input[type="text"] {
     border: 1px solid #e0e0e0;
     font-size: 2rem;
     border-radius: 5px;
-    width: 100px;
+    width: 80px;
     padding: 0.6rem;
     margin: 0 5px;
   }
