@@ -189,6 +189,8 @@
     },
     "tasks": {
       "title": "JS tasks",
+      "link-js": "Task solution on JavaScript",
+      "link-vue": "Task solution on Vue.JS + TypeScript",
       "fib-des01": "The Fibonacci sequence is a series of numbers, where each subsequent one is the sum of the previous two. So, the first ten numbers look like this: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34.",
       "fib-des02": "A function that returns the nth record in a specific sequence, where n is a number that is passed as an argument to the function.",
       "fib-des03": "Enter a number to find the corresponding Fibonacci number:",
@@ -204,7 +206,11 @@
       "fizz-des03": "2) displaying \"buzz\" instead of numbers that are multiples of 5;",
       "fizz-des04": "3) displaying \"fizzbuzz\" instead of numbers that are multiples of both 3 and 5.",
       "pal-des01": "A palindrome is a word, sentence or sequence of characters that reads exactly the same way both in the usual direction and in the opposite direction.",
-      "pal-des02": "For example, \"Anna\" is a palindrome, but \"table\" and \"John\" are not."
+      "pal-des02": "For example, \"Anna\" is a palindrome, but \"table\" and \"John\" are not.",
+      "pal-des03": "Enter a word/phrase to find out if it's a palindrome or not!",
+      "pal-des04": "The word/phrase you entered",
+      "pal-des05": "is a palindrome",
+      "pal-des06": "is not a palindrome"
     },
     "todo": {
       "title": "To-do list",

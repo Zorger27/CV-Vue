@@ -34,7 +34,8 @@ import {Options, Vue} from "vue-class-component";
   },
   components: {}
 })
-export default class Fibonacci extends Vue {}
+export default class Fibonacci extends Vue {
+}
 </script>
 
 
@@ -58,6 +59,17 @@ export default class Fibonacci extends Vue {}
         <span style="color: red;">{{ fibonacci }}</span>
       </h3>
     </div>
+    <line></line>
+    <div class="certificate">
+      <a class="block" href="/assets/tasks/Fibonacci-JS.pdf" title="Download solution in pdf format..."
+         target="_blank"><h3>{{ $t('extra.tasks.link-js') }}</h3>
+      </a>
+    </div>
+    <div class="certificate">
+      <a class="block" href="/assets/tasks/Fibonacci-Vue.pdf" title="Download solution in pdf format..."
+         target="_blank"><h3>{{ $t('extra.tasks.link-vue') }}</h3>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -70,29 +82,37 @@ export default class Fibonacci extends Vue {}
     text-decoration: none;
     margin-right: 0.1rem;
   }
+
   input[type="text"] {
-    border: 1px solid #e0e0e0;
+    flex: 1 0 auto;
+    caret-color: red;
+    border: 1px solid lightskyblue;
     font-size: 2rem;
     border-radius: 5px;
     width: 80px;
     padding: 0.6rem;
     margin: 0 5px;
   }
+
   input:active, :focus {
     outline: 1px solid lightskyblue;
-    outline-offset: 0;
+    //outline-offset: 0;
     box-shadow: 3px 3px 4px 0 lightgrey;
   }
 
   p {
     font-size: 1.6rem;
   }
+
   .title, .result {
     font-size: 2rem;
     color: darkblue;
   }
 
   @media (max-width: 1020px) {
+    input[type="text"] {
+      font-size: 1.7rem;
+    }
     p {
       font-size: 1.3rem;
     }
@@ -101,6 +121,9 @@ export default class Fibonacci extends Vue {}
     }
   }
   @media (max-width: 768px) {
+    input[type="text"] {
+      font-size: 1.4rem;
+    }
     p {
       font-size: 1rem;
     }

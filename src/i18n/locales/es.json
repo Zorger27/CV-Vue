@@ -189,6 +189,8 @@
     },
     "tasks": {
       "title": "Tareas JS",
+      "link-js": "Solución de tareas en JavaScript",
+      "link-vue": "Solución de tarea en Vue.JS + TypeScript",
       "fib-des01": "La sucesión de Fibonacci es una serie de números, donde cada subsiguiente es la suma de los dos anteriores. Entonces, los primeros diez números se ven así: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34.",
       "fib-des02": "Una función que devuelve el enésimo registro en una determinada secuencia, donde n es un número que se pasa como argumento a la función.",
       "fib-des03": "Ingrese un número para encontrar el número de Fibonacci correspondiente:",
@@ -204,7 +206,11 @@
       "fizz-des03": "2) mostrando \"buzz\" en lugar de números que son múltiplos de 5;",
       "fizz-des04": "3) mostrando \"fizzbuzz\" en lugar de números que son múltiplos de 3 y 5.",
       "pal-des01": "Un palíndromo es una palabra, oración o secuencia de caracteres que se lee exactamente de la misma manera tanto en la dirección habitual como en la dirección opuesta.",
-      "pal-des02": "Por ejemplo, \"Anna\" es un palíndromo, pero \"table\" y \"John\" no lo son."
+      "pal-des02": "Por ejemplo, \"Anna\" es un palíndromo, pero \"table\" y \"John\" no lo son.",
+      "pal-des03": "¡Ingresa una palabra/frase para saber si es un palíndromo o no!",
+      "pal-des04": "La palabra/frase que ingresó",
+      "pal-des05": "es un palindromo",
+      "pal-des06": "no es un palindromo"
     },
     "todo": {
       "title": "Lista de quehaceres",

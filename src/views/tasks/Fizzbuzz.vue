@@ -18,6 +18,20 @@ export default class Fizzbuzz extends Vue {
         $t('extra.tasks.fizz-des03')
       }}<br>{{ $t('extra.tasks.fizz-des04') }}</p>
     <line></line>
+    <div>
+      <h1>Решение в процессе! 😄🤘</h1>
+    </div>
+    <line></line>
+    <div class="certificate">
+      <a class="block" href="/assets/tasks/FizzBuzz-JS.pdf" title="Download solution in pdf format..."
+         target="_blank"><h3>{{ $t('extra.tasks.link-js') }}</h3>
+      </a>
+    </div>
+    <div class="certificate">
+      <a class="block" href=# title="Download solution in pdf format..."
+         target="_blank"><h3>{{ $t('extra.tasks.link-vue') }}</h3>
+      </a>
+    </div>
   </div>
 </template>
 

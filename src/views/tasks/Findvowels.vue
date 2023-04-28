@@ -16,6 +16,20 @@ export default class Findvowels extends Vue {
     <line></line>
     <p>{{ $t('extra.tasks.find-des01') }}<br>{{ $t('extra.tasks.find-des02') }}</p>
     <line></line>
+    <div>
+      <h1>Решение в процессе! 😄🤘</h1>
+    </div>
+    <line></line>
+    <div class="certificate">
+      <a class="block" href="/assets/tasks/FindVowels-JS.pdf" title="Download solution in pdf format..."
+         target="_blank"><h3>{{ $t('extra.tasks.link-js') }}</h3>
+      </a>
+    </div>
+    <div class="certificate">
+      <a class="block" href=# title="Download solution in pdf format..."
+         target="_blank"><h3>{{ $t('extra.tasks.link-vue') }}</h3>
+      </a>
+    </div>
   </div>
 </template>
 
