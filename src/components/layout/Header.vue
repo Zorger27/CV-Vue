@@ -40,11 +40,9 @@ export default class Header extends Vue {
   showMenu = false;
   showDropdownContent = false;
   showExtraContent = false;
-
   hideMenu() {
     this.showMenu = false;
   }
-
   clickOutsideHandler(event: MouseEvent) {
     if (this.showMenu && !(event.target as HTMLElement).closest(".burger-menu")) {
       this.showMenu = false;
@@ -54,11 +52,9 @@ export default class Header extends Vue {
       this.showExtraContent = false;
     }
   }
-
   mounted() {
     document.addEventListener("click", this.clickOutsideHandler);
   }
-
   beforeUnmount() {
     document.removeEventListener("click", this.clickOutsideHandler);
   }
@@ -104,7 +100,7 @@ export default class Header extends Vue {
       <!--      <router-link to="/" @click="hideMenu">Main</router-link>-->
       <router-link to="/" @click="hideMenu">{{ $t('header.main') }}</router-link>
       <router-link to="/projects" @click="hideMenu">{{ $t('header.projects') }}</router-link>
-      <div v-if="loginStore.state.isAuthenticated" class="dropdown" @click="showExtraContent = !showExtraContent">
+        <div v-if="loginStore.state.isAuthenticated" class="dropdown" @click="showExtraContent = !showExtraContent">
         <a class="dropbtn">{{ $t('header.extra') }}
           <span :class="['fa', showExtraContent ? 'fa-caret-up' : 'fa-caret-down']"></span>
         </a>

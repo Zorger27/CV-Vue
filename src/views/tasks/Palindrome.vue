@@ -22,7 +22,7 @@ export default class Palindrome extends Vue {
   inputText = '';
 
   get isPalindrome(): boolean {
-    const input = this.inputText.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+    const input = this.inputText.toLowerCase().replace(/[^a-zа-яё0-9]/g, '');
     return input === input.split('').reverse().join('');
   }
 }
@@ -68,6 +68,9 @@ export default class Palindrome extends Vue {
     display: inline-flex;
     text-decoration: none;
     margin-right: 0.1rem;
+  }
+  .certificate {
+    text-align: center;
   }
 
   input[type="text"] {

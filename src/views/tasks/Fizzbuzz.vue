@@ -44,6 +44,10 @@ export default class Fizzbuzz extends Vue {
     text-decoration: none;
     margin-right: 0.1rem;
   }
+  .certificate {
+    text-align: center;
+  }
+
 
   p {
     font-size: 1.6rem;

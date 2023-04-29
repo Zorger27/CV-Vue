@@ -11,6 +11,14 @@ import Extra from "@/views/extra/ExtraView.vue";
       return loginStore
     },
   },
+  created() {
+    const email = localStorage.getItem('email');
+    const password = localStorage.getItem('password');
+
+    if (email && password) {
+      this.login({email, password});
+    }
+  },
   components: {Extra},
   methods: {
     ...mapGetters(["isAuthenticated", "getCurrentUser"]),
@@ -27,7 +35,6 @@ export default class LoginPage extends Vue {
   emailError = "";
   passwordError = "";
   showPassword = false;
-
   checkPassword() {
     if (this.password.length < 5) {
       this.passwordError = `${this.$t('login.passwordError')}`;
@@ -35,7 +42,6 @@ export default class LoginPage extends Vue {
       this.passwordError = "";
     }
   }
-
   checkEmail() {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email)) {
       this.emailError = `${this.$t('login.emailError')}`;
@@ -43,7 +49,6 @@ export default class LoginPage extends Vue {
       this.emailError = "";
     }
   }
-
   handleSubmit() {
     // Проверяем, есть ли ошибки ввода данных
     if (!this.emailError && !this.passwordError) {

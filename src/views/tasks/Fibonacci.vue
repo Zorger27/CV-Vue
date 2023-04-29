@@ -82,6 +82,9 @@ export default class Fibonacci extends Vue {
     text-decoration: none;
     margin-right: 0.1rem;
   }
+  .certificate {
+    text-align: center;
+  }
 
   input[type="text"] {
     flex: 1 0 auto;
