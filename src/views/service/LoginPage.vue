@@ -11,14 +11,6 @@ import Extra from "@/views/extra/ExtraView.vue";
       return loginStore
     },
   },
-  // created() {
-  //   const email = localStorage.getItem('email');
-  //   const password = localStorage.getItem('password');
-  //
-  //   if (email && password) {
-  //     this.login({email, password});
-  //   }
-  // },
   components: {Extra},
   methods: {
     ...mapGetters(["isAuthenticated", "getCurrentUser"]),
@@ -35,6 +27,7 @@ export default class LoginPage extends Vue {
   emailError = "";
   passwordError = "";
   showPassword = false;
+
   checkPassword() {
     if (this.password.length < 5) {
       this.passwordError = `${this.$t('login.passwordError')}`;
@@ -42,6 +35,7 @@ export default class LoginPage extends Vue {
       this.passwordError = "";
     }
   }
+
   checkEmail() {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email)) {
       this.emailError = `${this.$t('login.emailError')}`;
@@ -49,6 +43,7 @@ export default class LoginPage extends Vue {
       this.emailError = "";
     }
   }
+
   handleSubmit() {
     // Проверяем, есть ли ошибки ввода данных
     if (!this.emailError && !this.passwordError) {
@@ -98,7 +93,7 @@ export default class LoginPage extends Vue {
                 v-model="email"
                 type="email"
                 @input="checkEmail"
-                :placeholder="$t('login.email-plc')"
+                placeholder="E-mail, ex.: info@gmail.com"
               />
             </label>
           </div>
@@ -109,7 +104,7 @@ export default class LoginPage extends Vue {
                 v-model="password"
                 :type="showPassword ? 'text' : 'password'"
                 @input="checkPassword"
-                :placeholder="$t('login.password-plc')"
+                placeholder="Password, min. 5 symbols"
               />
               <span @click="showPassword = !showPassword">
                 <i :class="showPassword ? 'far fa-eye' : 'far fa-eye-slash'"></i>
@@ -123,13 +118,13 @@ export default class LoginPage extends Vue {
     </div>
     <div v-else>
       <Extra></Extra>
-<!--      <h1>-->
-<!--        {{ $t('login.h3') }}-->
-<!--        <span class="currentUser">-->
-<!--          {{ loginStore.state.currentUser.name }} {{ loginStore.state.currentUser.surname }}-->
-<!--        </span>!!!-->
-<!--      </h1>-->
-<!--      <line></line>-->
+      <!--      <h1>-->
+      <!--        {{ $t('login.h3') }}-->
+      <!--        <span class="currentUser">-->
+      <!--          {{ loginStore.state.currentUser.name }} {{ loginStore.state.currentUser.surname }}-->
+      <!--        </span>!!!-->
+      <!--      </h1>-->
+      <!--      <line></line>-->
     </div>
   </div>
 </template>
@@ -141,7 +136,7 @@ export default class LoginPage extends Vue {
   .container {
     display: flex;
     justify-content: center;
-    margin: 1rem 0 auto 0;
+    margin: 1.5rem 0 auto 0;
   }
 
   .inner {
@@ -175,7 +170,7 @@ export default class LoginPage extends Vue {
       }
 
       input[type="email"], input[type="password"], input[type="text"] {
-        border: 1px solid lightskyblue;
+        border: 1px solid #e0e0e0;
         font-size: large;
         border-radius: 5px;
         //background-clip: text;
@@ -246,7 +241,9 @@ export default class LoginPage extends Vue {
         }
 
         input[type="email"], input[type="password"], input[type="text"] {
+          border: 1px solid #e0e0e0;
           font-size: medium;
+          border-radius: 5px;
           width: 93%;
           padding: 0.6rem;
         }
@@ -271,7 +268,8 @@ export default class LoginPage extends Vue {
 
   @media (max-width: 768px) {
     .inner {
-      max-width: 75%;
+      max-width: 60%;
+
       h1 {
         font-size: x-large;
       }
@@ -282,7 +280,9 @@ export default class LoginPage extends Vue {
         }
 
         input[type="email"], input[type="password"], input[type="text"] {
+          border: 1px solid #e0e0e0;
           font-size: small;
+          border-radius: 5px;
           width: 93%;
           padding: 0.6rem;
         }
