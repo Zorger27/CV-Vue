@@ -98,7 +98,7 @@ export default class LoginPage extends Vue {
                 v-model="email"
                 type="email"
                 @input="checkEmail"
-                placeholder="E-mail, ex.: info@gmail.com"
+                :placeholder="$t('login.email-plc')"
               />
             </label>
           </div>
@@ -109,7 +109,7 @@ export default class LoginPage extends Vue {
                 v-model="password"
                 :type="showPassword ? 'text' : 'password'"
                 @input="checkPassword"
-                placeholder="Password, min. 5 symbols"
+                :placeholder="$t('login.password-plc')"
               />
               <span @click="showPassword = !showPassword">
                 <i :class="showPassword ? 'far fa-eye' : 'far fa-eye-slash'"></i>
@@ -141,7 +141,7 @@ export default class LoginPage extends Vue {
   .container {
     display: flex;
     justify-content: center;
-    margin: 1.5rem 0 auto 0;
+    margin: 1rem 0 auto 0;
   }
 
   .inner {
@@ -175,7 +175,7 @@ export default class LoginPage extends Vue {
       }
 
       input[type="email"], input[type="password"], input[type="text"] {
-        border: 1px solid #e0e0e0;
+        border: 1px solid lightskyblue;
         font-size: large;
         border-radius: 5px;
         //background-clip: text;
@@ -246,9 +246,7 @@ export default class LoginPage extends Vue {
         }
 
         input[type="email"], input[type="password"], input[type="text"] {
-          border: 1px solid #e0e0e0;
           font-size: medium;
-          border-radius: 5px;
           width: 93%;
           padding: 0.6rem;
         }
@@ -273,8 +271,7 @@ export default class LoginPage extends Vue {
 
   @media (max-width: 768px) {
     .inner {
-      max-width: 60%;
-
+      max-width: 75%;
       h1 {
         font-size: x-large;
       }
@@ -285,9 +282,7 @@ export default class LoginPage extends Vue {
         }
 
         input[type="email"], input[type="password"], input[type="text"] {
-          border: 1px solid #e0e0e0;
           font-size: small;
-          border-radius: 5px;
           width: 93%;
           padding: 0.6rem;
         }

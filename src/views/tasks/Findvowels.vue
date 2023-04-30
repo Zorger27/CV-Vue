@@ -3,6 +3,20 @@ import {Options, Vue} from "vue-class-component";
 
 @Options({components: {},})
 export default class Findvowels extends Vue {
+  inputString = "";
+  vowelCount = 0;
+
+  countVowels(): void {
+    const vowels = ["a", "e", "i", "o", "u"];
+    const str = this.inputString.toLowerCase();
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+      if (vowels.includes(str[i])) {
+        count++;
+      }
+    }
+    this.vowelCount = count;
+  }
 }
 </script>
 
@@ -16,9 +30,9 @@ export default class Findvowels extends Vue {
     <line></line>
     <p>{{ $t('extra.tasks.find-des01') }}<br>{{ $t('extra.tasks.find-des02') }}</p>
     <line></line>
-    <div>
-      <h1>Решение в процессе! 😄🤘</h1>
-    </div>
+      <h2 class="title">{{ $t('extra.tasks.find-des03') }}</h2>
+      <input v-model="inputString" @input="countVowels" :placeholder="$t('extra.tasks.find-des04')">
+      <h3 class="result">{{ $t('extra.tasks.find-des05') }}<span style="color: lightseagreen;">{{ vowelCount }}</span></h3>
     <line></line>
     <div class="certificate">
       <a class="block" href="/assets/tasks/FindVowels-JS.pdf" title="Download solution in pdf format..."
@@ -26,7 +40,7 @@ export default class Findvowels extends Vue {
       </a>
     </div>
     <div class="certificate">
-      <a class="block" href=# title="Download solution in pdf format..."
+      <a class="block" href="/assets/tasks/FindVowels-Vue.pdf" title="Download solution in pdf format..."
          target="_blank"><h3>{{ $t('extra.tasks.link-vue') }}</h3>
       </a>
     </div>
@@ -44,17 +58,50 @@ export default class Findvowels extends Vue {
   .certificate {
     text-align: center;
   }
+  input {
+    flex: 1 0 auto;
+    caret-color: red;
+    border: 1px solid lightskyblue;
+    font-size: 2rem;
+    border-radius: 5px;
+    width: 320px;
+    padding: 0.6rem;
+    margin: 5px;
+  }
+
+  input:active, :focus {
+    outline: 1px solid lightskyblue;
+    box-shadow: 3px 3px 4px 0 lightgrey;
+  }
   p {
     font-size: 1.6rem;
   }
+  .title, .result {
+    font-size: 2rem;
+    color: darkblue;
+  }
+
   @media (max-width: 1020px) {
+    input {
+      font-size: 1.7rem;
+    }
     p {
       font-size: 1.3rem;
     }
+    .title, .result {
+      font-size: 1.7rem;
+    }
   }
   @media (max-width: 768px) {
+    input {
+      font-size: 1.4rem;
+      width: 280px;
+    }
     p {
       font-size: 1rem;
+    }
+    .title, .result {
+      font-size: 1.4rem;
     }
   }
 }
