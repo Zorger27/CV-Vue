@@ -93,7 +93,7 @@ export default class LoginPage extends Vue {
                 v-model="email"
                 type="email"
                 @input="checkEmail"
-                placeholder="E-mail, ex.: info@gmail.com"
+                :placeholder="$t('login.email-plc')"
               />
             </label>
           </div>
@@ -104,7 +104,7 @@ export default class LoginPage extends Vue {
                 v-model="password"
                 :type="showPassword ? 'text' : 'password'"
                 @input="checkPassword"
-                placeholder="Password, min. 5 symbols"
+                :placeholder="$t('login.password-plc')"
               />
               <span @click="showPassword = !showPassword">
                 <i :class="showPassword ? 'far fa-eye' : 'far fa-eye-slash'"></i>
