@@ -11,14 +11,14 @@ import Extra from "@/views/extra/ExtraView.vue";
       return loginStore
     },
   },
-  created() {
-    const email = localStorage.getItem('email');
-    const password = localStorage.getItem('password');
-
-    if (email && password) {
-      this.login({email, password});
-    }
-  },
+  // created() {
+  //   const email = localStorage.getItem('email');
+  //   const password = localStorage.getItem('password');
+  //
+  //   if (email && password) {
+  //     this.login({email, password});
+  //   }
+  // },
   components: {Extra},
   methods: {
     ...mapGetters(["isAuthenticated", "getCurrentUser"]),
