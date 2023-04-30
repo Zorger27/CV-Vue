@@ -11,6 +11,14 @@ import Extra from "@/views/extra/ExtraView.vue";
       return loginStore
     },
   },
+  created() {
+    const email = localStorage.getItem('email');
+    const password = localStorage.getItem('password');
+
+    if (email && password) {
+      this.login({email, password});
+    }
+  },
   components: {Extra},
   methods: {
     ...mapGetters(["isAuthenticated", "getCurrentUser"]),
@@ -93,7 +101,7 @@ export default class LoginPage extends Vue {
                 v-model="email"
                 type="email"
                 @input="checkEmail"
-                :placeholder="$t('login.email-plc')"
+                placeholder="E-mail, ex.: info@gmail.com"
               />
             </label>
           </div>
@@ -104,7 +112,7 @@ export default class LoginPage extends Vue {
                 v-model="password"
                 :type="showPassword ? 'text' : 'password'"
                 @input="checkPassword"
-                :placeholder="$t('login.password-plc')"
+                placeholder="Password, min. 5 symbols"
               />
               <span @click="showPassword = !showPassword">
                 <i :class="showPassword ? 'far fa-eye' : 'far fa-eye-slash'"></i>
