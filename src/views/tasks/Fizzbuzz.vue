@@ -19,7 +19,7 @@ export default class Fizzbuzz extends Vue {
       }}<br>{{ $t('extra.tasks.fizz-des04') }}</p>
     <line></line>
     <div>
-      <h1>Решение в процессе! 😄🤘</h1>
+      <h1>Решение в процессе! Уже скоро! 😄🤘</h1>
     </div>
     <line></line>
     <div class="certificate">
