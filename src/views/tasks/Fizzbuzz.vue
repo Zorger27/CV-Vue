@@ -3,6 +3,23 @@ import {Options, Vue} from "vue-class-component";
 
 @Options({components: {},})
 export default class Fizzbuzz extends Vue {
+  number = 1;
+  numbers: Array<string | number> = [];
+
+  generateNumbers(): void {
+    this.numbers = [];
+    for (let i = 1; i <= this.number; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        this.numbers.push("fizzbuzz");
+      } else if (i % 3 === 0) {
+        this.numbers.push("fizz");
+      } else if (i % 5 === 0) {
+        this.numbers.push("buzz");
+      } else {
+        this.numbers.push(i);
+      }
+    }
+  }
 }
 </script>
 
@@ -19,7 +36,16 @@ export default class Fizzbuzz extends Vue {
       }}<br>{{ $t('extra.tasks.fizz-des04') }}</p>
     <line></line>
     <div>
-      <h1>Решение в процессе! Уже скоро! 😄🤘</h1>
+      <form @submit.prevent="generateNumbers">
+        <label>
+          Введите число:
+          <input type="number" v-model.number="number" min="1" required>
+        </label>
+        <button type="submit">Генерировать</button>
+      </form>
+      <div v-if="numbers">
+        <p>{{ numbers.join(' ') }}</p>
+      </div>
     </div>
     <line></line>
     <div class="certificate">
