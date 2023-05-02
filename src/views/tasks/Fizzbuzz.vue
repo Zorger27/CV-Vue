@@ -98,7 +98,7 @@ export default class Fizzbuzz extends Vue {
   }
   .btn {
     border: 1px solid rgba(112, 111, 111, 0.6);
-    background: whitesmoke;
+    //background: whitesmoke;
     text-decoration: none;
     border-radius: 5px;
     padding: 0.6rem;
