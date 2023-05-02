@@ -43,8 +43,10 @@ export default class Fizzbuzz extends Vue {
         </label>
         <button type="submit">Генерировать</button>
       </form>
-      <div v-if="numbers">
-        <p>{{ numbers.join(' ') }}</p>
+      <div class="numbers" v-if="numbers">
+        <!--          <span v-for="(num, index) in numbers" :key="index" :class="getClass(num)">{{ num }}</span>-->
+        <span v-for="num in numbers" :key="num"
+              :class="{ 'fizzbuzz': num === 'fizzbuzz', 'fizz': num === 'fizz', 'buzz': num === 'buzz' }">{{ num }}</span>
       </div>
     </div>
     <line></line>
@@ -70,6 +72,28 @@ export default class Fizzbuzz extends Vue {
     text-decoration: none;
     margin-right: 0.1rem;
   }
+
+  .numbers {
+    white-space: pre-wrap;
+  }
+
+  .numbers span {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .fizz {
+    color: blue;
+  }
+
+  .buzz {
+    color: green;
+  }
+
+  .fizzbuzz {
+    color: red;
+  }
+
   .certificate {
     text-align: center;
   }
