@@ -41,14 +41,16 @@ export default class Fizzbuzz extends Vue {
       }}<br>{{ $t('extra.tasks.fizz-des04') }}</p>
     <line></line>
     <div>
-      <form @submit.prevent="generateNumbers">
-        <label>
-          {{ $t('extra.tasks.fizz-des05') }}
-          <input type="number" v-model.number="number" min="1" required>
-        </label>
-        <button type="submit" class="btn">{{ $t('extra.tasks.fizz-des06') }}</button>
-        <button type="button" class="btn" @click="clearNumbers" v-if="numbers">{{ $t('extra.tasks.fizz-des07') }}</button>
-      </form>
+      <div class="form">
+        <form @submit.prevent="generateNumbers">
+          <label>
+            {{ $t('extra.tasks.fizz-des05') }}
+            <input type="number" v-model.number="number" min="1" required>
+          </label>
+          <button type="submit" class="btn" title="Generate"><i class="fas fa-play"></i></button>
+          <button type="button" class="btn" title="Clear" @click="clearNumbers" v-if="numbers"><i class="fas fa-eraser"></i></button>
+        </form>
+      </div>
       <div class="numbers" v-if="numbers">
         <span v-for="num in numbers" :key="num"
               :class="{ 'fizzbuzz': num === 'fizzbuzz', 'fizz': num === 'fizz', 'buzz': num === 'buzz' }">{{ num }}</span>
@@ -96,6 +98,8 @@ export default class Fizzbuzz extends Vue {
   }
   .btn {
     border: 1px solid rgba(112, 111, 111, 0.6);
+    background: whitesmoke;
+    text-decoration: none;
     border-radius: 5px;
     padding: 0.6rem;
     margin: 0.5rem;
@@ -105,7 +109,7 @@ export default class Fizzbuzz extends Vue {
     border: 1px solid lightskyblue;
     box-shadow: 3px 3px 4px 0 lightblue;
     background: none;
-    color: blue;
+    color: red;
   }
 
   .numbers {
@@ -141,7 +145,7 @@ export default class Fizzbuzz extends Vue {
     font-size: 1.3rem;
     input[type="number"] {
       font-size: 1.3rem;
-      width: 85px;
+      width: 80px;
     }
     p, .btn {
       font-size: 1.3rem;
@@ -155,6 +159,7 @@ export default class Fizzbuzz extends Vue {
     }
     p, .btn {
       font-size: 1rem;
+      margin: 0.2rem 0.2rem;
     }
   }
 }
