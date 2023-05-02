@@ -20,6 +20,10 @@ export default class Fizzbuzz extends Vue {
       }
     }
   }
+  clearNumbers(): void {
+    this.numbers = [];
+    this.number = 1;
+  }
 }
 </script>
 
@@ -42,9 +46,9 @@ export default class Fizzbuzz extends Vue {
           <input type="number" v-model.number="number" min="1" required>
         </label>
         <button type="submit">Генерировать</button>
+        <button type="button" @click="clearNumbers" v-if="numbers">Очистить</button>
       </form>
       <div class="numbers" v-if="numbers">
-        <!--          <span v-for="(num, index) in numbers" :key="index" :class="getClass(num)">{{ num }}</span>-->
         <span v-for="num in numbers" :key="num"
               :class="{ 'fizzbuzz': num === 'fizzbuzz', 'fizz': num === 'fizz', 'buzz': num === 'buzz' }">{{ num }}</span>
       </div>
