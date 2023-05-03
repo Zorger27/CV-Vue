@@ -47,8 +47,8 @@ export default class Fizzbuzz extends Vue {
             {{ $t('extra.tasks.fizz-des05') }}
             <input type="number" v-model.number="number" min="1" required>
           </label>
-          <button type="submit" class="btn" title="Generate"><i class="fas fa-play"></i></button>
-          <button type="button" class="btn" title="Clear" @click="clearNumbers" v-if="numbers"><i class="fas fa-eraser"></i></button>
+          <button type="submit" class="btn" title="Generate"><i class="fas fa-magic"></i></button>
+          <button type="button" class="btn" title="Clear" @click="clearNumbers" v-if="numbers"><i class="fas fa-trash-alt"></i></button>
         </form>
       </div>
       <div class="numbers" v-if="numbers">
