@@ -2,7 +2,7 @@
 import axios from "axios";
 import {Options, Vue} from "vue-class-component";
 import {WeatherData} from "@/store/types";
-import Weather from "@/components/other/Weather.vue";
+import OpenWeather from "@/components/other/OpenWeather.vue";
 import CurrentDate from "@/components/util/CurrentDate.vue";
 
 @Options({
@@ -13,7 +13,7 @@ import CurrentDate from "@/components/util/CurrentDate.vue";
     };
   },
   computed: {},
-  components: {CurrentDate, Weather},
+  components: {CurrentDate, OpenWeather},
 })
 export default class WeatherView extends Vue {
   error: string | null | undefined;
@@ -62,7 +62,7 @@ export default class WeatherView extends Vue {
         </div>
       </div>
       <div class="widget">
-        <Weather :widgetId="15" :cityId="'703448'"/>
+        <OpenWeather :widgetId="15" :cityId="'703448'"/>
         <!--        <Weather :widgetId="15" :cityId="'2643743'"/>-->
         <!--        <Weather :widgetId="15" :cityId="'2520645'"/>-->
         <!--        <Weather :widgetId="15" :cityId="'2509954'"/>-->
