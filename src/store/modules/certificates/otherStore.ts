@@ -70,14 +70,20 @@ const state = {
                 gradeua: "Успішно складено іспит",
                 examdate: "17.03.2020",
                 image: "/assets/certificates/other/07_Google_Video_Campaign.jpg",
+            },
+            {
+                id: 8,
+                title: "Docker",
+                titleua: "Docker",
+                regnumber: "TP56750315",
+                grade: "1000 / 1000",
+                gradeua: "1000 / 1000",
+                examdate: "04.05.2023",
+                image: "https://testprovider.com/ru/search-certificate/tp56750315",
             }
         ]
 };
-const getters = {
-    // getById: (state, getters) => (id) => {
-    //     return state.otherStore.find(item => item.id === parseInt(id));
-    // }
-};
+const getters = {};
 const mutations = {};
 const actions = {};
 export default {
