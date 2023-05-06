@@ -181,7 +181,8 @@
       "name": "Juego de memoria",
       "rules-h2": "Reglas del juego ... ",
       "rules": "El usuario abre dos tarjetas cualesquiera.\nSi muestran los mismos dibujos, se \"fijan\" en la pantalla y ya no participan en el juego.\nSi las cartas son diferentes, entonces se devuelven a su posición original \"camiseta\" levantada.\nY así hasta que todas las cartas estén abiertas.",
-      "luck": "¡Buena suerte! \uD83D\uDE04✌\uFE0F\uD83D\uDC4D"
+      "luck": "¡Buena suerte! \uD83D\uDE04✌\uFE0F\uD83D\uDC4D",
+      "newGame": "Nuevo juego"
     },
     "notes": {
       "title": "Notas",

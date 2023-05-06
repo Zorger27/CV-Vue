@@ -37,6 +37,17 @@ interface Card {
     this.shuffledCards = this.shuffleCards();
   },
   methods: {
+    startNewGame() {
+      // Перемешать карты
+      this.shuffledCards = this.shuffleCards();
+      // Переворачиваем все карты рубашкой вниз
+      for (let card of this.cards) {
+        card.flipped = false;
+        card.matched = false;
+      }
+      // Сбрасываем переменные, отвечающие за открытые карты
+      this.flippedCards = [];
+    },
     shuffleCards() {
       return [...this.cards].sort(() => Math.random() - 0.5);
     },
@@ -79,8 +90,7 @@ interface Card {
     }
   }
 })
-export default class GameMemory extends Vue {
-}
+export default class GameMemory extends Vue {}
 </script>
 
 <template>
@@ -94,7 +104,8 @@ export default class GameMemory extends Vue {
     <h2 @click="showRules = !showRules" class="rules">{{ $t('extra.game.rules-h2') }}<i style="color: red"
                                                                                         class="fas fa-hand-pointer"></i></h2>
     <p v-if="showRules">{{ $t('extra.game.rules') }}</p>
-    <h2 style="color: deeppink; margin: 0.5rem">{{ $t('extra.game.luck') }}</h2>
+      <h2 style="color: deeppink; margin: 0.5rem">{{ $t('extra.game.luck') }}</h2>
+      <button @click="startNewGame">{{ $t('extra.game.newGame') }}</button>
     <line></line>
     <div class="memory-game">
       <div class="memory-card" v-for="(card, index) in shuffledCards" :key="index" :data-fruit="card.fruit" @click="flipCard(index)"
@@ -120,6 +131,28 @@ export default class GameMemory extends Vue {
     margin: 0;
     padding: 0;
   }
+  button {
+    background-color: mediumvioletred;
+    color: white;
+    font-size: 1.4rem;
+    border: 1px solid darkmagenta;
+    border-radius: 5px;
+    padding: 0.4rem 1rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 3px 3px 4px 0 lightgrey;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+  }
+  button:hover {
+    color: white;
+    border: 1px solid mediumseagreen;
+    background-color: lightseagreen;
+    box-shadow: 3px 3px 4px 0 lightgrey;
+  }
+  //button:active {
+  //  font-weight: bold;
+  //}
 
   .rules {
     display: inline-flex;

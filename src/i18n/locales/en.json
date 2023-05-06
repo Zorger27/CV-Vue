@@ -181,7 +181,8 @@
       "name": "Memory game",
       "rules-h2": "Rules of the game ... ",
       "rules": "The user opens any two cards.\nIf they show the same drawings, they are \"fixed\" on the screen and no longer participate in the game.\nIf the cards are different, then they are returned to their original position \"shirt\" up.\nAnd so it goes until all the cards are open.",
-      "luck": "Good luck! \uD83D\uDE04✌\uFE0F\uD83D\uDC4D"
+      "luck": "Good luck! \uD83D\uDE04✌\uFE0F\uD83D\uDC4D",
+      "newGame": "New game"
     },
     "notes": {
       "title": "Notes",
