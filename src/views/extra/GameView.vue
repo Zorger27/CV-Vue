@@ -12,20 +12,20 @@ interface Card {
   data() {
     return {
       cards: [
-        {fruit: 'apple', image: '/assets/memory/Apple.svg', flipped: false, matched: false},
+        {fruit: 'apple', image: '/assets/memory/Apple.png', flipped: false, matched: false},
         // {fruit: 'apple', image: require('@/assets/memory/Apple.svg'), flipped: false, matched: false},
         // {fruit: 'apple', image: require('@/assets/memory/Apple.svg'), flipped: false, matched: false},
-        {fruit: 'apple', image: '/assets/memory/Apple.svg', flipped: false, matched: false},
-        {fruit: 'banana', image: '/assets/memory/Banana.svg', flipped: false, matched: false},
-        {fruit: 'banana', image: '/assets/memory/Banana.svg', flipped: false, matched: false},
-        {fruit: 'grape', image: '/assets/memory/Grape.svg', flipped: false, matched: false},
-        {fruit: 'grape', image: '/assets/memory/Grape.svg', flipped: false, matched: false},
-        {fruit: 'lychee', image: '/assets/memory/Lychee.svg', flipped: false, matched: false},
-        {fruit: 'lychee', image: '/assets/memory/Lychee.svg', flipped: false, matched: false},
-        {fruit: 'pineapple', image: '/assets/memory/Pineapple.svg', flipped: false, matched: false},
-        {fruit: 'pineapple', image: '/assets/memory/Pineapple.svg', flipped: false, matched: false},
-        {fruit: 'strawberry', image: '/assets/memory/Strawberry.svg', flipped: false, matched: false},
-        {fruit: 'strawberry', image: '/assets/memory/Strawberry.svg', flipped: false, matched: false},
+        {fruit: 'apple', image: '/assets/memory/Apple.png', flipped: false, matched: false},
+        {fruit: 'banana', image: '/assets/memory/Banana.png', flipped: false, matched: false},
+        {fruit: 'banana', image: '/assets/memory/Banana.png', flipped: false, matched: false},
+        {fruit: 'grape', image: '/assets/memory/Grape.png', flipped: false, matched: false},
+        {fruit: 'grape', image: '/assets/memory/Grape.png', flipped: false, matched: false},
+        {fruit: 'lychee', image: '/assets/memory/Lychee.png', flipped: false, matched: false},
+        {fruit: 'lychee', image: '/assets/memory/Lychee.png', flipped: false, matched: false},
+        {fruit: 'pineapple', image: '/assets/memory/Pineapple.png', flipped: false, matched: false},
+        {fruit: 'pineapple', image: '/assets/memory/Pineapple.png', flipped: false, matched: false},
+        {fruit: 'strawberry', image: '/assets/memory/Strawberry.png', flipped: false, matched: false},
+        {fruit: 'strawberry', image: '/assets/memory/Strawberry.png', flipped: false, matched: false},
       ],
       flippedCards: [] as Card[],
       shuffledCards: [] as Card[],
@@ -93,7 +93,7 @@ export default class Game extends Vue {
     </h1>
     <line></line>
     <h2 style="color: blue">{{ $t('extra.game.name') }}</h2>
-    <h3 @click="showRules = !showRules" class="rules">{{ $t('extra.game.rules-h2') }}<i class="fas fa-hand-pointer"></i></h3>
+    <h3 @click="showRules = !showRules" class="rules">{{ $t('extra.game.rules-h2') }}<i style="color: red" class="fas fa-hand-pointer"></i></h3>
     <p v-if="showRules">{{ $t('extra.game.rules') }}</p>
     <h3 style="color: deeppink; margin: 0.5rem">{{ $t('extra.game.luck') }}</h3>
     <line></line>
@@ -101,8 +101,8 @@ export default class Game extends Vue {
       <div class="memory-card" v-for="(card, index) in shuffledCards" :key="index" :data-fruit="card.fruit" @click="flipCard(index)"
            :class="{ 'flipped': card.flipped, 'matched': card.matched }">
         <img :src="card.image" :alt="card.fruit" class="front-face">
-        <!--        <img src="/assets/memory/Card.svg" alt="Back face" class="back-face">-->
-        <img src="/assets/img/footer-logo.svg" alt="Back face" class="back-face">
+<!--        <img src="/assets/memory/Card.svg" alt="Back face" class="back-face">-->
+        <img src="/assets/memory/Card.png" alt="Back face" class="back-face">
       </div>
     </div>
   </div>
