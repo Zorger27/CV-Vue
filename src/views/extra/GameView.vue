@@ -218,7 +218,6 @@ export default class Game extends Vue {
       grid-column-gap: 0.3rem;
       width: 30%;
     }
-
     .memory-card {
       width: 7rem;
       height: 7rem;
