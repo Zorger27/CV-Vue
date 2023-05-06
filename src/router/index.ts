@@ -20,7 +20,7 @@ import CalculatorView from "@/views/extra/CalculatorView.vue";
 import Cryptocur from "@/views/extra/CryptocurView.vue";
 import Cube from "@/views/extra/CubeView.vue";
 import CurrencyRates from "@/views/extra/CurrencyRatesView.vue";
-import Game from "@/views/extra/GameView.vue";
+import Games from "@/views/extra/GamesView.vue";
 import NotesView from "@/views/extra/NotesView.vue";
 import Tasks from "@/views/extra/TasksView.vue";
 import Todo from "@/views/extra/TodoView.vue";
@@ -30,6 +30,7 @@ import Fizzbuzz from "@/views/tasks/Fizzbuzz.vue";
 import Anagram from "@/views/tasks/Anagram.vue";
 import Findvowels from "@/views/tasks/Findvowels.vue";
 import Fibonacci from "@/views/tasks/Fibonacci.vue";
+import GameMemory from "@/views/games/GameMemory.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -208,11 +209,20 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/extra/game',
-    name: 'game',
-    component: Game,
+    path: '/extra/games',
+    name: 'games',
+    component: Games,
     meta: {
-      title: 'CV Extra - Game',
+      title: 'CV Extra - Games',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/games/memory',
+    name: 'memory',
+    component: GameMemory,
+    meta: {
+      title: 'CV Extra - Games - Memory',
       requiresAuth: true
     }
   },

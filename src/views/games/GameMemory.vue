@@ -77,31 +77,29 @@ interface Card {
         }
       }
     }
-  },
-  components: {},
+  }
 })
-export default class Game extends Vue {
+export default class GameMemory extends Vue {
 }
 </script>
 
 <template>
-  <div class="game">
+  <div class="memory">
     <h1>
-      <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
+      <router-link class="back" to="/extra/games" title="Back to Games page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.h1m.game') }}
+      {{ $t('extra.game.name') }}
     </h1>
     <line></line>
-    <h2 style="color: blue">{{ $t('extra.game.name') }}</h2>
-    <h3 @click="showRules = !showRules" class="rules">{{ $t('extra.game.rules-h2') }}<i style="color: red" class="fas fa-hand-pointer"></i></h3>
+    <h2 @click="showRules = !showRules" class="rules">{{ $t('extra.game.rules-h2') }}<i style="color: red"
+                                                                                        class="fas fa-hand-pointer"></i></h2>
     <p v-if="showRules">{{ $t('extra.game.rules') }}</p>
-    <h3 style="color: deeppink; margin: 0.5rem">{{ $t('extra.game.luck') }}</h3>
+    <h2 style="color: deeppink; margin: 0.5rem">{{ $t('extra.game.luck') }}</h2>
     <line></line>
     <div class="memory-game">
       <div class="memory-card" v-for="(card, index) in shuffledCards" :key="index" :data-fruit="card.fruit" @click="flipCard(index)"
            :class="{ 'flipped': card.flipped, 'matched': card.matched }">
         <img :src="card.image" :alt="card.fruit" class="front-face">
-<!--        <img src="/assets/memory/Card.svg" alt="Back face" class="back-face">-->
         <img src="/assets/memory/Card.png" alt="Back face" class="back-face">
       </div>
     </div>
@@ -109,29 +107,27 @@ export default class Game extends Vue {
 </template>
 
 <style lang="scss" scoped>
-.game {
+.memory {
   flex: 1 0 auto;
-  margin: 0;
-  padding: 0;
+
+  .back {
+    display: inline-flex;
+    text-decoration: none;
+    margin-right: 0.1rem;
+  }
+
   h2, h3, p {
     margin: 0;
     padding: 0;
   }
 
-  .back {
-    display: none;
-    @media (max-width: 768px) {
-      display: inline-flex;
-      text-decoration: none;
-      margin-right: 0.1rem;
-    }
-  }
   .rules {
     display: inline-flex;
     color: lightseagreen;
     cursor: pointer;
     border: 1px solid transparent;
   }
+
   .rules:hover, :focus {
     border-bottom: 1px solid lightseagreen;
   }
@@ -147,7 +143,6 @@ export default class Game extends Vue {
 
   .memory-card {
     position: relative;
-    //padding: 5rem;
     width: 12rem;
     height: 12rem;
     margin: 0.4rem;
@@ -211,6 +206,7 @@ export default class Game extends Vue {
       margin: 0.3rem;
     }
   }
+
   @media (max-width: 768px) {
     .memory-game {
       margin: 0.3rem auto;

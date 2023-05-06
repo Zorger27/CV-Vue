@@ -73,7 +73,7 @@ export default class Fizzbuzz extends Vue {
 <style lang="scss" scoped>
 .fizzbuzz {
   flex: 1 0 auto;
-  font-size: 1.6rem;
+  //font-size: 1.6rem;
 
   .back {
     display: inline-flex;
