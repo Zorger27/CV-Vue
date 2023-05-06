@@ -142,7 +142,7 @@
       "cryptocur": "Criptomonedas",
       "cube": "El cubo giratorio \uD83D\uDE09\uD83D\uDE43",
       "exchange": "Los tipos de cambio",
-      "game": "Juego",
+      "game": "Juegos",
       "notes": "Notas",
       "tasks": {
         "title": "Tareas típicas de entrevistas en JavaScript",
@@ -176,7 +176,13 @@
       "uah": "uah",
       "usd": "usd"
     },
-    "game": "Juego",
+    "game": {
+      "title": "Juegos",
+      "name": "Juego de memoria",
+      "rules-h2": "Reglas del juego ... ",
+      "rules": "El usuario abre dos tarjetas cualesquiera.\nSi muestran los mismos dibujos, se \"fijan\" en la pantalla y ya no participan en el juego.\nSi las cartas son diferentes, entonces se devuelven a su posición original \"camiseta\" levantada.\nY así hasta que todas las cartas estén abiertas.",
+      "luck": "¡Buena suerte! \uD83D\uDE04✌\uFE0F\uD83D\uDC4D"
+    },
     "notes": {
       "title": "Notas",
       "add-note": "Añadir la nota",
