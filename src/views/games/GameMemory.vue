@@ -87,6 +87,15 @@ interface Card {
           }, 500);
         }
       }
+      // Check if all cards are matched
+      const allMatched = this.shuffledCards.every((card) => card.matched);
+      if (allMatched) {
+        // const playAgain = window.confirm('Congratulations! You won! 🎉🥳🎊\nDo you want to play again? 🤠😉😁');
+        const playAgain = confirm(this.$t('extra.game.memory.playAgain'));
+        if (playAgain) {
+          this.startNewGame();
+        }
+      }
     }
   }
 })
@@ -98,14 +107,14 @@ export default class GameMemory extends Vue {}
     <h1>
       <router-link class="back" to="/extra/games" title="Back to Games page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.game.name') }}
+      {{ $t('extra.game.memory.name') }}
     </h1>
     <line></line>
-    <h2 @click="showRules = !showRules" class="rules">{{ $t('extra.game.rules-h2') }}<i style="color: red"
+    <h2 @click="showRules = !showRules" class="rules">{{ $t('extra.game.memory.rules-h2') }}<i style="color: red"
                                                                                         class="fas fa-hand-pointer"></i></h2>
-    <p v-if="showRules">{{ $t('extra.game.rules') }}</p>
-      <h2 style="color: deeppink; margin: 0.5rem">{{ $t('extra.game.luck') }}</h2>
-      <button @click="startNewGame">{{ $t('extra.game.newGame') }}</button>
+    <p v-if="showRules">{{ $t('extra.game.memory.rules') }}</p>
+      <h2 style="color: deeppink; margin: 0.5rem">{{ $t('extra.game.memory.luck') }}</h2>
+      <button @click="startNewGame">{{ $t('extra.game.memory.newGame') }}</button>
     <line></line>
     <div class="memory-game">
       <div class="memory-card" v-for="(card, index) in shuffledCards" :key="index" :data-fruit="card.fruit" @click="flipCard(index)"

@@ -15,7 +15,7 @@ export default class Games extends Vue {
     <line></line>
     <div class="diploma">
       <router-link to="/extra/games/memory" class="block" title="Game...">
-        <h3>{{ $t('extra.game.name') }}</h3>
+        <h3>{{ $t('extra.game.memory.name') }}</h3>
       </router-link>
     </div>
   </div>
