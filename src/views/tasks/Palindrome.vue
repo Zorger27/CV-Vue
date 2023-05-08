@@ -36,13 +36,13 @@ export default class Palindrome extends Vue {
       {{ $t('extra.h1m.tasks.palindrome') }}
     </h1>
     <line></line>
-    <p>{{ $t('extra.tasks.pal-des01') }}<br>{{ $t('extra.tasks.pal-des02') }}</p>
+    <p>{{ $t('extra.tasks.palindrome.pal-des01') }}<br>{{ $t('extra.tasks.palindrome.pal-des02') }}</p>
     <line></line>
-    <h2 class="title">{{ $t('extra.tasks.pal-des03') }}</h2>
-    <input type="text" v-model="inputText" @keydown.enter.prevent="checkPalindrome" :placeholder="$t('extra.tasks.pal-des07')"/>
-    <h3 class="result"><span>{{ $t('extra.tasks.pal-des04') }}</span> <span v-if="inputText.length > 0">
-      <span v-if="isPalindrome" style="color: lightseagreen;">{{ $t('extra.tasks.pal-des05') }}</span><span v-else style="color: red;">{{
-        $t('extra.tasks.pal-des06')
+    <h2 class="title">{{ $t('extra.tasks.palindrome.pal-des03') }}</h2>
+    <input type="text" v-model="inputText" @keydown.enter.prevent="checkPalindrome" :placeholder="$t('extra.tasks.palindrome.pal-des07')"/>
+    <h3 class="result"><span>{{ $t('extra.tasks.palindrome.pal-des04') }}</span> <span v-if="inputText.length > 0">
+      <span v-if="isPalindrome" style="color: lightseagreen;">{{ $t('extra.tasks.palindrome.pal-des05') }}</span><span v-else style="color: red;">{{
+        $t('extra.tasks.palindrome.pal-des06')
       }}</span>
       </span>
     </h3>

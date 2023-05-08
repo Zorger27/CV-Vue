@@ -36,15 +36,15 @@ export default class Fizzbuzz extends Vue {
       {{ $t('extra.h1m.tasks.fizzbuzz') }}
     </h1>
     <line></line>
-    <p>{{ $t('extra.tasks.fizz-des01') }}<br>{{ $t('extra.tasks.fizz-des02') }}<br>{{
-        $t('extra.tasks.fizz-des03')
-      }}<br>{{ $t('extra.tasks.fizz-des04') }}</p>
+    <p>{{ $t('extra.tasks.fizzbuzz.fizz-des01') }}<br>{{ $t('extra.tasks.fizzbuzz.fizz-des02') }}<br>{{
+        $t('extra.tasks.fizzbuzz.fizz-des03')
+      }}<br>{{ $t('extra.tasks.fizzbuzz.fizz-des04') }}</p>
     <line></line>
     <div>
       <div class="form">
         <form @submit.prevent="generateNumbers">
           <label>
-            {{ $t('extra.tasks.fizz-des05') }}
+            {{ $t('extra.tasks.fizzbuzz.fizz-des05') }}
             <input type="number" v-model.number="number" min="1" required>
           </label>
           <button type="submit" class="btn" title="Generate"><i class="fas fa-magic"></i></button>
@@ -80,16 +80,20 @@ export default class Fizzbuzz extends Vue {
     text-decoration: none;
     margin-right: 0.1rem;
   }
+  label {
+    font-size: 1.6rem;
+  }
 
   input[type="number"] {
     flex: 1 0 auto;
+    color: black;
     caret-color: red;
     border: 1px solid lightskyblue;
     font-size: 1.6rem;
     border-radius: 5px;
     width: 100px;
     padding: 0.6rem;
-    margin: 5px 5px 10px 0;
+    margin: 10px 5px 15px 0;
   }
 
   input:active, :focus {
@@ -142,7 +146,9 @@ export default class Fizzbuzz extends Vue {
   }
 
   @media (max-width: 1020px) {
-    font-size: 1.3rem;
+    label {
+      font-size: 1.3rem;
+    }
     input[type="number"] {
       font-size: 1.3rem;
       width: 80px;
@@ -152,7 +158,9 @@ export default class Fizzbuzz extends Vue {
     }
   }
   @media (max-width: 768px) {
-    font-size: 1rem;
+    label {
+      font-size: 1rem;
+    }
     input[type="number"] {
       font-size: 1rem;
       width: 65px;

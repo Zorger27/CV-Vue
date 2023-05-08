@@ -27,20 +27,20 @@ export default class Anagram extends Vue {
       {{ $t('extra.h1m.tasks.anagram') }}
     </h1>
     <line></line>
-    <p>{{ $t('extra.tasks.an-des01') }}<br>{{ $t('extra.tasks.an-des02') }}<br>{{ $t('extra.tasks.an-des03') }}</p>
+    <p>{{ $t('extra.tasks.anagram.an-des01') }}<br>{{ $t('extra.tasks.anagram.an-des02') }}<br>{{ $t('extra.tasks.anagram.an-des03') }}</p>
     <line></line>
-    <h2 class="title">{{ $t('extra.tasks.an-des04') }}</h2>
-    <input v-model="word1" @input="checkAnagram" :placeholder="$t('extra.tasks.an-des05')">
-    <input v-model="word2" @input="checkAnagram" :placeholder="$t('extra.tasks.an-des06')">
-    <h3 class="result" v-if="isAnagram"><span>{{ $t('extra.tasks.an-des07') }}</span><span class="word1">{{
+    <h2 class="title">{{ $t('extra.tasks.anagram.an-des04') }}</h2>
+    <input v-model="word1" @input="checkAnagram" :placeholder="$t('extra.tasks.anagram.an-des05')">
+    <input v-model="word2" @input="checkAnagram" :placeholder="$t('extra.tasks.anagram.an-des06')">
+    <h3 class="result" v-if="isAnagram"><span>{{ $t('extra.tasks.anagram.an-des07') }}</span><span class="word1">{{
         word1
-      }}</span><span>{{ $t('extra.tasks.an-des09') }}</span><span>{{ $t('extra.tasks.an-des08') }}</span><span class="word2">{{
+      }}</span><span>{{ $t('extra.tasks.anagram.an-des09') }}</span><span>{{ $t('extra.tasks.anagram.an-des08') }}</span><span class="word2">{{
         word2
-      }}</span> - <span style="color: lightseagreen;">{{ $t('extra.tasks.an-des10') }}</span></h3>
-    <h3 class="result" v-else><span>{{ $t('extra.tasks.an-des07') }}</span><span class="word1">{{
+      }}</span> - <span style="color: lightseagreen;">{{ $t('extra.tasks.anagram.an-des10') }}</span></h3>
+    <h3 class="result" v-else><span>{{ $t('extra.tasks.anagram.an-des07') }}</span><span class="word1">{{
         word1
-      }}</span><span>{{ $t('extra.tasks.an-des09') }}</span><span>{{ $t('extra.tasks.an-des08') }}</span><span class="word2">{{ word2 }}</span> -
-      <span style="color: red;">{{ $t('extra.tasks.an-des11') }}</span></h3>
+      }}</span><span>{{ $t('extra.tasks.anagram.an-des09') }}</span><span>{{ $t('extra.tasks.anagram.an-des08') }}</span><span class="word2">{{ word2 }}</span> -
+      <span style="color: red;">{{ $t('extra.tasks.anagram.an-des11') }}</span></h3>
     <line></line>
     <div class="certificate">
       <a class="block" href="/assets/tasks/Anagram-JS.pdf" title="Download solution in pdf format..."

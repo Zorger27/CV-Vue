@@ -28,11 +28,11 @@ export default class Findvowels extends Vue {
       {{ $t('extra.h1m.tasks.findvowels') }}
     </h1>
     <line></line>
-    <p>{{ $t('extra.tasks.find-des01') }}<br>{{ $t('extra.tasks.find-des02') }}</p>
+    <p>{{ $t('extra.tasks.findvowels.find-des01') }}<br>{{ $t('extra.tasks.findvowels.find-des02') }}</p>
     <line></line>
-      <h2 class="title">{{ $t('extra.tasks.find-des03') }}</h2>
-      <input v-model="inputString" @input="countVowels" :placeholder="$t('extra.tasks.find-des04')">
-      <h3 class="result">{{ $t('extra.tasks.find-des05') }}<span style="color: lightseagreen;">{{ vowelCount }}</span></h3>
+      <h2 class="title">{{ $t('extra.tasks.findvowels.find-des03') }}</h2>
+      <input v-model="inputString" @input="countVowels" :placeholder="$t('extra.tasks.findvowels.find-des04')">
+      <h3 class="result">{{ $t('extra.tasks.findvowels.find-des05') }}<span style="color: lightseagreen;">{{ vowelCount }}</span></h3>
     <line></line>
     <div class="certificate">
       <a class="block" href="/assets/tasks/FindVowels-JS.pdf" title="Download solution in pdf format..."

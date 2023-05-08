@@ -47,15 +47,15 @@ export default class Fibonacci extends Vue {
       {{ $t('extra.h1m.tasks.fibonacci') }}
     </h1>
     <line></line>
-    <p>{{ $t('extra.tasks.fib-des01') }}<br>{{ $t('extra.tasks.fib-des02') }}</p>
+    <p>{{ $t('extra.tasks.fibonacci.fib-des01') }}<br>{{ $t('extra.tasks.fibonacci.fib-des02') }}</p>
     <line></line>
     <div>
-      <h3 class="title">{{ $t('extra.tasks.fib-des03') }}</h3>
+      <h3 class="title">{{ $t('extra.tasks.fibonacci.fib-des03') }}</h3>
       <input type="text" v-model="inputNumber" @input="onInput">
       <h3 class="result">
-        {{ $t('extra.tasks.fib-des04') }}
+        {{ $t('extra.tasks.fibonacci.fib-des04') }}
         <span style="color: lightseagreen;">{{ inputNumber }}</span>
-        {{ $t('extra.tasks.fib-des05') }}
+        {{ $t('extra.tasks.fibonacci.fib-des05') }}
         <span style="color: red;">{{ fibonacci }}</span>
       </h3>
     </div>
