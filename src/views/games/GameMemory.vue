@@ -110,7 +110,7 @@ export default class GameMemory extends Vue {}
       {{ $t('extra.game.memory.name') }}
     </h1>
     <line></line>
-    <h2 @click="showRules = !showRules" class="rules">{{ $t('extra.game.memory.rules-h2') }}<i style="color: red"
+    <h2 @click="showRules = !showRules" class="rules">{{ $t('extra.game.memory.rules-h2') }}<i style="color: red; margin-left: 0.5rem"
                                                                                         class="fas fa-hand-pointer"></i></h2>
     <p v-if="showRules">{{ $t('extra.game.memory.rules') }}</p>
       <h2 style="color: deeppink; margin: 0.5rem">{{ $t('extra.game.memory.luck') }}</h2>
@@ -141,27 +141,21 @@ export default class GameMemory extends Vue {}
     padding: 0;
   }
   button {
-    background-color: mediumvioletred;
-    color: white;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.8rem;
     font-size: 1.4rem;
-    border: 1px solid darkmagenta;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 0.4rem 1rem;
-    margin-bottom: 0.5rem;
-    box-shadow: 3px 3px 4px 0 lightgrey;
     text-align: center;
     cursor: pointer;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
   }
   button:hover {
-    color: white;
-    border: 1px solid mediumseagreen;
-    background-color: lightseagreen;
+    background-color: #f1f1f1;
     box-shadow: 3px 3px 4px 0 lightgrey;
+    //border-color: coral;
   }
-  //button:active {
-  //  font-weight: bold;
-  //}
 
   .rules {
     display: inline-flex;

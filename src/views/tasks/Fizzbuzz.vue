@@ -81,7 +81,9 @@ export default class Fizzbuzz extends Vue {
     margin-right: 0.1rem;
   }
   label {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    color: darkblue;
+    font-weight: bold;
   }
 
   input[type="number"] {
@@ -147,7 +149,7 @@ export default class Fizzbuzz extends Vue {
 
   @media (max-width: 1020px) {
     label {
-      font-size: 1.3rem;
+      font-size: 1.6rem;
     }
     input[type="number"] {
       font-size: 1.3rem;
@@ -159,7 +161,7 @@ export default class Fizzbuzz extends Vue {
   }
   @media (max-width: 768px) {
     label {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
     input[type="number"] {
       font-size: 1rem;

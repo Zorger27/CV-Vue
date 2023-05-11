@@ -1,40 +1,12 @@
 <script lang="ts">
-import axios from "axios";
 import {Options, Vue} from "vue-class-component";
-import {WeatherData} from "@/store/types";
 import OpenWeather from "@/components/other/OpenWeather.vue";
-import CurrentDate from "@/components/util/CurrentDate.vue";
+import MyWeather from "@/components/other/MyWeather.vue";
 
 @Options({
-  data() {
-    return {
-      loading: true,
-      error: null
-    };
-  },
-  computed: {},
-  components: {CurrentDate, OpenWeather},
+  components: {MyWeather, OpenWeather},
 })
 export default class WeatherView extends Vue {
-  error: string | null | undefined;
-  loading: boolean | undefined;
-  weather: WeatherData | null = null;
-  mounted() {
-    const openWeatherMapToken = process.env.VUE_APP_OPENWEATHERMAP_TOKEN;
-    axios
-        .get(
-            `https://api.openweathermap.org/data/2.5/weather?q=Kiev&units=metric&lang=ru&appid=${openWeatherMapToken}`
-        )
-        .then(response => {
-          this.weather = response.data;
-        })
-        .catch(error => {
-          this.error = `${this.$t('extra.weather.error')}`;
-        })
-        .finally(() => {
-          this.loading = false;
-        });
-  }
 }
 </script>
 
@@ -46,28 +18,13 @@ export default class WeatherView extends Vue {
       {{ $t('extra.h1m.weather') }}
     </h1>
     <line></line>
-    <div class="inner">
-      <div class="city">
-        <h1>{{ $t('extra.weather.h1') }}</h1>
-        <CurrentDate></CurrentDate>
-        <div v-if="loading">{{ $t('extra.loading') }}</div>
-        <div v-if="error">{{ error }}</div>
-        <div class="indicators" v-if="weather">
-          <p>{{ $t('extra.weather.temp') }}: {{ weather.main.temp }}°C</p>
-          <p>{{ $t('extra.weather.feels') }}: {{ weather.main.feels_like }}°C</p>
-          <p>{{ $t('extra.weather.speed') }}: {{ weather.wind.speed }} m/s</p>
-          <p>{{ $t('extra.weather.direction') }}: {{ weather.wind.deg }}°</p>
-          <p>{{ $t('extra.weather.humidity') }}: {{ weather.main.humidity }}%</p>
-          <p>{{ $t('extra.weather.pressure') }}: {{ weather.main.pressure }} hPa</p>
-        </div>
-      </div>
-      <div class="widget">
-        <OpenWeather :widgetId="15" :cityId="'703448'"/>
-        <!--        <Weather :widgetId="15" :cityId="'2643743'"/>-->
-        <!--        <Weather :widgetId="15" :cityId="'2520645'"/>-->
-        <!--        <Weather :widgetId="15" :cityId="'2509954'"/>-->
-<!--        <Weather :widgetId="15" :cityId="'703448'" :appId="'openWeatherMapToken'" :units="'metric'"/>-->
-      </div>
+    <div class="container">
+      <MyWeather class="myWidget"></MyWeather>
+      <OpenWeather class="widget" :widgetId="15" :cityId="'703448'"/>
+      <!--        <Weather :widgetId="15" :cityId="'2643743'"/>-->
+      <!--        <Weather :widgetId="15" :cityId="'2520645'"/>-->
+      <!--        <Weather :widgetId="15" :cityId="'2509954'"/>-->
+      <!--        <Weather :widgetId="15" :cityId="'703448'" :appId="'openWeatherMapToken'" :units="'metric'"/>-->
     </div>
   </div>
 </template>
@@ -75,6 +32,7 @@ export default class WeatherView extends Vue {
 <style lang="scss" scoped>
 .weather {
   flex: 1 0 auto;
+
   .back {
     display: none;
     @media (max-width: 768px) {
@@ -83,59 +41,22 @@ export default class WeatherView extends Vue {
       margin-right: 0.1rem;
     }
   }
-  .inner {
+
+  .container {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    .city {
+    flex-wrap: wrap;
+
+    .myWidget {
       display: inline-flex;
-      flex-direction: column;
-      padding: 0 1rem 1rem 1rem;
-      margin: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-shadow: 3px 3px 4px 0 lightgrey;
-      h1 {
-        text-decoration: underline;
-        color: darkblue;
-        margin: 0.5rem;
-      }
-      .indicators {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 1rem 0 1rem;
-        p {
-          margin: 0.5rem;
-        }
-      }
     }
+
     .widget {
-      display: flex;
-      justify-content: center;
+      display: inline-flex;
       margin: 1rem;
     }
   }
-  @media (max-width: 768px) {
-    .inner {
-      display: flex;
-      flex-direction: column;
-      .city {
-        h1 {
-          margin: 0.5rem 0 0.2rem 0;
-        }
-        .indicators {
-          padding: 0;
-          p {
-            margin: 0.2rem 0;
-          }
-        }
-      }
-      .widget {
-        display: flex;
-        justify-content: center;
-      }
-    }
-  }
+
 }
 </style>
