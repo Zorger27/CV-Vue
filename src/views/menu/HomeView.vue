@@ -6,7 +6,7 @@ import Slider from "@/components/util/Slider.vue";
   data() {
     return {
       sliderImages: [
-        require('@/assets/certificates/other/08_TP56750315.jpg'),
+        require('@/assets/certificates/other/02_TP56750315.jpg'),
         require('@/assets/certificates/diploma/TP24303907D.jpg'),
         require('@/assets/certificates/english/02_Conversational_English.jpg'),
         require('@/assets/certificates/diploma/TP31003654D.jpg'),
