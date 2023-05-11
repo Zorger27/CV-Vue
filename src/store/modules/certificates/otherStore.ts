@@ -13,6 +13,16 @@ const state = {
             },
             {
                 id: 2,
+                title: "Docker",
+                titleua: "Docker",
+                regnumber: "TP56750315",
+                grade: "1000 / 1000",
+                gradeua: "1000 / 1000",
+                examdate: "04.05.2023",
+                image: "https://testprovider.com/ru/search-certificate/tp56750315",
+            },
+            {
+                id: 3,
                 title: "Linux administration basics",
                 titleua: "Основи адміністрування Linux",
                 regnumber: "TP03316433",
@@ -22,7 +32,7 @@ const state = {
                 image: "https://testprovider.com/ru/search-certificate/tp03316433",
             },
             {
-                id: 3,
+                id: 4,
                 title: "Golang",
                 titleua: "Golang",
                 regnumber: "TP09903227",
@@ -32,7 +42,7 @@ const state = {
                 image: "https://testprovider.com/ru/search-certificate/tp09903227",
             },
             {
-                id: 4,
+                id: 5,
                 title: "Google Display Network",
                 titleua: "Медійна мережа Google",
                 regnumber: "45386343",
@@ -42,7 +52,7 @@ const state = {
                 image: "/assets/certificates/other/04_Google_Display_Network_Ads.jpg",
             },
             {
-                id: 5,
+                id: 6,
                 title: "Google Shopping Campaign",
                 titleua: "Торгові компанії Google",
                 regnumber: "45382771",
@@ -52,7 +62,7 @@ const state = {
                 image: "/assets/certificates/other/05_Google_Shopping_Campaign.jpg",
             },
             {
-                id: 6,
+                id: 7,
                 title: "Google Search Campaign",
                 titleua: "Пошукові компанії Google",
                 regnumber: "45385551",
@@ -62,7 +72,7 @@ const state = {
                 image: "/assets/certificates/other/06_Google_Search_Campaign.jpg",
             },
             {
-                id: 7,
+                id: 8,
                 title: "Google Video Campaign",
                 titleua: "Відеокомпанії Google",
                 regnumber: "45785209",
@@ -70,16 +80,6 @@ const state = {
                 gradeua: "Успішно складено іспит",
                 examdate: "17.03.2020",
                 image: "/assets/certificates/other/07_Google_Video_Campaign.jpg",
-            },
-            {
-                id: 8,
-                title: "Docker",
-                titleua: "Docker",
-                regnumber: "TP56750315",
-                grade: "1000 / 1000",
-                gradeua: "1000 / 1000",
-                examdate: "04.05.2023",
-                image: "https://testprovider.com/ru/search-certificate/tp56750315",
             }
         ]
 };
