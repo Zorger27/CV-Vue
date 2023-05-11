@@ -70,7 +70,7 @@ export default class WeatherView extends Vue {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 3px 3px 4px 0 lightgrey;
-    background-image: url("@/assets/img/background1.jpg");
+    background-image: url("@/assets/background/background01.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
