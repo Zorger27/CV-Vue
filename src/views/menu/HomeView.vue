@@ -28,8 +28,7 @@ import Slider from "@/components/util/Slider.vue";
   },
   components: {Slider},
 })
-export default class Home extends Vue {
-};
+export default class Home extends Vue {};
 </script>
 
 <template>
