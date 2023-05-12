@@ -97,7 +97,7 @@ export default class LoginPage extends Vue {
         <form @submit.prevent="handleSubmit">
           <div class="input_field">
             <label for="email">{{ $t('login.email') }}</label>
-            <input id="email" v-model="email" type="email" @input="checkEmail" :placeholder="$t('login.email')"/>
+            <input id="email" v-model="email" type="email" @input="checkEmail" :placeholder="$t('login.emailPlc')"/>
           </div>
           <p v-if="emailError" class="error-message">{{ emailError }}</p>
           <div class="input_field">
