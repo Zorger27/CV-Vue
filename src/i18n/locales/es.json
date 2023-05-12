@@ -126,13 +126,13 @@
     "h2": "¡Tienes la oportunidad de ver la sección secreta! \uD83D\uDE01\uD83D\uDE07\uD83D\uDE0E",
     "h3": "Hola mi querido(a) usuario, ",
     "title": "Ingresa, por favor...",
-    "email2": "Correo electrónico: ",
+    "email": "Correo electrónico: ",
     "emailError": "Correo electrónico ingresado incorrectamente",
-    "password2": "Contraseña: ",
+    "password": "Contraseña: ",
     "passwordError": "La contraseña debe contener al menos 5 caracteres",
     "submit": "Acceso",
-    "email": "Correo electrónico, ej.: my@mail.com",
-    "password": "Contraseña, mín. 5 simbolos"
+    "emailPlc": "Correo electrónico, ej.: info@gmail.com",
+    "passwordPlc": "Contraseña, mín. 5 simbolos"
   },
   "extra": {
     "h1": "Sección extra (oculta) para ",
