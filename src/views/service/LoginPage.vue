@@ -132,12 +132,11 @@ export default class LoginPage extends Vue {
   .container {
     display: flex;
     justify-content: center;
-    margin: 1.5rem 0 auto 0;
+    margin: 1rem 0;
   }
 
   .inner {
     max-width: 33rem;
-
     h1 {
       font-size: xxx-large;
     }
