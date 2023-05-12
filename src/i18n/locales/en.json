@@ -126,13 +126,13 @@
     "h2": "You have a chance to see the secret section! \uD83D\uDE01\uD83D\uDE07\uD83D\uDE0E",
     "h3": "Hello my Dear user, ",
     "title": "Login, please...",
-    "email": "E-mail: ",
+    "email2": "E-mail: ",
     "emailError": "E-mail entered incorrectly",
-    "password": "Password: ",
+    "password2": "Password: ",
     "passwordError": "Password must contain at least 5 characters",
     "submit": "Log In",
-    "email2": "E-mail, ex.: my@mail.com",
-    "password2": "Password, min. 5 symbols"
+    "email": "E-mail, ex.: my@mail.com",
+    "password": "Password, min. 5 symbols"
   },
   "extra": {
     "h1": "Extra (hidden) section for ",
