@@ -131,8 +131,8 @@
     "password": "Password: ",
     "passwordError": "Password must contain at least 5 characters",
     "submit": "Log In",
-    "emailPlc": "E-mail, ex.: info@gmail.com",
-    "passwordPlc": "Password, min. 5 symbols"
+    "email2": "E-mail, ex.: my@mail.com",
+    "password2": "Password, min. 5 symbols"
   },
   "extra": {
     "h1": "Extra (hidden) section for ",

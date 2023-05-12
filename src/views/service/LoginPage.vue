@@ -97,13 +97,13 @@ export default class LoginPage extends Vue {
         <form @submit.prevent="handleSubmit">
           <div class="input_field">
             <label>{{ $t('login.email') }}
-              <input v-model="email" type="email" @input="checkEmail" :placeholder="this.$t('login.email')"/>
+              <input v-model="email" type="email" @input="checkEmail" :placeholder="this.$t('login.email2')"/>
             </label>
           </div>
           <p v-if="emailError" class="error-message">{{ emailError }}</p>
           <div class="input_field">
             <label>{{ $t('login.password') }}
-              <input v-model="password" :type="showPassword ? 'text' : 'password'" @input="checkPassword" :placeholder="this.$t('login.password')"/>
+              <input v-model="password" :type="showPassword ? 'text' : 'password'" @input="checkPassword" :placeholder="this.$t('login.password2')"/>
               <span @click="showPassword = !showPassword">
                 <i :class="showPassword ? 'far fa-eye' : 'far fa-eye-slash'"></i>
               </span>

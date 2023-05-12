@@ -131,8 +131,8 @@
     "password": "Contraseña: ",
     "passwordError": "La contraseña debe contener al menos 5 caracteres",
     "submit": "Acceso",
-    "emailPlc": "Correo electrónico, ej.: info@gmail.com",
-    "passwordPlc": "Contraseña, mín. 5 simbolos"
+    "email2": "Correo electrónico, ej.: my@mail.com",
+    "password2": "Contraseña, mín. 5 simbolos"
   },
   "extra": {
     "h1": "Sección extra (oculta) para ",
