@@ -263,7 +263,20 @@
     },
     "weather": {
       "title": "Clima",
-      "h1": "Tiempo en Kyiv",
+      "h1": "Tiempo en ",
+      "city": "Ciudad:",
+      "get": "Obtener",
+      "btn": "Obtener datos",
+      "cities": {
+        "Kyiv": "Kyiv",
+        "Odessa": "Odesa",
+        "Kharkiv": "Kharkiv",
+        "Dubai": "Dubai",
+        "Antalya": "Antalya",
+        "Shanghai": "Shanghai",
+        "Benidorm": "Benidorm",
+        "Valencia": "Valencia"
+      },
       "temp": "Temperatura",
       "feels": "Se siente como",
       "speed": "Velocidad del viento",

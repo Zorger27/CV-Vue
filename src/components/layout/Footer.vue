@@ -34,7 +34,7 @@ footer {
   flex: 0 0 auto;
   justify-content: center;
   align-items: center;
-  margin-top: 0.5rem;
+  //margin-top: 0.5rem;
   //background: linear-gradient(to top, rgba(204, 204, 204, 0.5), rgba(107, 106, 106, 0.9));
   //background-color:hsla(0, 100%, 50%, 1);
   background-image:

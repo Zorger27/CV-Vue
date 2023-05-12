@@ -8,21 +8,30 @@ import CurrentDate from "@/components/util/CurrentDate.vue";
   data() {
     return {
       loading: true,
-      error: null
+      error: null,
+      cityName: this.$t("extra.weather.cities.Kyiv"),
+      cities: ["Kyiv", "Odessa", "Kharkiv", "Dubai", "Antalya", "Shanghai", "Benidorm", "Valencia"].map((city, index) => {
+        return this.$t(`extra.weather.cities.${city}`, index);
+      }),
     };
   },
   components: {CurrentDate},
 })
-export default class WeatherView extends Vue {
+export default class MyWeather extends Vue {
   error: string | null | undefined;
   loading: boolean | undefined;
   weather: WeatherData | null = null;
+  cityName!: string;
 
-  mounted() {
+  getWeather() {
+    this.loading = true;
+    this.weather = null;
+    this.error = null;
+
     const openWeatherMapToken = process.env.VUE_APP_OPENWEATHERMAP_TOKEN;
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=Kiev&units=metric&lang=ru&appid=${openWeatherMapToken}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${this.cityName}&units=metric&lang=ua&appid=${openWeatherMapToken}`
       )
       .then(response => {
         this.weather = response.data;
@@ -34,13 +43,31 @@ export default class WeatherView extends Vue {
         this.loading = false;
       });
   }
+
+  updateCityName(city: string) {
+    this.cityName = city;
+    this.getWeather();
+  }
+
+  mounted() {
+    this.getWeather();
+  }
 }
 </script>
 
 <template>
   <div class="inner">
     <div class="city">
-      <h1>{{ $t('extra.weather.h1') }}</h1>
+      <div class="input-group">
+        <label for="city">{{ $t('extra.weather.city') }}</label>
+        <input type="text" id="city" v-model="cityName" @keydown.enter="getWeather"/>
+        <button class="get" @click="getWeather" :title="$t('extra.weather.btn')">{{ $t('extra.weather.get') }}</button>
+        <button class="getMobile" @click="getWeather" :title="$t('extra.weather.btn')"><i class="fas fa-arrow-circle-down"></i></button>
+        <select class="city-list" v-model="cityName" @change="updateCityName(cityName)">
+          <option v-for="city in cities" :key="city" :value="city">{{ city }}</option>
+        </select>
+      </div>
+      <h1>{{ $t('extra.weather.h1') }}{{ this.cityName }}</h1>
       <CurrentDate></CurrentDate>
       <div v-if="loading">{{ $t('extra.loading') }}</div>
       <div v-if="error">{{ error }}</div>
@@ -74,6 +101,53 @@ export default class WeatherView extends Vue {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    .input-group {
+      .getMobile {
+        display: none;
+      }
+      .get {
+        display: inline-flex;
+      }
+      label, input, button, select {
+        margin: 1rem 0.4rem 0 0;
+        font-size: 1.5rem;
+      }
+      label {
+        font-weight: bold;
+      }
+      input[type="text"] {
+        flex: 1 0 auto;
+        color: black;
+        caret-color: red;
+        border: 1px solid lightcoral;
+        border-radius: 5px;
+        width: 120px;
+        padding: 0.4rem;
+      }
+      input:active, :focus {
+        outline: 1px solid lightcoral;
+        box-shadow: 3px 3px 4px 0 lightgrey;
+      }
+      button {
+        padding: 0.5rem;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+      }
+      button:hover {
+        background-color: #f1f1f1;
+        box-shadow: 3px 3px 4px 0 lightgrey;
+        border-color: lightcoral;
+      }
+      select {
+        border-radius: 5px;
+        padding: 0.4rem;
+        border: 1px solid lightcoral;
+      }
+    }
 
     h1 {
       text-decoration: underline;
@@ -103,6 +177,35 @@ export default class WeatherView extends Vue {
     .city {
       h1 {
         margin: 0.5rem 0 0.2rem 0;
+      }
+
+      .input-group {
+        justify-content: center;
+        align-items: center;
+        .get {
+          display: none;
+        }
+        .getMobile {
+          display: inline-flex;
+        }
+        label, input, button, select {
+          margin: 1rem 0.2rem 0 0.2rem;
+          font-size: 1rem;
+        }
+        input[type="text"] {
+          width: 75px;
+          padding: 0.2rem;
+        }
+        button {
+          padding: 0.2rem;
+          font-size: 1.1rem;
+          border-color: lightcoral;
+
+        }
+        select {
+          border-radius: 5px;
+          padding: 0.2rem;
+        }
       }
 
       .indicators {

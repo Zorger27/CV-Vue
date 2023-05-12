@@ -71,6 +71,10 @@ export default class About extends Vue {}
 .about {
   flex: 1 0 auto;
   text-align: center;
+  background-image: url("@/assets/background/background20.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   .main {color: mediumvioletred;}
   .name {width: 400px;}
   .version {width: 150px;}

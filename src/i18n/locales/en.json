@@ -263,7 +263,20 @@
     },
     "weather": {
       "title": "Weather",
-      "h1": "Weather in Kyiv",
+      "h1": "Weather in ",
+      "city": "City:",
+      "get": "Get",
+      "btn": "Getting data",
+      "cities": {
+        "Kyiv": "Kyiv",
+        "Odessa": "Odesa",
+        "Kharkiv": "Kharkiv",
+        "Dubai": "Dubai",
+        "Antalya": "Antalya",
+        "Shanghai": "Shanghai",
+        "Benidorm": "Benidorm",
+        "Valencia": "Valencia"
+      },
       "temp": "Temperature",
       "feels": "Feels like",
       "speed": "Wind speed",

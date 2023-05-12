@@ -263,7 +263,20 @@
     },
     "weather": {
       "title": "Погода",
-      "h1": "Погода в Києві",
+      "h1": "Погода в м. ",
+      "city": "Місто:",
+      "get": "Отримати",
+      "btn": "Отримання даних",
+      "cities": {
+        "Kyiv": "Київ",
+        "Odessa": "Одеса",
+        "Kharkiv": "Харків",
+        "Dubai": "Дубай",
+        "Antalya": "Antalya",
+        "Shanghai": "Шанхай",
+        "Benidorm": "Benidorm",
+        "Valencia": "Valencia"
+      },
       "temp": "Температура",
       "feels": "Відчувається, як",
       "speed": "Швидкість вітру",
