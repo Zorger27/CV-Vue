@@ -57,8 +57,8 @@ module.exports = defineConfig({
                 outputPath: 'assets/favicon-img/', // Куда будут на сервере скидываться созданные favicon-ки
                 prefix: 'assets/favicon-img/', // Этот префикс для файла index.html, чтобы правильно прописать пути иконок с сервера!
                 favicons: {
-                    appName: 'CV on Vue',
-                    appDescription: 'My Curriculum VITAE (SPA) on Vue.JS',
+                    appName: 'Portfolio',
+                    appDescription: 'My Portfolio (SPA) on Vue.JS',
                     developerName: 'Zorger',
                     developerURL: null
                 }
