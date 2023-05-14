@@ -102,7 +102,7 @@ export default class Certificates extends Vue {
       font-size: 1.5rem;
       margin-bottom: 1rem;
       a {
-        //background-color: white;
+        //background: linear-gradient(to bottom, rgba(31, 221, 255, 0.1), rgba(255, 133, 167, 0.1)) no-repeat center;
       }
       b {
         color: darkred;
@@ -111,11 +111,11 @@ export default class Certificates extends Vue {
 
     .prj:hover {
       .block {
-        background: lightblue;
+        //background: lightblue;
+        background: rgb(242, 253, 255);
         box-shadow: 3px 3px 4px 0 lightgrey;
         border-color: lightskyblue;
       }
-
       b {
         color: red;
         text-decoration: none;
