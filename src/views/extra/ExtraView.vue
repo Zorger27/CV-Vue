@@ -141,10 +141,10 @@ export default class Extra extends Vue {
 
     .prj:hover {
       .block {
-        //background: lightblue;
         box-shadow: 3px 3px 4px 0 lightgrey;
         border-color: lightskyblue;
-        background: linear-gradient(to bottom, rgba(31, 221, 255, 0.1), rgba(255, 133, 167, 0.1));
+        //background: linear-gradient(to bottom, rgba(31, 221, 255, 0.1), rgba(255, 133, 167, 0.1));
+        background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
       }
 
       b {
