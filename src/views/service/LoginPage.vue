@@ -128,6 +128,10 @@ export default class LoginPage extends Vue {
 <style lang="scss" scoped>
 .login {
   flex: 1 0 auto;
+  //background-image: url("@/assets/background/background03.jpg");
+  //background-position: center;
+  //background-size: cover;
+  //background-repeat: no-repeat;
 
   .container {
     display: flex;
@@ -137,12 +141,12 @@ export default class LoginPage extends Vue {
 
   .inner {
     max-width: 33rem;
-    h1 {
-      font-size: xxx-large;
-    }
-
+    h1 {font-size: xxx-large;}
     width: 100%;
-    background: #fff;
+    background-image: url("@/assets/background/background08.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 2rem;
     border: 1px solid #ddd;
     border-radius: 5px;

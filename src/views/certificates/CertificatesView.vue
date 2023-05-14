@@ -52,6 +52,11 @@ export default class Certificates extends Vue {
 <style lang="scss" scoped>
 .certificates {
   flex: 1 0 auto;
+  background-image: url("@/assets/background/background17.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   .container {
     display: inline-grid;
     justify-items: center;
@@ -96,7 +101,9 @@ export default class Certificates extends Vue {
       //justify-content: center;
       font-size: 1.5rem;
       margin-bottom: 1rem;
-
+      a {
+        //background-color: white;
+      }
       b {
         color: darkred;
       }

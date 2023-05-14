@@ -24,6 +24,10 @@ export default class Games extends Vue {
 <style lang="scss" scoped>
 .game {
   flex: 1 0 auto;
+  background-image: url("@/assets/background/background05.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .back {
     display: none;
@@ -65,7 +69,7 @@ export default class Games extends Vue {
       color: inherit;
       border: 1px solid rgba(112, 111, 111, 0.6);
       box-shadow: 3px 3px 4px 0 lightgrey;
-      background: #f1f1f1;
+      background: floralwhite;
       h3 {color: red;}
     }
   }

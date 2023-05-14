@@ -79,6 +79,12 @@ export default class About extends Vue {}
   .name {width: 400px;}
   .version {width: 150px;}
 }
+.prj a {
+  background: inherit;
+}
+.table {
+  background: inherit;
+}
 .title {
   color: darkgoldenrod;
   font-size: 2.5rem;

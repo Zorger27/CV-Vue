@@ -65,6 +65,10 @@ export default class Extra extends Vue {
 <style lang="scss" scoped>
 .extra {
   flex: 1 0 auto;
+  background-image: url("@/assets/background/background08.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .container {
     display: inline-grid;
@@ -122,7 +126,9 @@ export default class Extra extends Vue {
     .prj {
       font-size: 1.5rem;
       margin-bottom: 1rem;
-
+      a {
+        background-color: inherit;
+      }
       b {
         color: darkred;
       }

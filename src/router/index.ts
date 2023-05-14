@@ -38,7 +38,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'login',
     component: LoginPage,
     meta: {
-      title: 'CV - Login page',
+      title: 'Portfolio - Login page',
     }
   },
   {
@@ -46,7 +46,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'home',
     component: Home,
     meta: {
-      title: 'Curriculum VITAE (SPA)',
+      title: 'My Portfolio (SPA)',
       // metaTags: [
       //   {
       //     name: 'google-site-verification',
@@ -64,7 +64,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'projects',
     component: Projects,
     meta: {
-      title: 'CV - Projects',
+      title: 'Portfolio - Projects',
     }
   },
   {
@@ -72,7 +72,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'education',
     component: Education,
     meta: {
-      title: 'CV - Education',
+      title: 'Portfolio - Education',
     }
   },
   {
@@ -80,7 +80,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'experience',
     component: Experience,
     meta: {
-      title: 'CV - Experience',
+      title: 'Portfolio - Experience',
     }
   },
   {
@@ -88,7 +88,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'skills',
     component: Skills,
     meta: {
-      title: 'CV - Skills',
+      title: 'Portfolio - Skills',
     }
   },
   {
@@ -168,7 +168,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'extra',
     component: Extra,
     meta: {
-      title: 'CV - Extra page',
+      title: 'Portfolio - Extra pages',
       requiresAuth: true
     }
   },
@@ -177,7 +177,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'calculator',
     component: CalculatorView,
     meta: {
-      title: 'CV Extra - Calculator',
+      title: 'Extra - Calculator',
       requiresAuth: true
     }
   },
@@ -186,7 +186,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'cryptocur',
     component: Cryptocur,
     meta: {
-      title: 'CV Extra - Cryptocurrencies',
+      title: 'Extra - Cryptocurrencies',
       requiresAuth: true
     }
   },
@@ -195,7 +195,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'cube',
     component: Cube,
     meta: {
-      title: 'CV Extra - Spinning cube',
+      title: 'Extra - Spinning cube',
       requiresAuth: true
     }
   },
@@ -204,7 +204,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'rates',
     component: CurrencyRates,
     meta: {
-      title: 'CV Extra - Currency Rates',
+      title: 'Extra - Currency Rates',
       requiresAuth: true
     }
   },
@@ -213,7 +213,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'games',
     component: Games,
     meta: {
-      title: 'CV Extra - Games',
+      title: 'Extra - Games',
       requiresAuth: true
     }
   },
@@ -222,7 +222,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'memory',
     component: GameMemory,
     meta: {
-      title: 'CV Extra - Games - Memory',
+      title: 'Games - Memory',
       requiresAuth: true
     }
   },
@@ -231,7 +231,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'notes',
     component: NotesView,
     meta: {
-      title: 'CV Extra - Notes',
+      title: 'Extra - Notes',
       requiresAuth: true
     }
   },
@@ -240,7 +240,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'tasks',
     component: Tasks,
     meta: {
-      title: 'CV Extra - JS tasks',
+      title: 'Extra - JS tasks',
       requiresAuth: true
     }
   },
@@ -249,7 +249,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'todo',
     component: Todo,
     meta: {
-      title: 'CV Extra - To-do list',
+      title: 'Extra - To-do list',
       requiresAuth: true
     }
   },
@@ -258,7 +258,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'weather',
     component: WeatherView,
     meta: {
-      title: 'CV Extra - Weather',
+      title: 'Extra - Weather',
       requiresAuth: true
     }
   },
@@ -267,7 +267,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'palindrome',
     component: Palindrome,
     meta: {
-      title: 'CV Extra - JS tasks - Palindrome',
+      title: 'JS tasks - Palindrome',
       requiresAuth: true
     }
   },
@@ -276,7 +276,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'fizzbuzz',
     component: Fizzbuzz,
     meta: {
-      title: 'CV Extra - JS tasks - Fizzbuzz',
+      title: 'JS tasks - Fizzbuzz',
       requiresAuth: true
     }
   },
@@ -285,7 +285,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'anagram',
     component: Anagram,
     meta: {
-      title: 'CV Extra - JS tasks - Anagram',
+      title: 'JS tasks - Anagram',
       requiresAuth: true
     }
   },
@@ -294,7 +294,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'findvowels',
     component: Findvowels,
     meta: {
-      title: 'CV Extra - JS tasks - Find vowels',
+      title: 'JS tasks - Find vowels',
       requiresAuth: true
     }
   },
@@ -303,7 +303,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'fibonacci',
     component: Fibonacci,
     meta: {
-      title: 'CV Extra - JS tasks - Fibonacci',
+      title: 'JS tasks - Fibonacci',
       requiresAuth: true
     }
   },
