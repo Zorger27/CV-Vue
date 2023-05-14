@@ -65,6 +65,7 @@ export default class Extra extends Vue {
 <style lang="scss" scoped>
 .extra {
   flex: 1 0 auto;
+  //background: linear-gradient(to bottom, rgba(31, 221, 255, 0.1), rgba(255, 133, 167, 0.1));
   //background-image: url("@/assets/background/background08.jpg");
   //background-position: center;
   //background-size: cover;
@@ -127,7 +128,11 @@ export default class Extra extends Vue {
       font-size: 1.5rem;
       margin-bottom: 1rem;
       a {
-        background-color: inherit;
+        //background-color: inherit;
+        background-image: url("@/assets/background/background08.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
       b {
         color: darkred;
@@ -136,9 +141,10 @@ export default class Extra extends Vue {
 
     .prj:hover {
       .block {
-        background: lightblue;
+        //background: lightblue;
         box-shadow: 3px 3px 4px 0 lightgrey;
         border-color: lightskyblue;
+        background: linear-gradient(to bottom, rgba(31, 221, 255, 0.1), rgba(255, 133, 167, 0.1));
       }
 
       b {
