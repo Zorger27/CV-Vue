@@ -60,7 +60,8 @@ export default class Projects extends Vue {}
         }
         a:hover {
           box-shadow: none;
-          background: linear-gradient(to bottom, rgba(253, 253, 253, 0.5), rgba(72, 72, 171, 0.5));
+          //background: linear-gradient(to bottom, rgba(253, 253, 253, 0.5), rgba(72, 72, 171, 0.5));
+          background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(152, 152, 255));
           color: darkblue;
           border: 1px solid darkslateblue;
         }

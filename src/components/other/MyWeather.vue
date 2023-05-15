@@ -119,17 +119,17 @@ export default class MyWeather extends Vue {
         flex: 1 0 auto;
         color: black;
         caret-color: red;
-        border: 1px solid lightcoral;
+        border: 1px solid #ddd;
         border-radius: 5px;
         width: 120px;
         padding: 0.4rem;
       }
       input:active, :focus {
-        outline: 1px solid lightcoral;
+        outline: 1px solid transparent;
         box-shadow: 3px 3px 4px 0 lightgrey;
       }
       button {
-        padding: 0.5rem;
+        padding: 0.43rem;
         background-color: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 5px;
@@ -140,12 +140,12 @@ export default class MyWeather extends Vue {
       button:hover {
         background-color: #f1f1f1;
         box-shadow: 3px 3px 4px 0 lightgrey;
-        border-color: lightcoral;
+        border-color: #ddd;
       }
       select {
         border-radius: 5px;
         padding: 0.4rem;
-        border: 1px solid lightcoral;
+        border: 1px solid #ddd;
       }
     }
 
@@ -187,7 +187,12 @@ export default class MyWeather extends Vue {
         }
         .getMobile {
           display: inline-flex;
+          border-color: #ddd;
+          color: lightskyblue;
+          padding: 0.27rem;
+          font-size: 1.1rem;
         }
+
         label, input, button, select {
           margin: 1rem 0.2rem 0 0.2rem;
           font-size: 1rem;
@@ -196,18 +201,11 @@ export default class MyWeather extends Vue {
           width: 75px;
           padding: 0.2rem;
         }
-        button {
-          padding: 0.2rem;
-          font-size: 1.1rem;
-          border-color: lightcoral;
-
-        }
         select {
           border-radius: 5px;
           padding: 0.2rem;
         }
       }
-
       .indicators {
         padding: 0;
 

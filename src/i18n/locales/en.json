@@ -123,14 +123,14 @@
   },
   "login": {
     "h1": "Section is under construction! \uD83D\uDE09",
-    "h2": "You have a chance to see the secret section! \uD83D\uDE01\uD83D\uDE07\uD83D\uDE0E",
+    "h2": "You have a chance to see the secret section by clicking the \"Login\" button! \uD83D\uDE01\uD83D\uDE07\uD83D\uDE0E",
     "h3": "Hello my Dear user, ",
     "title": "Login, please...",
     "email": "E-mail",
     "emailError": "E-mail entered incorrectly",
     "password": "Password",
     "passwordError": "Password must contain at least 5 characters",
-    "submit": "Log In",
+    "submit": "Login",
     "emailPlc": "E-mail, ex.: info@gmail.com",
     "passwordPlc": "Password, min. 5 symbols"
   },
