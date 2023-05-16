@@ -79,7 +79,12 @@ export default class Tasks extends Vue {
   }
 
   .table {
+    margin: 1rem auto;
     background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
+    box-shadow: 3px 3px 4px 0 black;
+    .name {
+      width: 600px;
+    }
   }
 
   .diploma, .block {
@@ -123,6 +128,30 @@ export default class Tasks extends Vue {
 
       h3 {
         color: red;
+      }
+    }
+  }
+
+  @media (max-width: 1020px) {
+    h1 {
+      font-size: 1.9rem;
+    }
+    .table {
+      margin: 0.8rem auto;
+      .name {
+        width: 400px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.7rem;
+    }
+    .table {
+      margin: 0.5rem auto;
+      .name {
+        width: 280px;
       }
     }
   }
