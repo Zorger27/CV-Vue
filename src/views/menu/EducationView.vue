@@ -102,6 +102,17 @@ p {
   p {
     margin: 0.5rem 0.3rem 0 0;
   }
+  .certificate {
+    a {
+      background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
+    }
+    a:hover {
+      background-image: url("@/assets/background/background06.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
 @media(max-width:1020px) {
   .education {
@@ -122,7 +133,15 @@ p {
     }
   }
   .languages {
+    margin-bottom: 0.5rem;
     text-align: center;
+    h1 {
+      font-size: 1.8rem;
+      margin: 1.2rem 0 0.5rem 0;
+    }
+    .certificate {
+      max-width: 10rem;
+    }
   }
 }
 </style>
