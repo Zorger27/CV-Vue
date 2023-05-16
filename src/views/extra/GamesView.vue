@@ -57,10 +57,11 @@ export default class Games extends Vue {
     a {
       border: 1px solid #780485;
       //background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(27, 27, 217, 0.3));
-      background: radial-gradient(at 0% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsla(343, 100%, 76%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 100%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 0%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
+      background-image:
+        radial-gradient(at 0% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(343, 100%, 76%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 100%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
       box-shadow: 3px 3px 4px 0 rgba(178, 25, 170, 0.5);
       h3 {color: black;}
     }

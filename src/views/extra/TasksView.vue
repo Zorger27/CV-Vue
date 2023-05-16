@@ -44,7 +44,9 @@ export default class Tasks extends Vue {
         <tr v-for="task in tasksStore.state.tasksStore">
           <td class="nomer">{{ task.id }}</td>
           <td class="name">
-            <router-link :to="task.url" title="Task...">{{ this.$i18n.locale === "ua" ? task.title_ua : this.$i18n.locale === "es" ? task.title_es : task.title_en }}</router-link>
+            <router-link :to="task.url" title="Task...">
+              {{ this.$i18n.locale === "ua" ? task.title_ua : this.$i18n.locale === "es" ? task.title_es : task.title_en }}
+            </router-link>
           </td>
         </tr>
         </tbody>
@@ -52,7 +54,8 @@ export default class Tasks extends Vue {
     </div>
     <div v-else v-for="task in tasksStore.state.tasksStore" class="diploma">
       <router-link :to="task.url" class="block" title="Task...">
-        <h3><span style="color: darkgoldenrod">{{ task.id }}.</span> {{ this.$i18n.locale === "ua" ? task.title_ua : this.$i18n.locale === "es" ? task.title_es : task.title_en }}</h3>
+        <h3><span style="color: darkgoldenrod">{{ task.id }}.</span>
+          {{ this.$i18n.locale === "ua" ? task.title_ua : this.$i18n.locale === "es" ? task.title_es : task.title_en }}</h3>
       </router-link>
     </div>
   </div>
@@ -74,6 +77,7 @@ export default class Tasks extends Vue {
       margin-right: 0.1rem;
     }
   }
+
   .table {
     background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
   }
@@ -98,13 +102,18 @@ export default class Tasks extends Vue {
     a {
       border: 1px solid #780485;
       //background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(27, 27, 217, 0.3));
-      background: radial-gradient(at 0% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsla(343, 100%, 76%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 100%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 0%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
+      background-image:
+        radial-gradient(at 0% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(343, 100%, 76%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 100%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
       box-shadow: 3px 3px 4px 0 rgba(178, 25, 170, 0.5);
-      h3 {color: black;}
+
+      h3 {
+        color: black;
+      }
     }
+
     a:hover {
       text-decoration: none;
       color: inherit;
@@ -112,7 +121,10 @@ export default class Tasks extends Vue {
       box-shadow: 3px 3px 4px 0 lightgrey;
       //background: floralwhite;
       background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
-      h3 {color: red;}
+
+      h3 {
+        color: red;
+      }
     }
   }
 }
