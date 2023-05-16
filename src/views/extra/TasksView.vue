@@ -44,7 +44,7 @@ export default class Tasks extends Vue {
         <tr v-for="task in tasksStore.state.tasksStore">
           <td class="nomer">{{ task.id }}</td>
           <td class="name">
-            <router-link :to="task.url" title="Task...">{{ this.$i18n.locale === "ua" ? task.titleua : task.title }}</router-link>
+            <router-link :to="task.url" title="Task...">{{ this.$i18n.locale === "ua" ? task.title_ua : this.$i18n.locale === "es" ? task.title_es : task.title_en }}</router-link>
           </td>
         </tr>
         </tbody>
@@ -52,7 +52,7 @@ export default class Tasks extends Vue {
     </div>
     <div v-else v-for="task in tasksStore.state.tasksStore" class="diploma">
       <router-link :to="task.url" class="block" title="Task...">
-        <h3><span style="color: darkgoldenrod">{{ task.id }}.</span> {{ this.$i18n.locale === "ua" ? task.titleua : task.title }}</h3>
+        <h3><span style="color: darkgoldenrod">{{ task.id }}.</span> {{ this.$i18n.locale === "ua" ? task.title_ua : this.$i18n.locale === "es" ? task.title_es : task.title_en }}</h3>
       </router-link>
     </div>
   </div>

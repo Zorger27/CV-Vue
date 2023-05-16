@@ -25,9 +25,9 @@ export default class Education extends Vue {}
     </h2>
     <div v-for="sert in knuteStore.state.knuteStore" class="diploma">
       <a class="block" :href="sert.image" title="Diploma..." target="_blank">
-        <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.titleua : sert.title }}</h3>
+        <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
         <div>{{ $t('cert.number') }}<strong>{{ sert.regnumber }}</strong></div>
-        <div>{{ $t('cert.grade') }}<strong>{{ this.$i18n.locale === "ua" ? sert.gradeua : sert.grade }}</strong></div>
+        <div>{{ $t('cert.grade') }}<strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
         <div>{{$t ('education.graduation')}}{{ sert.examdate }}</div>
       </a>
     </div>
@@ -36,8 +36,8 @@ export default class Education extends Vue {}
     </h2>
     <div v-for="sert in progStore.state.progStore" class="diploma">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-        <h3>{{ sert.id }}. {{ sert.title }}</h3>
-        <div>{{ $t('cert.grade') }}<strong>{{ this.$i18n.locale === "ua" ? sert.gradeua : sert.grade }}</strong></div>
+        <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
+        <div>{{ $t('cert.grade') }}<strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
         <div>{{ $t('cert.date') }}{{ sert.examdate }}</div>
       </a>
     </div>
@@ -74,7 +74,6 @@ export default class Education extends Vue {}
       </a>
     </div>
   </div>
-
 </template>
 
 <style lang="scss" scoped>

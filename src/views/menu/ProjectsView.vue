@@ -37,6 +37,7 @@ export default class Projects extends Vue {}
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 0.5rem auto;
     .prj {
       .block {
         a {
@@ -64,6 +65,29 @@ export default class Projects extends Vue {}
           background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(152, 152, 255));
           color: darkblue;
           border: 1px solid darkslateblue;
+        }
+      }
+    }
+  }
+  @media(max-width:1020px) {
+    .container {
+      .prj {
+        .block {
+          max-width: 20rem;
+        }
+      }
+    }
+  }
+  @media(max-width:768px) {
+    .container {
+      .prj {
+        .block {
+          max-width: 9.6rem;
+          a {
+            width: max-content;
+            padding: 0.3rem 0.3rem;
+            margin: 0.3rem auto;
+          }
         }
       }
     }

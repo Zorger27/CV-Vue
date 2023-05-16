@@ -68,6 +68,7 @@ export default class Anagram extends Vue {
   .certificate {
     text-align: center;
   }
+  ::placeholder {font-size: 1.6rem;}
 
   input {
     flex: 1 0 auto;
@@ -106,6 +107,7 @@ export default class Anagram extends Vue {
     input {
       font-size: 1.7rem;
     }
+    ::placeholder {font-size: 1.4rem;}
     p {
       font-size: 1.3rem;
     }
@@ -118,6 +120,7 @@ export default class Anagram extends Vue {
       font-size: 1.4rem;
       width: 280px;
     }
+    ::placeholder {font-size: 1.2rem;}
     p {
       font-size: 1rem;
     }

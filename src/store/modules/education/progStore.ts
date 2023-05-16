@@ -1,36 +1,36 @@
 const state = {
-progStore:
-  [
+  progStore:
+    [
       {
-          id: 1,
-          title: "Web-Designer (UI/UX Designer)",
-          grade: "Successfully completed",
-          gradeua: "Успішно завершено",
-          examdate: "06.07.2017",
-          image: "/assets/documents/designer.jpg",
-          // image: "https://zorger27.github.io/img/designer.jpg",
+        id: 1,
+        title_ua: "Веб-дизайнер (UI/UX Дизайнер)",
+        title_en: "Web-Designer (UI/UX Designer)",
+        title_es: "Diseñador web (UI/UX Diseñador)",
+        grade_en: "Successfully completed",
+        grade_ua: "Успішно завершено",
+        grade_es: "Completado con éxito",
+        examdate: "06.07.2017",
+        image: "/assets/documents/designer.jpg",
       },
       {
-          id: 2,
-          title: "Frontend Developer",
-          grade: "Successfully completed",
-          gradeua: "Успішно завершено",
-          examdate: "23.10.2017",
-          image: "/assets/documents/frontend.jpg",
-          // image: "https://zorger27.github.io/img/frontend.jpg",
+        id: 2,
+        title_ua: "Frontend розробник",
+        title_en: "Frontend Developer",
+        title_es: "Desarrollador frontend",
+        grade_en: "Successfully completed",
+        grade_ua: "Успішно завершено",
+        grade_es: "Completado con éxito",
+        examdate: "23.10.2017",
+        image: "/assets/documents/frontend.jpg",
       }
-  ]
+    ]
 };
-const getters = {
-    // getById: (state, getters) => (id) => {
-    //     return state.otherStore.find(item => item.id === parseInt(id));
-    // }
-};
+const getters = {};
 const mutations = {};
 const actions = {};
 export default {
-    state,
-    getters,
-    mutations,
-    actions
+  state,
+  getters,
+  mutations,
+  actions
 };

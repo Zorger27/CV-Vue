@@ -1,40 +1,38 @@
 const state = {
-knuteStore:
-  [
+  knuteStore:
+    [
       {
-          id: 1,
-          title: "Accounting and Related Services (Title side)",
-          titleua: "Облік і аудит (Титульна сторона)",
-          regnumber: "KB 10682421",
-          grade: "Honors degree",
-          gradeua: "З відзнакою",
-          examdate: "29.01.1999",
-          image: "/assets/documents/knute1.jpg",
-          // image: "https://zorger27.github.io/img/knute1.jpg",
+        id: 1,
+        title_en: "Accounting and Auditing (Title side)",
+        title_ua: "Облік і аудит (Титульна сторона)",
+        title_es: "Contabilidad y Auditoría (Lado del título)",
+        regnumber: "KB 10682421",
+        grade_en: "Honors degree",
+        grade_ua: "З відзнакою",
+        grade_es: "Matrícula de honor",
+        examdate: "29.01.1999",
+        image: "/assets/documents/knute1.jpg",
       },
       {
-          id: 2,
-          title: "Accounting and Related Services (Backside)",
-          titleua: "Облік і аудит (Тильна сторона)",
-          regnumber: "KB 10682421",
-          grade: "Honors degree",
-          gradeua: "З відзнакою",
-          examdate: "29.01.1999",
-          image: "/assets/documents/knute2.jpg",
-          // image: "https://zorger27.github.io/img/knute2.jpg",
+        id: 2,
+        title_en: "Accounting and Auditing (Backside)",
+        title_ua: "Облік і аудит (Тильна сторона)",
+        title_es: "Contabilidad y Auditoría (Reverso)",
+        regnumber: "KB 10682421",
+        grade_en: "Honors degree",
+        grade_ua: "З відзнакою",
+        grade_es: "Matrícula de honor",
+        examdate: "29.01.1999",
+        image: "/assets/documents/knute2.jpg",
       }
-  ]
+    ]
 };
-const getters = {
-    // getById: (state, getters) => (id) => {
-    //     return state.otherStore.find(item => item.id === parseInt(id));
-    // }
-};
+const getters = {};
 const mutations = {};
 const actions = {};
 export default {
-    state,
-    getters,
-    mutations,
-    actions
+  state,
+  getters,
+  mutations,
+  actions
 };
