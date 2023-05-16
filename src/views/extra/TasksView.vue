@@ -101,7 +101,6 @@ export default class Tasks extends Vue {
   .diploma {
     a {
       border: 1px solid #780485;
-      //background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(27, 27, 217, 0.3));
       background-color: white;
       background-image:
         radial-gradient(at 0% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
@@ -120,7 +119,6 @@ export default class Tasks extends Vue {
       color: inherit;
       border: 1px solid rgba(112, 111, 111, 0.6);
       box-shadow: 3px 3px 4px 0 lightgrey;
-      //background: floralwhite;
       background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
 
       h3 {

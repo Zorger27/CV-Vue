@@ -56,6 +56,9 @@ h1 {text-align: center;}
   }
 }
 .diploma {
+  a {
+    background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
+  }
   a:hover {
     border: 1px solid #780485;
     background-color: white;
@@ -68,7 +71,7 @@ h1 {text-align: center;}
     h3 {color: black;}
   }
   h3 {color: red;}
-  .block {background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;}
+  //.block {background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;}
 }
 .certificate {
   a:hover {
