@@ -69,8 +69,8 @@ export default class Games extends Vue {
     a:hover {
       text-decoration: none;
       color: inherit;
-      border: 1px solid rgba(112, 111, 111, 0.6);
-      box-shadow: 3px 3px 4px 0 black;
+      border: 1px solid #bbeafa;
+      box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.7);
       background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
       //background: floralwhite;
       h3 {color: red;}

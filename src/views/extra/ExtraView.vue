@@ -141,9 +141,8 @@ export default class Extra extends Vue {
 
     .prj:hover {
       .block {
-        box-shadow: 3px 3px 4px 0 lightgrey;
-        border-color: lightskyblue;
-        //background: linear-gradient(to bottom, rgba(31, 221, 255, 0.1), rgba(255, 133, 167, 0.1));
+        box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.7);
+        border-color: #bbeafa;
         background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
       }
 
@@ -159,20 +158,6 @@ export default class Extra extends Vue {
   .extra {
     .container {
       display: inherit;
-      //display: inline-grid;
-      //justify-items: center;
-      //grid-template-columns: 1fr 1fr;
-      //grid-template-rows: auto;
-      //grid-template-areas:
-      //"calculator weather"
-      //"todo notes"
-      //"exchange cryptocur"
-      //"tasks cube"
-      //"game game";
-      //grid-column-gap: 0.5rem;
-      //grid-row-gap: 0;
-      //grid-auto-flow: column;
-      //
       .block {
         font-size: 1.2rem;
       }

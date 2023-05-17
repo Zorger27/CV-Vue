@@ -81,9 +81,6 @@ export default class Certificates extends Vue {
 
     .eng {
       grid-area: eng;
-      //b {
-      //  color: green;
-      //}
     }
     .eng > .block > b {
       color: green;
@@ -109,8 +106,8 @@ export default class Certificates extends Vue {
     .prj:hover {
       .block {
         background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
-        box-shadow: 3px 3px 4px 0 lightgrey;
-        border-color: lightskyblue;
+        box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.7);
+        border-color: #bbeafa;
       }
       b {
         color: red;

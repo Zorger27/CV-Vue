@@ -81,9 +81,12 @@ export default class About extends Vue {}
 }
 .prj a {
   background: inherit;
+  padding: 1.2rem;
 }
 .prj a:hover {
   background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
+  box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.7);
+  border-color: #bbeafa;
 }
 
 .table {
@@ -95,8 +98,10 @@ export default class About extends Vue {}
 }
 @media(max-width: 1020px) {
   .title {font-size: 2rem;}
+  .prj a {padding: 1rem;}
 }
 @media (max-width: 768px) {
   .title {font-size: 1.6rem;}
+  .prj a {padding: 0.8rem;}
 }
 </style>

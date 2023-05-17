@@ -173,6 +173,7 @@ h1 {
 }
 
 @media(max-width: 768px) {
+  h2 {font-size: 1.46rem;}
   .home {
     grid-template-columns: 1fr;
     grid-template-rows: auto;

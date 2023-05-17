@@ -40,6 +40,11 @@ export default class Projects extends Vue {}
     margin: 0.5rem auto;
     .prj {
       .block {
+        background-image: url("@/assets/background/background09.jpg");
+        //filter: brightness(150%);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         a {
           text-decoration: none;
           color: white;
@@ -61,11 +66,14 @@ export default class Projects extends Vue {}
         }
         a:hover {
           box-shadow: none;
-          //background: linear-gradient(to bottom, rgba(253, 253, 253, 0.5), rgba(72, 72, 171, 0.5));
           background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(152, 152, 255));
           color: darkblue;
           border: 1px solid darkslateblue;
         }
+      }
+      .block:hover {
+        box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.7);
+        border-color: rgba(0, 0, 0, 0.4);
       }
     }
   }
