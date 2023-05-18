@@ -90,7 +90,7 @@ export default class Projects extends Vue {}
     .container {
       .prj {
         .block {
-          max-width: 9.6rem;
+          max-width: 9.5rem;
           a {
             width: max-content;
             padding: 0.3rem 0.3rem;

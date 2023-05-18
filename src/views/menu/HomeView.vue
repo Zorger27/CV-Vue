@@ -64,7 +64,6 @@ export default class Home extends Vue {};
           class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>
         <a href="/assets/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img
           class=logo-image src="@/assets/ico/download.png" alt="Download file"></a>
-        <!--        <a href="https://zorger27.github.io/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img class=logo-image src="@/assets/ico/download.png" alt="Download file"></a>-->
       </div>
       <div class="info">
         <p>
@@ -84,9 +83,7 @@ export default class Home extends Vue {};
         </p>
       </div>
     </div>
-    <div class="slider">
-      <Slider :images=sliderImages></Slider>
-    </div>
+    <div class="slider"><Slider :images=sliderImages></Slider></div>
   </div>
 </template>
 
@@ -96,105 +93,106 @@ export default class Home extends Vue {};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-h1 {
-  color: purple;
-  margin-bottom: 0;
-}
-.home {
-  flex: 1 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 3fr;
-  grid-template-rows: auto;
-  grid-column-gap: 1rem;
-  grid-row-gap: 0;
-  grid-auto-flow: column;
-  grid-template-areas:
+  h1 {
+    color: purple;
+    margin-bottom: 0;
+  }
+  .home {
+    flex: 1 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr;
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 0;
+    grid-auto-flow: column;
+    grid-template-areas:
       "photo icons info"
       "slider slider slider";
-}
-.slider {
-  grid-area: slider;
-  background-color: transparent;
-  border-color: transparent;
-  box-shadow: none;
-}
-.photo {
-  grid-area: photo;
-  text-align: center;
-  //align-self: center;
-  svg {
-    height: 24rem;
-  }
-}
 
-.icons {
-  grid-area: icons;
-  text-align: center;
-  align-self: center;
-  .logo-image {
-    width: 4.7rem;
-    border: 2px solid transparent;
-    border-radius: 5px;
+    .photo {
+      grid-area: photo;
+      text-align: center;
+      svg {
+        height: 24rem;
+      }
+    }
+    .icons {
+      grid-area: icons;
+      text-align: center;
+      align-self: center;
+      .logo-image {
+        width: 4.7rem;
+        border: 2px solid transparent;
+        border-radius: 5px;
+      }
+      .logo-image:hover {
+        border-color: #9f18bd;
+      }
+    }
+    .info {
+      grid-area: info;
+      text-align: left;
+      font-size: 1.37rem;
+    }
   }
-  .logo-image:hover {
-    border-color: #9f18bd;
+  .slider {
+    grid-area: slider;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
   }
-}
-.info {
-  grid-area: info;
-  text-align: left;
-  font-size: 1.37rem;
 }
 
 @media(max-width: 1020px) {
-  .home {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
+  .container {
+    .home {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
         "photo icons"
         "info info"
         "slider slider";
-  }
-  .photo {
-    grid-area: photo;
-    //align-self: unset;
-  }
-  .icons {
-    grid-area: icons;
-    align-self: center;
-    padding-right: 1rem;
-  }
-  .info {
-    grid-area: info;
-    font-size: 1.27rem;
-    padding: 0 0.5rem;
+    }
+    .photo {
+      grid-area: photo;
+    }
+    .icons {
+      grid-area: icons;
+      align-self: center;
+      padding-right: 1rem;
+    }
+    .info {
+      grid-area: info;
+      font-size: 1.27rem;
+      padding: 0 0.5rem;
+    }
   }
 }
 
 @media(max-width: 768px) {
-  h2 {font-size: 1.46rem;}
-  .home {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
+  .container {
+    h2 {font-size: 1.46rem;}
+    .home {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
         "photo"
         "icons"
         "info"
         "slider";
-  }
-  .photo {
-    grid-area: photo;
-    //align-self: unset;
-  }
-  .icons {
-    grid-area: icons;
-    align-self: center;
-  }
-  .info {
-    grid-area: info;
-    padding: 0 0.3rem;
-    font-size: 1.17rem;
+      .photo {
+        grid-area: photo;
+      }
+      .icons {
+        grid-area: icons;
+        align-self: center;
+      }
+      .info {
+        grid-area: info;
+        padding: 0 0.3rem;
+        font-size: 1.17rem;
+      }
+    }
   }
 }
 </style>
