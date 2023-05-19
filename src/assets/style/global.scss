@@ -109,8 +109,8 @@ h1 {text-align: center;}
   background-color: rgba(220, 219, 219, 0.2);
   box-shadow: 3px 3px 4px 0 lightgrey;
   table {border-collapse: collapse;}
-  tr, td, th {border: 1px solid #ddd;padding: 0.5rem;}
-  .nomer {width: 70px;}
+  tr, td, th {border: 1px solid #ddd;padding: 0.5rem;word-wrap: normal}
+  .nomer {max-width: 70px;}
   .name {
     text-align: left;
     color: deepskyblue;
@@ -118,7 +118,9 @@ h1 {text-align: center;}
     a {color: inherit;text-decoration: none;}
     a:hover {color: #2e768d;}
   }
-  .version, .price {text-align: right;color: deeppink;width: 230px;}
+  .version, .price {text-align: right;color: deeppink;max-width: 230px;}
+  .number, .grade, .data {max-width: 230px;}
+  .grade {color: deeppink;}
 }
 
 @media(max-width:1020px) {
@@ -169,5 +171,6 @@ h1 {text-align: center;}
     border-radius: unset;
     tr, td, th {padding: 0.3rem;}
     .nomer, .name, .version, .price {width: max-content;}
+    .number, .grade, .data {width: max-content;}
   }
 }

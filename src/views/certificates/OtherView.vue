@@ -5,7 +5,18 @@ import Slider from "@/components/util/Slider.vue";
 
 @Options({
   computed: {otherStore() {return otherStore}},
-  components: {Slider},})
+  data() {
+    return {
+      tableView: false
+    }
+  },
+  methods: {
+    changeView() {
+      this.tableView = !this.tableView;
+    }
+  },
+  components: {Slider},
+})
 export default class Other extends Vue {
   images = require.context('@/assets/certificates/other/', false, /\.jpg$/)
   sliderImages = this.images.keys().map(key => this.images(key))
@@ -18,14 +29,37 @@ export default class Other extends Vue {
       <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('cert.other') }}
+      <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
     </h1>
     <line></line>
-      <div v-for="sert in otherStore.state.otherStore" class="certificate">
+    <div v-if="tableView" class="table">
+      <table>
+        <thead>
+        <tr>
+          <th>№</th>
+          <th>{{ $t('cert.title') }}</th>
+          <th>{{ $t('cert.number') }}</th>
+          <th>{{ $t('cert.grade') }}</th>
+          <th>{{ $t('cert.date') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="sert in otherStore.state.otherStore">
+          <td class="nomer">{{ sert.id }}</td>
+          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.titleua : sert.title }}</a></td>
+          <td class="number">{{ sert.regnumber }}</td>
+          <td class="grade">{{ this.$i18n.locale === "ua" ? sert.gradeua : sert.grade }}</td>
+          <td class="date">{{ sert.examdate }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div v-else v-for="sert in otherStore.state.otherStore" class="certificate">
         <a class="block" :href="sert.image" title="Certificate..." target="_blank">
           <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.titleua : sert.title }}</h3>
-          <div>{{ $t('cert.number') }}<strong>{{ sert.regnumber }}</strong></div>
-          <div>{{ $t('cert.grade') }}<strong>{{ this.$i18n.locale === "ua" ? sert.gradeua : sert.grade }}</strong></div>
-          <div>{{ $t('cert.date') }}{{ sert.examdate }}</div>
+          <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
+          <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.gradeua : sert.grade }}</strong></div>
+          <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
         </a>
       </div>
   </div>
@@ -45,8 +79,13 @@ export default class Other extends Vue {
       margin-right: 0.1rem;
     }
   }
-  //.slider {
-  //  margin: 0.3rem auto 0.3rem auto;
-  //}
+}
+@media(max-width:768px) {
+  .table {
+    font-size: 0.9rem;
+    .number {font-size: 0.6rem;}
+    .grade {font-size: 0.6rem;}
+    .date {font-size: 0.6rem;}
+  }
 }
 </style>

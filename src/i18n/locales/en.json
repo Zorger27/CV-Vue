@@ -57,7 +57,7 @@
     "knute": "Kyiv national university of trade and economics",
     "languages": "Languages",
     "status": "Status: ",
-    "graduation": "Date of graduation: ",
+    "graduation": "Date of graduation",
     "honors": "Honors degree"
   },
   "experience": {
@@ -79,11 +79,11 @@
     }
   },
   "cert": {
-    "title": "Certificates",
-    "number": "Number: ",
-    "grade": "Grade: ",
-    "date": "Exam date: ",
-    "level": "Level: ",
+    "title": "Description",
+    "number": "Number",
+    "grade": "Grade",
+    "date": "Exam date",
+    "level": "Level",
     "back": {
       "backend": "Backend Diplomas & Certificates:",
       "h1": "Backend Diplomas & Certificates",

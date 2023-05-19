@@ -57,7 +57,7 @@
     "knute": "Universidad Nacional de Comercio y Economía de Kiev",
     "languages": "Idiomas",
     "status": "Estado: ",
-    "graduation": "Fecha de graduación: ",
+    "graduation": "Fecha de graduación",
     "honors": "Matrícula de honor"
   },
   "experience": {
@@ -79,11 +79,11 @@
     }
   },
   "cert": {
-    "title": "Certificados",
-    "number": "Número: ",
-    "grade": "Grado: ",
-    "date": "Fecha del examen: ",
-    "level": "Nivel: ",
+    "title": "Descripción",
+    "number": "Número",
+    "grade": "Grado",
+    "date": "Fecha del examen",
+    "level": "Nivel",
     "back": {
       "backend": "Diplomas y certificados Backend:",
       "h1": "Diplomas y certificados Backend",

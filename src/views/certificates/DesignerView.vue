@@ -28,9 +28,9 @@ export default class Designer extends Vue {
     <div v-for="sert in designerStore.state.designerStore" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
-        <div>{{ $t('cert.number') }}<strong>{{ sert.regnumber }}</strong></div>
-        <div>{{ $t('cert.grade') }}<strong>{{ sert.grade }}</strong></div>
-        <div>{{ $t('cert.date') }}{{ sert.examdate }}</div>
+        <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
+        <div>{{ $t('cert.grade') }}: <strong>{{ sert.grade }}</strong></div>
+        <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
       </a>
     </div>
   </div>
