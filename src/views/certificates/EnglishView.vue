@@ -62,7 +62,7 @@ export default class English extends Vue {
         </tr>
         </thead>
         <tbody>
-        <tr v-for="sert in englishStore.state.englishStore">
+        <tr v-for="sert in englishStore.state.englishStore" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
           <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ sert.title }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
@@ -72,7 +72,7 @@ export default class English extends Vue {
         </tbody>
       </table>
     </div>
-    <div v-else v-for="sert in englishStore.state.englishStore" class="certificate">
+    <div v-else v-for="sert in englishStore.state.englishStore" :key="sert.id" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
         <div>{{ $t('cert.level') }}: <strong>{{ sert.regnumber }}</strong></div>
@@ -105,9 +105,7 @@ export default class English extends Vue {
 @media(max-width:768px) {
   .table {
     font-size: 0.9rem;
-    .number {font-size: 0.6rem;}
-    .grade {font-size: 0.6rem;}
-    .date {font-size: 0.6rem;}
+    .number, .grade, .date {font-size: 0.6rem;}
   }
 }
 </style>

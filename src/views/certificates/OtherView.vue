@@ -44,7 +44,7 @@ export default class Other extends Vue {
         </tr>
         </thead>
         <tbody>
-        <tr v-for="sert in otherStore.state.otherStore">
+        <tr v-for="sert in otherStore.state.otherStore" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
           <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.titleua : sert.title }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
@@ -54,7 +54,7 @@ export default class Other extends Vue {
         </tbody>
       </table>
     </div>
-    <div v-else v-for="sert in otherStore.state.otherStore" class="certificate">
+    <div v-else v-for="sert in otherStore.state.otherStore" :key="sert.id" class="certificate">
         <a class="block" :href="sert.image" title="Certificate..." target="_blank">
           <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.titleua : sert.title }}</h3>
           <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
@@ -83,9 +83,7 @@ export default class Other extends Vue {
 @media(max-width:768px) {
   .table {
     font-size: 0.9rem;
-    .number {font-size: 0.6rem;}
-    .grade {font-size: 0.6rem;}
-    .date {font-size: 0.6rem;}
+    .number, .grade, .date {font-size: 0.6rem;}
   }
 }
 </style>

@@ -8,6 +8,16 @@ import Slider from "@/components/util/Slider.vue";
       return databaseStore
     }
   },
+  data() {
+    return {
+      tableView: false
+    }
+  },
+  methods: {
+    changeView() {
+      this.tableView = !this.tableView;
+    }
+  },
   components: {Slider},})
 export default class Database extends Vue {
   images = require.context('@/assets/certificates/database/', false, /\.jpg$/)
@@ -21,9 +31,32 @@ export default class Database extends Vue {
       <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('cert.database') }}
+      <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
     </h1>
     <line></line>
-    <div v-for="sert in databaseStore.state.databaseStore" class="certificate">
+    <div v-if="tableView" class="table">
+      <table>
+        <thead>
+        <tr>
+          <th>№</th>
+          <th>{{ $t('cert.title') }}</th>
+          <th>{{ $t('cert.number') }}</th>
+          <th>{{ $t('cert.grade') }}</th>
+          <th>{{ $t('cert.date') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="sert in databaseStore.state.databaseStore" :key="sert.id">
+          <td class="nomer">{{ sert.id }}</td>
+          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ sert.title }}</a></td>
+          <td class="number">{{ sert.regnumber }}</td>
+          <td class="grade">{{ sert.grade }}</td>
+          <td class="date">{{ sert.examdate }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div v-else v-for="sert in databaseStore.state.databaseStore" :key="sert.id" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
         <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
@@ -47,6 +80,12 @@ export default class Database extends Vue {
       text-decoration: none;
       margin-right: 0.1rem;
     }
+  }
+}
+@media(max-width:768px) {
+  .table {
+    font-size: 0.9rem;
+    .number, .grade, .date {font-size: 0.6rem;}
   }
 }
 </style>

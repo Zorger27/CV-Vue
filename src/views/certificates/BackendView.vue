@@ -37,7 +37,7 @@ export default class Backend extends Vue {
     <h2 class="diplom"><span>✅ </span><b><a class="attention" id="java"
                                             href="https://testprovider.com/ru/search-certificate/tp31617068d"
                                             title="Diploma..." target="_blank">{{ $t('cert.back.java1') }}</a></b></h2>
-    <div v-for="sert in javaStore.state.javaStore" class="certificate">
+    <div v-for="sert in javaStore.state.javaStore" :key="sert.id" class="certificate">
       <!--          <certificate></certificate>-->
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
@@ -49,7 +49,7 @@ export default class Backend extends Vue {
     <h2 class="diplom"><span>✅ </span><b><a class="attention"
                                             href="https://testprovider.com/ru/search-certificate/tp88892276D"
                                             title="Diploma..." target="_blank">{{ $t('cert.back.php1') }}</a></b></h2>
-    <div v-for="sert in phpStore.state.phpStore" class="certificate">
+    <div v-for="sert in phpStore.state.phpStore" :key="sert.id" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
         <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
@@ -60,7 +60,7 @@ export default class Backend extends Vue {
     <h2 class="diplom"><span>✅ </span><b><a class="attention"
                                             href="https://testprovider.com/ru/search-certificate/tp45473683D"
                                             title="Diploma..." target="_blank">{{ $t('cert.back.python1') }}</a></b></h2>
-    <div v-for="sert in pythonStore.state.pythonStore" class="certificate">
+    <div v-for="sert in pythonStore.state.pythonStore" :key="sert.id" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
         <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
@@ -71,7 +71,7 @@ export default class Backend extends Vue {
     <h2 class="diplom"><span>✅ </span><b><a class="attention"
                                             href="https://testprovider.com/ru/search-certificate/tp63925579D"
                                             title="Diploma..." target="_blank">{{ $t('cert.back.ruby1') }}</a></b></h2>
-    <div v-for="sert in rubyStore.state.rubyStore" class="certificate">
+    <div v-for="sert in rubyStore.state.rubyStore" :key="sert.id" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ sert.title }}</h3>
         <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>

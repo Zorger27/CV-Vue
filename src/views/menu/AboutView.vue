@@ -45,7 +45,7 @@ export default class About extends Vue {}
         </tr>
         </thead>
         <tbody>
-        <tr v-for="info in infoStore.state.infoStore">
+        <tr v-for="info in infoStore.state.infoStore" :key="info.id">
           <td class="nomer">{{ info.id }}</td>
           <td class="name"><a :href="info.url" title="In more detail..." target="_blank">{{ info.title }}</a></td>
           <td class="version">{{ info.version }}</td>
@@ -55,7 +55,7 @@ export default class About extends Vue {}
     </div>
     <div v-else>
       <h1 class="title" style="text-decoration: underline">{{ $t('about.technologies') }}</h1>
-      <div v-for="info in infoStore.state.infoStore" class="prj">
+      <div v-for="info in infoStore.state.infoStore" :key="info.id" class="prj">
         <a class="block" :href="info.url" title="In more detail..." target="_blank">
           <h3>
             <span style="color: black">{{ info.id }}.</span> <span>{{ info.title }}</span> <span

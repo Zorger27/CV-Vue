@@ -3,12 +3,11 @@ import {Options, Vue} from "vue-class-component";
 import pmStore from "@/store/modules/certificates/pmStore";
 import Slider from "@/components/util/Slider.vue";
 @Options({
-  computed: {
-    pmStore() {
-      return pmStore
-    }
-  },
-  components: {Slider},})
+  computed: {pmStore() {return pmStore}},
+  data() {return {tableView: false}},
+  methods: {changeView() {this.tableView = !this.tableView;}},
+  components: {Slider},
+})
 export default class Pm extends Vue {
   images = require.context('@/assets/certificates/pm/', false, /\.jpg$/)
   sliderImages = this.images.keys().map(key => this.images(key))
@@ -21,14 +20,36 @@ export default class Pm extends Vue {
       <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('cert.project') }}
+      <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
     </h1>
     <line></line>
-<!--    <Certificate v-for="certificate in pmStore.state.pmStore" :key="certificate.id" :certificate="certificate" />-->
-    <div v-for="sert in pmStore.state.pmStore" class="certificate">
+    <div v-if="tableView" class="table">
+      <table>
+        <thead>
+        <tr>
+          <th>№</th>
+          <th>{{ $t('cert.title') }}</th>
+          <th>{{ $t('cert.number') }}</th>
+          <th>{{ $t('cert.grade') }}</th>
+          <th>{{ $t('cert.date') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="sert in pmStore.state.pmStore" :key="sert.id">
+          <td class="nomer">{{ sert.id }}</td>
+          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
+          <td class="number">{{ sert.regnumber }}</td>
+          <td class="grade">{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</td>
+          <td class="date">{{ sert.examdate }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div v-else v-for="sert in pmStore.state.pmStore" :key="sert.id" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-        <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.titleua : sert.title }}</h3>
+        <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
         <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
-        <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.gradeua : sert.grade }}</strong></div>
+        <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
         <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
       </a>
     </div>
@@ -48,6 +69,11 @@ export default class Pm extends Vue {
       text-decoration: none;
       margin-right: 0.1rem;
     }
+  }
+}
+@media(max-width:768px) {
+  .table {font-size: 0.9rem;
+    .number, .grade, .date {font-size: 0.6rem;}
   }
 }
 </style>
