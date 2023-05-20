@@ -46,6 +46,7 @@ h1 {text-align: center;}
   display: inline-flex;
   padding: 1rem;
   text-align: left;
+  max-width: 30rem;
   a {text-decoration: none;color: inherit;}
   h3 {margin-bottom: 0;margin-top: 0;}
   .block {
@@ -140,6 +141,7 @@ h1 {text-align: center;}
   }
   .diploma, .certificate, .prj {
     padding: 0.6rem;
+    max-width: 25rem;
     .block {font-size: 1rem;padding: 0.6rem;}
   }
   .table {
@@ -161,6 +163,7 @@ h1 {text-align: center;}
   }
   .diploma, .certificate, .prj {
     padding: 0.3rem;
+    max-width: 18rem;
     .block {font-size: 0.78rem;padding: 0.4rem;}
   }
   .table {

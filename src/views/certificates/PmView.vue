@@ -45,13 +45,15 @@ export default class Pm extends Vue {
         </tbody>
       </table>
     </div>
-    <div v-else v-for="sert in pmStore.state.pmStore" :key="sert.id" class="certificate">
-      <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-        <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
-        <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
-        <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
-        <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
-      </a>
+    <div v-else class="container">
+      <div v-for="sert in pmStore.state.pmStore" :key="sert.id" class="certificate">
+        <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+          <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
+          <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
+          <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
+          <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
+        </a>
+      </div>
     </div>
   </div>
   <div class="slider">
@@ -69,6 +71,12 @@ export default class Pm extends Vue {
       text-decoration: none;
       margin-right: 0.1rem;
     }
+  }
+  .container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 @media(max-width:768px) {
