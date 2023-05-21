@@ -36,6 +36,7 @@ h1 {text-align: center;}
   @media(max-width:768px) {width: 95%;}
 }
 .currentUser {color: mediumvioletred;}
+.diplom, .title {font-size: 2.2rem}
 .certificates {
   ol {
     font-size: 1.4rem;
@@ -120,12 +121,13 @@ h1 {text-align: center;}
     a:hover {color: #2e768d;}
   }
   .version, .price {text-align: right;color: deeppink;max-width: 230px;}
-  .number, .grade, .data {max-width: 230px;}
+  .number, .grade, .date {max-width: 230px; font-size: 1.8rem}
   .grade {color: deeppink;}
 }
 
 @media(max-width:1020px) {
   line {width: 100%;}
+  .diplom, .title {font-size: 1.8rem}
   .header-logo {
     svg {
       max-width: 100%;
@@ -149,10 +151,12 @@ h1 {text-align: center;}
     padding: 0.8rem;
     margin: 0.5rem;
     tr, td, th {padding: 0.4rem;}
+    .number, .grade, .date {font-size: 1.4rem}
   }
 }
 @media(max-width:768px) {
   line {width: 100%;}
+  .diplom, .title {font-size: 1.7rem}
   h1 {font-size: xx-large;}
   h2 {font-size: x-large;}
   .certificates {
@@ -174,6 +178,6 @@ h1 {text-align: center;}
     border-radius: unset;
     tr, td, th {padding: 0.3rem;}
     .nomer, .name, .version, .price {width: max-content;}
-    .number, .grade, .data {width: max-content;}
+    .number, .grade, .date {width: max-content;}
   }
 }

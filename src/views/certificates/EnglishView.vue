@@ -103,9 +103,10 @@ export default class English extends Vue {
   }
 }
 @media(max-width:768px) {
+  .diplom, .title {font-size: 1.2rem}
   .table {
     font-size: 0.9rem;
-    .number, .grade, .date {font-size: 0.6rem;}
+    .nomer, .number, .grade, .date {font-size: 0.5rem;}
   }
 }
 </style>

@@ -3,7 +3,7 @@ reactStore:
   [
       {
           id: 1,
-          title: "React Essential",
+          title: "React Essential 2021",
           regnumber: "TP20433727",
           grade: "1000 / 1000",
           examdate: "05.08.2021",
