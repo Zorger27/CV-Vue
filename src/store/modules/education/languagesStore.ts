@@ -3,7 +3,9 @@ const state = {
     [
       {
         id: 1,
-        title: "English",
+        title_en: "English",
+        title_ua: "Англійська",
+        title_es: "Inglés",
         regnumber: "Upper-Intermediate",
         grade_en: "Successfully completed",
         grade_ua: "Успішно завершено",
@@ -13,7 +15,9 @@ const state = {
       },
       {
         id: 2,
-        title: "Spanish",
+        title_en: "Spanish",
+        title_ua: "Іспанська",
+        title_es: "Español",
         regnumber: "Upper-Intermediate",
         grade_en: "Successfully completed",
         grade_ua: "Успішно завершено",

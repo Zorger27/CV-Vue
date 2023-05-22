@@ -48,9 +48,12 @@
   },
   "projects": {
     "title": "Projects",
-    "type": "Type: ",
-    "technologies": "Technologies: ",
-    "link": "Link to the project"
+    "name": "Description",
+    "type": "Type",
+    "technologies": "Technologies",
+    "linkCol": "Link",
+    "link": "Link to the project",
+    "github": "Project at GitHub"
   },
   "education": {
     "title": "Education",
@@ -58,7 +61,8 @@
     "languages": "Languages",
     "status": "Status: ",
     "graduation": "Date of graduation",
-    "honors": "Honors degree"
+    "honors": "Honors degree",
+    "present": "Until now"
   },
   "experience": {
     "title": "Experience",

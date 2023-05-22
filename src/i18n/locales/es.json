@@ -48,9 +48,12 @@
   },
   "projects": {
     "title": "Proyectos",
-    "type": "Tipo: ",
-    "technologies": "Tecnologías: ",
-    "link": "Enlace al proyecto"
+    "name": "Descripción",
+    "type": "Tipo",
+    "technologies": "Tecnologías",
+    "linkCol": "Enlace",
+    "link": "Enlace al proyecto",
+    "github": "Proyecto en GitHub"
   },
   "education": {
     "title": "Educación",
@@ -58,7 +61,8 @@
     "languages": "Idiomas",
     "status": "Estado: ",
     "graduation": "Fecha de graduación",
-    "honors": "Matrícula de honor"
+    "honors": "Matrícula de honor",
+    "present": "Hasta ahora"
   },
   "experience": {
     "title": "Experiencia",

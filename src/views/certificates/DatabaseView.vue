@@ -4,20 +4,9 @@ import databaseStore from "@/store/modules/certificates/databaseStore";
 import Slider from "@/components/util/Slider.vue";
 @Options({
   computed: {
-    databaseStore() {
-      return databaseStore
-    }
-  },
-  data() {
-    return {
-      tableView: false
-    }
-  },
-  methods: {
-    changeView() {
-      this.tableView = !this.tableView;
-    }
-  },
+    databaseStore() {return databaseStore}},
+  data() {return {tableView: false}},
+  methods: {changeView() {this.tableView = !this.tableView;}},
   components: {Slider},})
 export default class Database extends Vue {
   images = require.context('@/assets/certificates/database/', false, /\.jpg$/)
