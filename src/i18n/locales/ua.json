@@ -52,8 +52,8 @@
     "type": "Тип",
     "technologies": "Технології",
     "linkCol": "Посилання",
-    "link": "Посилання на проект",
-    "github": "Проект на GitHub"
+    "link": "Проект...",
+    "github": "GitHub..."
   },
   "education": {
     "title": "Освіта",

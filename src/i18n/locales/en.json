@@ -52,8 +52,8 @@
     "type": "Type",
     "technologies": "Technologies",
     "linkCol": "Link",
-    "link": "Link to the project",
-    "github": "Project at GitHub"
+    "link": "Project...",
+    "github": "GitHub..."
   },
   "education": {
     "title": "Education",

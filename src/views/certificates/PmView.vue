@@ -77,6 +77,9 @@ export default class Pm extends Vue {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    .certificate {
+      max-width: 27rem;
+    }
   }
 }
 @media(max-width:768px) {
