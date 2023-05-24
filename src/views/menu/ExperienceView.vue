@@ -13,7 +13,6 @@ export default class Experience extends Vue {
       <img class="codersrank-summary"
            src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=zorger27&badges=3&show-avatar=true&branding=false&style=--border-radius:5px"
            alt="CodersrankSummary"/>
-      <!--    <codersrank-summary username="zorger27" layout="horizontal" branding="false"></codersrank-summary>-->
       <div class="work">
         <p>15.01.2001 - 13.01.2023<br>
           <b>{{$t ('experience.lis')}}</b><br>
@@ -35,29 +34,31 @@ export default class Experience extends Vue {
   flex: 1 0 auto;
   text-align: left;
   .container {
-    font-size: x-large;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 1rem;
     grid-auto-flow: column;
-    grid-template-areas: "codersrank-summary work";
+    grid-template-areas:
+        "codersrank-summary"
+        "work";
   }
 }
 
 .work {
   grid-area: work;
-  font-size: xx-large;
+  font-size: 2rem;
   p {
     margin-top: 0.5rem;
     padding: 0 0 0.3rem 1.5rem;
   }
 }
 
-img {
+.codersrank-summary {
   grid-area: codersrank-summary;
+  justify-self: center;
   margin-top: 0.5rem;
-  width: 100%;
+  max-width: 60%;
 }
 
 @media(max-width: 1200px) {
@@ -70,9 +71,12 @@ img {
     }
   }
   .work {
-    display: inline-flex;
-    justify-content: space-around;
-    font-size: x-large;
+    display: grid;
+    justify-content: left;
+    font-size: 1.7rem;
+  }
+  .codersrank-summary {
+    max-width: 80%;
   }
 }
 
@@ -88,7 +92,10 @@ img {
   .work {
     display: grid;
     justify-content: left;
-    font-size: large;
+    font-size: 1.4rem;
+  }
+  .codersrank-summary {
+    max-width: 100%;
   }
 }
 </style>

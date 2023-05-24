@@ -22,6 +22,7 @@ import knuteStore from "@/store/modules/education/knuteStore";
 import loginStore from "@/store/modules/service/loginStore";
 import infoStore from "@/store/modules/service/infoStore";
 import tasksStore from "@/store/modules/project/tasksStore";
+import experienceStore from "@/store/modules/project/experienceStore";
 
 export default createStore({
   modules: {
@@ -47,6 +48,7 @@ export default createStore({
     knuteStore,
     loginStore,
     infoStore,
-    tasksStore
+    tasksStore,
+    experienceStore
   }
 })
