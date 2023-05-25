@@ -27,96 +27,6 @@ export default class Education extends Vue {}
         <thead>
         <tr>
           <th class="title" colspan="5">
-            <i>09.1994 - 01.1999</i>
-          </th>
-        </tr>
-        <tr>
-          <th class="title" colspan="5">
-            <a href="https://knute.edu.ua" title="Link to the University" target="_blank"><b style="color: #0303af">{{$t ('education.knute')}}</b></a>
-          </th>
-        </tr>
-        <tr>
-          <th>№</th>
-          <th style="text-align: left;">{{ $t('cert.title') }}</th>
-          <th>{{ $t('cert.number') }}</th>
-          <th>{{ $t('cert.grade') }}</th>
-          <th>{{ $t('education.graduation') }}</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="sert in knuteStore.state.knuteStore" :key="sert.id">
-          <td class="nomer">{{ sert.id }}</td>
-          <td class="name"><a :href="sert.image" title="Diploma..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
-          <td class="number">{{ sert.regnumber }}</td>
-          <td class="grade">{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</td>
-          <td class="date">{{ sert.examdate }}</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <div v-else class="container">
-      <h2><span>09.1994 - 01.1999</span><br>
-        <a href="https://knute.edu.ua" title="Link to the University" target="_blank"><b>{{$t ('education.knute')}}</b></a>
-      </h2>
-      <div v-for="sert in knuteStore.state.knuteStore" :key="sert.id" class="diploma">
-        <a class="block" :href="sert.image" title="Diploma..." target="_blank">
-          <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
-          <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
-          <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
-          <div>{{ $t('education.graduation') }}: {{ sert.examdate }}</div>
-        </a>
-      </div>
-    </div>
-    <div v-if="tableView" class="table">
-      <table>
-        <thead>
-        <tr>
-          <th class="title" colspan="5">
-            <i>04.2017 - 11.2017</i>
-          </th>
-        </tr>
-        <tr>
-          <th class="title" colspan="5">
-            <a href="https://prog.academy" title="Link to the Prog.academy" target="_blank"><b style="color: #0303af">PROG.kiev.ua</b></a>
-          </th>
-        </tr>
-        <tr>
-          <th>№</th>
-          <th style="text-align: left;">{{ $t('cert.title') }}</th>
-          <th>{{ $t('cert.number') }}</th>
-          <th>{{ $t('cert.grade') }}</th>
-          <th>{{ $t('cert.date') }}</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="sert in progStore.state.progStore" :key="sert.id">
-          <td class="nomer">{{ sert.id }}</td>
-          <td class="name"><a :href="sert.image" title="Certificate..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
-          <td class="number">{{ this.$i18n.locale === "ua" ? sert.regnumber_ua : this.$i18n.locale === "es" ? sert.regnumber_es : sert.regnumber_en }}</td>
-          <td class="grade">{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</td>
-          <td class="date">{{ sert.examdate }}</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <div v-else class="container">
-      <h2><span>04.2017 - 11.2017</span><br>
-        <a href="https://prog.academy" title="Link to the Prog.academy" target="_blank"><b>PROG.kiev.ua</b></a>
-      </h2>
-      <div v-for="sert in progStore.state.progStore" :key="sert.id" class="diploma">
-        <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-          <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
-          <div>{{ $t('cert.number') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.regnumber_ua : this.$i18n.locale === "es" ? sert.regnumber_es : sert.regnumber_en }}</strong></div>
-          <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
-          <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
-        </a>
-      </div>
-    </div>
-    <div v-if="tableView" class="table">
-      <table>
-        <thead>
-        <tr>
-          <th class="title" colspan="5">
             <i>11.2020 - {{ $t('education.present') }}</i>
           </th>
         </tr>
@@ -199,6 +109,96 @@ export default class Education extends Vue {}
           <div>{{ $t('cert.level') }}: <strong>{{ sert.regnumber }}</strong></div>
           <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
           <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
+        </a>
+      </div>
+    </div>
+    <div v-if="tableView" class="table">
+      <table>
+        <thead>
+        <tr>
+          <th class="title" colspan="5">
+            <i>04.2017 - 11.2017</i>
+          </th>
+        </tr>
+        <tr>
+          <th class="title" colspan="5">
+            <a href="https://prog.academy" title="Link to the Prog.academy" target="_blank"><b style="color: #0303af">PROG.kiev.ua</b></a>
+          </th>
+        </tr>
+        <tr>
+          <th>№</th>
+          <th style="text-align: left;">{{ $t('cert.title') }}</th>
+          <th>{{ $t('cert.number') }}</th>
+          <th>{{ $t('cert.grade') }}</th>
+          <th>{{ $t('cert.date') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="sert in progStore.state.progStore" :key="sert.id">
+          <td class="nomer">{{ sert.id }}</td>
+          <td class="name"><a :href="sert.image" title="Certificate..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
+          <td class="number">{{ this.$i18n.locale === "ua" ? sert.regnumber_ua : this.$i18n.locale === "es" ? sert.regnumber_es : sert.regnumber_en }}</td>
+          <td class="grade">{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</td>
+          <td class="date">{{ sert.examdate }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div v-else class="container">
+      <h2><span>04.2017 - 11.2017</span><br>
+        <a href="https://prog.academy" title="Link to the Prog.academy" target="_blank"><b>PROG.kiev.ua</b></a>
+      </h2>
+      <div v-for="sert in progStore.state.progStore" :key="sert.id" class="diploma">
+        <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+          <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
+          <div>{{ $t('cert.number') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.regnumber_ua : this.$i18n.locale === "es" ? sert.regnumber_es : sert.regnumber_en }}</strong></div>
+          <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
+          <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
+        </a>
+      </div>
+    </div>
+    <div v-if="tableView" class="table">
+      <table>
+        <thead>
+        <tr>
+          <th class="title" colspan="5">
+            <i>09.1994 - 01.1999</i>
+          </th>
+        </tr>
+        <tr>
+          <th class="title" colspan="5">
+            <a href="https://knute.edu.ua" title="Link to the University" target="_blank"><b style="color: #0303af">{{$t ('education.knute')}}</b></a>
+          </th>
+        </tr>
+        <tr>
+          <th>№</th>
+          <th style="text-align: left;">{{ $t('cert.title') }}</th>
+          <th>{{ $t('cert.number') }}</th>
+          <th>{{ $t('cert.grade') }}</th>
+          <th>{{ $t('education.graduation') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="sert in knuteStore.state.knuteStore" :key="sert.id">
+          <td class="nomer">{{ sert.id }}</td>
+          <td class="name"><a :href="sert.image" title="Diploma..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
+          <td class="number">{{ sert.regnumber }}</td>
+          <td class="grade">{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</td>
+          <td class="date">{{ sert.examdate }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div v-else class="container">
+      <h2><span>09.1994 - 01.1999</span><br>
+        <a href="https://knute.edu.ua" title="Link to the University" target="_blank"><b>{{$t ('education.knute')}}</b></a>
+      </h2>
+      <div v-for="sert in knuteStore.state.knuteStore" :key="sert.id" class="diploma">
+        <a class="block" :href="sert.image" title="Diploma..." target="_blank">
+          <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
+          <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
+          <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
+          <div>{{ $t('education.graduation') }}: {{ sert.examdate }}</div>
         </a>
       </div>
     </div>
