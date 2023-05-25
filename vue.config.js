@@ -3,7 +3,6 @@ const {defineConfig} = require('@vue/cli-service')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-// const VueI18nPlugin = require('@intlify/unplugin-vue-i18n/webpack')
 
 module.exports = defineConfig({
     transpileDependencies: true,
@@ -12,7 +11,7 @@ module.exports = defineConfig({
             entry: 'src/main.ts',
             template: 'public/index.html',
             filename: 'index.html',
-            title: 'Curriculum VITAE (SPA)',
+            title: 'Portfolio',
         }
     },
     configureWebpack: {
@@ -58,7 +57,7 @@ module.exports = defineConfig({
                 prefix: 'assets/favicon-img/', // Этот префикс для файла index.html, чтобы правильно прописать пути иконок с сервера!
                 favicons: {
                     appName: 'Portfolio',
-                    appDescription: 'My Portfolio (SPA) on Vue.JS',
+                    appDescription: 'My Portfolio on Vue.JS',
                     developerName: 'Zorger',
                     developerURL: null
                 }

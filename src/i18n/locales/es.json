@@ -66,10 +66,12 @@
   },
   "experience": {
     "title": "Experiencia",
-    "lis": "\"LYS\" SRL",
-    "yugov": "\"Yugov & D\" SRL",
-    "rang": "CEO",
-    "job": "Gestión empresarial completa"
+    "company": "Compañía",
+    "job": "Título profesional",
+    "main-duties": "Principales Responsabilidades",
+    "related-duties": "Responsabilidades relacionadas",
+    "interesting-tasks": "Tareas interesantes",
+    "skills": "Habilidades adquiridas"
   },
   "skills": {
     "title": "Habilidades duras y blandas",

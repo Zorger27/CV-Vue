@@ -66,10 +66,12 @@
   },
   "experience": {
     "title": "Experience",
-    "lis": "LIS Ltd",
-    "yugov": "Yugov & D Ltd",
-    "rang": "CEO",
-    "job": "Full enterprise management"
+    "company": "Company",
+    "job": "Job title",
+    "main-duties": "Main responsibilities",
+    "related-duties": "Related Responsibilities",
+    "interesting-tasks": "Interesting tasks",
+    "skills": "Acquired Skills"
   },
   "skills": {
     "title": "Hard & Soft skills",
