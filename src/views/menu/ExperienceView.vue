@@ -29,7 +29,7 @@ export default class Experience extends Vue {
           <h4><span style="color: black">{{ $t('experience.job') }}: </span>{{ this.$i18n.locale === "ua" ? exp.job_ua : this.$i18n.locale === "es" ? exp.job_es : exp.job_en }}</h4>
           <p><span style="font-weight: bold; color: rebeccapurple">{{ $t('experience.main-duties') }}: </span>{{ this.$i18n.locale === "ua" ? exp.main_duties_ua : this.$i18n.locale === "es" ? exp.main_duties_es : exp.main_duties_en }}</p>
           <p><span style="font-weight: bold; color: rebeccapurple">{{ $t('experience.related-duties') }}: </span>{{ this.$i18n.locale === "ua" ? exp.related_duties_ua : this.$i18n.locale === "es" ? exp.related_duties_es : exp.related_duties_en }}</p>
-          <p><span style="font-weight: bold; color: rebeccapurple">{{ $t('experience.interesting-tasks') }}: </span>{{ this.$i18n.locale === "ua" ? exp.interesting_tasks_ua : this.$i18n.locale === "es" ? exp.interesting_tasks_es : exp.interesting_tasks_en }}</p>
+          <p><span style="font-weight: bold; color: rebeccapurple">{{ $t('experience.tasks') }}: </span>{{ this.$i18n.locale === "ua" ? exp.tasks_ua : this.$i18n.locale === "es" ? exp.tasks_es : exp.tasks_en }}</p>
           <p class="skills"> <span style="color: black; font-style: normal; text-decoration: underline">{{ $t('experience.skills') }}:</span> {{ exp.skills }}</p>
         </div>
       </div>
@@ -50,6 +50,7 @@ export default class Experience extends Vue {
       display: flex;
       flex-direction: column;
       font-size: 1.8rem;
+      margin: 1rem 2rem;
       h3 {
         color: darkred;
         margin: 0.5rem auto;
@@ -86,6 +87,7 @@ export default class Experience extends Vue {
   .experience {
     .container {
       .work {
+        margin: 0.5rem 1rem;
         display: flex;
         flex-direction: column;
         font-size: 1.4rem;
@@ -102,9 +104,11 @@ export default class Experience extends Vue {
   .experience {
     .container {
       .work {
+        margin: 0 0.3rem;
         display: flex;
         flex-direction: column;
         font-size: 1rem;
+        h3, h4, p {margin: 0.3rem;}
         .skills {font-size: 0.7rem;}
       }
       .codersrank-summary {
