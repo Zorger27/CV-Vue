@@ -43,13 +43,24 @@ export default class MyWeather extends Vue {
         this.loading = false;
       });
   }
-
+  saveCityToLocalStorage(city: string) {
+    localStorage.setItem("weatherCity", city);
+  }
+  handleCityInputChange(city: string) {
+    this.cityName = city;
+    this.saveCityToLocalStorage(city);
+  }
   updateCityName(city: string) {
     this.cityName = city;
     this.getWeather();
+    this.saveCityToLocalStorage(city);
   }
 
   mounted() {
+    const selectedCity = localStorage.getItem("weatherCity");
+    if (selectedCity) {
+      this.cityName = selectedCity;
+    }
     this.getWeather();
   }
 }
@@ -60,7 +71,8 @@ export default class MyWeather extends Vue {
     <div class="city">
       <div class="input-group">
         <label for="city">{{ $t('extra.weather.city') }}</label>
-        <input type="text" id="city" v-model="cityName" @keydown.enter="getWeather"/>
+        <input type="text" id="city" v-model="cityName" @input="handleCityInputChange(cityName)" @keydown.enter="getWeather"/>
+        <!--        <input type="text" id="city" v-model="cityName" @input="handleCityInputChange(cityName)" @keyup.enter="handleCityInputChange(cityName)"/>-->
         <button class="get" @click="getWeather" :title="$t('extra.weather.btn')">{{ $t('extra.weather.get') }}</button>
         <button class="getMobile" @click="getWeather" :title="$t('extra.weather.btn')"><i class="fas fa-arrow-circle-down"></i></button>
         <select class="city-list" v-model="cityName" @change="updateCityName(cityName)">
