@@ -112,7 +112,7 @@ export default class Home extends Vue {};
     .photo {
       grid-area: photo;
       text-align: center;
-      svg {
+      img {
         height: 24rem;
       }
     }
@@ -133,6 +133,9 @@ export default class Home extends Vue {};
       grid-area: info;
       text-align: left;
       font-size: 1.37rem;
+      p {
+        margin: 0.5rem auto;
+      }
     }
   }
   .slider {
@@ -152,19 +155,19 @@ export default class Home extends Vue {};
         "photo icons"
         "info info"
         "slider slider";
-    }
-    .photo {
-      grid-area: photo;
-    }
-    .icons {
-      grid-area: icons;
-      align-self: center;
-      padding-right: 1rem;
-    }
-    .info {
-      grid-area: info;
-      font-size: 1.27rem;
-      padding: 0 0.5rem;
+      .photo {
+        grid-area: photo;
+      }
+      .icons {
+        grid-area: icons;
+        align-self: center;
+        padding-right: 1rem;
+      }
+      .info {
+        grid-area: info;
+        font-size: 1.27rem;
+        padding: 0 0.5rem;
+      }
     }
   }
 }
@@ -182,9 +185,14 @@ export default class Home extends Vue {};
         "slider";
       .photo {
         grid-area: photo;
+        //svg {
+        //  height: 24rem;
+        //  width: 24rem;
+        //}
       }
       .icons {
         grid-area: icons;
+        padding-right: 0;
         align-self: center;
         .logo-image {
           width: 3.7rem;
