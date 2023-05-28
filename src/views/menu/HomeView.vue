@@ -186,6 +186,9 @@ export default class Home extends Vue {};
       .icons {
         grid-area: icons;
         align-self: center;
+        .logo-image {
+          width: 3.7rem;
+        }
       }
       .info {
         grid-area: info;

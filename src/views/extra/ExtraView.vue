@@ -126,16 +126,18 @@ export default class Extra extends Vue {
 
     .prj {
       font-size: 1.5rem;
-      margin-bottom: 1rem;
-      a {
-        //background-color: inherit;
+      //margin-bottom: 1rem;
+      .block {
+        padding: 1.5rem;
+        margin: 0.5rem;
         background-image: url("@/assets/background/background08.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-      }
-      b {
-        color: darkred;
+
+        b {
+          color: darkred;
+        }
       }
     }
 
@@ -158,8 +160,12 @@ export default class Extra extends Vue {
   .extra {
     .container {
       display: inherit;
-      .block {
-        font-size: 1.2rem;
+      .prj {
+        .block {
+          padding: 0.8rem;
+          margin: 0.2rem;
+          font-size: 1.2rem;
+        }
       }
     }
   }
