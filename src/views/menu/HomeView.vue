@@ -62,6 +62,8 @@ export default class Home extends Vue {};
                                                                                                 alt="Github"></a>
         <a href="https://profile.codersrank.io/user/zorger27" title="My CodersRank profile..." target="_blank"><img
           class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>
+        <a href="https://www.facebook.com/anatoliy.zorin" title="My Facebook profile..." target="_blank"><img
+          class=logo-image src="@/assets/ico/facebook.svg" alt="Facebook"></a>
         <a href="/assets/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img
           class=logo-image src="@/assets/ico/download.png" alt="Download file"></a>
       </div>
