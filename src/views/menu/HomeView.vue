@@ -140,7 +140,7 @@ export default class Home extends Vue {};
       text-align: left;
       font-size: 1.37rem;
       p {
-        margin: 0.5rem auto;
+        margin: 1rem auto;
       }
     }
   }
@@ -208,6 +208,9 @@ export default class Home extends Vue {};
         grid-area: info;
         padding: 0 0.3rem;
         font-size: 1.17rem;
+        p {
+          margin: 0.5rem auto;
+        }
       }
     }
   }
