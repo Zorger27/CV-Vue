@@ -50,7 +50,7 @@ export default class Home extends Vue {};
                                                                                             src="@/assets/ico/phone.svg"
                                                                                             alt="Mobile phone"></a>
         <a href="mailto:zorger27@gmail.com" title="Write me: Zorger27@GMail.com" target="_blank"><img class=logo-image
-                                                                                                      src="@/assets/ico/gmail.svg"
+                                                                                                      src="@/assets/ico/mail.svg"
                                                                                                       alt="E-mail"></a>
         <a href="skype:anatoliy.zorin?call" title="Call me by Skype: anatoliy.zorin" target="_blank"><img class=logo-image
                                                                                                           src="@/assets/ico/skype.svg"
@@ -66,8 +66,10 @@ export default class Home extends Vue {};
           class=logo-image src="@/assets/ico/facebook.svg" alt="Facebook"></a>
         <a href="https://www.youtube.com/c/AnatoliiZorin" title="My YouTube chanel..." target="_blank"><img
           class=logo-image src="@/assets/ico/youtube.svg" alt="YouTube"></a>
+        <a href="https://twitter.com/Regroz" title="My Twitter profile..." target="_blank"><img
+          class=logo-image src="@/assets/ico/twitter.svg" alt="Twitter"></a>
         <a href="/assets/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img
-          class=logo-image src="@/assets/ico/download.png" alt="Download file"></a>
+          class=logo-image src="@/assets/ico/download.svg" alt="Download file"></a>
       </div>
       <div class="info">
         <p>
