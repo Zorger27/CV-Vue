@@ -57,7 +57,7 @@ export default class Home extends Vue {
                                                                                                       src="@/assets/ico/mail.svg"
                                                                                                       alt="E-mail"></a>
 <!--        <a href="skype:anatoliy.zorin?call" title="Call me by Skype: anatoliy.zorin" target="_blank"><img class=logo-image-->
-<!--                                                                                                          src="@/assets/ico/skype.svg"-->
+<!--                                                                                                  src="@/assets/ico/skype.svg"-->
 <!--                                                                                                          alt="Skype"></a>-->
         <a href="skype:anatoliy.zorin?chat" title="Skype chat with me" target="_blank"><img class="logo-image"
                                                                                             src="@/assets/ico/skype.svg"
