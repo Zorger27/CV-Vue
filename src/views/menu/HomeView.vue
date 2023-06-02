@@ -28,13 +28,14 @@ import Slider from "@/components/util/Slider.vue";
   },
   components: {Slider},
 })
-export default class Home extends Vue {};
+export default class Home extends Vue {
+};
 </script>
 
 <template>
   <div class="container">
-    <h1>{{ $t ('main.name')}}</h1>
-    <h2>— {{ $t ('main.job')}} —</h2>
+    <h1>{{ $t('main.name') }}</h1>
+    <h2>— {{ $t('main.job') }} —</h2>
     <line></line>
     <div class="home">
       <div class="photo">
@@ -46,9 +47,12 @@ export default class Home extends Vue {};
         <!--      <img src="@/assets/img/photo.png" alt="My photo" title="My photo">-->
       </div>
       <div class="icons">
-        <a href="tel:+380504411801" title="Call me: +380 50 441-18-01" target="_blank"><img class=logo-image
-                                                                                            src="@/assets/ico/phone.svg"
-                                                                                            alt="Mobile phone"></a>
+        <!--        <a href="tel:+380504411801" title="Call me: +380 50 441-18-01" target="_blank"><img class=logo-image-->
+        <!--                                                                                            src="@/assets/ico/phone.svg"-->
+        <!--                                                                                            alt="WhatsApp"></a>-->
+        <a href="https://wa.me/380504411801" title="WhatsApp: +380 50 441-18-01" target="_blank"><img class="logo-image"
+                                                                                                      src="@/assets/ico/phone.svg"
+                                                                                                      alt="WhatsApp"></a>
         <a href="mailto:zorger27@gmail.com" title="Write me: Zorger27@GMail.com" target="_blank"><img class=logo-image
                                                                                                       src="@/assets/ico/mail.svg"
                                                                                                       alt="E-mail"></a>
@@ -73,23 +77,25 @@ export default class Home extends Vue {};
       </div>
       <div class="info">
         <p>
-          {{ $t ('main.info.text01')}}<br>
-          {{ $t ('main.info.text02')}}<br>
+          {{ $t('main.info.text01') }}<br>
+          {{ $t('main.info.text02') }}<br>
         </p>
         <p>
-          {{ $t ('main.info.text03')}} <b>2016</b>{{ $t ('main.info.text04')}}<br>
-          {{ $t ('main.info.text05')}} <b>2020</b>{{ $t ('main.info.text06')}}<br>
-          {{ $t ('main.info.text05')}} <b>2021</b>{{ $t ('main.info.text07')}}<br>
-          {{ $t ('main.info.text05')}} <b>2022</b>{{ $t ('main.info.text08')}}<br>
+          {{ $t('main.info.text03') }} <b>2016</b>{{ $t('main.info.text04') }}<br>
+          {{ $t('main.info.text05') }} <b>2020</b>{{ $t('main.info.text06') }}<br>
+          {{ $t('main.info.text05') }} <b>2021</b>{{ $t('main.info.text07') }}<br>
+          {{ $t('main.info.text05') }} <b>2022</b>{{ $t('main.info.text08') }}<br>
         </p>
         <p>
-          {{ $t ('main.info.text09')}}<br>
-          {{ $t ('main.info.text10')}}<br>
-          {{ $t ('main.info.text11')}}
+          {{ $t('main.info.text09') }}<br>
+          {{ $t('main.info.text10') }}<br>
+          {{ $t('main.info.text11') }}
         </p>
       </div>
     </div>
-    <div class="slider"><Slider :images=sliderImages></Slider></div>
+    <div class="slider">
+      <Slider :images=sliderImages></Slider>
+    </div>
   </div>
 </template>
 
@@ -99,10 +105,12 @@ export default class Home extends Vue {};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
   h1 {
     color: purple;
     margin-bottom: 0;
   }
+
   .home {
     flex: 1 0 auto;
     display: grid;
@@ -118,32 +126,39 @@ export default class Home extends Vue {};
     .photo {
       grid-area: photo;
       text-align: center;
+
       img {
         height: 24rem;
       }
     }
+
     .icons {
       grid-area: icons;
       text-align: center;
       align-self: center;
+
       .logo-image {
         width: 4.7rem;
         border: 2px solid transparent;
         border-radius: 5px;
       }
+
       .logo-image:hover {
         border-color: #9f18bd;
       }
     }
+
     .info {
       grid-area: info;
       text-align: left;
       font-size: 1.37rem;
+
       p {
         margin: 1rem auto;
       }
     }
   }
+
   .slider {
     grid-area: slider;
     background-color: transparent;
@@ -161,14 +176,17 @@ export default class Home extends Vue {};
         "photo icons"
         "info info"
         "slider slider";
+
       .photo {
         grid-area: photo;
       }
+
       .icons {
         grid-area: icons;
         align-self: center;
         padding-right: 1rem;
       }
+
       .info {
         grid-area: info;
         font-size: 1.27rem;
@@ -180,7 +198,10 @@ export default class Home extends Vue {};
 
 @media(max-width: 768px) {
   .container {
-    h2 {font-size: 1.46rem;}
+    h2 {
+      font-size: 1.46rem;
+    }
+
     .home {
       grid-template-columns: 1fr;
       grid-template-rows: auto;
@@ -189,6 +210,7 @@ export default class Home extends Vue {};
         "icons"
         "info"
         "slider";
+
       .photo {
         grid-area: photo;
         //svg {
@@ -196,18 +218,22 @@ export default class Home extends Vue {};
         //  width: 24rem;
         //}
       }
+
       .icons {
         grid-area: icons;
         padding-right: 0;
         align-self: center;
+
         .logo-image {
           width: 3.7rem;
         }
       }
+
       .info {
         grid-area: info;
         padding: 0 0.3rem;
         font-size: 1.17rem;
+
         p {
           margin: 0.5rem auto;
         }

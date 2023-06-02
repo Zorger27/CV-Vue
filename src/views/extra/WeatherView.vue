@@ -32,6 +32,7 @@ export default class WeatherView extends Vue {
 <style lang="scss" scoped>
 .weather {
   flex: 1 0 auto;
+  background: linear-gradient(to bottom, rgb(255, 250, 229), rgb(247, 234, 250)) no-repeat center;
 
   .back {
     display: none;

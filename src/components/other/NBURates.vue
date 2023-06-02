@@ -91,6 +91,7 @@ export default class NBURates extends Vue {}
   a:hover {color: cornflowerblue;}
 }
 .table {
+  background-color: white;
   .code {color: darkgoldenrod;}
   .price {text-align: center;}
 }

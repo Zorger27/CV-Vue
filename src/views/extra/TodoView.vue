@@ -24,6 +24,7 @@ export default class Todo extends Vue {
 <style lang="scss" scoped>
 .todo {
   flex: 1 0 auto;
+  background: linear-gradient(to bottom, rgb(255, 250, 229), rgb(234, 250, 246)) no-repeat center;
 
   .back {
     display: none;

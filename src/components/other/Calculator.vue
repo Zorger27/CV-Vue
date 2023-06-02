@@ -118,6 +118,7 @@ export default class Calculator extends Vue {
     font-size: 2.2rem;
     border-radius: 3px;
     display: grid;
+    background-color: white;
     grid-template-columns: repeat(4, 1fr);
     //grid-auto-rows: minmax(50px, auto);
     grid-column-gap: 0.5rem;

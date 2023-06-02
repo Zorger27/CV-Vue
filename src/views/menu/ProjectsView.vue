@@ -82,6 +82,7 @@ export default class Projects extends Vue {
 <style lang="scss" scoped>
 .projects {
   flex: 1 0 auto;
+  background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
 
   .demolink {
     text-decoration: none;

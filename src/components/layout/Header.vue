@@ -15,7 +15,8 @@ import loginStore from "@/store/modules/service/loginStore";
   methods: {
     login() {
       if (this.isAuthenticated) {
-        this.logout()
+        // this.logout()
+        this.$router.push('/extra');
       } else {
         this.$router.push('/login');
       }

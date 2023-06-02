@@ -65,11 +65,12 @@ export default class Extra extends Vue {
 <style lang="scss" scoped>
 .extra {
   flex: 1 0 auto;
+  //background: linear-gradient(to bottom, rgb(232, 255, 229), rgb(253, 242, 220)) no-repeat center;
   //background: linear-gradient(to bottom, rgba(31, 221, 255, 0.1), rgba(255, 133, 167, 0.1));
-  //background-image: url("@/assets/background/background08.jpg");
-  //background-position: center;
-  //background-size: cover;
-  //background-repeat: no-repeat;
+  background-image: url("@/assets/background/background13.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .container {
     display: inline-grid;
@@ -83,6 +84,7 @@ export default class Extra extends Vue {
     grid-column-gap: 0.5rem;
     grid-row-gap: 0;
     grid-auto-flow: column;
+    margin-bottom: 1rem;
 
     .calculator {
       grid-area: calculator;
@@ -130,6 +132,7 @@ export default class Extra extends Vue {
       .block {
         padding: 1.5rem;
         margin: 0.5rem;
+        box-shadow: 3px 3px 4px 0 rebeccapurple;
         background-image: url("@/assets/background/background08.jpg");
         background-position: center;
         background-size: cover;
@@ -159,6 +162,7 @@ export default class Extra extends Vue {
 @media (max-width: 768px) {
   .extra {
     .container {
+      margin-bottom: 0.5rem;
       display: inherit;
       .prj {
         .block {

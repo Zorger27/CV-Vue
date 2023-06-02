@@ -147,6 +147,7 @@ export default class Notes extends Vue {
 .table {
   font-size: 2rem;
   caret-color: blue;
+  background-color: white;
 
   form {
     display: inline-flex;

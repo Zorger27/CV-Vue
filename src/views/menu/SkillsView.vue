@@ -3,7 +3,7 @@
     <h1>{{$t('skills.title')}}</h1>
     <line></line>
     <div class="container">
-      <img class="codersrank-skills-chart" src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=zorger27&labels=true&legend=true&skills=JSON,JavaScript,Vue,CSS,SCSS,HTML,TypeScript&branding=false"
+      <img class="codersrank-skills-chart" src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=zorger27&labels=true&bg=transparent&legend=true&skills=JSON,JavaScript,Vue,CSS,SCSS,HTML,TypeScript&branding=false"
        alt="Codersrank skills chart"/>
 <!--      <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>-->
       <div class="type-skills">
@@ -38,6 +38,7 @@ export default class Skills extends Vue {}
 <style lang="scss" scoped>
 .skills {
   flex: 1 0 auto;
+  background: linear-gradient(to bottom, rgb(255, 240, 244), rgb(229, 251, 255)) no-repeat center;
   text-align: left;
   h3 {
     text-decoration: underline;

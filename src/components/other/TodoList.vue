@@ -130,6 +130,7 @@ export default class TodoList extends Vue {
 .table {
   font-size: 2rem;
   caret-color: blue;
+  background-color: white;
 
   .completed {
     //text-decoration: line-through;

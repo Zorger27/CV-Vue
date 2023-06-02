@@ -27,6 +27,10 @@ export default class CurrencyRates extends Vue {
 <style lang="scss" scoped>
 .exchange {
   flex: 1 0 auto;
+  background-image: url("@/assets/background/background14.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .back {
     display: none;

@@ -26,6 +26,8 @@ export default class CalculatorView extends Vue {
 <style lang="scss" scoped>
 .calc {
   flex: 1 0 auto;
+  background: linear-gradient(to bottom, rgb(234, 250, 246), rgb(255, 250, 229)) no-repeat center;
+
   .back {
     display: none;
     @media (max-width: 768px) {

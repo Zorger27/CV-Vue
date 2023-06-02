@@ -22,6 +22,7 @@ export default class NotesView extends Vue {
 <style lang="scss" scoped>
 .notes {
   flex: 1 0 auto;
+  background: linear-gradient(to bottom, rgb(230, 238, 252), rgb(255, 251, 229)) no-repeat center;
 
   .back {
     display: none;

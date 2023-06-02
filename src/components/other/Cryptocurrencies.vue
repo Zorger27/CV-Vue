@@ -80,6 +80,9 @@ export default class Cryptocurrencies extends Vue {
 </template>
 
 <style lang="scss" scoped>
+.table {
+  background-color: white;
+}
 .crypto {
   display: inline-flex;
   font-size: 2rem;

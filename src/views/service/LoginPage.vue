@@ -61,7 +61,7 @@ export default class LoginPage extends Vue {
     } else
       console.log('Ошибка в e-mail и/или password');
 
-    const expiration = new Date().getTime() + 24 * 60 * 60 * 1000; // время через 1 день
+    const expiration = new Date().getTime() + 96 * 60 * 60 * 1000; // время через 4 дня
 
     // если пользователь авторизован, перенаправляем на страницу extra
     if (this.$store.getters.isAuthenticated) {
@@ -82,7 +82,7 @@ export default class LoginPage extends Vue {
       localStorage.removeItem('password');
       localStorage.removeItem('expiration');
       location.reload();
-    }, 48 * 60 * 60 * 1000);
+    }, 96 * 60 * 60 * 1000);
   }
 };
 </script>
