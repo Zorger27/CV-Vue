@@ -50,15 +50,18 @@ export default class Home extends Vue {
         <!--        <a href="tel:+380504411801" title="Call me: +380 50 441-18-01" target="_blank"><img class=logo-image-->
         <!--                                                                                            src="@/assets/ico/phone.svg"-->
         <!--                                                                                            alt="WhatsApp"></a>-->
-        <a href="https://wa.me/380504411801" title="WhatsApp: +380 50 441-18-01" target="_blank"><img class="logo-image"
+        <a href="https://wa.me/380504411801" title="WhatsApp chat with me" target="_blank"><img class="logo-image"
                                                                                                       src="@/assets/ico/phone.svg"
                                                                                                       alt="WhatsApp"></a>
         <a href="mailto:zorger27@gmail.com" title="Write me: Zorger27@GMail.com" target="_blank"><img class=logo-image
                                                                                                       src="@/assets/ico/mail.svg"
                                                                                                       alt="E-mail"></a>
-        <a href="skype:anatoliy.zorin?call" title="Call me by Skype: anatoliy.zorin" target="_blank"><img class=logo-image
-                                                                                                          src="@/assets/ico/skype.svg"
-                                                                                                          alt="Skype"></a>
+<!--        <a href="skype:anatoliy.zorin?call" title="Call me by Skype: anatoliy.zorin" target="_blank"><img class=logo-image-->
+<!--                                                                                                          src="@/assets/ico/skype.svg"-->
+<!--                                                                                                          alt="Skype"></a>-->
+        <a href="skype:anatoliy.zorin?chat" title="Skype chat with me" target="_blank"><img class="logo-image"
+                                                                                            src="@/assets/ico/skype.svg"
+                                                                                            alt="Skype"></a>
         <a href="https://www.linkedin.com/in/anatolii-zorin/" title="My LinkedIn profile..." target="_blank"><img
           class=logo-image src="@/assets/ico/linkedin.svg" alt="LinkedIn"></a>
         <a href="https://github.com/Zorger27" title="My Github profile..." target="_blank"><img class=logo-image
