@@ -152,7 +152,6 @@ header {
   display: flex;
   position: relative;
   justify-content: space-between;
-  //background: linear-gradient(to bottom, rgba(229, 228, 228, 0.5), rgba(59, 58, 58, 0.9));
   background-image: radial-gradient(at 0% 100%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
   radial-gradient(at 0% 0%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
   radial-gradient(at 80% 0%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
@@ -242,6 +241,8 @@ header {
   @media (max-width: 768px) {
     display: grid;
     grid-template-columns: 9fr 1fr 1fr 6fr;
+    //grid-template-columns: 1fr 1fr 1fr 1fr;
+    //justify-content: space-between;
     grid-template-rows: auto;
     grid-template-areas: "burger-menu language login logo";
     grid-column-gap: 0.5rem;

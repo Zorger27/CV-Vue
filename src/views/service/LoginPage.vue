@@ -129,7 +129,7 @@ export default class LoginPage extends Vue {
 <style lang="scss" scoped>
 .login {
   flex: 1 0 auto;
-  //background-image: url("@/assets/background/background03.jpg");
+  //background-image: url("@/assets/background/background13.jpg");
   //background-position: center;
   //background-size: cover;
   //background-repeat: no-repeat;
@@ -157,9 +157,12 @@ export default class LoginPage extends Vue {
       background-size: cover;
       background-repeat: no-repeat;
       padding: 2rem;
-      border: 1px solid #ddd;
+      border: 1px solid rgba(112, 111, 111, 0.6);
+      //border: 1px solid #ddd;
+      //border: 1px solid #bbeafa;
       border-radius: 5px;
-      box-shadow: 4px 4px 10px lightgrey;
+      //box-shadow: 4px 4px 10px lightgrey;
+      box-shadow: 4px 4px 10px 0 rebeccapurple;
 
 
       input:active, :focus {

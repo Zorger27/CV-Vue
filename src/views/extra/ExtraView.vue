@@ -65,12 +65,10 @@ export default class Extra extends Vue {
 <style lang="scss" scoped>
 .extra {
   flex: 1 0 auto;
-  //background: linear-gradient(to bottom, rgb(232, 255, 229), rgb(253, 242, 220)) no-repeat center;
-  //background: linear-gradient(to bottom, rgba(31, 221, 255, 0.1), rgba(255, 133, 167, 0.1));
-  background-image: url("@/assets/background/background13.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  //background-image: url("@/assets/background/background13.jpg");
+  //background-position: center;
+  //background-size: cover;
+  //background-repeat: no-repeat;
 
   .container {
     display: inline-grid;

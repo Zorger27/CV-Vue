@@ -10,7 +10,8 @@ import infoStore from "@/store/modules/service/infoStore";
   },
   data() {
     return {
-      tableView: false
+      tableView: false,
+      showMore: false
     }
   },
   methods: {
@@ -30,6 +31,13 @@ export default class About extends Vue {}
     <h1 class="main">
       {{$t ('about.title')}} <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
     </h1>
+    <line></line>
+    <h2 @click="showMore = !showMore" class="more">{{$t ('about.more01')}}<i style="color: red; margin-left: 0.5rem"
+                                                                                               class="fas fa-hand-pointer"></i></h2>
+    <p v-if="showMore" style="margin: 0">{{$t ('about.more02')}}</p>
+    <p v-if="showMore" style="margin: 0">{{$t ('about.more03')}}</p>
+    <h3 v-if="showMore" style="color: deeppink; margin: 0.5rem">{{$t ('about.more04')}}</h3>
+    <h3 v-if="showMore" style="color: deeppink; margin: 0.5rem">{{$t ('about.more05')}}</h3>
     <line></line>
     <!--    <h2>{{$t ('about.technologies')}}</h2>-->
     <div v-if="tableView" class="table">
@@ -96,6 +104,18 @@ export default class About extends Vue {}
   color: darkgoldenrod;
   font-size: 2.5rem;
 }
+.more {
+  display: inline-flex;
+  color: lightseagreen;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  margin: 0.5rem;
+}
+
+.more:hover, :focus {
+  border-bottom: 1px solid lightseagreen;
+}
+
 @media(max-width: 1020px) {
   .title {font-size: 2rem;}
   .prj a {padding: 1rem;}
