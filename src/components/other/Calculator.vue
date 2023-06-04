@@ -4,6 +4,7 @@ import {Options, Vue} from "vue-class-component";
 @Options({
   data() {
     return {
+      history: "", // Добавлено свойство для хранения истории действий
       current: "",
       previous: null,
       operator: null,
@@ -13,15 +14,30 @@ import {Options, Vue} from "vue-class-component";
   methods: {
     clear() {
       this.current = "";
+      this.history = ""; // Очистка истории при нажатии кнопки "AC"
     },
     sign() {
-      this.current =
-          this.current.charAt(0) === "-"
-              ? this.current.slice(1)
-              : `-${this.current}`;
+      if (this.current !== "" && this.current !== "0") {
+        if (this.current.charAt(0) === "-") {
+          this.current = this.current.slice(1);
+        } else {
+          this.current = `-${this.current}`;
+        }
+        this.history += "±";
+      } else if (this.current === "0") {
+        this.current = "-";
+        this.history = "-";
+      }
     },
     percent() {
-      this.current = `${parseFloat(this.current) / 100}`;
+      if (this.previous === null) {
+        this.current = String(parseFloat(this.current) / 100);
+      } else {
+        const percentage = parseFloat(this.previous) * (parseFloat(this.current) / 100);
+        this.current = String(percentage);
+      }
+      this.operatorClicked = false; // Изменение флага оператора на false
+      this.history += "%";
     },
     append(number) {
       if (this.operatorClicked) {
@@ -29,6 +45,7 @@ import {Options, Vue} from "vue-class-component";
         this.operatorClicked = false;
       }
       this.current = `${this.current}${number}`;
+      this.history += number; // Добавление числа в историю
     },
     dot() {
       if (this.current.indexOf(".") === -1) {
@@ -47,27 +64,77 @@ import {Options, Vue} from "vue-class-component";
         return a / b;
       };
       this.setPrevious();
+      this.history += " ÷ "; // Добавление операции в историю
     },
+    // times() {
+    //   if (this.current === "") {
+    //     return;
+    //   }
+    //   if (!this.operatorClicked) {
+    //     this.operator = (a, b) => a * b;
+    //     this.setPrevious();
+    //     this.operatorClicked = true;
+    //     this.history += " × ";
+    //   } else {
+    //     const number = parseFloat(this.current);
+    //     const squareValue = number * number;
+    //     this.current = squareValue % 1 === 0 ? squareValue.toString() : squareValue.toFixed(2);
+    //     this.history += `²`;
+    //   }
+    // },
     times() {
       this.operator = (a, b) => a * b;
       this.setPrevious();
+      this.history += " × "; // Добавление операции в историю
     },
     minus() {
       this.operator = (a, b) => a - b;
       this.setPrevious();
+      this.history += " - "; // Добавление операции в историю
     },
     add() {
       this.operator = (a, b) => a + b;
       this.setPrevious();
+      this.history += " + "; // Добавление операции в историю
     },
+    // square() {
+    //   if (this.current !== "") {
+    //     const number = parseFloat(this.current);
+    //     const squareValue = number * number;
+    //     this.current = squareValue % 1 === 0 ? squareValue.toString() : squareValue.toFixed(2);
+    //     this.history += `²`;
+    //   }
+    // },
     sqrt() {
-      // this.current = `${Math.sqrt(parseFloat(this.current))}`;
-      this.current = parseFloat(this.current) ** (1 / 2);
+      if (this.current === "") {
+        return;
+      }
+      const number = parseFloat(this.current);
+      if (number < 0) {
+        this.current = "🧐";
+        this.history += `√(${this.current})`;
+      } else {
+        const sqrtValue = Math.sqrt(number);
+        this.current = sqrtValue % 1 === 0 ? sqrtValue.toString() : sqrtValue.toFixed(2);
+        this.history += `√${this.current}`;
+      }
     },
     equal() {
-      this.current = `${this.operator(parseFloat(this.previous), parseFloat(this.current))}`;
-      this.previous = null;
-    }
+      if (!this.operatorClicked) {
+        let result = parseFloat(this.current);
+        if (this.operator) {
+          result = this.operator(parseFloat(this.previous), parseFloat(this.current));
+          this.previous = null;
+          this.operator = null;
+        }
+        this.current = result.toFixed(2);
+        this.operatorClicked = true;
+        if (result % 1 === 0) {
+          this.current = String(result); // Изменение типа на строку, если результат является целым числом
+        }
+        this.history += ` = ${this.current}`;
+      }
+    },
   },
   computed: {},
   components: {},
@@ -79,7 +146,9 @@ export default class Calculator extends Vue {
 <template>
   <div class="body">
     <div class="calculator">
-      <div class="display">{{ current || "0" }}</div>
+<!--      <div class="display">{{ history }}</div>-->
+<!--      <div class="display">{{ current || "0" }}</div>-->
+      <div class="display">{{ history || "0" }}</div>
       <div @click="clear" class="btn clear">AC</div>
       <div @click="sign" class="btn">+/-</div>
       <div @click="percent" class="btn">%</div>
