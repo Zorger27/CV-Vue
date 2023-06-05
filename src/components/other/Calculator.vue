@@ -45,7 +45,7 @@ import {Options, Vue} from "vue-class-component";
         this.operatorClicked = false;
       }
       this.current = `${this.current}${number}`;
-      this.history += number; // Добавление числа в историю
+      this.history = (this.history + number).slice(-40);
     },
     dot() {
       if (this.current.indexOf(".") === -1) {
@@ -59,12 +59,12 @@ import {Options, Vue} from "vue-class-component";
     divide() {
       this.operator = (a, b) => {
         if (b === 0) {
-          return "🧐😉🙃😂🤣";
+          return NaN;
         }
         return a / b;
       };
       this.setPrevious();
-      this.history += " ÷ "; // Добавление операции в историю
+      this.history = (this.history + " ÷ ").slice(-40); // Обрезание истории до 40 символов
     },
     // times() {
     //   if (this.current === "") {
@@ -85,17 +85,17 @@ import {Options, Vue} from "vue-class-component";
     times() {
       this.operator = (a, b) => a * b;
       this.setPrevious();
-      this.history += " × "; // Добавление операции в историю
+      this.history = (this.history + " × ").slice(-40); // Обрезание истории до 40 символов
     },
     minus() {
       this.operator = (a, b) => a - b;
       this.setPrevious();
-      this.history += " - "; // Добавление операции в историю
+      this.history = (this.history + " - ").slice(-40); // Обрезание истории до 40 символов
     },
     add() {
       this.operator = (a, b) => a + b;
       this.setPrevious();
-      this.history += " + "; // Добавление операции в историю
+      this.history = (this.history + " + ").slice(-40); // Обрезание истории до 40 символов
     },
     // square() {
     //   if (this.current !== "") {
@@ -112,11 +112,11 @@ import {Options, Vue} from "vue-class-component";
       const number = parseFloat(this.current);
       if (number < 0) {
         this.current = "🧐";
-        this.history += `√(${this.current})`;
+        this.history = (this.history + ` √(${this.current})`).slice(-40);
       } else {
         const sqrtValue = Math.sqrt(number);
         this.current = sqrtValue % 1 === 0 ? sqrtValue.toString() : sqrtValue.toFixed(2);
-        this.history += `√${this.current}`;
+        this.history = (this.history + ` √${this.current}`).slice(-40);
       }
     },
     equal() {
@@ -129,12 +129,50 @@ import {Options, Vue} from "vue-class-component";
         }
         this.current = result.toFixed(2);
         this.operatorClicked = true;
-        if (result % 1 === 0) {
-          this.current = String(result); // Изменение типа на строку, если результат является целым числом
+        if (isNaN(result)) {
+          this.current = "🧐😉🙃😂🤣"; // Заменяем NaN на строку со смайликами
+        } else if (result % 1 === 0) {
+          this.current = String(result);
         }
-        this.history += ` = ${this.current}`;
+        const newHistory = ` = ${this.current}`;
+        if (this.history.length + newHistory.length <= 40) {
+          this.history += newHistory;
+        } else {
+          this.history = `...${newHistory}`;
+        }
       }
     },
+    handleKeyDown(event) {
+      // Получение кода клавиши из события
+      const keyCode = event.keyCode;
+
+      // Обработка клавиш для чисел 0-9
+      if (keyCode >= 48 && keyCode <= 57) {
+        const number = keyCode - 48;
+        this.append(number.toString());
+      }
+
+      // Обработка клавиш для операторов +, -, *, /
+      if (keyCode === 43) { // +
+        this.add();
+      } else if (keyCode === 45) { // -
+        this.minus();
+      } else if (keyCode === 42) { // *
+        this.times();
+      } else if (keyCode === 47) { // /
+        this.divide();
+      } else if (keyCode === 13) { // Обработка клавиши Enter (код 13)
+        this.equal();
+      }
+    }
+  },
+  mounted() {
+    // Добавление обработчика для события нажатия клавиши на всём окне
+    window.addEventListener('keydown', this.handleKeyDown);
+  },
+  beforeUnmount() {
+    // Удаление обработчика события перед выгрузкой компонента
+    window.removeEventListener('keydown', this.handleKeyDown);
   },
   computed: {},
   components: {},
@@ -146,9 +184,13 @@ export default class Calculator extends Vue {
 <template>
   <div class="body">
     <div class="calculator">
-<!--      <div class="display">{{ history }}</div>-->
-<!--      <div class="display">{{ current || "0" }}</div>-->
-      <div class="display">{{ history || "0" }}</div>
+      <div class="display">
+        <div class="current">
+          {{ current && current.length > 10 ? current.slice(0, 10) + '...' : current || "0" }}
+        </div>
+<!--        <div class="history" :class="{ 'ellipsis': history.length > 40 }">{{ history }}</div>-->
+        <div class="history">{{ history }}</div>
+      </div>
       <div @click="clear" class="btn clear">AC</div>
       <div @click="sign" class="btn">+/-</div>
       <div @click="percent" class="btn">%</div>
@@ -197,13 +239,26 @@ export default class Calculator extends Vue {
       grid-column: 1 / 5;
       border: 1px solid #ddd;
       border-radius: 3px;
-      font-size: 2.7rem;
-      font-weight: bold;
-      padding: 0.5rem 0.75rem;
+      padding: 0.4rem 0.75rem;
       margin-bottom: 1rem;
       text-align: right;
-      overflow-x: auto;
       transition: all .2s ease-in-out;
+      .current {
+        font-size: 2.5rem;
+        font-weight: bold;
+        overflow-x: auto;
+        border-bottom: 1px solid #ddd;
+      }
+      .history {
+        height: 1.2rem;
+        font-size: 0.8rem;
+      }
+      //.ellipsis {
+      //  text-overflow: ellipsis;
+      //  overflow: hidden;
+      //  white-space: nowrap;
+      //  direction: rtl; // изменит направление текста на "справа налево"
+      //}
     }
 
     .display:hover {
@@ -282,7 +337,7 @@ export default class Calculator extends Vue {
   @media (max-width: 768px) {
     .calculator {
       margin: 0.5rem auto;
-      padding: 0.8rem;
+      padding: 0.6rem;
       font-size: 1.8rem;
       grid-column-gap: 0.3rem;
 
