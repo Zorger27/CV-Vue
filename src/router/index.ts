@@ -1,4 +1,5 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+// import { createRouter, createWebHistory, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Home from "@/views/menu/HomeView.vue";
 import Projects from "@/views/menu/ProjectsView.vue";
 import Education from "@/views/menu/EducationView.vue";
@@ -318,9 +319,10 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(process.env.BASE_URL),
+  // history: createWebHashHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL),
   routes
-})
+});
 
 // https://www.digitalocean.com/community/tutorials/vuejs-vue-router-modify-head
 // Этот callback запускается перед каждым изменением маршрута, в том числе при загрузке страницы.
