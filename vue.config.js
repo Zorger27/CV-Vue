@@ -25,8 +25,12 @@ module.exports = defineConfig({
                 ]
             }),
             new HtmlWebpackTagsPlugin({
+                // scripts: [
+                //     'https://www.googletagmanager.com/gtag/js?id=G-RZXQRX8XR0',
+                //     '/assets/analytics/ganal.js'
+                // ],
                 scripts: [
-                    'https://www.googletagmanager.com/gtag/js?id=G-RZXQRX8XR0',
+                    'https://www.googletagmanager.com/gtag/js?id=G-RZHR947YVN',
                     '/assets/analytics/ganal.js'
                 ],
                 append: true,
