@@ -3,9 +3,8 @@
     <h1>{{$t('skills.title')}}</h1>
     <line></line>
     <div class="container">
-      <img class="codersrank-skills-chart" src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=zorger27&labels=true&bg=transparent&legend=true&skills=JSON,JavaScript,Vue,CSS,SCSS,HTML,TypeScript&branding=false"
-       alt="Codersrank skills chart"/>
-<!--      <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>-->
+<!--      <img class="codersrank-skills-chart" src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=zorger27&labels=true&bg=transparent&legend=true&skills=JSON,JavaScript,Vue,CSS,SCSS,HTML,TypeScript&branding=false" alt="Codersrank skills chart"/>-->
+      <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>
       <div class="type-skills">
         <div class="hard-skills">
           <h3>{{$t('skills.hard')}}</h3>
@@ -67,7 +66,13 @@ export default class Skills extends Vue {}
     padding: 0 0 0.3rem 1.5rem;
   }
 }
-img {
+//img {
+//  grid-area: codersrank-skills-chart;
+//  margin-top: 0.5rem;
+//  width: 100%;
+//}
+
+codersrank-skills-chart {
   grid-area: codersrank-skills-chart;
   margin-top: 0.5rem;
   width: 100%;
@@ -104,6 +109,11 @@ img {
         "type-skills";
     }
   }
+  codersrank-skills-chart {
+    --label-font-size: 9px;
+    --label-font-weight: 300;
+  }
+
   .type-skills {
     display: grid;
     justify-content: left;
