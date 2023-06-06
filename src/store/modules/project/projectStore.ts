@@ -15,7 +15,7 @@ const state = {
         type: "Single page application",
         techno: "Vue.JS, VueX, HTML5, CSS3, TypeScript",
         sourcelink: "https://github.com/Zorger27/CV-Vue",
-        demolink: "https://cv-on-vue.vercel.app"
+        demolink: "https://Zorin.Expert"
       },
       {
         id: 3,
