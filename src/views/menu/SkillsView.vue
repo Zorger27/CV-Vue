@@ -39,16 +39,6 @@ export default class Skills extends Vue {}
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(255, 240, 244), rgb(229, 251, 255)) no-repeat center;
   text-align: left;
-  h3 {
-    text-decoration: underline;
-    color: deeppink;
-    margin-top: 0.5rem;
-    margin-bottom: -0.7rem;
-    padding: 0 0 0.3rem 1.5rem;
-  }
-  span {
-    margin-right: 0.5rem;
-  }
   .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -56,14 +46,38 @@ export default class Skills extends Vue {}
     grid-gap: 1rem;
     grid-auto-flow: column;
     grid-template-areas: "codersrank-skills-chart type-skills";
-  }
-  .hard-skills ul {
-    list-style: none;
-    padding: 0 0 0.3rem 1.5rem;
-  }
-  .soft-skills ul {
-    list-style: none;
-    padding: 0 0 0.3rem 1.5rem;
+
+    codersrank-skills-chart {
+      grid-area: codersrank-skills-chart;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+    .type-skills {
+      grid-area: type-skills;
+      margin: 0 0.5rem 0 0;
+      font-size: xx-large;
+
+      h3 {
+        text-decoration: underline;
+        color: deeppink;
+        margin-top: 0.5rem;
+        margin-bottom: -0.7rem;
+        padding: 0 0 0.3rem 1.5rem;
+      }
+      span {
+        margin-right: 0.5rem;
+      }
+
+      .hard-skills ul {
+        list-style: none;
+        padding: 0 0 0.3rem 1.5rem;
+      }
+      .soft-skills ul {
+        list-style: none;
+        padding: 0 0 0.3rem 1.5rem;
+      }
+    }
   }
 }
 //img {
@@ -72,18 +86,6 @@ export default class Skills extends Vue {}
 //  width: 100%;
 //}
 
-codersrank-skills-chart {
-  grid-area: codersrank-skills-chart;
-  margin-top: 0.5rem;
-  width: 100%;
-}
-
-.type-skills {
-  grid-area: type-skills;
-  margin: 0 0.5rem 0 0;
-  font-size: xx-large;
-}
-
 @media(max-width:1020px) {
   .skills {
     .container {
@@ -91,12 +93,13 @@ codersrank-skills-chart {
       grid-template-areas:
         "codersrank-skills-chart"
         "type-skills";
+
+      .type-skills {
+        display: inline-flex;
+        justify-content: space-around;
+        font-size: x-large;
+      }
     }
-  }
-  .type-skills {
-    display: inline-flex;
-    justify-content: space-around;
-    font-size: x-large;
   }
 }
 
@@ -107,17 +110,18 @@ codersrank-skills-chart {
       grid-template-areas:
         "codersrank-skills-chart"
         "type-skills";
-    }
-  }
-  codersrank-skills-chart {
-    --label-font-size: 9px;
-    --label-font-weight: 300;
-  }
 
-  .type-skills {
-    display: grid;
-    justify-content: left;
-    font-size: large;
+      codersrank-skills-chart {
+        --label-font-size: 9px;
+        --label-font-weight: 300;
+      }
+
+      .type-skills {
+        display: grid;
+        justify-content: left;
+        font-size: large;
+      }
+    }
   }
 }
 </style>
