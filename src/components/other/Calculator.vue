@@ -252,6 +252,7 @@ export default class Calculator extends Vue {
       .history {
         height: 1.2rem;
         font-size: 0.8rem;
+        color: darkblue;
       }
       //.ellipsis {
       //  text-overflow: ellipsis;
