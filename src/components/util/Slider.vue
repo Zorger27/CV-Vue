@@ -5,10 +5,10 @@
         <img :src="image" alt="slider image">
       </div>
     </div>
-<!--    <div class="slider-controls">-->
-<!--      <button class="left-control" @click="previousSlide"><i class="fa fa-angle-left"></i></button>-->
-<!--      <button class="right-control" @click="nextSlide"><i class="fa fa-angle-right"></i></button>-->
-<!--    </div>-->
+    <!--    <div class="slider-controls">-->
+    <!--      <button class="left-control" @click="previousSlide"><i class="fa fa-angle-left"></i></button>-->
+    <!--      <button class="right-control" @click="nextSlide"><i class="fa fa-angle-right"></i></button>-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -153,11 +153,14 @@ export default {
   overflow: hidden;
   width: 100%;
   height: 100%;
+
   .slider-wrapper {
     display: flex;
     transition: transform 0.5s ease-out;
+
     .slider-item {
       flex: 0 0 100%;
+
       img {
         width: 100%;
         height: 100%;
@@ -165,6 +168,7 @@ export default {
       }
     }
   }
+
   .slider-controls {
     position: absolute;
     top: 50%;
@@ -174,6 +178,7 @@ export default {
     width: 100%;
     height: 100%;
     pointer-events: none;
+
     .left-control, .right-control {
       pointer-events: all;
       position: absolute;
@@ -184,16 +189,21 @@ export default {
       color: darkred;
       font-size: 2.5rem;
       cursor: pointer;
-      @media(max-width:1020px) {
+
+      @media(max-width: 1020px) {
         font-size: 2.0rem;
       }
-      @media(max-width:768px) {
+
+      @media(max-width: 768px) {
         font-size: 1.5rem;
       }
+
     }
+
     .left-control {
       left: 0.3rem;
     }
+
     .right-control {
       right: 0.3rem;
     }

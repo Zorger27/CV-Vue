@@ -82,7 +82,11 @@ export default class Pm extends Vue {
     }
   }
 }
+.slider {margin-bottom: 1rem;}
+
 @media(max-width:768px) {
+  .slider {margin-bottom: 0.3rem;}
+
   .diplom, .title {font-size: 1.2rem}
   .table {font-size: 0.9rem;
     .nomer, .number, .grade, .date {font-size: 0.5rem;}

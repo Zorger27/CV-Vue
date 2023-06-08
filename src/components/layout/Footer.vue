@@ -91,13 +91,15 @@ footer {
   }
 }
 @media (max-width: 768px) {
-  .footer-logo {
-    margin: 0.5rem;
-    padding: 0;
-    svg {
-      min-width: 100%;
-      width: 4rem;
-      min-height:100%;
+  footer {
+    .footer-logo {
+      margin: 0.5rem;
+      padding: 0;
+      svg {
+        min-width: 100%;
+        width: 4rem;
+        min-height:100%;
+      }
     }
   }
 }
