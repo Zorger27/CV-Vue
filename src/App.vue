@@ -3,10 +3,7 @@
     <Header v-if="!is404Page"/>
       <router-view></router-view>
     <Footer v-if="!is404Page"/>
-<!--    <router-view>-->
-<!--      <Header v-if="!is404Page"/>-->
-<!--      <Footer v-if="!is404Page"/>-->
-<!--    </router-view>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   </div>
 </template>
 
