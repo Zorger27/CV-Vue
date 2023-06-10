@@ -25,12 +25,14 @@ module.exports = defineConfig({
         ]
       }),
       new HtmlWebpackTagsPlugin({
-        // tags: [
-        //   {
-        //     path: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css',
-        //     external: true,
-        //   },
-        // ],
+        links: [
+          {
+            path: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css',
+            attributes: {
+              rel: 'stylesheet'
+            },
+          },
+        ],
         scripts: [
           'https://www.googletagmanager.com/gtag/js?id=G-RZHR947YVN',
           '/assets/analytics/ganal.js',
