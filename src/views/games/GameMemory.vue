@@ -13,8 +13,6 @@ interface Card {
     return {
       cards: [
         {fruit: 'apple', image: '/assets/memory/Apple.png', flipped: false, matched: false},
-        // {fruit: 'apple', image: require('@/assets/memory/Apple.svg'), flipped: false, matched: false},
-        // {fruit: 'apple', image: require('@/assets/memory/Apple.svg'), flipped: false, matched: false},
         {fruit: 'apple', image: '/assets/memory/Apple.png', flipped: false, matched: false},
         {fruit: 'banana', image: '/assets/memory/Banana.png', flipped: false, matched: false},
         {fruit: 'banana', image: '/assets/memory/Banana.png', flipped: false, matched: false},
@@ -129,6 +127,10 @@ export default class GameMemory extends Vue {}
 <style lang="scss" scoped>
 .memory {
   flex: 1 0 auto;
+  background-image: url("@/assets/background/background12.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .back {
     display: inline-flex;
@@ -144,15 +146,21 @@ export default class GameMemory extends Vue {}
     padding: 0.5rem 1rem;
     margin-bottom: 0.8rem;
     font-size: 1.4rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    font-weight: bold;
+    background-image: url("@/assets/background/background10.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    //background-color: #f9f9f9;
+    //border: 1px solid #ddd;
+    border: 1px solid lightslategrey;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
   }
   button:hover {
-    background-color: #f1f1f1;
+    //background-color: #f1f1f1;
     box-shadow: 3px 3px 4px 0 lightgrey;
     //border-color: coral;
   }
@@ -213,8 +221,9 @@ export default class GameMemory extends Vue {}
 
   .front-face,
   .back-face {
-    border-radius: 3px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
   }
 
   .front-face {
