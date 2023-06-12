@@ -63,6 +63,18 @@ const state = {
             },
             {
                 id: 6,
+                title_en: "Basic software developer training",
+                title_ua: "Базова підготовка розробника ПЗ",
+                title_es: "Capacitación básica para desarrolladores de software",
+                regnumber: "TP17348317",
+                grade_en: "985 / 1000",
+                grade_ua: "985 / 1000",
+                grade_es: "985 / 1000",
+                examdate: "26.07.2021",
+                image: "https://testprovider.com/ru/search-certificate/tp17348317",
+            },
+            {
+                id: 7,
                 title_en: "Google Display Network",
                 title_ua: "Медійна мережа Google",
                 title_es: "Red de Display de Google",
@@ -71,10 +83,10 @@ const state = {
                 grade_ua: "Успішно складено іспит",
                 grade_es: "Aprobó con éxito el examen",
                 examdate: "18.02.2020",
-                image: "/assets/certificates/other/06_Google_Display_Network_Ads.jpg",
+                image: "/assets/certificates/other/07_Google_Display_Network_Ads.jpg",
             },
             {
-                id: 7,
+                id: 8,
                 title_en: "Google Shopping Campaign",
                 title_ua: "Торгові компанії Google",
                 title_es: "Campaña de Google Shopping",
@@ -83,10 +95,10 @@ const state = {
                 grade_ua: "Успішно складено іспит",
                 grade_es: "Aprobó con éxito el examen",
                 examdate: "20.02.2020",
-                image: "/assets/certificates/other/07_Google_Shopping_Campaign.jpg",
+                image: "/assets/certificates/other/08_Google_Shopping_Campaign.jpg",
             },
             {
-                id: 8,
+                id: 9,
                 title_en: "Google Search Campaign",
                 title_ua: "Пошукові компанії Google",
                 title_es: "Campaña de búsqueda de Google",
@@ -95,10 +107,10 @@ const state = {
                 grade_ua: "Успішно складено іспит",
                 grade_es: "Aprobó con éxito el examen",
                 examdate: "16.03.2020",
-                image: "/assets/certificates/other/08_Google_Search_Campaign.jpg",
+                image: "/assets/certificates/other/09_Google_Search_Campaign.jpg",
             },
             {
-                id: 9,
+                id: 10,
                 title_en: "Google Video Campaign",
                 title_ua: "Відеокомпанії Google",
                 title_es: "Campaña de Google Video",
@@ -107,7 +119,7 @@ const state = {
                 grade_ua: "Успішно складено іспит",
                 grade_es: "Aprobó con éxito el examen",
                 examdate: "17.03.2020",
-                image: "/assets/certificates/other/09_Google_Video_Campaign.jpg",
+                image: "/assets/certificates/other/10_Google_Video_Campaign.jpg",
             }
         ]
 };

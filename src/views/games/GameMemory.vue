@@ -162,6 +162,7 @@ export default class GameMemory extends Vue {}
   button:hover {
     //background-color: #f1f1f1;
     box-shadow: 3px 3px 4px 0 lightgrey;
+    //color: white;
     //border-color: coral;
   }
 
@@ -178,7 +179,7 @@ export default class GameMemory extends Vue {}
 
   .memory-game {
     display: grid;
-    margin: 0.5rem auto;
+    margin: 1rem auto;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 0.5rem;
     width: 50%;
@@ -221,9 +222,8 @@ export default class GameMemory extends Vue {}
 
   .front-face,
   .back-face {
-    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
+    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    //border-radius: 10px;
   }
 
   .front-face {
@@ -254,7 +254,7 @@ export default class GameMemory extends Vue {}
 
   @media (max-width: 768px) {
     .memory-game {
-      margin: 0.3rem auto;
+      margin: 0.5rem auto;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 0.3rem;
       width: 30%;

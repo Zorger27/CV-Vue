@@ -64,7 +64,7 @@ export default class English extends Vue {
         <tbody>
         <tr v-for="sert in englishStore.state.englishStore" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
-          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ sert.title }}</a></td>
+          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
           <td class="grade">{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</td>
           <td class="date">{{ sert.examdate }}</td>
@@ -74,7 +74,7 @@ export default class English extends Vue {
     </div>
     <div v-else v-for="sert in englishStore.state.englishStore" :key="sert.id" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-        <h3>{{ sert.id }}. {{ sert.title }}</h3>
+        <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
         <div>{{ $t('cert.level') }}: <strong>{{ sert.regnumber }}</strong></div>
         <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
         <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
