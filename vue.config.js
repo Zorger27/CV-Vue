@@ -3,8 +3,9 @@ const {defineConfig} = require('@vue/cli-service')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-// const SitemapPlugin = require('sitemap-webpack-plugin').default;
-// const routes = require('@/router/index').default; // Импортируем файл с маршрутами
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
+// const routes = require('src/router/index').default;
+const routes = require('./src/router/index').default; // Путь к файлу с маршрутами
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -74,14 +75,14 @@ module.exports = defineConfig({
           developerURL: null
         }
       }),
-      // new SitemapPlugin({ // Добавляем плагин Sitemap
-      //   base: 'https://zorin.expert', // Базовый URL моего сайта
-      //   // paths: routes.getRoutes().map(route => route.path), // Используем все пути из маршрутов.
-      //   paths,
-      //   options: {
-      //     // Опции настройки плагина.
-      //   },
-      // }),
+      new SitemapPlugin({
+        base: 'https://zorin.expert', // Базовый URL моего сайта
+        // paths: routes.getRoutes().map(route => route.path), // Используем все пути из маршрутов.
+        paths: routes,
+        options: {
+          // Опции настройки плагина.
+        },
+      }),
       // new SitemapPlugin({
       //   base: 'https://zorin.expert',
       //   paths,

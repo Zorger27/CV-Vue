@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-// import { createRouter, createWebHistory, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Home from "@/views/menu/HomeView.vue";
 import Projects from "@/views/menu/ProjectsView.vue";
 import Education from "@/views/menu/EducationView.vue";
