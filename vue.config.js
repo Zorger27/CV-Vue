@@ -77,6 +77,7 @@ module.exports = defineConfig({
       new SitemapPlugin({ // Добавляем плагин Sitemap
         base: 'https://zorin.expert', // Базовый URL моего сайта
         // paths: routes.getRoutes().map(route => route.path), // Используем все пути из маршрутов.
+        paths: {},
         options: {
           // Опции настройки плагина.
         },
