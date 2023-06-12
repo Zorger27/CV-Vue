@@ -79,17 +79,41 @@ module.exports = defineConfig({
         // paths: routes.getRoutes().map(route => route.path), // Используем все пути из маршрутов.
         paths: [
           { path: '/', priority: 1, changefreq: 'weekly' },
-          { path: '/about', priority: 0.8, changefreq: 'weekly' },
+          { path: '/login', priority: 1, changefreq: 'weekly' },
+          { path: '/projects', priority: 1, changefreq: 'weekly' },
+          { path: '/education', priority: 1, changefreq: 'weekly' },
+          { path: '/experience', priority: 1, changefreq: 'weekly' },
+          { path: '/skills', priority: 1, changefreq: 'weekly' },
+          { path: '/certificates', priority: 1, changefreq: 'weekly' },
+          { path: '/certificates/backend', priority: 1, changefreq: 'weekly' },
+          { path: '/certificates/frontend', priority: 1, changefreq: 'weekly' },
+          { path: '/certificates/database', priority: 1, changefreq: 'weekly' },
+          { path: '/certificates/designer', priority: 1, changefreq: 'weekly' },
+          { path: '/certificates/pm', priority: 1, changefreq: 'weekly' },
+          { path: '/certificates/english', priority: 1, changefreq: 'weekly' },
+          { path: '/certificates/other', priority: 1, changefreq: 'weekly' },
+          { path: '/about', priority: 0.8, changefreq: 'monthly' },
+          { path: '/extra', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/calculator', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/cryptocur', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/cube', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/rates', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/games', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/games/memory', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/notes', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/tasks', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/todo', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/weather', priority: 1, changefreq: 'weekly' },
+          { path: '/extra/tasks/palindrome', priority: 0.5, changefreq: 'monthly' },
+          { path: '/extra/tasks/fizzbuzz', priority: 0.5, changefreq: 'monthly' },
+          { path: '/extra/tasks/anagram', priority: 0.5, changefreq: 'monthly' },
+          { path: '/extra/tasks/findvowels', priority: 0.5, changefreq: 'monthly' },
+          { path: '/extra/tasks/fibonacci', priority: 0.5, changefreq: 'monthly' },
         ],
         options: {
           // Опции настройки плагина.
         },
       }),
-      // new SitemapPlugin({
-      //   base: 'https://zorin.expert',
-      //   paths,
-      //   options: {},
-      // })
     ]
   }
 })
