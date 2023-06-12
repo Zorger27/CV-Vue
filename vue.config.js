@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
-const routes = require('./src/router').default; // Импортируем файл с маршрутами
+const routes = require('/src/router').default; // Импортируем файл с маршрутами
 
 module.exports = defineConfig({
   transpileDependencies: true,
