@@ -4,8 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
-// const routes = require('src/router/index').default;
-const routes = require('src/router/index').default; // Путь к файлу с маршрутами
+// const routes = require('src/router/index').default; // Путь к файлу с маршрутами
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -78,7 +77,10 @@ module.exports = defineConfig({
       new SitemapPlugin({
         base: 'https://zorin.expert', // Базовый URL моего сайта
         // paths: routes.getRoutes().map(route => route.path), // Используем все пути из маршрутов.
-        paths: routes,
+        paths: [
+          { path: '/', priority: 1, changefreq: 'weekly' },
+          { path: '/about', priority: 0.8, changefreq: 'weekly' },
+        ],
         options: {
           // Опции настройки плагина.
         },
