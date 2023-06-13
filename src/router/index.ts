@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import {createRouter, createWebHistory, RouteRecordNormalized, RouteRecordRaw} from 'vue-router'
 import Home from "@/views/menu/HomeView.vue";
 import Projects from "@/views/menu/ProjectsView.vue";
 import Education from "@/views/menu/EducationView.vue";
@@ -52,10 +52,10 @@ const routes: Array<RouteRecordRaw> = [
       //     name: 'google-site-verification',
       //     content: 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'
       //   }
-        // {
-        //   property: 'og:description',
-        //   content: 'The home page of our example app.'
-        // }
+      // {
+      //   property: 'og:description',
+      //   content: 'The home page of our example app.'
+      // }
       // ]
     }
   },
@@ -327,61 +327,61 @@ const router = createRouter({
 // Этот callback запускается перед каждым изменением маршрута, в том числе при загрузке страницы.
 router.beforeEach((to, from, next) => {
 // Это просматривает совпадающие маршруты от последнего к первому, находя ближайший маршрут с заголовком.
-// Например, если у нас есть `/some/deep/nested/route`, и `/some`, `/deep` и `/nested` имеют заголовки,
-// будут выбраны `/nested`.
+// Например, если у нас есть `/some/deep/nested/route`, и `/some`, `/deep` и `/nested` имеют заголовки, будут выбраны `/nested`.
 
   const loggedIn = localStorage.getItem('expiration') // Проверяем, авторизован ли пользователь
   if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
     next('/login') // Если пользователь не авторизован, перенаправляем его на страницу логина
   }
 
-  // if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
-  //   next('/login') // Если пользователь не авторизован, перенаправляем его на страницу логина
-  // } else {
-  //   next()
-  // }
+  // Этот код позволяет управлять заголовками страниц и мета-тегами при навигации между маршрутами.
+  // Он также удаляет и очищает устаревшие мета-теги, которые были добавлены при предыдущих навигациях,
+  // чтобы избежать конфликтов и обеспечить корректное обновление мета-информации на каждой странице.
 
+  // Находим ближайший маршрут с метаданными 'title'
   const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
-
-  // Находим ближайший элемент маршрута с метатегами.
-  const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
-
+  // Находим ближайший маршрут с метаданными 'metaTags'
+  const nearestWithMeta = to.matched.slice().reverse().find((r: any) => r.meta && r.meta.metaTags) as RouteRecordNormalized;
+  // Находим ближайший маршрут с метаданными 'metaTags' у предыдущего маршрута
   const previousNearestWithMeta = from.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
 
   // Если маршрут с заголовком был найден, устанавливает заголовок документа (страницы) в это значение.
-  if(nearestWithTitle) {
-    // @ts-ignore
-    document.title = nearestWithTitle.meta.title;
-  } else if(previousNearestWithMeta) {
-    // @ts-ignore
-    document.title = previousNearestWithMeta.meta.title;
+  if (nearestWithTitle && nearestWithTitle.meta && nearestWithTitle.meta.title) {
+    document.title = nearestWithTitle.meta.title as string;
+  } else if (previousNearestWithMeta && previousNearestWithMeta.meta && previousNearestWithMeta.meta.title) {
+    document.title = previousNearestWithMeta.meta.title as string;
   }
 
-  // Удаляем все устаревшие метатеги из документа, используя ключевой атрибут, который мы установили ниже.
-  // @ts-ignore
-  Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(el => el.parentNode.removeChild(el));
+  // Удаляем все элементы, которые были добавлены через Vue Router
+  const controlledElements = Array.from(document.querySelectorAll('[data-vue-router-controlled]')) as HTMLElement[];
+  controlledElements.forEach(el => el.parentNode?.removeChild(el));
 
-  // Пропускаем метатеги рендеринга, если их нет.
-  if(!nearestWithMeta) return next();
+  // Проверяем, есть ли у нас метатеги для рендеринга.
+  // Если их нет, то пропускаем рендеринг и переходим к следующему маршруту с помощью return next().
+  if (!nearestWithMeta) {
+    return next();
+  }
 
-  // Превращаем определения метатегов в реальные элементы в теге head.
-  // @ts-ignore
-  nearestWithMeta.meta.metaTags.map(tagDef => {
-    const tag = document.createElement('meta');
+  // Обрабатываем и добавляем метатеги в тег <head> документа на основе данных из массива metaTags.
+  // (nearestWithMeta as unknown as { meta: { metaTags: Array<{ [key: string]: string }> } }).meta.metaTags.map(tagDef => {
+  if ('meta' in nearestWithMeta && Array.isArray(nearestWithMeta.meta.metaTags)) {
+    nearestWithMeta.meta.metaTags.map((tagDef: { [key: string]: string }) => {
 
-    Object.keys(tagDef).forEach(key => {
-      tag.setAttribute(key, tagDef[key]);
-    });
+      const tag = document.createElement('meta');
 
-    // Используем это, чтобы отслеживать, какие метатеги мы создаем, чтобы не мешать другим.
-    tag.setAttribute('data-vue-router-controlled', '');
+      Object.keys(tagDef).forEach(key => {
+        tag.setAttribute(key, tagDef[key]);
+      });
+      // Используем это, чтобы отслеживать, какие метатеги мы создаем, чтобы не мешать другим.
+      tag.setAttribute('data-vue-router-controlled', '');
 
-    return tag;
-  })
+      return tag;
+    })
       // Добавляем метатеги в тег head документа.
       .forEach(tag => document.head.appendChild(tag));
 
-  next();
+    next();
+  }
 });
 
 export default router
