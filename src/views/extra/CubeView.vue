@@ -30,7 +30,11 @@ export default class Cube extends Vue {
 <style lang="scss" scoped>
 .cube {
   flex: 1 0 auto;
-  background: linear-gradient(to bottom, rgb(247, 234, 250), rgb(255, 250, 229)) no-repeat center;
+  //background: linear-gradient(to bottom, rgb(247, 234, 250), rgb(255, 250, 229)) no-repeat center;
+  background-image: url("@/assets/background/background18.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .back-to-menu {
     display: none;

@@ -82,7 +82,7 @@ export default class Projects extends Vue {
 <style lang="scss" scoped>
 .projects {
   flex: 1 0 auto;
-  background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
+  background: linear-gradient(to bottom, rgb(255, 249, 229), rgb(255, 240, 244)) no-repeat center;
 
   .demolink {
     text-decoration: none;
@@ -169,11 +169,13 @@ export default class Projects extends Vue {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        border-color: rgba(0, 0, 0, 0.3);
         .link .link2 {display: flex;}
       }
       .block:hover {
-        box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.7);
-        border-color: rgba(0, 0, 0, 0.4);
+        //box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.7);
+        //border-color: rgba(0, 0, 0, 0.4);
       }
     }
   }

@@ -318,12 +318,10 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  // history: createWebHashHistory(process.env.BASE_URL),
   history: createWebHistory(process.env.BASE_URL),
   routes
 });
 
-// https://www.digitalocean.com/community/tutorials/vuejs-vue-router-modify-head
 // Этот callback запускается перед каждым изменением маршрута, в том числе при загрузке страницы.
 router.beforeEach((to, from, next) => {
 // Это просматривает совпадающие маршруты от последнего к первому, находя ближайший маршрут с заголовком.
@@ -363,7 +361,6 @@ router.beforeEach((to, from, next) => {
   }
 
   // Обрабатываем и добавляем метатеги в тег <head> документа на основе данных из массива metaTags.
-  // (nearestWithMeta as unknown as { meta: { metaTags: Array<{ [key: string]: string }> } }).meta.metaTags.map(tagDef => {
   if ('meta' in nearestWithMeta && Array.isArray(nearestWithMeta.meta.metaTags)) {
     nearestWithMeta.meta.metaTags.map((tagDef: { [key: string]: string }) => {
 
@@ -379,9 +376,8 @@ router.beforeEach((to, from, next) => {
     })
       // Добавляем метатеги в тег head документа.
       .forEach(tag => document.head.appendChild(tag));
-
-    next();
   }
+  next();
 });
 
 export default router

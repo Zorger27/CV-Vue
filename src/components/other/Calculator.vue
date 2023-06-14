@@ -66,22 +66,6 @@ import {Options, Vue} from "vue-class-component";
       this.setPrevious();
       this.history = (this.history + " ÷ ").slice(-40); // Обрезание истории до 40 символов
     },
-    // times() {
-    //   if (this.current === "") {
-    //     return;
-    //   }
-    //   if (!this.operatorClicked) {
-    //     this.operator = (a, b) => a * b;
-    //     this.setPrevious();
-    //     this.operatorClicked = true;
-    //     this.history += " × ";
-    //   } else {
-    //     const number = parseFloat(this.current);
-    //     const squareValue = number * number;
-    //     this.current = squareValue % 1 === 0 ? squareValue.toString() : squareValue.toFixed(2);
-    //     this.history += `²`;
-    //   }
-    // },
     times() {
       this.operator = (a, b) => a * b;
       this.setPrevious();
@@ -97,14 +81,6 @@ import {Options, Vue} from "vue-class-component";
       this.setPrevious();
       this.history = (this.history + " + ").slice(-40); // Обрезание истории до 40 символов
     },
-    // square() {
-    //   if (this.current !== "") {
-    //     const number = parseFloat(this.current);
-    //     const squareValue = number * number;
-    //     this.current = squareValue % 1 === 0 ? squareValue.toString() : squareValue.toFixed(2);
-    //     this.history += `²`;
-    //   }
-    // },
     sqrt() {
       if (this.current === "") {
         return;
