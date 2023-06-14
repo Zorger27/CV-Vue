@@ -4,7 +4,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
-// const routes = require('src/router/index').default; // Путь к файлу с маршрутами
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -69,7 +68,7 @@ module.exports = defineConfig({
         prefix: 'assets/favicon-img/', // Этот префикс для файла index.html, чтобы правильно прописать пути иконок с сервера!
         favicons: {
           appName: 'Portfolio',
-          appDescription: 'My Portfolio on Vue.JS',
+          appDescription: 'My Portfolio',
           developerName: 'Zorger',
           developerURL: null
         }

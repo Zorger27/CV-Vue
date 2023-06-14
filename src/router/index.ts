@@ -46,7 +46,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'home',
     component: Home,
     meta: {
-      title: 'My Portfolio (SPA)',
+      title: 'My Portfolio',
       // metaTags: [
       //   {
       //     name: 'google-site-verification',
