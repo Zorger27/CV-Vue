@@ -31,7 +31,11 @@
   },
   "main": {
     "name": "Anatolii Zorin",
-    "job": "Web Developer (Vue.js)",
+    "job1": "Web Developer (Vue.js)",
+    "job2": "Frontend Developer (Vue.js)",
+    "job3": "Web Designer",
+    "job4": "UI/UX Designer",
+    "job5": "Digital Marketer",
     "info": {
       "text01": "I've always enjoyed creating something new.",
       "text02": "Programming helps to realise this desire.",

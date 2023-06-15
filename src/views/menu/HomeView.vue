@@ -24,6 +24,25 @@ import Slider from "@/components/util/Slider.vue";
         require('@/assets/certificates/english/10_English_for_advanced.jpg'),
         require('@/assets/certificates/diploma/TP88892276D.jpg'),
       ],
+      currentText: "main.job1",
+      textIndex: 0,
+      texts: ["main.job1", "main.job2", "main.job3", "main.job4", "main.job5"],
+      fadeIn: true
+    }
+  },
+  mounted() {
+    this.startTextRotation();
+  },
+  methods: {
+    startTextRotation() {
+      setInterval(() => {
+        this.textIndex = (this.textIndex + 1) % this.texts.length;
+        this.fadeIn = false; // Устанавливаем флаг fade-in в false для плавного исчезания
+        setTimeout(() => {
+          this.currentText = this.texts[this.textIndex];
+          this.fadeIn = true; // Устанавливаем флаг fade-in в true для плавного появления
+        }, 2000); // Задержка перед сменой текста
+      }, 5000);
     }
   },
   components: {Slider},
@@ -35,7 +54,12 @@ export default class Home extends Vue {
 <template>
   <div class="container">
     <h1>{{ $t('main.name') }}</h1>
-    <h2>— {{ $t('main.job') }} —</h2>
+    <!--    <h2>— {{ $t('main.job') }} —</h2>-->
+    <transition name="slide-fade" mode="out-in">
+      <h2 :key="currentText" class="slide-fade" :class="{ 'fade-in': fadeIn }">
+        {{ $t(currentText) }}
+      </h2>
+    </transition>
     <line></line>
     <div class="home">
       <div class="photo">
@@ -51,14 +75,14 @@ export default class Home extends Vue {
         <!--                                                                                            src="@/assets/ico/phone.svg"-->
         <!--                                                                                            alt="WhatsApp"></a>-->
         <a href="https://wa.me/380504411801" title="WhatsApp chat with me" target="_blank"><img class="logo-image"
-                                                                                                      src="@/assets/ico/phone.svg"
-                                                                                                      alt="WhatsApp"></a>
+                                                                                                src="@/assets/ico/phone.svg"
+                                                                                                alt="WhatsApp"></a>
         <a href="mailto:zorger27@gmail.com" title="Write me: Zorger27@GMail.com" target="_blank"><img class=logo-image
                                                                                                       src="@/assets/ico/mail.svg"
                                                                                                       alt="E-mail"></a>
-<!--        <a href="skype:anatoliy.zorin?call" title="Call me by Skype: anatoliy.zorin" target="_blank"><img class=logo-image-->
-<!--                                                                                                  src="@/assets/ico/skype.svg"-->
-<!--                                                                                                          alt="Skype"></a>-->
+        <!--        <a href="skype:anatoliy.zorin?call" title="Call me by Skype: anatoliy.zorin" target="_blank"><img class=logo-image-->
+        <!--                                                                                                  src="@/assets/ico/skype.svg"-->
+        <!--                                                                                                          alt="Skype"></a>-->
         <a href="skype:anatoliy.zorin?chat" title="Skype chat with me" target="_blank"><img class="logo-image"
                                                                                             src="@/assets/ico/skype.svg"
                                                                                             alt="Skype"></a>
@@ -168,6 +192,45 @@ export default class Home extends Vue {
     border-color: transparent;
     box-shadow: none;
   }
+
+  .slide-fade-enter-active {
+    transition: all 1s;
+  }
+  .slide-fade-leave-active {
+    transition: all 1s;
+  }
+  .slide-fade-enter,
+  .slide-fade-leave-to {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  .slide-fade {
+    display: inline-block;
+    margin: 0.5rem;
+  }
+  .fade-in {
+    animation: fade-in-animation 1.2s ease-in-out;
+    opacity: 1;
+  }
+
+  @keyframes fade-in-animation {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 }
 
 @media(max-width: 1020px) {
@@ -202,7 +265,11 @@ export default class Home extends Vue {
 @media(max-width: 768px) {
   .container {
     h2 {
-      font-size: 1.46rem;
+      font-size: 1.4rem;
+    }
+    .slide-fade-enter,
+    .slide-fade-leave-to {
+      transform: translateX(20px);
     }
 
     .home {

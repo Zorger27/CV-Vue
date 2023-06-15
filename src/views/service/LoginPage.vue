@@ -114,14 +114,9 @@ export default class LoginPage extends Vue {
       </div>
     </div>
     <div v-else>
-      <Extra></Extra>
-      <!--      <h1>-->
-      <!--        {{ $t('login.h3') }}-->
-      <!--        <span class="currentUser">-->
-      <!--          {{ loginStore.state.currentUser.name }} {{ loginStore.state.currentUser.surname }}-->
-      <!--        </span>!!!-->
-      <!--      </h1>-->
-      <!--      <line></line>-->
+<!--      <transition name="fade" mode="out-in">-->
+        <Extra></Extra>
+<!--      </transition>-->
     </div>
   </div>
 </template>
@@ -239,6 +234,39 @@ export default class LoginPage extends Vue {
       }
     }
   }
+
+  //// Эти классы для анимации
+  //.fade-enter-active {
+  //  animation: slidePageIn 1s forwards;
+  //  animation-timing-function: cubic-bezier(0.4, -0.49, 0.36, 1);
+  //}
+  //
+  //.fade-leave-active {
+  //  animation: slidePageDown 1s forwards;
+  //  animation-timing-function: cubic-bezier(0.4, -0.49, 0.36, 1);
+  //}
+  //
+  //@keyframes slidePageIn {
+  //  from {
+  //    opacity: 0;
+  //    transform: translateY(-100%);
+  //  }
+  //  to {
+  //    opacity: 1;
+  //    transform: translateY(0%);
+  //  }
+  //}
+  //
+  //@keyframes slidePageDown {
+  //  from {
+  //    opacity: 1;
+  //  }
+  //  to {
+  //    opacity: 0.1;
+  //    transform: translateY(100%);
+  //  }
+  //}
+
 }
 
 @media(max-width: 1020px) {
