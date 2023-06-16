@@ -42,7 +42,7 @@ import Slider from "@/components/util/Slider.vue";
           this.currentText = this.texts[this.textIndex];
           this.fadeIn = true; // Устанавливаем флаг fade-in в true для плавного появления
         }, 2000); // Задержка перед сменой текста
-      }, 5000);
+      }, 4000);
     }
   },
   components: {Slider},
@@ -214,23 +214,18 @@ export default class Home extends Vue {
   }
 
   @keyframes fade-in-animation {
-    0% {
-      opacity: 0;
-    }
-    20% {
-      opacity: 0.2;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    70% {
-      opacity: 0.7;
-    }
-    100% {
-      opacity: 1;
-    }
+    0% {opacity: 0;}
+    10% {opacity: 0.1;}
+    20% {opacity: 0.2;}
+    30% {opacity: 0.3;}
+    40% {opacity: 0.4;}
+    50% {opacity: 0.5;}
+    60% {opacity: 0.6;}
+    70% {opacity: 0.7;}
+    80% {opacity: 0.8;}
+    90% {opacity: 0.9;}
+    100% {opacity: 1;}
   }
-
 }
 
 @media(max-width: 1020px) {
@@ -269,7 +264,7 @@ export default class Home extends Vue {
     }
     .slide-fade-enter,
     .slide-fade-leave-to {
-      transform: translateX(20px);
+      transform: translateX(40px);
     }
 
     .home {
