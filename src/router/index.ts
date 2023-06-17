@@ -169,7 +169,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Extra,
     meta: {
       title: 'Portfolio - Extra pages',
-      // requiresAuth: true
+      requiresAuth: true
     }
   },
   {
