@@ -295,7 +295,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Findvowels,
     meta: {
       title: 'JS tasks - Find vowels',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
