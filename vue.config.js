@@ -78,7 +78,7 @@ module.exports = defineConfig({
         // paths: routes.getRoutes().map(route => route.path), // Используем все пути из маршрутов.
         paths: [
           { path: '/', priority: 1, changefreq: 'always' },
-          { path: '/login', priority: 1, changefreq: 'daily' },
+          { path: '/login', priority: 1, changefreq: 'always' },
           { path: '/projects', priority: 1, changefreq: 'daily' },
           { path: '/education', priority: 1, changefreq: 'daily' },
           { path: '/experience', priority: 1, changefreq: 'daily' },
