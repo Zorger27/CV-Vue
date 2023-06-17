@@ -169,7 +169,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Extra,
     meta: {
       title: 'Portfolio - Extra pages',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -178,7 +178,7 @@ const routes: Array<RouteRecordRaw> = [
     component: CalculatorView,
     meta: {
       title: 'Extra - Calculator',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -187,7 +187,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Cryptocur,
     meta: {
       title: 'Extra - Cryptocurrencies',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -196,7 +196,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Cube,
     meta: {
       title: 'Extra - Spinning cube',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -205,7 +205,7 @@ const routes: Array<RouteRecordRaw> = [
     component: CurrencyRates,
     meta: {
       title: 'Extra - Currency Rates',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -214,7 +214,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Games,
     meta: {
       title: 'Extra - Games',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -223,7 +223,7 @@ const routes: Array<RouteRecordRaw> = [
     component: GameMemory,
     meta: {
       title: 'Games - Memory',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -232,7 +232,7 @@ const routes: Array<RouteRecordRaw> = [
     component: NotesView,
     meta: {
       title: 'Extra - Notes',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -241,7 +241,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Tasks,
     meta: {
       title: 'Extra - JS tasks',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -250,7 +250,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Todo,
     meta: {
       title: 'Extra - To-do list',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -259,7 +259,7 @@ const routes: Array<RouteRecordRaw> = [
     component: WeatherView,
     meta: {
       title: 'Extra - Weather',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -268,7 +268,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Palindrome,
     meta: {
       title: 'JS tasks - Palindrome',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -277,7 +277,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Fizzbuzz,
     meta: {
       title: 'JS tasks - Fizzbuzz',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -286,7 +286,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Anagram,
     meta: {
       title: 'JS tasks - Anagram',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
@@ -304,7 +304,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Fibonacci,
     meta: {
       title: 'JS tasks - Fibonacci',
-      requiresAuth: true
+      // requiresAuth: true
     }
   },
   {
