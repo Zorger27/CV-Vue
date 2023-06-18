@@ -19,7 +19,7 @@ import Slider from "@/components/util/Slider.vue";
         require('@/assets/certificates/diploma/TP63925579D.jpg'),
         require('@/assets/documents/frontend.jpg'),
         require('@/assets/certificates/diploma/TP77692345D.jpg'),
-        require('@/assets/img/seashore.jpg'),
+        // require('@/assets/img/seashore.jpg'),
         require('@/assets/certificates/diploma/TP84806711D.jpg'),
         require('@/assets/certificates/english/10_English_for_advanced.jpg'),
         require('@/assets/certificates/diploma/TP88892276D.jpg'),
