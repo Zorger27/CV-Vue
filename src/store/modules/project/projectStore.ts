@@ -51,7 +51,7 @@ const state = {
       },
       {
         id: 7,
-        title: "Calculator",
+        title: "CalculatorStandart.vue",
         type: "WEB-application",
         techno: "HTML5, CSS3, JavaScript",
         sourcelink: "https://github.com/Zorger27/calculator",

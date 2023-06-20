@@ -172,7 +172,12 @@
       "todo": "To-do list",
       "weather": "Weather"
     },
-    "calculator": "Calculator",
+    "calculator": {
+      "title": "Calculator",
+      "standart": "Standart",
+      "accounting": "Accounting",
+      "finance": "Financial"
+    },
     "cryptocur": {
       "title": "Cryptocurrencies",
       "h1": "Powered by",

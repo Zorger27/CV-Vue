@@ -37,7 +37,7 @@ export default class Extra extends Vue {
     <line></line>
     <div class="container">
       <div class="prj calculator">
-        <router-link class="block" to="/extra/calculator"><b>{{ $t('extra.calculator') }}</b></router-link>
+        <router-link class="block" to="/extra/calculator"><b>{{ $t('extra.calculator.title') }}</b></router-link>
       </div>
       <div class="prj todo">
         <router-link class="block" to="/extra/todo"><b>{{ $t('extra.todo.title') }}</b></router-link>

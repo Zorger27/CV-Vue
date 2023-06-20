@@ -110,9 +110,13 @@ export default class GameMemory extends Vue {}
     <line></line>
     <h2 @click="showRules = !showRules" class="rules">{{ $t('extra.game.memory.rules-h2') }}<i style="color: red; margin-left: 0.5rem"
                                                                                         class="fas fa-hand-pointer"></i></h2>
-    <p v-if="showRules">{{ $t('extra.game.memory.rules') }}</p>
+    <div v-if="showRules">
+      <p>{{ $t('extra.game.memory.rules') }}</p>
       <h2 style="color: deeppink; margin: 0.5rem">{{ $t('extra.game.memory.luck') }}</h2>
+    </div>
+    <div>
       <button @click="startNewGame">{{ $t('extra.game.memory.newGame') }}</button>
+    </div>
     <line></line>
     <div class="memory-game">
       <div class="memory-card" v-for="(card, index) in shuffledCards" :key="index" :data-fruit="card.fruit" @click="flipCard(index)"
@@ -171,6 +175,7 @@ export default class GameMemory extends Vue {}
     color: lightseagreen;
     cursor: pointer;
     border: 1px solid transparent;
+    margin-bottom: 0.5rem;
   }
 
   .rules:hover, :focus {

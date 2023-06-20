@@ -172,7 +172,12 @@
       "todo": "Lista de tareas",
       "weather": "Clima"
     },
-    "calculator": "Calculadora",
+    "calculator": {
+      "title": "Calculadora",
+      "standart": "Estándar",
+      "accounting": "Contable",
+      "finance": "Finanzas"
+    },
     "cryptocur": {
       "title": "Criptomonedas",
       "h1": "Desarrollado por",
