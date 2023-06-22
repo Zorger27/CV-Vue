@@ -21,15 +21,23 @@ import {Options, Vue} from "vue-class-component";
       }
       this.result = res % 1 === 0 ? res.toString() : res.toFixed(2);
       this.finished = true;  // Устанавливаем this.finished в true после вычислений
+
+      if (res.toString().length <= 11) {
+        this.$refs.screenRef.classList.remove('small-font');
+      }
     },
     push(event) {
       const symbol = event.target.innerText.trim(); // Убираем пробелы вокруг символа
+
       if (this.screen.length > 11) {
-        this.screen = this.error;
-        return;
+        this.screen = this.screen.substring(0, 48);
+        this.$refs.screenRef.classList.add('small-font');  // Добавление класса для уменьшения шрифта
+      } else {
+        this.$refs.screenRef.classList.remove('small-font');  // Удаление класса уменьшения шрифта
       }
+
       if (this.screen === this.error) {
-        this.screen = 0;
+        this.screen = '0';
       }
 
       if (symbol === "=") {
@@ -41,7 +49,7 @@ import {Options, Vue} from "vue-class-component";
 
       switch (symbol) {
         case "AC":
-          this.screen = 0;
+          this.clearDisplay();
           break;
         default:
           if (
@@ -69,9 +77,9 @@ import {Options, Vue} from "vue-class-component";
           }
       }
     },
-    clear() {
+    clearDisplay() {
       this.screen = '0';
-    }
+    },
   },
   components: {},
 })
@@ -82,18 +90,18 @@ export default class CalculatorFinance extends Vue {
 <template>
   <div class="container">
     <div class="calculator">
-      <div class="display">{{ screen }}</div>
+      <div class="display" :class="{ 'small-font': screen.length > 11 }" ref="screenRef">{{ screen }}</div>
       <div class="btns">
-        <div class="btn" @click="push">1</div>
-        <div class="btn" @click="push">2</div>
-        <div class="btn" @click="push">3</div>
-        <div class="btn" @click="push">4</div>
-        <div class="btn" @click="push">5</div>
-        <div class="btn" @click="push">6</div>
-        <div class="btn" @click="push">7</div>
-        <div class="btn" @click="push">8</div>
-        <div class="btn" @click="push">9</div>
-        <div class="btn null" style="grid-area: null" @click="push">0</div>
+        <div class="btn numbers" @click="push">1</div>
+        <div class="btn numbers" @click="push">2</div>
+        <div class="btn numbers" @click="push">3</div>
+        <div class="btn numbers" @click="push">4</div>
+        <div class="btn numbers" @click="push">5</div>
+        <div class="btn numbers" @click="push">6</div>
+        <div class="btn numbers" @click="push">7</div>
+        <div class="btn numbers" @click="push">8</div>
+        <div class="btn numbers" @click="push">9</div>
+        <div class="btn null numbers" style="grid-area: null" @click="push">0</div>
         <div class="btn equal" style="grid-area: equal" @click="push">=</div>
         <div class="btn minus" style="grid-area: minus" @click="push">-</div>
         <div class="btn plus" style="grid-area: plus" @click="push">+</div>
@@ -119,12 +127,21 @@ export default class CalculatorFinance extends Vue {
     box-shadow: 0 1px 4px 0 lightgrey;
 
     .display {
+      height: 4.2rem;
+      //height: auto;
       border: 1px solid #ddd;
       text-align: right;
       box-sizing: border-box;
       font-size: 2.5rem;
       font-weight: bold;
       padding: 0.4rem 0.75rem;
+      word-break: break-all;  // Перенос символов на новую строку
+      white-space: normal;  // Обычное отображение пробелов и переносов строк
+    }
+    .small-font {
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: darkblue;
     }
 
     .btns {
@@ -145,6 +162,7 @@ export default class CalculatorFinance extends Vue {
         display: grid;
         cursor: pointer;
         font-size: 2rem;
+        //background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
         background-color: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 3px;
@@ -157,7 +175,14 @@ export default class CalculatorFinance extends Vue {
         &:active {
           background-color: #f1f1f1;
           box-shadow: 3px 3px 4px 0 lightgrey;
+          font-weight: bold;
         }
+      }
+      .numbers {
+        background-image: url("@/assets/background/background19.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
 
       .equal {
@@ -169,6 +194,7 @@ export default class CalculatorFinance extends Vue {
           box-shadow: 3px 3px 4px 0 lightgrey;
           background-color: mediumblue;
           border-color: mediumblue;
+          font-weight: bold;
         }
       }
 
@@ -181,18 +207,21 @@ export default class CalculatorFinance extends Vue {
           box-shadow: 3px 3px 4px 0 lightgrey;
           background-color: lightskyblue;
           border-color: lightskyblue;
+          font-weight: bold;
         }
       }
 
       .clean {
         background-color: lightseagreen;
         border-color: lightseagreen;
-        color: white;
+        color: black;
 
         &:active {
           box-shadow: 3px 3px 4px 0 lightgrey;
           background-color: #4bd2ca;
           border-color: #4bd2ca;
+          color: white;
+          font-weight: bold;
         }
       }
 
@@ -205,6 +234,7 @@ export default class CalculatorFinance extends Vue {
           box-shadow: 3px 3px 4px 0 lightgrey;
           background-color: deepskyblue;
           border-color: deepskyblue;
+          font-weight: bold;
         }
       }
     }
@@ -214,7 +244,7 @@ export default class CalculatorFinance extends Vue {
     .calculator {
       //width: 330px;
       width: auto;
-      max-width: 380px;
+      max-width: 400px;
       margin: 0.5rem auto;
       padding: 0.6rem;
       font-size: 1.8rem;

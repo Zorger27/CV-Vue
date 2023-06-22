@@ -20,7 +20,7 @@ export default class Database extends Vue {
       <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('cert.database') }}
-      <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
+      <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
     </h1>
     <line></line>
     <div v-if="tableView" class="table">

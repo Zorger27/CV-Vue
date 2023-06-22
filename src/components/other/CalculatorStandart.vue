@@ -164,29 +164,29 @@ export default class Calculator extends Vue {
         <div class="current">
           {{ current && current.length > 10 ? current.slice(0, 10) + '...' : current || "0" }}
         </div>
-<!--        <div class="history" :class="{ 'ellipsis': history.length > 40 }">{{ history }}</div>-->
+        <!--        <div class="history" :class="{ 'ellipsis': history.length > 40 }">{{ history }}</div>-->
         <div class="history">{{ history }}</div>
       </div>
       <div @click="clear" class="btn clear">AC</div>
-      <div @click="sign" class="btn">+/-</div>
-      <div @click="percent" class="btn">%</div>
-      <div @click="divide" class="btn operator">÷</div>
-      <div @click="append('7')" class="btn">7</div>
-      <div @click="append('8')" class="btn">8</div>
-      <div @click="append('9')" class="btn">9</div>
-      <div @click="times" class="btn operator">x</div>
-      <div @click="append('4')" class="btn">4</div>
-      <div @click="append('5')" class="btn">5</div>
-      <div @click="append('6')" class="btn">6</div>
-      <div @click="minus" class="btn operator">-</div>
-      <div @click="append('1')" class="btn">1</div>
-      <div @click="append('2')" class="btn">2</div>
-      <div @click="append('3')" class="btn">3</div>
-      <div @click="add" class="btn operator">+</div>
-      <div @click="append('0')" class="btn zero">0</div>
-      <div @click="dot" class="btn">.</div>
-      <div @click="equal" class="btn operator equal">=</div>
+      <div @click="sign" class="btn sign">+/-</div>
+      <div @click="percent" class="btn percent">%</div>
       <div @click="sqrt" class="btn operator sqrt">√</div>
+      <div @click="append('7')" class="btn numbers">7</div>
+      <div @click="append('8')" class="btn numbers">8</div>
+      <div @click="append('9')" class="btn numbers">9</div>
+      <div @click="divide" class="btn operator">÷</div>
+      <div @click="append('4')" class="btn numbers">4</div>
+      <div @click="append('5')" class="btn numbers">5</div>
+      <div @click="append('6')" class="btn numbers">6</div>
+      <div @click="times" class="btn operator">x</div>
+      <div @click="append('1')" class="btn numbers">1</div>
+      <div @click="append('2')" class="btn numbers">2</div>
+      <div @click="append('3')" class="btn numbers">3</div>
+      <div @click="minus" class="btn operator">-</div>
+      <div @click="append('0')" class="btn zero numbers">0</div>
+      <div @click="dot" class="btn dot">.</div>
+      <div @click="equal" class="btn operator equal">=</div>
+      <div @click="add" class="btn operator">+</div>
     </div>
   </div>
 </template>
@@ -219,17 +219,20 @@ export default class Calculator extends Vue {
       margin-bottom: 1rem;
       text-align: right;
       transition: all .2s ease-in-out;
+
       .current {
         font-size: 2.5rem;
         font-weight: bold;
         overflow-x: auto;
         border-bottom: 1px solid #ddd;
       }
+
       .history {
         height: 1.2rem;
         font-size: 0.8rem;
         color: darkblue;
       }
+
       //.ellipsis {
       //  text-overflow: ellipsis;
       //  overflow: hidden;
@@ -257,10 +260,18 @@ export default class Calculator extends Vue {
     .btn:hover {
       background-color: #f1f1f1;
       box-shadow: 3px 3px 4px 0 lightgrey;
+      font-weight: bold;
     }
 
     .btn:active {
       font-weight: bold;
+    }
+
+    .numbers {
+      background-image: url("@/assets/background/background19.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     //.zero {
@@ -276,17 +287,20 @@ export default class Calculator extends Vue {
     .operator:hover {
       background-color: lightskyblue;
       border-color: lightskyblue;
+      font-weight: bold;
     }
 
     .clear {
       background-color: lightseagreen;
       border-color: lightseagreen;
       transition: all .2s ease-in-out;
+      color: white;
     }
 
     .clear:hover {
       background-color: #4bd2ca;
       border-color: #4bd2ca;
+      font-weight: bold;
     }
 
     .equal {
@@ -298,17 +312,34 @@ export default class Calculator extends Vue {
     .equal:hover {
       background-color: mediumblue;
       border-color: mediumblue;
+      font-weight: bold;
     }
 
-    .sqrt {
+    .sqrt, .percent, .sign {
       border-color: darkred;
       background-color: darkred;
+      color: white;
     }
 
-    .sqrt:hover {
+    .percent:hover, .sign:hover, .sqrt:hover {
       background-color: lightcoral;
       border-color: lightcoral;
+      font-weight: bold;
     }
+
+    .dot {
+      border-color: steelblue;
+      background-color: steelblue;
+      color: white;
+    }
+
+    .dot:hover {
+      background-color: deepskyblue;
+      border-color: deepskyblue;
+      font-weight: bold;
+    }
+
+
   }
 
   @media (max-width: 768px) {

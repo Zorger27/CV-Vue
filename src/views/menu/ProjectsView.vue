@@ -26,7 +26,7 @@ export default class Projects extends Vue {
 <template>
   <div class="projects">
     <h1>{{ $t('projects.title') }}
-      <i @click="changeView"><span :class="['fa', tableView ? 'fa-th' : 'fa-list']"></span></i>
+      <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
     </h1>
     <line></line>
     <div v-if="tableView" class="table">
