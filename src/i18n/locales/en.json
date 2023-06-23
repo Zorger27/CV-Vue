@@ -305,6 +305,18 @@
       "humidity": "Humidity",
       "pressure": "Pressure",
       "error": "Failed to load weather data."
+    },
+    "ai": {
+      "title": "Artificial intelligence",
+      "picsum": {
+        "title": "Lorem Picsum (images)",
+        "size": "Size: ",
+        "count": "Quantity: ",
+        "max": "Max",
+        "create": "Create pictures",
+        "clear": "Clear",
+        "gen": "Generated pictures"
+      }
     }
   }
 }

@@ -305,6 +305,18 @@
       "humidity": "Humedad",
       "pressure": "Presión",
       "error": "No se pudieron cargar los datos meteorológicos."
+    },
+    "ai": {
+      "title": "Inteligencia artificial",
+      "picsum": {
+        "title": "Lorem Picsum (imágenes)",
+        "size": "Tamaño: ",
+        "count": "Cantidad: ",
+        "max": "Máximo",
+        "create": "Crear imágenes",
+        "clear": "Limpiar",
+        "gen": "Imágenes generadas"
+      }
     }
   }
 }

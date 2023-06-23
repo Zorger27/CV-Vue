@@ -108,6 +108,8 @@ module.exports = defineConfig({
           { path: '/extra/tasks/anagram', priority: 0.5, changefreq: 'weekly' },
           { path: '/extra/tasks/findvowels', priority: 0.5, changefreq: 'weekly' },
           { path: '/extra/tasks/fibonacci', priority: 0.5, changefreq: 'weekly' },
+          { path: '/extra/ai', priority: 1, changefreq: 'always' },
+          { path: '/extra/ai/picsum', priority: 1, changefreq: 'always' },
         ],
         options: {
           // Опции настройки плагина.

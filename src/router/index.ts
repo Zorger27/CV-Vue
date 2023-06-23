@@ -31,6 +31,8 @@ import Anagram from "@/views/tasks/Anagram.vue";
 import Findvowels from "@/views/tasks/Findvowels.vue";
 import Fibonacci from "@/views/tasks/Fibonacci.vue";
 import GameMemory from "@/views/games/GameMemory.vue";
+import AiView from "@/views/extra/AiView.vue";
+import LoremPicsum from "@/views/ai/LoremPicsum.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -304,6 +306,33 @@ const routes: Array<RouteRecordRaw> = [
     component: Fibonacci,
     meta: {
       title: 'JS tasks - Fibonacci',
+      // requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/tasks/fibonacci',
+    name: 'fibonacci',
+    component: Fibonacci,
+    meta: {
+      title: 'JS tasks - Fibonacci',
+      // requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/ai',
+    name: 'ai',
+    component: AiView,
+    meta: {
+      title: 'Extra - Artificial intelligence',
+      // requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/ai/picsum',
+    name: 'picsum',
+    component: LoremPicsum,
+    meta: {
+      title: 'AI - Lorem Picsum',
       // requiresAuth: true
     }
   },

@@ -63,6 +63,9 @@ export default class Extra extends Vue {
       <div class="prj game">
         <router-link class="block" to="/extra/games"><b>{{ $t('extra.game.title') }}</b></router-link>
       </div>
+      <div class="prj ai">
+        <router-link class="block" to="/extra/ai"><b>{{ $t('extra.ai.title') }}</b></router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -83,7 +86,8 @@ export default class Extra extends Vue {
     grid-template-areas:
       "calculator todo notes"
       "weather exchange cryptocur"
-      "tasks cube game";
+      "tasks cube game"
+      "ai ai ai";
     grid-column-gap: 0.5rem;
     grid-row-gap: 0;
     grid-auto-flow: column;
@@ -125,6 +129,10 @@ export default class Extra extends Vue {
       grid-area: game;
     }
 
+    .ai {
+      grid-area: ai;
+    }
+
     .block {
       font-size: 1.5rem;
     }
@@ -164,6 +172,10 @@ export default class Extra extends Vue {
 
 @media (max-width: 768px) {
   .extra {
+    h1 {
+      font-size: 1.7rem;
+      margin: 0.3rem;
+    }
     .container {
       margin-bottom: 0.5rem;
       display: inherit;

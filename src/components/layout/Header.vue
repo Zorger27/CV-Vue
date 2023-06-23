@@ -119,6 +119,7 @@ export default class Header extends Vue {
           <router-link to="/extra/tasks" @click="hideMenu">{{ $t('extra.tasks.title') }}</router-link>
           <router-link to="/extra/cube" @click="hideMenu">{{ $t('extra.cube') }}</router-link>
           <router-link to="/extra/games" @click="hideMenu">{{ $t('extra.game.title') }}</router-link>
+          <router-link to="/extra/ai" @click="hideMenu">{{ $t('extra.ai.title') }}</router-link>
         </div>
       </div>
       <router-link to="/education" @click="hideMenu">{{ $t('header.education') }}</router-link>
