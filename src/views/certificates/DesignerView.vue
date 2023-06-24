@@ -91,6 +91,7 @@ export default class Designer extends Vue {
   .diplom, .title {font-size: 1.2rem}
   .table {
     font-size: 0.9rem;
+    .name {width: 12rem;}
     .nomer, .number, .grade, .date {font-size: 0.5rem;}
   }
 }

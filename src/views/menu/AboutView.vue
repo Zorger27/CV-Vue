@@ -61,7 +61,7 @@ export default class About extends Vue {}
         </tbody>
       </table>
     </div>
-    <div v-else>
+    <div v-else class="div">
       <h1 class="title" style="text-decoration: underline">{{ $t('about.technologies') }}</h1>
       <div v-for="info in infoStore.state.infoStore" :key="info.id" class="prj">
         <a class="block" :href="info.url" title="In more detail..." target="_blank">
@@ -99,6 +99,8 @@ export default class About extends Vue {}
 
 .table {
   background: inherit;
+  margin-bottom: 1rem;
+
 }
 .title {
   color: darkgoldenrod;
@@ -122,6 +124,8 @@ export default class About extends Vue {}
 }
 @media (max-width: 768px) {
   .title {font-size: 1.6rem;}
+  .table {margin-bottom: 0.5rem;}
   .prj a {padding: 0.8rem;}
+  .div {margin-bottom: 0.5rem;}
 }
 </style>

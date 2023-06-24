@@ -10,6 +10,7 @@ interface ImageData {
 @Options({
   data() {
     return {
+      showMore: false,
       selectedSize: '256',
       imageCount: 6,
       images: [] as ImageData[],
@@ -46,6 +47,12 @@ export default class LoremPicsum extends Vue {
       {{ $t('extra.ai.picsum.title') }}
     </h1>
     <line></line>
+    <h2 @click="showMore = !showMore" class="more">{{$t ('extra.ai.picsum.more01')}}<i style="color: rebeccapurple; margin-left: 0.5rem"
+                                                                             class="fas fa-hand-pointer"></i></h2>
+    <p v-if="showMore" style="margin: 0">{{$t ('extra.ai.picsum.more02')}}</p>
+    <p v-if="showMore" style="margin: 0">{{$t ('extra.ai.picsum.more03')}}</p>
+    <h3 v-if="showMore" style="color: darkred; margin: 0.5rem">{{$t ('extra.ai.picsum.more04')}}</h3>
+    <line></line>
     <div class="container">
       <div class="input">
         <div class="psize">
@@ -55,6 +62,8 @@ export default class LoremPicsum extends Vue {
             <option value="256">256x256</option>
             <option value="512">512x512</option>
             <option value="1024">1024x1024</option>
+            <option value="2048">2048x2048</option>
+            <option value="4096">4096x4096</option>
           </select>
         </div>
         <div class="qty">
@@ -70,7 +79,7 @@ export default class LoremPicsum extends Vue {
       <h2 v-if="images.length > 0">{{ $t('extra.ai.picsum.gen') }}</h2>
       <div v-if="images.length > 0" class="image-container">
         <div v-for="image in images" :key="image.id" class="image-wrapper">
-          <img :src="image.url" :alt="image.alt"/>
+          <img :src="image.url" :alt="image.alt" class="image"/>
         </div>
       </div>
     </div>
@@ -80,7 +89,7 @@ export default class LoremPicsum extends Vue {
 <style lang="scss" scoped>
 .picsum {
   flex: 1 0 auto;
-  background-image: url("@/assets/background/background13.jpg");
+  background-image: url("@/assets/background/background15.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -89,6 +98,18 @@ export default class LoremPicsum extends Vue {
     display: inline-flex;
     text-decoration: none;
     margin-right: 0.1rem;
+  }
+  .more {
+    display: inline-flex;
+    color: deeppink;
+    //text-shadow: 2px 2px 4px white;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    margin: 0.5rem;
+  }
+
+  .more:hover, :focus {
+    border-bottom: 1px solid deeppink;
   }
 
   .container {
@@ -105,18 +126,23 @@ export default class LoremPicsum extends Vue {
     }
 
     button {
-      font-size: 1.6rem;
-      color: steelblue;
-      border: 1px solid lightsteelblue;
+      font-size: 1.4rem;
+      color: black;
+      font-weight: bold;
+      border: 1px solid lightslategrey;
       border-radius: 5px;
-      background-color: #fde8ed;
-      padding: 0.3rem 0.6rem;
+      //background-color: #fde8ed;
+      background-image: url("@/assets/background/background10.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 0.4rem 0.7rem;
       transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
     }
 
     button:hover {
       box-shadow: 3px 3px 4px 0 grey;
-      color: cornflowerblue;
+      //color: cornflowerblue;
     }
 
     .input {
@@ -171,17 +197,30 @@ export default class LoremPicsum extends Vue {
 
       .image-wrapper {
         margin: 0.5rem;
+        max-width: 100%;
+        //overflow: hidden;
+        .image {
+          width: 100%;
+          height: auto;
+          //display: block;
+        }
       }
     }
   }
 
   @media (max-width: 768px) {
+    h1 {
+      //font-size: 1.5rem;
+      //margin: 0.3rem;
+    }
     .container {
       input {font-size: 1.3rem;}
 
       button {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         padding: 0.3rem 0.6rem;
+        font-weight: normal;
+        border-radius: 3px;
       }
 
       .input {

@@ -89,7 +89,7 @@
     }
   },
   "cert": {
-    "title": "Descripción",
+    "title": "Diplomas y Certificados",
     "number": "Número",
     "grade": "Grado",
     "date": "Fecha del examen",
@@ -309,13 +309,17 @@
     "ai": {
       "title": "Inteligencia artificial",
       "picsum": {
-        "title": "Lorem Picsum (imágenes)",
+        "title": "Aleatorizador de imágenes",
         "size": "Tamaño: ",
         "count": "Cantidad: ",
         "max": "Máximo",
         "create": "Crear imágenes",
         "clear": "Limpiar",
-        "gen": "Imágenes generadas"
+        "gen": "Imágenes generadas",
+        "more01": "Más información...",
+        "more02": "Este programa fue creado utilizando la API de Lorem Picsum.",
+        "more03": "Ella crea pinturas al azar de un tamaño y cantidad determinados.",
+        "more04": "¡Bienvenido! \uD83E\uDD29\uD83D\uDE0E"
       }
     }
   }

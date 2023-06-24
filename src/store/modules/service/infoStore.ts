@@ -91,6 +91,12 @@ const state = {
         version: "",
         url: "https://portal.bank.gov.ua/uk/8"
       },
+      {
+        id: 16,
+        title: "Lorem Picsum API",
+        version: "",
+        url: "https://picsum.photos"
+      },
     ]
 };
 const getters = {};

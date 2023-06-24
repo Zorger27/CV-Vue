@@ -211,7 +211,7 @@ export default class Frontend extends Vue {
         </a>
       </div>
     </div>
-    <div v-if="tableView" class="table">
+    <div v-if="tableView" class="table" style="margin-bottom: 0.5rem">
       <table>
         <thead>
         <tr>
@@ -243,7 +243,7 @@ export default class Frontend extends Vue {
         </tbody>
       </table>
     </div>
-    <div v-else class="container">
+    <div v-else class="container" style="margin-bottom: 0.5rem">
       <h2 class="diplom"><span>✅ </span><b><a class="attention"
                                               href="https://testprovider.com/ru/search-certificate/tp77692345d"
                                               title="Diploma..." target="_blank">{{ $t('cert.front.frontend1') }}</a></b></h2>
@@ -271,10 +271,15 @@ export default class Frontend extends Vue {
       margin-right: 0.1rem;
     }
   }
+  h2 {
+    margin: 0.5rem auto;
+  }
 }
 @media(max-width:768px) {
   .diplom, .title {font-size: 1.2rem}
-  .table {font-size: 0.9rem;
+  .table {
+    font-size: 0.9rem;
+    .name {width: 12rem;}
     .nomer, .number, .grade, .date {font-size: 0.5rem;}
   }
 }

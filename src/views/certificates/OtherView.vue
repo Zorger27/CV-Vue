@@ -120,7 +120,7 @@ export default class Other extends Vue {
   }
   .table {
     font-size: 0.9rem;
-
+    .name {width: 12rem;}
     .nomer, .number, .grade, .date {
       font-size: 0.5rem;
     }

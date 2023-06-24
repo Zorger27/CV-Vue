@@ -121,6 +121,10 @@ export default class Certificates extends Vue {
 
 @media (max-width: 768px) {
   .certificates {
+    h1 {
+      font-size: 1.7rem;
+      //margin: 0.4rem auto;
+    }
     .container {
       display: grid;
       justify-items: center;
