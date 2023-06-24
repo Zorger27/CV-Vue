@@ -89,7 +89,8 @@
     }
   },
   "cert": {
-    "title": "Diplomas y Certificados",
+    "title-main": "Diplomas y Certificados",
+    "title": "Descripción",
     "number": "Número",
     "grade": "Grado",
     "date": "Fecha del examen",

@@ -1,6 +1,6 @@
 <template>
   <div class="certificates">
-    <h1>{{ $t('cert.title') }}</h1>
+    <h1>{{ $t('cert.title-main') }}</h1>
     <line></line>
     <div class="container">
       <div class="prj back">
