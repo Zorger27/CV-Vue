@@ -68,7 +68,7 @@ export default class LoremPicsum extends Vue {
         </div>
         <div class="qty">
           <label for="count">{{ $t('extra.ai.picsum.count') }}</label>
-          <input id="count" type="number" min="1" max="30" v-model.number="imageCount"/>
+          <input id="count" type="number" min="1" max="30" v-model.number="imageCount" @keyup.enter="generateImages"/>
           <button @click="setMaxImageCount">{{ $t('extra.ai.picsum.max') }}</button>
         </div>
         <div class="btns">
