@@ -3,7 +3,9 @@ const state = {
     [
       {
         id: 1,
-        title: "HTML5&CSS3 Starter 2022",
+        title_en: "HTML5&CSS3 Starter 2022",
+        title_ua: "HTML5&CSS3 Стартовий 2022",
+        title_es: "HTML5&CSS3 Inicio 2022",
         regnumber: "TP37225065",
         grade: "1000 / 1000",
         examdate: "09.08.2022",
@@ -11,7 +13,9 @@ const state = {
       },
       {
         id: 2,
-        title: "HTML5&CSS3 Essential",
+        title_en: "HTML5&CSS3 Essential",
+        title_ua: "HTML5&CSS3 Базовий",
+        title_es: "HTML5&CSS3 Básico",
         regnumber: "TP24244286",
         grade: "1000 / 1000",
         examdate: "16.06.2021",
@@ -19,7 +23,9 @@ const state = {
       },
       {
         id: 3,
-        title: "HTML5&CSS3 Advanced",
+        title_en: "HTML5&CSS3 Advanced",
+        title_ua: "HTML5&CSS3 Поглиблений",
+        title_es: "HTML5&CSS3 Avanzado",
         regnumber: "TP92660322",
         grade: "1000 / 1000",
         examdate: "04.06.2021",
@@ -27,7 +33,9 @@ const state = {
       },
       {
         id: 4,
-        title: "CSS Flexbox",
+        title_en: "CSS Flexbox",
+        title_ua: "CSS Flexbox",
+        title_es: "CSS Flexbox",
         regnumber: "TP01289491",
         grade: "1000 / 1000",
         examdate: "09.05.2023",
@@ -35,7 +43,9 @@ const state = {
       },
       {
         id: 5,
-        title: "Layout of pages using Grid",
+        title_en: "Layout of pages using Grid",
+        title_ua: "Верстка сторінок із використанням Grid",
+        title_es: "Maquetación de páginas usando Grid",
         regnumber: "TP62170279",
         grade: "1000 / 1000",
         examdate: "31.05.2021",
@@ -43,7 +53,9 @@ const state = {
       },
       {
         id: 6,
-        title: "Bootstrap 4",
+        title_en: "Bootstrap 4",
+        title_ua: "Bootstrap 4",
+        title_es: "Bootstrap 4",
         regnumber: "TP33638993",
         grade: "1000 / 1000",
         examdate: "27.05.2021",
@@ -51,7 +63,9 @@ const state = {
       },
       {
         id: 7,
-        title: "Practical Landing Course",
+        title_en: "Practical Landing Course",
+        title_ua: "Практичний курс з верстки лендінгу",
+        title_es: "Curso práctico de maquetación de landing page",
         regnumber: "TP73961983",
         grade: "1000 / 1000",
         examdate: "09.06.2021",
@@ -59,7 +73,9 @@ const state = {
       },
       {
         id: 8,
-        title: "WordPress Starter",
+        title_en: "WordPress Starter",
+        title_ua: "WordPress Стартовий",
+        title_es: "WordPress Inicio",
         regnumber: "TP68763365",
         grade: "1000 / 1000",
         examdate: "10.07.2021",
@@ -67,7 +83,9 @@ const state = {
       },
       {
         id: 9,
-        title: "WordPress Essential",
+        title_en: "WordPress Essential",
+        title_ua: "WordPress Базовий",
+        title_es: "WordPress Básico",
         regnumber: "TP85465557",
         grade: "1000 / 1000",
         examdate: "13.07.2021",
@@ -75,11 +93,7 @@ const state = {
       },
     ]
 };
-const getters = {
-  // getById: (state, getters) => (id) => {
-  //     return state.otherStore.find(item => item.id === parseInt(id));
-  // }
-};
+const getters = {};
 const mutations = {};
 const actions = {};
 export default {
