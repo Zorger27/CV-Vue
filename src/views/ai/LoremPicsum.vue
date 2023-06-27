@@ -31,6 +31,8 @@ interface ImageData {
     },
     clearImages() {
       this.images = [];
+      this.selectedSize = '256';
+      this.imageCount = 6;
     }
   },
   components: {},

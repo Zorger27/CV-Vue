@@ -33,6 +33,7 @@ import Fibonacci from "@/views/tasks/Fibonacci.vue";
 import GameMemory from "@/views/games/GameMemory.vue";
 import AiView from "@/views/extra/AiView.vue";
 import LoremPicsum from "@/views/ai/LoremPicsum.vue";
+import Pixabay from "@/views/ai/Pixabay.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -333,6 +334,15 @@ const routes: Array<RouteRecordRaw> = [
     component: LoremPicsum,
     meta: {
       title: 'AI - Lorem Picsum',
+      // requiresAuth: true
+    }
+  },
+  {
+    path: '/extra/ai/pixabay',
+    name: 'pixabay',
+    component: Pixabay,
+    meta: {
+      title: 'AI - Pixabay',
       // requiresAuth: true
     }
   },

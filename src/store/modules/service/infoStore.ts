@@ -97,6 +97,12 @@ const state = {
         version: "",
         url: "https://picsum.photos"
       },
+      {
+        id: 17,
+        title: "Pixabay API",
+        version: "",
+        url: "https://pixabay.com"
+      },
     ]
 };
 const getters = {};

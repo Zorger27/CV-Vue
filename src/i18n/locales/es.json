@@ -321,6 +321,24 @@
         "more02": "Este programa fue creado utilizando la API de Lorem Picsum.",
         "more03": "Ella crea pinturas al azar de un tamaño y cantidad determinados.",
         "more04": "¡Bienvenido! \uD83E\uDD29\uD83D\uDE0E"
+      },
+      "pixabay": {
+        "title": "Aleatorizador PRO",
+        "info01": "Más información...",
+        "info02": "Este programa fue creado utilizando la API de Pixabay.",
+        "info03": "Crea aleatoriamente imágenes de un tema, tamaño y número determinados, así como videoclips.",
+        "info04": "¡Bienvenido! \uD83E\uDD29\uD83D\uDE0E",
+        "theme1": "Sujeto: ",
+        "theme2": "Introduce un asunto",
+        "count": "Cantidad: ",
+        "max": "Máximo",
+        "type": "Tipo: ",
+        "photo": "Foto",
+        "video": "Video",
+        "create": "Crear",
+        "clear": "Limpiar",
+        "gen1": "Imágenes generadas",
+        "gen2": "Vídeos generados"
       }
     }
   }
