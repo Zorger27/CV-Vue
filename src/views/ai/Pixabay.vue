@@ -205,7 +205,6 @@ export default class Pixabay extends Vue {
       font-weight: bold;
       border: 1px solid lightslategrey;
       border-radius: 5px;
-      //background-color: #fde8ed;
       background-image: url("@/assets/background/background10.jpg");
       background-position: center;
       background-size: cover;
@@ -216,7 +215,6 @@ export default class Pixabay extends Vue {
 
     button:hover {
       box-shadow: 3px 3px 4px 0 grey;
-      //color: cornflowerblue;
     }
     .btns {
       button {margin-top: 0.5rem;}
