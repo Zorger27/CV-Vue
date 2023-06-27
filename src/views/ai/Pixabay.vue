@@ -107,7 +107,8 @@ export default class Pixabay extends Vue {
       </div>
       <div class="input-group">
         <label for="count">{{ $t('extra.ai.pixabay.count') }}</label>
-        <input id="count" style="margin-right: 0.5rem;" type="number" min="1" max="30" v-model.number="imageCount" @keyup.enter="generateImage"/>
+        <input id="count" style="margin-right: 0.5rem;" type="number" min="1" max="30" v-model.number="imageCount"
+               @keyup.enter="generateImage"/>
         <button @click="setMaxMediaCount">{{ $t('extra.ai.pixabay.max') }}</button>
       </div>
       <div class="input-group">
@@ -118,20 +119,23 @@ export default class Pixabay extends Vue {
         </select>
       </div>
       <div class="btns">
-        <button class="gen" @click="selectedType === 'photo' ? generateImage() : generateVideo()">{{ $t('extra.ai.pixabay.create') }}</button>
+        <button class="gen" @click="selectedType === 'photo' ? generateImage() : generateVideo()">{{
+            $t('extra.ai.pixabay.create')
+          }}
+        </button>
         <button class="clear" @click="clearMedia">{{ $t('extra.ai.pixabay.clear') }}</button>
       </div>
       <h2 v-if="selectedType === 'photo' && images.length > 0">{{ $t('extra.ai.pixabay.gen1') }}</h2>
       <h2 v-if="selectedType === 'video' && videos.length > 0">{{ $t('extra.ai.pixabay.gen2') }}</h2>
       <div class="media-container">
-        <div v-if="selectedType === 'photo'" class="media-row">
+        <div v-if="selectedType === 'photo'" class="media-row photo">
           <div v-for="item in images" :key="item.id" class="media-wrapper">
             <a :href="item.url" target="_blank">
               <img :src="item.url" :alt="item.alt">
             </a>
           </div>
         </div>
-        <div v-else-if="selectedType === 'video'" class="media-row">
+        <div v-else-if="selectedType === 'video'" class="media-row video">
           <div v-for="item in videos" :key="item.id" class="media-wrapper">
             <a :href="item.url" target="_blank">
               <video :src="item.url" controls></video>
@@ -172,6 +176,7 @@ export default class Pixabay extends Vue {
 
   .generator {
     margin-top: 1rem;
+
     .input-group {
       margin: 0.5rem auto;
       font-size: 1.6rem;
@@ -187,6 +192,7 @@ export default class Pixabay extends Vue {
         outline-offset: 0;
         box-shadow: 3px 3px 4px 0 lightgrey;
       }
+
       select {
         font-size: 1.6rem;
         border: 1px solid lightskyblue;
@@ -199,6 +205,7 @@ export default class Pixabay extends Vue {
         box-shadow: 3px 3px 4px 0 lightgrey;
       }
     }
+
     button {
       font-size: 1.4rem;
       color: black;
@@ -216,10 +223,17 @@ export default class Pixabay extends Vue {
     button:hover {
       box-shadow: 3px 3px 4px 0 grey;
     }
+
     .btns {
-      button {margin-top: 0.5rem;}
-      .gen {margin-right: 0.5rem;}
+      button {
+        margin-top: 0.5rem;
+      }
+
+      .gen {
+        margin-right: 0.5rem;
+      }
     }
+
     h2 {
       font-size: 1.9rem;
       margin: 0.3rem;
@@ -232,20 +246,37 @@ export default class Pixabay extends Vue {
       justify-content: space-between;
       align-items: center;
 
-      .media-row {
+      .photo {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
 
         .media-wrapper {
           margin: 5px;
-          //max-width: 30%;
           display: flex;
           flex-wrap: wrap;
 
-          img, video {
+          img {
             max-width: 100%;
-            //height: auto;
+            height: auto;
+          }
+        }
+      }
+
+      .video {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .media-wrapper {
+          margin: 5px;
+          max-width: 30%;
+          display: flex;
+          flex-wrap: wrap;
+
+          video {
+            max-width: 100%;
+            height: auto;
           }
         }
       }
@@ -257,16 +288,25 @@ export default class Pixabay extends Vue {
       .input-group {
         margin: 0.3rem auto;
         font-size: 1.3rem;
-        input {font-size: 1.3rem;}
+
+        input {
+          font-size: 1.3rem;
+        }
+
         input[type="text"] {
           width: 60%;
         }
-        select {font-size: 1.3rem;}
+
+        select {
+          font-size: 1.3rem;
+        }
       }
+
       h2 {
         font-size: 1.5rem;
         margin: 0.3rem;
       }
+
       button {
         font-size: 1.2rem;
         padding: 0.3rem 0.6rem;
@@ -275,15 +315,22 @@ export default class Pixabay extends Vue {
       }
 
       .media-container {
-        .media-row {
+        .photo {
           .media-wrapper {
             margin: 3px;
-            max-width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-
-            img, video {
+            img {
               max-width: 100%;
+              height: auto;
+            }
+          }
+        }
+        .video {
+          .media-wrapper {
+            margin: 3px;
+            max-width: 48%;
+            video {
+              max-width: 100%;
+              height: auto;
             }
           }
         }
