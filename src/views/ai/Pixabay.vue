@@ -137,9 +137,9 @@ export default class Pixabay extends Vue {
         </div>
         <div v-else-if="selectedType === 'video'" class="media-row video">
           <div v-for="item in videos" :key="item.id" class="media-wrapper">
-            <a :href="item.url" target="_blank">
+<!--            <a :href="item.url" target="_blank">-->
               <video :src="item.url" controls></video>
-            </a>
+<!--            </a>-->
           </div>
         </div>
       </div>
@@ -241,15 +241,16 @@ export default class Pixabay extends Vue {
     }
 
     .media-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-
       .photo {
-        display: flex;
-        flex-wrap: wrap;
+        //display: flex;
+        //flex-wrap: wrap;
+        //justify-content: center;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
         justify-content: center;
+        align-items: center;
 
         .media-wrapper {
           margin: 5px;
@@ -264,19 +265,67 @@ export default class Pixabay extends Vue {
       }
 
       .video {
-        display: flex;
-        flex-wrap: wrap;
+        //display: flex;
+        //flex-wrap: wrap;
+        //justify-content: center;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
         justify-content: center;
+        align-items: center;
 
         .media-wrapper {
           margin: 5px;
-          max-width: 30%;
+          //max-width: 30%;
           display: flex;
           flex-wrap: wrap;
 
           video {
             max-width: 100%;
             height: auto;
+          }
+        }
+      }
+    }
+  }
+  @media(max-width: 1020px) {
+    .generator {
+      .input-group {
+        margin: 0.4rem auto;
+        font-size: 1.5rem;
+
+        input {
+          font-size: 1.5rem;
+        }
+        select {
+          font-size: 1.5rem;
+        }
+      }
+
+      .media-container {
+        .photo {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: auto;
+          .media-wrapper {
+            margin: 4px;
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+          }
+        }
+        .video {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: auto;
+          .media-wrapper {
+            margin: 4px;
+            video {
+              max-width: 100%;
+              height: auto;
+            }
           }
         }
       }
@@ -294,7 +343,7 @@ export default class Pixabay extends Vue {
         }
 
         input[type="text"] {
-          width: 60%;
+          max-width: 60%;
         }
 
         select {
@@ -316,6 +365,9 @@ export default class Pixabay extends Vue {
 
       .media-container {
         .photo {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
           .media-wrapper {
             margin: 3px;
             img {
@@ -325,9 +377,11 @@ export default class Pixabay extends Vue {
           }
         }
         .video {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
           .media-wrapper {
             margin: 3px;
-            max-width: 48%;
             video {
               max-width: 100%;
               height: auto;
