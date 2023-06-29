@@ -95,6 +95,7 @@
     "grade": "Grade",
     "date": "Exam date",
     "level": "Level",
+    "search": "Search certificates...",
     "back": {
       "backend": "Backend Diplomas & Certificates:",
       "h1": "Backend Diplomas & Certificates",
