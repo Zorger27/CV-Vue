@@ -327,7 +327,7 @@
         "title": "Randomizer PRO",
         "info01": "More information...",
         "info02": "This program was created using the Pixabay API.",
-        "info03": "It randomly creates pictures of a given theme, size and number, as well as video clips.",
+        "info03": "It randomly creates pictures and video clips of a given theme and the specified number.",
         "info04": "Welcome! \uD83E\uDD29\uD83D\uDE0E",
         "theme1": "Theme: ",
         "theme2": "Enter a theme",
