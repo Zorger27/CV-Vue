@@ -21,3 +21,17 @@ export interface WeatherData {
         deg: number;
     };
 }
+
+export interface Certificate {
+    htmlStore: [];
+    javascriptStore: [];
+    angularStore: [];
+    reactStore: [];
+    frontStore: [];
+    rubyStore: [];
+    pythonStore: [];
+    phpStore: [];
+    javaStore: [];
+    designerStore: [];
+    databaseStore: [];
+}

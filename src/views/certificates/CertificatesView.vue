@@ -1,10 +1,9 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import Search from "@/components/util/Search.vue";
 
 @Options({
-  // data() {return {searchValue: "",};},
-  // methods: {clearSearch() {this.searchValue = "";}},
-  components: {},
+  components: {Search},
 })
 export default class Certificates extends Vue {}
 </script>
@@ -13,9 +12,8 @@ export default class Certificates extends Vue {}
   <div class="certificates">
     <h1>{{ $t('cert.title-main') }}</h1>
     <line></line>
-<!--    <div class="search-bar">-->
-<!--      <input type="text" :placeholder="$t('cert.search')" v-model="searchValue"><i title="Clear" @click="clearSearch" class="fas fa-trash-alt"></i>-->
-<!--    </div>-->
+    <Search></Search>
+    <line></line>
     <div class="container">
       <div class="prj back">
         <router-link class="block" to="/certificates/backend">

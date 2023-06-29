@@ -16,12 +16,6 @@ import frontStore from "@/store/modules/certificates/frontend/frontStore";
   },
   data() {return {tableView: false}},
   methods: {changeView() {this.tableView = !this.tableView;}},
-  // props: {
-  //   search: {
-  //     type: String,
-  //     default: "",
-  //   }
-  // },
   components: {},
 })
 
@@ -75,7 +69,6 @@ export default class Frontend extends Vue {
                                               title="Diploma..." target="_blank">{{ $t('cert.front.html1') }}</a></b></h2>
       <div class="inner">
         <div v-for="sert in htmlStore.state.htmlStore" :key="sert.id" class="certificate">
-        <!--        <div v-for="sert in htmlStore.state.htmlStore" :key="sert.id" class="certificate" v-if="sert.title_en === search || search.length === 0">-->
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
             <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
