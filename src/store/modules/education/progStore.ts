@@ -17,9 +17,9 @@ const state = {
       },
       {
         id: 2,
-        title_ua: "Frontend розробник",
+        title_ua: "Фронтенд розробник",
         title_en: "Frontend Developer",
-        title_es: "Desarrollador frontend",
+        title_es: "Desarrollador Frontend",
         regnumber_ua: "Без номера",
         regnumber_en: "Without a number",
         regnumber_es: "Sin número",

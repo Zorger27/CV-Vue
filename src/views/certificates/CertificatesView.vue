@@ -3,17 +3,31 @@ import {Options, Vue} from "vue-class-component";
 import Search from "@/components/util/Search.vue";
 
 @Options({
+  data() {
+    return {
+      searchView: true
+    }
+  },
+  methods: {
+    changeView() {
+      this.searchView = !this.searchView;
+    }
+  },
   components: {Search},
 })
-export default class Certificates extends Vue {}
+export default class Certificates extends Vue {
+}
 </script>
 
 <template>
   <div class="certificates">
-    <h1>{{ $t('cert.title-main') }}</h1>
+    <h1>
+      {{ $t('cert.title-main') }}
+      <i @click="changeView" class="dandruff"><span :class="['fas', searchView ? 'fa-binoculars' : 'fa-search']"></span></i>
+    </h1>
     <line></line>
-    <Search></Search>
-    <line></line>
+    <Search v-if="searchView"></Search>
+    <line v-if="searchView"></line>
     <div class="container">
       <div class="prj back">
         <router-link class="block" to="/certificates/backend">
@@ -26,7 +40,7 @@ export default class Certificates extends Vue {}
       </div>
       <div class="prj front">
         <router-link class="block" to="/certificates/frontend">
-        <!--        <router-link class="block" to="/certificates/frontend" :search="searchValue">-->
+          <!--        <router-link class="block" to="/certificates/frontend" :search="searchValue">-->
           <b>{{ $t('cert.front.frontend') }}</b><br>
           <i>{{ $t('cert.front.html') }}<br>
             {{ $t('cert.front.javascript') }}<br>
@@ -59,6 +73,12 @@ export default class Certificates extends Vue {}
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(247, 234, 250), rgb(255, 250, 229)) no-repeat center;
 
+  .fa-search {
+    color: deepskyblue;
+  }
+  .fa-binoculars {
+    color: darkgoldenrod;
+  }
   .search-bar {
     margin: 1rem auto;
     font-size: 1.6rem;
@@ -75,16 +95,18 @@ export default class Certificates extends Vue {}
       outline-offset: 0;
       box-shadow: 3px 3px 4px 0 grey;
     }
+
     .fa-trash-alt {
       font-size: 1.6rem;
       margin-left: 7px;
     }
+
     .fa-trash-alt:hover {
       color: hotpink;
     }
   }
 
-    .container {
+  .container {
     display: inline-grid;
     justify-items: center;
     align-items: center;
@@ -99,30 +121,52 @@ export default class Certificates extends Vue {}
     grid-row-gap: 0;
     grid-auto-flow: column;
 
-    .back {grid-area: back;}
-    .front {grid-area: front;}
-    .database {grid-area: database;}
-    .designer {grid-area: designer;}
-    .pm {grid-area: pm;}
-    .other {grid-area: other;}
+    .back {
+      grid-area: back;
+    }
+
+    .front {
+      grid-area: front;
+    }
+
+    .database {
+      grid-area: database;
+    }
+
+    .designer {
+      grid-area: designer;
+    }
+
+    .pm {
+      grid-area: pm;
+    }
+
+    .other {
+      grid-area: other;
+    }
 
     .eng {
       grid-area: eng;
     }
+
     .eng > .block > b {
       color: green;
     }
 
-    .block {font-size: 1.5rem;}
+    .block {
+      font-size: 1.5rem;
+    }
 
     .front, .back {
       b {
         text-decoration: underline;
       }
     }
+
     .prj {
       font-size: 1.5rem;
       margin-bottom: 1rem;
+
       .block {
         box-shadow: 3px 3px 4px 0 palevioletred;
         background-image: url("@/assets/background/background21.jpg");
@@ -130,6 +174,7 @@ export default class Certificates extends Vue {}
         background-size: cover;
         background-repeat: no-repeat;
       }
+
       b {
         color: darkred;
       }
@@ -141,6 +186,7 @@ export default class Certificates extends Vue {}
         box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.7);
         border-color: #bbeafa;
       }
+
       b {
         color: red;
         text-decoration: none;
@@ -158,6 +204,7 @@ export default class Certificates extends Vue {}
       border-radius: 3px;
       font-size: 1.3rem;
     }
+
     .fa-trash-alt {
       font-size: 1.3rem;
     }
@@ -165,9 +212,10 @@ export default class Certificates extends Vue {}
   }
   .certificates {
     h1 {
-      font-size: 1.7rem;
+      font-size: 1.55rem;
       //margin: 0.4rem auto;
     }
+
     .container {
       display: grid;
       justify-items: center;
@@ -189,7 +237,9 @@ export default class Certificates extends Vue {}
       //  justify-content: center;
       //}
 
-      .block {font-size: 1.2rem;}
+      .block {
+        font-size: 1.2rem;
+      }
 
       .eng {
         b {

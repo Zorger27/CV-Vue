@@ -4,39 +4,39 @@ import CurrentDate from "@/components/util/CurrentDate.vue";
 import Cryptocurrencies from "@/components/other/Cryptocurrencies.vue";
 
 @Options({
-    data() {
-        return {
-            tableView: true
-        }
-    },
-    methods: {
-        changeView() {
-            this.tableView = !this.tableView;
-        }
-    },
-    components: {CurrentDate, Cryptocurrencies},
+  data() {
+    return {
+      tableView: true
+    }
+  },
+  methods: {
+    changeView() {
+      this.tableView = !this.tableView;
+    }
+  },
+  components: {CurrentDate, Cryptocurrencies},
 })
 export default class Cryptocur extends Vue {
 }
 </script>
 
 <template>
-    <div class="cryptocur">
-        <h1>
-            <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
-            </router-link>
-            {{ $t('extra.cryptocur.title') }}
-            <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
-        </h1>
-        <line></line>
-        <h2>{{ $t('extra.cryptocur.h1') }} <a href="https://www.coingecko.com" target="_blank">CoinGecko</a></h2>
-        <div>
-            <CurrentDate></CurrentDate>
-        </div>
-        <div>
-            <Cryptocurrencies :table-view="tableView"></Cryptocurrencies>
-        </div>
+  <div class="cryptocur">
+    <h1>
+      <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
+      </router-link>
+      {{ $t('extra.cryptocur.title') }}
+      <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
+    </h1>
+    <line></line>
+    <h2>{{ $t('extra.cryptocur.h1') }} <a href="https://www.coingecko.com" target="_blank">CoinGecko</a></h2>
+    <div>
+      <CurrentDate></CurrentDate>
     </div>
+    <div>
+      <Cryptocurrencies :table-view="tableView"></Cryptocurrencies>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -55,8 +55,15 @@ export default class Cryptocur extends Vue {
       margin-right: 0.1rem;
     }
   }
-  .fa.fa-th {color: deepskyblue;}
-  .fa.fa-list {color: deeppink;}
+
+  .fa.fa-th {
+    color: deepskyblue;
+  }
+
+  .fa.fa-list {
+    color: deeppink;
+  }
+
   h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;

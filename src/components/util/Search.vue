@@ -14,6 +14,8 @@ import databaseStore from "@/store/modules/certificates/databaseStore";
 import otherStore from "@/store/modules/certificates/otherStore";
 import englishStore from "@/store/modules/certificates/englishStore";
 import pmStore from "@/store/modules/certificates/pmStore";
+import itvdnStore from "@/store/modules/education/itvdnStore";
+import progStore from "@/store/modules/education/progStore";
 
 @Options({
   computed: {
@@ -58,6 +60,12 @@ import pmStore from "@/store/modules/certificates/pmStore";
     },
     pmStore() {
       return pmStore
+    },
+    itvdnStore() {
+      return itvdnStore
+    },
+    progStore() {
+      return progStore
     },
     combinedCertificates() {
       const htmlCertificates = this.htmlStore.state.htmlStore;
@@ -110,12 +118,34 @@ import pmStore from "@/store/modules/certificates/pmStore";
         return sert.grade_en;
       }
     },
+    getRegNumber(sert) {
+      if (this.$i18n.locale === "ua") {
+        return sert.regnumber_ua;
+      } else if (this.$i18n.locale === "es") {
+        return sert.regnumber_es;
+      } else {
+        return sert.regnumber_en;
+      }
+    },
     checkDoc(sert) {
       const title = this.getTitle(sert).toLowerCase();
       const searchValue = this.searchValue.toLowerCase();
       const words = searchValue.split(" ");
       const examDate = sert.examdate.toLowerCase();
       const regNumber = sert.regnumber.toLowerCase();
+
+      return (
+        words.every(word => title.indexOf(word) !== -1) ||
+        examDate.indexOf(searchValue) !== -1 ||
+        regNumber.indexOf(searchValue) !== -1
+      );
+    },
+    checkDocProg(sert) {
+      const title = this.getTitle(sert).toLowerCase();
+      const searchValue = this.searchValue.toLowerCase();
+      const words = searchValue.split(" ");
+      const examDate = sert.examdate.toLowerCase();
+      const regNumber = this.getRegNumber(sert).toLowerCase();
 
       return (
         words.every(word => title.indexOf(word) !== -1) ||
@@ -152,6 +182,26 @@ export default class Search extends Vue {
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
             <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
+            <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>
+            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
+          </a>
+        </div>
+      </template>
+      <template v-for="sert in itvdnStore.state.itvdnStore" :key="sert.id">
+        <div class="diploma" v-if="checkDoc(sert)">
+          <a class="block" :href="sert.image" title="Diploma..." target="_blank">
+            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
+            <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
+            <div>{{ $t('cert.grade') }}: <strong>{{ sert.grade }}</strong></div>
+            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
+          </a>
+        </div>
+      </template>
+      <template v-for="sert in progStore.state.progStore" :key="sert.id">
+        <div class="diploma" v-if="checkDocProg(sert)">
+          <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
+            <div>{{ $t('cert.number') }}: <strong>{{ getRegNumber(sert) }}</strong></div>
             <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
           </a>

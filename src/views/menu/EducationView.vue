@@ -46,7 +46,7 @@ export default class Education extends Vue {}
         <tbody>
         <tr v-for="sert in itvdnStore.state.itvdnStore" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
-          <td class="name"><a :href="sert.image" title="Diploma..." target="_blank">{{ sert.title }}</a></td>
+          <td class="name"><a :href="sert.image" title="Diploma..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
           <td class="grade">{{ sert.grade }}</td>
           <td class="date">{{ sert.examdate }}</td>
@@ -60,7 +60,7 @@ export default class Education extends Vue {}
       </h2>
       <div v-for="sert in itvdnStore.state.itvdnStore" :key="sert.id" class="diploma">
         <a class="block" :href="sert.image" title="Diploma..." target="_blank">
-          <h3>{{ sert.id }}. {{ sert.title }}</h3>
+          <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
           <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
           <div>{{ $t('cert.grade') }}: <strong>{{ sert.grade }}</strong></div>
           <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
