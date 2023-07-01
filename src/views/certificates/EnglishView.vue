@@ -22,22 +22,6 @@ import Slider from "@/components/util/Slider.vue";
 export default class English extends Vue {
   images = require.context('@/assets/certificates/english/', false, /\.jpg$/)
   sliderImages = this.images.keys().map(key => this.images(key))
-  // data() {
-  //   return {
-  //     sliderImages: [
-  //       require('@/assets/english/01_English_for_beginners.jpg'),
-  //       require('@/assets/english/02_Conversational_English.jpg'),
-  //       require('@/assets/english/03_English_for_traveling.jpg'),
-  //       require('@/assets/english/04_English_for_IT.jpg'),
-  //       require('@/assets/english/05_Interview_in_English.jpg'),
-  //       require('@/assets/english/06_Business_English.jpg'),
-  //       require('@/assets/english/07_Intermediate_level_of_English.jpg'),
-  //       require('@/assets/english/08_Irregular_Verbs.jpg'),
-  //       require('@/assets/english/09_English_with_native_speaker.jpg'),
-  //       require('@/assets/english/10_English_for_advanced.jpg'),
-  //     ],
-  //   }
-  // }
 }
 </script>
 

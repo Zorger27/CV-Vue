@@ -133,7 +133,6 @@ export default class TodoList extends Vue {
   background-color: white;
 
   .completed {
-    //text-decoration: line-through;
     filter: blur(1.5px);
     color: steelblue;
   }

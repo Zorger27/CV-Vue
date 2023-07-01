@@ -207,7 +207,6 @@ export default class Calculator extends Vue {
     display: grid;
     background-color: white;
     grid-template-columns: repeat(4, 1fr);
-    //grid-auto-rows: minmax(50px, auto);
     grid-column-gap: 0.5rem;
     box-shadow: 0 1px 4px 0 lightgrey;
 
@@ -338,8 +337,6 @@ export default class Calculator extends Vue {
       border-color: deepskyblue;
       font-weight: bold;
     }
-
-
   }
 
   @media (max-width: 768px) {
@@ -357,7 +354,6 @@ export default class Calculator extends Vue {
       .btn {
         margin: 5px 2px 5px 0;
       }
-
     }
   }
 }

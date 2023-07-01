@@ -272,8 +272,6 @@ header {
   @media (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
-    //grid-template-columns: 1fr 1fr 1fr 1fr;
-    //justify-content: space-between;
     grid-template-rows: auto;
     grid-template-areas: "burger-menu language search login logo";
     grid-column-gap: 0.5rem;

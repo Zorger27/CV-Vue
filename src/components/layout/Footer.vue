@@ -86,7 +86,6 @@ footer {
     margin: 0;
     font-size: 0.9rem;
     font-style: italic;
-    //letter-spacing: 1px;
     color: saddlebrown;
   }
 }

@@ -114,7 +114,6 @@ export default class Slider extends Vue {
     }
 
     .slider-dot.active {
-      //background-color: #333;
       background-color: purple;
     }
   }

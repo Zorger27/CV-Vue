@@ -232,10 +232,6 @@ export default class Certificates extends Vue {
       grid-column-gap: 0.5rem;
       grid-row-gap: 0;
       grid-auto-flow: column;
-      //.prj {
-      //  display: flex;
-      //  justify-content: center;
-      //}
 
       .block {
         font-size: 1.2rem;

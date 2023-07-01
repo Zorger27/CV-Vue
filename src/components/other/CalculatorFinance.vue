@@ -128,7 +128,6 @@ export default class CalculatorFinance extends Vue {
 
     .display {
       height: 4.2rem;
-      //height: auto;
       border: 1px solid #ddd;
       text-align: right;
       box-sizing: border-box;
@@ -162,7 +161,6 @@ export default class CalculatorFinance extends Vue {
         display: grid;
         cursor: pointer;
         font-size: 2rem;
-        //background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
         background-color: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 3px;
@@ -242,7 +240,6 @@ export default class CalculatorFinance extends Vue {
 
   @media (max-width: 768px) {
     .calculator {
-      //width: 330px;
       width: auto;
       max-width: 400px;
       margin: 0.5rem auto;

@@ -139,8 +139,6 @@ export default class Projects extends Vue {
   }
 
   .table {
-    //background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
-    //background-color: rgb(255, 255, 255);
     background-image: url("@/assets/background/background04.jpg");
     background-position: center;
     background-size: cover;
@@ -172,10 +170,6 @@ export default class Projects extends Vue {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
         border-color: rgba(0, 0, 0, 0.3);
         .link .link2 {display: flex;}
-      }
-      .block:hover {
-        //box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.7);
-        //border-color: rgba(0, 0, 0, 0.4);
       }
     }
   }

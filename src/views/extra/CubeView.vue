@@ -30,7 +30,6 @@ export default class Cube extends Vue {
 <style lang="scss" scoped>
 .cube {
   flex: 1 0 auto;
-  //background: linear-gradient(to bottom, rgb(247, 234, 250), rgb(255, 250, 229)) no-repeat center;
   background-image: url("@/assets/background/background18.jpg");
   background-position: center;
   background-size: cover;
@@ -48,9 +47,6 @@ export default class Cube extends Vue {
     height: 10rem;
     width: 10rem;
     margin: 6rem auto;
-    //border: 1px solid blue;
-    //border-radius: 5%;
-    //box-shadow: inset 0 0 15px 0 lightblue;
     perspective: 1000px;
     perspective-origin: center -5rem;
     display: flex;

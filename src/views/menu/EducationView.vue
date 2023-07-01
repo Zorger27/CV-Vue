@@ -212,8 +212,6 @@ export default class Education extends Vue {}
             <th>№</th>
             <th style="text-align: left;">{{ $t('cert.title') }}</th>
             <th>{{ $t('cert.level') }}</th>
-<!--            <th>{{ $t('cert.grade') }}</th>-->
-<!--            <th>{{ $t('cert.date') }}</th>-->
           </tr>
           </thead>
           <tbody>
@@ -221,8 +219,6 @@ export default class Education extends Vue {}
             <td class="nomer">{{ sert.id }}</td>
             <td class="name"><a :href="sert.image" title="Certificate..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
             <td class="number">{{ sert.regnumber }}</td>
-<!--            <td class="grade">{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</td>-->
-<!--            <td class="date">{{ sert.examdate }}</td>-->
           </tr>
           </tbody>
         </table>
@@ -231,8 +227,6 @@ export default class Education extends Vue {}
         <a class="block" :href="sert.image" title="Certificate..." target="_blank">
           <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
           <div>{{ $t('cert.level') }}: <strong>{{ sert.regnumber }}</strong></div>
-  <!--        <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>-->
-  <!--        <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>-->
         </a>
       </div>
     </div>
@@ -250,7 +244,6 @@ export default class Education extends Vue {}
   background-repeat: no-repeat;
 
   .table {
-    //background-color: white;
     th, .nomer, .number, .grade, .date {
       text-align: center;
       a {text-decoration: none; color: inherit;}
@@ -259,7 +252,6 @@ export default class Education extends Vue {}
   }
 
   .container {
-    //text-align: left;
     h2 {
       color: #0303af;
       font-size: 1.8rem;

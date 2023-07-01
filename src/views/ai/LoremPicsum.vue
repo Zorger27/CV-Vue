@@ -104,7 +104,6 @@ export default class LoremPicsum extends Vue {
   .more {
     display: inline-flex;
     color: deeppink;
-    //text-shadow: 2px 2px 4px white;
     cursor: pointer;
     border-bottom: 1px solid transparent;
     margin: 0.5rem;
@@ -133,7 +132,6 @@ export default class LoremPicsum extends Vue {
       font-weight: bold;
       border: 1px solid lightslategrey;
       border-radius: 5px;
-      //background-color: #fde8ed;
       background-image: url("@/assets/background/background10.jpg");
       background-position: center;
       background-size: cover;
@@ -144,7 +142,6 @@ export default class LoremPicsum extends Vue {
 
     button:hover {
       box-shadow: 3px 3px 4px 0 grey;
-      //color: cornflowerblue;
     }
 
     .input {
@@ -200,11 +197,9 @@ export default class LoremPicsum extends Vue {
       .image-wrapper {
         margin: 0.5rem;
         max-width: 100%;
-        //overflow: hidden;
         .image {
           width: 100%;
           height: auto;
-          //display: block;
         }
       }
     }

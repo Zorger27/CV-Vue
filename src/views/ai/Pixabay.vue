@@ -164,7 +164,6 @@ export default class Pixabay extends Vue {
   .more {
     display: inline-flex;
     color: deeppink;
-    //text-shadow: 2px 2px 4px white;
     cursor: pointer;
     border-bottom: 1px solid transparent;
     margin: 0.5rem;
@@ -242,10 +241,6 @@ export default class Pixabay extends Vue {
 
     .media-container {
       .photo {
-        //display: flex;
-        //flex-wrap: wrap;
-        //justify-content: center;
-
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
@@ -265,10 +260,6 @@ export default class Pixabay extends Vue {
       }
 
       .video {
-        //display: flex;
-        //flex-wrap: wrap;
-        //justify-content: center;
-
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
@@ -277,7 +268,6 @@ export default class Pixabay extends Vue {
 
         .media-wrapper {
           margin: 5px;
-          //max-width: 30%;
           display: flex;
           flex-wrap: wrap;
 

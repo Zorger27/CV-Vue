@@ -155,8 +155,6 @@ export default class GameMemory extends Vue {}
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    //background-color: #f9f9f9;
-    //border: 1px solid #ddd;
     border: 1px solid lightslategrey;
     border-radius: 5px;
     text-align: center;
@@ -164,10 +162,7 @@ export default class GameMemory extends Vue {}
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
   }
   button:hover {
-    //background-color: #f1f1f1;
     box-shadow: 3px 3px 4px 0 lightgrey;
-    //color: white;
-    //border-color: coral;
   }
 
   .rules {

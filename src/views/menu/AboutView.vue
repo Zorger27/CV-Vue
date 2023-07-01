@@ -27,7 +27,6 @@ export default class About extends Vue {}
 
 <template>
   <div class="about">
-<!--    <h1>{{$t ('about.title')}}</h1>-->
     <h1 class="main">
       {{$t ('about.title')}} <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
     </h1>
@@ -39,7 +38,6 @@ export default class About extends Vue {}
     <h3 v-if="showMore" style="color: deeppink; margin: 0.5rem">{{$t ('about.more04')}}</h3>
     <h3 v-if="showMore" style="color: deeppink; margin: 0.5rem">{{$t ('about.more05')}}</h3>
     <line></line>
-    <!--    <h2>{{$t ('about.technologies')}}</h2>-->
     <div v-if="tableView" class="table">
       <table>
         <thead>

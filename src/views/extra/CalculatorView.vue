@@ -64,8 +64,6 @@ export default class CalculatorView extends Vue {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    //background-color: #f9f9f9;
-    //border: 1px solid #ddd;
     border: 1px solid lightslategrey;
     border-radius: 5px;
     text-align: center;
@@ -77,19 +75,11 @@ export default class CalculatorView extends Vue {
     }
   }
 
-  //button:hover {
-  //  //background-color: #f1f1f1;
-  //  box-shadow: 3px 3px 4px 0 grey;
-  //  //color: white;
-  //  //border-color: coral;
-  //}
-
   @media(max-width: 1020px) {}
 
   @media (max-width: 768px) {
     h1 {
       font-size: 1.6rem;
-      //margin-bottom: 0.1rem;
     }
     button {
       padding: 0.7rem 0.2rem;

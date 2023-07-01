@@ -87,7 +87,6 @@ export default class Pm extends Vue {
 @media(max-width:768px) {
   h1 {
     font-size: 1.7rem;
-    //margin: 0.5rem auto;
   }
   .slider {margin-bottom: 0.3rem;}
 

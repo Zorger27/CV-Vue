@@ -258,7 +258,6 @@ export default class Search extends Vue {
       }
 
       .block:hover {
-        //box-shadow: 3px 3px 4px 0 grey;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
         border-color: rgba(0, 0, 0, 0.3);
 

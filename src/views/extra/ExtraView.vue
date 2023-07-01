@@ -26,7 +26,6 @@ export default class Extra extends Vue {
     <h1>
       {{ $t('extra.h1') }}
       <span class="currentUser">
-<!--       {{ loginStore.state.currentUser.name }} {{ loginStore.state.currentUser.surname }}-->
         {{
           this.$i18n.locale === "ua" ? loginStore.state.currentUser.name_ua : this.$i18n.locale === "es" ? loginStore.state.currentUser.name_es : loginStore.state.currentUser.name_en
         }} {{
@@ -139,7 +138,6 @@ export default class Extra extends Vue {
 
     .prj {
       font-size: 1.5rem;
-      //margin-bottom: 1rem;
       .block {
         padding: 1.5rem;
         margin: 0.5rem;
