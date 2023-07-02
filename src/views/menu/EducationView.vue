@@ -217,7 +217,7 @@ export default class Education extends Vue {}
           <tbody>
           <tr v-for="sert in languagesStore.state.languagesStore" :key="sert.id">
             <td class="nomer">{{ sert.id }}</td>
-            <td class="name"><a :href="sert.image" title="Certificate..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
+            <td class="name" style="width: max-content"><a :href="sert.image" title="Certificate..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
             <td class="number" style="width: max-content">{{ sert.regnumber }}</td>
           </tr>
           </tbody>
