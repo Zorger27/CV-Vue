@@ -24,8 +24,8 @@ const state = {
       {
         id: 3,
         title_en: "Scroll Snap features",
-        title_ua: "Можливості прив'язки прокручування",
-        title_es: "Funciones de desplazamiento con bloqueo",
+        title_ua: "Особливості Scroll Snap",
+        title_es: "Características de Scroll Snap",
         type: "WEB-application",
         techno: "HTML5, CSS3, FlexBox CSS",
         sourcelink: "https://github.com/Zorger27/Scroll-Snap",
