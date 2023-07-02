@@ -218,7 +218,7 @@ export default class Education extends Vue {}
           <tr v-for="sert in languagesStore.state.languagesStore" :key="sert.id">
             <td class="nomer">{{ sert.id }}</td>
             <td class="name"><a :href="sert.image" title="Certificate..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
-            <td class="number">{{ sert.regnumber }}</td>
+            <td class="number" style="width: max-content">{{ sert.regnumber }}</td>
           </tr>
           </tbody>
         </table>
@@ -249,6 +249,16 @@ export default class Education extends Vue {}
       a {text-decoration: none; color: inherit;}
       a:hover {color: darkcyan;}
     }
+    .title {width: 74rem;}
+    .nomer {width: 2rem}
+    .name {width: 24rem;}
+    .number {width: 3rem;}
+    .grade {
+      width: 3rem;
+      font-size: 1.37rem;
+      font-weight: bold;
+    }
+    .date {width: 3rem;}
   }
 
   .container {
@@ -289,6 +299,18 @@ export default class Education extends Vue {}
 }
 @media(max-width:1020px) {
   .education {
+    .table {
+      .title {width: 60rem;}
+      .nomer {width: 1rem}
+      .name {width: 18rem;}
+      .number {width: 4rem;}
+      .grade {
+        font-size: 1rem;
+        font-weight: bold;
+        width: 6rem;
+      }
+      .date {width: 2rem;}
+    }
     .container {
       h2 {
         font-size: 1.6rem;
@@ -299,6 +321,20 @@ export default class Education extends Vue {}
 }
 @media(max-width:768px) {
   .education {
+    .table {
+      font-size: 0.9rem;
+      .title {width: 30rem;}
+      .nomer {width: 1rem}
+      .name {width: 12rem;}
+      .number {width: 3rem;}
+      .grade {
+        width: 3rem;
+        font-size: 0.9rem;
+        //font-weight: bold;
+      }
+      .date {width: 2rem;}
+      .nomer, .number, .grade, .date {font-size: 0.5rem;}
+    }
     .container {
       h2 {
         font-size: 1.3rem;
@@ -318,8 +354,5 @@ export default class Education extends Vue {}
     }
   }
   .diplom, .title {font-size: 1.2rem}
-  .table {font-size: 0.9rem;
-    .nomer, .number, .grade, .date {font-size: 0.5rem;}
-  }
 }
 </style>

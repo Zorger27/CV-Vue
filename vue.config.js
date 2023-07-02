@@ -28,7 +28,8 @@ module.exports = defineConfig({
       new HtmlWebpackTagsPlugin({
         links: [
           {
-            path: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css',
+            // path: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css',
+            path: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
             attributes: {
               rel: 'stylesheet'
             },

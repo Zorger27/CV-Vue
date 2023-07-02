@@ -41,9 +41,9 @@ export default class Projects extends Vue {
         </tr>
         </thead>
         <tbody>
-        <tr v-for="prj in projectStore.state.projectStore" :key="prj.id">
+        <tr v-for="prj in projectStore.state.projectStore.slice().reverse()" :key="prj.id">
           <td class="nomer">{{ prj.id }}</td>
-          <td class="name">{{ prj.title }}</td>
+          <td class="name">{{ this.$i18n.locale === "ua" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</td>
           <td class="number">{{ prj.type }}</td>
           <td class="grade">{{ prj.techno }}</td>
           <td class="date">
@@ -61,9 +61,9 @@ export default class Projects extends Vue {
       </table>
     </div>
     <div v-else class="container">
-      <div v-for="prj in projectStore.state.projectStore" :key="prj.id" class="prj">
+      <div v-for="prj in projectStore.state.projectStore.slice().reverse()" :key="prj.id" class="prj">
         <div class="block">
-          <h3>{{ prj.id }}. {{ prj.title }}</h3>
+          <h3>{{ prj.id }}. {{ this.$i18n.locale === "ua" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</h3>
           <div>{{ $t('projects.type') }}: <strong>{{ prj.type }}</strong></div>
           <div>{{ $t('projects.technologies') }}: <strong>{{ prj.techno }}</strong></div>
           <div class="link">
@@ -139,18 +139,24 @@ export default class Projects extends Vue {
   }
 
   .table {
+    //width: 50rem;
     background-image: url("@/assets/background/background04.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 0.5rem;
 
-    th, .nomer, .number, .grade, .date {
-      text-align: center;
+    .nomer {width: 2rem}
+    .name {width: 24rem;}
+    .number {width: 3rem;}
+    .grade {min-width: 18rem;}
+    .date {
+      width: 3rem;
+      font-size: 1.3rem;
     }
 
-    .date {
-      font-size: 1.3rem;
+    th, .nomer, .number, .grade, .date {
+      text-align: center;
     }
   }
 
@@ -162,6 +168,7 @@ export default class Projects extends Vue {
     margin: 0.5rem auto;
 
     .prj {
+      //max-width: 29rem;
       .block {
         background-image: url("@/assets/background/background09.jpg");
         background-position: center;
@@ -175,6 +182,24 @@ export default class Projects extends Vue {
   }
 
   @media(max-width: 1020px) {
+    .table {
+      font-size: 1.1rem;
+      .nomer {width: 2rem}
+      .name {width: 12rem;}
+      .number {
+        width: 3rem;
+        font-size: 1.1rem;
+      }
+      .grade {
+        min-width: 9rem;
+        font-size: 1.1rem;
+      }
+      .date {
+        width: 3rem;
+        font-size: 1.1rem;
+      }
+    }
+
     .container {
       .prj {
         .block {
@@ -182,15 +207,35 @@ export default class Projects extends Vue {
         }
       }
     }
-    .table {
-      .date {
-        font-size: 1.1rem;
-      }
-    }
   }
   @media(max-width: 768px) {
+    .table {
+      font-size: 0.7rem;
+      .nomer {width: 1rem}
+      .name {min-width: 2rem;}
+      .number {
+        width: 3rem;
+        //font-size: 0.9rem;
+      }
+      .grade {
+        min-width: 3rem;
+        //font-size: 0.9rem;
+      }
+      .date {
+        width: 3rem;
+        //font-size: 0.7rem;
+      }
+
+      thead {font-size: 0.7rem;}
+
+      .nomer, .number, .grade, .date {
+        font-size: 0.5rem;
+      }
+    }
+
     .container {
       .prj {
+        max-width: 25rem;
         .block {
           max-width: fit-content;
         }
@@ -200,21 +245,6 @@ export default class Projects extends Vue {
       width: max-content;
       //padding: 0.3rem 0.3rem;
       margin: 0.2rem auto;
-    }
-    .table {
-      font-size: 0.9rem;
-
-      thead {
-        font-size: 0.7rem;
-      }
-
-      .nomer, .number, .grade, .date {
-        font-size: 0.5rem;
-      }
-
-      .date {
-        font-size: 0.7rem;
-      }
     }
   }
 }
