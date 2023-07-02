@@ -168,7 +168,7 @@ export default class Projects extends Vue {
     margin: 0.5rem auto;
 
     .prj {
-      //max-width: 29rem;
+      max-width: 31rem;
       .block {
         background-image: url("@/assets/background/background09.jpg");
         background-position: center;
