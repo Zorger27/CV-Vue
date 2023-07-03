@@ -44,7 +44,7 @@ export default class Projects extends Vue {
         <tr v-for="prj in projectStore.state.projectStore.slice().reverse()" :key="prj.id">
           <td class="nomer">{{ prj.id }}</td>
           <td class="name">{{ this.$i18n.locale === "ua" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</td>
-          <td class="number">{{ prj.type }}</td>
+          <td class="number">{{ this.$i18n.locale === "ua" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</td>
           <td class="grade">{{ prj.techno }}</td>
           <td class="date">
             <div v-if="prj.demolink">
@@ -64,7 +64,7 @@ export default class Projects extends Vue {
       <div v-for="prj in projectStore.state.projectStore.slice().reverse()" :key="prj.id" class="prj">
         <div class="block">
           <h3>{{ prj.id }}. {{ this.$i18n.locale === "ua" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</h3>
-          <div>{{ $t('projects.type') }}: <strong>{{ prj.type }}</strong></div>
+          <div>{{ $t('projects.type') }}: <strong>{{ this.$i18n.locale === "ua" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</strong></div>
           <div>{{ $t('projects.technologies') }}: <strong>{{ prj.techno }}</strong></div>
           <div class="link">
             <div v-if="prj.demolink" class="link2">
