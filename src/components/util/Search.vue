@@ -19,54 +19,22 @@ import progStore from "@/store/modules/education/progStore";
 
 @Options({
   computed: {
-    htmlStore() {
-      return htmlStore
-    },
-    javascriptStore() {
-      return javascriptStore
-    },
-    angularStore() {
-      return angularStore
-    },
-    reactStore() {
-      return reactStore
-    },
-    frontStore() {
-      return frontStore
-    },
-    phpStore() {
-      return phpStore
-    },
-    pythonStore() {
-      return pythonStore
-    },
-    rubyStore() {
-      return rubyStore
-    },
-    javaStore() {
-      return javaStore
-    },
-    designerStore() {
-      return designerStore
-    },
-    databaseStore() {
-      return databaseStore
-    },
-    otherStore() {
-      return otherStore
-    },
-    englishStore() {
-      return englishStore
-    },
-    pmStore() {
-      return pmStore
-    },
-    itvdnStore() {
-      return itvdnStore
-    },
-    progStore() {
-      return progStore
-    },
+    htmlStore() {return htmlStore},
+    javascriptStore() {return javascriptStore},
+    angularStore() {return angularStore},
+    reactStore() {return reactStore},
+    frontStore() {return frontStore},
+    phpStore() {return phpStore},
+    pythonStore() {return pythonStore},
+    rubyStore() {return rubyStore},
+    javaStore() {return javaStore},
+    designerStore() {return designerStore},
+    databaseStore() {return databaseStore},
+    otherStore() {return otherStore},
+    englishStore() {return englishStore},
+    pmStore() {return pmStore},
+    itvdnStore() {return itvdnStore},
+    progStore() {return progStore},
     combinedCertificates() {
       const htmlCertificates = this.htmlStore.state.htmlStore;
       const javascriptCertificates = this.javascriptStore.state.javascriptStore;
@@ -89,7 +57,15 @@ import progStore from "@/store/modules/education/progStore";
       const englishCertificates = this.englishStore.state.englishStore;
       const pmCertificates = this.pmStore.state.pmStore;
       return [...otherCertificates, ...pmCertificates, ...englishCertificates];
-    }
+    },
+    hasResults() {
+      return (
+        this.combinedCertificates.some((sert) => this.checkDoc(sert)) ||
+        this.gradeCombinedCertificates.some((sert) => this.checkDoc(sert)) ||
+        this.itvdnStore.state.itvdnStore.some((sert) => this.checkDoc(sert)) ||
+        this.progStore.state.progStore.some((sert) => this.checkDocProg(sert))
+      );
+    },
   },
   data() {
     return {
@@ -133,26 +109,32 @@ import progStore from "@/store/modules/education/progStore";
       const words = searchValue.split(" ");
       const examDate = sert.examdate.toLowerCase();
       const regNumber = sert.regnumber.toLowerCase();
+      let hasMatch = false;
 
-      return (
-        words.every(word => title.indexOf(word) !== -1) ||
-        examDate.indexOf(searchValue) !== -1 ||
-        regNumber.indexOf(searchValue) !== -1
-      );
+      words.forEach((word) => {
+        if (title.includes(word) || examDate.includes(word) || regNumber.includes(word)) {
+          hasMatch = true;
+        }
+      });
+      return hasMatch;
     },
+
     checkDocProg(sert) {
       const title = this.getTitle(sert).toLowerCase();
       const searchValue = this.searchValue.toLowerCase();
       const words = searchValue.split(" ");
       const examDate = sert.examdate.toLowerCase();
       const regNumber = this.getRegNumber(sert).toLowerCase();
+      let hasMatch = false;
 
-      return (
-        words.every(word => title.indexOf(word) !== -1) ||
-        examDate.indexOf(searchValue) !== -1 ||
-        regNumber.indexOf(searchValue) !== -1
-      );
-    }
+      words.forEach((word) => {
+        if (title.includes(word) || examDate.includes(word) || regNumber.includes(word)) {
+          hasMatch = true;
+        }
+      });
+      return hasMatch;
+    },
+
   },
   components: {},
 })
@@ -207,6 +189,10 @@ export default class Search extends Vue {
           </a>
         </div>
       </template>
+      <!-- Вывод сообщения об отсутствии результатов -->
+      <div class="hasResults" v-if="searchValue.length !== 0 && !hasResults">
+        {{ $t('cert.hasNoResults') }}️
+      </div>
     </div>
   </div>
 </template>
@@ -263,6 +249,12 @@ export default class Search extends Vue {
 
       }
     }
+    .hasResults {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin: 0.5rem;
+      color: darkgreen;
+    }
   }
 
   @media (max-width: 768px) {
@@ -278,6 +270,13 @@ export default class Search extends Vue {
 
       .fa-trash-alt {
         font-size: 1.3rem;
+      }
+    }
+    .inner {
+      .hasResults {
+        font-size: 1.3rem;
+        margin: 0.2rem;
+        color: darkgreen;
       }
     }
   }

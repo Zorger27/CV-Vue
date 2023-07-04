@@ -96,6 +96,7 @@
     "date": "Fecha del examen",
     "level": "Nivel",
     "search": "Buscar certificados...",
+    "hasNoResults": "¡Lo sentimos, pero no hay resultados para su búsqueda! \uD83E\uDD37\u200D♀\uFE0F\uD83E\uDDD0\uD83E\uDD37\u200D♂\uFE0F",
     "back": {
       "backend": "Diplomas y certificados Backend:",
       "h1": "Diplomas y certificados Backend",
