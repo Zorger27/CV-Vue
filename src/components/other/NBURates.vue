@@ -92,6 +92,8 @@ export default class NBURates extends Vue {}
 }
 .table {
   background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
   .code {color: darkgoldenrod;}
   .price {text-align: center;}
 }
@@ -100,10 +102,10 @@ export default class NBURates extends Vue {}
   font-size: 2rem;
   padding: 1rem;
   margin: 0.5rem;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   background-color: #f1f1f1;
-  box-shadow: 3px 3px 4px 0 lightgrey;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   .name {
     margin-right: 5px;
     color: deepskyblue;
@@ -124,6 +126,7 @@ export default class NBURates extends Vue {}
   }
 }
 @media (max-width: 768px) {
+  .table {margin-bottom: 0.5rem;}
   .bank {font-size: 1.6rem;}
   .rates {
     font-size: 1.5rem;

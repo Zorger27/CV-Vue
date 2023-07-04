@@ -82,16 +82,25 @@ export default class Cryptocurrencies extends Vue {
 <style lang="scss" scoped>
 .table {
   background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
+  .name {
+    width: 20rem;
+  }
+  .price {
+    width: 16rem;
+  }
 }
 .crypto {
   display: inline-flex;
   font-size: 2rem;
   padding: 1rem;
   margin: 0.5rem;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   background-color: #f1f1f1;
-  box-shadow: 3px 3px 4px 0 lightgrey;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
   a {text-decoration: none;}
 
   .name {
@@ -108,7 +117,7 @@ export default class Cryptocurrencies extends Vue {
 
 .crypto:hover {
   border-color: lightskyblue;
-  box-shadow: 3px 3px 4px 0 lightsteelblue;
+  box-shadow: 0 4px 8px lightsteelblue;
 }
 
 @media(max-width: 1020px) {
@@ -119,6 +128,15 @@ export default class Cryptocurrencies extends Vue {
   }
 }
 @media (max-width: 768px) {
+  .table {
+    margin-bottom: 0.5rem;
+    .name {
+      width: 9rem;
+    }
+    .price {
+      width: fit-content;
+    }
+  }
   .crypto {
     font-size: 1.5rem;
     padding: 0.6rem;
