@@ -106,6 +106,8 @@ export default class Experience extends Vue {
     codersrank-summary {
       margin: 0.5rem auto;
       max-width: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      border-radius: 5px;
       --border-radius: 5px;
     }
 
@@ -164,7 +166,7 @@ export default class Experience extends Vue {
       //  }
       //}
       codersrank-summary {
-        margin: 0.3rem auto;
+        margin: 0.5rem auto;
         max-width: 100%;
         --border-radius: 5px;
       }

@@ -75,7 +75,7 @@ export default class NBURates extends Vue {}
       </tbody>
     </table>
   </div>
-  <div v-else>
+  <div v-else class="container">
     <div v-for="(rate, index) in rates" :key="index" class="rates">
       <span class="name">{{ rate.txt }}</span>=<span class="price">{{ rate.rate.toFixed(2) }}</span>{{ $t('extra.exchange.uah') }}
     </div>
@@ -97,25 +97,29 @@ export default class NBURates extends Vue {}
   .code {color: darkgoldenrod;}
   .price {text-align: center;}
 }
-.rates {
-  display: inline-flex;
-  font-size: 2rem;
-  padding: 1rem;
-  margin: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  background-color: #f1f1f1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  .name {
-    margin-right: 5px;
-    color: deepskyblue;
-  }
-  .price {
-    margin-right: 5px;
-    margin-left: 5px;
-    color: deeppink;
+.container {
+  margin-bottom: 1rem;
+  .rates {
+    display: inline-flex;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    .name {
+      margin-right: 5px;
+      color: deepskyblue;
+    }
+    .price {
+      margin-right: 5px;
+      margin-left: 5px;
+      color: deeppink;
+    }
   }
 }
+
 
 @media(max-width: 1020px) {
   .bank {font-size: 2rem;}
@@ -128,10 +132,13 @@ export default class NBURates extends Vue {}
 @media (max-width: 768px) {
   .table {margin-bottom: 0.5rem;}
   .bank {font-size: 1.6rem;}
-  .rates {
-    font-size: 1.5rem;
-    padding: 0.6rem;
-    margin: 0.4rem;
+  .container {
+    margin-bottom: 0.5rem;
+    .rates {
+      font-size: 1.5rem;
+      padding: 0.6rem;
+      margin: 0.4rem;
+    }
   }
 }
 </style>

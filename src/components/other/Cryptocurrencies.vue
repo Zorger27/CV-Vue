@@ -72,10 +72,12 @@ export default class Cryptocurrencies extends Vue {
       </tbody>
     </table>
   </div>
-  <div v-else v-for="(crypto, index) in cryptos" :key="crypto.id" class="crypto">
-    <a :href="crypto.url" title="In more detail..." target="_blank">
-      <span class="name">{{ crypto.name }}</span>=<span class="price">{{ crypto.price }}</span>{{ $t('extra.exchange.usd') }}
-    </a>
+  <div v-else class="container">
+    <div v-for="(crypto, index) in cryptos" :key="crypto.id" class="crypto">
+      <a :href="crypto.url" title="In more detail..." target="_blank">
+        <span class="name">{{ crypto.name }}</span>=<span class="price">{{ crypto.price }}</span>{{ $t('extra.exchange.usd') }}
+      </a>
+    </div>
   </div>
 </template>
 
@@ -91,34 +93,38 @@ export default class Cryptocurrencies extends Vue {
     width: 16rem;
   }
 }
-.crypto {
-  display: inline-flex;
-  font-size: 2rem;
-  padding: 1rem;
-  margin: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  background-color: #f1f1f1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-  a {text-decoration: none;}
+.container {
+  margin-bottom: 1rem;
+  .crypto {
+    display: inline-flex;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    a {text-decoration: none;}
 
-  .name {
-    margin-right: 5px;
-    color: deepskyblue;
+    .name {
+      margin-right: 5px;
+      color: deepskyblue;
+    }
+
+    .price {
+      margin-right: 5px;
+      margin-left: 5px;
+      color: deeppink;
+    }
   }
 
-  .price {
-    margin-right: 5px;
-    margin-left: 5px;
-    color: deeppink;
+  .crypto:hover {
+    border-color: lightskyblue;
+    box-shadow: 0 4px 8px lightsteelblue;
   }
 }
 
-.crypto:hover {
-  border-color: lightskyblue;
-  box-shadow: 0 4px 8px lightsteelblue;
-}
 
 @media(max-width: 1020px) {
   .crypto {
@@ -137,10 +143,13 @@ export default class Cryptocurrencies extends Vue {
       width: fit-content;
     }
   }
-  .crypto {
-    font-size: 1.5rem;
-    padding: 0.6rem;
-    margin: 0.4rem;
+  .container {
+    margin-bottom: 0.5rem;
+    .crypto {
+      font-size: 1.5rem;
+      padding: 0.6rem;
+      margin: 0.4rem;
+    }
   }
 }
 </style>

@@ -124,7 +124,8 @@ export default class CalculatorFinance extends Vue {
     padding: 1.5rem;
     //border: 1px solid #bfbfbf;
     border-radius: 3px;
-    box-shadow: 0 1px 4px 0 lightgrey;
+    //box-shadow: 0 1px 4px 0 lightgrey;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 
     .display {
       height: 4.2rem;

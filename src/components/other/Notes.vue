@@ -148,6 +148,8 @@ export default class Notes extends Vue {
   font-size: 2rem;
   caret-color: blue;
   background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
 
   form {
     display: inline-flex;
@@ -295,6 +297,7 @@ export default class Notes extends Vue {
 @media (max-width: 768px) {
   .table {
     font-size: 1rem;
+    margin-bottom: 0.5rem;
 
     .text {
       max-width: 145px;

@@ -131,6 +131,8 @@ export default class TodoList extends Vue {
   font-size: 2rem;
   caret-color: blue;
   background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
 
   .completed {
     filter: blur(1.5px);
@@ -262,6 +264,7 @@ export default class TodoList extends Vue {
 @media (max-width: 768px) {
   .table {
     font-size: 1rem;
+    margin-bottom: 0.5rem;
     .name {
       max-width: 230px;
       input[type="text"] {

@@ -208,7 +208,8 @@ export default class Calculator extends Vue {
     background-color: white;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 0.5rem;
-    box-shadow: 0 1px 4px 0 lightgrey;
+    //box-shadow: 0 1px 4px 0 lightgrey;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 
     .display {
       grid-column: 1 / 5;
