@@ -109,8 +109,11 @@ export default class Experience extends Vue {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
       border-radius: 5px;
       --border-radius: 5px;
+      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
     }
-
+    codersrank-summary:hover {
+      box-shadow: 3px 3px 4px 0 lightgrey;
+    }
   }
 }
 

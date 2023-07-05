@@ -170,7 +170,7 @@ export default class Backend extends Vue {
         </div>
       </div>
     </div>
-    <div v-if="tableView" class="table" style="margin-bottom: 0.5rem">
+    <div v-if="tableView" class="table">
       <table>
         <thead>
         <tr>
@@ -235,6 +235,9 @@ export default class Backend extends Vue {
   h2 {
     margin: 0.5rem auto;
   }
+  //.table {
+  //  margin-bottom: 1rem;
+  //}
   .inner {
     display: inline-flex;
     align-items: center;
@@ -248,6 +251,7 @@ export default class Backend extends Vue {
 @media(max-width:768px) {
   .diplom, .title {font-size: 1.2rem;}
   .table {
+    //margin-bottom: 0.5rem;
     font-size: 0.9rem;
     .name {width: 12rem;}
     .nomer, .number, .grade, .date {font-size: 0.5rem;}

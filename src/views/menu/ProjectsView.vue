@@ -144,7 +144,7 @@ export default class Projects extends Vue {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 
     .nomer {width: 2rem}
     .name {width: 24rem;}
@@ -210,6 +210,7 @@ export default class Projects extends Vue {
   }
   @media(max-width: 768px) {
     .table {
+      margin-bottom: 0.5rem;
       font-size: 0.7rem;
       .nomer {width: 1rem}
       .name {min-width: 2rem;}
