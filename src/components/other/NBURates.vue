@@ -130,7 +130,7 @@ export default class NBURates extends Vue {}
   }
 }
 @media (max-width: 768px) {
-  .table {margin-bottom: 0.5rem;}
+  .table {margin-bottom: 1rem;}
   .bank {font-size: 1.6rem;}
   .container {
     margin-bottom: 0.5rem;

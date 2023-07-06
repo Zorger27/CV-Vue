@@ -342,7 +342,7 @@ export default class Calculator extends Vue {
 
   @media (max-width: 768px) {
     .calculator {
-      margin: 0.5rem auto;
+      margin: 1rem auto;
       padding: 0.6rem;
       font-size: 1.8rem;
       grid-column-gap: 0.3rem;

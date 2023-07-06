@@ -240,13 +240,14 @@ export default class Search extends Vue {
 
       .block {
         background-color: floralwhite;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
       }
 
       .block:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-        border-color: rgba(0, 0, 0, 0.3);
-
+        background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(251, 255, 240)) no-repeat center;
+        border-color: #bbeafa;
+        box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.4);
       }
     }
     .hasResults {

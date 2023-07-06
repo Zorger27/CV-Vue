@@ -88,6 +88,7 @@ export default class About extends Vue {}
 .prj a {
   background: inherit;
   padding: 1.2rem;
+  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
 }
 .prj a:hover {
   background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;

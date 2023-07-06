@@ -243,7 +243,7 @@ export default class CalculatorFinance extends Vue {
     .calculator {
       width: auto;
       max-width: 400px;
-      margin: 0.5rem auto;
+      margin: 1rem auto;
       padding: 0.6rem;
       font-size: 1.8rem;
 

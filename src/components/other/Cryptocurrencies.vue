@@ -135,7 +135,7 @@ export default class Cryptocurrencies extends Vue {
 }
 @media (max-width: 768px) {
   .table {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     .name {
       width: 9rem;
     }
