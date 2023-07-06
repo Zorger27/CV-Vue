@@ -92,7 +92,8 @@ export default class About extends Vue {}
 }
 .prj a:hover {
   background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
-  box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.5);
+  //box-shadow: 3px 3px 4px 0 lightgrey;
   border-color: #bbeafa;
 }
 

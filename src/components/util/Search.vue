@@ -246,8 +246,10 @@ export default class Search extends Vue {
 
       .block:hover {
         background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(251, 255, 240)) no-repeat center;
-        border-color: #bbeafa;
-        box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.4);
+        //border-color: #bbeafa;
+        border-color: lightgrey;
+        //box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.4);
+        box-shadow: 3px 3px 4px 0 lightgrey;
       }
     }
     .hasResults {
