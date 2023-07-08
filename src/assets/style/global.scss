@@ -100,9 +100,11 @@ h1 {text-align: center;}
 }
 .attention {color: #a20909;}
 .attention:hover {color: red;}
-.fa {cursor: pointer;}
-.fa.fa-th {color: deepskyblue;}
-.fa.fa-list {color: darkgoldenrod;}
+.fa, .fas {cursor: pointer;}
+.fa.fa-th {color: deepskyblue; margin-right: 0.5rem;}
+.fa.fa-list {color: darkgoldenrod; margin-right: 0.5rem;}
+.fas.fa-arrow-alt-circle-down {color: mediumvioletred;}
+.fas.fa-arrow-alt-circle-up {color: lightseagreen;}
 
 .table {
   display: inline-flex;

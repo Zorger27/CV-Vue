@@ -6,17 +6,28 @@ import Slider from "@/components/util/Slider.vue";
   computed: {
     englishStore() {
       return englishStore
-    }
+    },
+    orderedSert() {
+      if (this.reverseOrder) {
+        return this.englishStore.state.englishStore.slice().reverse();
+      } else {
+        return this.englishStore.state.englishStore;
+      }
+    },
   },
   data() {
     return {
-      tableView: false
+      tableView: false,
+      reverseOrder: false, // Изначально установлен в false для последовательного порядка
     }
   },
   methods: {
     changeView() {
       this.tableView = !this.tableView;
-    }
+    },
+    toggleOrder() {
+      this.reverseOrder = !this.reverseOrder; // Инвертируем значение reverseOrder при клике на кнопку
+    },
   },
   components: {Slider},})
 export default class English extends Vue {
@@ -32,6 +43,7 @@ export default class English extends Vue {
       </router-link>
       {{ $t('cert.english') }}
       <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
+      <i @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-arrow-alt-circle-down' : 'fa-arrow-alt-circle-up' ]"></span></i>
     </h1>
     <line></line>
     <div v-if="tableView" class="table">
@@ -46,7 +58,7 @@ export default class English extends Vue {
         </tr>
         </thead>
         <tbody>
-        <tr v-for="sert in englishStore.state.englishStore.slice().reverse()" :key="sert.id">
+        <tr v-for="sert in orderedSert" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
           <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
@@ -56,7 +68,7 @@ export default class English extends Vue {
         </tbody>
       </table>
     </div>
-    <div v-else v-for="sert in englishStore.state.englishStore.slice().reverse()" :key="sert.id" class="certificate">
+    <div v-else v-for="sert in orderedSert" :key="sert.id" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
         <div>{{ $t('cert.level') }}: <strong>{{ sert.regnumber }}</strong></div>
@@ -89,6 +101,7 @@ export default class English extends Vue {
 .slider {margin-bottom: 1rem;}
 
 @media(max-width:768px) {
+  h1 {font-size: 1.9rem;}
   .slider {margin-bottom: 0.3rem;}
   .diplom, .title {font-size: 1.2rem}
   .table {

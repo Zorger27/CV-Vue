@@ -6,15 +6,30 @@ import projectStore from "@/store/modules/project/projectStore";
   computed: {
     projectStore() {
       return projectStore
-    }
+    },
+    orderedProjects() {
+      if (this.reverseOrder) {
+        // Если reverseOrder равен true, возвращаем проекты в обратном порядке
+        return this.projectStore.state.projectStore.slice().reverse();
+      } else {
+        // Иначе возвращаем проекты в исходном порядке
+        return this.projectStore.state.projectStore;
+      }
+    },
   },
   data() {
-    return {tableView: false}
+    return {
+      tableView: false,
+      reverseOrder: true,
+    }
   },
   methods: {
     changeView() {
       this.tableView = !this.tableView;
-    }
+    },
+    toggleOrder() {
+      this.reverseOrder = !this.reverseOrder; // Инвертируем значение reverseOrder при клике на кнопку
+    },
   },
   components: {},
 })
@@ -27,6 +42,9 @@ export default class Projects extends Vue {
   <div class="projects">
     <h1>{{ $t('projects.title') }}
       <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
+      <i @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-arrow-alt-circle-down' : 'fa-arrow-alt-circle-up' ]"></span></i>
+      <!--      <i @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up' ]"></span></i>-->
+      <!--      <i @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-arrow-down' : 'fa-arrow-up' ]"></span></i>-->
     </h1>
     <line></line>
     <div v-if="tableView" class="table">
@@ -41,7 +59,7 @@ export default class Projects extends Vue {
         </tr>
         </thead>
         <tbody>
-        <tr v-for="prj in projectStore.state.projectStore.slice().reverse()" :key="prj.id">
+        <tr v-for="prj in orderedProjects" :key="prj.id">
           <td class="nomer">{{ prj.id }}</td>
           <td class="name">{{ this.$i18n.locale === "ua" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</td>
           <td class="number">{{ this.$i18n.locale === "ua" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</td>
@@ -61,7 +79,7 @@ export default class Projects extends Vue {
       </table>
     </div>
     <div v-else class="container">
-      <div v-for="prj in projectStore.state.projectStore.slice().reverse()" :key="prj.id" class="prj">
+      <div v-for="prj in orderedProjects" :key="prj.id" class="prj">
         <div class="block">
           <h3>{{ prj.id }}. {{ this.$i18n.locale === "ua" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</h3>
           <div>{{ $t('projects.type') }}: <strong>{{ this.$i18n.locale === "ua" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</strong></div>
