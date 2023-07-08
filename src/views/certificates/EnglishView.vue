@@ -46,7 +46,7 @@ export default class English extends Vue {
         </tr>
         </thead>
         <tbody>
-        <tr v-for="sert in englishStore.state.englishStore" :key="sert.id">
+        <tr v-for="sert in englishStore.state.englishStore.slice().reverse()" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
           <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
@@ -56,7 +56,7 @@ export default class English extends Vue {
         </tbody>
       </table>
     </div>
-    <div v-else v-for="sert in englishStore.state.englishStore" :key="sert.id" class="certificate">
+    <div v-else v-for="sert in englishStore.state.englishStore.slice().reverse()" :key="sert.id" class="certificate">
       <a class="block" :href="sert.image" title="Certificate..." target="_blank">
         <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
         <div>{{ $t('cert.level') }}: <strong>{{ sert.regnumber }}</strong></div>

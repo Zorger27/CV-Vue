@@ -3,7 +3,9 @@ const state = {
     [
       {
         id: 1,
-        title: "Conversational English",
+        title_en: "Conversational English",
+        title_ua: "Розмовна англійська",
+        title_es: "Inglés conversacional",
         regnumber: "Pre-Intermediate",
         grade_en: "Successfully completed",
         grade_ua: "Успішно завершено",
@@ -13,7 +15,9 @@ const state = {
       },
       {
         id: 2,
-        title: "Intermediate level of English",
+        title_en: "Intermediate level of English",
+        title_ua: "Середній рівень англійської мови",
+        title_es: "Nivel intermedio de inglés",
         regnumber: "Intermediate",
         grade_en: "Successfully completed",
         grade_ua: "Успішно завершено",
@@ -23,7 +27,9 @@ const state = {
       },
       {
         id: 3,
-        title: "English for advanced",
+        title_en: "English for advanced",
+        title_ua: "Англійська для просунутих",
+        title_es: "Inglés para avanzados",
         regnumber: "Upper-Intermediate",
         grade_en: "Successfully completed",
         grade_ua: "Успішно завершено",
