@@ -112,7 +112,7 @@ const state = {
       {
         id: 10,
         title_en: "English for advanced",
-        title_ua: "Англійська для просунутих",
+        title_ua: "Англійська Поглиблена",
         title_es: "Inglés para avanzados",
         regnumber: "Upper-Intermediate",
         grade_en: "Successfully completed",

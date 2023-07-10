@@ -13,6 +13,16 @@ const state = {
       },
       {
         id: 2,
+        title_en: "JavaScript Essential 2015",
+        title_ua: "JavaScript Базовий 2015",
+        title_es: "JavaScript Básico 2015",
+        regnumber: "TP00355566",
+        grade: "920 / 1000",
+        examdate: "07.09.2022",
+        image: "https://testprovider.com/ru/search-certificate/tp00355566",
+      },
+      {
+        id: 3,
         title_en: "JavaScript Essential 2021",
         title_ua: "JavaScript Базовий 2021",
         title_es: "JavaScript Básico 2021",
@@ -22,7 +32,17 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp26716836",
       },
       {
-        id: 3,
+        id: 4,
+        title_en: "JavaScript Advanced 2015",
+        title_ua: "JavaScript Поглиблений 2015",
+        title_es: "JavaScript Avanzado 2015",
+        regnumber: "TP06245805",
+        grade: "975 / 1000",
+        examdate: "23.06.2021",
+        image: "https://testprovider.com/ru/search-certificate/tp06245805",
+      },
+      {
+        id: 5,
         title_en: "JavaScript Patterns",
         title_ua: "JavaScript Шаблони",
         title_es: "Plantillas de Javascript",
@@ -32,7 +52,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp95784000",
       },
       {
-        id: 4,
+        id: 6,
         title_en: "ECMAScript 6",
         title_ua: "ECMAScript 6",
         title_es: "ECMAScript 6",
@@ -42,7 +62,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp61852573",
       },
       {
-        id: 5,
+        id: 7,
         title_en: "JavaScript Extended capabilities",
         title_ua: "JavaScript. Розширені можливості",
         title_es: "JavaScript. Capacidades extendidas",
