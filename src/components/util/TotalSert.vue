@@ -183,8 +183,9 @@ export default class Search extends Vue {
     //}
     .sertActive {
       color: lightseagreen;
+      cursor: pointer;
     }
-    .sertActive:hover {
+    .sertActive:active {
       color: darkgoldenrod;
       cursor: pointer;
       //text-decoration: underline;
