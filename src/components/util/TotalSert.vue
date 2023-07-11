@@ -16,6 +16,7 @@ import englishStore from "@/store/modules/certificates/englishStore";
 import pmStore from "@/store/modules/certificates/pmStore";
 import itvdnStore from "@/store/modules/education/itvdnStore";
 import progStore from "@/store/modules/education/progStore";
+import knuteStore from "@/store/modules/education/knuteStore";
 
 @Options({
   computed: {
@@ -35,6 +36,7 @@ import progStore from "@/store/modules/education/progStore";
     pmStore() {return pmStore},
     itvdnStore() {return itvdnStore},
     progStore() {return progStore},
+    knuteStore() {return knuteStore},
     combinedCertificates() {
       const htmlCertificates = this.htmlStore.state.htmlStore;
       const javascriptCertificates = this.javascriptStore.state.javascriptStore;
@@ -58,23 +60,19 @@ import progStore from "@/store/modules/education/progStore";
       const pmCertificates = this.pmStore.state.pmStore;
       return [...otherCertificates, ...pmCertificates, ...englishCertificates];
     },
-    hasResults() {
-      return (
-        this.combinedCertificates.some((sert) => this.checkDoc(sert)) ||
-        this.gradeCombinedCertificates.some((sert) => this.checkDoc(sert)) ||
-        this.itvdnStore.state.itvdnStore.some((sert) => this.checkDoc(sert)) ||
-        this.progStore.state.progStore.some((sert) => this.checkDocProg(sert))
-      );
-    },
   },
   data() {
     return {
-      searchValue: "",
+      showDiplom: false,
+      showCertificate: false
     }
   },
   methods: {
-    clearSearch() {
-      this.searchValue = "";
+    diplomView() {
+      this.showDiplom = !this.showDiplom;
+    },
+    certificateView() {
+      this.showCertificate = !this.showCertificate;
     },
     getTitle(sert) {
       if (this.$i18n.locale === "ua") {
@@ -103,38 +101,6 @@ import progStore from "@/store/modules/education/progStore";
         return sert.regnumber_en;
       }
     },
-    checkDoc(sert) {
-      const title = this.getTitle(sert).toLowerCase();
-      const searchValue = this.searchValue.toLowerCase();
-      const words = searchValue.split(" ");
-      const examDate = sert.examdate.toLowerCase();
-      const regNumber = sert.regnumber.toLowerCase();
-      let hasMatch = false;
-
-      words.forEach((word) => {
-        if (title.includes(word) || examDate.includes(word) || regNumber.includes(word)) {
-          hasMatch = true;
-        }
-      });
-      return hasMatch;
-    },
-
-    checkDocProg(sert) {
-      const title = this.getTitle(sert).toLowerCase();
-      const searchValue = this.searchValue.toLowerCase();
-      const words = searchValue.split(" ");
-      const examDate = sert.examdate.toLowerCase();
-      const regNumber = this.getRegNumber(sert).toLowerCase();
-      let hasMatch = false;
-
-      words.forEach((word) => {
-        if (title.includes(word) || examDate.includes(word) || regNumber.includes(word)) {
-          hasMatch = true;
-        }
-      });
-      return hasMatch;
-    },
-
   },
   components: {},
 })
@@ -143,34 +109,20 @@ export default class Search extends Vue {
 </script>
 
 <template>
-  <div class="search">
-    <div class="search-bar">
-      <input type="text" :placeholder="$t('cert.search')" v-model="searchValue"><i title="Clear" @click="clearSearch"
-                                                                                   class="fas fa-trash-alt"></i>
+  <div class="totalSert">
+    <div class="sert">
+      <div>
+        <span class="itogo">{{ $t('cert.itogo') }}</span>
+        <span class="sertActive" @click="diplomView()">{{ $t('cert.diplomView') }} <span :class="['fas', showDiplom ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up' ]"></span></span> — <span class="colvo">{{itvdnStore.state.itvdnStore.length + (knuteStore.state.knuteStore.length-1) + progStore.state.progStore.length}}</span>
+      </div>
+      <div>
+        <span class="itogo">{{ $t('cert.itogo') }}</span>
+        <span class="sertActive" @click="certificateView()">{{ $t('cert.certificateView') }} <span :class="['fas', showCertificate ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up' ]"></span></span> — <span class="colvo">{{combinedCertificates.length + gradeCombinedCertificates.length}}</span>
+      </div>
     </div>
-    <div class="inner" v-if="searchValue.length !== 0">
-      <template v-for="sert in combinedCertificates" :key="sert.id">
-        <div class="certificate" v-if="checkDoc(sert)">
-          <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
-            <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
-            <div>{{ $t('cert.grade') }}: <strong>{{ sert.grade }}</strong></div>
-            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
-          </a>
-        </div>
-      </template>
-      <template v-for="sert in gradeCombinedCertificates" :key="sert.id">
-        <div class="certificate" v-if="checkDoc(sert)">
-          <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
-            <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
-            <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>
-            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
-          </a>
-        </div>
-      </template>
-      <template v-for="sert in itvdnStore.state.itvdnStore" :key="sert.id">
-        <div class="diploma" v-if="checkDoc(sert)">
+    <div class="inner">
+      <div v-if="showDiplom" class="showDiplom">
+        <div v-for="sert in itvdnStore.state.itvdnStore" :key="sert.id" class="diploma">
           <a class="block" :href="sert.image" title="Diploma..." target="_blank">
             <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
@@ -178,9 +130,7 @@ export default class Search extends Vue {
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
           </a>
         </div>
-      </template>
-      <template v-for="sert in progStore.state.progStore" :key="sert.id">
-        <div class="diploma" v-if="checkDocProg(sert)">
+        <div v-for="sert in progStore.state.progStore" :key="sert.id" class="diploma">
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
             <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ getRegNumber(sert) }}</strong></div>
@@ -188,43 +138,66 @@ export default class Search extends Vue {
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
           </a>
         </div>
-      </template>
-      <!-- Вывод сообщения об отсутствии результатов -->
-      <div class="hasResults" v-if="searchValue.length !== 0 && !hasResults">
-        {{ $t('cert.hasNoResults') }}️
+        <div class="diploma">
+          <a class="block" :href="knuteStore.state.knuteStore[1].image" title="Diploma..." target="_blank">
+            <h3>{{ knuteStore.state.knuteStore[1].id }}. {{ getTitle(knuteStore.state.knuteStore[1]) }}</h3>
+            <div>{{ $t('cert.number') }}: <strong>{{ knuteStore.state.knuteStore[1].regnumber }}</strong></div>
+            <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(knuteStore.state.knuteStore[1]) }}</strong></div>
+            <div>{{ $t('education.graduation') }}: {{ knuteStore.state.knuteStore[1].examdate }}</div>
+          </a>
+        </div>
+      </div>
+      <div v-if="showCertificate" class="showCertificate">
+        <div v-for="sert in combinedCertificates" :key="sert.id" class="certificate">
+          <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
+            <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
+            <div>{{ $t('cert.grade') }}: <strong>{{ sert.grade }}</strong></div>
+            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
+          </a>
+        </div>
+        <div v-for="sert in gradeCombinedCertificates" :key="sert.id" class="certificate">
+          <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
+            <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
+            <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>
+            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.search {
-  margin-bottom: 1rem;
-
-  .search-bar {
-    margin: 1rem auto;
-    font-size: 1.6rem;
-
-    input {
-      border: 1px solid lightskyblue;
-      border-radius: 5px;
-      font-size: 1.6rem;
-      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+.totalSert {
+  .sert {
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: bold;
+    //.itogo {
+    //  color: saddlebrown;
+    //}
+    .sertActive {
+      color: lightseagreen;
     }
-
-    input:active, :focus {
-      outline: 1px solid lightskyblue;
-      outline-offset: 0;
-      box-shadow: 3px 3px 4px 0 grey;
+    .sertActive:hover {
+      color: darkgoldenrod;
+      cursor: pointer;
+      //text-decoration: underline;
     }
-
-    .fa-trash-alt {
-      font-size: 1.6rem;
-      margin-left: 7px;
+    .fa-chevron-circle-down {
+      color: royalblue;
     }
-
-    .fa-trash-alt:hover {
+    .fa-chevron-circle-up {
+      color: mediumvioletred;
+    }
+    .colvo {
       color: red;
+      text-shadow: 2px 2px 4px black;
     }
   }
 
@@ -234,52 +207,44 @@ export default class Search extends Vue {
     justify-content: center;
     flex-wrap: wrap;
 
-    .certificate {
-      max-width: 27rem;
-
-      .block {
-        background-color: floralwhite;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-        transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-      }
-
-      .block:hover {
-        background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(251, 255, 240)) no-repeat center;
-        //border-color: #bbeafa;
-        border-color: lightgrey;
-        //box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.4);
-        box-shadow: 3px 3px 4px 0 lightgrey;
-      }
+    .showDiplom {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    .hasResults {
-      font-size: 1.6rem;
-      font-weight: bold;
-      margin: 0.5rem;
-      color: darkgreen;
+    .showCertificate {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      .certificate {
+        max-width: 27rem;
+
+        .block {
+          background-color: whitesmoke;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+          transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+        }
+
+        .block:hover {
+          background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(251, 255, 240)) no-repeat center;
+          //border-color: #bbeafa;
+          border-color: lightgrey;
+          //box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 3px 3px 4px 0 lightgrey;
+        }
+      }
     }
   }
 
   @media (max-width: 768px) {
     margin-bottom: 0.5rem;
-    .search-bar {
-      margin: 0.5rem auto;
-      font-size: 1.3rem;
-
-      input[type="text"] {
-        border-radius: 3px;
-        font-size: 1.3rem;
-      }
-
-      .fa-trash-alt {
-        font-size: 1.3rem;
-      }
-    }
-    .inner {
-      .hasResults {
-        font-size: 1.3rem;
-        margin: 0.2rem;
-        color: darkgreen;
-      }
+    .sert {
+      display: inline-grid;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
     }
   }
 }

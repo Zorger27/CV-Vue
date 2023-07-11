@@ -1,6 +1,7 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import Search from "@/components/util/Search.vue";
+import TotalSert from "@/components/util/TotalSert.vue";
 
 @Options({
   data() {
@@ -13,7 +14,7 @@ import Search from "@/components/util/Search.vue";
       this.searchView = !this.searchView;
     }
   },
-  components: {Search},
+  components: {TotalSert, Search},
 })
 export default class Certificates extends Vue {
 }
@@ -26,8 +27,9 @@ export default class Certificates extends Vue {
       <i @click="changeView" class="dandruff"><span :class="['fas', searchView ? 'fa-binoculars' : 'fa-search']"></span></i>
     </h1>
     <line></line>
+    <TotalSert></TotalSert>
     <Search v-if="searchView"></Search>
-    <line v-if="searchView"></line>
+    <line></line>
     <div class="container">
       <div class="prj back">
         <router-link class="block" to="/certificates/backend">
@@ -78,32 +80,6 @@ export default class Certificates extends Vue {
   }
   .fa-binoculars {
     color: darkgoldenrod;
-  }
-  .search-bar {
-    margin: 1rem auto;
-    font-size: 1.6rem;
-
-    input {
-      border: 1px solid lightskyblue;
-      border-radius: 5px;
-      font-size: 1.6rem;
-      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-    }
-
-    input:active, :focus {
-      outline: 1px solid lightskyblue;
-      outline-offset: 0;
-      box-shadow: 3px 3px 4px 0 grey;
-    }
-
-    .fa-trash-alt {
-      font-size: 1.6rem;
-      margin-left: 7px;
-    }
-
-    .fa-trash-alt:hover {
-      color: hotpink;
-    }
   }
 
   .container {
@@ -196,20 +172,6 @@ export default class Certificates extends Vue {
 }
 
 @media (max-width: 768px) {
-  .search-bar {
-    margin: 0.3rem auto;
-    font-size: 1.3rem;
-
-    input[type="text"] {
-      border-radius: 3px;
-      font-size: 1.3rem;
-    }
-
-    .fa-trash-alt {
-      font-size: 1.3rem;
-    }
-
-  }
   .certificates {
     h1 {
       font-size: 1.55rem;
