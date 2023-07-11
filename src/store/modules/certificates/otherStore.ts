@@ -95,7 +95,7 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "18.02.2020",
-        image: "/assets/certificates/other/07_Google_Display_Network_Ads.jpg",
+        image: "/assets/certificates/other/08_Google_Display_Network_Ads.jpg",
       },
       {
         id: 9,
@@ -107,7 +107,7 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "20.02.2020",
-        image: "/assets/certificates/other/08_Google_Shopping_Campaign.jpg",
+        image: "/assets/certificates/other/09_Google_Shopping_Campaign.jpg",
       },
       {
         id: 10,
@@ -119,7 +119,7 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "16.03.2020",
-        image: "/assets/certificates/other/09_Google_Search_Campaign.jpg",
+        image: "/assets/certificates/other/10_Google_Search_Campaign.jpg",
       },
       {
         id: 11,
@@ -131,7 +131,7 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "17.03.2020",
-        image: "/assets/certificates/other/10_Google_Video_Campaign.jpg",
+        image: "/assets/certificates/other/11_Google_Video_Campaign.jpg",
       }
     ]
 };
