@@ -56,9 +56,8 @@ import knuteStore from "@/store/modules/education/knuteStore";
     },
     gradeCombinedCertificates() {
       const otherCertificates = this.otherStore.state.otherStore;
-      const englishCertificates = this.englishStore.state.englishStore;
       const pmCertificates = this.pmStore.state.pmStore;
-      return [...otherCertificates, ...pmCertificates, ...englishCertificates];
+      return [...otherCertificates, ...pmCertificates];
     },
   },
   data() {
@@ -117,7 +116,7 @@ export default class Search extends Vue {
       </div>
       <div>
         <span class="itogo">{{ $t('cert.itogo') }}</span>
-        <span class="sertActive" @click="certificateView()">{{ $t('cert.certificateView') }} <span :class="['fas', showCertificate ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up' ]"></span></span> — <span class="colvo">{{combinedCertificates.length + gradeCombinedCertificates.length}}</span>
+        <span class="sertActive" @click="certificateView()">{{ $t('cert.certificateView') }} <span :class="['fas', showCertificate ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up' ]"></span></span> — <span class="colvo">{{combinedCertificates.length + gradeCombinedCertificates.length + englishStore.state.englishStore.length}}</span>
       </div>
     </div>
     <div class="inner">
@@ -160,6 +159,14 @@ export default class Search extends Vue {
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
             <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
+            <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>
+            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
+          </a>
+        </div>
+        <div v-for="sert in englishStore.state.englishStore" :key="sert.id" class="certificate">
+          <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
+            <div>{{ $t('cert.level') }}: <strong>{{ sert.regnumber }}</strong></div>
             <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
           </a>

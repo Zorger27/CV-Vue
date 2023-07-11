@@ -54,15 +54,15 @@ import progStore from "@/store/modules/education/progStore";
     },
     gradeCombinedCertificates() {
       const otherCertificates = this.otherStore.state.otherStore;
-      const englishCertificates = this.englishStore.state.englishStore;
       const pmCertificates = this.pmStore.state.pmStore;
-      return [...otherCertificates, ...pmCertificates, ...englishCertificates];
+      return [...otherCertificates, ...pmCertificates];
     },
     hasResults() {
       return (
         this.combinedCertificates.some((sert) => this.checkDoc(sert)) ||
         this.gradeCombinedCertificates.some((sert) => this.checkDoc(sert)) ||
         this.itvdnStore.state.itvdnStore.some((sert) => this.checkDoc(sert)) ||
+        this.englishStore.state.englishStore.some((sert) => this.checkDoc(sert)) ||
         this.progStore.state.progStore.some((sert) => this.checkDocProg(sert))
       );
     },
@@ -184,6 +184,16 @@ export default class Search extends Vue {
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
             <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ getRegNumber(sert) }}</strong></div>
+            <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>
+            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
+          </a>
+        </div>
+      </template>
+      <template v-for="sert in englishStore.state.englishStore" :key="sert.id">
+        <div class="certificate" v-if="checkDoc(sert)">
+          <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
+            <div>{{ $t('cert.level') }}: <strong>{{ sert.regnumber }}</strong></div>
             <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
           </a>
