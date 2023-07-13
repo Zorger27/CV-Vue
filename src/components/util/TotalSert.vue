@@ -103,7 +103,7 @@ import knuteStore from "@/store/modules/education/knuteStore";
   },
   components: {},
 })
-export default class Search extends Vue {
+export default class TotalSert extends Vue {
 }
 </script>
 
