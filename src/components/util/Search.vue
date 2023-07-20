@@ -57,13 +57,13 @@ import knuteStore from "@/store/modules/education/knuteStore";
     gradeCombinedCertificates() {
       const otherCertificates = this.otherStore.state.otherStore;
       const pmCertificates = this.pmStore.state.pmStore;
-      const knuteCertificates = this.knuteStore.state.knuteStore;
-      return [...otherCertificates, ...pmCertificates, ...knuteCertificates];
+      return [...otherCertificates, ...pmCertificates];
     },
     hasResults() {
       return (
         this.combinedCertificates.some((sert) => this.checkDoc(sert)) ||
         this.gradeCombinedCertificates.some((sert) => this.checkDoc(sert)) ||
+        this.knuteStore.state.knuteStore.some((sert) => this.checkDoc(sert)) ||
         this.itvdnStore.state.itvdnStore.some((sert) => this.checkDoc(sert)) ||
         this.englishStore.state.englishStore.some((sert) => this.checkDoc(sert)) ||
         this.progStore.state.progStore.some((sert) => this.checkDocProg(sert))
@@ -172,6 +172,16 @@ export default class Search extends Vue {
           </a>
         </div>
       </template>
+      <template v-for="sert in knuteStore.state.knuteStore" :key="sert.id">
+        <div class="diploma" v-if="checkDoc(sert)">
+          <a class="block" :href="sert.image" title="Diploma..." target="_blank">
+            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>
+            <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
+            <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>
+            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
+          </a>
+        </div>
+      </template>
       <template v-for="sert in itvdnStore.state.itvdnStore" :key="sert.id">
         <div class="diploma" v-if="checkDoc(sert)">
           <a class="block" :href="sert.image" title="Diploma..." target="_blank">
@@ -192,16 +202,6 @@ export default class Search extends Vue {
           </a>
         </div>
       </template>
-<!--      <template v-for="sert in knuteStore.state.knuteStore" :key="sert.id">-->
-<!--        <div class="diploma" v-if="checkDoc(sert)">-->
-<!--          <a class="block" :href="sert.image" title="Diploma..." target="_blank">-->
-<!--            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>-->
-<!--            <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>-->
-<!--            <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>-->
-<!--            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>-->
-<!--          </a>-->
-<!--        </div>-->
-<!--      </template>-->
       <template v-for="sert in englishStore.state.englishStore" :key="sert.id">
         <div class="certificate" v-if="checkDoc(sert)">
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
