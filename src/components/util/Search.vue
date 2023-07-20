@@ -16,6 +16,7 @@ import englishStore from "@/store/modules/certificates/englishStore";
 import pmStore from "@/store/modules/certificates/pmStore";
 import itvdnStore from "@/store/modules/education/itvdnStore";
 import progStore from "@/store/modules/education/progStore";
+import knuteStore from "@/store/modules/education/knuteStore";
 
 @Options({
   computed: {
@@ -35,6 +36,7 @@ import progStore from "@/store/modules/education/progStore";
     pmStore() {return pmStore},
     itvdnStore() {return itvdnStore},
     progStore() {return progStore},
+    knuteStore() {return knuteStore},
     combinedCertificates() {
       const htmlCertificates = this.htmlStore.state.htmlStore;
       const javascriptCertificates = this.javascriptStore.state.javascriptStore;
@@ -55,7 +57,8 @@ import progStore from "@/store/modules/education/progStore";
     gradeCombinedCertificates() {
       const otherCertificates = this.otherStore.state.otherStore;
       const pmCertificates = this.pmStore.state.pmStore;
-      return [...otherCertificates, ...pmCertificates];
+      const knuteCertificates = this.knuteStore.state.knuteStore;
+      return [...otherCertificates, ...pmCertificates, ...knuteCertificates];
     },
     hasResults() {
       return (
@@ -189,6 +192,16 @@ export default class Search extends Vue {
           </a>
         </div>
       </template>
+<!--      <template v-for="sert in knuteStore.state.knuteStore" :key="sert.id">-->
+<!--        <div class="diploma" v-if="checkDoc(sert)">-->
+<!--          <a class="block" :href="sert.image" title="Diploma..." target="_blank">-->
+<!--            <h3>{{ sert.id }}. {{ getTitle(sert) }}</h3>-->
+<!--            <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>-->
+<!--            <div>{{ $t('cert.grade') }}: <strong>{{ getGrade(sert) }}</strong></div>-->
+<!--            <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </template>-->
       <template v-for="sert in englishStore.state.englishStore" :key="sert.id">
         <div class="certificate" v-if="checkDoc(sert)">
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
