@@ -11,7 +11,7 @@ const state = {
         grade_ua: "Успішно завершено",
         grade_es: "Completado con éxito",
         examdate: "11.07.2023",
-        image: "https://www.englishdom.com/ua/cn/55a98dad"
+        image: "https://www.englishdom.com/cn/55a98dad"
       },
       {
         id: 2,
