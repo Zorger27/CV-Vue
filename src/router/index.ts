@@ -83,7 +83,7 @@ const routes: Array<RouteRecordRaw> = [
         },
         {
           property: 'og:image',
-          content: './src/assets/ogimage/OG_Image_Home.jpg'
+          content: 'https://zorin.expert/assets/ogimage/OG_Image_Home.jpg'
         },
         {
           property: 'og:url',
