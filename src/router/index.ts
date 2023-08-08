@@ -42,6 +42,28 @@ const routes: Array<RouteRecordRaw> = [
     component: LoginPage,
     meta: {
       title: 'Portfolio - Login page',
+      // metaTags: [
+      //   {
+      //     property: 'og:title',
+      //     content: 'Заголовок вашей страницы'
+      //   },
+      //   {
+      //     property: 'og:description',
+      //     content: 'Описание вашей страницы'
+      //   },
+      //   {
+      //     property: 'og:image',
+      //     content: 'URL к изображению, которое вы хотите отображать в предпросмотре (изображения с соотношением сторон 1.91:1 и размером не менее 1200x630 пикселей)'
+      //   },
+      //   {
+      //     property: 'og:url',
+      //     content: 'URL вашей страницы'
+      //   },
+      //   {
+      //     property: 'og:type',
+      //     content: 'website'
+      //   }
+      // ]
     }
   },
   {
@@ -50,16 +72,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
     meta: {
       title: 'My Portfolio',
-      // metaTags: [
-      //   {
-      //     name: 'google-site-verification',
-      //     content: 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'
-      //   }
-      // {
-      //   property: 'og:description',
-      //   content: 'The home page of our example app.'
-      // }
-      // ]
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'Site\'s home page'
+        },
+        {
+          property: 'og:description',
+          content: 'Basic information with contact details'
+        },
+        {
+          property: 'og:image',
+          content: './src/assets/ogimage/OG_Image_Home.jpg'
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
