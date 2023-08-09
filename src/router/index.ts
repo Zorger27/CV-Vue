@@ -42,28 +42,6 @@ const routes: Array<RouteRecordRaw> = [
     component: LoginPage,
     meta: {
       title: 'Portfolio - Login page',
-      // metaTags: [
-      //   {
-      //     property: 'og:title',
-      //     content: 'Заголовок вашей страницы'
-      //   },
-      //   {
-      //     property: 'og:description',
-      //     content: 'Описание вашей страницы'
-      //   },
-      //   {
-      //     property: 'og:image',
-      //     content: 'URL к изображению, которое вы хотите отображать в предпросмотре (изображения с соотношением сторон 1.91:1 и размером не менее 1200x630 пикселей)'
-      //   },
-      //   {
-      //     property: 'og:url',
-      //     content: 'URL вашей страницы'
-      //   },
-      //   {
-      //     property: 'og:type',
-      //     content: 'website'
-      //   }
-      // ]
     }
   },
   {
@@ -75,7 +53,7 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'Site\'s home page'
+          content: 'My Portfolio home page'
         },
         {
           property: 'og:description',
@@ -83,7 +61,7 @@ const routes: Array<RouteRecordRaw> = [
         },
         {
           property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/OG_Image_Home.jpg'
+          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Home.jpg'
         },
         {
           property: 'og:url',
@@ -102,6 +80,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Projects,
     meta: {
       title: 'Portfolio - Projects',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My Portfolio Projects page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information about'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -110,6 +110,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Education,
     meta: {
       title: 'Portfolio - Education',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -118,6 +140,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Experience,
     meta: {
       title: 'Portfolio - Experience',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -126,6 +170,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Skills,
     meta: {
       title: 'Portfolio - Skills',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -134,6 +200,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Certificates,
     meta: {
       title: 'All diplomas & certificates',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -142,6 +230,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Backend,
     meta: {
       title: 'Backend certificates',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -150,6 +260,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Frontend,
     meta: {
       title: 'Frontend certificates',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -158,6 +290,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Database,
     meta: {
       title: 'Database certificates',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -166,6 +320,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Designer,
     meta: {
       title: 'Designer certificates',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -174,6 +350,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Pm,
     meta: {
       title: 'Project Management',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -182,6 +380,28 @@ const routes: Array<RouteRecordRaw> = [
     component: English,
     meta: {
       title: 'English language',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -190,6 +410,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Other,
     meta: {
       title: 'Other certificates',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -198,6 +440,28 @@ const routes: Array<RouteRecordRaw> = [
     component: About,
     meta: {
       title: 'About this project',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -206,7 +470,29 @@ const routes: Array<RouteRecordRaw> = [
     component: Extra,
     meta: {
       title: 'Portfolio - Extra pages',
-      requiresAuth: true
+      requiresAuth: true,
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -216,6 +502,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Extra - Calculator',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -225,6 +533,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Extra - Cryptocurrencies',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -234,6 +564,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Extra - Spinning cube',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -243,6 +595,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Extra - Currency Rates',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -252,6 +626,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Extra - Games',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -261,6 +657,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Games - Memory',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -270,6 +688,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Extra - Notes',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -279,6 +719,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Extra - JS tasks',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -288,6 +750,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Extra - To-do list',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -297,6 +781,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Extra - Weather',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -306,6 +812,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'JS tasks - Palindrome',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -315,6 +843,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'JS tasks - Fizzbuzz',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -324,6 +874,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'JS tasks - Anagram',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -333,6 +905,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'JS tasks - Find vowels',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -342,6 +936,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'JS tasks - Fibonacci',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -351,6 +967,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'JS tasks - Fibonacci',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -360,6 +998,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Extra - Artificial intelligence',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -369,6 +1029,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'AI - Lorem Picsum',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -378,6 +1060,28 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'AI - Pixabay',
       // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'My page'
+        },
+        {
+          property: 'og:description',
+          content: 'Information'
+        },
+        {
+          property: 'og:image',
+          content: ''
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
