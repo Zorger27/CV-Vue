@@ -50,6 +50,36 @@ module.exports = defineConfig({
               name: 'google-site-verification',
               content: 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'
             }
+          },
+          {
+            attributes: {
+              property: 'og:title',
+              content: 'Portfolio'
+            }
+          },
+          {
+            attributes: {
+              property: 'og:description',
+              content: 'My Portfolio'
+            }
+          },
+          {
+            attributes: {
+              property: 'og:image',
+              content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Home.jpg'
+            }
+          },
+          {
+            attributes: {
+              property: 'og:url',
+              content: 'https://Zorin.Expert'
+            }
+          },
+          {
+            attributes: {
+              property: 'og:type',
+              content: 'website'
+            }
           }
         ]
       }),
