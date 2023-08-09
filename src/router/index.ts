@@ -558,15 +558,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Cryptocurrencies'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Cryptocurrencies'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Cryptocurrencies.jpg'
         },
         {
           property: 'og:url',
@@ -589,15 +589,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Spinning cube'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Spinning cube'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Cube.jpg'
         },
         {
           property: 'og:url',
@@ -620,15 +620,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Exchange rates'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Exchange rates by National Bank of Ukraine'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Rates.jpg'
         },
         {
           property: 'og:url',
@@ -651,15 +651,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Games'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Games'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Games.jpg'
         },
         {
           property: 'og:url',
@@ -682,15 +682,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Game - Memory'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Game - Memory'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/games/OG_Image_Memory.jpg'
         },
         {
           property: 'og:url',
@@ -713,15 +713,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Notes'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Notes'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Note.jpg'
         },
         {
           property: 'og:url',
@@ -744,15 +744,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'JS tasks'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Typical JavaScript interview tasks'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_JStasks.jpg'
         },
         {
           property: 'og:url',
@@ -775,15 +775,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'To-do list'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'To-do list'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Todo.jpg'
         },
         {
           property: 'og:url',
@@ -806,15 +806,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Weather'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Weather by OpenWeather'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Weather.jpg'
         },
         {
           property: 'og:url',
