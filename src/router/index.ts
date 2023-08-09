@@ -837,15 +837,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'JS tasks - Palindrome'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Typical JavaScript interview task - Palindrome'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/jstask/OG_Image_Palindrome.jpg'
         },
         {
           property: 'og:url',
@@ -868,15 +868,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'JS tasks - Fizzbuzz'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Typical JavaScript interview task - Fizzbuzz'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/jstask/OG_Image_FizzBuzz.jpg'
         },
         {
           property: 'og:url',
@@ -899,15 +899,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'JS tasks - Anagram'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Typical JavaScript interview task - Anagram'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/jstask/OG_Image_Anagram.jpg'
         },
         {
           property: 'og:url',
@@ -930,15 +930,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'JS tasks - Find vowels'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Typical JavaScript interview task - Find vowels'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/jstask/OG_Image_Vowels.jpg'
         },
         {
           property: 'og:url',
@@ -961,46 +961,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'JS tasks - Fibonacci'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Typical JavaScript interview task - Fibonacci'
         },
         {
           property: 'og:image',
-          content: ''
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
-  },
-  {
-    path: '/extra/tasks/fibonacci',
-    name: 'fibonacci',
-    component: Fibonacci,
-    meta: {
-      title: 'JS tasks - Fibonacci',
-      // requiresAuth: true
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'My page'
-        },
-        {
-          property: 'og:description',
-          content: 'Information'
-        },
-        {
-          property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/jstask/OG_Image_Fibonacci.jpg'
         },
         {
           property: 'og:url',
@@ -1023,15 +992,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Artificial intelligence'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Artificial intelligence'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_AI.jpg'
         },
         {
           property: 'og:url',
@@ -1049,20 +1018,20 @@ const routes: Array<RouteRecordRaw> = [
     name: 'picsum',
     component: LoremPicsum,
     meta: {
-      title: 'AI - Lorem Picsum',
+      title: 'AI - Picture randomizer',
       // requiresAuth: true
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Picture randomizer'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Picture randomizer by Lorem Picsum'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/ai/OG_Image_Randomizer.jpg'
         },
         {
           property: 'og:url',
@@ -1080,20 +1049,20 @@ const routes: Array<RouteRecordRaw> = [
     name: 'pixabay',
     component: Pixabay,
     meta: {
-      title: 'AI - Pixabay',
+      title: 'AI - Randomizer PRO',
       // requiresAuth: true
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Randomizer PRO'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Randomizer PRO by Pixabay'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/ai/OG_Image_RandomizerPro.jpg'
         },
         {
           property: 'og:url',
@@ -1112,6 +1081,28 @@ const routes: Array<RouteRecordRaw> = [
     component: PageNotFound,
     meta: {
       title: 'Page NOT Found',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'Page NOT Found'
+        },
+        {
+          property: 'og:description',
+          content: 'Page NOT Found'
+        },
+        {
+          property: 'og:image',
+          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_404.jpg'
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   }
 ]
