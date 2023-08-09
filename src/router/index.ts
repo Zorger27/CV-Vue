@@ -105,7 +105,7 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My Portfolio Projects page'
+          content: 'My Projects'
         },
         {
           property: 'og:description',
@@ -135,15 +135,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'My Education'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'My Education'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Education.jpg'
         },
         {
           property: 'og:url',
@@ -165,15 +165,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'My Experience'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'My Experience'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Experience.jpg'
         },
         {
           property: 'og:url',
@@ -195,15 +195,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'My Skills'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'My Skills'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Skills.jpg'
         },
         {
           property: 'og:url',
@@ -225,15 +225,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'All diplomas & certificates'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'All diplomas & certificates'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Certificates.jpg'
         },
         {
           property: 'og:url',
@@ -255,15 +255,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Backend certificates'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Backend certificates'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Backend.jpg'
         },
         {
           property: 'og:url',
@@ -285,15 +285,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Frontend certificates'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Frontend certificates'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Frontend.jpg'
         },
         {
           property: 'og:url',
@@ -315,15 +315,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'DataBase Developer Certificates'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'DataBase Developer Certificates'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_DB.jpg'
         },
         {
           property: 'og:url',
@@ -345,15 +345,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'UX/UI Designer Certificates'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'UX/UI Designer Certificates'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Designer.jpg'
         },
         {
           property: 'og:url',
@@ -375,15 +375,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Project Management Certificates'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Project Management Certificates'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_PM.jpg'
         },
         {
           property: 'og:url',
@@ -405,15 +405,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'English language Certificates'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'English language Certificates'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_English.jpg'
         },
         {
           property: 'og:url',
@@ -435,15 +435,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Other certificates'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Other certificates'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Other.jpg'
         },
         {
           property: 'og:url',
@@ -465,15 +465,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'About this project'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'About this project'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_About.jpg'
         },
         {
           property: 'og:url',
@@ -496,15 +496,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Extra (hidden) section'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Extra (hidden) section'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Extra.jpg'
         },
         {
           property: 'og:url',
@@ -527,15 +527,15 @@ const routes: Array<RouteRecordRaw> = [
       metaTags: [
         {
           property: 'og:title',
-          content: 'My page'
+          content: 'Calculator'
         },
         {
           property: 'og:description',
-          content: 'Information'
+          content: 'Standart & Accounting Calculator'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Calculator.jpg'
         },
         {
           property: 'og:url',
