@@ -1,5 +1,5 @@
 const {defineConfig} = require('@vue/cli-service')
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
@@ -89,14 +89,14 @@ module.exports = defineConfig({
           }
         ]
       }),
-      // new HtmlWebpackPlugin({
-      //     template: 'public/index.html',
-      //     title: 'Portfolio',
-      //     meta: {
-      //         'google-site-verification': 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y',
-      //     }
-      //     // favicon: './public/favicon.png',
-      // })
+      new HtmlWebpackPlugin({
+          template: 'public/index.html',
+          title: 'Portfolio'
+          // meta: {
+          //     'google-site-verification': 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y',
+          // }
+          // // favicon: './public/favicon.png',
+      }),
       new FaviconsWebpackPlugin({
         logo: './src/assets/favicon/favbig.png',
         mode: 'webapp',
