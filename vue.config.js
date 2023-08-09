@@ -53,6 +53,12 @@ module.exports = defineConfig({
           },
           {
             attributes: {
+              property: 'description',
+              content: 'Portfolio is a significantly expanded CV with all diplomas and certificates, a detailed description of the experience gained in previous jobs, etc.'
+            }
+          },
+          {
+            attributes: {
               property: 'og:title',
               content: 'Portfolio'
             }
