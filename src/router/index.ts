@@ -42,6 +42,28 @@ const routes: Array<RouteRecordRaw> = [
     component: LoginPage,
     meta: {
       title: 'Portfolio - Login page',
+      metaTags: [
+        {
+          property: 'og:title',
+          content: 'Login page'
+        },
+        {
+          property: 'og:description',
+          content: 'Login, please...'
+        },
+        {
+          property: 'og:image',
+          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Login.jpg'
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
     }
   },
   {
@@ -87,11 +109,11 @@ const routes: Array<RouteRecordRaw> = [
         },
         {
           property: 'og:description',
-          content: 'Information about'
+          content: 'Here are my projects'
         },
         {
           property: 'og:image',
-          content: ''
+          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Projects.jpg'
         },
         {
           property: 'og:url',
