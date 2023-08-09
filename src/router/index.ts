@@ -70,31 +70,31 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: Home,
-    meta: {
-      title: 'My Portfolio',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'My Portfolio home page'
-        },
-        {
-          property: 'og:description',
-          content: 'Basic information with contact details'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Home.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
+    // meta: {
+    //   title: 'My Portfolio',
+    //   metaTags: [
+    //     {
+    //       property: 'og:title',
+    //       content: 'My Portfolio home page'
+    //     },
+    //     {
+    //       property: 'og:description',
+    //       content: 'Basic information with contact details'
+    //     },
+    //     {
+    //       property: 'og:image',
+    //       content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Home.jpg'
+    //     },
+    //     {
+    //       property: 'og:url',
+    //       content: 'https://Zorin.Expert'
+    //     },
+    //     {
+    //       property: 'og:type',
+    //       content: 'website'
+    //     },
+    //   ]
+    // }
   },
   {
     path: '/projects',
