@@ -3,31 +3,6 @@ import {Options, Vue} from 'vue-class-component';
 import Slider from "@/components/util/Slider.vue";
 
 @Options({
-  metaInfo: {
-    title: 'My Portfolio',
-    meta: [
-      {
-        property: 'og:title',
-        content: 'My Portfolio home page'
-      },
-      {
-        property: 'og:description',
-        content: 'Basic information with contact details'
-      },
-      {
-        property: 'og:image',
-        content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Home.jpg'
-      },
-      {
-        property: 'og:url',
-        content: 'https://Zorin.Expert'
-      },
-      {
-        property: 'og:type',
-        content: 'website'
-      }
-    ]
-  },
   data() {
     return {
       sliderImages: [
@@ -72,6 +47,31 @@ import Slider from "@/components/util/Slider.vue";
   components: {Slider},
 })
 export default class Home extends Vue {
+  metaInfo: {
+    title: 'My Portfolio';
+    meta: [
+      {
+        property: 'og:title';
+        content: 'My Portfolio home page';
+      },
+      {
+        property: 'og:description';
+        content: 'Basic information with contact details';
+      },
+      {
+        property: 'og:image';
+        content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Home.jpg';
+      },
+      {
+        property: 'og:url';
+        content: 'https://Zorin.Expert';
+      },
+      {
+        property: 'og:type';
+        content: 'website';
+      }
+    ];
+  } | undefined
 };
 </script>
 
