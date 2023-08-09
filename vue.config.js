@@ -114,7 +114,7 @@ module.exports = defineConfig({
           { path: '/extra/ai/pixabay', priority: 1, changefreq: 'always' },
         ],
         options: {
-          // Опции настройки плагина.
+          skipgzip: true
         },
       }),
     ]
