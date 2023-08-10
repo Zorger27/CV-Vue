@@ -44,9 +44,6 @@ module.exports = defineConfig({
         append: true,
         publicPath: false,
         useHash: false,
-        meta: {
-          title: 'Portfolio',
-        },
         metas: [
           {
             attributes: {
