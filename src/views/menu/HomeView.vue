@@ -93,7 +93,7 @@ export default class Home extends Vue {
           class=logo-image src="@/assets/ico/facebook.svg" alt="Facebook"></a>
         <a href="https://www.youtube.com/c/AnatoliiZorin" title="My YouTube chanel..." target="_blank"><img
           class=logo-image src="@/assets/ico/youtube.svg" alt="YouTube"></a>
-        <a href="https://twitter.com/Regroz" title="My Twitter profile..." target="_blank"><img
+        <a href="https://twitter.com/Regroz" title="My X (ex. Twitter) profile..." target="_blank"><img
           class=logo-image src="@/assets/ico/twitter.svg" alt="Twitter"></a>
         <a href="/assets/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img
           class=logo-image src="@/assets/ico/download.svg" alt="Download file"></a>
