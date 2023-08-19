@@ -205,7 +205,7 @@ export default class Education extends Vue {}
     <div class="languages">
     <h1>{{$t ('education.languages')}}</h1>
     <line></line>
-      <div v-if="tableView" class="table">
+      <div v-if="tableView" class="table" style="margin-left: 0">
         <table>
           <thead>
           <tr>
@@ -244,6 +244,8 @@ export default class Education extends Vue {}
   background-repeat: no-repeat;
 
   .table {
+    margin-left: 1rem;
+    margin-right: 1rem;
     th, .nomer, .number, .grade, .date {
       text-align: center;
       a {text-decoration: none; color: inherit;}
@@ -300,6 +302,8 @@ export default class Education extends Vue {}
 @media(max-width:1020px) {
   .education {
     .table {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
       .title {width: 60rem;}
       .nomer {width: 1rem}
       .name {width: 18rem;}
@@ -322,6 +326,8 @@ export default class Education extends Vue {}
 @media(max-width:768px) {
   .education {
     .table {
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
       font-size: 0.9rem;
       .title {width: 30rem;}
       .nomer {width: 1rem}
