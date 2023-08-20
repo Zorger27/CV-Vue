@@ -123,6 +123,18 @@ const state = {
       },
       {
         id: 11,
+        title_en: "Intermediate for teenagers",
+        title_ua: "Середній рівень для підлітків",
+        title_es: "Intermedio para adolescentes",
+        regnumber: "Intermediate",
+        grade_en: "Successfully completed",
+        grade_ua: "Успішно завершено",
+        grade_es: "Completado con éxito",
+        examdate: "20.08.2023",
+        image: "https://www.englishdom.com/cn/33038d5f"
+      },
+      {
+        id: 12,
         title_en: "Irregular Verbs",
         title_ua: "Неправильні дієслова",
         title_es: "Verbos irregulares",
@@ -134,7 +146,7 @@ const state = {
         image: "https://www.englishdom.com/cn/21258ee6"
       },
       {
-        id: 12,
+        id: 13,
         title_en: "English with native speaker",
         title_ua: "Англійська з носієм мови",
         title_es: "Inglés con hablante nativo",
@@ -146,7 +158,7 @@ const state = {
         image: "https://www.englishdom.com/cn/7d490f31"
       },
       {
-        id: 13,
+        id: 14,
         title_en: "English for advanced",
         title_ua: "Англійська Поглиблена",
         title_es: "Inglés para avanzados",
