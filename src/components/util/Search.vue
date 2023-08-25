@@ -229,6 +229,7 @@ export default class Search extends Vue {
     font-size: 1.6rem;
 
     input {
+      padding: 0.5rem;
       border: 1px solid lightskyblue;
       border-radius: 5px;
       font-size: 1.6rem;
@@ -289,6 +290,7 @@ export default class Search extends Vue {
       font-size: 1.3rem;
 
       input[type="text"] {
+        padding: 0.4rem;
         border-radius: 3px;
         font-size: 1.3rem;
       }
