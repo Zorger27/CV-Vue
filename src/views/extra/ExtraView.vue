@@ -1,21 +1,21 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import loginStore from "../../store/modules/service/loginStore";
-import {mapGetters} from "vuex";
+// import loginStore from "../../store/modules/service/loginStore";
+// import {mapGetters} from "vuex";
 
 @Options({
-  computed: {
-    loginStore() {
-      return loginStore
-    }
-  },
+  // computed: {
+  //   loginStore() {
+  //     return loginStore
+  //   }
+  // },
+  // methods: {
+  //   ...mapGetters(["getCurrentUser"]),
+  //   currentUser() {
+  //     return this.getCurrentUser || {};
+  //   }
+  // },
   components: {},
-  methods: {
-    ...mapGetters(["getCurrentUser"]),
-    currentUser() {
-      return this.getCurrentUser || {};
-    }
-  },
 })
 export default class Extra extends Vue {
 }
@@ -24,14 +24,15 @@ export default class Extra extends Vue {
 <template>
   <div class="extra">
     <h1>
-      {{ $t('extra.h1') }}
-      <span class="currentUser">
-        {{
-          this.$i18n.locale === "ua" ? loginStore.state.currentUser.name_ua : this.$i18n.locale === "es" ? loginStore.state.currentUser.name_es : loginStore.state.currentUser.name_en
-        }} {{
-          this.$i18n.locale === "ua" ? loginStore.state.currentUser.surname_ua : this.$i18n.locale === "es" ? loginStore.state.currentUser.surname_es : loginStore.state.currentUser.surname_en
-        }}
-      </span>
+      {{ $t('extra.h2') }}
+<!--      {{ $t('extra.h1') }}-->
+<!--      <span class="currentUser">-->
+<!--        {{-->
+<!--          this.$i18n.locale === "ua" ? loginStore.state.currentUser.name_ua : this.$i18n.locale === "es" ? loginStore.state.currentUser.name_es : loginStore.state.currentUser.name_en-->
+<!--        }} {{-->
+<!--          this.$i18n.locale === "ua" ? loginStore.state.currentUser.surname_ua : this.$i18n.locale === "es" ? loginStore.state.currentUser.surname_es : loginStore.state.currentUser.surname_en-->
+<!--        }}-->
+<!--      </span>-->
     </h1>
     <line></line>
     <div class="container">
@@ -72,10 +73,10 @@ export default class Extra extends Vue {
 <style lang="scss" scoped>
 .extra {
   flex: 1 0 auto;
-  //background-image: url("@/assets/background/background13.jpg");
-  //background-position: center;
-  //background-size: cover;
-  //background-repeat: no-repeat;
+  background-image: url("@/assets/background/background13.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .container {
     display: inline-grid;
@@ -170,10 +171,10 @@ export default class Extra extends Vue {
 
 @media (max-width: 768px) {
   .extra {
-    h1 {
-      font-size: 1.7rem;
-      margin: 0.3rem;
-    }
+    //h1 {
+    //  font-size: 1.7rem;
+    //  margin: 0.3rem;
+    //}
     .container {
       margin-bottom: 0.5rem;
       display: inherit;

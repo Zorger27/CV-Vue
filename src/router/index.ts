@@ -14,7 +14,7 @@ import English from "@/views/certificates/EnglishView.vue";
 import Other from "@/views/certificates/OtherView.vue";
 import About from "@/views/menu/AboutView.vue";
 import PageNotFound from "@/views/service/PageNotFound.vue";
-import LoginPage from "@/views/service/LoginPage.vue";
+// import LoginPage from "@/views/service/LoginPage.vue";
 import Extra from "@/views/extra/ExtraView.vue";
 import CalculatorView from "@/views/extra/CalculatorView.vue";
 import Cryptocur from "@/views/extra/CryptocurView.vue";
@@ -36,36 +36,36 @@ import LoremPicsum from "@/views/ai/LoremPicsum.vue";
 import Pixabay from "@/views/ai/Pixabay.vue";
 
 const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/login',
-    name: 'login',
-    component: LoginPage,
-    meta: {
-      title: 'Portfolio - Login page',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Login page'
-        },
-        {
-          property: 'og:description',
-          content: 'Login, please...'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Login.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
-  },
+  // {
+  //   path: '/login',
+  //   name: 'login',
+  //   component: LoginPage,
+  //   meta: {
+  //     title: 'Portfolio - Login page',
+  //     metaTags: [
+  //       {
+  //         property: 'og:title',
+  //         content: 'Login page'
+  //       },
+  //       {
+  //         property: 'og:description',
+  //         content: 'Login, please...'
+  //       },
+  //       {
+  //         property: 'og:image',
+  //         content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Login.jpg'
+  //       },
+  //       {
+  //         property: 'og:url',
+  //         content: 'https://Zorin.Expert'
+  //       },
+  //       {
+  //         property: 'og:type',
+  //         content: 'website'
+  //       },
+  //     ]
+  //   }
+  // },
   {
     path: '/',
     name: 'home',
@@ -492,7 +492,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Extra,
     meta: {
       title: 'Portfolio - Extra pages',
-      requiresAuth: true,
+      // requiresAuth: true,
       metaTags: [
         {
           property: 'og:title',
@@ -1117,10 +1117,10 @@ router.beforeEach((to, from, next) => {
 // Это просматривает совпадающие маршруты от последнего к первому, находя ближайший маршрут с заголовком.
 // Например, если у нас есть `/some/deep/nested/route`, и `/some`, `/deep` и `/nested` имеют заголовки, будут выбраны `/nested`.
 
-  const loggedIn = localStorage.getItem('expiration') // Проверяем, авторизован ли пользователь
-  if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
-    next('/login') // Если пользователь не авторизован, перенаправляем его на страницу логина
-  }
+  // const loggedIn = localStorage.getItem('expiration') // Проверяем, авторизован ли пользователь
+  // if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
+  //   next('/login') // Если пользователь не авторизован, перенаправляем его на страницу логина
+  // }
 
   // Этот код позволяет управлять заголовками страниц и мета-тегами при навигации между маршрутами.
   // Он также удаляет и очищает устаревшие мета-теги, которые были добавлены при предыдущих навигациях,
