@@ -19,7 +19,7 @@ export default class Experience extends Vue {
     <h1>{{ $t('experience.title') }}</h1>
     <line></line>
     <div class="container">
-      <codersrank-summary username=zorger27 branding=false layout='horizontal'></codersrank-summary>
+      <codersrank-summary username="zorger27" branding="false" layout="horizontal"></codersrank-summary>
       <!--      <div class="codersrank-summary">-->
       <!--        <img src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=zorger27&badges=3&show-avatar=true&branding=false&style=&#45;&#45;border-radius:5px" alt="CodersrankSummary"/>-->
       <!--      </div>-->
