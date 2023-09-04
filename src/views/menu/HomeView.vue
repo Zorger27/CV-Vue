@@ -20,7 +20,7 @@ import Slider from "@/components/util/Slider.vue";
         require('@/assets/documents/frontend.jpg'),
         require('@/assets/certificates/diploma/TP77692345D.jpg'),
         require('@/assets/certificates/diploma/TP84806711D.jpg'),
-        require('@/assets/certificates/english/15_English_for_advanced.jpg'),
+        require('@/assets/certificates/english/16_English_for_advanced.jpg'),
         require('@/assets/certificates/diploma/TP88892276D.jpg'),
       ],
       currentText: "main.job1",

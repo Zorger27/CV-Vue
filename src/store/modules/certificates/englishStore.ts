@@ -171,6 +171,18 @@ const state = {
       },
       {
         id: 15,
+        title_en: "Preparation for IELTS",
+        title_ua: "Підготовка до IELTS",
+        title_es: "Preparación para IELTS",
+        regnumber: "Intermediate",
+        grade_en: "Successfully completed",
+        grade_ua: "Успішно завершено",
+        grade_es: "Completado con éxito",
+        examdate: "03.09.2023",
+        image: "https://www.englishdom.com/cn/1be30fc3"
+      },
+      {
+        id: 16,
         title_en: "English for advanced",
         title_ua: "Англійська Поглиблена",
         title_es: "Inglés para avanzados",
