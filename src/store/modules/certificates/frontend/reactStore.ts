@@ -13,6 +13,16 @@ const state = {
       },
       {
         id: 2,
+        title_en: "React Essential 2023",
+        title_ua: "React Базовий 2023",
+        title_es: "React Básico 2023",
+        regnumber: "TP87727177",
+        grade: "1000 / 1000",
+        examdate: "06.09.2023",
+        image: "https://testprovider.com/ru/search-certificate/tp87727177",
+      },
+      {
+        id: 3,
         title_en: "React Advanced",
         title_ua: "React Поглиблений",
         title_es: "React Avanzado",
@@ -22,7 +32,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp74208807",
       },
       {
-        id: 3,
+        id: 4,
         title_en: "React Native",
         title_ua: "React Native",
         title_es: "React Native",

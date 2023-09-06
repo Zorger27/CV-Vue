@@ -3,9 +3,9 @@ const state = {
     [
       {
         id: 1,
-        title_en: "Vue.js Starter",
-        title_ua: "Vue.js Стартовий",
-        title_es: "Vue.js Inicio",
+        title_en: "Vue.js Starter 2021",
+        title_ua: "Vue.js Стартовий 2021",
+        title_es: "Vue.js Inicio 2021",
         regnumber: "TP75556859",
         grade: "1000 / 1000",
         examdate: "11.08.2021",
@@ -13,6 +13,16 @@ const state = {
       },
       {
         id: 2,
+        title_en: "Vue.js Starter 2023",
+        title_ua: "Vue.js Стартовий 2023",
+        title_es: "Vue.js Inicio 2023",
+        regnumber: "TP70934717",
+        grade: "1000 / 1000",
+        examdate: "05.09.2023",
+        image: "https://testprovider.com/ru/search-certificate/tp70934717",
+      },
+      {
+        id: 3,
         title_en: "Vue.js Essential",
         title_ua: "Vue.js Базовий",
         title_es: "Vue.js Básico",
@@ -22,7 +32,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp51164572",
       },
       {
-        id: 3,
+        id: 4,
         title_en: "Building one page site with Vue.js",
         title_ua: "Створення односторінкового сайту на Vue.js",
         title_es: "Construyendo un sitio de una página con Vue.js",
@@ -32,7 +42,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp29746655",
       },
       {
-        id: 4,
+        id: 5,
         title_en: "jQuery 2014",
         title_ua: "jQuery 2014",
         title_es: "jQuery 2014",
@@ -42,7 +52,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp41571029",
       },
       {
-        id: 5,
+        id: 6,
         title_en: "jQuery 2021",
         title_ua: "jQuery 2021",
         title_es: "jQuery 2021",
@@ -52,7 +62,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp55404559",
       },
       {
-        id: 6,
+        id: 7,
         title_en: "HTML5 Web Components",
         title_ua: "Веб-компоненти HTML5",
         title_es: "Componentes Web HTML5",
