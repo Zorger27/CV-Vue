@@ -219,7 +219,7 @@ export default class Frontend extends Vue {
         </div>
       </div>
     </div>
-    <div v-if="tableView" class="table">
+    <div v-if="tableView" class="table" style="margin-bottom: 1rem">
       <table>
         <thead>
         <tr>
@@ -251,7 +251,7 @@ export default class Frontend extends Vue {
         </tbody>
       </table>
     </div>
-    <div v-else class="container">
+    <div v-else class="container" style="margin-bottom: 0.5rem">
       <h2 class="diplom"><span>✅ </span><b><a class="attention"
                                               href="https://testprovider.com/ru/search-certificate/tp77692345d"
                                               title="Diploma..." target="_blank">{{ $t('cert.front.frontend1') }}</a></b></h2>

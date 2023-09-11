@@ -170,7 +170,7 @@ export default class Backend extends Vue {
         </div>
       </div>
     </div>
-    <div v-if="tableView" class="table">
+    <div v-if="tableView" class="table" style="margin-bottom: 1rem">
       <table>
         <thead>
         <tr>
