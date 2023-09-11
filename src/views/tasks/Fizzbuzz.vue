@@ -57,15 +57,17 @@ export default class Fizzbuzz extends Vue {
       </div>
     </div>
     <line></line>
-    <div class="certificate">
-      <a class="block" href="/assets/tasks/FizzBuzz-JS.pdf" title="Download solution in pdf format..."
-         target="_blank"><h3>{{ $t('extra.tasks.link-js') }}</h3>
-      </a>
-    </div>
-    <div class="certificate">
-      <a class="block" href="/assets/tasks/FizzBuzz-Vue.pdf" title="Download solution in pdf format..."
-         target="_blank"><h3>{{ $t('extra.tasks.link-vue') }}</h3>
-      </a>
+    <div class="inner">
+      <div class="certificate">
+        <a class="block" href="/assets/tasks/FizzBuzz-JS.pdf" title="Download solution in pdf format..."
+           target="_blank"><h3>{{ $t('extra.tasks.link-js') }}</h3>
+        </a>
+      </div>
+      <div class="certificate">
+        <a class="block" href="/assets/tasks/FizzBuzz-Vue.pdf" title="Download solution in pdf format..."
+           target="_blank"><h3>{{ $t('extra.tasks.link-vue') }}</h3>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -73,7 +75,24 @@ export default class Fizzbuzz extends Vue {
 <style lang="scss" scoped>
 .fizzbuzz {
   flex: 1 0 auto;
-  //font-size: 1.6rem;
+  background: linear-gradient(to bottom, rgb(234, 250, 250), rgb(253, 229, 255)) no-repeat center;
+
+  .certificate {
+    text-align: center;
+    .block {
+      background: white;
+      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    }
+    .block:hover {
+      background-image: url("@/assets/background/background09.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: 1px solid lightskyblue;
+      box-shadow: 3px 3px 4px 0 darkblue;
+    }
+  }
+  .inner {margin-bottom: 1rem;}
 
   .back {
     display: inline-flex;
@@ -137,10 +156,7 @@ export default class Fizzbuzz extends Vue {
 
   .fizzbuzz {
     color: red;
-  }
-
-  .certificate {
-    text-align: center;
+    background: inherit;
   }
 
   p, .btn {
@@ -158,6 +174,7 @@ export default class Fizzbuzz extends Vue {
     p, .btn {
       font-size: 1.3rem;
     }
+    .inner {margin-bottom: 0.7rem;}
   }
   @media (max-width: 768px) {
     label {
@@ -171,6 +188,7 @@ export default class Fizzbuzz extends Vue {
       font-size: 1rem;
       margin: 0.2rem 0.2rem;
     }
+    .inner {margin-bottom: 0.4rem;}
   }
 }
 </style>

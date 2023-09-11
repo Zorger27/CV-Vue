@@ -81,7 +81,9 @@ export default class Tasks extends Vue {
   .table {
     margin: 1rem auto;
     background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
-    box-shadow: 3px 3px 4px 0 black;
+    //box-shadow: 3px 3px 4px 0 black;
+    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px black;
     .name {
       width: 600px;
     }
@@ -112,7 +114,8 @@ export default class Tasks extends Vue {
         radial-gradient(at 0% 100%, hsla(343, 100%, 76%, 1) 0px, transparent 50%),
         radial-gradient(at 80% 100%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
         radial-gradient(at 80% 0%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
-      box-shadow: 3px 3px 4px 0 rgba(178, 25, 170, 0.5);
+      //box-shadow: 3px 3px 4px 0 rgba(178, 25, 170, 0.5);
+      box-shadow: 3px 3px 4px 0 rgb(101, 29, 98);
 
       h3 {
         color: black;

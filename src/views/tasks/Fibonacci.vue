@@ -60,15 +60,17 @@ export default class Fibonacci extends Vue {
       </h3>
     </div>
     <line></line>
-    <div class="certificate">
-      <a class="block" href="/assets/tasks/Fibonacci-JS.pdf" title="Download solution in pdf format..."
-         target="_blank"><h3>{{ $t('extra.tasks.link-js') }}</h3>
-      </a>
-    </div>
-    <div class="certificate">
-      <a class="block" href="/assets/tasks/Fibonacci-Vue.pdf" title="Download solution in pdf format..."
-         target="_blank"><h3>{{ $t('extra.tasks.link-vue') }}</h3>
-      </a>
+    <div class="inner">
+      <div class="certificate">
+        <a class="block" href="/assets/tasks/Fibonacci-JS.pdf" title="Download solution in pdf format..."
+           target="_blank"><h3>{{ $t('extra.tasks.link-js') }}</h3>
+        </a>
+      </div>
+      <div class="certificate">
+        <a class="block" href="/assets/tasks/Fibonacci-Vue.pdf" title="Download solution in pdf format..."
+           target="_blank"><h3>{{ $t('extra.tasks.link-vue') }}</h3>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -76,14 +78,29 @@ export default class Fibonacci extends Vue {
 <style lang="scss" scoped>
 .fibonacci {
   flex: 1 0 auto;
+  background: linear-gradient(to bottom, rgb(234, 250, 250), rgb(253, 229, 255)) no-repeat center;
+
+  .certificate {
+    text-align: center;
+    .block {
+      background: white;
+      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    }
+    .block:hover {
+      background-image: url("@/assets/background/background09.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: 1px solid lightskyblue;
+      box-shadow: 3px 3px 4px 0 darkblue;
+    }
+  }
+  .inner {margin-bottom: 1rem;}
 
   .back {
     display: inline-flex;
     text-decoration: none;
     margin-right: 0.1rem;
-  }
-  .certificate {
-    text-align: center;
   }
 
   input[type="text"] {
@@ -122,6 +139,7 @@ export default class Fibonacci extends Vue {
     .title, .result {
       font-size: 1.7rem;
     }
+    .inner {margin-bottom: 0.7rem;}
   }
   @media (max-width: 768px) {
     input[type="text"] {
@@ -133,7 +151,7 @@ export default class Fibonacci extends Vue {
     .title, .result {
       font-size: 1.4rem;
     }
-
+    .inner {margin-bottom: 0.4rem;}
   }
 }
 </style>
