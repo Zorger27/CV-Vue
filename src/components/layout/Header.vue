@@ -435,6 +435,10 @@ header {
     transform: scaleX(1); /* Увеличим ширину при наведении */
   }
 
+  a:hover {
+    color: darkcyan;
+  }
+
   a:focus {
     color: darkred;
   }
