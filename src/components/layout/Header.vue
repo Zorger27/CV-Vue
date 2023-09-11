@@ -396,8 +396,8 @@ header {
   }
 
   a {
-    border: 1px solid transparent;
-    border-radius: 5px;
+    border: 2px solid transparent;
+    //border-radius: 5px;
     margin-right: 10px;
     font-size: 1.5rem;
     font-weight: bold;
@@ -410,17 +410,18 @@ header {
   }
 
   a:hover {
-    background-color: rgba(236, 236, 235, 0.2);
-    border: 1px solid rgba(112, 111, 111, 0.9);
-    box-shadow: 3px 3px 4px 0 white;
+    //background-color: rgba(236, 236, 235, 0.2);
+    //border: 1px solid rgba(112, 111, 111, 0.9);
+    border-bottom: 2px solid rgba(112, 111, 111, 0.9);
+    //box-shadow: 3px 3px 4px 0 white;
     color: darkcyan;
     cursor: pointer;
   }
 
   a:focus {
-    background-color: rgba(236, 236, 235, 0.2);
-    border: 1px solid rgba(112, 111, 111, 0.9);
-    box-shadow: 3px 3px 4px 0 white;
+    //background-color: rgba(236, 236, 235, 0.2);
+    border-bottom: 2px solid rgba(112, 111, 111, 0.9);
+    //box-shadow: 3px 3px 4px 0 white;
     color: darkred;
   }
 

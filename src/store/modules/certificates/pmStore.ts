@@ -3,13 +3,13 @@ const state = {
     [
       {
         id: 1,
-        title_en: "Introduction to PM",
+        title_en: "Introduction to Project Management",
         title_ua: "Введення в управління проектами",
         title_es: "Introducción a la gestión de proyectos",
         regnumber: "TP84744235",
-        grade_en: "1000 / 1000",
-        grade_ua: "1000 / 1000",
-        grade_es: "1000 / 1000",
+        grade_en: "938 / 1000",
+        grade_ua: "938 / 1000",
+        grade_es: "938 / 1000",
         examdate: "27.04.2021",
         image: "https://testprovider.com/ru/search-certificate/tp84744235",
       },

@@ -91,10 +91,16 @@ export default class About extends Vue {}
   transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
 }
 .prj a:hover {
-  background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
-  box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.5);
+  //background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
+  background-image: url("@/assets/background/background13.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  //box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.5);
+  border-color: rebeccapurple;
+  box-shadow: 3px 3px 4px mediumpurple;
   //box-shadow: 3px 3px 4px 0 lightgrey;
-  border-color: #bbeafa;
+  //border-color: #bbeafa;
 }
 
 .table {

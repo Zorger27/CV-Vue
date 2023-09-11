@@ -272,6 +272,20 @@ export default class Frontend extends Vue {
 <style lang="scss" scoped>
 .frontend {
   flex: 1 0 auto;
+  .table {background: white;}
+  background: linear-gradient(to bottom, rgb(229, 237, 255), rgb(250, 246, 234)) no-repeat center;
+  .certificate {
+    .block {
+      background: white;
+      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    }
+    .block:hover {
+      background-image: url("@/assets/background/background01.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 
   .back {
     display: none;
