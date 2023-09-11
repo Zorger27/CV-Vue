@@ -381,6 +381,14 @@ header {
         border: none;
       }
 
+      a::after {
+        /* Удаляем подчёркивание и другие стили для ссылок */
+        content: none;
+        background-color: transparent;
+        border-radius: 0;
+        transform: scaleX(1);
+      }
+
       a:hover {
         border: none;
         text-decoration: underline;
@@ -397,10 +405,10 @@ header {
 
   a {
     border: 2px solid transparent;
-    //border-radius: 5px;
     margin-right: 10px;
     font-size: 1.5rem;
     font-weight: bold;
+    position: relative;
     text-decoration: none;
     padding: 5px;
     color: darkblue;
@@ -409,19 +417,25 @@ header {
     }
   }
 
-  a:hover {
-    //background-color: rgba(236, 236, 235, 0.2);
-    //border: 1px solid rgba(112, 111, 111, 0.9);
-    border-bottom: 2px solid rgba(112, 111, 111, 0.9);
-    //box-shadow: 3px 3px 4px 0 white;
-    color: darkcyan;
-    cursor: pointer;
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; /* Высота подчёркивания */
+    background-color: rgba(112, 111, 111, 0.9);
+    border-radius: 5px; /* Закругленные края подчёркивания */
+    transform: scaleX(0); /* Начнём с нулевой ширины */
+    transform-origin: center bottom;
+    transition: transform 0.3s ease; /* Плавное появление при наведении */
+  }
+
+  a:hover::after {
+    transform: scaleX(1); /* Увеличим ширину при наведении */
   }
 
   a:focus {
-    //background-color: rgba(236, 236, 235, 0.2);
-    border-bottom: 2px solid rgba(112, 111, 111, 0.9);
-    //box-shadow: 3px 3px 4px 0 white;
     color: darkred;
   }
 
@@ -457,6 +471,14 @@ header {
         text-decoration: none;
         border: none;
         display: block;
+      }
+
+      a::after {
+        /* Удаляем подчёркивание и другие стили для ссылок */
+        content: none;
+        background-color: transparent;
+        border-radius: 0;
+        transform: scaleX(1);
       }
 
       a:hover {
