@@ -94,7 +94,7 @@ export default class Home extends Vue {
 <!--                                                                                            alt="Skype"></a>-->
         <a href="https://www.facebook.com/anatoliy.zorin" title="My Facebook profile..." target="_blank"><img
           class=logo-image src="@/assets/ico/facebook.svg" alt="Facebook"></a>
-        <a href="https://www.youtube.com/c/AnatoliiZorin" title="My YouTube chanel..." target="_blank"><img
+        <a href="https://www.youtube.com/c/AnatoliiZorin" title="My YouTube channel..." target="_blank"><img
           class=logo-image src="@/assets/ico/youtube.svg" alt="YouTube"></a>
         <a href="https://twitter.com/Regroz" title="My X (ex. Twitter) profile..." target="_blank"><img
           class=logo-image src="@/assets/ico/twitter.svg" alt="Twitter"></a>
