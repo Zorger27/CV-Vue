@@ -75,6 +75,18 @@ const state = {
       },
       {
         id: 7,
+        title_en: "Digigram 2.0 for citizens",
+        title_ua: "Цифрограм 2.0 для громадян",
+        title_es: "Digigram 2.0 para los ciudadanos",
+        regnumber: "D0000952361",
+        grade_en: "63 / 90",
+        grade_ua: "63 / 90",
+        grade_es: "63 / 90",
+        examdate: "16.10.2023",
+        image: "https://osvita.diia.gov.ua/certificate-check/D0000952361",
+      },
+      {
+        id: 8,
         title_en: "Basic software developer training",
         title_ua: "Базова підготовка розробника ПЗ",
         title_es: "Capacitación básica para desarrolladores de software",
@@ -86,7 +98,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp17348317",
       },
       {
-        id: 8,
+        id: 9,
         title_en: "Google Display Network",
         title_ua: "Медійна мережа Google",
         title_es: "Red de Display de Google",
@@ -95,10 +107,10 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "18.02.2020",
-        image: "/assets/certificates/other/08_Google_Display_Network_Ads.jpg",
+        image: "/assets/certificates/other/09_Google_Display_Network_Ads.jpg",
       },
       {
-        id: 9,
+        id: 10,
         title_en: "Google Shopping Campaign",
         title_ua: "Торгові компанії Google",
         title_es: "Campaña de Google Shopping",
@@ -107,10 +119,10 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "20.02.2020",
-        image: "/assets/certificates/other/09_Google_Shopping_Campaign.jpg",
+        image: "/assets/certificates/other/10_Google_Shopping_Campaign.jpg",
       },
       {
-        id: 10,
+        id: 11,
         title_en: "Google Search Campaign",
         title_ua: "Пошукові компанії Google",
         title_es: "Campaña de búsqueda de Google",
@@ -119,10 +131,10 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "16.03.2020",
-        image: "/assets/certificates/other/10_Google_Search_Campaign.jpg",
+        image: "/assets/certificates/other/11_Google_Search_Campaign.jpg",
       },
       {
-        id: 11,
+        id: 12,
         title_en: "Google Video Campaign",
         title_ua: "Відеокомпанії Google",
         title_es: "Campaña de Google Video",
@@ -131,7 +143,7 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "17.03.2020",
-        image: "/assets/certificates/other/11_Google_Video_Campaign.jpg",
+        image: "/assets/certificates/other/12_Google_Video_Campaign.jpg",
       }
     ]
 };
