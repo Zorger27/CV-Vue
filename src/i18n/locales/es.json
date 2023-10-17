@@ -86,7 +86,15 @@
       "strategic": "Pensamiento estrategico",
       "critical": "Pensamiento crítico",
       "negotiation": "Negociación"
-    }
+    },
+    "iq": {
+      "title": "Prueba general de CI",
+      "organization": "Organization: ",
+      "date": "Fecha: ",
+      "report": "Informe de coeficiente intelectual ",
+      "test": "Enlace de prueba"
+    },
+    "special": "Certificados Especiales"
   },
   "cert": {
     "title-main": "Diplomas y Certificados",

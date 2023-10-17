@@ -86,7 +86,15 @@
       "strategic": "Strategic Thinking",
       "critical": "Critical Thinking",
       "negotiation": "Negotiation"
-    }
+    },
+    "iq": {
+      "title": "General IQ test",
+      "organization": "Organization: ",
+      "date": "Date: ",
+      "report": "IQ report ",
+      "test": "Testing link"
+    },
+    "special": "Special Certificates"
   },
   "cert": {
     "title-main": "Diplomas & Certificates",
