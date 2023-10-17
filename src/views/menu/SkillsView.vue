@@ -63,8 +63,8 @@ export default class Skills extends Vue {}
           </div>
           <div class="iq-desc">
             <ul>
-              <li>{{$t('skills.iq.organization')}}IMPULSE</li>
-              <li>{{$t('skills.iq.date')}}17.07.2023</li>
+              <li>{{$t('skills.iq.organization')}}<span style="font-weight: bold">IMPULSE</span></li>
+              <li>{{$t('skills.iq.date')}}<span style="font-weight: bold">17.07.2023</span></li>
               <li><a href="/assets/file/IQ_test_report_17-07-2023_eng.pdf" title="Download IQ report pdf file" target="_blank"><span>{{$t('skills.iq.report')}}</span><i class="fas fa-cloud-download"></i></a></li>
               <li><a href="https://impulse.onelink.me/92Ym/testiq" title="Test your IQ here" target="_blank">{{$t('skills.iq.test')}}</a></li>
             </ul>
