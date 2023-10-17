@@ -294,7 +294,15 @@ export default class Skills extends Vue {}
           .iq-desc {font-size: 1.6rem;}
         }
       }
-      //.special-certificates { .inner {margin-bottom: 0.4rem;} }
+      .special-certificates {
+        .table {
+          font-size: 1.60rem;
+          padding: 0.8rem;
+          margin: 0.5rem auto;
+          tr, td, th {padding: 0.4rem;}
+          .number, .grade, .date {font-size: 1.4rem}
+        }
+      }
     }
   }
 }
@@ -347,7 +355,12 @@ export default class Skills extends Vue {}
         }
         .table {
           font-size: 0.9rem;
-          .name {width: 12rem;}
+          padding: 0;
+          margin: 0.5rem auto;
+          border: none;
+          border-radius: unset;
+          tr, td, th {padding: 0.3rem;}
+          .nomer, .name, .version, .price {width: max-content;}
           .nomer, .number, .grade, .date {
             font-size: 0.5rem;
           }
