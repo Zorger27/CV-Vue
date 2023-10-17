@@ -11,12 +11,21 @@ import Slider from "@/components/util/Slider.vue";
         require('@/assets/certificates/other/08_TP17348317.jpg'),
         require('@/assets/certificates/other/01_TP03316433.jpg'),
         require('@/assets/certificates/other/02_TP18727720.jpg'),
-      ]
+      ],
+      tableView: false,
     }
   },
   computed: {
     otherStore() {
       return otherStore
+    },
+    selectedOther() {
+      return [
+        otherStore.state.otherStore[6],
+        otherStore.state.otherStore[7],
+        otherStore.state.otherStore[0],
+        otherStore.state.otherStore[1]
+      ];
     },
     getPdfUrl() {
       if (this.$i18n.locale === 'ua') {
@@ -35,6 +44,11 @@ import Slider from "@/components/util/Slider.vue";
       } else {
         return require('@/assets/documents/My IQ score 17-07-2023 eng.jpg');
       }
+    }
+  },
+  methods: {
+    changeView() {
+      this.tableView = !this.tableView;
     }
   },
   components: {Slider},
@@ -96,54 +110,45 @@ export default class Skills extends Vue {}
       </div>
       <div class="special-certificates">
         <line></line>
-        <h2>{{$t('skills.special')}}</h2>
-        <div class="inner">
-          <div class="certificate">
-            <a class="block" :href="otherStore.state.otherStore[6].image" title="Certificate..." target="_blank">
-              <h3>1. {{
-                  this.$i18n.locale === "ua" ? otherStore.state.otherStore[6].title_ua : this.$i18n.locale === "es" ? otherStore.state.otherStore[6].title_es : otherStore.state.otherStore[6].title_en
+        <h2>{{$t('skills.special')}} <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i></h2>
+        <div v-if="tableView" class="table">
+          <table>
+            <thead>
+            <tr>
+              <th>№</th>
+              <th>{{ $t('cert.title') }}</th>
+              <th>{{ $t('cert.number') }}</th>
+              <th>{{ $t('cert.grade') }}</th>
+              <th>{{ $t('cert.date') }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(sert, index) in selectedOther" :key="sert.id">
+              <td class="nomer">{{ index + 1 }}</td>
+              <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{
+                  this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en
+                }}</a></td>
+              <td class="number">{{ sert.regnumber }}</td>
+              <td class="grade">{{
+                  this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en
+                }}
+              </td>
+              <td class="date">{{ sert.examdate }}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div v-else class="inner">
+          <div v-for="(sert, index) in selectedOther" :key="sert.id" class="certificate">
+            <a class="block" :href="sert.image" title="Certificate..." target="_blank">
+              <h3>{{ index + 1 }}. {{
+                  this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en
                 }}</h3>
-              <div>{{ $t('cert.number') }}: <strong>{{ otherStore.state.otherStore[6].regnumber }}</strong></div>
+              <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
               <div>{{ $t('cert.grade') }}: <strong>{{
-                  this.$i18n.locale === "ua" ? otherStore.state.otherStore[6].grade_ua : this.$i18n.locale === "es" ? otherStore.state.otherStore[6].grade_es : otherStore.state.otherStore[6].grade_en
+                  this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en
                 }}</strong></div>
-              <div>{{ $t('cert.date') }}: {{ otherStore.state.otherStore[6].examdate }}</div>
-            </a>
-          </div>
-          <div class="certificate">
-            <a class="block" :href="otherStore.state.otherStore[7].image" title="Certificate..." target="_blank">
-              <h3>2. {{
-                  this.$i18n.locale === "ua" ? otherStore.state.otherStore[7].title_ua : this.$i18n.locale === "es" ? otherStore.state.otherStore[7].title_es : otherStore.state.otherStore[7].title_en
-                }}</h3>
-              <div>{{ $t('cert.number') }}: <strong>{{ otherStore.state.otherStore[7].regnumber }}</strong></div>
-              <div>{{ $t('cert.grade') }}: <strong>{{
-                  this.$i18n.locale === "ua" ? otherStore.state.otherStore[7].grade_ua : this.$i18n.locale === "es" ? otherStore.state.otherStore[7].grade_es : otherStore.state.otherStore[7].grade_en
-                }}</strong></div>
-              <div>{{ $t('cert.date') }}: {{ otherStore.state.otherStore[7].examdate }}</div>
-            </a>
-          </div>
-          <div class="certificate">
-            <a class="block" :href="otherStore.state.otherStore[0].image" title="Certificate..." target="_blank">
-              <h3>3. {{
-                  this.$i18n.locale === "ua" ? otherStore.state.otherStore[0].title_ua : this.$i18n.locale === "es" ? otherStore.state.otherStore[0].title_es : otherStore.state.otherStore[0].title_en
-                }}</h3>
-              <div>{{ $t('cert.number') }}: <strong>{{ otherStore.state.otherStore[0].regnumber }}</strong></div>
-              <div>{{ $t('cert.grade') }}: <strong>{{
-                  this.$i18n.locale === "ua" ? otherStore.state.otherStore[0].grade_ua : this.$i18n.locale === "es" ? otherStore.state.otherStore[0].grade_es : otherStore.state.otherStore[0].grade_en
-                }}</strong></div>
-              <div>{{ $t('cert.date') }}: {{ otherStore.state.otherStore[0].examdate }}</div>
-            </a>
-          </div>
-          <div class="certificate">
-            <a class="block" :href="otherStore.state.otherStore[1].image" title="Certificate..." target="_blank">
-              <h3>4. {{
-                  this.$i18n.locale === "ua" ? otherStore.state.otherStore[1].title_ua : this.$i18n.locale === "es" ? otherStore.state.otherStore[1].title_es : otherStore.state.otherStore[1].title_en
-                }}</h3>
-              <div>{{ $t('cert.number') }}: <strong>{{ otherStore.state.otherStore[1].regnumber }}</strong></div>
-              <div>{{ $t('cert.grade') }}: <strong>{{
-                  this.$i18n.locale === "ua" ? otherStore.state.otherStore[1].grade_ua : this.$i18n.locale === "es" ? otherStore.state.otherStore[1].grade_es : otherStore.state.otherStore[1].grade_en
-                }}</strong></div>
-              <div>{{ $t('cert.date') }}: {{ otherStore.state.otherStore[1].examdate }}</div>
+              <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
             </a>
           </div>
         </div>
@@ -160,6 +165,7 @@ export default class Skills extends Vue {}
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(255, 240, 244), rgb(229, 251, 255)) no-repeat center;
   text-align: left;
+  .table {background: white;}
   .certificate {
     .block {
       background: white;
@@ -238,6 +244,10 @@ export default class Skills extends Vue {}
     }
     .special-certificates {
       grid-area: special-certificates;
+      text-align: center;
+      .table {
+        font-size: 1.8rem;
+      }
       .inner {
         display: inline-flex;
         flex-wrap: wrap;
@@ -331,7 +341,18 @@ export default class Skills extends Vue {}
           }
         }
       }
-      //.special-certificates { .inner {margin-bottom: 0.4rem;} }
+      .special-certificates {
+        h2 {
+          font-size: 1.6rem;
+        }
+        .table {
+          font-size: 0.9rem;
+          .name {width: 12rem;}
+          .nomer, .number, .grade, .date {
+            font-size: 0.5rem;
+          }
+        }
+      }
     }
   }
 }
