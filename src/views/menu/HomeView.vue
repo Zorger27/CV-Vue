@@ -8,7 +8,7 @@ import Slider from "@/components/util/Slider.vue";
       sliderImages: [
         require('@/assets/certificates/diploma/TP24303907D.jpg'),
         require('@/assets/certificates/english/09_IT_English_TestProvider.jpg'),
-        require('@/assets/certificates/other/07_D0000952361.jpg'),
+        // require('@/assets/certificates/other/07_D0000952361.jpg'),
         require('@/assets/certificates/diploma/TP31003654D.jpg'),
         require('@/assets/certificates/pm/03_Critical_Thinking.jpg'),
         require('@/assets/certificates/diploma/TP31617068D.jpg'),
@@ -16,7 +16,7 @@ import Slider from "@/components/util/Slider.vue";
         require('@/assets/certificates/diploma/TP37723782D.jpg'),
         require('@/assets/certificates/english/13_Intermediate_level_of_English.jpg'),
         require('@/assets/certificates/diploma/TP45473683D.jpg'),
-        require('@/assets/certificates/other/02_TP18727720.jpg'),
+        // require('@/assets/certificates/other/02_TP18727720.jpg'),
         require('@/assets/certificates/diploma/TP63925579D.jpg'),
         require('@/assets/documents/frontend.jpg'),
         require('@/assets/certificates/diploma/TP77692345D.jpg'),
