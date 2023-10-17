@@ -84,7 +84,7 @@ export default class Skills extends Vue {}
               <li>{{$t('skills.iq.organization')}}<span style="font-weight: bold">IMPULSE</span></li>
               <li>{{$t('skills.iq.date')}}<span style="font-weight: bold">17.07.2023</span></li>
               <li>
-                <a :href="getPdfUrl" title="Download IQ report pdf file" target="_blank">
+                <a style="text-decoration: none" :href="getPdfUrl" title="Download IQ report pdf file" target="_blank">
                   <span>{{$t('skills.iq.report')}}</span>
                   <i class="fas fa-cloud-download"></i>
                 </a>
@@ -229,7 +229,11 @@ export default class Skills extends Vue {}
         display: inline-flex;
         margin-left: 1rem;
         .iq-photo { img {height: 15rem;} }
-        .iq-desc {font-size: 1.8rem;}
+        .iq-desc {
+          font-size: 1.8rem;
+          i {color: deeppink;}
+          i:hover {color: blue;}
+        }
       }
     }
     .special-certificates {
