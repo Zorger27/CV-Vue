@@ -19,7 +19,7 @@ import languagesStore from "@/store/modules/education/languagesStore";
 import itvdnStore from "@/store/modules/education/itvdnStore";
 import progStore from "@/store/modules/education/progStore";
 import knuteStore from "@/store/modules/education/knuteStore";
-import loginStore from "@/store/modules/service/loginStore";
+// import loginStore from "@/store/modules/service/loginStore";
 import infoStore from "@/store/modules/service/infoStore";
 import tasksStore from "@/store/modules/project/tasksStore";
 import experienceStore from "@/store/modules/project/experienceStore";
@@ -46,7 +46,7 @@ export default createStore({
     itvdnStore,
     progStore,
     knuteStore,
-    loginStore,
+    // loginStore,
     infoStore,
     tasksStore,
     experienceStore
