@@ -14,7 +14,6 @@ import English from "@/views/certificates/EnglishView.vue";
 import Other from "@/views/certificates/OtherView.vue";
 import About from "@/views/menu/AboutView.vue";
 import PageNotFound from "@/views/service/PageNotFound.vue";
-// import LoginPage from "@/views/service/LoginPage.vue";
 import Extra from "@/views/extra/ExtraView.vue";
 import CalculatorView from "@/views/extra/CalculatorView.vue";
 import Cryptocur from "@/views/extra/CryptocurView.vue";
@@ -36,36 +35,6 @@ import LoremPicsum from "@/views/ai/LoremPicsum.vue";
 import Pixabay from "@/views/ai/Pixabay.vue";
 
 const routes: Array<RouteRecordRaw> = [
-  // {
-  //   path: '/login',
-  //   name: 'login',
-  //   component: LoginPage,
-  //   meta: {
-  //     title: 'Portfolio - Login page',
-  //     metaTags: [
-  //       {
-  //         property: 'og:title',
-  //         content: 'Login page'
-  //       },
-  //       {
-  //         property: 'og:description',
-  //         content: 'Login, please...'
-  //       },
-  //       {
-  //         property: 'og:image',
-  //         content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Login.jpg'
-  //       },
-  //       {
-  //         property: 'og:url',
-  //         content: 'https://Zorin.Expert'
-  //       },
-  //       {
-  //         property: 'og:type',
-  //         content: 'website'
-  //       },
-  //     ]
-  //   }
-  // },
   {
     path: '/',
     name: 'home',
