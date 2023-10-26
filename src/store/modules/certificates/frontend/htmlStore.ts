@@ -43,6 +43,16 @@ const state = {
       },
       {
         id: 5,
+        title_en: "PUG template designer",
+        title_ua: "Шаблонізатор PUG",
+        title_es: "Motor de plantillas PUG",
+        regnumber: "TP46286417",
+        grade: "1000 / 1000",
+        examdate: "26.10.2023",
+        image: "https://testprovider.com/ru/search-certificate/tp46286417",
+      },
+      {
+        id: 6,
         title_en: "CSS Flexbox",
         title_ua: "CSS Flexbox",
         title_es: "CSS Flexbox",
@@ -52,7 +62,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp01289491",
       },
       {
-        id: 6,
+        id: 7,
         title_en: "Layout of pages using Grid",
         title_ua: "Верстка сторінок із використанням Grid",
         title_es: "Maquetación de páginas usando Grid",
@@ -62,7 +72,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp62170279",
       },
       {
-        id: 7,
+        id: 8,
         title_en: "Bootstrap 4",
         title_ua: "Bootstrap 4",
         title_es: "Bootstrap 4",
@@ -72,7 +82,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp33638993",
       },
       {
-        id: 8,
+        id: 9,
         title_en: "Practical Landing Course",
         title_ua: "Практичний курс з верстки лендінгу",
         title_es: "Curso práctico de maquetación de landing page",
@@ -82,7 +92,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp73961983",
       },
       {
-        id: 9,
+        id: 10,
         title_en: "WordPress Starter",
         title_ua: "WordPress Стартовий",
         title_es: "WordPress Inicio",
@@ -92,7 +102,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp68763365",
       },
       {
-        id: 10,
+        id: 11,
         title_en: "WordPress Essential",
         title_ua: "WordPress Базовий",
         title_es: "WordPress Básico",
