@@ -141,7 +141,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.JS, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Blog-site",
         demolink: ""
       },
@@ -159,15 +159,27 @@ const state = {
       },
       {
         id: 14,
-        title_en: "MY Portfolio",
+        title_en: "My Portfolio",
         title_ua: "Моє Портфоліо",
-        title_es: "MI Portafolio",
+        title_es: "Mi Portafolio",
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.JS, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/CV-Vue",
         demolink: "https://Zorin.Expert"
+      },
+      {
+        id: 15,
+        title_en: "Vue.js Start template",
+        title_ua: "Стартовий шаблон Vue.js",
+        title_es: "Plantilla de inicio de Vue.js",
+        type_en: "Single page application",
+        type_ua: "Односторінковий додаток",
+        type_es: "Aplicación de una sola página",
+        techno: "Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
+        sourcelink: "https://github.com/Zorger27/Vue-Start-template",
+        demolink: ""
       },
     ]
 };
