@@ -1,5 +1,4 @@
 import {createI18n} from "vue-i18n"
-// import {createI18n} from "vue-i18n/dist/vue-i18n.esm-bundler.js"
 import en from "./locales/en.json"
 import ua from "./locales/ua.json"
 import es from "./locales/es.json"

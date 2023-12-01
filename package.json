@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
-  "description": "My Portfolio",
   "version": "0.1.0",
   "private": true,
+  "description": "My Portfolio",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
@@ -18,7 +18,6 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-pwa": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
