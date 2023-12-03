@@ -28,7 +28,6 @@ module.exports = defineConfig({
       new HtmlWebpackTagsPlugin({
         links: [
           {
-            // path: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css',
             path: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
             attributes: {
               rel: 'stylesheet'
@@ -72,6 +71,7 @@ module.exports = defineConfig({
         devMode: 'webapp',
         outputPath: 'assets/favicon-img/', // Куда будут на сервере скидываться созданные favicon-ки
         prefix: 'assets/favicon-img/', // Этот префикс для файла index.html, чтобы правильно прописать пути иконок с сервера!
+        manifest: './src/assets/manifest/manifest.webmanifest',
         favicons: {
           appName: 'Portfolio',
           appDescription: 'My Portfolio',
