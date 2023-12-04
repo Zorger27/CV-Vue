@@ -20,7 +20,7 @@ module.exports = defineConfig({
       new CopyWebpackPlugin({ //СУПЕР-ВАЖНАЯ штука для ссылок на файлы (pdf или картинки), расположенные на самом сервере!!!
         patterns: [
           {
-            from: `src/assets`,
+            from: 'src/assets',
             to: 'assets'
           }
         ]
@@ -66,11 +66,11 @@ module.exports = defineConfig({
           // // favicon: './public/favicon.png',
       // }),
       new FaviconsWebpackPlugin({
-        logo: './src/assets/favicon/favbig.png',
+        logo: './src/assets/img/favbig.png',
         mode: 'webapp',
         devMode: 'webapp',
-        outputPath: 'assets/favicon-img/', // Куда будут на сервере скидываться созданные favicon-ки
-        prefix: 'assets/favicon-img/', // Этот префикс для файла index.html, чтобы правильно прописать пути иконок с сервера!
+        outputPath: 'assets/favicon/', // Куда будут на сервере скидываться созданные favicon-ки
+        prefix: 'assets/favicon/', // Этот префикс для файла index.html, чтобы правильно прописать пути иконок с сервера!
         manifest: './src/assets/manifest/manifest.webmanifest',
         favicons: {
           appName: 'Portfolio',
@@ -81,7 +81,6 @@ module.exports = defineConfig({
       }),
       new SitemapPlugin({
         base: 'https://zorin.expert', // Базовый URL моего сайта
-        // paths: routes.getRoutes().map(route => route.path), // Используем все пути из маршрутов.
         paths: [
           { path: '/', priority: 1, changefreq: 'always' },
           { path: '/projects', priority: 1, changefreq: 'daily' },
