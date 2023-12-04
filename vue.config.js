@@ -20,8 +20,14 @@ module.exports = defineConfig({
       new CopyWebpackPlugin({ //СУПЕР-ВАЖНАЯ штука для ссылок на файлы (pdf или картинки), расположенные на самом сервере!!!
         patterns: [
           {
-            from: 'src/assets',
-            to: 'assets'
+            from: "src/assets",
+            to: "assets"
+          },
+          {
+            from: "src/assets/analytics/robots.txt",
+            to: "",
+            toType: "dir",
+            force: true
           }
         ]
       }),
@@ -45,7 +51,7 @@ module.exports = defineConfig({
         useHash: false,
         metas: [
           {attributes: {name: 'google-site-verification', content: 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'}},
-          {attributes: {property: 'description', content: 'Portfolio is a significantly expanded CV with all diplomas and certificates, a detailed description of the experience gained in previous jobs, etc.'}},
+          {attributes: {name: 'description', content: 'Portfolio is a significantly expanded CV with all diplomas and certificates, a detailed description of the experience gained in previous jobs, etc.'}},
           {attributes: {property: 'og:title', content: 'Portfolio'}},
           {attributes: {property: 'twitter:title', content: 'Portfolio'}},
           {attributes: {property: 'og:description', content: 'Anatolii Zorin\'s Portfolio'}},
