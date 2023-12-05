@@ -43,6 +43,7 @@ module.exports = defineConfig({
         scripts: [
           'https://www.googletagmanager.com/gtag/js?id=G-RZHR947YVN',
           '/assets/analytics/ganal.js',
+          '/assets/analytics/lang.js',
           'https://unpkg.com/@codersrank/summary@0.9.13/codersrank-summary.min.js',
           'https://unpkg.com/@codersrank/skills-chart@0.9.21/codersrank-skills-chart.min.js'
         ],
