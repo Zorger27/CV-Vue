@@ -1,6 +1,6 @@
 import {createI18n} from "vue-i18n"
 import en from "./locales/en.json"
-import ua from "./locales/ua.json"
+import uk from "./locales/uk.json"
 import es from "./locales/es.json"
 
 export default createI18n({
@@ -8,5 +8,5 @@ export default createI18n({
     fallbackLocale: 'en',
     legacy: false,
     globalInjection: true,
-    messages: { en, ua, es }
+    messages: { en, uk, es }
 })
