@@ -55,7 +55,7 @@ export default class Frontend extends Vue {
         <tbody>
         <tr v-for="sert in htmlStore.state.htmlStore" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
-          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
+          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
           <td class="grade">{{ sert.grade }}</td>
           <td class="date">{{ sert.examdate }}</td>
@@ -70,7 +70,7 @@ export default class Frontend extends Vue {
       <div class="inner">
         <div v-for="sert in htmlStore.state.htmlStore" :key="sert.id" class="certificate">
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-            <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
+            <h3>{{ sert.id }}. {{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
             <div>{{ $t('cert.grade') }}: <strong>{{ sert.grade }}</strong></div>
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
@@ -102,7 +102,7 @@ export default class Frontend extends Vue {
         <tbody>
         <tr v-for="sert in javascriptStore.state.javascriptStore" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
-          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
+          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
           <td class="grade">{{ sert.grade }}</td>
           <td class="date">{{ sert.examdate }}</td>
@@ -117,7 +117,7 @@ export default class Frontend extends Vue {
       <div class="inner">
         <div v-for="sert in javascriptStore.state.javascriptStore" :key="sert.id" class="certificate">
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-            <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
+            <h3>{{ sert.id }}. {{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
             <div>{{ $t('cert.grade') }}: <strong>{{ sert.grade }}</strong></div>
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
@@ -149,7 +149,7 @@ export default class Frontend extends Vue {
         <tbody>
         <tr v-for="sert in angularStore.state.angularStore" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
-          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
+          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
           <td class="grade">{{ sert.grade }}</td>
           <td class="date">{{ sert.examdate }}</td>
@@ -164,7 +164,7 @@ export default class Frontend extends Vue {
       <div class="inner">
         <div v-for="sert in angularStore.state.angularStore" :key="sert.id" class="certificate">
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-            <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
+            <h3>{{ sert.id }}. {{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
             <div>{{ $t('cert.grade') }}: <strong>{{ sert.grade }}</strong></div>
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
@@ -196,7 +196,7 @@ export default class Frontend extends Vue {
         <tbody>
         <tr v-for="sert in reactStore.state.reactStore" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
-          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
+          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
           <td class="grade">{{ sert.grade }}</td>
           <td class="date">{{ sert.examdate }}</td>
@@ -211,7 +211,7 @@ export default class Frontend extends Vue {
       <div class="inner">
         <div v-for="sert in reactStore.state.reactStore" :key="sert.id" class="certificate">
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-            <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
+            <h3>{{ sert.id }}. {{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
             <div>{{ $t('cert.grade') }}: <strong>{{ sert.grade }}</strong></div>
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
@@ -243,7 +243,7 @@ export default class Frontend extends Vue {
         <tbody>
         <tr v-for="sert in frontStore.state.frontStore" :key="sert.id">
           <td class="nomer">{{ sert.id }}</td>
-          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
+          <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
           <td class="number">{{ sert.regnumber }}</td>
           <td class="grade">{{ sert.grade }}</td>
           <td class="date">{{ sert.examdate }}</td>
@@ -258,7 +258,7 @@ export default class Frontend extends Vue {
       <div class="inner">
         <div v-for="sert in frontStore.state.frontStore" :key="sert.id" class="certificate">
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-            <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
+            <h3>{{ sert.id }}. {{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
             <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
             <div>{{ $t('cert.grade') }}: <strong>{{ sert.grade }}</strong></div>
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>

@@ -26,27 +26,27 @@ export default class Experience extends Vue {
       <div class="work">
         <div v-for="exp in experienceStore.state.experienceStore" :key="exp.id">
           <h3>{{ exp.data_start }} -
-            {{ this.$i18n.locale === "ua" ? exp.data_finish_ua : this.$i18n.locale === "es" ? exp.data_finish_es : exp.data_finish_en }}</h3>
+            {{ this.$i18n.locale === "uk" ? exp.data_finish_ua : this.$i18n.locale === "es" ? exp.data_finish_es : exp.data_finish_en }}</h3>
           <h4><span style="color: black">{{
               $t('experience.company')
-            }}: </span>{{ this.$i18n.locale === "ua" ? exp.company_ua : this.$i18n.locale === "es" ? exp.company_es : exp.company_en }}
+            }}: </span>{{ this.$i18n.locale === "uk" ? exp.company_ua : this.$i18n.locale === "es" ? exp.company_es : exp.company_en }}
           </h4>
           <h4><span style="color: black">{{
               $t('experience.job')
-            }}: </span>{{ this.$i18n.locale === "ua" ? exp.job_ua : this.$i18n.locale === "es" ? exp.job_es : exp.job_en }}</h4>
+            }}: </span>{{ this.$i18n.locale === "uk" ? exp.job_ua : this.$i18n.locale === "es" ? exp.job_es : exp.job_en }}</h4>
           <p><span style="font-weight: bold; color: rebeccapurple">{{
               $t('experience.main-duties')
             }}: </span>{{
-              this.$i18n.locale === "ua" ? exp.main_duties_ua : this.$i18n.locale === "es" ? exp.main_duties_es : exp.main_duties_en
+              this.$i18n.locale === "uk" ? exp.main_duties_ua : this.$i18n.locale === "es" ? exp.main_duties_es : exp.main_duties_en
             }}</p>
           <p><span style="font-weight: bold; color: rebeccapurple">{{
               $t('experience.related-duties')
             }}: </span>{{
-              this.$i18n.locale === "ua" ? exp.related_duties_ua : this.$i18n.locale === "es" ? exp.related_duties_es : exp.related_duties_en
+              this.$i18n.locale === "uk" ? exp.related_duties_ua : this.$i18n.locale === "es" ? exp.related_duties_es : exp.related_duties_en
             }}</p>
           <p><span style="font-weight: bold; color: rebeccapurple">{{
               $t('experience.tasks')
-            }}: </span>{{ this.$i18n.locale === "ua" ? exp.tasks_ua : this.$i18n.locale === "es" ? exp.tasks_es : exp.tasks_en }}</p>
+            }}: </span>{{ this.$i18n.locale === "uk" ? exp.tasks_ua : this.$i18n.locale === "es" ? exp.tasks_es : exp.tasks_en }}</p>
           <p class="skills"><span style="color: black; font-style: normal; text-decoration: underline">{{
               $t('experience.skills')
             }}:</span> {{ exp.skills }}</p>

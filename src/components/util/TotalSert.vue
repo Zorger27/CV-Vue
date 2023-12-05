@@ -74,7 +74,7 @@ import knuteStore from "@/store/modules/education/knuteStore";
       this.showCertificate = !this.showCertificate;
     },
     getTitle(sert) {
-      if (this.$i18n.locale === "ua") {
+      if (this.$i18n.locale === "uk") {
         return sert.title_ua;
       } else if (this.$i18n.locale === "es") {
         return sert.title_es;
@@ -83,7 +83,7 @@ import knuteStore from "@/store/modules/education/knuteStore";
       }
     },
     getGrade(sert) {
-      if (this.$i18n.locale === "ua") {
+      if (this.$i18n.locale === "uk") {
         return sert.grade_ua;
       } else if (this.$i18n.locale === "es") {
         return sert.grade_es;
@@ -92,7 +92,7 @@ import knuteStore from "@/store/modules/education/knuteStore";
       }
     },
     getRegNumber(sert) {
-      if (this.$i18n.locale === "ua") {
+      if (this.$i18n.locale === "uk") {
         return sert.regnumber_ua;
       } else if (this.$i18n.locale === "es") {
         return sert.regnumber_es;

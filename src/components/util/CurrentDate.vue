@@ -22,7 +22,7 @@ import {Options, Vue} from "vue-class-component";
 
       if (locale === 'es') {
         return this.currentDate.toLocaleDateString('es-ES', dateOptions);
-      } else if (locale === 'ua') {
+      } else if (locale === 'uk') {
         return this.currentDate.toLocaleDateString('uk-UA', dateOptions);
       } else {
         return this.currentDate.toLocaleDateString('en-US', dateOptions);

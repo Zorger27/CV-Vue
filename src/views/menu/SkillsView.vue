@@ -28,7 +28,7 @@ import Slider from "@/components/util/Slider.vue";
       ];
     },
     getPdfUrl() {
-      if (this.$i18n.locale === 'ua') {
+      if (this.$i18n.locale === 'uk') {
         return '/assets/file/IQ_test_report_17-07-2023_ukr.pdf';
       } else if (this.$i18n.locale === 'es') {
         return '/assets/file/IQ_test_report_17-07-2023_esp.pdf';
@@ -37,7 +37,7 @@ import Slider from "@/components/util/Slider.vue";
       }
     },
     getImageUrl() {
-      if (this.$i18n.locale === 'ua') {
+      if (this.$i18n.locale === 'uk') {
         return require('@/assets/documents/My IQ score 17-07-2023 ukr.jpg');
       } else if (this.$i18n.locale === 'es') {
         return require('@/assets/documents/My IQ score 17-07-2023 esp.jpg');
@@ -126,11 +126,11 @@ export default class Skills extends Vue {}
             <tr v-for="(sert, index) in selectedOther" :key="sert.id">
               <td class="nomer">{{ index + 1 }}</td>
               <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{
-                  this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en
+                  this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en
                 }}</a></td>
               <td class="number">{{ sert.regnumber }}</td>
               <td class="grade">{{
-                  this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en
+                  this.$i18n.locale === "uk" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en
                 }}
               </td>
               <td class="date">{{ sert.examdate }}</td>
@@ -142,11 +142,11 @@ export default class Skills extends Vue {}
           <div v-for="(sert, index) in selectedOther" :key="sert.id" class="certificate">
             <a class="block" :href="sert.image" title="Certificate..." target="_blank">
               <h3>{{ index + 1 }}. {{
-                  this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en
+                  this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en
                 }}</h3>
               <div>{{ $t('cert.number') }}: <strong>{{ sert.regnumber }}</strong></div>
               <div>{{ $t('cert.grade') }}: <strong>{{
-                  this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en
+                  this.$i18n.locale === "uk" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en
                 }}</strong></div>
               <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
             </a>

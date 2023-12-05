@@ -61,9 +61,9 @@ export default class English extends Vue {
           <tbody>
           <tr v-for="sert in orderedSert" :key="sert.id">
             <td class="nomer">{{ sert.id }}</td>
-            <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
+            <td class="name"><a :href="sert.image" title="In more detail..." target="_blank">{{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</a></td>
             <td class="number">{{ sert.regnumber }}</td>
-            <td class="grade">{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</td>
+            <td class="grade">{{ this.$i18n.locale === "uk" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</td>
             <td class="date">{{ sert.examdate }}</td>
           </tr>
           </tbody>
@@ -72,9 +72,9 @@ export default class English extends Vue {
       <div v-else class="container">
         <div v-for="sert in orderedSert" :key="sert.id" class="certificate">
           <a class="block" :href="sert.image" title="Certificate..." target="_blank">
-            <h3>{{ sert.id }}. {{ this.$i18n.locale === "ua" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
+            <h3>{{ sert.id }}. {{ this.$i18n.locale === "uk" ? sert.title_ua : this.$i18n.locale === "es" ? sert.title_es : sert.title_en }}</h3>
             <div>{{ $t('cert.level') }}: <strong>{{ sert.regnumber }}</strong></div>
-            <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "ua" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
+            <div>{{ $t('cert.grade') }}: <strong>{{ this.$i18n.locale === "uk" ? sert.grade_ua : this.$i18n.locale === "es" ? sert.grade_es : sert.grade_en }}</strong></div>
             <div>{{ $t('cert.date') }}: {{ sert.examdate }}</div>
           </a>
         </div>

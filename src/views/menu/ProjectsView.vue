@@ -61,8 +61,8 @@ export default class Projects extends Vue {
         <tbody>
         <tr v-for="prj in orderedProjects" :key="prj.id">
           <td class="nomer"><span style="color: black">{{ prj.id }}</span></td>
-          <td class="name">{{ this.$i18n.locale === "ua" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</td>
-          <td class="number">{{ this.$i18n.locale === "ua" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</td>
+          <td class="name">{{ this.$i18n.locale === "uk" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</td>
+          <td class="number">{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</td>
           <td class="grade">{{ prj.techno }}</td>
           <td class="date">
             <div v-if="prj.demolink">
@@ -81,8 +81,8 @@ export default class Projects extends Vue {
     <div v-else class="container">
       <div v-for="prj in orderedProjects" :key="prj.id" class="prj">
         <div class="block">
-          <h3><span style="color: black">{{ prj.id }}. </span>{{ this.$i18n.locale === "ua" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</h3>
-          <div>{{ $t('projects.type') }}: <strong>{{ this.$i18n.locale === "ua" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</strong></div>
+          <h3><span style="color: black">{{ prj.id }}. </span>{{ this.$i18n.locale === "uk" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</h3>
+          <div>{{ $t('projects.type') }}: <strong>{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</strong></div>
           <div>{{ $t('projects.technologies') }}: <strong>{{ prj.techno }}</strong></div>
           <div class="link">
             <div v-if="prj.demolink" class="link2">
