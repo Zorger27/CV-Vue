@@ -5,7 +5,7 @@ import {Options, Vue} from "vue-class-component";
   data() {
     return {
       currentYear: new Date().getFullYear(),
-      getFooterLogoImage: require('@/assets/img/footer-logo.png')
+      getFooterLogoImage: require('@/assets/img/footer-logo.webp')
     };
   },
   methods: {
@@ -61,6 +61,7 @@ footer {
   img {
     max-width: 100%;
     width: 4rem;
+    height: 4rem;
     max-height:100%;
     cursor: pointer;
     padding-right: 0.2rem;

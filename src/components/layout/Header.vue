@@ -6,7 +6,7 @@ import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
 @Options({
   data () {
     return {
-      getHeaderLogoImage: require('@/assets/img/header-logo.png')
+      getHeaderLogoImage: require('@/assets/img/header-logo.webp')
     }
   },
   // computed: {
@@ -228,20 +228,9 @@ header {
       margin-top: 0.3rem;
       align-self: center;
       justify-self: left;
-      //svg {
-      //  image {
-      //    align-self: center;
-      //    justify-self: left;
-      //    margin: 0;
-      //    padding: 0;
-      //    max-width: 100%;
-      //    width: 7rem;
-      //    //max-height: 100%;
-      //    cursor: pointer;
-      //  }
-      //}
       img {
         width: 4rem;
+        height: 4rem;
         cursor: pointer;
       }
     }
