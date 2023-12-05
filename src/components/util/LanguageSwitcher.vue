@@ -8,6 +8,7 @@
 </template>
 
 <script lang="ts">
+import { watch } from "vue";
 import {useI18n} from "vue-i18n";
 
 export default {
@@ -23,11 +24,11 @@ export default {
     if (savedLocale && availableLocales.includes(savedLocale)) {
       locale.value = savedLocale
     }
-
-    // const htmlElement = document.querySelector("html");
-    // if (htmlElement) {
-    //   htmlElement.setAttribute("lang", locale.value);
-    // }
+    document.documentElement.lang = 'en'
+    // Следим за изменением значения locale и обновляем атрибут lang
+    watch(locale, (newLocale) => {
+      document.documentElement.lang = newLocale;
+    });
 
     return {t, locale, availableLocales, savelocale}
   }
