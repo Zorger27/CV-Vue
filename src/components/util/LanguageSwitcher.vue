@@ -15,7 +15,9 @@ export default {
   name: "LanguageSwitcher",
   setup() {
     const {t, locale, availableLocales} = useI18n()
-    document.documentElement.lang = 'en'
+    if (document.documentElement.lang == '') {
+      document.documentElement.lang = 'en'
+    }
     const savelocale = (sLocale: string) => {
       localStorage.setItem("user-locale", sLocale);
     }
