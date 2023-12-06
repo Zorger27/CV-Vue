@@ -80,7 +80,7 @@ module.exports = defineConfig({
         manifest: './src/assets/manifest/manifest.webmanifest',
         favicons: {
           appName: 'Portfolio',
-          appDescription: 'My Portfolio',
+          appDescription: 'Anatolii Zorin\'s Portfolio',
           developerName: 'Zorger',
           developerURL: null
         }
