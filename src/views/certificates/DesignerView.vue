@@ -22,7 +22,7 @@ import Slider from "@/components/util/Slider.vue";
   components: {Slider},
 })
 export default class Designer extends Vue {
-  images = require.context('@/assets/certificates/designer/', false, /\.jpg$/)
+  images = require.context('@/assets/certificates/designer/', false, /\.(jpg|jpeg|png|webp)$/)
   sliderImages = this.images.keys().map(key => this.images(key))
 }
 </script>

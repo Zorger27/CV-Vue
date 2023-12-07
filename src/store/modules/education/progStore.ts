@@ -13,7 +13,7 @@ const state = {
         grade_ua: "Успішно завершено",
         grade_es: "Completado con éxito",
         examdate: "06.07.2017",
-        image: "/assets/documents/designer.jpg",
+        image: "/assets/documents/designer.webp",
       },
       {
         id: 2,
@@ -27,7 +27,7 @@ const state = {
         grade_ua: "Успішно завершено",
         grade_es: "Completado con éxito",
         examdate: "23.10.2017",
-        image: "/assets/documents/frontend.jpg",
+        image: "/assets/documents/frontend.webp",
       }
     ]
 };

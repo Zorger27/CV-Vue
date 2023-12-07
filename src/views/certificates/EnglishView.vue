@@ -31,7 +31,7 @@ import Slider from "@/components/util/Slider.vue";
   },
   components: {Slider},})
 export default class English extends Vue {
-  images = require.context('@/assets/certificates/english/', false, /\.jpg$/)
+  images = require.context('@/assets/certificates/english/', false, /\.(jpg|jpeg|png|webp)$/)
   sliderImages = this.images.keys().map(key => this.images(key))
 }
 </script>

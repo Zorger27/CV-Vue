@@ -9,7 +9,7 @@ import Slider from "@/components/util/Slider.vue";
   methods: {changeView() {this.tableView = !this.tableView;}},
   components: {Slider},})
 export default class Database extends Vue {
-  images = require.context('@/assets/certificates/database/', false, /\.jpg$/)
+  images = require.context('@/assets/certificates/database/', false, /\.(jpg|jpeg|png|webp)$/)
   sliderImages = this.images.keys().map(key => this.images(key))
 }
 </script>

@@ -7,10 +7,10 @@ import Slider from "@/components/util/Slider.vue";
   data() {
     return {
       sliderImages: [
-        require('@/assets/certificates/other/07_D0000952361.jpg'),
-        require('@/assets/certificates/other/08_TP17348317.jpg'),
-        require('@/assets/certificates/other/01_TP03316433.jpg'),
-        require('@/assets/certificates/other/02_TP18727720.jpg'),
+        require('@/assets/certificates/other/07_D0000952361.webp'),
+        require('@/assets/certificates/other/08_TP17348317.webp'),
+        require('@/assets/certificates/other/01_TP03316433.webp'),
+        require('@/assets/certificates/other/02_TP18727720.webp'),
       ],
       tableView: false,
     }
@@ -38,11 +38,11 @@ import Slider from "@/components/util/Slider.vue";
     },
     getImageUrl() {
       if (this.$i18n.locale === 'uk') {
-        return require('@/assets/documents/My IQ score 17-07-2023 ukr.jpg');
+        return require('@/assets/documents/My IQ score 17-07-2023 ukr.webp');
       } else if (this.$i18n.locale === 'es') {
-        return require('@/assets/documents/My IQ score 17-07-2023 esp.jpg');
+        return require('@/assets/documents/My IQ score 17-07-2023 esp.webp');
       } else {
-        return require('@/assets/documents/My IQ score 17-07-2023 eng.jpg');
+        return require('@/assets/documents/My IQ score 17-07-2023 eng.webp');
       }
     }
   },

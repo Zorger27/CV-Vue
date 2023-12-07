@@ -9,7 +9,7 @@ import Slider from "@/components/util/Slider.vue";
   components: {Slider},
 })
 export default class Pm extends Vue {
-  images = require.context('@/assets/certificates/pm/', false, /\.jpg$/)
+  images = require.context('@/assets/certificates/pm/', false, /\.(jpg|jpeg|png|webp)$/)
   sliderImages = this.images.keys().map(key => this.images(key))
 }
 </script>

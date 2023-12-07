@@ -23,7 +23,7 @@ const state = {
         grade_ua: "Успішно завершено",
         grade_es: "Completado con éxito",
         examdate: "05.08.2016",
-        image: "/assets/documents/spanish.jpg",
+        image: "/assets/documents/spanish.webp",
       }
     ]
 };

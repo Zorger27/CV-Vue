@@ -11,7 +11,7 @@ const state = {
         grade_ua: "З відзнакою",
         grade_es: "Matrícula de honor",
         examdate: "29.01.1999",
-        image: "/assets/documents/knute1.jpg",
+        image: "/assets/documents/knute1.webp",
       },
       {
         id: 2,
@@ -23,7 +23,7 @@ const state = {
         grade_ua: "З відзнакою",
         grade_es: "Matrícula de honor",
         examdate: "29.01.1999",
-        image: "/assets/documents/knute2.jpg",
+        image: "/assets/documents/knute2.webp",
       }
     ]
 };
