@@ -247,6 +247,7 @@ export default class Education extends Vue {}
   .table {
     margin-left: 1rem;
     margin-right: 1rem;
+    background: white;
     th, .nomer, .number, .grade, .date {
       text-align: center;
       a {text-decoration: none; color: inherit;}
