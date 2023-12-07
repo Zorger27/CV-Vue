@@ -42,7 +42,7 @@ export default class Cryptocur extends Vue {
 <style lang="scss" scoped>
 .cryptocur {
   flex: 1 0 auto;
-  background-image: url("@/assets/background/background03.jpg");
+  background-image: url("@/assets/background/background03.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

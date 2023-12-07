@@ -145,7 +145,7 @@ export default class Certificates extends Vue {
 
       .block {
         box-shadow: 3px 3px 4px 0 palevioletred;
-        background-image: url("@/assets/background/background21.jpg");
+        background-image: url("@/assets/background/background21.webp");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

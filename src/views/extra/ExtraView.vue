@@ -73,7 +73,7 @@ export default class Extra extends Vue {
 <style lang="scss" scoped>
 .extra {
   flex: 1 0 auto;
-  background-image: url("@/assets/background/background13.jpg");
+  background-image: url("@/assets/background/background13.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -143,7 +143,7 @@ export default class Extra extends Vue {
         padding: 1.5rem;
         margin: 0.5rem;
         box-shadow: 3px 3px 4px 0 rebeccapurple;
-        background-image: url("@/assets/background/background08.jpg");
+        background-image: url("@/assets/background/background08.webp");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

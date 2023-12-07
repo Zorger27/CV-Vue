@@ -142,7 +142,7 @@ export default class Projects extends Vue {
     text-shadow: 2px 2px 4px darkblue;
     border: 1px solid darkslateblue;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-    background-image: url("@/assets/background/background16.jpg");
+    background-image: url("@/assets/background/background16.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -158,7 +158,7 @@ export default class Projects extends Vue {
 
   .table {
     //width: 50rem;
-    background-image: url("@/assets/background/background04.jpg");
+    background-image: url("@/assets/background/background04.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -188,7 +188,7 @@ export default class Projects extends Vue {
     .prj {
       max-width: 31rem;
       .block {
-        background-image: url("@/assets/background/background09.jpg");
+        background-image: url("@/assets/background/background09.webp");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

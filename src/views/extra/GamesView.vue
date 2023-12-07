@@ -24,7 +24,7 @@ export default class Games extends Vue {
 <style lang="scss" scoped>
 .game {
   flex: 1 0 auto;
-  background-image: url("@/assets/background/background05.jpg");
+  background-image: url("@/assets/background/background05.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

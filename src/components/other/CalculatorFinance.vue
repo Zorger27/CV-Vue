@@ -178,7 +178,7 @@ export default class CalculatorFinance extends Vue {
         }
       }
       .numbers {
-        background-image: url("@/assets/background/background19.jpg");
+        background-image: url("@/assets/background/background19.webp");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

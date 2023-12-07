@@ -238,7 +238,7 @@ export default class Education extends Vue {}
   flex: 1 0 auto;
   h1 {font-size: 2.2rem;}
   text-align: left;
-  background-image: url("@/assets/background/background17.jpg");
+  background-image: url("@/assets/background/background17.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -292,7 +292,7 @@ export default class Education extends Vue {}
       background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
     }
     a:hover {
-      background-image: url("@/assets/background/background06.jpg");
+      background-image: url("@/assets/background/background06.webp");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;

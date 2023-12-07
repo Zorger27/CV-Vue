@@ -64,7 +64,7 @@ export default class Tasks extends Vue {
 <style lang="scss" scoped>
 .tasks {
   flex: 1 0 auto;
-  background-image: url("@/assets/background/background07.jpg");
+  background-image: url("@/assets/background/background07.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -77,7 +77,7 @@ export default class About extends Vue {}
 .about {
   flex: 1 0 auto;
   text-align: center;
-  background-image: url("@/assets/background/background20.jpg");
+  background-image: url("@/assets/background/background20.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -92,7 +92,7 @@ export default class About extends Vue {}
 }
 .prj a:hover {
   //background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
-  background-image: url("@/assets/background/background13.jpg");
+  background-image: url("@/assets/background/background13.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

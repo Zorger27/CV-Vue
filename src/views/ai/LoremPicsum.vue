@@ -91,7 +91,7 @@ export default class LoremPicsum extends Vue {
 <style lang="scss" scoped>
 .picsum {
   flex: 1 0 auto;
-  background-image: url("@/assets/background/background15.jpg");
+  background-image: url("@/assets/background/background15.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -132,7 +132,7 @@ export default class LoremPicsum extends Vue {
       font-weight: bold;
       border: 1px solid lightslategrey;
       border-radius: 5px;
-      background-image: url("@/assets/background/background10.jpg");
+      background-image: url("@/assets/background/background10.webp");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;

@@ -172,7 +172,7 @@ export default class Skills extends Vue {}
       transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
     }
     .block:hover {
-      background-image: url("@/assets/background/background14.jpg");
+      background-image: url("@/assets/background/background14.webp");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;

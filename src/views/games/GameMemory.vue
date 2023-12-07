@@ -131,7 +131,7 @@ export default class GameMemory extends Vue {}
 <style lang="scss" scoped>
 .memory {
   flex: 1 0 auto;
-  background-image: url("@/assets/background/background12.jpg");
+  background-image: url("@/assets/background/background12.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -151,7 +151,7 @@ export default class GameMemory extends Vue {}
     margin-bottom: 0.8rem;
     font-size: 1.4rem;
     font-weight: bold;
-    background-image: url("@/assets/background/background10.jpg");
+    background-image: url("@/assets/background/background10.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

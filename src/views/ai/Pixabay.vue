@@ -150,7 +150,7 @@ export default class Pixabay extends Vue {
 <style lang="scss" scoped>
 .pixabay {
   flex: 1 0 auto;
-  background-image: url("@/assets/background/background14.jpg");
+  background-image: url("@/assets/background/background14.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -211,7 +211,7 @@ export default class Pixabay extends Vue {
       font-weight: bold;
       border: 1px solid lightslategrey;
       border-radius: 5px;
-      background-image: url("@/assets/background/background10.jpg");
+      background-image: url("@/assets/background/background10.webp");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;

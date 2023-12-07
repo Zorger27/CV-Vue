@@ -109,7 +109,7 @@ export default class MyWeather extends Vue {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     //box-shadow: 3px 3px 4px 0 lightgrey;
-    background-image: url("@/assets/background/background01.jpg");
+    background-image: url("@/assets/background/background01.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

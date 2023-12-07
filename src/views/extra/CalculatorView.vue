@@ -60,7 +60,7 @@ export default class CalculatorView extends Vue {
     font-size: 1.4rem;
     font-weight: bold;
     color: black;
-    background-image: url("@/assets/background/background10.jpg");
+    background-image: url("@/assets/background/background10.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

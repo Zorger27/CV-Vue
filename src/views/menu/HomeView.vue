@@ -128,7 +128,7 @@ export default class Home extends Vue {
 
 <style lang="scss" scoped>
 .container {
-  background-image: url("@/assets/background/background02.jpg");
+  background-image: url("@/assets/background/background02.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
