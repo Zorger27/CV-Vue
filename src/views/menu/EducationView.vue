@@ -238,10 +238,11 @@ export default class Education extends Vue {}
   flex: 1 0 auto;
   h1 {font-size: 2.2rem;}
   text-align: left;
-  background-image: url("@/assets/background/background17.webp");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, rgb(236, 252, 236), rgb(250, 247, 234)) no-repeat center;
+  //background-image: url("@/assets/background/background17.webp");
+  //background-position: center;
+  //background-size: cover;
+  //background-repeat: no-repeat;
 
   .table {
     margin-left: 1rem;
