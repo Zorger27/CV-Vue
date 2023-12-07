@@ -12,18 +12,18 @@ interface Card {
   data() {
     return {
       cards: [
-        {fruit: 'apple', image: '/assets/memory/Apple.png', flipped: false, matched: false},
-        {fruit: 'apple', image: '/assets/memory/Apple.png', flipped: false, matched: false},
-        {fruit: 'banana', image: '/assets/memory/Banana.png', flipped: false, matched: false},
-        {fruit: 'banana', image: '/assets/memory/Banana.png', flipped: false, matched: false},
-        {fruit: 'grape', image: '/assets/memory/Grape.png', flipped: false, matched: false},
-        {fruit: 'grape', image: '/assets/memory/Grape.png', flipped: false, matched: false},
-        {fruit: 'lychee', image: '/assets/memory/Lychee.png', flipped: false, matched: false},
-        {fruit: 'lychee', image: '/assets/memory/Lychee.png', flipped: false, matched: false},
-        {fruit: 'pineapple', image: '/assets/memory/Pineapple.png', flipped: false, matched: false},
-        {fruit: 'pineapple', image: '/assets/memory/Pineapple.png', flipped: false, matched: false},
-        {fruit: 'strawberry', image: '/assets/memory/Strawberry.png', flipped: false, matched: false},
-        {fruit: 'strawberry', image: '/assets/memory/Strawberry.png', flipped: false, matched: false},
+        {fruit: 'apple', image: '/assets/memory/Apple.webp', flipped: false, matched: false},
+        {fruit: 'apple', image: '/assets/memory/Apple.webp', flipped: false, matched: false},
+        {fruit: 'banana', image: '/assets/memory/Banana.webp', flipped: false, matched: false},
+        {fruit: 'banana', image: '/assets/memory/Banana.webp', flipped: false, matched: false},
+        {fruit: 'grape', image: '/assets/memory/Grape.webp', flipped: false, matched: false},
+        {fruit: 'grape', image: '/assets/memory/Grape.webp', flipped: false, matched: false},
+        {fruit: 'lychee', image: '/assets/memory/Lychee.webp', flipped: false, matched: false},
+        {fruit: 'lychee', image: '/assets/memory/Lychee.webp', flipped: false, matched: false},
+        {fruit: 'pineapple', image: '/assets/memory/Pineapple.webp', flipped: false, matched: false},
+        {fruit: 'pineapple', image: '/assets/memory/Pineapple.webp', flipped: false, matched: false},
+        {fruit: 'strawberry', image: '/assets/memory/Strawberry.webp', flipped: false, matched: false},
+        {fruit: 'strawberry', image: '/assets/memory/Strawberry.webp', flipped: false, matched: false},
       ],
       flippedCards: [] as Card[],
       shuffledCards: [] as Card[],
@@ -122,7 +122,7 @@ export default class GameMemory extends Vue {}
       <div class="memory-card" v-for="(card, index) in shuffledCards" :key="index" :data-fruit="card.fruit" @click="flipCard(index)"
            :class="{ 'flipped': card.flipped, 'matched': card.matched }">
         <img :src="card.image" :alt="card.fruit" class="front-face">
-        <img src="/assets/memory/Card.png" alt="Back face" class="back-face">
+        <img src="/assets/memory/Card.webp" alt="Back face" class="back-face">
       </div>
     </div>
   </div>
