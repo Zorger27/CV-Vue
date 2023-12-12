@@ -106,17 +106,19 @@ export default class Home extends Vue {
         <p>
           {{ $t('main.info.text01') }}<br>
           {{ $t('main.info.text02') }}<br>
+          {{ $t('main.info.text02add') }}<br>
         </p>
         <p>
           {{ $t('main.info.text03') }} <b>2016</b>{{ $t('main.info.text04') }}<br>
           {{ $t('main.info.text05') }} <b>2020</b>{{ $t('main.info.text06') }}<br>
           {{ $t('main.info.text05') }} <b>2021</b>{{ $t('main.info.text07') }}<br>
           {{ $t('main.info.text05') }} <b>2022</b>{{ $t('main.info.text08') }}<br>
+          {{ $t('main.info.text05') }} <b>2023</b>{{ $t('main.info.text09') }}<br>
         </p>
         <p>
-          {{ $t('main.info.text09') }}<br>
-          {{ $t('main.info.text10') }}<br>
-          {{ $t('main.info.text11') }}
+          {{ $t('main.info.text-end-1') }}<br>
+          {{ $t('main.info.text-end-2') }}<br>
+          {{ $t('main.info.text-end-3') }}
         </p>
       </div>
     </div>
