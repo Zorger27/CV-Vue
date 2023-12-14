@@ -152,7 +152,9 @@ export default class Home extends Vue {
     .photo {
       grid-area: photo;
       text-align: center;
-      img {width: auto;height: auto;}
+      width: auto;
+      height: auto;
+      //img {width: auto;height: auto;}
     }
 
     .icons {
@@ -235,7 +237,7 @@ export default class Home extends Vue {
         "info info"
         "slider slider";
 
-      .photo {grid-area: photo; img {width: auto;height: auto;}}
+      .photo {grid-area: photo;}
 
       .icons {
         grid-area: icons;
@@ -271,7 +273,7 @@ export default class Home extends Vue {
         "info"
         "slider";
 
-      .photo {grid-area: photo; img {width: auto;height: auto;}}
+      .photo {grid-area: photo;}
 
       .icons {
         grid-area: icons;
