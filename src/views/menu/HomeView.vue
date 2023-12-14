@@ -157,7 +157,6 @@ export default class Home extends Vue {
         width: 100%;
         height: auto;
       }
-      //img {width: auto;height: auto;}
     }
 
     .icons {
