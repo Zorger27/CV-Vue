@@ -62,8 +62,6 @@ export default class Skills extends Vue {}
     <line></line>
     <div class="container">
       <div>
-<!--        <h2>Tech skills</h2>-->
-        <!--      <img class="codersrank-skills-chart" src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=zorger27&labels=true&bg=transparent&legend=true&skills=JSON,JavaScript,Vue,CSS,SCSS,HTML,TypeScript&branding=false" alt="Codersrank skills chart"/>-->
         <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>
       </div>
       <div class="type-skills">
@@ -71,7 +69,7 @@ export default class Skills extends Vue {}
           <h3>{{$t('skills.hard')}}</h3>
           <ul>
             <li><span>&#9745;</span>Html5, CSS3, JavaScript</li>
-            <li><span>&#9745;</span>Vue.JS, Angular</li>
+            <li><span>&#9745;</span>Vue.js, Angular</li>
             <li><span>&#9745;</span>Git, Github</li>
             <li><span>&#9745;</span>Figma, Photoshop</li>
           </ul>
