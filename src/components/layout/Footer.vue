@@ -5,7 +5,7 @@ import {Options, Vue} from "vue-class-component";
   data() {
     return {
       currentYear: new Date().getFullYear(),
-      getFooterLogoImage: require('@/assets/img/footer-logo.webp')
+      getFooterLogoImage: require('@/assets/img/footer-logo.svg')
     };
   },
   methods: {
