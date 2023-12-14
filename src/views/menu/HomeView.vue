@@ -152,8 +152,10 @@ export default class Home extends Vue {
     .photo {
       grid-area: photo;
       text-align: center;
-      width: auto;
-      height: auto;
+      img {
+        height: auto;
+        width: 100%;
+      }
       //img {width: auto;height: auto;}
     }
 
