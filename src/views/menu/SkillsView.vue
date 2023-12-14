@@ -13,12 +13,42 @@ import Slider from "@/components/util/Slider.vue";
         require('@/assets/certificates/other/02_TP18727720.webp'),
       ],
       tableView: false,
+      isCodersrankSkillsChartVisible: true,
     }
   },
   computed: {
     otherStore() {
       return otherStore
     },
+    // TemplateAreas() {
+    //   // const isSmallScreen = window.innerWidth <= 768;
+    //   const isSmallScreen = '@media(max-width:768px)';
+    //   // const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1020;
+    //   const isMediumScreen = '@media(max-width:1020px)';
+    //
+    //   if (this.isCodersrankSkillsChartVisible) {
+    //     if (isSmallScreen || isMediumScreen) {
+    //       return '"codersrank-skills-chart" "type-skills" "iq-test" "special-certificates"';
+    //     } else {
+    //       return '"codersrank-skills-chart type-skills" "iq-test iq-test" "special-certificates special-certificates"';
+    //     }
+    //   } else {
+    //     if (isSmallScreen || isMediumScreen) {
+    //       return '"type-skills" "iq-test" "special-certificates"';
+    //     } else {
+    //       return '"type-skills type-skills" "iq-test iq-test" "special-certificates special-certificates"';
+    //     }
+    //   }
+    // },
+    // TemplateColumns() {
+    //   const isSmallScreen = window.innerWidth <= 768;
+    //   const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1020;
+    //     if (isSmallScreen || isMediumScreen) {
+    //       return '1fr';
+    //     } else {
+    //       return '2fr 1fr';
+    //     }
+    // },
     selectedOther() {
       return [
         otherStore.state.otherStore[6],
@@ -61,7 +91,8 @@ export default class Skills extends Vue {}
     <h1>{{$t('skills.title')}}</h1>
     <line></line>
     <div class="container">
-      <div>
+    <!--    <div class="container" :style="{ gridTemplateAreas: TemplateAreas, gridTemplateColumns: TemplateColumns }">-->
+      <div v-if="isCodersrankSkillsChartVisible">
         <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>
       </div>
       <div class="type-skills">
@@ -198,12 +229,16 @@ export default class Skills extends Vue {}
 
     codersrank-skills-chart {
       grid-area: codersrank-skills-chart;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      //margin-top: 0.5rem;
+      //margin-bottom: 0.5rem;
       width: 100%;
     }
     .type-skills {
       grid-area: type-skills;
+      //display: inline-flex;
+      //flex-wrap: wrap;
+      //justify-content: space-around;
       margin: 0 0.5rem 0 0;
       font-size: 2rem;
 
@@ -259,11 +294,6 @@ export default class Skills extends Vue {}
     }
   }
 }
-//img {
-//  grid-area: codersrank-skills-chart;
-//  margin-top: 0.5rem;
-//  width: 100%;
-//}
 
 @media(max-width:1020px) {
   .skills {
@@ -321,6 +351,7 @@ export default class Skills extends Vue {}
         "special-certificates";
 
       codersrank-skills-chart {
+        //padding: 0.5rem;
         --label-font-size: 9px;
         --label-font-weight: 300;
       }

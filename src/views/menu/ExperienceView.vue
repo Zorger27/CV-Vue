@@ -20,9 +20,6 @@ export default class Experience extends Vue {
     <line></line>
     <div class="container">
       <codersrank-summary username="zorger27" branding="false" layout="horizontal"></codersrank-summary>
-      <!--      <div class="codersrank-summary">-->
-      <!--        <img src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=zorger27&badges=3&show-avatar=true&branding=false&style=&#45;&#45;border-radius:5px" alt="CodersrankSummary"/>-->
-      <!--      </div>-->
       <div class="work">
         <div v-for="exp in experienceStore.state.experienceStore" :key="exp.id">
           <h3>{{ exp.data_start }} -
@@ -95,14 +92,6 @@ export default class Experience extends Vue {
       }
     }
 
-    //.codersrank-summary {
-    //  text-align: center;
-    //  img {
-    //    justify-self: center;
-    //    margin-top: 0.5rem;
-    //    max-width: 50%;
-    //  }
-
     codersrank-summary {
       margin: 0.5rem auto;
       max-width: 50%;
@@ -131,11 +120,6 @@ export default class Experience extends Vue {
         }
       }
 
-      //.codersrank-summary {
-      //  img {
-      //    max-width: 80%;
-      //  }
-      //}
       codersrank-summary {
         margin: 0.4rem auto;
         max-width: 80%;
@@ -163,11 +147,6 @@ export default class Experience extends Vue {
         }
       }
 
-      //.codersrank-summary {
-      //  img {
-      //    max-width: 100%;
-      //  }
-      //}
       codersrank-summary {
         margin: 0.5rem auto;
         max-width: 100%;
