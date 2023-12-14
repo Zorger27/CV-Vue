@@ -64,7 +64,7 @@ export default class Home extends Vue {
     <line></line>
     <div class="home">
       <div class="photo">
-        <img :src="getPhotoImage" alt="My Photo Image">
+        <img :src="getPhotoImage" class="photo-image" alt="My Photo Image">
         <!--      <img src="@/assets/img/photo.png" alt="My photo" title="My photo">-->
       </div>
       <div class="icons">
@@ -152,9 +152,10 @@ export default class Home extends Vue {
     .photo {
       grid-area: photo;
       text-align: center;
-      img {
-        height: auto;
+
+      .photo-image {
         width: 100%;
+        height: auto;
       }
       //img {width: auto;height: auto;}
     }
