@@ -26,7 +26,7 @@ import Slider from "@/components/util/Slider.vue";
     //   // const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1020;
     //   const isMediumScreen = '@media(max-width:1020px)';
     //
-    //   if (this.isCodersrankSkillsChartVisible) {
+    //   if (!this.isCodersrankSkillsChartVisible) {
     //     if (isSmallScreen || isMediumScreen) {
     //       return '"codersrank-skills-chart" "type-skills" "iq-test" "special-certificates"';
     //     } else {
@@ -41,13 +41,16 @@ import Slider from "@/components/util/Slider.vue";
     //   }
     // },
     // TemplateColumns() {
-    //   const isSmallScreen = window.innerWidth <= 768;
-    //   const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1020;
-    //     if (isSmallScreen || isMediumScreen) {
-    //       return '1fr';
-    //     } else {
-    //       return '2fr 1fr';
-    //     }
+    //   if (!this.isCodersrankSkillsChartVisible) {
+    //     return "'1fr'";
+    //   }
+      // const isSmallScreen = window.innerWidth <= 768;
+      // const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1020;
+      //   if (isSmallScreen || isMediumScreen) {
+      //     return '1fr';
+      //   } else {
+      //     return '2fr 1fr';
+      //   }
     // },
     selectedOther() {
       return [
@@ -91,7 +94,8 @@ export default class Skills extends Vue {}
     <h1>{{$t('skills.title')}}</h1>
     <line></line>
     <div class="container">
-    <!--    <div class="container" :style="{ gridTemplateAreas: TemplateAreas, gridTemplateColumns: TemplateColumns }">-->
+<!--    <div class="container" :style="{gridTemplateAreas: TemplateAreas }">-->
+      <!--    <div class="container" :style="{ gridTemplateAreas: TemplateAreas, gridTemplateColumns: TemplateColumns }">-->
       <div v-if="isCodersrankSkillsChartVisible">
         <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>
       </div>
@@ -194,6 +198,7 @@ export default class Skills extends Vue {}
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(255, 240, 244), rgb(229, 251, 255)) no-repeat center;
   text-align: left;
+
   .table {background: white;}
   .certificate {
     .block {
@@ -234,6 +239,7 @@ export default class Skills extends Vue {}
       //margin-bottom: 0.5rem;
       width: 100%;
     }
+
     .type-skills {
       grid-area: type-skills;
       //display: inline-flex;
