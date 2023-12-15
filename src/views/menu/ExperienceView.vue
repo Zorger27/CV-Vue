@@ -3,6 +3,11 @@ import {Options, Vue} from "vue-class-component";
 import experienceStore from "@/store/modules/project/experienceStore";
 
 @Options({
+  data() {
+    return {
+      isCodersrankSummaryVisible: true,
+    }
+  },
   computed: {
     experienceStore() {
       return experienceStore
@@ -19,7 +24,9 @@ export default class Experience extends Vue {
     <h1>{{ $t('experience.title') }}</h1>
     <line></line>
     <div class="container">
-      <codersrank-summary username="zorger27" branding="false" layout="horizontal"></codersrank-summary>
+      <div v-if="isCodersrankSummaryVisible">
+        <codersrank-summary username="zorger27" branding="false" layout="horizontal"></codersrank-summary>
+      </div>
       <div class="work">
         <div v-for="exp in experienceStore.state.experienceStore" :key="exp.id">
           <h3>{{ exp.data_start }} -

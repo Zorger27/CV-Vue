@@ -14,44 +14,41 @@ import Slider from "@/components/util/Slider.vue";
       ],
       tableView: false,
       isCodersrankSkillsChartVisible: true,
+      windowWidth: window.innerWidth,
     }
   },
   computed: {
     otherStore() {
       return otherStore
     },
-    // TemplateAreas() {
-    //   // const isSmallScreen = window.innerWidth <= 768;
-    //   const isSmallScreen = '@media(max-width:768px)';
-    //   // const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1020;
-    //   const isMediumScreen = '@media(max-width:1020px)';
-    //
-    //   if (!this.isCodersrankSkillsChartVisible) {
-    //     if (isSmallScreen || isMediumScreen) {
-    //       return '"codersrank-skills-chart" "type-skills" "iq-test" "special-certificates"';
-    //     } else {
-    //       return '"codersrank-skills-chart type-skills" "iq-test iq-test" "special-certificates special-certificates"';
-    //     }
-    //   } else {
-    //     if (isSmallScreen || isMediumScreen) {
-    //       return '"type-skills" "iq-test" "special-certificates"';
-    //     } else {
-    //       return '"type-skills type-skills" "iq-test iq-test" "special-certificates special-certificates"';
-    //     }
-    //   }
-    // },
-    // TemplateColumns() {
-    //   if (!this.isCodersrankSkillsChartVisible) {
-    //     return "'1fr'";
-    //   }
+    isSmallScreen() {
+      return this.windowWidth <= 768;
+    },
+    isMediumScreen() {
+      return this.windowWidth > 768 && this.windowWidth <= 1020;
+    },
+    gridColumns() {
       // const isSmallScreen = window.innerWidth <= 768;
       // const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1020;
-      //   if (isSmallScreen || isMediumScreen) {
-      //     return '1fr';
-      //   } else {
-      //     return '2fr 1fr';
-      //   }
-    // },
+      if (!this.isCodersrankSkillsChartVisible) {
+        return '1fr';
+      } else if (this.isSmallScreen || this.isMediumScreen) {
+        return '1fr';
+      } else {
+        return '2fr 1fr';
+      }
+    },
+    gridAreas() {
+      // const isSmallScreen = window.innerWidth <= 768;
+      // const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1020;
+      if (!this.isCodersrankSkillsChartVisible) {
+        return '"type-skills" "iq-test" "special-certificates"';
+      } else if (this.isSmallScreen || this.isMediumScreen) {
+        return '"codersrank-skills-chart" "type-skills" "iq-test" "special-certificates"';
+      } else {
+        return '"codersrank-skills-chart type-skills" "iq-test iq-test" "special-certificates special-certificates"';
+      }
+    },
     selectedOther() {
       return [
         otherStore.state.otherStore[6],
@@ -79,10 +76,26 @@ import Slider from "@/components/util/Slider.vue";
       }
     }
   },
+  mounted() {
+    window.addEventListener('resize', this.handleResize);
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  },
+  watch: {
+    isSmallScreen: 'updateLayout',
+    isMediumScreen: 'updateLayout',
+  },
   methods: {
     changeView() {
       this.tableView = !this.tableView;
-    }
+    },
+    handleResize() {
+      this.windowWidth = window.innerWidth;
+    },
+    updateLayout() {
+      this.$forceUpdate();
+    },
   },
   components: {Slider},
 })
@@ -93,9 +106,7 @@ export default class Skills extends Vue {}
   <div class="skills">
     <h1>{{$t('skills.title')}}</h1>
     <line></line>
-    <div class="container">
-<!--    <div class="container" :style="{gridTemplateAreas: TemplateAreas }">-->
-      <!--    <div class="container" :style="{ gridTemplateAreas: TemplateAreas, gridTemplateColumns: TemplateColumns }">-->
+    <div class="container" :style="{gridTemplateColumns: gridColumns, gridTemplateAreas: gridAreas}">
       <div v-if="isCodersrankSkillsChartVisible">
         <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>
       </div>
@@ -223,18 +234,18 @@ export default class Skills extends Vue {}
   }
   .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    //grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
     grid-auto-flow: column;
-    grid-template-areas:
-      "codersrank-skills-chart type-skills"
-      "iq-test iq-test"
-      "special-certificates special-certificates";
+    //grid-template-areas:
+    //  "codersrank-skills-chart type-skills"
+    //  "iq-test iq-test"
+    //  "special-certificates special-certificates";
 
     codersrank-skills-chart {
       grid-area: codersrank-skills-chart;
-      padding: 0.5rem;
+      padding: 0.3rem;
       //margin-top: 0.5rem;
       //margin-bottom: 0.5rem;
       width: 100%;
@@ -242,9 +253,9 @@ export default class Skills extends Vue {}
 
     .type-skills {
       grid-area: type-skills;
-      //display: inline-flex;
-      //flex-wrap: wrap;
-      //justify-content: space-around;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
       margin: 0 0.5rem 0 0;
       font-size: 2rem;
 
@@ -259,13 +270,19 @@ export default class Skills extends Vue {}
         margin-right: 0.5rem;
       }
 
-      .hard-skills ul {
-        list-style: none;
-        padding: 0 0 0.3rem 1.5rem;
+      .hard-skills {
+        ul {
+          list-style: none;
+          padding: 0 0 0.3rem 1.5rem;
+          margin: 1.4rem 0 0;
+        }
       }
-      .soft-skills ul {
-        list-style: none;
-        padding: 0 0 0.3rem 1.5rem;
+      .soft-skills {
+        ul {
+          list-style: none;
+          padding: 0 0 0.3rem 1.5rem;
+          margin: 1.4rem 0 0;
+        }
       }
     }
     .iq-test {
@@ -309,12 +326,13 @@ export default class Skills extends Vue {}
       font-size: 1.8rem;
     }
     .container {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "codersrank-skills-chart"
-        "type-skills"
-        "iq-test"
-        "special-certificates";
+      grid-gap: 0.4rem;
+      //grid-template-columns: 1fr;
+      //grid-template-areas:
+      //  "codersrank-skills-chart"
+      //  "type-skills"
+      //  "iq-test"
+      //  "special-certificates";
 
       .type-skills {
         display: inline-flex;
@@ -349,15 +367,16 @@ export default class Skills extends Vue {}
       font-size: 1.7rem;
     }
     .container {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "codersrank-skills-chart"
-        "type-skills"
-        "iq-test"
-        "special-certificates";
+      grid-gap: 0.3rem;
+      //grid-template-columns: 1fr;
+      //grid-template-areas:
+      //  "codersrank-skills-chart"
+      //  "type-skills"
+      //  "iq-test"
+      //  "special-certificates";
 
       codersrank-skills-chart {
-        //padding: 0.5rem;
+        padding: 0.2rem;
         --label-font-size: 9px;
         --label-font-weight: 300;
       }
