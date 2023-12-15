@@ -4,14 +4,13 @@ import experienceStore from "@/store/modules/project/experienceStore";
 
 @Options({
   data() {
-    return {
-      isCodersrankSummaryVisible: true,
-    }
+    return {isCodersrankSummaryVisible: true,}
   },
   computed: {
-    experienceStore() {
-      return experienceStore
-    }
+    experienceStore() {return experienceStore}
+  },
+  methods: {
+    changeSummary() {this.isCodersrankSummaryVisible = !this.isCodersrankSummaryVisible;},
   },
   components: {},
 })
@@ -21,7 +20,9 @@ export default class Experience extends Vue {
 
 <template>
   <div class="experience">
-    <h1>{{ $t('experience.title') }}</h1>
+    <h1>
+      {{ $t('experience.title') }} <i @click="changeSummary" class="dandruff"><span :class="['fa', isCodersrankSummaryVisible ? 'fa-check-circle' : 'fa-hat-wizard']"></span></i>
+    </h1>
     <line></line>
     <div class="container">
       <div v-if="isCodersrankSummaryVisible">
@@ -115,6 +116,7 @@ export default class Experience extends Vue {
 
 @media(max-width: 1200px) {
   .experience {
+    //h1 {font-size: 1.9rem;}
     .container {
       .work {
         margin: 0.5rem 1rem;
@@ -138,6 +140,7 @@ export default class Experience extends Vue {
 
 @media(max-width: 768px) {
   .experience {
+    //h1 {font-size: 1.8rem;}
     .container {
       .work {
         margin: 0 0.3rem;

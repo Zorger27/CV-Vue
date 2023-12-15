@@ -2,6 +2,7 @@
 import {Options, Vue} from "vue-class-component";
 import otherStore from "@/store/modules/certificates/otherStore";
 import Slider from "@/components/util/Slider.vue";
+import englishStore from "@/store/modules/certificates/englishStore";
 
 @Options({
   data() {
@@ -11,6 +12,7 @@ import Slider from "@/components/util/Slider.vue";
         require('@/assets/certificates/other/08_TP17348317.webp'),
         require('@/assets/certificates/other/01_TP03316433.webp'),
         require('@/assets/certificates/other/02_TP18727720.webp'),
+        require('@/assets/certificates/english/12_Business_English_TestProvider.webp'),
       ],
       tableView: false,
       isCodersrankSkillsChartVisible: true,
@@ -18,18 +20,11 @@ import Slider from "@/components/util/Slider.vue";
     }
   },
   computed: {
-    otherStore() {
-      return otherStore
-    },
-    isSmallScreen() {
-      return this.windowWidth <= 768;
-    },
-    isMediumScreen() {
-      return this.windowWidth > 768 && this.windowWidth <= 1020;
-    },
+    otherStore() {return otherStore},
+    englishStore() {return englishStore},
+    isSmallScreen() {return this.windowWidth <= 768;},
+    isMediumScreen() {return this.windowWidth > 768 && this.windowWidth <= 1020;},
     gridColumns() {
-      // const isSmallScreen = window.innerWidth <= 768;
-      // const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1020;
       if (!this.isCodersrankSkillsChartVisible) {
         return '1fr';
       } else if (this.isSmallScreen || this.isMediumScreen) {
@@ -39,8 +34,6 @@ import Slider from "@/components/util/Slider.vue";
       }
     },
     gridAreas() {
-      // const isSmallScreen = window.innerWidth <= 768;
-      // const isMediumScreen = window.innerWidth > 768 && window.innerWidth <= 1020;
       if (!this.isCodersrankSkillsChartVisible) {
         return '"type-skills" "iq-test" "special-certificates"';
       } else if (this.isSmallScreen || this.isMediumScreen) {
@@ -49,15 +42,14 @@ import Slider from "@/components/util/Slider.vue";
         return '"codersrank-skills-chart type-skills" "iq-test iq-test" "special-certificates special-certificates"';
       }
     },
-    shouldApplyAdditionalStyles() {
-      return !this.isCodersrankSkillsChartVisible && (!this.isSmallScreen || !this.isMediumScreen);
-    },
+    shouldApplyAdditionalStyles() {return !this.isCodersrankSkillsChartVisible && (!this.isSmallScreen || !this.isMediumScreen);},
     selectedOther() {
       return [
         otherStore.state.otherStore[6],
         otherStore.state.otherStore[7],
         otherStore.state.otherStore[0],
-        otherStore.state.otherStore[1]
+        otherStore.state.otherStore[1],
+        englishStore.state.englishStore[11]
       ];
     },
     getPdfUrl() {
@@ -79,26 +71,17 @@ import Slider from "@/components/util/Slider.vue";
       }
     }
   },
-  mounted() {
-    window.addEventListener('resize', this.handleResize);
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-  },
+  mounted() {window.addEventListener('resize', this.handleResize);},
+  beforeUnmount() {window.removeEventListener('resize', this.handleResize);},
   watch: {
     isSmallScreen: 'updateLayout',
     isMediumScreen: 'updateLayout',
   },
   methods: {
-    changeView() {
-      this.tableView = !this.tableView;
-    },
-    handleResize() {
-      this.windowWidth = window.innerWidth;
-    },
-    updateLayout() {
-      this.$forceUpdate();
-    },
+    changeView() {this.tableView = !this.tableView;},
+    changeChart() {this.isCodersrankSkillsChartVisible = !this.isCodersrankSkillsChartVisible;},
+    handleResize() {this.windowWidth = window.innerWidth;},
+    updateLayout() {this.$forceUpdate();},
   },
   components: {Slider},
 })
@@ -107,7 +90,9 @@ export default class Skills extends Vue {}
 
 <template>
   <div class="skills">
-    <h1>{{$t('skills.title')}}</h1>
+    <h1>
+      {{$t('skills.title')}} <i @click="changeChart" class="dandruff"><span :class="['fa', isCodersrankSkillsChartVisible ? 'fa-check-circle' : 'fa-hat-wizard']"></span></i>
+    </h1>
     <line></line>
     <div class="container" :style="{gridTemplateColumns: gridColumns, gridTemplateAreas: gridAreas}">
       <div v-if="isCodersrankSkillsChartVisible">
@@ -329,11 +314,7 @@ export default class Skills extends Vue {}
 
 @media(max-width:1020px) {
   .skills {
-    h2 {
-      margin-top: 0.4rem;
-      margin-bottom: 0.4rem;
-      font-size: 1.8rem;
-    }
+    //h1 {font-size: 1.9rem;}
     .container {
       grid-gap: 0.4rem;
       //grid-template-columns: 1fr;
@@ -370,11 +351,7 @@ export default class Skills extends Vue {}
 
 @media(max-width:768px) {
   .skills {
-    h2 {
-      margin-top: 0.3rem;
-      margin-bottom: 0.3rem;
-      font-size: 1.7rem;
-    }
+    h1 {font-size: 1.8rem;}
     .container {
       grid-gap: 0.3rem;
       //grid-template-columns: 1fr;

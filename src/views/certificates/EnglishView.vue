@@ -3,10 +3,7 @@ import {Options, Vue} from "vue-class-component";
 import englishStore from "@/store/modules/certificates/englishStore";
 import Slider from "@/components/util/Slider.vue";
 @Options({
-  computed: {
-    englishStore() {
-      return englishStore
-    },
+  computed: {englishStore() {return englishStore},
     orderedSert() {
       if (this.reverseOrder) {
         return this.englishStore.state.englishStore.slice().reverse();
