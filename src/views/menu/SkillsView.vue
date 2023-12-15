@@ -49,6 +49,9 @@ import Slider from "@/components/util/Slider.vue";
         return '"codersrank-skills-chart type-skills" "iq-test iq-test" "special-certificates special-certificates"';
       }
     },
+    shouldApplyAdditionalStyles() {
+      return !this.isCodersrankSkillsChartVisible && (!this.isSmallScreen || !this.isMediumScreen);
+    },
     selectedOther() {
       return [
         otherStore.state.otherStore[6],
@@ -110,7 +113,7 @@ export default class Skills extends Vue {}
       <div v-if="isCodersrankSkillsChartVisible">
         <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>
       </div>
-      <div class="type-skills">
+      <div :class="{'type-skills': true, 'additional-styles': shouldApplyAdditionalStyles}">
         <div class="hard-skills">
           <h3>{{$t('skills.hard')}}</h3>
           <ul>
@@ -253,9 +256,9 @@ export default class Skills extends Vue {}
 
     .type-skills {
       grid-area: type-skills;
-      display: inline-flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+      //display: inline-flex;
+      //flex-wrap: wrap;
+      //justify-content: space-around;
       margin: 0 0.5rem 0 0;
       font-size: 2rem;
 
@@ -285,6 +288,12 @@ export default class Skills extends Vue {}
         }
       }
     }
+    .additional-styles {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
     .iq-test {
       grid-area: iq-test;
       .iq {
