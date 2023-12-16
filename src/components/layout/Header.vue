@@ -131,9 +131,9 @@ export default class Header extends Vue {
       <router-link to="/projects" @click="hideMenu">{{ $t('header.projects') }}</router-link>
       <div class="dropdown" @click="showExtraContent = !showExtraContent">
       <!--      <div v-if="loginStore.state.isAuthenticated" class="dropdown" @click="showExtraContent = !showExtraContent">-->
-        <a class="dropbtn">{{ $t('header.extra') }}
+        <div class="dropbtn">{{ $t('header.extra') }}
           <span :class="['fa', showExtraContent ? 'fa-caret-up' : 'fa-caret-down']"></span>
-        </a>
+        </div>
         <router-link to="/extra" class="dropbtnMob">{{ $t('header.extra') }}</router-link>
         <div class="dropdown-content" v-show="showExtraContent">
           <router-link to="/extra/calculator" @click="hideMenu">{{ $t('extra.calculator.title') }}</router-link>
@@ -153,9 +153,9 @@ export default class Header extends Vue {
       <router-link to="/skills" @click="hideMenu">{{ $t('header.skills') }}</router-link>
       <div class="dropdown" @click="showDropdownContent = !showDropdownContent">
         <!--          <a class="dropbtn">Certificates<span class="fa fa-angle-down"></span></a>-->
-        <a class="dropbtn">{{ $t('header.certificates.cert') }}
+        <div class="dropbtn">{{ $t('header.certificates.cert') }}
           <span :class="['fa', showDropdownContent ? 'fa-caret-up' : 'fa-caret-down']"></span>
-        </a>
+        </div>
         <router-link to="/certificates" class="dropbtnMob">{{ $t('header.certificates.cert') }}</router-link>
         <div class="dropdown-content" v-show="showDropdownContent">
           <router-link to="/certificates/backend" @click="hideMenu">{{ $t('header.certificates.backend') }}</router-link>
@@ -394,7 +394,7 @@ header {
       }
     }
 
-    a {
+    .dropbtn, a {
       border: 2px solid transparent;
       margin-right: 10px;
       font-size: 1.5rem;
@@ -403,12 +403,13 @@ header {
       text-decoration: none;
       padding: 5px;
       color: darkblue;
+      cursor: pointer;
       @media(max-width: 1020px) {
         font-size: 1.1rem;
       }
     }
 
-    a::after {
+    .dropbtn::after, a::after {
       content: "";
       position: absolute;
       left: 0;
@@ -422,15 +423,15 @@ header {
       transition: transform 0.3s ease; /* Плавное появление при наведении */
     }
 
-    a:hover::after {
+    .dropbtn:hover::after, a:hover::after {
       transform: scaleX(1); /* Увеличим ширину при наведении */
     }
 
-    a:hover {
+    .dropbtn:hover, a:hover {
       color: darkcyan;
     }
 
-    a:focus {
+    .dropbtn:focus, a:focus {
       color: darkred;
     }
 
