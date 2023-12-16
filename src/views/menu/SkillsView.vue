@@ -2,17 +2,17 @@
 import {Options, Vue} from "vue-class-component";
 import otherStore from "@/store/modules/certificates/otherStore";
 import Slider from "@/components/util/Slider.vue";
-import englishStore from "@/store/modules/certificates/englishStore";
+import pmStore from "@/store/modules/certificates/pmStore";
 
 @Options({
   data() {
     return {
       sliderImages: [
         require('@/assets/certificates/other/07_D0000952361.webp'),
+        require('@/assets/certificates/pm/03_Critical_Thinking.webp'),
         require('@/assets/certificates/other/08_TP17348317.webp'),
         require('@/assets/certificates/other/01_TP03316433.webp'),
-        require('@/assets/certificates/other/02_TP18727720.webp'),
-        require('@/assets/certificates/english/12_Business_English_TestProvider.webp'),
+        require('@/assets/certificates/other/02_TP18727720.webp')
       ],
       tableView: false,
       isCodersrankSkillsChartVisible: true,
@@ -21,7 +21,7 @@ import englishStore from "@/store/modules/certificates/englishStore";
   },
   computed: {
     otherStore() {return otherStore},
-    englishStore() {return englishStore},
+    pmStore() {return pmStore},
     isSmallScreen() {return this.windowWidth <= 768;},
     isMediumScreen() {return this.windowWidth > 768 && this.windowWidth <= 1020;},
     gridColumns() {
@@ -46,10 +46,10 @@ import englishStore from "@/store/modules/certificates/englishStore";
     selectedOther() {
       return [
         otherStore.state.otherStore[6],
+        pmStore.state.pmStore[2],
         otherStore.state.otherStore[7],
         otherStore.state.otherStore[0],
-        otherStore.state.otherStore[1],
-        englishStore.state.englishStore[11]
+        otherStore.state.otherStore[1]
       ];
     },
     getPdfUrl() {
