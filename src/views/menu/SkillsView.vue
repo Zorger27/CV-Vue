@@ -71,15 +71,24 @@ import englishStore from "@/store/modules/certificates/englishStore";
       }
     }
   },
-  mounted() {window.addEventListener('resize', this.handleResize);},
-  beforeUnmount() {window.removeEventListener('resize', this.handleResize);},
+  mounted() {
+    const savedValue = localStorage.getItem('isCodersrankSkillsChartVisible');
+      if (savedValue) {this.isCodersrankSkillsChartVisible = savedValue === 'true';}
+    window.addEventListener('resize', this.handleResize);
+    },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    },
   watch: {
     isSmallScreen: 'updateLayout',
     isMediumScreen: 'updateLayout',
   },
   methods: {
     changeView() {this.tableView = !this.tableView;},
-    changeChart() {this.isCodersrankSkillsChartVisible = !this.isCodersrankSkillsChartVisible;},
+    changeChart() {
+      this.isCodersrankSkillsChartVisible = !this.isCodersrankSkillsChartVisible;
+      localStorage.setItem('isCodersrankSkillsChartVisible', this.isCodersrankSkillsChartVisible.toString());
+      },
     handleResize() {this.windowWidth = window.innerWidth;},
     updateLayout() {this.$forceUpdate();},
   },

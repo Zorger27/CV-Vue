@@ -3,14 +3,17 @@ import {Options, Vue} from "vue-class-component";
 import experienceStore from "@/store/modules/project/experienceStore";
 
 @Options({
-  data() {
-    return {isCodersrankSummaryVisible: true,}
-  },
-  computed: {
-    experienceStore() {return experienceStore}
+  data() {return {isCodersrankSummaryVisible: true,}},
+  computed: {experienceStore() {return experienceStore}},
+  mounted() {
+    const savedValue = localStorage.getItem('isCodersrankSummaryVisible');
+    if (savedValue) {this.isCodersrankSummaryVisible = savedValue === 'true';}
   },
   methods: {
-    changeSummary() {this.isCodersrankSummaryVisible = !this.isCodersrankSummaryVisible;},
+    changeSummary() {
+      this.isCodersrankSummaryVisible = !this.isCodersrankSummaryVisible;
+      localStorage.setItem('isCodersrankSummaryVisible', this.isCodersrankSummaryVisible.toString());
+      },
   },
   components: {},
 })
