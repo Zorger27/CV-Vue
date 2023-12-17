@@ -173,7 +173,6 @@
     "h1m": {
       "calculator": "Calculadora",
       "cryptocur": "Criptomonedas",
-      "cube": "El cubo giratorio \uD83D\uDE09\uD83D\uDE43",
       "exchange": "Los tipos de cambio",
       "game": "Juegos",
       "notes": "Notas",
@@ -201,7 +200,10 @@
       "name": "Nombre",
       "price": "Precio"
     },
-    "cube": "El cubo giratorio",
+    "graphics": {
+      "title": "Gráficos 3D",
+      "cube": "Cubo (solo CSS)"
+    },
     "exchange": {
       "title": "Los tipos de cambio",
       "bank": "API de PrivatBank",

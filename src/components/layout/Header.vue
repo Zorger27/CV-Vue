@@ -49,7 +49,7 @@ import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
       this.$router.push('/extra');
     },
     cube() {
-      this.$router.push('/extra/cube');
+      this.$router.push('/extra/graphics/cube');
     },
   },
   components: {languageSwitcher},
@@ -143,7 +143,7 @@ export default class Header extends Vue {
           <router-link to="/extra/rates" @click="hideMenu">{{ $t('extra.exchange.title') }}</router-link>
           <router-link to="/extra/cryptocur" @click="hideMenu">{{ $t('extra.cryptocur.title') }}</router-link>
           <router-link to="/extra/tasks" @click="hideMenu">{{ $t('extra.tasks.title') }}</router-link>
-          <router-link to="/extra/cube" @click="hideMenu">{{ $t('extra.cube') }}</router-link>
+          <router-link to="/extra/graphics" @click="hideMenu">{{ $t('extra.graphics.title') }}</router-link>
           <router-link to="/extra/games" @click="hideMenu">{{ $t('extra.game.title') }}</router-link>
           <router-link to="/extra/ai" @click="hideMenu">{{ $t('extra.ai.title') }}</router-link>
         </div>

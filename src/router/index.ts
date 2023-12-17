@@ -17,6 +17,7 @@ import PageNotFound from "@/views/service/PageNotFound.vue";
 import Extra from "@/views/extra/ExtraView.vue";
 import CalculatorView from "@/views/extra/CalculatorView.vue";
 import Cryptocur from "@/views/extra/CryptocurView.vue";
+import Graphics from "@/views/extra/GraphicsView.vue";
 import Cube from "@/views/extra/CubeView.vue";
 import CurrencyRates from "@/views/extra/CurrencyRatesView.vue";
 import Games from "@/views/extra/GamesView.vue";
@@ -549,11 +550,42 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/extra/cube',
+    path: '/extra/graphics',
+    name: 'graphics',
+    component: Graphics,
+    meta: {
+      title: 'Extra - 3D Graphics',
+      // requiresAuth: true
+      metaTags: [
+        {
+          property: 'og:title',
+          content: '3D Graphics'
+        },
+        {
+          property: 'og:description',
+          content: '3D Graphics'
+        },
+        {
+          property: 'og:image',
+          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Cube.jpg'
+        },
+        {
+          property: 'og:url',
+          content: 'https://Zorin.Expert'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+      ]
+    }
+  },
+  {
+    path: '/extra/graphics/cube',
     name: 'cube',
     component: Cube,
     meta: {
-      title: 'Extra - Spinning cube',
+      title: 'Extra - 3D Graphics - Spinning cube',
       // requiresAuth: true
       metaTags: [
         {

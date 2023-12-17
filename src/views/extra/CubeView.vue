@@ -9,9 +9,9 @@ export default class Cube extends Vue {
 <template>
   <div class="cube">
     <h1>
-      <router-link class="back-to-menu" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
+      <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.h1m.cube') }}
+      {{ $t('extra.graphics.cube') }}
     </h1>
     <line></line>
     <div class="body">
@@ -36,13 +36,11 @@ export default class Cube extends Vue {
   background-repeat: no-repeat;
 
   .back-to-menu {
-    display: none;
-    @media (max-width: 768px) {
       display: inline-flex;
       text-decoration: none;
       margin-right: 0.1rem;
-    }
   }
+
   .body {
     height: 10rem;
     width: 10rem;

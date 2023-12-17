@@ -57,8 +57,8 @@ export default class Extra extends Vue {
       <div class="prj tasks">
         <router-link class="block" to="/extra/tasks"><b>{{ $t('extra.tasks.title') }}</b></router-link>
       </div>
-      <div class="prj cube">
-        <router-link class="block" to="/extra/cube"><b>{{ $t('extra.cube') }}</b></router-link>
+      <div class="prj graphics">
+        <router-link class="block" to="/extra/graphics"><b>{{ $t('extra.graphics.title') }}</b></router-link>
       </div>
       <div class="prj game">
         <router-link class="block" to="/extra/games"><b>{{ $t('extra.game.title') }}</b></router-link>
@@ -86,7 +86,7 @@ export default class Extra extends Vue {
     grid-template-areas:
       "calculator todo notes"
       "weather exchange cryptocur"
-      "tasks cube game"
+      "tasks graphics game"
       "ai ai ai";
     grid-column-gap: 0.5rem;
     grid-row-gap: 0;
@@ -121,8 +121,8 @@ export default class Extra extends Vue {
       grid-area: tasks;
     }
 
-    .cube {
-      grid-area: cube;
+    .graphics {
+      grid-area: graphics;
     }
 
     .game {

@@ -173,7 +173,6 @@
     "h1m": {
       "calculator": "Calculator",
       "cryptocur": "Cryptocurrencies",
-      "cube": "Spinning cube \uD83D\uDE09\uD83D\uDE43",
       "exchange": "Exchange rates",
       "game": "Games",
       "notes": "Notes",
@@ -201,7 +200,10 @@
       "name": "Name",
       "price": "Price"
     },
-    "cube": "Spinning cube",
+    "graphics": {
+      "title": "3D Graphics",
+      "cube": "Cube (only CSS)"
+    },
     "exchange": {
       "title": "Exchange rates",
       "bank": "PrivatBank API",
