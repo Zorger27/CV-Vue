@@ -112,8 +112,8 @@ export default class Skills extends Vue {}
           <h3>{{$t('skills.hard')}}</h3>
           <ul>
             <li><span>&#9745;</span>Html5, CSS3, JavaScript</li>
-            <li><span>&#9745;</span>Vue.js, Angular</li>
-            <li><span>&#9745;</span>Git, Github</li>
+            <li><span>&#9745;</span>Vue.js, Angular, Three.js</li>
+            <li><span>&#9745;</span>Git, GitHub</li>
             <li><span>&#9745;</span>Figma, Photoshop</li>
           </ul>
         </div>
