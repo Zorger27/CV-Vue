@@ -183,13 +183,13 @@ const state = {
       },
       {
         id: 16,
-        title_en: "Vue.js & Three.js project № 1 with TypeScript",
-        title_ua: "Vue.js і Three.js проект № 1 з TypeScript",
-        title_es: "Proyecto Vue.js y Three.js № 1 con TypeScript",
+        title_en: "Vue.js & Three.js project № 1",
+        title_ua: "Vue.js і Three.js проект № 1",
+        title_es: "Proyecto Vue.js y Three.js № 1",
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-1",
         demolink: "https://vue-threejs-1.vercel.app"
       },
