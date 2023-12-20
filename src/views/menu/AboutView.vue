@@ -108,10 +108,8 @@ export default class About extends Vue {}
   margin-bottom: 1rem;
 
 }
-.title {
-  color: darkgoldenrod;
-  font-size: 2.5rem;
-}
+.title {color: darkgoldenrod;font-size: 2.5rem;}
+
 .more {
   display: inline-flex;
   color: lightseagreen;
@@ -120,7 +118,8 @@ export default class About extends Vue {}
   margin: 0.5rem;
 }
 
-.more:hover, :focus {
+.more:hover,
+.more:focus {
   border-bottom: 1px solid lightseagreen;
 }
 

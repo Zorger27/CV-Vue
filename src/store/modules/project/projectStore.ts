@@ -183,9 +183,9 @@ const state = {
       },
       {
         id: 16,
-        title_en: "Vue.js & Three.js project № 1",
-        title_ua: "Vue.js & Three.js проект № 1",
-        title_es: "Proyecto Vue.js y Three.js № 1",
+        title_en: "Rotating 3D cube",
+        title_ua: "3D куб, що обертається",
+        title_es: "Cubo 3D giratorio",
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
