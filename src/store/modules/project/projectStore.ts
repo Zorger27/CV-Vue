@@ -184,7 +184,7 @@ const state = {
       {
         id: 16,
         title_en: "Vue.js & Three.js project № 1",
-        title_ua: "Vue.js і Three.js проект № 1",
+        title_ua: "Vue.js & Three.js проект № 1",
         title_es: "Proyecto Vue.js y Three.js № 1",
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
