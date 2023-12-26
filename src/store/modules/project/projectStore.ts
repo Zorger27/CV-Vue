@@ -172,7 +172,7 @@ const state = {
       {
         id: 15,
         title_en: "Vue.js template with TypeScript",
-        title_ua: "Шаблон Vue.js із TypeScript",
+        title_ua: "Шаблон Vue.js + TypeScript",
         title_es: "Plantilla Vue.js con TypeScript",
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
