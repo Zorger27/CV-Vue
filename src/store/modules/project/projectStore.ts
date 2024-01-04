@@ -217,6 +217,18 @@ const state = {
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-Template",
         demolink: "https://vue-threejs-template.vercel.app"
       },
+      {
+        id: 19,
+        title_en: "Rotating 3D cube №2",
+        title_ua: "3D куб, що обертається №2",
+        title_es: "Cubo 3D giratorio №2",
+        type_en: "Single page application",
+        type_ua: "Односторінковий додаток",
+        type_es: "Aplicación de una sola página",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, JavaScript",
+        sourcelink: "https://github.com/Zorger27/Vue-Threejs-2",
+        demolink: "https://vue-threejs-2.vercel.app"
+      },
     ]
 };
 const getters = {};
