@@ -205,6 +205,18 @@ const state = {
         sourcelink: "https://github.com/Zorger27/Vue-JS-Template",
         demolink: "https://vue-template-js.vercel.app"
       },
+      {
+        id: 18,
+        title_en: "Vue.js & Three.js template",
+        title_ua: "Шаблон Vue.js + Three.js",
+        title_es: "Plantilla Vue.js y Three.js",
+        type_en: "Single page application",
+        type_ua: "Односторінковий додаток",
+        type_es: "Aplicación de una sola página",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, JavaScript",
+        sourcelink: "https://github.com/Zorger27/Vue-Threejs-Template",
+        demolink: "https://vue-threejs-template.vercel.app"
+      },
     ]
 };
 const getters = {};
