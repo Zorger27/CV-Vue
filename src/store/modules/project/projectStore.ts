@@ -177,7 +177,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-TS-Template",
         demolink: "https://vue-template-ts.vercel.app"
       },
@@ -201,7 +201,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, JavaScript",
+        techno: "Vue.js, VueX, HTML5, CSS3, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-JS-Template",
         demolink: "https://vue-template-js.vercel.app"
       },
@@ -213,7 +213,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-Template",
         demolink: "https://vue-threejs-template.vercel.app"
       },
@@ -225,7 +225,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-2",
         demolink: "https://vue-threejs-2.vercel.app"
       },
