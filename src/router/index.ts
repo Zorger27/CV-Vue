@@ -1108,8 +1108,9 @@ const routes: Array<RouteRecordRaw> = [
   }
 ]
 
+const {BASE_URL} = process.env;
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(BASE_URL),
   routes
 });
 
@@ -1152,8 +1153,8 @@ router.beforeEach((to, from, next) => {
   }
 
   // Обрабатываем и добавляем метатеги в тег <head> документа на основе данных из массива metaTags.
-  if ('meta' in nearestWithMeta && Array.isArray(nearestWithMeta.meta.metaTags)) {
-    nearestWithMeta.meta.metaTags.map((tagDef: { [key: string]: string }) => {
+  if ('meta' in nearestWithMeta && Array.isArray(nearestWithMeta.meta["metaTags"])) {
+    nearestWithMeta.meta["metaTags"].map((tagDef: { [key: string]: string }) => {
 
       const tag = document.createElement('meta');
 
