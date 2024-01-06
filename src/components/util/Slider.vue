@@ -32,6 +32,15 @@ import {Options, Vue} from "vue-class-component";
         this.nextSlide();
       }, this.interval);
     },
+    previousSlide() {
+      if (this.currentSlide === 0) {
+        this.currentSlide = this.images.length - 1;
+        this.transformValue = -100 * this.currentSlide;
+      } else {
+        this.currentSlide--;
+        this.transformValue += 100;
+      }
+    },
     nextSlide() {
       if (this.currentSlide === this.images.length - 1) {
         this.currentSlide = 0;
@@ -48,6 +57,10 @@ import {Options, Vue} from "vue-class-component";
         this.startAutoPlay();
       }, this.transitionDuration);
     },
+    openInNewWindow(index: number) {
+      const imageUrl = this.images[index];
+      window.open(imageUrl, '_blank');
+    },
     goToSlide(index: number) {
       this.currentSlide = index;
       this.transformValue = -index * 100;
@@ -63,9 +76,17 @@ export default class Slider extends Vue {
 <template>
   <div class="slider-container">
     <div class="slider-wrapper" :style="{ transform: 'translateX(' + transformValue + '%)' }">
-      <div class="slider-item" v-for="(image, index) in images" :key="index">
+      <div class="slider-item" v-for="(image, index) in images" :key="index" @dblclick="openInNewWindow(index)">
         <img :src="image" alt="slider image">
       </div>
+    </div>
+    <div class="slider-controls">
+<!--      <button class="left-control" @click="previousSlide"><i class="fa fa-hand-point-left"></i></button>-->
+<!--      <button class="right-control" @click="nextSlide"><i class="fa fa-hand-point-right"></i></button>-->
+<!--      <button class="left-control" @click="previousSlide"><i class="fa fa-chevron-circle-left"></i></button>-->
+<!--      <button class="right-control" @click="nextSlide"><i class="fa fa-chevron-circle-right"></i></button>-->
+      <button class="left-control" @click="previousSlide"><i class="fa fa-arrow-alt-circle-left"></i></button>
+      <button class="right-control" @click="nextSlide"><i class="fa fa-arrow-alt-circle-right"></i></button>
     </div>
     <div class="slider-dots">
       <span class="slider-dot"
@@ -98,6 +119,46 @@ export default class Slider extends Vue {
       }
     }
   }
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    .left-control, .right-control {
+      pointer-events: all;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border: none;
+      background: transparent;
+      font-size: 2.5rem;
+      cursor: pointer;
+      .fa.fa-arrow-alt-circle-left, .fa.fa-arrow-alt-circle-right {
+        color: mediumvioletred;
+        background: floralwhite;
+        border: 1px mediumvioletred solid;
+        border-radius: 50%;
+      }
+      .fa.fa-arrow-alt-circle-left:hover, .fa.fa-arrow-alt-circle-right:hover,
+      .fa.fa-arrow-alt-circle-left:active, .fa.fa-arrow-alt-circle-right:active {
+        color: floralwhite;
+        background: mediumvioletred;
+        border-radius: 50%;
+      }
+
+      @media(max-width: 1020px) {font-size: 2.0rem;}
+      @media(max-width: 768px) {font-size: 1.5rem;}
+    }
+
+    .left-control {left: 0.3rem;}
+    .right-control {right: 0.3rem;}
+  }
+
   .slider-dots {
     display: flex;
     justify-content: center;
