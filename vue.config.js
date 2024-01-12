@@ -52,14 +52,14 @@ module.exports = defineConfig({
         metas: [
           {attributes: {name: 'google-site-verification', content: 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'}},
           {attributes: {name: 'description', content: 'Portfolio is a significantly expanded CV with all diplomas and certificates, a detailed description of the experience gained in previous jobs, etc.'}},
-          // {attributes: {property: 'og:title', content: 'Portfolio'}},
-          // {attributes: {property: 'twitter:title', content: 'Portfolio'}},
-          // {attributes: {property: 'og:description', content: 'Anatolii Zorin\'s Portfolio'}},
-          // {attributes: {property: 'twitter:description', content: 'Anatolii Zorin\'s Portfolio'}},
-          // {attributes: {property: 'og:image', content: 'https://zorin.expert/assets/ogimage/menu/Image_All.jpg'}},
-          // {attributes: {property: 'twitter:image', content: 'https://zorin.expert/assets/ogimage/menu/Image_All.jpg'}},
-          // {attributes: {property: 'og:url', content: 'https://Zorin.Expert'}},
-          // {attributes: {property: 'og:type', content: 'website'}},
+          {attributes: {property: 'og:title', content: 'Portfolio'}},
+          {attributes: {property: 'twitter:title', content: 'Portfolio'}},
+          {attributes: {property: 'og:description', content: 'Anatolii Zorin\'s Portfolio'}},
+          {attributes: {property: 'twitter:description', content: 'Anatolii Zorin\'s Portfolio'}},
+          {attributes: {property: 'og:image', content: 'https://zorin.expert/assets/ogimage/menu/Image_All.jpg'}},
+          {attributes: {property: 'twitter:image', content: 'https://zorin.expert/assets/ogimage/menu/Image_All.jpg'}},
+          {attributes: {property: 'og:url', content: 'https://Zorin.Expert'}},
+          {attributes: {property: 'og:type', content: 'website'}},
           {attributes: {property: 'twitter:card', content: 'summary_large_image'}}
         ]
       }),
