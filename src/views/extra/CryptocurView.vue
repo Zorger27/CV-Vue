@@ -2,12 +2,25 @@
 import {Options, Vue} from "vue-class-component";
 import CurrentDate from "@/components/util/CurrentDate.vue";
 import Cryptocurrencies from "@/components/other/Cryptocurrencies.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   data() {
     return {
       tableView: true
     }
+  },
+  mounted() {
+    const mainTitle = 'Cryptocurrencies';
+    const title = 'Portfolio - Cryptocurrencies';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Cryptocurrencies';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/OG_Image_Cryptocurrencies.jpg';
+    const url = 'https://zorin.expert/extra/cryptocur';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
   },
   methods: {
     changeView() {

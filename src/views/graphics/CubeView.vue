@@ -1,7 +1,22 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
-@Options({components: {},})
+@Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Cube (only CSS)';
+    const title = 'Portfolio - 3D Graphics - Cube (only CSS)';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - 3D Graphics - Cube (only CSS)';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/graphics/OG_Image_Cube.jpg';
+    const url = 'https://zorin.expert/extra/graphics/cube';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
+  components: {},
+})
 export default class Cube extends Vue {
 }
 </script>

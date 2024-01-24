@@ -1,8 +1,12 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import Notes from "@/components/other/Notes.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
-@Options({components: {Notes},})
+@Options({
+  mixins: [openGraphMixin],
+  components: {Notes},
+})
 export default class NotesView extends Vue {
 }
 </script>

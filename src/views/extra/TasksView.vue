@@ -1,8 +1,10 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import tasksStore from "@/store/modules/project/tasksStore";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   computed: {
     tasksStore() {
       return tasksStore

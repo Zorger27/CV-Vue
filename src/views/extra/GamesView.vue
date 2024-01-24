@@ -1,6 +1,21 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-@Options({components: {},})
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
+@Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Games';
+    const title = 'Portfolio - Games';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Games';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/OG_Image_Games.jpg';
+    const url = 'https://zorin.expert/extra/games';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
+  components: {},
+})
 export default class Games extends Vue {
 }
 </script>

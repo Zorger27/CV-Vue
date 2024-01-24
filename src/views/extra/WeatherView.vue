@@ -2,8 +2,21 @@
 import {Options, Vue} from "vue-class-component";
 import OpenWeather from "@/components/other/OpenWeather.vue";
 import MyWeather from "@/components/other/MyWeather.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Weather';
+    const title = 'Portfolio - Weather';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Weather by OpenWeather';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/OG_Image_Weather.jpg';
+    const url = 'https://zorin.expert/extra/weather';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   components: {MyWeather, OpenWeather},
 })
 export default class WeatherView extends Vue {

@@ -1,5 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 interface Card {
   fruit: string;
@@ -9,6 +10,7 @@ interface Card {
 }
 
 @Options({
+  mixins: [openGraphMixin],
   data() {
     return {
       cards: [
@@ -32,6 +34,16 @@ interface Card {
     }
   },
   mounted() {
+    const mainTitle = 'Memory game';
+    const title = 'Portfolio - Memory game';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Memory game';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/games/OG_Image_Memory.jpg';
+    const url = 'https://zorin.expert/extra/games/memory';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+
     this.shuffledCards = this.shuffleCards();
   },
   methods: {

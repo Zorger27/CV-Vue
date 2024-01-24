@@ -2,12 +2,25 @@
 import {Options, Vue} from "vue-class-component";
 import CalculatorStandart from "@/components/other/CalculatorStandart.vue";
 import CalculatorFinance from "@/components/other/CalculatorFinance.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   data() {
     return {
       calcView: true
     }
+  },
+  mounted() {
+    const mainTitle = 'Calculator';
+    const title = 'Portfolio - Calculator';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Standart & Accounting Calculator';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/OG_Image_Calculator.jpg';
+    const url = 'https://zorin.expert/extra/calculator';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
   },
   methods: {
     changeView() {

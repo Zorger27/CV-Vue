@@ -1,6 +1,21 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-@Options({components: {},})
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
+@Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Artificial intelligence';
+    const title = 'Portfolio - Artificial intelligence';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Artificial intelligence';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/OG_Image_AI.jpg';
+    const url = 'https://zorin.expert/extra/ai';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
+  components: {},
+})
 export default class AiView extends Vue {
 }
 </script>

@@ -1,8 +1,10 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import TodoList from "@/components/other/TodoList.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   components: {TodoList},
 })
 export default class Todo extends Vue {

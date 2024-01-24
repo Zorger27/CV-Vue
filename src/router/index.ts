@@ -18,7 +18,7 @@ import Extra from "@/views/extra/ExtraView.vue";
 import CalculatorView from "@/views/extra/CalculatorView.vue";
 import Cryptocur from "@/views/extra/CryptocurView.vue";
 import Graphics from "@/views/extra/GraphicsView.vue";
-import Cube from "@/views/extra/CubeView.vue";
+import Cube from "@/views/graphics/CubeView.vue";
 import CurrencyRates from "@/views/extra/CurrencyRatesView.vue";
 import Games from "@/views/extra/GamesView.vue";
 import NotesView from "@/views/extra/NotesView.vue";
@@ -110,218 +110,36 @@ const routes: Array<RouteRecordRaw> = [
     path: '/extra',
     name: 'extra',
     component: Extra,
-    meta: {
-      title: 'Portfolio - Extra pages',
-      // requiresAuth: true,
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Extra (hidden) section'
-        },
-        {
-          property: 'og:description',
-          content: 'Extra (hidden) section'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Extra.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/extra/calculator',
     name: 'calculator',
     component: CalculatorView,
-    meta: {
-      title: 'Extra - Calculator',
-      // requiresAuth: true
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Calculator'
-        },
-        {
-          property: 'og:description',
-          content: 'Standart & Accounting Calculator'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Calculator.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/extra/cryptocur',
     name: 'cryptocur',
     component: Cryptocur,
-    meta: {
-      title: 'Extra - Cryptocurrencies',
-      // requiresAuth: true
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Cryptocurrencies'
-        },
-        {
-          property: 'og:description',
-          content: 'Cryptocurrencies'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Cryptocurrencies.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/extra/graphics',
     name: 'graphics',
     component: Graphics,
-    meta: {
-      title: 'Extra - 3D Graphics',
-      // requiresAuth: true
-      metaTags: [
-        {
-          property: 'og:title',
-          content: '3D Graphics'
-        },
-        {
-          property: 'og:description',
-          content: '3D Graphics'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Cube.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/extra/graphics/cube',
     name: 'cube',
     component: Cube,
-    meta: {
-      title: 'Extra - 3D Graphics - Spinning cube',
-      // requiresAuth: true
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Spinning cube'
-        },
-        {
-          property: 'og:description',
-          content: 'Spinning cube'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Cube.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/extra/rates',
     name: 'rates',
     component: CurrencyRates,
-    meta: {
-      title: 'Extra - Currency Rates',
-      // requiresAuth: true
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Exchange rates'
-        },
-        {
-          property: 'og:description',
-          content: 'Exchange rates by National Bank of Ukraine'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Rates.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/extra/games',
     name: 'games',
     component: Games,
-    meta: {
-      title: 'Extra - Games',
-      // requiresAuth: true
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Games'
-        },
-        {
-          property: 'og:description',
-          content: 'Games'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Games.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/extra/games/memory',
@@ -451,32 +269,6 @@ const routes: Array<RouteRecordRaw> = [
     path: '/extra/weather',
     name: 'weather',
     component: WeatherView,
-    meta: {
-      title: 'Extra - Weather',
-      // requiresAuth: true
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Weather'
-        },
-        {
-          property: 'og:description',
-          content: 'Weather by OpenWeather'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_Weather.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/extra/tasks/palindrome',
@@ -637,32 +429,6 @@ const routes: Array<RouteRecordRaw> = [
     path: '/extra/ai',
     name: 'ai',
     component: AiView,
-    meta: {
-      title: 'Extra - Artificial intelligence',
-      // requiresAuth: true
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Artificial intelligence'
-        },
-        {
-          property: 'og:description',
-          content: 'Artificial intelligence'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/extra/OG_Image_AI.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/extra/ai/picsum',

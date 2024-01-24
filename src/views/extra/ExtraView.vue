@@ -1,9 +1,22 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 // import loginStore from "../../store/modules/service/loginStore";
 // import {mapGetters} from "vuex";
 
 @Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Extra pages';
+    const title = 'Portfolio - Extra section';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Extra sections';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/menu/OG_Image_Extra.jpg';
+    const url = 'https://zorin.expert/extra';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   // computed: {
   //   loginStore() {
   //     return loginStore
