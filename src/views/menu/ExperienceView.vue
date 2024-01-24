@@ -1,11 +1,23 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import experienceStore from "@/store/modules/project/experienceStore";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   data() {return {isCodersrankSummaryVisible: true,}},
   computed: {experienceStore() {return experienceStore}},
   mounted() {
+    const mainTitle = 'My Experience';
+    const title = 'Portfolio - My Experience';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - My Experience';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/menu/OG_Image_Experience.jpg';
+    const url = 'https://zorin.expert/experience';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+
     const savedValue = localStorage.getItem('isCodersrankSummaryVisible');
     if (savedValue) {this.isCodersrankSummaryVisible = savedValue === 'true';}
   },

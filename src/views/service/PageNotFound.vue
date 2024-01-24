@@ -1,6 +1,23 @@
 <script lang="ts">
-import {Vue} from "vue-class-component";
+import {Options, Vue} from "vue-class-component";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
+@Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Page NOT Found';
+    const title = 'Portfolio - Page NOT Found';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/menu/OG_Image_404.jpg';
+    const url = 'https://Zorin.Expert';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
+  methods: {},
+  components: {},
+})
 export default class PageNotFound extends Vue {}
 </script>
 

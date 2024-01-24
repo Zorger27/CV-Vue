@@ -1,8 +1,10 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import projectStore from "@/store/modules/project/projectStore";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   computed: {
     projectStore() {
       return projectStore
@@ -22,6 +24,17 @@ import projectStore from "@/store/modules/project/projectStore";
       tableView: false,
       reverseOrder: true,
     }
+  },
+  mounted() {
+    const mainTitle = 'My Projects';
+    const title = 'Portfolio - My Projects';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Here are my projects';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/menu/OG_Image_Projects.jpg';
+    const url = 'https://zorin.expert/projects';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
   },
   methods: {
     changeView() {

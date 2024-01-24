@@ -3,8 +3,10 @@ import {Options, Vue} from "vue-class-component";
 import otherStore from "@/store/modules/certificates/otherStore";
 import Slider from "@/components/util/Slider.vue";
 import pmStore from "@/store/modules/certificates/pmStore";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   data() {
     return {
       sliderImages: [
@@ -72,6 +74,16 @@ import pmStore from "@/store/modules/certificates/pmStore";
     }
   },
   mounted() {
+    const mainTitle = 'My Skills';
+    const title = 'Portfolio - My Skills';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - My Skills';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/menu/OG_Image_Skills.jpg';
+    const url = 'https://zorin.expert/skills';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+
     const savedValue = localStorage.getItem('isCodersrankSkillsChartVisible');
       if (savedValue) {this.isCodersrankSkillsChartVisible = savedValue === 'true';}
     window.addEventListener('resize', this.handleResize);

@@ -5,7 +5,9 @@ import languagesStore from "@/store/modules/education/languagesStore";
 import itvdnStore from "@/store/modules/education/itvdnStore";
 import progStore from "@/store/modules/education/progStore";
 import knuteStore from "@/store/modules/education/knuteStore";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 @Options({
+  mixins: [openGraphMixin],
   computed: {
     knuteStore() {return knuteStore},
     progStore() {return progStore},
@@ -13,6 +15,17 @@ import knuteStore from "@/store/modules/education/knuteStore";
     languagesStore() {return languagesStore},
     englishdomStore() {return englishdomStore}},
   data() {return {tableView: false}},
+  mounted() {
+    const mainTitle = 'My Education';
+    const title = 'Portfolio - My Education';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - My Education';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/menu/OG_Image_Education.jpg';
+    const url = 'https://zorin.expert/education';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   methods: {changeView() {this.tableView = !this.tableView;}},
   components: {},})
 export default class Education extends Vue {}

@@ -40,151 +40,26 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: Home,
-    meta: {
-      title: 'My Portfolio',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'My Portfolio home page'
-        },
-        {
-          property: 'og:description',
-          content: 'Basic information with contact details'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Home.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/projects',
     name: 'projects',
     component: Projects,
-    meta: {
-      title: 'Portfolio - Projects',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'My Projects'
-        },
-        {
-          property: 'og:description',
-          content: 'Here are my projects'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Projects.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/education',
     name: 'education',
     component: Education,
-    meta: {
-      title: 'Portfolio - Education',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'My Education'
-        },
-        {
-          property: 'og:description',
-          content: 'My Education'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Education.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/experience',
     name: 'experience',
     component: Experience,
-    meta: {
-      title: 'Portfolio - Experience',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'My Experience'
-        },
-        {
-          property: 'og:description',
-          content: 'My Experience'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Experience.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/skills',
     name: 'skills',
     component: Skills,
-    meta: {
-      title: 'Portfolio - Skills',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'My Skills'
-        },
-        {
-          property: 'og:description',
-          content: 'My Skills'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Skills.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/certificates',
@@ -430,31 +305,6 @@ const routes: Array<RouteRecordRaw> = [
     path: '/about',
     name: 'about',
     component: About,
-    meta: {
-      title: 'About this project',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'About this project'
-        },
-        {
-          property: 'og:description',
-          content: 'About this project'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_About.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/extra',
@@ -1080,31 +930,6 @@ const routes: Array<RouteRecordRaw> = [
     path: '/:catchAll(.*)',
     name: 'PageNotFound',
     component: PageNotFound,
-    meta: {
-      title: 'Page NOT Found',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Page NOT Found'
-        },
-        {
-          property: 'og:description',
-          content: 'Page NOT Found'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_404.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   }
 ]
 

@@ -1,8 +1,10 @@
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import Slider from "@/components/util/Slider.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   data() {
     return {
       sliderImages: [
@@ -32,6 +34,16 @@ import Slider from "@/components/util/Slider.vue";
     }
   },
   mounted() {
+    const mainTitle = 'My Portfolio';
+    const title = 'My Portfolio home page';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Basic information with contact details';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/menu/OG_Image_Home.jpg';
+    const url = 'https://Zorin.Expert';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+
     this.startTextRotation();
   },
   methods: {

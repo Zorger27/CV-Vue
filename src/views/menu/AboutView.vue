@@ -1,24 +1,29 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import infoStore from "@/store/modules/service/infoStore";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
-  computed: {
-    infoStore() {
-      return infoStore
-    }
-  },
+  mixins: [openGraphMixin],
+  computed: {infoStore() {return infoStore}},
   data() {
     return {
       tableView: false,
       showMore: false
     }
   },
-  methods: {
-    changeView() {
-      this.tableView = !this.tableView;
-    }
+  mounted() {
+    const mainTitle = 'About this Portfolio';
+    const title = 'Portfolio - About this project';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio';
+    const description = 'Anatolii Zorin\'s Portfolio';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/menu/OG_Image_About.jpg';
+    const url = 'https://zorin.expert/about';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
   },
+  methods: {changeView() {this.tableView = !this.tableView;}},
   components: {},
 })
 
