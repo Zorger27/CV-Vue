@@ -1,7 +1,22 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
-@Options({components: {},})
+@Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Find vowels';
+    const title = 'JS tasks - Find vowels';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Typical JavaScript interview task - Find vowels';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/jstask/OG_Image_Vowels.jpg';
+    const url = 'https://zorin.expert/extra/tasks/findvowels';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
+  components: {},
+})
 export default class Findvowels extends Vue {
   inputString = "";
   vowelCount = 0;

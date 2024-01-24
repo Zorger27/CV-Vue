@@ -15,6 +15,17 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
       tableView: false
     }
   },
+  mounted() {
+    const mainTitle = 'JS tasks';
+    const title = 'Portfolio - JS tasks';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Typical JavaScript interview tasks';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/OG_Image_JStasks.jpg';
+    const url = 'https://zorin.expert/extra/tasks';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   methods: {
     changeView() {
       this.tableView = !this.tableView;

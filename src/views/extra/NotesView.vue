@@ -5,6 +5,17 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
   mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Notes';
+    const title = 'Portfolio - Notes';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Notes';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/OG_Image_Note.jpg';
+    const url = 'https://zorin.expert/extra/notes';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   components: {Notes},
 })
 export default class NotesView extends Vue {

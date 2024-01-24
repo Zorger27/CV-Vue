@@ -1,5 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 interface ImageData {
   id: string;
@@ -8,6 +9,18 @@ interface ImageData {
 }
 
 @Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Picture randomizer';
+    const title = 'Artificial intelligence - Picture randomizer';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Artificial intelligence - Picture randomizer by Lorem Picsum';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/ai/OG_Image_Randomizer.jpg';
+    const url = 'https://zorin.expert/extra/ai/picsum';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   data() {
     return {
       showMore: false,

@@ -1,12 +1,25 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   data() {
     return {
       inputText: '',
       result: null as boolean | null,
     };
+  },
+  mounted() {
+    const mainTitle = 'Palindrome';
+    const title = 'JS tasks - Palindrome';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Typical JavaScript interview task - Palindrome';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/jstask/OG_Image_Palindrome.jpg';
+    const url = 'https://zorin.expert/extra/tasks/palindrome';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
   },
   methods: {
     checkPalindrome(event: KeyboardEvent): void {

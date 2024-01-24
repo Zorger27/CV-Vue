@@ -1,6 +1,7 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import axios from "axios";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 interface MediaData {
   id: string;
@@ -10,6 +11,18 @@ interface MediaData {
 }
 
 @Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Randomizer PRO';
+    const title = 'Artificial intelligence - Randomizer PRO';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Artificial intelligence - Randomizer PRO by Pixabay';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/ai/OG_Image_RandomizerPro.jpg';
+    const url = 'https://zorin.expert/extra/ai/pixabay';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   data() {
     return {
       showMore: false,

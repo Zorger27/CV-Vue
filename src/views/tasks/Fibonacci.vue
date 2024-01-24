@@ -1,7 +1,20 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Fibonacci';
+    const title = 'JS tasks - Fibonacci';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Typical JavaScript interview task - Fibonacci';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/jstask/OG_Image_Fibonacci.jpg';
+    const url = 'https://zorin.expert/extra/tasks/fibonacci';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   data() {
     return {
       inputNumber: "",

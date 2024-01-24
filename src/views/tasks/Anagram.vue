@@ -1,7 +1,22 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
-@Options({components: {},})
+@Options({
+  mixins: [openGraphMixin],
+  mounted() {
+    const mainTitle = 'Anagram';
+    const title = 'JS tasks - Anagram';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Typical JavaScript interview task - Anagram';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/jstask/OG_Image_Anagram.jpg';
+    const url = 'https://zorin.expert/extra/tasks/anagram';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
+  components: {},
+})
 export default class Anagram extends Vue {
   word1 = "";
   word2 = "";
