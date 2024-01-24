@@ -2,8 +2,10 @@
 import {Options, Vue} from "vue-class-component";
 import otherStore from "@/store/modules/certificates/otherStore";
 import Slider from "@/components/util/Slider.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   computed: {
     otherStore() {
       return otherStore
@@ -13,6 +15,17 @@ import Slider from "@/components/util/Slider.vue";
     return {
       tableView: false
     }
+  },
+  mounted() {
+    const mainTitle = 'Other certificates';
+    const title = 'Portfolio - Other certificates';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Other certificates';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Other.jpg';
+    const url = 'https://zorin.expert/certificates/other';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
   },
   methods: {
     changeView() {

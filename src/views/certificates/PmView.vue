@@ -2,9 +2,22 @@
 import {Options, Vue} from "vue-class-component";
 import pmStore from "@/store/modules/certificates/pmStore";
 import Slider from "@/components/util/Slider.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 @Options({
+  mixins: [openGraphMixin],
   computed: {pmStore() {return pmStore}},
   data() {return {tableView: false}},
+  mounted() {
+    const mainTitle = 'Project Management';
+    const title = 'Portfolio - Project Management certificates';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Project Management certificates';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/certificates/OG_Image_PM.jpg';
+    const url = 'https://zorin.expert/certificates/pm';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   methods: {changeView() {this.tableView = !this.tableView;}},
   components: {Slider},
 })

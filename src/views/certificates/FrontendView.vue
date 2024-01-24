@@ -5,8 +5,10 @@ import javascriptStore from "@/store/modules/certificates/frontend/javascriptSto
 import angularStore from "@/store/modules/certificates/frontend/angularStore";
 import reactStore from "@/store/modules/certificates/frontend/reactStore";
 import frontStore from "@/store/modules/certificates/frontend/frontStore";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   computed: {
     htmlStore() {return htmlStore},
     javascriptStore() {return javascriptStore},
@@ -15,6 +17,17 @@ import frontStore from "@/store/modules/certificates/frontend/frontStore";
     frontStore() {return frontStore}
   },
   data() {return {tableView: false}},
+  mounted() {
+    const mainTitle = 'Frontend certificates';
+    const title = 'Portfolio - Frontend certificates';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Frontend certificates';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Frontend.jpg';
+    const url = 'https://zorin.expert/certificates/frontend';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   methods: {changeView() {this.tableView = !this.tableView;}},
   components: {},
 })

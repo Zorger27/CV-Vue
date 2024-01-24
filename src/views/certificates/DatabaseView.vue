@@ -2,10 +2,22 @@
 import {Options, Vue} from "vue-class-component";
 import databaseStore from "@/store/modules/certificates/databaseStore";
 import Slider from "@/components/util/Slider.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 @Options({
-  computed: {
-    databaseStore() {return databaseStore}},
+  mixins: [openGraphMixin],
+  computed: {databaseStore() {return databaseStore}},
   data() {return {tableView: false}},
+  mounted() {
+    const mainTitle = 'Database certificates';
+    const title = 'Portfolio - Database certificates';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Database certificates';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/certificates/OG_Image_DB.jpg';
+    const url = 'https://zorin.expert/certificates/database';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   methods: {changeView() {this.tableView = !this.tableView;}},
   components: {Slider},})
 export default class Database extends Vue {

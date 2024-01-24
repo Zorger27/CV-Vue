@@ -2,12 +2,25 @@
 import {Options, Vue} from "vue-class-component";
 import Search from "@/components/util/Search.vue";
 import TotalSert from "@/components/util/TotalSert.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   data() {
     return {
       searchView: true
     }
+  },
+  mounted() {
+    const mainTitle = 'All diplomas & certificates';
+    const title = 'Portfolio - All diplomas & certificates';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - All diplomas & certificates';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/menu/OG_Image_Certificates.jpg';
+    const url = 'https://zorin.expert/certificates';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
   },
   methods: {
     changeView() {

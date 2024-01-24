@@ -2,7 +2,9 @@
 import {Options, Vue} from "vue-class-component";
 import englishStore from "@/store/modules/certificates/englishStore";
 import Slider from "@/components/util/Slider.vue";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 @Options({
+  mixins: [openGraphMixin],
   computed: {englishStore() {return englishStore},
     orderedSert() {
       if (this.reverseOrder) {
@@ -17,6 +19,17 @@ import Slider from "@/components/util/Slider.vue";
       tableView: false,
       reverseOrder: false, // Изначально установлен в false для последовательного порядка
     }
+  },
+  mounted() {
+    const mainTitle = 'English language';
+    const title = 'Portfolio - English language certificates';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - English language certificates';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/certificates/OG_Image_English.jpg';
+    const url = 'https://zorin.expert/certificates/english';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
   },
   methods: {
     changeView() {

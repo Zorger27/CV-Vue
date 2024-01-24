@@ -15,7 +15,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   mounted() {
     const mainTitle = 'About this Portfolio';
     const title = 'Portfolio - About this project';
-    const metaDescription = 'Anatolii Zorin\'s Portfolio';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
     const description = 'Anatolii Zorin\'s Portfolio';
     const imageUrl = 'https://zorin.expert/assets/ogimage/menu/OG_Image_About.jpg';
     const url = 'https://zorin.expert/about';

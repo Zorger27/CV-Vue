@@ -4,8 +4,10 @@ import javaStore from "@/store/modules/certificates/backend/javaStore";
 import phpStore from "@/store/modules/certificates/backend/phpStore";
 import pythonStore from "@/store/modules/certificates/backend/pythonStore";
 import rubyStore from "@/store/modules/certificates/backend/rubyStore";
+import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
+  mixins: [openGraphMixin],
   computed: {
     phpStore() {return phpStore},
     pythonStore() {return pythonStore},
@@ -13,6 +15,17 @@ import rubyStore from "@/store/modules/certificates/backend/rubyStore";
     javaStore() {return javaStore}
   },
   data() {return {tableView: false}},
+  mounted() {
+    const mainTitle = 'Backend certificates';
+    const title = 'Portfolio - Backend certificates';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Backend certificates';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Backend.jpg';
+    const url = 'https://zorin.expert/certificates/backend';
+
+    this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
+    this.setPageTitle(mainTitle);
+  },
   methods: {changeView() {this.tableView = !this.tableView;}},
   components: {},
 })

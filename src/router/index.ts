@@ -65,241 +65,41 @@ const routes: Array<RouteRecordRaw> = [
     path: '/certificates',
     name: 'certificates',
     component: Certificates,
-    meta: {
-      title: 'All diplomas & certificates',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'All diplomas & certificates'
-        },
-        {
-          property: 'og:description',
-          content: 'All diplomas & certificates'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/menu/OG_Image_Certificates.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/certificates/backend',
     name: 'backend',
     component: Backend,
-    meta: {
-      title: 'Backend certificates',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Backend certificates'
-        },
-        {
-          property: 'og:description',
-          content: 'Backend certificates'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Backend.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/certificates/frontend',
     name: 'frontend',
     component: Frontend,
-    meta: {
-      title: 'Frontend certificates',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Frontend certificates'
-        },
-        {
-          property: 'og:description',
-          content: 'Frontend certificates'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Frontend.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/certificates/database',
     name: 'database',
     component: Database,
-    meta: {
-      title: 'Database certificates',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'DataBase Developer Certificates'
-        },
-        {
-          property: 'og:description',
-          content: 'DataBase Developer Certificates'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_DB.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/certificates/designer',
     name: 'designer',
     component: Designer,
-    meta: {
-      title: 'Designer certificates',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'UX/UI Designer Certificates'
-        },
-        {
-          property: 'og:description',
-          content: 'UX/UI Designer Certificates'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Designer.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/certificates/pm',
     name: 'pm',
     component: Pm,
-    meta: {
-      title: 'Project Management',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Project Management Certificates'
-        },
-        {
-          property: 'og:description',
-          content: 'Project Management Certificates'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_PM.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/certificates/english',
     name: 'english',
     component: English,
-    meta: {
-      title: 'English language',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'English language Certificates'
-        },
-        {
-          property: 'og:description',
-          content: 'English language Certificates'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_English.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/certificates/other',
     name: 'other',
     component: Other,
-    meta: {
-      title: 'Other certificates',
-      metaTags: [
-        {
-          property: 'og:title',
-          content: 'Other certificates'
-        },
-        {
-          property: 'og:description',
-          content: 'Other certificates'
-        },
-        {
-          property: 'og:image',
-          content: 'https://zorin.expert/assets/ogimage/certificates/OG_Image_Other.jpg'
-        },
-        {
-          property: 'og:url',
-          content: 'https://Zorin.Expert'
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-      ]
-    }
   },
   {
     path: '/about',
