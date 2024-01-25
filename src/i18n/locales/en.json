@@ -202,7 +202,8 @@
     },
     "graphics": {
       "title": "3D Graphics",
-      "cube": "Cube (only CSS)"
+      "cube": "Cube (only CSS)",
+      "cube3d": "Cube (Three.js)"
     },
     "exchange": {
       "title": "Exchange rates",

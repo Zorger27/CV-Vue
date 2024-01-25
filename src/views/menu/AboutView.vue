@@ -90,11 +90,15 @@ export default class About extends Vue {}
   .name {width: 400px;}
   .version {width: 150px;}
 }
-.prj a {
-  background: inherit;
-  padding: 1.2rem;
-  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+.prj {
+  padding: 0.8rem;
+  a {
+    background: inherit;
+    padding: 1.2rem;
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+  }
 }
+
 .prj a:hover {
   //background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
   background-image: url("@/assets/background/background13.webp");
@@ -111,9 +115,8 @@ export default class About extends Vue {}
 .table {
   background: inherit;
   margin-bottom: 1rem;
-
 }
-.title {color: darkgoldenrod;font-size: 2.5rem;}
+.title {color: darkgoldenrod;font-size: 2.5rem;margin: 0.8rem 0;}
 
 .more {
   display: inline-flex;
@@ -129,13 +132,19 @@ export default class About extends Vue {}
 }
 
 @media(max-width: 1020px) {
-  .title {font-size: 2rem;}
-  .prj a {padding: 1rem;}
+  .title {font-size: 2rem;margin: 0.8rem 0;}
+  .prj {
+    padding: 0.6rem;
+    a {padding: 1rem;}
+  }
 }
 @media (max-width: 768px) {
-  .title {font-size: 1.6rem;}
+  .title {font-size: 1.6rem;margin: 0.8rem 0;}
   .table {margin-bottom: 0.5rem;}
-  .prj a {padding: 0.8rem;}
+  .prj {
+    padding: 0.3rem;
+    a {padding: 0.8rem;}
+  }
   .div {margin-bottom: 0.5rem;}
 }
 </style>

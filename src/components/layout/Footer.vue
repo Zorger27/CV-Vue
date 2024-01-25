@@ -10,8 +10,8 @@ import SocialSharing from "@/components/util/SocialSharing.vue";
     };
   },
   methods: {
-    memory() {
-      this.$router.push('/extra/games/memory');
+    cube() {
+      this.$router.push('/extra/graphics/cube');
     },
   },
   components: {SocialSharing},
@@ -23,7 +23,7 @@ export default class Footer extends Vue {
 
 <template>
   <footer>
-    <div class="footer-logo" @click="memory">
+    <div class="footer-logo" @click="cube">
       <img :src="getFooterLogoImage" alt="Footer Logo Image">
     </div>
     <p class="footer-text">{{ $t('footer.text1') }}

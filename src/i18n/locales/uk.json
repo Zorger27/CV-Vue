@@ -202,7 +202,8 @@
     },
     "graphics": {
       "title": "3D Графіка",
-      "cube": "Куб (лише CSS)"
+      "cube": "Куб (лише CSS)",
+      "cube3d": "Куб (Three.js)"
     },
     "exchange": {
       "title": "Курси валют",

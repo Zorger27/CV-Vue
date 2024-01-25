@@ -202,7 +202,8 @@
     },
     "graphics": {
       "title": "Gráficos 3D",
-      "cube": "Cubo (solo CSS)"
+      "cube": "Cubo (solo CSS)",
+      "cube3d": "Cubo (Three.js)"
     },
     "exchange": {
       "title": "Los tipos de cambio",

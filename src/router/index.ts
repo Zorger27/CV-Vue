@@ -19,6 +19,7 @@ import CalculatorView from "@/views/extra/CalculatorView.vue";
 import Cryptocur from "@/views/extra/CryptocurView.vue";
 import Graphics from "@/views/extra/GraphicsView.vue";
 import Cube from "@/views/graphics/CubeView.vue";
+import Cube3d from "@/views/graphics/Cube3dView.vue";
 import CurrencyRates from "@/views/extra/CurrencyRatesView.vue";
 import Games from "@/views/extra/GamesView.vue";
 import NotesView from "@/views/extra/NotesView.vue";
@@ -130,6 +131,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/extra/graphics/cube',
     name: 'cube',
     component: Cube,
+  },
+  {
+    path: '/extra/graphics/cube3d',
+    name: 'cube3d',
+    component: Cube3d,
   },
   {
     path: '/extra/rates',

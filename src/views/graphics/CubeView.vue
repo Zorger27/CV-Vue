@@ -1,6 +1,7 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
+import ToggleFullScreen from "@/components/util/ToggleFullScreen.vue";
 
 @Options({
   mixins: [openGraphMixin],
@@ -15,7 +16,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
   },
-  components: {},
+  components: {ToggleFullScreen},
 })
 export default class Cube extends Vue {
 }
@@ -26,7 +27,7 @@ export default class Cube extends Vue {
     <h1>
       <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.graphics.cube') }}
+      {{ $t('extra.graphics.cube') }} <ToggleFullScreen></ToggleFullScreen>
     </h1>
     <line></line>
     <div class="body">

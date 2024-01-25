@@ -46,7 +46,7 @@ import Header3DLogo2 from "@/components/other/Header3DLogo2.vue";
       this.$router.push('/extra');
     },
     cube() {
-      this.$router.push('/extra/graphics/cube');
+      this.$router.push('/extra/graphics/cube3d');
     },
   },
   components: {languageSwitcher, Header3DLogo2},
