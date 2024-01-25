@@ -202,7 +202,7 @@ header {
     }
   }
   .header-logo {
-    margin: 0.1rem;
+    margin: 0.2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
