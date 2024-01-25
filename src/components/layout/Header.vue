@@ -1,14 +1,11 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
+import Header3DLogo2 from "@/components/other/Header3DLogo2.vue";
 // import loginStore from "@/store/modules/service/loginStore";
 
 @Options({
-  data () {
-    return {
-      getHeaderLogoImage: require('@/assets/img/header-logo.svg')
-    }
-  },
+  // data () {return {getHeaderLogoImage: require('@/assets/img/header-logo.svg')}},
   // computed: {
   //   loginStore() {
   //     return loginStore
@@ -52,7 +49,7 @@ import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
       this.$router.push('/extra/graphics/cube');
     },
   },
-  components: {languageSwitcher},
+  components: {languageSwitcher, Header3DLogo2},
 })
 
 export default class Header extends Vue {
@@ -89,7 +86,8 @@ export default class Header extends Vue {
         <i :class="['fa', showMenu ? 'fa-times' : 'fa-bars', 'burger-menu-icon']"></i>
       </div>
       <div class="logo" @click="cube">
-        <img :src="getHeaderLogoImage" alt="Header Logo Image">
+        <Header3DLogo2 class="img"></Header3DLogo2>
+<!--        <img :src="getHeaderLogoImage" alt="Header Logo Image">-->
       </div>
       <div class="login" @click="extra">
           <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -204,7 +202,7 @@ header {
     }
   }
   .header-logo {
-    margin: 3px;
+    margin: 0.1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -216,10 +214,11 @@ header {
     .logo {
       grid-area: logo;
       align-items: center;
-      margin-top: 0.3rem;
+      //margin-top: 0.3rem;
       align-self: center;
       justify-self: left;
-      img {
+      display: flex;
+      .img {
         width: 4rem;
         height: 4rem;
         cursor: pointer;
