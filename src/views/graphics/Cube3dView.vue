@@ -12,9 +12,9 @@ export default {
   mixins: [openGraphMixin],
   mounted() {
     const mainTitle = '3D cube Newest';
-    const title = '3D cube Newest';
-    const metaDescription = 'Rotating 3D Cube';
-    const description = 'Rotating 3D cube Newest';
+    const title = 'Portfolio - 3D cube Newest';
+    const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
+    const description = 'Anatolii Zorin\'s Portfolio - Rotating 3D cube Newest';
     const imageUrl = 'https://zorin.expert/assets/ogimage/extra/graphics/OG_Image_Cube3D.jpg';
     const url = 'https://zorin.expert/extra/graphics/cube3d';
 
