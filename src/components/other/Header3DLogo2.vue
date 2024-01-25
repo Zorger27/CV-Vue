@@ -13,9 +13,9 @@ export default {
     const updateCameraPosition = () => {
       // Изменение значения в зависимости от ширины экрана
       if (window.innerWidth <= 768) {
-        camera.position.set(0, 0, 28);
+        camera.position.set(0, 0, 30);
       } else {
-        camera.position.set(0, 0, 36);
+        camera.position.set(0, 0, 38);
       }
     };
 
