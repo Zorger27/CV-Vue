@@ -2,6 +2,7 @@
 import {Options, Vue} from "vue-class-component";
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 import ToggleFullScreen from "@/components/util/ToggleFullScreen.vue";
+import CubeCSS from "@/components/other/CubeCSS.vue";
 
 @Options({
   mixins: [openGraphMixin],
@@ -16,7 +17,7 @@ import ToggleFullScreen from "@/components/util/ToggleFullScreen.vue";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
   },
-  components: {ToggleFullScreen},
+  components: {CubeCSS, ToggleFullScreen},
 })
 export default class Cube extends Vue {
 }
@@ -30,15 +31,8 @@ export default class Cube extends Vue {
       {{ $t('extra.graphics.cube') }} <ToggleFullScreen></ToggleFullScreen>
     </h1>
     <line></line>
-    <div class="body">
-      <div class="container">
-        <div class="back side"></div>
-        <div class="left side"></div>
-        <div class="right side"></div>
-        <div class="top side"></div>
-        <div class="bottom side"></div>
-        <div class="front side"></div>
-      </div>
+    <div class="inner">
+      <CubeCSS></CubeCSS>
     </div>
   </div>
 </template>
@@ -52,85 +46,19 @@ export default class Cube extends Vue {
   background-repeat: no-repeat;
 
   .back-to-menu {
-      display: inline-flex;
-      text-decoration: none;
-      margin-right: 0.1rem;
+    display: inline-flex;
+    text-decoration: none;
+    margin-right: 0.1rem;
   }
-
-  .body {
-    height: 10rem;
-    width: 10rem;
-    margin: 6rem auto;
-    perspective: 1000px;
-    perspective-origin: center -5rem;
+  .inner {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 65vh;
   }
-  .side,
-  .container{
-    width: 10rem;
-    height: 10rem;
-  }
-  .container{
-    transform-style: preserve-3d;
-    animation: 10s rotate infinite linear;
-  }
-  .container:before,
-  .container:after{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 10rem;
-    height: 10rem;
-  }
-  .container:before{
-    transform: rotateX(90deg);
-  }
-  .container:after{
-    transform: rotatey(90deg);
-  }
-  .side{
-    position: absolute;
-    width: 10rem;
-    height: 10rem;
-    opacity: 0.8;
-  }
-  .back{
-    transform: translateZ(-5rem);
-    background: pink;
-  }
-  .left{
-    transform: translateX(-5rem) rotateY(90deg);
-    background: green;
-  }
-  .right{
-    transform: translateX(5rem) rotateY(90deg);
-    background: black;
-  }
-  .top{
-    transform: translateY(-5rem) rotateX(90deg);
-    background: blue;
-  }
-  .bottom{
-    transform: translateY(5rem) rotateX(90deg);
-    background: red;
-  }
-  .front{
-    transform: translateZ(5rem);
-    background: gold;
-  }
-  @keyframes rotate{
-    100%{
-      transform: rotatex(360deg) rotateY(360deg) rotateZ(360deg);
-      /*transform: rotateY(360deg);*/
-    }
-  }
-}
-@media (max-width: 768px) {
-  .cube {
-    .body {
-      margin: 6rem auto;
+  @media (max-width: 768px) {
+    .inner {
+      height: 55vh;
     }
   }
 }
