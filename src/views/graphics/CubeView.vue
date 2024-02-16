@@ -6,6 +6,11 @@ import CubeCSS from "@/components/other/CubeCSS.vue";
 
 @Options({
   mixins: [openGraphMixin],
+  data() {
+    return {
+      cubeSize: 5,
+    }
+  },
   mounted() {
     const mainTitle = 'Cube (only CSS)';
     const title = 'Portfolio - 3D Graphics - Cube (only CSS)';
@@ -28,11 +33,17 @@ export default class Cube extends Vue {
     <h1>
       <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.graphics.cube') }} <ToggleFullScreen></ToggleFullScreen>
+      {{ $t('extra.graphics.cube') }} <ToggleFullScreen></ToggleFullScreen> <input
+      id="cubeSizeSlider"
+      type="range"
+      min="1"
+      max="20"
+      v-model="cubeSize"
+    />
     </h1>
     <line></line>
     <div class="inner">
-      <CubeCSS></CubeCSS>
+      <CubeCSS :cubeSize="cubeSize"></CubeCSS>
     </div>
   </div>
 </template>

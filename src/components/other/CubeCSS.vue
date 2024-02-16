@@ -1,7 +1,18 @@
 <script lang="ts">
-import {Options, Vue} from "vue-class-component";
-
-@Options({})
+import { Options, Vue } from "vue-class-component";
+@Options({
+  props: {
+    cubeSize: {
+      type: Number,
+      required: true,
+    },
+  },
+  // computed: {
+  //   calculatedCubeSize(): string {
+  //     return `${this.cubeSize}rem`;
+  //   },
+  // },
+})
 export default class CubeCSS extends Vue {}
 </script>
 
@@ -19,21 +30,20 @@ export default class CubeCSS extends Vue {}
 </template>
 
 <style scoped lang="scss">
-$cubeTranslate: 5rem;
-$cubeSize: $cubeTranslate * 2;
+$cubeSize: 5rem;
 
 .body {
-  height: $cubeSize;
-  width: $cubeSize;
+  height: calc(2 * #{$cubeSize});
+  width: calc(2 * #{$cubeSize});
   perspective: 1000px;
-  perspective-origin: center -$cubeTranslate;
+  perspective-origin: center calc(-1 * #{$cubeSize});
   display: flex;
   justify-content: center;
   align-items: center;
 
   .side, .container{
-    width: $cubeSize;
-    height: $cubeSize;
+    width: calc(2 * #{$cubeSize});
+    height: calc(2 * #{$cubeSize});
   }
   .container{
     transform-style: preserve-3d;
@@ -43,8 +53,8 @@ $cubeSize: $cubeTranslate * 2;
     content: "";
     display: block;
     position: absolute;
-    width: $cubeSize;
-    height: $cubeSize;
+    width: calc(2 * #{$cubeSize});
+    height: calc(2 * #{$cubeSize});
   }
   .container:before{
     transform: rotateX(90deg);
@@ -54,32 +64,32 @@ $cubeSize: $cubeTranslate * 2;
   }
   .side{
     position: absolute;
-    width: $cubeSize;
-    height: $cubeSize;
+    width: calc(2 * #{$cubeSize});
+    height: calc(2 * #{$cubeSize});
     opacity: 0.8;
   }
   .back{
-    transform: translateZ(-$cubeTranslate);
+    transform: translateZ(calc(-1 * #{$cubeSize}));
     background: pink;
   }
   .left{
-    transform: translateX(-$cubeTranslate) rotateY(90deg);
+    transform: translateX(calc(-1 * #{$cubeSize})) rotateY(90deg);
     background: green;
   }
   .right{
-    transform: translateX($cubeTranslate) rotateY(90deg);
+    transform: translateX(calc(1 * #{$cubeSize})) rotateY(90deg);
     background: black;
   }
   .top{
-    transform: translateY(-$cubeTranslate) rotateX(90deg);
+    transform: translateY(calc(-1 * #{$cubeSize})) rotateX(90deg);
     background: blue;
   }
   .bottom{
-    transform: translateY($cubeTranslate) rotateX(90deg);
+    transform: translateY(calc(1 * #{$cubeSize})) rotateX(90deg);
     background: red;
   }
   .front{
-    transform: translateZ($cubeTranslate);
+    transform: translateZ(calc(1 * #{$cubeSize}));
     background: gold;
   }
   @keyframes rotate{
