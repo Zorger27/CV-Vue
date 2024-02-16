@@ -19,18 +19,21 @@ export default class CubeCSS extends Vue {}
 </template>
 
 <style scoped lang="scss">
+$cubeTranslate: 5rem;
+$cubeSize: $cubeTranslate * 2;
+
 .body {
-  height: 10rem;
-  width: 10rem;
+  height: $cubeSize;
+  width: $cubeSize;
   perspective: 1000px;
-  perspective-origin: center -5rem;
+  perspective-origin: center -$cubeTranslate;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .side, .container{
-    width: 10rem;
-    height: 10rem;
+    width: $cubeSize;
+    height: $cubeSize;
   }
   .container{
     transform-style: preserve-3d;
@@ -40,8 +43,8 @@ export default class CubeCSS extends Vue {}
     content: "";
     display: block;
     position: absolute;
-    width: 10rem;
-    height: 10rem;
+    width: $cubeSize;
+    height: $cubeSize;
   }
   .container:before{
     transform: rotateX(90deg);
@@ -51,37 +54,37 @@ export default class CubeCSS extends Vue {}
   }
   .side{
     position: absolute;
-    width: 10rem;
-    height: 10rem;
+    width: $cubeSize;
+    height: $cubeSize;
     opacity: 0.8;
   }
   .back{
-    transform: translateZ(-5rem);
+    transform: translateZ(-$cubeTranslate);
     background: pink;
   }
   .left{
-    transform: translateX(-5rem) rotateY(90deg);
+    transform: translateX(-$cubeTranslate) rotateY(90deg);
     background: green;
   }
   .right{
-    transform: translateX(5rem) rotateY(90deg);
+    transform: translateX($cubeTranslate) rotateY(90deg);
     background: black;
   }
   .top{
-    transform: translateY(-5rem) rotateX(90deg);
+    transform: translateY(-$cubeTranslate) rotateX(90deg);
     background: blue;
   }
   .bottom{
-    transform: translateY(5rem) rotateX(90deg);
+    transform: translateY($cubeTranslate) rotateX(90deg);
     background: red;
   }
   .front{
-    transform: translateZ(5rem);
+    transform: translateZ($cubeTranslate);
     background: gold;
   }
   @keyframes rotate{
     100%{
-      transform: rotatex(360deg) rotateY(360deg) rotateZ(360deg);
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     }
   }
 }
