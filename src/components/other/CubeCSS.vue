@@ -22,7 +22,6 @@ export default class CubeCSS extends Vue {}
 .body {
   height: 10rem;
   width: 10rem;
-  //margin: 6rem auto;
   perspective: 1000px;
   perspective-origin: center -5rem;
   display: flex;
@@ -84,12 +83,6 @@ export default class CubeCSS extends Vue {}
     100%{
       transform: rotatex(360deg) rotateY(360deg) rotateZ(360deg);
     }
-  }
-}
-
-@media (max-width: 768px) {
-  .body {
-    margin: 6rem auto;
   }
 }
 </style>
