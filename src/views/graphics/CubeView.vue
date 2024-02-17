@@ -3,14 +3,10 @@ import {Options, Vue} from "vue-class-component";
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 import ToggleFullScreen from "@/components/util/ToggleFullScreen.vue";
 import CubeCSS from "@/components/other/CubeCSS.vue";
+import CubeCSSnew from "@/components/other/CubeCSSnew.vue";
 
 @Options({
   mixins: [openGraphMixin],
-  data() {
-    return {
-      cubeSize: 5,
-    }
-  },
   mounted() {
     const mainTitle = 'Cube (only CSS)';
     const title = 'Portfolio - 3D Graphics - Cube (only CSS)';
@@ -22,7 +18,7 @@ import CubeCSS from "@/components/other/CubeCSS.vue";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
   },
-  components: {CubeCSS, ToggleFullScreen},
+  components: {CubeCSSnew, CubeCSS, ToggleFullScreen},
 })
 export default class Cube extends Vue {
 }
@@ -33,17 +29,12 @@ export default class Cube extends Vue {
     <h1>
       <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.graphics.cube') }} <ToggleFullScreen></ToggleFullScreen> <input
-      id="cubeSizeSlider"
-      type="range"
-      min="1"
-      max="20"
-      v-model="cubeSize"
-    />
+      {{ $t('extra.graphics.cube') }} <ToggleFullScreen></ToggleFullScreen>
     </h1>
     <line></line>
     <div class="inner">
-      <CubeCSS :cubeSize="cubeSize"></CubeCSS>
+      <CubeCSS></CubeCSS>
+<!--      <CubeCSSnew></CubeCSSnew>-->
     </div>
   </div>
 </template>
