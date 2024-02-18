@@ -4,6 +4,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 import ToggleFullScreen from "@/components/util/ToggleFullScreen.vue";
 import CubeCSS from "@/components/other/CubeCSS.vue";
 import CubeCSSnew from "@/components/other/CubeCSSnew.vue";
+import CubeCSSold from "@/components/other/CubeCSSold.vue";
 
 @Options({
   mixins: [openGraphMixin],
@@ -18,7 +19,7 @@ import CubeCSSnew from "@/components/other/CubeCSSnew.vue";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
   },
-  components: {CubeCSSnew, CubeCSS, ToggleFullScreen},
+  components: {CubeCSSold, CubeCSSnew, CubeCSS, ToggleFullScreen},
 })
 export default class Cube extends Vue {
 }
@@ -35,6 +36,7 @@ export default class Cube extends Vue {
     <div class="inner">
       <CubeCSS></CubeCSS>
 <!--      <CubeCSSnew></CubeCSSnew>-->
+<!--      <CubeCSSold></CubeCSSold>-->
     </div>
   </div>
 </template>
