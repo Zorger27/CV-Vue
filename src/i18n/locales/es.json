@@ -202,7 +202,8 @@
     },
     "graphics": {
       "title": "Gráficos 3D",
-      "cube": "Cubo (solo CSS)",
+      "cube": "Cubo (CSS)",
+      "cubejs": "Cubo (JavaScript)",
       "cube3d": "Cubo (Three.js)"
     },
     "exchange": {

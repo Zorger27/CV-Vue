@@ -35,6 +35,7 @@ import GameMemory from "@/views/games/GameMemory.vue";
 import AiView from "@/views/extra/AiView.vue";
 import LoremPicsum from "@/views/ai/LoremPicsum.vue";
 import Pixabay from "@/views/ai/Pixabay.vue";
+import CubeScript from "@/views/graphics/CubeScriptView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -131,6 +132,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/extra/graphics/cube',
     name: 'cube',
     component: Cube,
+  },
+  {
+    path: '/extra/graphics/cubejs',
+    name: 'cubejs',
+    component: CubeScript,
   },
   {
     path: '/extra/graphics/cube3d',

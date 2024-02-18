@@ -107,6 +107,7 @@ module.exports = defineConfig({
           { path: '/extra/cryptocur', priority: 0.8, changefreq: 'daily' },
           { path: '/extra/graphics', priority: 0.8, changefreq: 'daily' },
           { path: '/extra/graphics/cube', priority: 0.8, changefreq: 'daily' },
+          { path: '/extra/graphics/cubejs', priority: 0.8, changefreq: 'daily' },
           { path: '/extra/graphics/cube3d', priority: 0.8, changefreq: 'daily' },
           { path: '/extra/rates', priority: 0.8, changefreq: 'daily' },
           { path: '/extra/games', priority: 0.8, changefreq: 'daily' },
