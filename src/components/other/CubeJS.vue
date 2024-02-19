@@ -1,25 +1,30 @@
 <script>
 export default {
   name: 'CubeJS',
+  props: {
+    scale: {
+      type: Number,
+      default: 1,
+    },
+  },
   data() {
     return {
-      scale: 1,
       rotationX: 0,
       rotationY: 0,
     };
   },
   computed: {
     calculatedCubeSize() {
-      return `${300 * this.scale}px`;
+      return `${150 * this.scale}px`;
     },
     calculatedTranslateZ() {
       return `${(this.scale)}px`;
     },
     calculatedTranslateZBack() {
-      return `${300 * this.scale}px`;
+      return `${150 * this.scale}px`;
     },
     calculatedTranslateZSide() {
-      return `${150 * this.scale}px`;
+      return `${75 * this.scale}px`;
     },
   },
 };
@@ -27,7 +32,7 @@ export default {
 
 <template>
   <div class="cube-container">
-    <input type="range" v-model="scale" min="0.5" max="2" step="0.1" />
+<!--    <input type="range" v-model="scale" min="0.5" max="2" step="0.1" />-->
     <div class="cube" :style="{ width: calculatedCubeSize, height: calculatedCubeSize, transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg)` }">
       <div class="face front" :style="{ transform: `translateZ(${calculatedTranslateZ})` }"></div>
       <div class="face back" :style="{ transform: `rotateY(180deg) translateZ(${calculatedTranslateZBack})` }"></div>

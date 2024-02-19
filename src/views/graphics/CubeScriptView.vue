@@ -17,6 +17,11 @@ import CubeJS from "@/components/other/CubeJS.vue";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
   },
+  data() {
+    return {
+      scale: 1,
+    };
+  },
   components: {CubeJS, ToggleFullScreen},
 })
 export default class CubeScript extends Vue {
@@ -28,11 +33,11 @@ export default class CubeScript extends Vue {
     <h1>
       <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.graphics.cubejs') }} <ToggleFullScreen></ToggleFullScreen>
+      {{ $t('extra.graphics.cubejs') }} <ToggleFullScreen></ToggleFullScreen> <input type="range" v-model="scale" min="0.5" max="2" step="0.1" />
     </h1>
     <line></line>
     <div class="inner">
-      <CubeJS></CubeJS>
+      <CubeJS :scale="scale"></CubeJS>
     </div>
   </div>
 </template>
