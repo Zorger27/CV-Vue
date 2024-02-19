@@ -45,7 +45,7 @@ export default {
 
 <style scoped lang="scss">
 .cube-container {
-  perspective: 1000px;
+  perspective: 2000px;
   width: 150px;
   height: 150px;
 
