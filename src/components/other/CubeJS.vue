@@ -1,96 +1,95 @@
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-@Options({})
-export default class CubeJS extends Vue {}
+<script>
+export default {
+  name: 'CubeJS',
+  data() {
+    return {
+      scale: 1,
+      rotationX: 0,
+      rotationY: 0,
+    };
+  },
+  computed: {
+    calculatedCubeSize() {
+      return `${300 * this.scale}px`;
+    },
+    calculatedTranslateZ() {
+      return `${(this.scale)}px`;
+    },
+    calculatedTranslateZBack() {
+      return `${300 * this.scale}px`;
+    },
+    calculatedTranslateZSide() {
+      return `${150 * this.scale}px`;
+    },
+  },
+};
 </script>
 
 <template>
-  <div class="body">
-    <div class="container">
-      <div class="back side"></div>
-      <div class="left side"></div>
-      <div class="right side"></div>
-      <div class="top side"></div>
-      <div class="bottom side"></div>
-      <div class="front side"></div>
+  <div class="cube-container">
+    <input type="range" v-model="scale" min="0.5" max="2" step="0.1" />
+    <div class="cube" :style="{ width: calculatedCubeSize, height: calculatedCubeSize, transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg)` }">
+      <div class="face front" :style="{ transform: `translateZ(${calculatedTranslateZ})` }"></div>
+      <div class="face back" :style="{ transform: `rotateY(180deg) translateZ(${calculatedTranslateZBack})` }"></div>
+      <div class="face left" :style="{ transform: `rotateY(-90deg) translateZ(${calculatedTranslateZSide}) translateX(-50%)` }"></div>
+      <div class="face right" :style="{ transform: `rotateY(90deg) translateZ(${calculatedTranslateZSide}) translateX(50%)` }"></div>
+      <div class="face top" :style="{ transform: `rotateX(90deg) translateZ(${calculatedTranslateZSide}) translateY(-50%)` }"></div>
+      <div class="face bottom" :style="{ transform: `rotateX(-90deg) translateZ(${calculatedTranslateZSide}) translateY(50%)` }"></div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-$cubeSize: 5rem;
+.cube-container {
+  perspective: 800px;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
 
-.inner {
-  display: flex;
-  flex-direction: column;
-
-  .input {
-    color: red;
-    margin-bottom: 4rem;
+  input {
+    width: 100%;
+    margin-bottom: 50px;
   }
-  .body {
-    height: calc(2 * #{$cubeSize});
-    width: calc(2 * #{$cubeSize});
-    perspective: 1000px;
-    perspective-origin: center calc(-1 * #{$cubeSize});
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .side, .container{
-      width: calc(2 * #{$cubeSize});
-      height: calc(2 * #{$cubeSize});
-    }
-    .container{
-      transform-style: preserve-3d;
-      animation: 10s rotate infinite linear;
-    }
-    .container:before, .container:after{
-      content: "";
-      display: block;
+  .cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+    animation: 10s rotate infinite linear;
+
+    .face {
       position: absolute;
-      width: calc(2 * #{$cubeSize});
-      height: calc(2 * #{$cubeSize});
-    }
-    .container:before{
-      transform: rotateX(90deg);
-    }
-    .container:after{
-      transform: rotatey(90deg);
-    }
-    .side{
-      position: absolute;
-      width: calc(2 * #{$cubeSize});
-      height: calc(2 * #{$cubeSize});
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
       opacity: 0.8;
     }
-    .back{
-      transform: translateZ(calc(-1 * #{$cubeSize}));
-      background: pink;
-    }
-    .left{
-      transform: translateX(calc(-1 * #{$cubeSize})) rotateY(90deg);
-      background: green;
-    }
-    .right{
-      transform: translateX(calc(1 * #{$cubeSize})) rotateY(90deg);
-      background: black;
-    }
-    .top{
-      transform: translateY(calc(-1 * #{$cubeSize})) rotateX(90deg);
-      background: blue;
-    }
-    .bottom{
-      transform: translateY(calc(1 * #{$cubeSize})) rotateX(90deg);
-      background: red;
-    }
-    .front{
-      transform: translateZ(calc(1 * #{$cubeSize}));
-      background: gold;
-    }
-    @keyframes rotate{
-      100%{
-        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+
+    .front { background-color: #3498db; }
+    .back { background-color: #e74c3c; }
+    .left { background-color: #2ecc71; }
+    .right { background-color: #f39c12; }
+    .top { background-color: #9b59b6; }
+    .bottom { background-color: #34495e; }
+
+    @keyframes rotate {
+      0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+      }
+      25% {
+        transform: rotateX(90deg) rotateY(180deg) rotateZ(45deg);
+      }
+      50% {
+        transform: rotateX(180deg) rotateY(360deg) rotateZ(90deg);
+      }
+      75% {
+        transform: rotateX(270deg) rotateY(540deg) rotateZ(135deg);
+      }
+      100% {
+        transform: rotateX(360deg) rotateY(720deg) rotateZ(180deg);
       }
     }
   }
