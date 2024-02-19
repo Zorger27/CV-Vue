@@ -3,8 +3,6 @@ import {Options, Vue} from "vue-class-component";
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 import ToggleFullScreen from "@/components/util/ToggleFullScreen.vue";
 import CubeCSS from "@/components/other/CubeCSS.vue";
-import CubeCSSnew from "@/components/other/CubeCSSnew.vue";
-import CubeCSSold from "@/components/other/CubeCSSold.vue";
 
 @Options({
   mixins: [openGraphMixin],
@@ -19,7 +17,7 @@ import CubeCSSold from "@/components/other/CubeCSSold.vue";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
   },
-  components: {CubeCSSold, CubeCSSnew, CubeCSS, ToggleFullScreen},
+  components: {CubeCSS, ToggleFullScreen},
 })
 export default class Cube extends Vue {
 }
