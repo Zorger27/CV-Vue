@@ -11,16 +11,38 @@ import CubeJS from "@/components/other/CubeJS.vue";
     const title = 'Portfolio - 3D Graphics - Cube (JavaScript)';
     const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
     const description = 'Anatolii Zorin\'s Portfolio - 3D Graphics - Cube (JavaScript)';
-    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/graphics/OG_Image_Cube.jpg';
-    const url = 'https://zorin.expert/extra/graphics/cube';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/graphics/OG_Image_CubeJS.jpg';
+    const url = 'https://zorin.expert/extra/graphics/cubejs';
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
+
+    window.addEventListener('wheel', this.handleMouseWheel);
+  },
+  beforeUnmount() {
+    // Удаление обработчика события при уничтожении компонента
+    window.removeEventListener('wheel', this.handleMouseWheel);
   },
   data() {
     return {
       scale: 1,
     };
+  },
+  methods: {
+    handleMouseWheel(event: WheelEvent) {
+      // Обработчик события прокрутки мыши
+      // event.deltaY содержит информацию о направлении прокрутки
+
+      // Пример изменения значения бегунка (scale) при прокрутке мыши
+      if (event.deltaY > 0) {
+        this.scale -= 0.03; // Уменьшение масштаба при прокрутке вниз
+      } else {
+        this.scale += 0.03; // Увеличение масштаба при прокрутке вверх
+      }
+
+      // Ограничение значений масштаба (если нужно)
+      this.scale = Math.max(0.5, Math.min(2, this.scale));
+    },
   },
   components: {CubeJS, ToggleFullScreen},
 })
@@ -60,10 +82,11 @@ export default class CubeScript extends Vue {
     justify-content: center;
     align-items: center;
     height: 65vh;
+    overflow: hidden;
   }
   @media (max-width: 768px) {
     .inner {
-      height: 55vh;
+      height: 60vh;
     }
   }
 }

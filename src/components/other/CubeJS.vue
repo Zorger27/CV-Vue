@@ -32,7 +32,6 @@ export default {
 
 <template>
   <div class="cube-container">
-<!--    <input type="range" v-model="scale" min="0.5" max="2" step="0.1" />-->
     <div class="cube" :style="{ width: calculatedCubeSize, height: calculatedCubeSize, transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg)` }">
       <div class="face front" :style="{ transform: `translateZ(${calculatedTranslateZ})` }"></div>
       <div class="face back" :style="{ transform: `rotateY(180deg) translateZ(${calculatedTranslateZBack})` }"></div>
@@ -46,15 +45,9 @@ export default {
 
 <style scoped lang="scss">
 .cube-container {
-  perspective: 800px;
-  width: 300px;
-  height: 300px;
-  margin: 50px auto;
-
-  input {
-    width: 100%;
-    margin-bottom: 50px;
-  }
+  perspective: 1000px;
+  width: 150px;
+  height: 150px;
 
   .cube {
     position: relative;
