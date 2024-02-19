@@ -35,8 +35,6 @@ export default class Cube extends Vue {
     <line></line>
     <div class="inner">
       <CubeCSS></CubeCSS>
-<!--      <CubeCSSnew></CubeCSSnew>-->
-<!--      <CubeCSSold></CubeCSSold>-->
     </div>
   </div>
 </template>
