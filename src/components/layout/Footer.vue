@@ -18,7 +18,7 @@ import SocialSharing from "@/components/util/SocialSharing.vue";
       // Переключаем между 'normal' и 'alternative'
       this.currentLogoImage = this.currentLogoImage === 'normal' ? 'alternative' : 'normal';
       localStorage.setItem('footerLogoImage', this.currentLogoImage);
-      this.$router.push('/extra/graphics/cubejs');
+      this.$router.push('/extra/graphics/cube');
     },
   },
   components: {SocialSharing},
