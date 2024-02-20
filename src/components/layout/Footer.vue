@@ -7,8 +7,8 @@ import SocialSharing from "@/components/util/SocialSharing.vue";
     return {
       currentYear: new Date().getFullYear(),
       logoImages: {
-        normal: require('@/assets/img/footer-logo.svg'),
-        alternative: require('@/assets/img/menu2/footer-logo2.svg'),
+        normal: require('@/assets/img/menu2/footer-logo2.svg'),
+        alternative: require('@/assets/img/footer-logo.svg'),
       },
       currentLogoImage: localStorage.getItem('footerLogoImage') || 'normal',
     };

@@ -2,16 +2,33 @@
 import {Options, Vue} from "vue-class-component";
 import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
 import Header3DLogo2 from "@/components/other/Header3DLogo2.vue";
-// import loginStore from "@/store/modules/service/loginStore";
 
 @Options({
   data () {
     return {
-      getExtraImage: require('@/assets/img/login4.svg'),
-      getCertifitatesImage: require('@/assets/img/certifitates.svg')
+      showMenu: false,
+      showDropdownContent: false,
+      showExtraContent: false,
+      // getExtraImage: require('@/assets/img/login4.svg'),
+      // getCertifitatesImage: require('@/assets/img/certifitates.svg')
+      getHeader2Image: require('@/assets/img/menu2/header-logo2.svg'),
+      getExtraImage: require('@/assets/img/menu2/extra2.svg'),
+      getCertifitatesImage: require('@/assets/img/menu2/certifitates2.svg')
     }
   },
   methods: {
+    hideMenu() {
+      this.showMenu = false;
+    },
+    clickOutsideHandler(event: MouseEvent) {
+      if (this.showMenu && !(event.target as HTMLElement).closest(".burger-menu")) {
+        this.showMenu = false;
+      } else if (this.showDropdownContent && !(event.target as HTMLElement).closest(".dropdown")) {
+        this.showDropdownContent = false;
+      } else if (this.showExtraContent && !(event.target as HTMLElement).closest(".dropdown")) {
+        this.showExtraContent = false;
+      }
+    },
     search() {
       this.$router.push('/certificates');
     },
@@ -22,34 +39,16 @@ import Header3DLogo2 from "@/components/other/Header3DLogo2.vue";
       this.$router.push('/extra/graphics/cube3d');
     },
   },
+  mounted() {
+    document.addEventListener("click", this.clickOutsideHandler);
+  },
+  beforeUnmount() {
+    document.removeEventListener("click", this.clickOutsideHandler);
+  },
   components: {languageSwitcher, Header3DLogo2},
 })
 
-export default class Header extends Vue {
-  showMenu = false;
-  showDropdownContent = false;
-  showExtraContent = false;
-
-  hideMenu() {
-    this.showMenu = false;
-  }
-
-  clickOutsideHandler(event: MouseEvent) {
-    if (this.showMenu && !(event.target as HTMLElement).closest(".burger-menu")) {
-      this.showMenu = false;
-    } else if (this.showDropdownContent && !(event.target as HTMLElement).closest(".dropdown")) {
-      this.showDropdownContent = false;
-    } else if (this.showExtraContent && !(event.target as HTMLElement).closest(".dropdown")) {
-      this.showExtraContent = false;
-    }
-  }
-  mounted() {
-    document.addEventListener("click", this.clickOutsideHandler);
-  }
-  beforeUnmount() {
-    document.removeEventListener("click", this.clickOutsideHandler);
-  }
-}
+export default class Header extends Vue {}
 </script>
 
 <template>
@@ -59,13 +58,16 @@ export default class Header extends Vue {
         <i :class="['fa', showMenu ? 'fa-times' : 'fa-bars', 'burger-menu-icon']"></i>
       </div>
       <div class="logo" @click="cube">
-        <Header3DLogo2 class="img"></Header3DLogo2>
+<!--        <Header3DLogo2 class="img"></Header3DLogo2>-->
+        <img :src="getHeader2Image" alt="Header Image">
       </div>
       <div class="login" @click="extra">
-        <img :src="getExtraImage" alt="Enter to Extra Page">
+        <img :src="getExtraImage" alt="Enter to Extra Page" title="Enter to Extra Page">
+<!--        <img :src="extraImage" alt="Enter to Extra Page">-->
       </div>
       <div class="search" @click="search">
-        <img :src="getCertifitatesImage" alt="Search certificates...">
+        <img :src="getCertifitatesImage" alt="Search certificates..." title="Search certificates...">
+<!--        <img :src="certifitatesImage" alt="Search certificates...">-->
       </div>
       <language-switcher class="language"></language-switcher>
     </div>
@@ -151,17 +153,24 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    //grid-column-gap: 3rem;
     grid-row-gap: 0;
     grid-auto-flow: column;
     grid-template-areas: "logo login search language";
 
     .logo {
       grid-area: logo;
-      align-items: center;
       align-self: center;
-      justify-content: center;
-      display: flex;
+      justify-self: center;
+      margin-top: 0.3rem;
+      max-width: 100%;
+      max-height: 100%;
+      cursor: pointer;
+      img {
+        width: 3.1rem;
+        height: 3.1rem;
+        //border: 1px black solid;
+        cursor: pointer;
+      }
       .img {
         width: 4rem;
         height: 4rem;
@@ -173,19 +182,17 @@ header {
     .login {
       grid-area: login;
       align-self: center;
-      justify-self: left;
+      justify-self: center;
       margin-top: 0.3rem;
-      //margin: auto 0.2rem auto 0;
-      padding: 0.5rem;
       max-width: 100%;
-      width: 3.1rem;
+      //width: 3.1rem;
       max-height: 100%;
       cursor: pointer;
-
-      a, a:hover, a:focus {
-        border: none;
-        box-shadow: none;
-        text-decoration: none;
+      img {
+        width: 3.1rem;
+        height: 3.1rem;
+        //border: 1px black solid;
+        cursor: pointer;
       }
     }
 
@@ -195,9 +202,15 @@ header {
       justify-self: center;
       margin-top: 0.3rem;
       max-width: 100%;
-      width: 2rem;
+      //width: 2rem;
       max-height: 100%;
       cursor: pointer;
+      img {
+        width: 3.1rem;
+        height: 3.1rem;
+        //border: 1px black solid;
+        cursor: pointer;
+      }
     }
 
     .language {
@@ -258,7 +271,7 @@ header {
 
     .language {
       align-self: center;
-      justify-self: right;
+      justify-self: center;
       border: 1px solid transparent;
       border-radius: 5px;
       font-weight: bold;
@@ -277,11 +290,6 @@ header {
         box-shadow: none;
         text-decoration: none;
       }
-    }
-    .logo {
-      grid-area: logo;
-      justify-self: right;
-      //margin-right: -0.8rem;
     }
   }
   .menu {
