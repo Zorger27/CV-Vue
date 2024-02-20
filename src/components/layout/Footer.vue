@@ -6,12 +6,19 @@ import SocialSharing from "@/components/util/SocialSharing.vue";
   data() {
     return {
       currentYear: new Date().getFullYear(),
-      getFooterLogoImage: require('@/assets/img/footer-logo.svg')
+      logoImages: {
+        normal: require('@/assets/img/footer-logo.svg'),
+        alternative: require('@/assets/img/menu2/footer-logo2.svg'),
+      },
+      currentLogoImage: localStorage.getItem('footerLogoImage') || 'normal',
     };
   },
   methods: {
     cube() {
-      this.$router.push('/extra/graphics/cube');
+      // Переключаем между 'normal' и 'alternative'
+      this.currentLogoImage = this.currentLogoImage === 'normal' ? 'alternative' : 'normal';
+      localStorage.setItem('footerLogoImage', this.currentLogoImage);
+      this.$router.push('/extra/graphics/cubejs');
     },
   },
   components: {SocialSharing},
@@ -24,7 +31,7 @@ export default class Footer extends Vue {
 <template>
   <footer>
     <div class="footer-logo" @click="cube">
-      <img :src="getFooterLogoImage" alt="Footer Logo Image">
+      <img :src="logoImages[currentLogoImage]" alt="Footer Logo Image">
     </div>
     <p class="footer-text">{{ $t('footer.text1') }}
       <b><a href="https://zorger27.github.io" title="CV (Landing Page)" target="_blank">{{ $t('footer.text2') }}
