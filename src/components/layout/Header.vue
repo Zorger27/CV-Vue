@@ -244,6 +244,10 @@ header {
       padding-right: 0;
       margin-right: 0.5rem;
 
+      .logo {
+        justify-self: right;
+      }
+
       .burger-menu {
         display: grid;
         grid-area: burger-menu;
