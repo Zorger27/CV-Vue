@@ -273,17 +273,6 @@ header {
       }
     }
 
-    .language {
-      align-self: center;
-      justify-self: center;
-      border: 1px solid transparent;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: medium;
-      outline: 0 !important;
-      appearance: none;
-    }
-
     .login, .login:hover {
       align-self: center;
       justify-self: center;
