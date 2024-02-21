@@ -168,13 +168,11 @@ header {
       img {
         width: 3.1rem;
         height: 3.1rem;
-        //border: 1px black solid;
         cursor: pointer;
       }
       .img {
         width: 4rem;
         height: 4rem;
-        //border: 1px black solid;
         cursor: pointer;
       }
     }
@@ -185,13 +183,11 @@ header {
       justify-self: center;
       margin-top: 0.3rem;
       max-width: 100%;
-      //width: 3.1rem;
       max-height: 100%;
       cursor: pointer;
       img {
         width: 3.1rem;
         height: 3.1rem;
-        //border: 1px black solid;
         cursor: pointer;
       }
     }
@@ -202,13 +198,11 @@ header {
       justify-self: center;
       margin-top: 0.3rem;
       max-width: 100%;
-      //width: 2rem;
       max-height: 100%;
       cursor: pointer;
       img {
         width: 3.1rem;
         height: 3.1rem;
-        //border: 1px black solid;
         cursor: pointer;
       }
     }
