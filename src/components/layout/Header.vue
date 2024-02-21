@@ -9,8 +9,6 @@ import Header3DLogo2 from "@/components/other/Header3DLogo2.vue";
       showMenu: false,
       showDropdownContent: false,
       showExtraContent: false,
-      // getExtraImage: require('@/assets/img/login4.svg'),
-      // getCertifitatesImage: require('@/assets/img/certifitates.svg')
       getHeader2Image: require('@/assets/img/menu2/header-logo2.svg'),
       getExtraImage: require('@/assets/img/menu2/extra2.svg'),
       getCertifitatesImage: require('@/assets/img/menu2/certifitates2.svg')
@@ -63,11 +61,9 @@ export default class Header extends Vue {}
       </div>
       <div class="login" @click="extra">
         <img :src="getExtraImage" alt="Enter to Extra Page" title="Enter to Extra Page">
-<!--        <img :src="extraImage" alt="Enter to Extra Page">-->
       </div>
       <div class="search" @click="search">
         <img :src="getCertifitatesImage" alt="Search certificates..." title="Search certificates...">
-<!--        <img :src="certifitatesImage" alt="Search certificates...">-->
       </div>
       <language-switcher class="language"></language-switcher>
     </div>
