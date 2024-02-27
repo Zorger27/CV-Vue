@@ -1,24 +1,30 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import SocialSharing from "@/components/util/SocialSharing.vue";
+import { mapGetters } from 'vuex';
 
 @Options({
   data() {
     return {
       currentYear: new Date().getFullYear(),
-      logoImages: {
-        normal: require('@/assets/img/menu2/footer-logo2.svg'),
-        alternative: require('@/assets/img/menu1/footer-logo.svg'),
-      },
-      currentLogoImage: localStorage.getItem('footerLogoImage') || 'normal',
+      // logoImages: {
+      //   normal: require('@/assets/img/menu2/footer-logo2.svg'),
+      //   alternative: require('@/assets/img/menu1/footer-logo.svg'),
+      // },
+      // currentLogoImage: localStorage.getItem('footerLogoImage') || 'normal',
     };
+  },
+  computed: {
+    ...mapGetters({
+      getFooterLogoImage: 'getFooterLogoImage',
+    }),
   },
   methods: {
     cube() {
       // Переключаем между 'normal' и 'alternative'
-      this.currentLogoImage = this.currentLogoImage === 'normal' ? 'alternative' : 'normal';
-      localStorage.setItem('footerLogoImage', this.currentLogoImage);
-      this.$router.push('/extra/graphics/cube');
+      // this.currentLogoImage = this.currentLogoImage === 'normal' ? 'alternative' : 'normal';
+      // localStorage.setItem('footerLogoImage', this.currentLogoImage);
+      // this.$router.push('/extra/graphics/cube');
     },
   },
   components: {SocialSharing},
@@ -31,7 +37,8 @@ export default class Footer extends Vue {
 <template>
   <footer>
     <div class="footer-logo" @click="cube">
-      <img :src="logoImages[currentLogoImage]" alt="Footer Logo Image">
+<!--      <img :src="logoImages[currentLogoImage]" alt="Footer Logo Image">-->
+      <img :src="getFooterLogoImage" alt="Footer Logo Image">
     </div>
     <p class="footer-text">{{ $t('footer.text1') }}
       <b><a href="https://zorger27.github.io" title="CV (Landing Page)" target="_blank">{{ $t('footer.text2') }}

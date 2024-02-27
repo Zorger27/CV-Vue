@@ -2,6 +2,7 @@
 import {Options, Vue} from "vue-class-component";
 import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
 import Header3DLogo2 from "@/components/other/Header3DLogo2.vue";
+import {mapGetters} from "vuex";
 
 @Options({
   data () {
@@ -9,10 +10,16 @@ import Header3DLogo2 from "@/components/other/Header3DLogo2.vue";
       showMenu: false,
       showDropdownContent: false,
       showExtraContent: false,
-      getHeader2Image: require('@/assets/img/menu2/header-logo2.svg'),
-      getExtraImage: require('@/assets/img/menu2/extra2.svg'),
-      getCertifitatesImage: require('@/assets/img/menu2/certifitates2.svg')
+      // headerImage: require('@/assets/img/menu2/header-logo2.svg'),
+      // extraImage: require('@/assets/img/menu2/extra2.svg'),
+      certifiсatesImage: require('@/assets/img/menu2/certifiсates2.svg')
     }
+  },
+  computed: {
+    ...mapGetters({
+      getHeaderImage: 'getHeaderImage',
+      getExtraImage: 'getExtraImage',
+    }),
   },
   methods: {
     hideMenu() {
@@ -57,13 +64,13 @@ export default class Header extends Vue {}
       </div>
       <div class="logo" @click="cube">
 <!--        <Header3DLogo2 class="img"></Header3DLogo2>-->
-        <img :src="getHeader2Image" alt="Header Image">
+        <img :src="getHeaderImage" alt="Header Image">
       </div>
       <div class="login" @click="extra">
         <img :src="getExtraImage" alt="Enter to Extra Page" title="Enter to Extra Page">
       </div>
       <div class="search" @click="search">
-        <img :src="getCertifitatesImage" alt="Search certificates..." title="Search certificates...">
+        <img :src="certifiсatesImage" alt="Search certificates..." title="Search certificates...">
       </div>
       <language-switcher class="language"></language-switcher>
     </div>
