@@ -19,11 +19,11 @@ const getters = {
       ? require('@/assets/img/menu2/extra2.svg')
       : require('@/assets/img/menu1/login4.svg');
   },
-  // getCertificatesImage: (state) => {
-  //   return state.currentView === 'normal'
-  //     ? require('@/assets/img/menu2/certificates2.svg')
-  //     : require('@/assets/img/menu1/certificates.svg');
-  // },
+  getCertificatesImage: (state) => {
+    return state.currentView === 'normal'
+      ? require('@/assets/img/menu2/certif2.svg')
+      : require('@/assets/img/menu1/certif1.svg');
+  },
 };
 
 const mutations = {

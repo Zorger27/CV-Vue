@@ -10,15 +10,13 @@ import {mapGetters} from "vuex";
       showMenu: false,
       showDropdownContent: false,
       showExtraContent: false,
-      // headerImage: require('@/assets/img/menu2/header-logo2.svg'),
-      // extraImage: require('@/assets/img/menu2/extra2.svg'),
-      certifiсatesImage: require('@/assets/img/menu2/certifiсates2.svg')
     }
   },
   computed: {
     ...mapGetters({
       getHeaderImage: 'getHeaderImage',
       getExtraImage: 'getExtraImage',
+      getCertificatesImage: 'getCertificatesImage',
     }),
   },
   methods: {
@@ -70,7 +68,7 @@ export default class Header extends Vue {}
         <img :src="getExtraImage" alt="Enter to Extra Page" title="Enter to Extra Page">
       </div>
       <div class="search" @click="search">
-        <img :src="certifiсatesImage" alt="Search certificates..." title="Search certificates...">
+        <img :src="getCertificatesImage" alt="Search certificates..." title="Search certificates...">
       </div>
       <language-switcher class="language"></language-switcher>
     </div>
