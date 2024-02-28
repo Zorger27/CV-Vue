@@ -23,6 +23,10 @@ import {mapActions, mapGetters } from 'vuex';
     ...mapActions({
       toggleImages: 'toggleImages',
     }),
+    cubejs() {
+      this.toggleImages();
+      // this.$router.push('/extra/graphics/cubejs');
+    },
     // cubejs() {
       // Переключаем между 'normal' и 'alternative'
       // this.currentLogoImage = this.currentLogoImage === 'normal' ? 'alternative' : 'normal';
@@ -39,9 +43,7 @@ export default class Footer extends Vue {
 
 <template>
   <footer>
-    <div class="footer-logo" @click="toggleImages">
-<!--        <div class="footer-logo" @click="cubejs">-->
-<!--      <img :src="logoImages[currentLogoImage]" alt="Footer Logo Image">-->
+    <div class="footer-logo" @click="cubejs">
       <img :src="getFooterLogoImage" alt="Footer Logo Image">
     </div>
     <p class="footer-text">{{ $t('footer.text1') }}

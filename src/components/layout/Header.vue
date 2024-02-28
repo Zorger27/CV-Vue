@@ -1,7 +1,7 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
-import Header3DLogo2 from "@/components/other/Header3DLogo2.vue";
+// import Header3DLogo2 from "@/components/other/Header3DLogo2.vue";
 import {mapGetters} from "vuex";
 
 @Options({
@@ -38,7 +38,7 @@ import {mapGetters} from "vuex";
     extra() {
       this.$router.push('/extra');
     },
-    cube() {
+    cube3d() {
       this.$router.push('/extra/graphics/cube3d');
     },
   },
@@ -48,7 +48,7 @@ import {mapGetters} from "vuex";
   beforeUnmount() {
     document.removeEventListener("click", this.clickOutsideHandler);
   },
-  components: {languageSwitcher, Header3DLogo2},
+  components: {languageSwitcher},
 })
 
 export default class Header extends Vue {}
@@ -60,9 +60,9 @@ export default class Header extends Vue {}
       <div class="burger-menu" @click="showMenu = !showMenu">
         <i :class="['fa', showMenu ? 'fa-times' : 'fa-bars', 'burger-menu-icon']"></i>
       </div>
-      <div class="logo" @click="cube">
+      <div class="logo" @click="cube3d">
 <!--        <Header3DLogo2 class="img"></Header3DLogo2>-->
-        <img :src="getHeaderImage" alt="Header Image">
+          <img :src="getHeaderImage" alt="Header Image">
       </div>
       <div class="login" @click="extra">
         <img :src="getExtraImage" alt="Enter to Extra Page" title="Enter to Extra Page">
