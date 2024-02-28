@@ -7,11 +7,6 @@ import {mapActions, mapGetters } from 'vuex';
   data() {
     return {
       currentYear: new Date().getFullYear(),
-      // logoImages: {
-      //   normal: require('@/assets/img/menu2/footer-logo2.svg'),
-      //   alternative: require('@/assets/img/menu1/footer-logo.svg'),
-      // },
-      // currentLogoImage: localStorage.getItem('footerLogoImage') || 'normal',
     };
   },
   computed: {
@@ -27,12 +22,6 @@ import {mapActions, mapGetters } from 'vuex';
       this.toggleImages();
       // this.$router.push('/extra/graphics/cubejs');
     },
-    // cubejs() {
-      // Переключаем между 'normal' и 'alternative'
-      // this.currentLogoImage = this.currentLogoImage === 'normal' ? 'alternative' : 'normal';
-      // localStorage.setItem('footerLogoImage', this.currentLogoImage);
-      // this.$router.push('/extra/graphics/cube');
-    // },
   },
   components: {SocialSharing},
 })
