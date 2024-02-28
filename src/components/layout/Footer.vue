@@ -1,7 +1,7 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import SocialSharing from "@/components/util/SocialSharing.vue";
-import { mapGetters } from 'vuex';
+import {mapActions, mapGetters } from 'vuex';
 
 @Options({
   data() {
@@ -20,12 +20,15 @@ import { mapGetters } from 'vuex';
     }),
   },
   methods: {
-    cube() {
+    ...mapActions({
+      toggleImages: 'toggleImages',
+    }),
+    // cubejs() {
       // Переключаем между 'normal' и 'alternative'
       // this.currentLogoImage = this.currentLogoImage === 'normal' ? 'alternative' : 'normal';
       // localStorage.setItem('footerLogoImage', this.currentLogoImage);
       // this.$router.push('/extra/graphics/cube');
-    },
+    // },
   },
   components: {SocialSharing},
 })
@@ -36,7 +39,8 @@ export default class Footer extends Vue {
 
 <template>
   <footer>
-    <div class="footer-logo" @click="cube">
+    <div class="footer-logo" @click="toggleImages">
+<!--        <div class="footer-logo" @click="cubejs">-->
 <!--      <img :src="logoImages[currentLogoImage]" alt="Footer Logo Image">-->
       <img :src="getFooterLogoImage" alt="Footer Logo Image">
     </div>
