@@ -12,7 +12,6 @@ interface ExchangeRate {
   data() {
     return {
       rates: [] as ExchangeRate[],
-      tableView: true
     }
   },
   created() {
@@ -21,27 +20,18 @@ interface ExchangeRate {
   methods: {
     async fetchExchangeRates() {
       try {
-        const response = await axios.get<ExchangeRate[]>(
-          'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'
-        )
-        this.rates = response.data.filter(
-          (rate) =>
-            rate.cc === 'USD' ||
-            rate.cc === 'EUR' ||
-            rate.cc === 'GBP' ||
-            rate.cc === 'AED' ||
-            rate.cc === 'TRY' ||
-            rate.cc === 'XAU' ||
-            rate.cc === 'XAG' ||
-            rate.cc === 'XPT' ||
-            rate.cc === 'XPD'
-        )
+        const response = await axios.get<ExchangeRate[]>("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json");
+        // Оставляем только выбранные валюты
+        this.rates = response.data.filter(rate => ["USD", "EUR", "GBP", "AED", "TRY", "XAU", "XAG", "XPT", "XPD"].includes(rate.cc));
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
     },
-    changeView() {
-      this.tableView = !this.tableView;
+  },
+  props: {
+    tableView: {
+      type: Boolean,
+      required: true
     }
   },
   components: {},
@@ -50,11 +40,6 @@ export default class NBURates extends Vue {}
 </script>
 
 <template>
-  <h1 class="bank">
-    <a href="https://portal.bank.gov.ua/uk/8" title="In more detail..." target="_blank">
-      {{ $t('extra.exchange.nbu') }}
-    </a> <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
-  </h1>
   <div v-if="tableView" class="table">
     <table>
       <thead>
@@ -85,17 +70,9 @@ export default class NBURates extends Vue {}
 <style lang="scss" scoped>
 .bank {
   font-size: 2.5rem;
-  color: black;
   margin: 0;
-  a {text-decoration: none;}
+  a {text-decoration: none; color: rebeccapurple;}
   a:hover {color: cornflowerblue;}
-}
-.table {
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  margin-bottom: 1rem;
-  .code {color: darkgoldenrod;}
-  .price {text-align: center;}
 }
 .container {
   margin-bottom: 1rem;
@@ -120,7 +97,6 @@ export default class NBURates extends Vue {}
   }
 }
 
-
 @media(max-width: 1020px) {
   .bank {font-size: 2rem;}
   .rates {
@@ -130,7 +106,6 @@ export default class NBURates extends Vue {}
   }
 }
 @media (max-width: 768px) {
-  .table {margin-bottom: 1rem;}
   .bank {font-size: 1.6rem;}
   .container {
     margin-bottom: 0.5rem;
