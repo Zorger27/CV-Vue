@@ -154,7 +154,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
 
