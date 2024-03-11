@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "axios": "^1.6.2",
-    "core-js": "^3.8.3",
+    "core-js": "^3.36.0",
     "three": "^0.162.0",
     "three-orbit-controls": "^82.1.0",
     "vue": "^3.4.21",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@types/three": "^0.162.0",
-    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
