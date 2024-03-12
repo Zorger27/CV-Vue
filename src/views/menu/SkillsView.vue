@@ -10,9 +10,9 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   data() {
     return {
       sliderImages: [
-        require('@/assets/certificates/other/07_D0000952361.webp'),
+        require('@/assets/certificates/other/08_D0000952361.webp'),
         require('@/assets/certificates/pm/03_Critical_Thinking.webp'),
-        require('@/assets/certificates/other/08_TP17348317.webp'),
+        require('@/assets/certificates/other/09_TP17348317.webp'),
         require('@/assets/certificates/other/01_TP03316433.webp'),
         require('@/assets/certificates/other/02_TP18727720.webp')
       ],

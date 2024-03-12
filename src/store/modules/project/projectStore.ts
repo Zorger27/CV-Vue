@@ -233,7 +233,7 @@ const state = {
         id: 20,
         title_en: "Exchange rates from NBU",
         title_ua: "Курси валют від НБУ",
-        title_es: "Tipos de cambio por BNU",
+        title_es: "Tipos de cambio del BNU",
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
