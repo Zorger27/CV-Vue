@@ -231,13 +231,13 @@ const state = {
       },
       {
         id: 20,
-        title_en: "Exchange rates by NBU",
+        title_en: "Exchange rates from NBU",
         title_ua: "Курси валют від НБУ",
         title_es: "Tipos de cambio por BNU",
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Currencies",
         demolink: "https://currencies-zeta.vercel.app"
       },
