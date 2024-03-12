@@ -39,6 +39,18 @@ const state = {
       },
       {
         id: 4,
+        title_en: "Node.js Essential",
+        title_ua: "Node.js Базовий",
+        title_es: "Node.js Básico",
+        regnumber: "TP97104275",
+        grade_en: "1000 / 1000",
+        grade_ua: "1000 / 1000",
+        grade_es: "1000 / 1000",
+        examdate: "12.03.2024",
+        image: "https://testprovider.com/ru/search-certificate/tp97104275",
+      },
+      {
+        id: 5,
         title_en: "Git basics 2016",
         title_ua: "Основи Git 2016",
         title_es: "Fundamentos de Git de 2016",
@@ -50,7 +62,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp29316270",
       },
       {
-        id: 5,
+        id: 6,
         title_en: "Git basics 2020",
         title_ua: "Основи Git 2020",
         title_es: "Fundamentos de Git de 2020",
@@ -62,7 +74,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp37589708",
       },
       {
-        id: 6,
+        id: 7,
         title_en: "Docker",
         title_ua: "Docker",
         title_es: "Docker",
@@ -74,7 +86,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp56750315",
       },
       {
-        id: 7,
+        id: 8,
         title_en: "Digigram 2.0 for citizens",
         title_ua: "Цифрограм 2.0 для громадян",
         title_es: "Digigram 2.0 para los ciudadanos",
@@ -86,7 +98,7 @@ const state = {
         image: "https://osvita.diia.gov.ua/certificate-check/D0000952361",
       },
       {
-        id: 8,
+        id: 9,
         title_en: "Basic software developer training",
         title_ua: "Базова підготовка розробника ПЗ",
         title_es: "Capacitación básica para desarrolladores de software",
@@ -98,7 +110,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp17348317",
       },
       {
-        id: 9,
+        id: 10,
         title_en: "Google Display Network",
         title_ua: "Медійна мережа Google",
         title_es: "Red de Display de Google",
@@ -110,7 +122,7 @@ const state = {
         image: "/assets/certificates/other/09_Google_Display_Network_Ads.webp",
       },
       {
-        id: 10,
+        id: 11,
         title_en: "Google Shopping Campaign",
         title_ua: "Торгові компанії Google",
         title_es: "Campaña de Google Shopping",
@@ -122,7 +134,7 @@ const state = {
         image: "/assets/certificates/other/10_Google_Shopping_Campaign.webp",
       },
       {
-        id: 11,
+        id: 12,
         title_en: "Google Search Campaign",
         title_ua: "Пошукові компанії Google",
         title_es: "Campaña de búsqueda de Google",
@@ -134,7 +146,7 @@ const state = {
         image: "/assets/certificates/other/11_Google_Search_Campaign.webp",
       },
       {
-        id: 12,
+        id: 13,
         title_en: "Google Video Campaign",
         title_ua: "Відеокомпанії Google",
         title_es: "Campaña de Google Video",
