@@ -107,7 +107,7 @@ const state = {
         id: 18,
         title: "NBU API",
         version: "",
-        url: "https://portal.bank.gov.ua/uk/8"
+        url: "https://bank.gov.ua/ua/open-data/api-dev"
       },
       {
         id: 19,
