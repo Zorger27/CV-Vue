@@ -47,9 +47,9 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     shouldApplyAdditionalStyles() {return !this.isCodersrankSkillsChartVisible && (!this.isSmallScreen || !this.isMediumScreen);},
     selectedOther() {
       return [
-        otherStore.state.otherStore[6],
-        pmStore.state.pmStore[2],
         otherStore.state.otherStore[7],
+        pmStore.state.pmStore[2],
+        otherStore.state.otherStore[8],
         otherStore.state.otherStore[0],
         otherStore.state.otherStore[1]
       ];
