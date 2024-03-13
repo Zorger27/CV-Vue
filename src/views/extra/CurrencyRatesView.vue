@@ -90,10 +90,12 @@ export default class CurrencyRates extends Vue {
 
   .bank {
     font-size: 2.5rem;
+    background: transparent;
     a {text-decoration: none;color: rebeccapurple;}
     a:hover {color: cornflowerblue;}
   }
   .creep3d {
+    background: transparent;
     max-height: 30vh;
     max-width: 100%;
     position: relative;
@@ -104,7 +106,7 @@ export default class CurrencyRates extends Vue {
   }
 
   .creep {
-    background: none;
+    background: transparent;
   }
 }
 

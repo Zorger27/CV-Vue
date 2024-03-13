@@ -40,7 +40,7 @@ export default {
       loader.load('https://threejs.org/examples/fonts/droid/droid_serif_regular.typeface.json', (font) => {
         const geometry = new TextGeometry(currencyText, {
           font: font,
-          size: 0.2,
+          size: 0.1,
           height: 0.01,
         });
 
@@ -51,6 +51,11 @@ export default {
         textureLoader.load('/assets/img/cube3/cube3-15.webp', function (texture) {
           const material = new THREE.MeshBasicMaterial({ map: texture });
           const currencyObject = new THREE.Mesh(geometry, material);
+
+          const RotationAngleY = -27; // Угол в градусах
+          const RotationAngleX = 5; // Угол в градусах
+          currencyObject.rotation.y = THREE.MathUtils.degToRad(RotationAngleY)
+          currencyObject.rotation.x = THREE.MathUtils.degToRad(RotationAngleX)
 
           // Выставляем позицию с учетом предыдущего текста и добавляем "пробелы" между ними
           currencyObject.position.x = nextPositionX;
@@ -67,7 +72,7 @@ export default {
     const init = () => {
       scene = new THREE.Scene();
       camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      camera.position.z = 2;
+      camera.position.z = 2.5;
       renderer = new THREE.WebGLRenderer({alpha: true});
       // renderer = new THREE.WebGLRenderer();
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -105,6 +110,12 @@ export default {
         }
       });
 
+      // Вращение всей сцены
+      const sceneRotationAngle = 20; // Угол в градусах
+      scene.rotation.x = THREE.MathUtils.degToRad(sceneRotationAngle);
+
+      // scene.rotation.x += 0.01;
+
       renderer.render(scene, camera);
     };
 
@@ -118,9 +129,9 @@ export default {
 
     const updateCameraPosition = () => {
       if (window.innerWidth <= 768) {
-        camera.position.z = 2.5;
+        camera.position.z = 1.3;
       } else {
-        camera.position.z = 1;
+        camera.position.z = 1.3;
       }
     };
 
@@ -147,19 +158,20 @@ export default {
 </script>
 
 <template>
-  <div class="container" v-show="cripView3d">
+  <div class="inner" v-show="cripView3d">
     <div class="marquee" ref="marquee"></div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.container {
+.inner {
   //margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
 
   .marquee {
     overflow: hidden;
+    background: none;
   }
 }
 </style>
