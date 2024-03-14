@@ -45,9 +45,9 @@ export default class NBURates extends Vue {}
       <thead>
       <tr>
         <th>№</th>
-        <th>{{ $t('code') }}</th>
-        <th>{{ $t('currency') }}</th>
-        <th>{{ $t('rate') }}</th>
+        <th>{{ $t('extra.exchange.code') }}</th>
+        <th>{{ $t('extra.exchange.currency') }}</th>
+        <th>{{ $t('extra.exchange.rate') }}</th>
       </tr>
       </thead>
       <tbody>
@@ -62,7 +62,7 @@ export default class NBURates extends Vue {}
   </div>
   <div v-else class="inner">
     <div v-for="(rate, index) in rates" :key="index" class="rates">
-      <span class="name">{{ rate.txt }}</span>=<span class="price">{{ rate.rate.toFixed(2) }}</span>{{ $t('uah') }}
+      <span class="name">{{ rate.txt }}</span>=<span class="price">{{ rate.rate.toFixed(2) }}</span>{{ $t('extra.exchange.uah') }}
     </div>
   </div>
 </template>

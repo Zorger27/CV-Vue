@@ -124,7 +124,7 @@ export default class NBURatesCreepJS extends Vue {}
     <div ref="marquee" class="marquee">
       <div class="content">
         <div v-for="(rate, index) in rates" :key="`rate-${index}`" class="rates">
-          <span class="name">{{ rate.txt }}</span><span class="eql">=</span><span class="price">{{ rate.rate.toFixed(2) }}</span><span class="uah">{{ $t('uah') }}</span>
+          <span class="name">{{ rate.txt }}</span><span class="eql">=</span><span class="price">{{ rate.rate.toFixed(2) }}</span><span class="uah">{{ $t('extra.exchange.uah') }}</span>
         </div>
       </div>
     </div>
