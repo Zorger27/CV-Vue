@@ -11,7 +11,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   data() {
     return {
       tableView: false,
-      cripView3d: false,
+      cripView3d: true,
       cripView: true,
       speed: 1,
     }
