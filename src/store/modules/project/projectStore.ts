@@ -165,7 +165,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/CV-Vue",
         demolink: "https://Zorin.Expert"
       },
