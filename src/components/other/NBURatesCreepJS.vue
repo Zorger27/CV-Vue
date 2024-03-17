@@ -23,8 +23,9 @@ interface ExchangeRate {
       this.$nextTick(() => {
         const content = this.$refs.marquee.querySelector('.content');
         if (content) {
-          // Дублирование содержимого для создания непрерывного эффекта
-          content.innerHTML += content.innerHTML;
+          // Дублируем содержимое
+          const contentHTML = content.innerHTML;
+          content.innerHTML += contentHTML;
           // Пересчитываем ширину после дублирования
           this.calculateWidths();
         }
@@ -38,9 +39,6 @@ interface ExchangeRate {
     window.removeEventListener("resize", this.calculateWidths);
   },
   watch: {
-    // speed() {
-    //   this.animateMarquee();
-    // },
     speed(newSpeed: number) {
       // Обрабатываем изменение скорости
       this.updateAnimationSpeed(newSpeed);
@@ -67,7 +65,8 @@ interface ExchangeRate {
       if (marquee && content) {
         this.marqueeWidth = marquee.offsetWidth;
         this.contentWidth = content.offsetWidth;
-        this.animationOffset = this.marqueeWidth / 2;
+        // Устанавливаем начальное смещение таким образом, чтобы вторая копия была частично видима в конце первой копии
+        this.animationOffset = this.contentWidth;
       }
     },
     setupAnimationListener() {
@@ -76,17 +75,17 @@ interface ExchangeRate {
       this.animateMarquee();
     },
     animateMarquee() {
-      // Остановка предыдущего интервала перед созданием нового
       if (this.animationInterval) {
         clearInterval(this.animationInterval);
       }
       this.animationInterval = setInterval(() => {
-        const fullContentWidth = this.contentWidth * 2;
-
-        if (this.animationOffset >= fullContentWidth) {
+        // Проверяем, проскроллена ли полностью первая копия содержимого
+        if (this.animationOffset >= this.contentWidth) {
+          // Если да, сбрасываем смещение на начало
           this.animationOffset = 0;
         } else {
-          this.animationOffset += this.speed; // Используем this.speed для актуального значения
+          // Иначе продолжаем анимацию
+          this.animationOffset += this.speed;
         }
 
         const content = this.$refs.marquee?.querySelector(".content");
