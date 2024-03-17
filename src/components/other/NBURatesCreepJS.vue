@@ -49,10 +49,15 @@ interface ExchangeRate {
       try {
         const response = await axios.get<ExchangeRate[]>("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json");
         // Оставляем только выбранные валюты и удваиваем данные для создания непрерывного эффекта
-        this.rates = response.data
-          .filter(rate => ["USD", "EUR", "GBP", "AED", "TRY", "XAU", "XAG", "XPT", "XPD"].includes(rate.cc))
-          .concat(response.data.filter(rate => ["USD", "EUR", "GBP", "AED", "TRY", "XAU", "XAG", "XPT", "XPD"].includes(rate.cc)));
-        // this.rates = response.data.concat(response.data);
+        // this.rates = response.data
+        //   .filter(rate => ["USD", "EUR", "GBP", "AED", "TRY", "XAU", "XAG", "XPT", "XPD"].includes(rate.cc))
+        //   .concat(response.data.filter(rate => ["USD", "EUR", "GBP", "AED", "TRY", "XAU", "XAG", "XPT", "XPD"].includes(rate.cc)));
+        // // this.rates = response.data.concat(response.data);
+
+        // let filteredRates = response.data.filter(rate => ["USD", "EUR", "GBP", "AED", "TRY", "XAU", "XAG", "XPT", "XPD"].includes(rate.cc));
+        // this.rates = Array(8).fill(filteredRates).flat();
+        this.rates = Array(8).fill(response.data).flat();
+
         await this.$nextTick(this.calculateWidths);
         this.setupAnimationListener();
       } catch (error) {
@@ -169,6 +174,7 @@ export default class NBURatesCreepJS extends Vue {}
         }
         .uah {
           color: black;
+          margin-left: 3px;
           //text-shadow: 2px 2px 4px green;
         }
       }
