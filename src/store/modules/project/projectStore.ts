@@ -241,6 +241,18 @@ const state = {
         sourcelink: "https://github.com/Zorger27/Currencies",
         demolink: "https://currencies-zeta.vercel.app"
       },
+      {
+        id: 21,
+        title_en: "Cryptocurrencies powered by CoinGecko",
+        title_ua: "Криптовалюти на базі CoinGecko",
+        title_es: "Criptomonedas impulsadas por CoinGecko",
+        type_en: "Single page application",
+        type_ua: "Односторінковий додаток",
+        type_es: "Aplicación de una sola página",
+        techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        sourcelink: "https://github.com/Zorger27/Cryptocurrencies",
+        demolink: "https://cryptocurrencies-gold.vercel.app"
+      },
     ]
 };
 const getters = {};
