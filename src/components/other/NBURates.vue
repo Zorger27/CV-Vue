@@ -68,11 +68,8 @@ export default class NBURates extends Vue {}
 </template>
 
 <style lang="scss" scoped>
-.bank {
-  font-size: 2.5rem;
-  margin: 0;
-  a {text-decoration: none; color: rebeccapurple;}
-  a:hover {color: cornflowerblue;}
+.table {
+  background-color: white;
 }
 .inner {
   margin-bottom: 1rem;
@@ -98,7 +95,6 @@ export default class NBURates extends Vue {}
 }
 
 @media(max-width: 1020px) {
-  .bank {font-size: 2rem;}
   .inner {
     .rates {
       font-size: 1.6rem;
@@ -108,7 +104,9 @@ export default class NBURates extends Vue {}
   }
 }
 @media (max-width: 768px) {
-  .bank {font-size: 1.6rem;}
+  .table {
+    margin-bottom: 0.7rem;
+  }
   .inner {
     margin-bottom: 0.5rem;
     .rates {
