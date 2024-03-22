@@ -54,8 +54,8 @@ export default class Projects extends Vue {
 <template>
   <div class="projects">
     <h1>{{ $t('projects.title') }}
-      <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
-      <i @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-arrow-alt-circle-up' : 'fa-arrow-alt-circle-down']"></span></i>
+      <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
+        @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-arrow-alt-circle-up' : 'fa-arrow-alt-circle-down']"></span></i>
       <!--      <i @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up' ]"></span></i>-->
       <!--      <i @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-arrow-down' : 'fa-arrow-up' ]"></span></i>-->
     </h1>
