@@ -53,10 +53,10 @@ export default class CurrencyRates extends Vue {
     <h1 class="bank">
       <a href="https://bank.gov.ua/ua/open-data/api-dev" title="In more detail..." target="_blank">
         {{ $t('extra.exchange.nbu') }}
-      </a> <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
-      <i @click="changeCrip3d"><span :class="['fa', cripView3d ? 'fa-gift' : 'fa-yin-yang']"></span></i> <i
-      @click="changeCrip"> <span :class="['fa', cripView ? 'fa-check-circle' : 'fa-sack-dollar']"></span></i> <input
-      v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2" />
+      </a> <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
+      @click="changeCrip3d"><span :class="['fa', cripView3d ? 'fa-yin-yang' : 'fa-sack-dollar']"></span></i> <i
+      @click="changeCrip"> <span :class="['fa', cripView ? 'fa-face-grin-stars' : 'fa-wallet']"></span></i> <input
+      v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2"/>
     </h1>
     <div class="creep3d">
       <NBURatesCreep3d :crip-view3d="cripView3d"></NBURatesCreep3d>

@@ -102,20 +102,22 @@ h1 {text-align: center;}
 }
 .attention {color: #a20909;}
 .attention:hover {color: red;}
+
 .fa, .fas {cursor: pointer;}
-.fa.fa-th {color: deepskyblue; margin-right: 0.5rem;}
-.fa.fa-list {color: darkgoldenrod; margin-right: 0.5rem;}
-.fa.fa-atom {color: darkgoldenrod;}
-.fa.fa-smile-wink {color: darkgoldenrod;}
-.fa.fa-smile {color: darkgoldenrod;}
+.fa.fa-th {color: deepskyblue;}
+.fa.fa-face-grin-stars {color: darkgoldenrod;}
+.fa.fa-list {color: darkgoldenrod;}
 .fa.fa-hat-wizard {color: darkgoldenrod;}
-.fa.fa-sack-dollar {color: darkgoldenrod;}
 .fa.fa-yin-yang {color: darkgoldenrod;}
+.fas.fa-arrow-alt-circle-down {color: mediumvioletred;}
 .fa.fa-birthday-cake {color: mediumvioletred;}
 .fa.fa-gift {color: mediumvioletred;}
-.fas.fa-arrow-alt-circle-down {color: mediumvioletred;}
 .fas.fa-arrow-alt-circle-up {color: lightseagreen;}
 .fa.fa-check-circle {color: lightseagreen;}
+.fa.fa-wallet {color: lightseagreen;}
+.fa.fa-sack-dollar {color: lightseagreen;}
+.fa.fa-bitcoin-sign {color: lightseagreen;}
+
 
 .table {
   display: inline-flex;
