@@ -2,19 +2,27 @@
 import {Options, Vue} from "vue-class-component";
 import axios from "axios";
 
+interface CryptoResponse {
+  [id: string]: {
+    usd: number;
+  };
+}
 @Options({
   data() {
     return {
       cryptos: [
-        {id: 'bitcoin', name: 'Bitcoin', url: 'https://www.coingecko.com/en/coins/bitcoin', price: 0},
-        {id: 'ethereum', name: 'Ethereum', url: 'https://www.coingecko.com/en/coins/ethereum', price: 0},
-        {id: 'litecoin', name: 'Litecoin', url: 'https://www.coingecko.com/en/coins/litecoin', price: 0},
-        {id: 'tether', name: 'Tether', url: 'https://www.coingecko.com/en/coins/tether', price: 0},
-        {id: 'avalanche-2', name: 'Avalanche', url: 'https://www.coingecko.com/en/coins/avalanche', price: 0},
-        {id: 'filecoin', name: 'Filecoin', url: 'https://www.coingecko.com/en/coins/filecoin', price: 0},
-        {id: 'bitcoin-cash', name: 'Bitcoin Cash', url: 'https://www.coingecko.com/en/coins/bitcoin-cash', price: 0},
-        {id: 'binancecoin', name: 'BNB', url: 'https://www.coingecko.com/en/coins/bnb', price: 0},
-        {id: 'dogecoin', name: 'Dogecoin', url: 'https://www.coingecko.com/en/coins/dogecoin', price: 0},
+        { id: 'bitcoin', name: 'Bitcoin', url: 'https://www.coingecko.com/en/coins/bitcoin', price: 0 },
+        { id: 'ethereum', name: 'Ethereum', url: 'https://www.coingecko.com/en/coins/ethereum', price: 0 },
+        { id: 'litecoin', name: 'Litecoin', url: 'https://www.coingecko.com/en/coins/litecoin', price: 0 },
+        { id: 'tether', name: 'Tether', url: 'https://www.coingecko.com/en/coins/tether', price: 0 },
+        { id: 'avalanche-2', name: 'Avalanche', url: 'https://www.coingecko.com/en/coins/avalanche', price: 0 },
+        { id: 'filecoin', name: 'Filecoin', url: 'https://www.coingecko.com/en/coins/filecoin', price: 0 },
+        { id: 'bitcoin-cash', name: 'Bitcoin Cash', url: 'https://www.coingecko.com/en/coins/bitcoin-cash', price: 0 },
+        { id: 'binancecoin', name: 'BNB', url: 'https://www.coingecko.com/en/coins/bnb', price: 0 },
+        { id: 'dogecoin', name: 'Dogecoin', url: 'https://www.coingecko.com/en/coins/dogecoin', price: 0 },
+        { id: 'polkadot', name: 'Polkadot', url: 'https://www.coingecko.com/en/coins/polkadot', price: 0 },
+        { id: 'chainlink', name: 'Chainlink', url: 'https://www.coingecko.com/en/coins/chainlink', price: 0 },
+        { id: 'stellar', name: 'Stellar', url: 'https://www.coingecko.com/en/coins/stellar', price: 0 },
       ],
     };
   },
@@ -23,22 +31,19 @@ import axios from "axios";
     this.fetchCryptoRates();
   },
   methods: {
-    fetchCryptoRates() {
-      // Получаем данные о курсах криптовалют через API CoinGecko
-      axios
-        .get(
-          'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,litecoin,tether,avalanche-2,filecoin,bitcoin-cash,binancecoin,dogecoin&vs_currencies=usd'
-        )
-        .then((response) => {
-          // Обновляем курсы криптовалют в нашем компоненте
-          this.cryptos.forEach((crypto) => {
-            crypto.price = response.data[crypto.id].usd;
-          });
-        })
-        .catch((error) => {
-          console.error(error);
+    async fetchCryptoRates() {
+      try {
+        const response = await axios.get<CryptoResponse>('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,litecoin,tether,avalanche-2,filecoin,bitcoin-cash,binancecoin,dogecoin,polkadot,chainlink,stellar&vs_currencies=usd');
+        this.cryptos.forEach((crypto: {id: string; name: string; url: string; price: number; }) => {
+          const cryptoData = response.data[crypto.id];
+          if (cryptoData && cryptoData.usd) {
+            crypto.price = cryptoData.usd;
+          }
         });
-    },
+      } catch (error) {
+        console.error(error);
+      }
+    }
   },
   props: {
     tableView: {
@@ -48,8 +53,7 @@ import axios from "axios";
   },
   components: {},
 })
-export default class Cryptocurrencies extends Vue {
-}
+export default class Cryptocurrencies extends Vue {}
 </script>
 
 <template>
@@ -73,26 +77,15 @@ export default class Cryptocurrencies extends Vue {
     </table>
   </div>
   <div v-else class="container">
-    <div v-for="(crypto, index) in cryptos" :key="crypto.id" class="crypto">
+    <div v-for="(crypto) in cryptos" :key="crypto.id" class="crypto">
       <a :href="crypto.url" title="In more detail..." target="_blank">
-        <span class="name">{{ crypto.name }}</span>=<span class="price">{{ crypto.price }}</span>{{ $t('extra.exchange.usd') }}
+        <span class="name">{{ crypto.name }}</span><span class="eql">=</span><span class="price">{{ crypto.price }}</span><span class="usd">{{ $t('extra.exchange.usd') }}</span>
       </a>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.table {
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  margin-bottom: 1rem;
-  .name {
-    width: 20rem;
-  }
-  .price {
-    width: 16rem;
-  }
-}
 .container {
   margin-bottom: 1rem;
   .crypto {
@@ -111,7 +104,9 @@ export default class Cryptocurrencies extends Vue {
       margin-right: 5px;
       color: deepskyblue;
     }
-
+    .eql, .usd {
+      color: rebeccapurple;
+    }
     .price {
       margin-right: 5px;
       margin-left: 5px;

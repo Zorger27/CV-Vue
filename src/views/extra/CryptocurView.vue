@@ -2,13 +2,18 @@
 import {Options, Vue} from "vue-class-component";
 import CurrentDate from "@/components/util/CurrentDate.vue";
 import Cryptocurrencies from "@/components/other/Cryptocurrencies.vue";
+import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
+import CryptosCreep from "@/components/other/CryptosCreep.vue";
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
 @Options({
   mixins: [openGraphMixin],
   data() {
     return {
-      tableView: true
+      tableView: false,
+      cripView: true,
+      cripView3d: false,
+      speed: 1,
     }
   },
   mounted() {
@@ -25,9 +30,15 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   methods: {
     changeView() {
       this.tableView = !this.tableView;
-    }
+    },
+    changeCrip() {
+      this.cripView = !this.cripView;
+    },
+    changeCrip3d() {
+      this.cripView3d = !this.cripView3d;
+    },
   },
-  components: {CurrentDate, Cryptocurrencies},
+  components: {CryptosCreep, CryptosCreep3d, CurrentDate, Cryptocurrencies},
 })
 export default class Cryptocur extends Vue {
 }
@@ -39,16 +50,22 @@ export default class Cryptocur extends Vue {
       <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('extra.cryptocur.title') }}
-      <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
     </h1>
     <line></line>
-    <h2>{{ $t('extra.cryptocur.h1') }} <a href="https://www.coingecko.com" target="_blank">CoinGecko</a></h2>
-    <div>
-      <CurrentDate></CurrentDate>
+    <CurrentDate></CurrentDate>
+    <h1 class="bank"> {{ $t('extra.cryptocur.h1') }}
+      <a href="https://www.coingecko.com" title="In more detail..." target="_blank">
+        CoinGecko
+      </a> <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i><i
+        @click="changeCrip3d"><span :class="['fa', cripView3d ? 'fa-gift' : 'fa-yin-yang']"></span></i> <i
+        @click="changeCrip"> <span :class="['fa', cripView ? 'fa-check-circle' : 'fa-sack-dollar']"></span></i> <input
+        v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2" />
+    </h1>
+    <div class="creep3d">
+      <CryptosCreep3d :crip-view3d="cripView3d"></CryptosCreep3d>
     </div>
-    <div>
-      <Cryptocurrencies :table-view="tableView"></Cryptocurrencies>
-    </div>
+    <CryptosCreep class="creep" :crip-view="cripView" :speed="speed"></CryptosCreep>
+    <Cryptocurrencies :table-view="tableView"></Cryptocurrencies>
   </div>
 </template>
 
@@ -69,25 +86,44 @@ export default class Cryptocur extends Vue {
     }
   }
 
-  .fa.fa-th {
-    color: deepskyblue;
+  h1 {font-size: 2.5rem;margin: 0.7rem auto;color: black;}
+
+  .bank {
+    font-size: 2.5rem;
+    background: transparent;
+    a {text-decoration: none;color: rebeccapurple;}
+    a:hover {color: cornflowerblue;}
+  }
+  .creep3d {
+    background: transparent;
+    max-height: 20vh;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
   }
 
-  .fa.fa-list {
-    color: deeppink;
+  .creep {
+    background: transparent;
   }
+}
 
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+@media(max-width: 1020px) {
+  .cryptocur {
+    h1, .bank {font-size: 2.3rem;margin: 0.6rem auto;}
   }
+}
 
-  @media (max-width: 768px) {
-    h2 {
-      font-size: 1.5rem;
+@media (max-width: 768px) {
+  .cryptocur {
+    h1, .bank {font-size: 2rem;margin: 0.5rem auto;}
+    .creep3d {
+      max-height: 20vh;
     }
   }
-
 }
 
 </style>
