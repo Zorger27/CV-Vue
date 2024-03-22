@@ -68,9 +68,6 @@ export default class NBURates extends Vue {}
 </template>
 
 <style lang="scss" scoped>
-.table {
-  background-color: white;
-}
 .inner {
   margin-bottom: 1rem;
   .rates {
