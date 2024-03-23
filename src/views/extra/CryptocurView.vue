@@ -85,8 +85,6 @@ export default class Cryptocur extends Vue {
     }
   }
 
-  h1 {font-size: 2.5rem;margin: 0.7rem auto;color: black;}
-
   .bank {
     font-size: 2.5rem;
     background: transparent;
@@ -112,16 +110,13 @@ export default class Cryptocur extends Vue {
 
 @media(max-width: 1020px) {
   .cryptocur {
-    h1, .bank {font-size: 2.3rem;margin: 0.6rem auto;}
+    .bank {font-size: 2.3rem;margin: 0.6rem auto;}
   }
 }
 
 @media (max-width: 768px) {
   .cryptocur {
-    h1, .bank {font-size: 2rem;margin: 0.5rem auto;}
-    .creep3d {
-      max-height: 20vh;
-    }
+    .bank {font-size: 2rem;margin: 0.5rem auto;}
   }
 }
 

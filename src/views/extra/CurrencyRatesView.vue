@@ -85,7 +85,6 @@ export default class CurrencyRates extends Vue {
       margin-right: 0.1rem;
     }
   }
-  h1 {font-size: 2.5rem;margin: 0.7rem auto;color: black;}
 
   .bank {
     font-size: 2.5rem;
@@ -111,13 +110,13 @@ export default class CurrencyRates extends Vue {
 
 @media(max-width: 1020px) {
   .exchange {
-    h1, .bank {font-size: 2.3rem;margin: 0.6rem auto;}
+    .bank {font-size: 2.3rem;margin: 0.6rem auto;}
   }
 }
 
 @media (max-width: 768px) {
   .exchange {
-    h1, .bank {font-size: 2rem;margin: 0.5rem auto;}
+    .bank {font-size: 2rem;margin: 0.5rem auto;}
   }
 }
 </style>
