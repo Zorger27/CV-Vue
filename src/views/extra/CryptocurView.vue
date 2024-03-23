@@ -47,8 +47,7 @@ export default class Cryptocur extends Vue {
 <template>
   <div class="cryptocur">
     <h1>
-      <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
-      </router-link>
+      <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i></router-link>
       {{ $t('extra.cryptocur.title') }}
     </h1>
     <line></line>

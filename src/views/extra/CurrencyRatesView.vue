@@ -47,7 +47,10 @@ export default class CurrencyRates extends Vue {
 
 <template>
   <div class="exchange">
-    <h1>{{ $t('extra.exchange.title') }}</h1>
+    <h1>
+      <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i></router-link>
+      {{ $t('extra.exchange.title') }}
+    </h1>
     <line></line>
     <CurrentDate></CurrentDate>
     <h1 class="bank">
