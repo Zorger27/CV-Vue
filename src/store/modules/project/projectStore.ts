@@ -253,6 +253,18 @@ const state = {
         sourcelink: "https://github.com/Zorger27/Cryptocurrencies",
         demolink: "https://cryptocurrencies-gold.vercel.app"
       },
+      {
+        id: 22,
+        title_en: "Weather forecast from OpenWeather",
+        title_ua: "Прогноз погоди від OpenWeather",
+        title_es: "El Tiempo de OpenWeather",
+        type_en: "Single page application",
+        type_ua: "Односторінковий додаток",
+        type_es: "Aplicación de una sola página",
+        techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        sourcelink: "https://github.com/Zorger27/Weather",
+        demolink: "https://weather-zorger.vercel.app"
+      },
     ]
 };
 const getters = {};
