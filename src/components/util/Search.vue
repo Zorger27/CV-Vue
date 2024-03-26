@@ -148,8 +148,7 @@ export default class Search extends Vue {
 <template>
   <div class="search">
     <div class="search-bar">
-      <input type="text" :placeholder="$t('cert.search')" v-model="searchValue"><i title="Clear" @click="clearSearch"
-                                                                                   class="fas fa-trash-alt"></i>
+      <input type="text" :placeholder="$t('cert.search')" v-model="searchValue"><i title="Clear" @click="clearSearch" class="fas fa-trash-alt"></i>
     </div>
     <div class="inner" v-if="searchValue.length !== 0">
       <template v-for="sert in combinedCertificates" :key="sert.id">
