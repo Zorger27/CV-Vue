@@ -20,7 +20,7 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
     const title = 'Portfolio - Creeping Lines 3D';
     const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
     const description = 'Anatolii Zorin\'s Portfolio - Creeping Lines 3D';
-    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/graphics/OG_Image_Cube3D.jpg';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/graphics/OG_Image_CreepingLines3d.jpg';
     const url = 'https://zorin.expert/extra/graphics/creep3d';
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
