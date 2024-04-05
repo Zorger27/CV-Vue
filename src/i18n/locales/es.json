@@ -204,7 +204,8 @@
       "title": "Gráficos 3D",
       "cube": "Cubo (CSS)",
       "cubejs": "Cubo (JavaScript)",
-      "cube3d": "Cubo (Three.js)"
+      "cube3d": "Cubo (Three.js)",
+      "creep3d": "Líneas progresivas"
     },
     "exchange": {
       "title": "Los tipos de cambio",
@@ -304,11 +305,14 @@
       "delete-all": "Borrar todas las tareas"
     },
     "weather": {
-      "title": "Clima",
+      "title1": "El Tiempo",
+      "title2": "Tiempo",
       "h1": "Tiempo en ",
+      "h2": "Ciudad",
       "city": "Ciudad:",
       "get": "Obtener",
       "btn": "Obtener datos",
+      "loading": "cargando...",
       "cities": {
         "Kyiv": "Kyiv",
         "Odessa": "Odesa",
@@ -319,13 +323,23 @@
         "Benidorm": "Benidorm",
         "Valencia": "Valencia"
       },
+      "country": "País",
+      "sunrise": "Amanecer",
+      "sunset": "Atardecer",
+      "description": "Descripción",
       "temp": "Temperatura",
       "feels": "Se siente como",
+      "temp-min": "Temperatura mínima",
+      "temp-max": "Temperatura máxima",
       "speed": "Velocidad del viento",
       "direction": "Dirección del viento",
       "humidity": "Humedad",
       "pressure": "Presión",
-      "error": "No se pudieron cargar los datos meteorológicos."
+      "error": "No se pudieron cargar los datos meteorológicos",
+      "unknown-city": "¡Ciudad desconocida!",
+      "unknown-country": "Pais desconocido",
+      "indicator": "Indicador",
+      "value": "Valor"
     },
     "ai": {
       "title": "Inteligencia artificial",

@@ -23,6 +23,7 @@ import infoStore from "@/store/modules/service/infoStore";
 import viewStore from "@/store/modules/service/viewStore";
 import tasksStore from "@/store/modules/project/tasksStore";
 import experienceStore from "@/store/modules/project/experienceStore";
+import countryMappingStore from "@/store/modules/extra/countryMappingStore";
 
 export default createStore({
   modules: {
@@ -50,5 +51,6 @@ export default createStore({
     viewStore,
     tasksStore,
     experienceStore,
+    countryMappingStore,
   }
 })

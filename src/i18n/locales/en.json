@@ -204,7 +204,8 @@
       "title": "3D Graphics",
       "cube": "Cube (CSS)",
       "cubejs": "Cube (JavaScript)",
-      "cube3d": "Cube (Three.js)"
+      "cube3d": "Cube (Three.js)",
+      "creep3d": "Creeping Lines"
     },
     "exchange": {
       "title": "Exchange rates",
@@ -304,11 +305,14 @@
       "delete-all": "Delete all tasks"
     },
     "weather": {
-      "title": "Weather",
+      "title1": "Weather forecast",
+      "title2": "Weather",
       "h1": "Weather in ",
+      "h2": "City",
       "city": "City:",
       "get": "Get",
       "btn": "Getting data",
+      "loading": "loading...",
       "cities": {
         "Kyiv": "Kyiv",
         "Odessa": "Odesa",
@@ -319,13 +323,23 @@
         "Benidorm": "Benidorm",
         "Valencia": "Valencia"
       },
+      "country": "Country",
+      "sunrise": "Sunrise",
+      "sunset": "Sunset",
+      "description": "Description",
       "temp": "Temperature",
       "feels": "Feels like",
+      "temp-min": "Min. temperature",
+      "temp-max": "Max. temperature",
       "speed": "Wind speed",
       "direction": "Direction of the wind",
       "humidity": "Humidity",
       "pressure": "Pressure",
-      "error": "Failed to load weather data."
+      "error": "Failed to load weather data",
+      "unknown-city": "Unknown City!",
+      "unknown-country": "Unknown country",
+      "indicator": "Indicator",
+      "value": "Value"
     },
     "ai": {
       "title": "Artificial intelligence",

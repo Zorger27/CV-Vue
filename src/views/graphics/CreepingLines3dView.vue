@@ -1,32 +1,25 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
-import OpenWeather from "@/components/other/OpenWeather.vue";
-import MyWeather from "@/components/other/MyWeather.vue";
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 import CurrentDate from "@/components/util/CurrentDate.vue";
-import WeatherCreep from "@/components/other/WeatherCreep.vue";
 import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
 
 @Options({
   mixins: [openGraphMixin],
   data() {
     return {
-      OpenWeatherView: false,
       cityName: '' as string,
       cities: [] as string[],
-      tableView: false,
-      cripView: true,
-      speed: 1,
       cripView3d: false,
     }
   },
   mounted() {
-    const mainTitle = 'Weather';
-    const title = 'Portfolio - Weather';
+    const mainTitle = 'Creeping Lines 3D';
+    const title = 'Portfolio - Creeping Lines 3D';
     const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
-    const description = 'Anatolii Zorin\'s Portfolio - Weather by OpenWeather';
-    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/OG_Image_Weather.jpg';
-    const url = 'https://zorin.expert/extra/weather';
+    const description = 'Anatolii Zorin\'s Portfolio - Creeping Lines 3D';
+    const imageUrl = 'https://zorin.expert/assets/ogimage/extra/graphics/OG_Image_Cube3D.jpg';
+    const url = 'https://zorin.expert/extra/graphics/cube3d';
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
@@ -41,19 +34,6 @@ import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
     }
   },
   methods: {
-    changeOpenWeatherView() {
-      this.OpenWeatherView = !this.OpenWeatherView;
-    },
-    changeView() {
-      this.tableView = !this.tableView;
-    },
-    changeCrip() {
-      this.cripView = !this.cripView;
-      // Если при переключении в режим бегущей строки данные уже должны быть загружены, вызываем загрузку
-      if (this.cripView) {
-        this.callGetWeather();
-      }
-    },
     changeCrip3d() {
       this.cripView3d = !this.cripView3d;
     },
@@ -63,43 +43,36 @@ import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
       this.$refs.cityInput.focus();
     },
     callGetWeather() {
-      this.speed = 1;
-      if (this.$refs.myWeatherComponent && this.$refs.weatherCreep && this.$refs.weatherCreep3d) {
-        this.$refs.myWeatherComponent.getWeather();
-        this.$refs.weatherCreep.getWeather();
+      if (this.$refs.weatherCreep3d) {
         this.$refs.weatherCreep3d.getWeather();
       }
       // Перезагрузка страницы
       window.location.reload();
     },
     callHandleCityInputChange(cityName: string) {
-      if (this.$refs.myWeatherComponent && this.$refs.weatherCreep && this.$refs.weatherCreep3d) {
-        this.$refs.myWeatherComponent.handleCityInputChange(cityName);
-        this.$refs.weatherCreep.handleCityInputChange(cityName);
+      if (this.$refs.weatherCreep3d) {
         this.$refs.weatherCreep3d.handleCityInputChange(cityName);
       }
     },
     callUpdateCityName(cityName: string) {
       this.cityName = cityName;
-      if (this.$refs.myWeatherComponent && this.$refs.weatherCreep && this.$refs.weatherCreep3d) {
-        this.$refs.myWeatherComponent.updateCityName(cityName);
-        this.$refs.weatherCreep.updateCityName(cityName);
+      if (this.$refs.weatherCreep3d) {
         this.$refs.weatherCreep3d.updateCityName(cityName);
       }
     },
   },
-  components: {WeatherCreep3d, WeatherCreep, OpenWeather, MyWeather, CurrentDate},
+  components: {WeatherCreep3d, CurrentDate},
 })
-export default class WeatherView extends Vue {
+export default class CreepingLines3d extends Vue {
 }
 </script>
 
 <template>
   <div class="weather">
     <h1>
-      <router-link class="back" to="/extra" title="Back to Extra page"><i class="fa fa-arrow-circle-left"></i>
+      <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.weather.title1') }}
+      {{ $t('extra.graphics.creep3d') }}
     </h1>
     <line></line>
     <CurrentDate></CurrentDate>
@@ -114,22 +87,13 @@ export default class WeatherView extends Vue {
           <option v-for="city in cities" :key="city" :value="city">{{ city }}</option>
         </select>
       </div>
-      <h2 class="title">
-        <i :title="[OpenWeatherView ? 'Close OpenWeather module' : 'Start OpenWeather module']" @click="changeOpenWeatherView"><span
-          :class="['fa-solid', OpenWeatherView ? 'fa-sun' : 'fa-cloud']"></span></i> <i :title="[tableView ? 'Start viewing in List view' : 'Start viewing in Table view']"
-                                                                                        @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i :title="[cripView3d ? 'Close 3D Creeping line' : 'Start 3D Creeping line']"
-                                                                                                                                                                                  @click="changeCrip3d"> <span :class="['fa','fa-solid', cripView3d ? 'fa-yin-yang' : 'fa-cubes']"></span></i>
-        <i :title="[cripView ? 'Close Creeping line' : 'Start Creeping line']" @click="changeCrip"> <span :class="['fa-solid', cripView ? 'fa-cloud-sun-rain' : 'fa-umbrella']"></span></i>
-        <input title="Changing speed of Creeping line" v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2" />
+      <h2 class="title">{{ $t('extra.weather.title1') }}
+        <i :title="[cripView3d ? 'Close 3D Creeping line' : 'Start 3D Creeping line']" @click="changeCrip3d">
+          <span :class="['fa','fa-solid', cripView3d ? 'fa-yin-yang' : 'fa-cubes']"></span></i>
       </h2>
     </div>
     <div class="creep3d">
       <WeatherCreep3d :crip-view3d="cripView3d" :cityName="cityName" @update:cityName="cityName = $event" @update:cities="cities = $event" ref="weatherCreep3d"></WeatherCreep3d>
-    </div>
-    <WeatherCreep ref="weatherCreep" class="creep" :cityName="cityName" @update:cities="cities = $event" :crip-view="cripView" :speed="speed"></WeatherCreep>
-    <div class="container">
-      <MyWeather ref="myWeatherComponent" class="myWidget" :cityName="cityName" @update:cities="cities = $event" :table-view="tableView"></MyWeather>
-      <OpenWeather v-if="OpenWeatherView" class="widget" :widgetId="15" :cityId="'703448'"/>
     </div>
   </div>
 </template>
@@ -261,24 +225,6 @@ export default class WeatherView extends Vue {
       }
     }
   }
-
-  .container {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    .myWidget {
-      display: inline-flex;
-    }
-
-    .widget {
-      display: inline-flex;
-      margin: 1rem;
-    }
-  }
-
-  .creep {background: none;}
 
   .creep3d {
     max-height: 25vh;

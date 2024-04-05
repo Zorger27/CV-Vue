@@ -9,19 +9,6 @@ export interface User {
     password: string;
 }
 
-export interface WeatherData {
-    main: {
-        temp: number;
-        feels_like: number;
-        humidity: number;
-        pressure: number;
-    };
-    wind: {
-        speed: number;
-        deg: number;
-    };
-}
-
 export interface Certificate {
     htmlStore: [];
     javascriptStore: [];
