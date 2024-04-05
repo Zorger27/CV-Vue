@@ -3,6 +3,8 @@ import {Options, Vue} from "vue-class-component";
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 import CurrentDate from "@/components/util/CurrentDate.vue";
 import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
+import NBURatesCreep3d from "@/components/other/NBURatesCreep3d.vue";
+import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
 
 @Options({
   mixins: [openGraphMixin],
@@ -10,7 +12,7 @@ import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
     return {
       cityName: '' as string,
       cities: [] as string[],
-      cripView3d: false,
+      cripView3d: true,
     }
   },
   mounted() {
@@ -19,7 +21,7 @@ import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
     const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
     const description = 'Anatolii Zorin\'s Portfolio - Creeping Lines 3D';
     const imageUrl = 'https://zorin.expert/assets/ogimage/extra/graphics/OG_Image_Cube3D.jpg';
-    const url = 'https://zorin.expert/extra/graphics/cube3d';
+    const url = 'https://zorin.expert/extra/graphics/creep3d';
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
@@ -61,18 +63,19 @@ import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
       }
     },
   },
-  components: {WeatherCreep3d, CurrentDate},
+  components: {CryptosCreep3d, NBURatesCreep3d, WeatherCreep3d, CurrentDate},
 })
 export default class CreepingLines3d extends Vue {
 }
 </script>
 
 <template>
-  <div class="weather">
+  <div class="creeping-lines">
     <h1>
       <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.graphics.creep3d') }}
+      {{ $t('extra.graphics.creep3d') }} <i :title="[cripView3d ? 'Close 3D Creeping line' : 'Start 3D Creeping line']" @click="changeCrip3d">
+      <span :class="['fa','fa-solid', cripView3d ? 'fa-yin-yang' : 'fa-cubes']"></span></i>
     </h1>
     <line></line>
     <CurrentDate></CurrentDate>
@@ -87,19 +90,21 @@ export default class CreepingLines3d extends Vue {
           <option v-for="city in cities" :key="city" :value="city">{{ city }}</option>
         </select>
       </div>
-      <h2 class="title">{{ $t('extra.weather.title1') }}
-        <i :title="[cripView3d ? 'Close 3D Creeping line' : 'Start 3D Creeping line']" @click="changeCrip3d">
-          <span :class="['fa','fa-solid', cripView3d ? 'fa-yin-yang' : 'fa-cubes']"></span></i>
-      </h2>
     </div>
-    <div class="creep3d">
+    <div class="creep3d-weather">
       <WeatherCreep3d :crip-view3d="cripView3d" :cityName="cityName" @update:cityName="cityName = $event" @update:cities="cities = $event" ref="weatherCreep3d"></WeatherCreep3d>
+    </div>
+    <div class="creep3d-nbu">
+      <NBURatesCreep3d :crip-view3d="cripView3d"></NBURatesCreep3d>
+    </div>
+    <div class="creep3d-cryptos">
+      <CryptosCreep3d :crip-view3d="cripView3d"></CryptosCreep3d>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.weather {
+.creeping-lines {
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(255, 250, 229), rgb(247, 234, 250)) no-repeat center;
 
@@ -139,12 +144,6 @@ export default class CreepingLines3d extends Vue {
       .fa-solid.fa-sun, .fa-solid.fa-cloud {margin: 0 0.5rem;}
       .fa.fa-yin-yang, .fa-solid.fa-cubes {margin: 0 0.5rem;}
       .fa-solid.fa-cloud-sun-rain {margin-right: 0.5rem}
-
-      //.fa-solid.fa-sun:hover {color: gold;}
-      //.fa-solid.fa-cloud:hover {color: blue;}
-      //.fa.fa-yin-yang:hover {color: gold;}
-      //.fa-solid.fa-cubes:hover {color: blue;}
-      //.fa-solid.fa-umbrella:hover {color: purple;}
     }
 
     .input-group {
@@ -226,8 +225,29 @@ export default class CreepingLines3d extends Vue {
     }
   }
 
-  .creep3d {
-    max-height: 25vh;
+  .creep3d-weather {
+    max-height: 30vh;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+  }
+  .creep3d-nbu {
+    background: transparent;
+    max-height: 30vh;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .creep3d-cryptos {
+    background: transparent;
+    max-height: 20vh;
     max-width: 100%;
     position: relative;
     overflow: hidden;
@@ -239,7 +259,7 @@ export default class CreepingLines3d extends Vue {
 }
 
 @media(max-width: 1020px) {
-  .weather {
+  .creeping-lines {
     .inner {
       .title {
         font-size: 2.1rem;
@@ -264,7 +284,7 @@ export default class CreepingLines3d extends Vue {
 }
 
 @media (max-width: 768px) {
-  .weather {
+  .creeping-lines {
     .inner{
       grid-column-gap: 0;
       grid-row-gap: 0;
@@ -317,9 +337,6 @@ export default class CreepingLines3d extends Vue {
           margin: 0;
         }
       }
-    }
-    .creep3d {
-      max-height: 25vh;
     }
   }
 }
