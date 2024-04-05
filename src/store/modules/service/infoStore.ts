@@ -40,8 +40,8 @@ const state = {
       {
         id: 7,
         title: "Axios",
-        version: "1.6.2",
-        url: "https://axios-http.com"
+        version: "1.6.8",
+        url: "https://github.com/axios/axios"
       },
       {
         id: 8,
