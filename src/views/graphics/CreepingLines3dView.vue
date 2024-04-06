@@ -12,7 +12,8 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
     return {
       cityName: '' as string,
       cities: [] as string[],
-      cripView3d: true,
+      ratesCreepView3d: false,
+      weatherCreepView3d: false,
     }
   },
   mounted() {
@@ -36,8 +37,11 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
     }
   },
   methods: {
-    changeCrip3d() {
-      this.cripView3d = !this.cripView3d;
+    changeRatesCreep3d() {
+      this.ratesCreepView3d = !this.ratesCreepView3d;
+    },
+    changeWeatherCrip3d() {
+      this.weatherCreepView3d = !this.weatherCreepView3d;
     },
     clearCity() {
       this.cityName = "";
@@ -74,12 +78,15 @@ export default class CreepingLines3d extends Vue {
     <h1>
       <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.graphics.creep3d') }} <i :title="[cripView3d ? 'Close 3D Creeping line' : 'Start 3D Creeping line']" @click="changeCrip3d">
-      <span :class="['fa','fa-solid', cripView3d ? 'fa-yin-yang' : 'fa-cubes']"></span></i>
+      {{ $t('extra.graphics.creep3d') }}
+      <i :title="[weatherCreepView3d ? 'Close Weather Creeping line' : 'Start Weather Creeping line']"
+         @click="changeWeatherCrip3d"> <span :class="['fa-solid', weatherCreepView3d ? 'fa-umbrella' : 'fa-cubes']"></span></i>
+      <i :title="[ratesCreepView3d ? 'Close Currency Rates Creeping line' : 'Start Currency Rates Creeping line']"
+         @click="changeRatesCreep3d"><span :class="['fa', ratesCreepView3d ? 'fa-yin-yang' : 'fa-sack-dollar']"></span></i>
     </h1>
     <line></line>
     <CurrentDate></CurrentDate>
-    <div class="inner">
+    <div class="inner" v-show="weatherCreepView3d">
       <div class="input-group">
         <label for="city">{{ $t('extra.weather.city') }}</label>
         <input type="text" id="city" v-model="cityName" @change="callHandleCityInputChange(cityName)" @keydown.enter="callGetWeather"
@@ -92,13 +99,13 @@ export default class CreepingLines3d extends Vue {
       </div>
     </div>
     <div class="creep3d-weather">
-      <WeatherCreep3d :crip-view3d="cripView3d" :cityName="cityName" @update:cityName="cityName = $event" @update:cities="cities = $event" ref="weatherCreep3d"></WeatherCreep3d>
+      <WeatherCreep3d :weather-creep-view3d="weatherCreepView3d" :cityName="cityName" @update:cityName="cityName = $event" @update:cities="cities = $event" ref="weatherCreep3d"></WeatherCreep3d>
     </div>
     <div class="creep3d-nbu">
-      <NBURatesCreep3d :crip-view3d="cripView3d"></NBURatesCreep3d>
+      <NBURatesCreep3d :rates-creep-view3d="ratesCreepView3d"></NBURatesCreep3d>
     </div>
     <div class="creep3d-cryptos">
-      <CryptosCreep3d :crip-view3d="cripView3d"></CryptosCreep3d>
+<!--      <CryptosCreep3d :crip-view3d="cripView3d"></CryptosCreep3d>-->
     </div>
   </div>
 </template>
@@ -116,6 +123,8 @@ export default class CreepingLines3d extends Vue {
       margin-right: 0.1rem;
     }
   }
+  .fa-solid.fa-umbrella, .fa-solid.fa-cubes {margin-right: 0.5rem;}
+  //.fa.fa-yin-yang, .fa.fa-sack-dollar {margin: 0 0.5rem;}
 
   .inner {
     //display: flex;
@@ -140,10 +149,6 @@ export default class CreepingLines3d extends Vue {
       font-size: 2.3rem;
       margin: 0 0 0.5rem 0;
       color: black;
-
-      .fa-solid.fa-sun, .fa-solid.fa-cloud {margin: 0 0.5rem;}
-      .fa.fa-yin-yang, .fa-solid.fa-cubes {margin: 0 0.5rem;}
-      .fa-solid.fa-cloud-sun-rain {margin-right: 0.5rem}
     }
 
     .input-group {

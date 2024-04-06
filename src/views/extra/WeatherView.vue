@@ -17,7 +17,7 @@ import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
       tableView: false,
       cripView: true,
       speed: 1,
-      cripView3d: false,
+      weatherCreepView3d: false,
     }
   },
   mounted() {
@@ -49,13 +49,13 @@ import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
     },
     changeCrip() {
       this.cripView = !this.cripView;
-      // Если при переключении в режим бегущей строки данные уже должны быть загружены, вызываем загрузку
-      if (this.cripView) {
-        this.callGetWeather();
-      }
+      // // Если при переключении в режим бегущей строки данные уже должны быть загружены, вызываем загрузку
+      // if (this.cripView) {
+      //   this.callGetWeather();
+      // }
     },
-    changeCrip3d() {
-      this.cripView3d = !this.cripView3d;
+    changeWeatherCrip3d() {
+      this.weatherCreepView3d = !this.weatherCreepView3d;
     },
     clearCity() {
       this.cityName = "";
@@ -64,13 +64,15 @@ import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
     },
     callGetWeather() {
       this.speed = 1;
-      if (this.$refs.myWeatherComponent && this.$refs.weatherCreep && this.$refs.weatherCreep3d) {
+      if (this.$refs.myWeatherComponent && this.$refs.weatherCreep) {
         this.$refs.myWeatherComponent.getWeather();
         this.$refs.weatherCreep.getWeather();
-        this.$refs.weatherCreep3d.getWeather();
       }
-      // Перезагрузка страницы
-      window.location.reload();
+      if (this.$refs.weatherCreep3d) {
+        this.$refs.weatherCreep3d.getWeather();
+        // Перезагрузка страницы
+        window.location.reload();
+      }
     },
     callHandleCityInputChange(cityName: string) {
       if (this.$refs.myWeatherComponent && this.$refs.weatherCreep && this.$refs.weatherCreep3d) {
@@ -115,16 +117,19 @@ export default class WeatherView extends Vue {
         </select>
       </div>
       <h2 class="title">
-        <i :title="[OpenWeatherView ? 'Close OpenWeather module' : 'Start OpenWeather module']" @click="changeOpenWeatherView"><span
-          :class="['fa-solid', OpenWeatherView ? 'fa-sun' : 'fa-cloud']"></span></i> <i :title="[tableView ? 'Start viewing in List view' : 'Start viewing in Table view']"
-                                                                                        @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i :title="[cripView3d ? 'Close 3D Creeping line' : 'Start 3D Creeping line']"
-                                                                                                                                                                                  @click="changeCrip3d"> <span :class="['fa','fa-solid', cripView3d ? 'fa-yin-yang' : 'fa-cubes']"></span></i>
-        <i :title="[cripView ? 'Close Creeping line' : 'Start Creeping line']" @click="changeCrip"> <span :class="['fa-solid', cripView ? 'fa-cloud-sun-rain' : 'fa-umbrella']"></span></i>
+        <i :title="[OpenWeatherView ? 'Close OpenWeather module' : 'Start OpenWeather module']"
+           @click="changeOpenWeatherView"><span :class="['fa-solid', OpenWeatherView ? 'fa-sun' : 'fa-cloud']"></span></i>
+        <i :title="[tableView ? 'Start viewing in List view' : 'Start viewing in Table view']"
+           @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
+        <i :title="[weatherCreepView3d ? 'Close 3D Creeping line' : 'Start 3D Creeping line']"
+           @click="changeWeatherCrip3d"> <span :class="['fa','fa-solid', weatherCreepView3d ? 'fa-yin-yang' : 'fa-cubes']"></span></i>
+        <i :title="[cripView ? 'Close Creeping line' : 'Start Creeping line']"
+           @click="changeCrip"> <span :class="['fa-solid', cripView ? 'fa-cloud-sun-rain' : 'fa-umbrella']"></span></i>
         <input title="Changing speed of Creeping line" v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2" />
       </h2>
     </div>
     <div class="creep3d">
-      <WeatherCreep3d :crip-view3d="cripView3d" :cityName="cityName" @update:cityName="cityName = $event" @update:cities="cities = $event" ref="weatherCreep3d"></WeatherCreep3d>
+      <WeatherCreep3d :weather-creep-view3d="weatherCreepView3d" :cityName="cityName" @update:cityName="cityName = $event" @update:cities="cities = $event" ref="weatherCreep3d"></WeatherCreep3d>
     </div>
     <WeatherCreep ref="weatherCreep" class="creep" :cityName="cityName" @update:cities="cities = $event" :crip-view="cripView" :speed="speed"></WeatherCreep>
     <div class="container">

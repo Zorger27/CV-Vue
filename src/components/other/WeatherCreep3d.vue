@@ -10,7 +10,7 @@ import {useStore} from 'vuex';
 export default {
   name: 'WeatherCreep3d',
   props: {
-    cripView3d: {
+    weatherCreepView3d: {
       type: Boolean,
       required: true
     },
@@ -312,7 +312,7 @@ export default {
 </script>
 
 <template>
-  <div class="inner" v-show="cripView3d">
+  <div class="inner" v-show="weatherCreepView3d">
     <div class="marquee" ref="marquee"></div>
     <div v-if="loading" class="error">{{ $t('extra.weather.loading') }}</div>
     <div v-else class="error">{{ error }}</div>

@@ -11,7 +11,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   data() {
     return {
       tableView: false,
-      cripView3d: false,
+      ratesCreepView3d: false,
       cripView: true,
       speed: 1,
     }
@@ -34,8 +34,8 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     changeCrip() {
       this.cripView = !this.cripView;
     },
-    changeCrip3d() {
-      this.cripView3d = !this.cripView3d;
+    changeRatesCreep3d() {
+      this.ratesCreepView3d = !this.ratesCreepView3d;
     },
   },
   components: {NBURatesCreep3d, NBURatesCreepJS, NBURates, CurrentDate},
@@ -57,12 +57,12 @@ export default class CurrencyRates extends Vue {
       <a href="https://bank.gov.ua/ua/open-data/api-dev" title="In more detail..." target="_blank">
         {{ $t('extra.exchange.nbu') }}
       </a> <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
-      @click="changeCrip3d"><span :class="['fa', cripView3d ? 'fa-yin-yang' : 'fa-sack-dollar']"></span></i> <i
+      @click="changeRatesCreep3d"><span :class="['fa', ratesCreepView3d ? 'fa-yin-yang' : 'fa-sack-dollar']"></span></i> <i
       @click="changeCrip"> <span :class="['fa', cripView ? 'fa-face-grin-stars' : 'fa-wallet']"></span></i> <input
       v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2"/>
     </h1>
     <div class="creep3d">
-      <NBURatesCreep3d :crip-view3d="cripView3d"></NBURatesCreep3d>
+      <NBURatesCreep3d :rates-creep-view3d="ratesCreepView3d"></NBURatesCreep3d>
     </div>
     <NBURatesCreepJS class="creep" :crip-view="cripView" :speed="speed"></NBURatesCreepJS>
     <NBURates :table-view="tableView"></NBURates>
