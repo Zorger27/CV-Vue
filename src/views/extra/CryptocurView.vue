@@ -12,7 +12,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     return {
       tableView: false,
       cripView: true,
-      cripView3d: false,
+      cryptosCreepView3d: false,
       speed: 1,
     }
   },
@@ -34,8 +34,8 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     changeCrip() {
       this.cripView = !this.cripView;
     },
-    changeCrip3d() {
-      this.cripView3d = !this.cripView3d;
+    changeCryptosCreepView3d() {
+      this.cryptosCreepView3d = !this.cryptosCreepView3d;
     },
   },
   components: {CryptosCreep, CryptosCreep3d, CurrentDate, Cryptocurrencies},
@@ -56,12 +56,12 @@ export default class Cryptocur extends Vue {
       <a href="https://www.coingecko.com" title="In more detail..." target="_blank">
         CoinGecko
       </a> <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
-        @click="changeCrip3d"><span :class="['fa', cripView3d ? 'fa-yin-yang' : 'fa-bitcoin-sign']"></span></i> <i
+        @click="changeCryptosCreepView3d"><span :class="['fa', cryptosCreepView3d ? 'fa-hat-wizard' : 'fa-bitcoin-sign']"></span></i> <i
         @click="changeCrip"> <span :class="['fa', cripView ? 'fa-face-grin-stars' : 'fa-wallet']"></span></i> <input
         v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2"/>
     </h1>
     <div class="creep3d">
-      <CryptosCreep3d :crip-view3d="cripView3d"></CryptosCreep3d>
+      <CryptosCreep3d :cryptos-creep-view3d="cryptosCreepView3d"></CryptosCreep3d>
     </div>
     <CryptosCreep class="creep" :crip-view="cripView" :speed="speed"></CryptosCreep>
     <Cryptocurrencies :table-view="tableView"></Cryptocurrencies>

@@ -14,6 +14,7 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
       cities: [] as string[],
       ratesCreepView3d: false,
       weatherCreepView3d: false,
+      cryptosCreepView3d: false,
     }
   },
   mounted() {
@@ -39,6 +40,9 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
   methods: {
     changeRatesCreep3d() {
       this.ratesCreepView3d = !this.ratesCreepView3d;
+    },
+    changeCryptosCreepView3d() {
+      this.cryptosCreepView3d = !this.cryptosCreepView3d;
     },
     changeWeatherCrip3d() {
       this.weatherCreepView3d = !this.weatherCreepView3d;
@@ -83,6 +87,8 @@ export default class CreepingLines3d extends Vue {
          @click="changeWeatherCrip3d"> <span :class="['fa-solid', weatherCreepView3d ? 'fa-umbrella' : 'fa-cubes']"></span></i>
       <i :title="[ratesCreepView3d ? 'Close Currency Rates Creeping line' : 'Start Currency Rates Creeping line']"
          @click="changeRatesCreep3d"><span :class="['fa', ratesCreepView3d ? 'fa-yin-yang' : 'fa-sack-dollar']"></span></i>
+      <i :title="[cryptosCreepView3d ? 'Close Cryptocurrencies Creeping line' : 'Start Cryptocurrencies Creeping line']"
+         @click="changeCryptosCreepView3d"><span :class="['fa-brands', cryptosCreepView3d ? 'fa-ethereum' : 'fa-bitcoin']"></span></i>
     </h1>
     <line></line>
     <CurrentDate></CurrentDate>
@@ -105,7 +111,7 @@ export default class CreepingLines3d extends Vue {
       <NBURatesCreep3d :rates-creep-view3d="ratesCreepView3d"></NBURatesCreep3d>
     </div>
     <div class="creep3d-cryptos">
-<!--      <CryptosCreep3d :crip-view3d="cripView3d"></CryptosCreep3d>-->
+      <CryptosCreep3d :cryptos-creep-view3d="cryptosCreepView3d"></CryptosCreep3d>
     </div>
   </div>
 </template>
@@ -124,6 +130,8 @@ export default class CreepingLines3d extends Vue {
     }
   }
   .fa-solid.fa-umbrella, .fa-solid.fa-cubes {margin-right: 0.5rem;}
+  .fa-brands.fa-ethereum, .fa-brands.fa-bitcoin {margin-left: 0.5rem;}
+  .fa-solid.fa-umbrella {color: darkgoldenrod;}
   //.fa.fa-yin-yang, .fa.fa-sack-dollar {margin: 0 0.5rem;}
 
   .inner {

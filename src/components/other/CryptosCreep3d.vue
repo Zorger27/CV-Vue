@@ -8,7 +8,7 @@ import axios from 'axios';
 export default {
   name: 'CryptosCreep3d',
   props: {
-    cripView3d: {
+    cryptosCreepView3d: {
       type: Boolean,
       required: true
     },
@@ -186,7 +186,7 @@ export default {
 </script>
 
 <template>
-  <div class="inner" v-show="cripView3d">
+  <div class="inner" v-show="cryptosCreepView3d">
     <div class="marquee" ref="marquee"></div>
   </div>
 </template>
