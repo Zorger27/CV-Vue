@@ -28,6 +28,10 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
 
+    this.ratesCreepView3d = JSON.parse(localStorage.getItem('ratesCreepView3d') || 'false');
+    this.weatherCreepView3d = JSON.parse(localStorage.getItem('weatherCreepView3d') || 'false');
+    this.cryptosCreepView3d = JSON.parse(localStorage.getItem('cryptosCreepView3d') || 'false');
+
     const savedCity = localStorage.getItem('weatherCity');
     if (savedCity) {
       this.cityName = savedCity;
@@ -37,16 +41,15 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
       this.callUpdateCityName(this.cityName);
     }
   },
+  watch: {
+    ratesCreepView3d(newVal) {localStorage.setItem('ratesCreepView3d', JSON.stringify(newVal));},
+    weatherCreepView3d(newVal) {localStorage.setItem('weatherCreepView3d', JSON.stringify(newVal));},
+    cryptosCreepView3d(newVal) {localStorage.setItem('cryptosCreepView3d', JSON.stringify(newVal));}
+  },
   methods: {
-    changeRatesCreep3d() {
-      this.ratesCreepView3d = !this.ratesCreepView3d;
-    },
-    changeCryptosCreepView3d() {
-      this.cryptosCreepView3d = !this.cryptosCreepView3d;
-    },
-    changeWeatherCrip3d() {
-      this.weatherCreepView3d = !this.weatherCreepView3d;
-    },
+    changeRatesCreep3d() {this.ratesCreepView3d = !this.ratesCreepView3d;},
+    changeCryptosCreepView3d() {this.cryptosCreepView3d = !this.cryptosCreepView3d;},
+    changeWeatherCrip3d() {this.weatherCreepView3d = !this.weatherCreepView3d;},
     clearCity() {
       this.cityName = "";
       // Устанавливаем фокус на поле ввода
@@ -73,8 +76,7 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
   },
   components: {CryptosCreep3d, NBURatesCreep3d, WeatherCreep3d, CurrentDate},
 })
-export default class CreepingLines3d extends Vue {
-}
+export default class CreepingLines3d extends Vue {}
 </script>
 
 <template>
