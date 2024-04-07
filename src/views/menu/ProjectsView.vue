@@ -64,7 +64,8 @@ export default class Projects extends Vue {
         <tr>
           <th>№</th>
           <th style="text-align: left;">{{ $t('projects.name') }}</th>
-          <th>{{ $t('projects.type') }}</th>
+          <th>Дата</th>
+<!--          <th>{{ $t('projects.type') }}</th>-->
           <th>{{ $t('projects.technologies') }}</th>
           <th>{{ $t('projects.linkCol') }}</th>
         </tr>
@@ -73,7 +74,8 @@ export default class Projects extends Vue {
         <tr v-for="prj in orderedProjects" :key="prj.id">
           <td class="nomer"><span style="color: black">{{ prj.id }}</span></td>
           <td class="name">{{ this.$i18n.locale === "uk" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</td>
-          <td class="number">{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</td>
+          <td class="work"><span>{{ this.$i18n.locale === "uk" ? prj.start_date_ua : this.$i18n.locale === "es" ? prj.start_date_es : prj.start_date_en }}</span><span v-if="prj.end_date_en" class="tire">–</span><span>{{ this.$i18n.locale === "uk" ? prj.end_date_ua : this.$i18n.locale === "es" ? prj.end_date_es : prj.end_date_en }}</span></td>
+<!--          <td class="number">{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</td>-->
           <td class="grade">{{ prj.techno }}</td>
           <td class="date">
             <div v-if="prj.demolink">
@@ -93,6 +95,7 @@ export default class Projects extends Vue {
       <div v-for="prj in orderedProjects" :key="prj.id" class="prj">
         <div class="block">
           <h3><span style="color: black">{{ prj.id }}. </span>{{ this.$i18n.locale === "uk" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</h3>
+          <div class="working-date"><span>{{ this.$i18n.locale === "uk" ? prj.start_date_ua : this.$i18n.locale === "es" ? prj.start_date_es : prj.start_date_en }}</span><span v-if="prj.end_date_en" class="tire">–</span><span>{{ this.$i18n.locale === "uk" ? prj.end_date_ua : this.$i18n.locale === "es" ? prj.end_date_es : prj.end_date_en }}</span></div>
           <div>{{ $t('projects.type') }}: <strong>{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</strong></div>
           <div>{{ $t('projects.technologies') }}: <strong>{{ prj.techno }}</strong></div>
           <div class="link">
@@ -175,18 +178,21 @@ export default class Projects extends Vue {
     background-repeat: no-repeat;
     margin-bottom: 1rem;
 
-    .nomer {width: 2rem}
-    .name {width: 24rem;}
-    .number {width: 3rem;}
-    .grade {min-width: 18rem;}
-    .date {
-      width: 3rem;
+    .nomer {width: 1.8rem;font-size: 1.4rem;}
+    .name {font-size: 1.5rem;width: 12rem;}
+    .number {font-size: 1.3rem;width: 3rem;}
+    .work {
       font-size: 1.3rem;
+      width: 11rem;
+      font-style: italic;
+      color: rebeccapurple;
+      .tire {margin: 0 0.5rem;}
     }
+    .grade {font-size: 1.4rem;min-width: 18rem;}
+    .date {width: 3rem;font-size: 1.3rem;}
+    th {font-size: 1.6rem}
 
-    th, .nomer, .number, .grade, .date {
-      text-align: center;
-    }
+    th, .nomer, .number, .grade, .date {text-align: center;}
   }
 
   .container {
@@ -206,27 +212,28 @@ export default class Projects extends Vue {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
         border-color: rgba(0, 0, 0, 0.3);
         .link .link2 {display: flex;}
+        .working-date {
+          font-style: italic;
+          color: rebeccapurple;
+          .tire {margin: 0 0.5rem;}
+        }
       }
     }
   }
 
   @media(max-width: 1020px) {
     .table {
-      font-size: 1.1rem;
-      .nomer {width: 2rem}
-      .name {width: 12rem;}
-      .number {
-        width: 3rem;
+      .nomer {width: 1.3rem;font-size: 1.1rem;}
+      .name {font-size: 1.2rem;width: 8rem;}
+      .number {font-size: 1.2rem;width: 2rem;}
+      .work {
         font-size: 1.1rem;
+        width: 9rem;
+        .tire {margin: 0 0.3rem;}
       }
-      .grade {
-        min-width: 9rem;
-        font-size: 1.1rem;
-      }
-      .date {
-        width: 3rem;
-        font-size: 1.1rem;
-      }
+      .grade {font-size: 1.1rem;min-width: 9rem;}
+      .date {width: 2rem;font-size: 1.1rem;}
+      th {font-size: 1.3rem}
     }
 
     .container {
@@ -239,28 +246,19 @@ export default class Projects extends Vue {
   }
   @media(max-width: 768px) {
     .table {
-      margin-bottom: 0.5rem;
-      font-size: 0.7rem;
-      .nomer {width: 1rem}
-      .name {min-width: 2rem;}
-      .number {
-        width: 3rem;
-        //font-size: 0.9rem;
-      }
-      .grade {
-        min-width: 3rem;
-        //font-size: 0.9rem;
-      }
-      .date {
-        width: 3rem;
-        //font-size: 0.7rem;
-      }
+      margin-bottom: 0.8rem;
 
-      thead {font-size: 0.7rem;}
-
-      .nomer, .number, .grade, .date {
+      .nomer {width: 1rem;font-size: 0.6rem;}
+      .name {font-size: 0.7rem;min-width: 3rem;}
+      .number {font-size: 0.5rem;min-width: 1rem;}
+      .work {
         font-size: 0.5rem;
+        width: 2.5rem;
+        .tire {margin: 0 0.2rem;}
       }
+      .grade {font-size: 0.5rem;min-width: 3rem;}
+      .date {min-width: 1.5rem;font-size: 0.6rem;}
+      th {font-size: 0.7rem}
     }
 
     .container {
@@ -273,7 +271,7 @@ export default class Projects extends Vue {
     }
     .demolink, .no-demolink {
       width: max-content;
-      //padding: 0.3rem 0.3rem;
+      padding: 0.3rem 0.3rem;
       margin: 0.2rem auto;
     }
   }
