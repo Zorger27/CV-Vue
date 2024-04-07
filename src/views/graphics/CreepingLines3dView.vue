@@ -86,9 +86,9 @@ export default class CreepingLines3d extends Vue {}
       </router-link>
       {{ $t('extra.graphics.creep3d') }}
       <i :title="[weatherCreepView3d ? 'Close Weather Creeping line' : 'Start Weather Creeping line']"
-         @click="changeWeatherCrip3d"> <span :class="['fa-solid', weatherCreepView3d ? 'fa-umbrella' : 'fa-cubes']"></span></i>
+         @click="changeWeatherCrip3d"> <span :class="['fa-solid', weatherCreepView3d ? 'fa-sun' : 'fa-umbrella']"></span></i>
       <i :title="[ratesCreepView3d ? 'Close Currency Rates Creeping line' : 'Start Currency Rates Creeping line']"
-         @click="changeRatesCreep3d"><span :class="['fa', ratesCreepView3d ? 'fa-yin-yang' : 'fa-sack-dollar']"></span></i>
+         @click="changeRatesCreep3d"><span :class="['fa', ratesCreepView3d ? 'fa-wallet' : 'fa-sack-dollar']"></span></i>
       <i :title="[cryptosCreepView3d ? 'Close Cryptocurrencies Creeping line' : 'Start Cryptocurrencies Creeping line']"
          @click="changeCryptosCreepView3d"><span :class="['fa-brands', cryptosCreepView3d ? 'fa-ethereum' : 'fa-bitcoin']"></span></i>
     </h1>
@@ -131,9 +131,10 @@ export default class CreepingLines3d extends Vue {}
       margin-right: 0.1rem;
     }
   }
-  .fa-solid.fa-umbrella, .fa-solid.fa-cubes {margin-right: 0.5rem;}
+  .fa-solid.fa-umbrella, .fa-solid.fa-sun {margin-right: 0.5rem;}
   .fa-brands.fa-ethereum, .fa-brands.fa-bitcoin {margin-left: 0.5rem;}
-  .fa-solid.fa-umbrella {color: darkgoldenrod;}
+  .fa-solid.fa-umbrella {color: mediumslateblue;}
+  .fa.fa-wallet {color: darkgoldenrod;}
   //.fa.fa-yin-yang, .fa.fa-sack-dollar {margin: 0 0.5rem;}
 
   .inner {
