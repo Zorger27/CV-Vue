@@ -205,7 +205,15 @@
       "cube": "Cube (CSS)",
       "cubejs": "Cube (JavaScript)",
       "cube3d": "Cube (Three.js)",
-      "creep3d": "Creeping Lines"
+      "creep3d": "Creeping Lines",
+      "titles": {
+        "weather-start": "Starting 3D Creeping line of Weather",
+        "weather-close": "Closing 3D Creeping line of Weather",
+        "currency-start": "Starting 3D Creeping line of Currency Rates",
+        "currency-close": "Closing 3D Creeping line of Currency Rates",
+        "cryptos-start": "Starting 3D Creeping line of Cryptocurrencies",
+        "cryptos-close": "Closing 3D Creeping line of Cryptocurrencies"
+      }
     },
     "exchange": {
       "title": "Exchange rates",

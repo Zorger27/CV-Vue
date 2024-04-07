@@ -85,11 +85,11 @@ export default class CreepingLines3d extends Vue {}
       <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('extra.graphics.creep3d') }}
-      <i :title="[weatherCreepView3d ? 'Close Weather Creeping line' : 'Start Weather Creeping line']"
+      <i :title="weatherCreepView3d ? $t('extra.graphics.titles.weather-close') : $t('extra.graphics.titles.weather-start')"
          @click="changeWeatherCrip3d"> <span :class="['fa-solid', weatherCreepView3d ? 'fa-sun' : 'fa-umbrella']"></span></i>
-      <i :title="[ratesCreepView3d ? 'Close Currency Rates Creeping line' : 'Start Currency Rates Creeping line']"
+      <i :title="ratesCreepView3d ? $t('extra.graphics.titles.currency-close') : $t('extra.graphics.titles.currency-start')"
          @click="changeRatesCreep3d"><span :class="['fa', ratesCreepView3d ? 'fa-wallet' : 'fa-sack-dollar']"></span></i>
-      <i :title="[cryptosCreepView3d ? 'Close Cryptocurrencies Creeping line' : 'Start Cryptocurrencies Creeping line']"
+      <i :title="cryptosCreepView3d ? $t('extra.graphics.titles.cryptos-close') : $t('extra.graphics.titles.cryptos-start')"
          @click="changeCryptosCreepView3d"><span :class="['fa-brands', cryptosCreepView3d ? 'fa-ethereum' : 'fa-bitcoin']"></span></i>
     </h1>
     <line></line>

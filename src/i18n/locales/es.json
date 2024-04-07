@@ -205,7 +205,15 @@
       "cube": "Cubo (CSS)",
       "cubejs": "Cubo (JavaScript)",
       "cube3d": "Cubo (Three.js)",
-      "creep3d": "Líneas progresivas"
+      "creep3d": "Líneas progresivas",
+      "titles": {
+        "weather-start": "Iniciando línea progresiva 3D del tiempo",
+        "weather-close": "Cerrando línea progresiva 3D del tiempo",
+        "currency-start": "Iniciando línea progresiva 3D de tipos de cambio",
+        "currency-close": "Cerrando línea progresiva 3D de tipos de cambio",
+        "cryptos-start": "Iniciando línea progresiva 3D de criptomonedas",
+        "cryptos-close": "Cerrando línea progresiva 3D de criptomonedas"
+      }
     },
     "exchange": {
       "title": "Los tipos de cambio",
