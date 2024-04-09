@@ -64,29 +64,28 @@ export default class Projects extends Vue {
         <tr>
           <th>№</th>
           <th style="text-align: left;">{{ $t('projects.name') }}</th>
-          <th>Дата</th>
-<!--          <th>{{ $t('projects.type') }}</th>-->
+<!--          <th>Дата</th>-->
           <th>{{ $t('projects.technologies') }}</th>
-          <th>{{ $t('projects.linkCol') }}</th>
         </tr>
         </thead>
         <tbody>
         <tr v-for="prj in orderedProjects" :key="prj.id">
           <td class="nomer"><span style="color: black">{{ prj.id }}</span></td>
-          <td class="name">{{ this.$i18n.locale === "uk" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</td>
-          <td class="work"><span>{{ this.$i18n.locale === "uk" ? prj.start_date_ua : this.$i18n.locale === "es" ? prj.start_date_es : prj.start_date_en }}</span><span v-if="prj.end_date_en" class="tire">–</span><span>{{ this.$i18n.locale === "uk" ? prj.end_date_ua : this.$i18n.locale === "es" ? prj.end_date_es : prj.end_date_en }}</span></td>
+          <td class="name">
+            <div>{{ this.$i18n.locale === "uk" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</div>
+            <div class="work"><span>{{ this.$i18n.locale === "uk" ? prj.start_date_ua : this.$i18n.locale === "es" ? prj.start_date_es : prj.start_date_en }}</span><span class="tire">–</span><span>{{ this.$i18n.locale === "uk" ? prj.end_date_ua : this.$i18n.locale === "es" ? prj.end_date_es : prj.end_date_en }}</span></div>
+            <div class="type">{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</div>
+            <div class="link">
+              <div v-if="prj.demolink" class="link2">
+                <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
+                <a :href="prj.sourcelink" class="no-demolink" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+              </div>
+              <div v-else><a :href="prj.sourcelink" class="no-demolink" title="Project at GitHub..." target="_blank"><b>{{$t('projects.github') }}</b></a></div>
+            </div>
+          </td>
+<!--          <td class="work"><span>{{ this.$i18n.locale === "uk" ? prj.start_date_ua : this.$i18n.locale === "es" ? prj.start_date_es : prj.start_date_en }}</span><span class="tire">–</span><span>{{ this.$i18n.locale === "uk" ? prj.end_date_ua : this.$i18n.locale === "es" ? prj.end_date_es : prj.end_date_en }}</span></td>-->
 <!--          <td class="number">{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</td>-->
           <td class="grade">{{ prj.techno }}</td>
-          <td class="date">
-            <div v-if="prj.demolink">
-              <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
-              <a :href="prj.sourcelink" class="no-demolink" title="Project at GitHub..." target="_blank"><b>{{
-                  $t('projects.github')
-                }}</b></a>
-            </div>
-            <a v-else :href="prj.sourcelink" class="no-demolink" title="Project at GitHub..."
-               target="_blank"><b>{{ $t('projects.github') }}</b></a>
-          </td>
         </tr>
         </tbody>
       </table>
@@ -96,8 +95,8 @@ export default class Projects extends Vue {
         <div class="block">
           <h3><span style="color: black">{{ prj.id }}. </span>{{ this.$i18n.locale === "uk" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</h3>
           <div class="working-date"><span>{{ this.$i18n.locale === "uk" ? prj.start_date_ua : this.$i18n.locale === "es" ? prj.start_date_es : prj.start_date_en }}</span><span v-if="prj.end_date_en" class="tire">–</span><span>{{ this.$i18n.locale === "uk" ? prj.end_date_ua : this.$i18n.locale === "es" ? prj.end_date_es : prj.end_date_en }}</span></div>
-          <div>{{ $t('projects.type') }}: <strong>{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</strong></div>
-          <div>{{ $t('projects.technologies') }}: <strong>{{ prj.techno }}</strong></div>
+          <div><strong>{{ $t('projects.type') }}: </strong>{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</div>
+          <div><strong>{{ $t('projects.technologies') }}: </strong>{{ prj.techno }}</div>
           <div class="link">
             <div v-if="prj.demolink" class="link2">
               <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
@@ -178,17 +177,43 @@ export default class Projects extends Vue {
     background-repeat: no-repeat;
     margin-bottom: 1rem;
 
-    .nomer {width: 1.8rem;font-size: 1.4rem;}
-    .name {font-size: 1.5rem;width: 12rem;}
+    .nomer {width: 1.8rem;font-size: 1.4rem;font-weight: bold}
+    .name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #af0661;
+      width: 22rem;
+      .work {
+        display: inline;
+        font-size: 1.2rem;
+        font-weight: normal;
+        font-style: italic;
+        color: rebeccapurple;
+        .tire {margin: 0 0.5rem;}
+      }
+      .type {
+        font-size: 1.3rem;
+        //font-style: italic;
+        font-weight: normal;
+        color: black;
+      }
+      .demolink, .no-demolink {
+        font-size: 1.3rem;
+        display: inline-flex;
+        width: max-content;
+        padding: 0.5rem 1rem;
+        margin: 0.3rem 0.8rem 0.3rem 0;
+      }
+    }
     .number {font-size: 1.3rem;width: 3rem;}
     .work {
       font-size: 1.3rem;
       width: 11rem;
-      font-style: italic;
+      //font-style: italic;
       color: rebeccapurple;
       .tire {margin: 0 0.5rem;}
     }
-    .grade {font-size: 1.4rem;min-width: 18rem;}
+    .grade {font-size: 1.4rem;min-width: 18rem;color: #0303af}
     .date {width: 3rem;font-size: 1.3rem;}
     th {font-size: 1.6rem}
 
@@ -213,7 +238,7 @@ export default class Projects extends Vue {
         border-color: rgba(0, 0, 0, 0.3);
         .link .link2 {display: flex;}
         .working-date {
-          font-style: italic;
+          //font-style: italic;
           color: rebeccapurple;
           .tire {margin: 0 0.5rem;}
         }
@@ -224,13 +249,23 @@ export default class Projects extends Vue {
   @media(max-width: 1020px) {
     .table {
       .nomer {width: 1.3rem;font-size: 1.1rem;}
-      .name {font-size: 1.2rem;width: 8rem;}
-      .number {font-size: 1.2rem;width: 2rem;}
-      .work {
-        font-size: 1.1rem;
-        width: 9rem;
-        .tire {margin: 0 0.3rem;}
+      .name {
+        font-size: 1.2rem;
+        width: 18rem;
+        .work {
+          font-size: 1rem;
+          .tire {margin: 0 0.3rem;}
+        }
+        .type {
+          font-size: 1rem;
+        }
+        .demolink, .no-demolink {
+          font-size: 1rem;
+          padding: 0.4rem 0.6rem;
+          margin: 0.2rem 0.6rem 0.2rem 0;
+        }
       }
+      .number {font-size: 1.2rem;width: 2rem;}
       .grade {font-size: 1.1rem;min-width: 9rem;}
       .date {width: 2rem;font-size: 1.1rem;}
       th {font-size: 1.3rem}
@@ -249,15 +284,23 @@ export default class Projects extends Vue {
       margin-bottom: 0.8rem;
 
       .nomer {width: 1rem;font-size: 0.6rem;}
-      .name {font-size: 0.7rem;min-width: 3rem;}
-      .number {font-size: 0.5rem;min-width: 1rem;}
-      .work {
-        font-size: 0.5rem;
-        width: 2.5rem;
-        .tire {margin: 0 0.2rem;}
+      .name {
+        font-size: 0.7rem;
+        width: 12rem;
+        .work {
+          font-size: 0.5rem;
+          .tire {margin: 0 0.2rem;}
+        }
+        .type {
+          font-size: 0.5rem;
+        }
+        .demolink, .no-demolink {
+          font-size: 0.6rem;
+          padding: 0.3rem 0.5rem;
+          margin: 0.2rem 0.5rem 0.2rem 0;
+        }
       }
-      .grade {font-size: 0.5rem;min-width: 3rem;}
-      .date {min-width: 1.5rem;font-size: 0.6rem;}
+      .grade {font-size: 0.5rem;min-width: 6rem;}
       th {font-size: 0.7rem}
     }
 
@@ -271,7 +314,7 @@ export default class Projects extends Vue {
     }
     .demolink, .no-demolink {
       width: max-content;
-      padding: 0.3rem 0.3rem;
+      padding: 0.5rem 0.7rem;
       margin: 0.2rem auto;
     }
   }
