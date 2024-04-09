@@ -213,9 +213,10 @@ export default class Projects extends Vue {
       color: midnightblue;
     }
     .grade {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       width: 10rem;
-      color: #0303af}
+      color: #0303af
+    }
 
     th {font-size: 1.6rem}
     th, .nomer, .number, .grade, .date {text-align: center;}
