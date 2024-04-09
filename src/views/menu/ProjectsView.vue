@@ -64,7 +64,7 @@ export default class Projects extends Vue {
         <tr>
           <th>№</th>
           <th style="text-align: left;">{{ $t('projects.name') }}</th>
-<!--          <th>Дата</th>-->
+          <th>{{ $t('projects.description') }}</th>
           <th>{{ $t('projects.technologies') }}</th>
         </tr>
         </thead>
@@ -83,8 +83,7 @@ export default class Projects extends Vue {
               <div v-else><a :href="prj.sourcelink" class="no-demolink" title="Project at GitHub..." target="_blank"><b>{{$t('projects.github') }}</b></a></div>
             </div>
           </td>
-<!--          <td class="work"><span>{{ this.$i18n.locale === "uk" ? prj.start_date_ua : this.$i18n.locale === "es" ? prj.start_date_es : prj.start_date_en }}</span><span class="tire">–</span><span>{{ this.$i18n.locale === "uk" ? prj.end_date_ua : this.$i18n.locale === "es" ? prj.end_date_es : prj.end_date_en }}</span></td>-->
-<!--          <td class="number">{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</td>-->
+          <td class="description">{{ this.$i18n.locale === "uk" ? prj.description_ua : this.$i18n.locale === "es" ? prj.description_es : prj.description_en }}</td>
           <td class="grade">{{ prj.techno }}</td>
         </tr>
         </tbody>
@@ -95,6 +94,7 @@ export default class Projects extends Vue {
         <div class="block">
           <h3><span style="color: black">{{ prj.id }}. </span>{{ this.$i18n.locale === "uk" ? prj.title_ua : this.$i18n.locale === "es" ? prj.title_es : prj.title_en }}</h3>
           <div class="working-date"><span>{{ this.$i18n.locale === "uk" ? prj.start_date_ua : this.$i18n.locale === "es" ? prj.start_date_es : prj.start_date_en }}</span><span v-if="prj.end_date_en" class="tire">–</span><span>{{ this.$i18n.locale === "uk" ? prj.end_date_ua : this.$i18n.locale === "es" ? prj.end_date_es : prj.end_date_en }}</span></div>
+          <div class="description">{{ this.$i18n.locale === "uk" ? prj.description_ua : this.$i18n.locale === "es" ? prj.description_es : prj.description_en }}</div>
           <div><strong>{{ $t('projects.type') }}: </strong>{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</div>
           <div><strong>{{ $t('projects.technologies') }}: </strong>{{ prj.techno }}</div>
           <div class="link">
@@ -205,18 +205,19 @@ export default class Projects extends Vue {
         margin: 0.3rem 0.8rem 0.3rem 0;
       }
     }
-    .number {font-size: 1.3rem;width: 3rem;}
-    .work {
-      font-size: 1.3rem;
-      width: 11rem;
-      //font-style: italic;
-      color: rebeccapurple;
-      .tire {margin: 0 0.5rem;}
+    .description {
+      width: 22rem;
+      text-align: left;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: midnightblue;
     }
-    .grade {font-size: 1.4rem;min-width: 18rem;color: #0303af}
-    .date {width: 3rem;font-size: 1.3rem;}
-    th {font-size: 1.6rem}
+    .grade {
+      font-size: 1.4rem;
+      width: 10rem;
+      color: #0303af}
 
+    th {font-size: 1.6rem}
     th, .nomer, .number, .grade, .date {text-align: center;}
   }
 
@@ -238,9 +239,14 @@ export default class Projects extends Vue {
         border-color: rgba(0, 0, 0, 0.3);
         .link .link2 {display: flex;}
         .working-date {
-          //font-style: italic;
           color: rebeccapurple;
           .tire {margin: 0 0.5rem;}
+        }
+        .description {
+          font-style: italic;
+          font-size: 1.1rem;
+          margin: 0.3rem 0;
+          color: midnightblue;
         }
       }
     }
@@ -265,9 +271,8 @@ export default class Projects extends Vue {
           margin: 0.2rem 0.6rem 0.2rem 0;
         }
       }
-      .number {font-size: 1.2rem;width: 2rem;}
+      .description {width: 17rem;font-size: 1rem;}
       .grade {font-size: 1.1rem;min-width: 9rem;}
-      .date {width: 2rem;font-size: 1.1rem;}
       th {font-size: 1.3rem}
     }
 
@@ -275,6 +280,13 @@ export default class Projects extends Vue {
       .prj {
         .block {
           max-width: fit-content;
+          .working-date {
+            .tire {margin: 0 0.4rem;}
+          }
+          .description {
+            font-size: 1rem;
+            margin: 0.2rem 0;
+          }
         }
       }
     }
@@ -300,7 +312,11 @@ export default class Projects extends Vue {
           margin: 0.2rem 0.5rem 0.2rem 0;
         }
       }
-      .grade {font-size: 0.5rem;min-width: 6rem;}
+      .description {
+        width: 10rem;
+        font-size: 0.5rem;
+      }
+      .grade {font-size: 0.5rem;min-width: 3rem}
       th {font-size: 0.7rem}
     }
 
@@ -309,6 +325,13 @@ export default class Projects extends Vue {
         max-width: 25rem;
         .block {
           max-width: fit-content;
+          .working-date {
+            .tire {margin: 0 0.2rem;}
+          }
+          .description {
+            font-size: 0.7rem;
+            margin: 0.1rem 0;
+          }
         }
       }
     }

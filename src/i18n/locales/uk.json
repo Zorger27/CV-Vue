@@ -55,6 +55,7 @@
   "projects": {
     "title": "Проекти",
     "name": "Найменування",
+    "description": "Опис",
     "type": "Тип",
     "technologies": "Технології",
     "linkCol": "Посилання",

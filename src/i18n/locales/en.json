@@ -54,7 +54,8 @@
   },
   "projects": {
     "title": "Projects",
-    "name": "Description",
+    "name": "Name",
+    "description": "Description",
     "type": "Type",
     "technologies": "Technologies",
     "linkCol": "Link",
