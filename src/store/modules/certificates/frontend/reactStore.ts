@@ -23,7 +23,7 @@ const state = {
       },
       {
         id: 3,
-        title_en: "React Advanced",
+        title_en: "React Advanced 2021",
         title_ua: "React Поглиблений",
         title_es: "React Avanzado",
         regnumber: "TP74208807",
@@ -33,6 +33,16 @@ const state = {
       },
       {
         id: 4,
+        title_en: "React Advanced 2024",
+        title_ua: "React Поглиблений",
+        title_es: "React Avanzado",
+        regnumber: "TP33851106",
+        grade: "1000 / 1000",
+        examdate: "13.04.2024",
+        image: "https://testprovider.com/ru/search-certificate/tp33851106",
+      },
+      {
+        id: 5,
         title_en: "React Native",
         title_ua: "React Native",
         title_es: "React Native",
