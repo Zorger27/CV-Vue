@@ -12,6 +12,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
       sliderImages: [
         require('@/assets/certificates/other/08_D0000952361.webp'),
         require('@/assets/certificates/pm/03_Critical_Thinking.webp'),
+        require('@/assets/certificates/pm/04_ Strategic_Thinking.webp'),
         require('@/assets/certificates/other/09_TP17348317.webp'),
         require('@/assets/certificates/other/01_TP03316433.webp'),
         require('@/assets/certificates/other/02_TP18727720.webp')
@@ -49,6 +50,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
       return [
         otherStore.state.otherStore[7],
         pmStore.state.pmStore[2],
+        pmStore.state.pmStore[3],
         otherStore.state.otherStore[8],
         otherStore.state.otherStore[0],
         otherStore.state.otherStore[1]

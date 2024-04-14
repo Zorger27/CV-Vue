@@ -37,14 +37,33 @@ const state = {
         examdate: "07.12.2020",
         image: "/assets/certificates/pm/03_Critical_Thinking.webp",
       },
-
+      {
+        id: 4,
+        title_en: "Strategic Thinking",
+        title_ua: "Стратегічне мислення",
+        title_es: "Pensamiento estrategico",
+        regnumber: "43e55a61",
+        grade_en: "Successfully completed",
+        grade_ua: "Успішно завершено",
+        grade_es: "Completado con éxito",
+        examdate: "26.11.2020",
+        image: "/assets/certificates/pm/04_ Strategic_Thinking.webp",
+      },
+      {
+        id: 5,
+        title_en: "The Six Morning Habits of High Performers",
+        title_ua: "Шість ранкових звичок успішних людей",
+        title_es: "Seis hábitos matutinos de la gente exitosa",
+        regnumber: "e261acf977",
+        grade_en: "Successfully completed",
+        grade_ua: "Успішно завершено",
+        grade_es: "Completado con éxito",
+        examdate: "09.11.2020",
+        image: "/assets/certificates/pm/05_The_Morning_Habits.webp",
+      },
     ]
 };
-const getters = {
-  // getById: (state, getters) => (id) => {
-  //     return state.otherStore.find(item => item.id === parseInt(id));
-  // }
-};
+const getters = {};
 const mutations = {};
 const actions = {};
 export default {
