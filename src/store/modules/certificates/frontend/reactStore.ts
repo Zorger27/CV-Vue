@@ -24,8 +24,8 @@ const state = {
       {
         id: 3,
         title_en: "React Advanced 2021",
-        title_ua: "React Поглиблений",
-        title_es: "React Avanzado",
+        title_ua: "React Поглиблений 2021",
+        title_es: "React Avanzado 2021",
         regnumber: "TP74208807",
         grade: "1000 / 1000",
         examdate: "09.08.2021",
@@ -34,8 +34,8 @@ const state = {
       {
         id: 4,
         title_en: "React Advanced 2024",
-        title_ua: "React Поглиблений",
-        title_es: "React Avanzado",
+        title_ua: "React Поглиблений 2024",
+        title_es: "React Avanzado 2024",
         regnumber: "TP33851106",
         grade: "1000 / 1000",
         examdate: "13.04.2024",
