@@ -231,7 +231,16 @@ const state = {
         examdate: "06.11.2021",
         image: "https://testprovider.com/ru/search-certificate/tp37097304",
       },
-
+      {
+        id: 24,
+        title_en: "Basics of IntelliJ IDEA",
+        title_ua: "Основи IntelliJ IDEA",
+        title_es: "Fundamentos de IntelliJ IDEA",
+        regnumber: "TP19222120",
+        grade: "1000 / 1000",
+        examdate: "16.04.2024",
+        image: "https://testprovider.com/ru/search-certificate/tp19222120",
+      },
     ]
 };
 const getters = {};
