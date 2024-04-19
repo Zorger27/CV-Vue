@@ -71,6 +71,16 @@ const state = {
         examdate: "30.06.2021",
         image: "https://testprovider.com/ru/search-certificate/tp59539891",
       },
+      {
+        id: 8,
+        title_en: "Asynchronous programming in JavaScript",
+        title_ua: "Асинхронне програмування у JavaScript",
+        title_es: "Programación asincrónica en JavaScript",
+        regnumber: "TP35598802",
+        grade: "975 / 1000",
+        examdate: "19.04.2024",
+        image: "https://testprovider.com/ru/search-certificate/tp35598802",
+      },
     ]
 };
 const getters = {};
