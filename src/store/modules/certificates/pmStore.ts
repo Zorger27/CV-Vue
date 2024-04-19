@@ -47,7 +47,7 @@ const state = {
         grade_ua: "Успішно завершено",
         grade_es: "Completado con éxito",
         examdate: "26.11.2020",
-        image: "/assets/certificates/pm/04_ Strategic_Thinking.webp",
+        image: "/assets/certificates/pm/04_Strategic_Thinking.webp",
       },
       {
         id: 5,
