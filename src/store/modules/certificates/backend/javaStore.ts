@@ -214,7 +214,7 @@ const state = {
       {
         id: 22,
         title_en: "Asynchronous programming in Java",
-        title_ua: "Асинхронне програмування в Java",
+        title_ua: "Асинхронне програмування у Java",
         title_es: "Programación asincrónica en Java",
         regnumber: "TP33405544",
         grade: "1000 / 1000",
