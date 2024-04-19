@@ -3,6 +3,7 @@ import {Options, Vue} from "vue-class-component";
 import pmStore from "@/store/modules/certificates/pmStore";
 import Slider from "@/components/util/Slider.vue";
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
+
 @Options({
   mixins: [openGraphMixin],
   computed: {pmStore() {return pmStore}},
