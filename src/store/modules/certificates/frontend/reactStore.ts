@@ -43,13 +43,23 @@ const state = {
       },
       {
         id: 5,
-        title_en: "React Native",
-        title_ua: "React Native",
-        title_es: "React Native",
+        title_en: "React Native 2021",
+        title_ua: "React Native 2021",
+        title_es: "React Native 2021",
         regnumber: "TP06814422",
         grade: "1000 / 1000",
         examdate: "19.08.2021",
         image: "https://testprovider.com/ru/search-certificate/tp06814422",
+      },
+      {
+        id: 6,
+        title_en: "React Native 2024",
+        title_ua: "React Native 2024",
+        title_es: "React Native 2024",
+        regnumber: "TP21660884",
+        grade: "1000 / 1000",
+        examdate: "12.05.2024",
+        image: "https://testprovider.com/ru/search-certificate/tp21660884",
       },
     ]
 };
