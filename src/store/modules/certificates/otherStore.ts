@@ -75,6 +75,18 @@ const state = {
       },
       {
         id: 7,
+        title_en: "The basics of using Git",
+        title_ua: "Основи використання Git",
+        title_es: "Los fundamentos del uso de Git",
+        regnumber: "TP24443333",
+        grade_en: "1000 / 1000",
+        grade_ua: "1000 / 1000",
+        grade_es: "1000 / 1000",
+        examdate: "21.06.2024",
+        image: "https://testprovider.com/ru/search-certificate/tp24443333",
+      },
+      {
+        id: 8,
         title_en: "Docker",
         title_ua: "Docker",
         title_es: "Docker",
@@ -86,7 +98,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp56750315",
       },
       {
-        id: 8,
+        id: 9,
         title_en: "Digigram 2.0 for citizens",
         title_ua: "Цифрограм 2.0 для громадян",
         title_es: "Digigram 2.0 para los ciudadanos",
@@ -98,7 +110,7 @@ const state = {
         image: "https://osvita.diia.gov.ua/certificate-check/D0000952361",
       },
       {
-        id: 9,
+        id: 10,
         title_en: "Basic software developer training",
         title_ua: "Базова підготовка розробника ПЗ",
         title_es: "Capacitación básica para desarrolladores de software",
@@ -110,7 +122,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp17348317",
       },
       {
-        id: 10,
+        id: 11,
         title_en: "Google Display Network",
         title_ua: "Медійна мережа Google",
         title_es: "Red de Display de Google",
@@ -119,10 +131,10 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "18.02.2020",
-        image: "/assets/certificates/other/10_Google_Display_Network_Ads.webp",
+        image: "/assets/certificates/other/11_Google_Display_Network_Ads.webp",
       },
       {
-        id: 11,
+        id: 12,
         title_en: "Google Shopping Campaign",
         title_ua: "Торгові компанії Google",
         title_es: "Campaña de Google Shopping",
@@ -131,10 +143,10 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "20.02.2020",
-        image: "/assets/certificates/other/11_Google_Shopping_Campaign.webp",
+        image: "/assets/certificates/other/12_Google_Shopping_Campaign.webp",
       },
       {
-        id: 12,
+        id: 13,
         title_en: "Google Search Campaign",
         title_ua: "Пошукові компанії Google",
         title_es: "Campaña de búsqueda de Google",
@@ -143,10 +155,10 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "16.03.2020",
-        image: "/assets/certificates/other/12_Google_Search_Campaign.webp",
+        image: "/assets/certificates/other/13_Google_Search_Campaign.webp",
       },
       {
-        id: 13,
+        id: 14,
         title_en: "Google Video Campaign",
         title_ua: "Відеокомпанії Google",
         title_es: "Campaña de Google Video",
@@ -155,7 +167,7 @@ const state = {
         grade_ua: "Успішно складено іспит",
         grade_es: "Aprobó con éxito el examen",
         examdate: "17.03.2020",
-        image: "/assets/certificates/other/13_Google_Video_Campaign.webp",
+        image: "/assets/certificates/other/14_Google_Video_Campaign.webp",
       }
     ]
 };

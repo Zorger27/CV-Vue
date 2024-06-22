@@ -10,7 +10,6 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
       sliderImages: [
         require('@/assets/certificates/diploma/TP24303907D.webp'),
         require('@/assets/certificates/english/09_IT_English_TestProvider.webp'),
-        // require('@/assets/certificates/other/07_D0000952361.jpg'),
         require('@/assets/certificates/diploma/TP31003654D.webp'),
         require('@/assets/certificates/pm/03_Critical_Thinking.webp'),
         require('@/assets/certificates/diploma/TP31617068D.webp'),
@@ -18,7 +17,6 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
         require('@/assets/certificates/diploma/TP37723782D.webp'),
         require('@/assets/certificates/english/14_Intermediate_level_of_English.webp'),
         require('@/assets/certificates/diploma/TP45473683D.webp'),
-        // require('@/assets/certificates/other/02_TP18727720.jpg'),
         require('@/assets/certificates/diploma/TP63925579D.webp'),
         require('@/assets/documents/frontend.webp'),
         require('@/assets/certificates/diploma/TP77692345D.webp'),

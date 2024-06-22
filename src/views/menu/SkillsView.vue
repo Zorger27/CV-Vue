@@ -10,10 +10,10 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   data() {
     return {
       sliderImages: [
-        require('@/assets/certificates/other/08_D0000952361.webp'),
+        require('@/assets/certificates/other/09_D0000952361.webp'),
         require('@/assets/certificates/pm/03_Critical_Thinking.webp'),
         require('@/assets/certificates/pm/04_Strategic_Thinking.webp'),
-        require('@/assets/certificates/other/09_TP17348317.webp'),
+        require('@/assets/certificates/other/10_TP17348317.webp'),
         require('@/assets/certificates/other/01_TP03316433.webp'),
         require('@/assets/certificates/other/02_TP18727720.webp')
       ],
@@ -48,10 +48,10 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     shouldApplyAdditionalStyles() {return !this.isCodersrankSkillsChartVisible && (!this.isSmallScreen || !this.isMediumScreen);},
     selectedOther() {
       return [
-        otherStore.state.otherStore[7],
+        otherStore.state.otherStore[8],
         pmStore.state.pmStore[2],
         pmStore.state.pmStore[3],
-        otherStore.state.otherStore[8],
+        otherStore.state.otherStore[9],
         otherStore.state.otherStore[0],
         otherStore.state.otherStore[1]
       ];
@@ -93,9 +93,13 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   beforeUnmount() {
     window.removeEventListener('resize', this.handleResize);
     },
+  // watch: {
+  //   isSmallScreen: 'updateLayout',
+  //   isMediumScreen: 'updateLayout',
+  // },
   watch: {
-    isSmallScreen: 'updateLayout',
-    isMediumScreen: 'updateLayout',
+    isSmallScreen() { this.updateLayout(); },
+    isMediumScreen() { this.updateLayout(); },
   },
   methods: {
     changeView() {this.tableView = !this.tableView;},
