@@ -45,19 +45,25 @@ const state = {
         id: 5,
         title_en: "SQL Essential",
         title_ua: "SQL Базовий",
-        title_es: "SQL básico",
+        title_es: "SQL Esencial",
         regnumber: "TP98353860",
         grade: "1000 / 1000",
         examdate: "18.06.2023",
         image: "https://testprovider.com/ru/search-certificate/tp98353860",
       },
+      {
+        id: 6,
+        title_en: "MySQL Essential",
+        title_ua: "MySQL Базовий",
+        title_es: "MySQL Esencial",
+        regnumber: "TP74028044",
+        grade: "1000 / 1000",
+        examdate: "01.07.2024",
+        image: "https://testprovider.com/ru/search-certificate/tp74028044",
+      },
     ]
 };
-const getters = {
-  // getById: (state, getters) => (id) => {
-  //     return state.otherStore.find(item => item.id === parseInt(id));
-  // }
-};
+const getters = {};
 const mutations = {};
 const actions = {};
 export default {
