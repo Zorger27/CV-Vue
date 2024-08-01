@@ -83,6 +83,16 @@ const state = {
       },
       {
         id: 9,
+        title_en: "Bootstrap 5",
+        title_ua: "Bootstrap 5",
+        title_es: "Bootstrap 5",
+        regnumber: "TP14847976",
+        grade: "1000 / 1000",
+        examdate: "01.08.2024",
+        image: "https://testprovider.com/ru/search-certificate/tp14847976",
+      },
+      {
+        id: 10,
         title_en: "Practical Landing Course",
         title_ua: "Практичний курс з верстки лендінгу",
         title_es: "Curso práctico de maquetación de landing page",
@@ -92,7 +102,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp73961983",
       },
       {
-        id: 10,
+        id: 11,
         title_en: "WordPress Starter",
         title_ua: "WordPress Стартовий",
         title_es: "WordPress Inicio",
@@ -102,7 +112,7 @@ const state = {
         image: "https://testprovider.com/ru/search-certificate/tp68763365",
       },
       {
-        id: 11,
+        id: 12,
         title_en: "WordPress Essential",
         title_ua: "WordPress Базовий",
         title_es: "WordPress Básico",
