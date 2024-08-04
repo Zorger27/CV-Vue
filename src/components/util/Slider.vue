@@ -18,11 +18,12 @@ import { Options, Vue } from "vue-class-component";
   },
   data() {
     return {
-      currentSlide: 0,
-      transformValue: 0,
+      currentSlide: 1,  // Стартуем с 1-го, так как будет дубликат последнего слайда
+      transformValue: -100,
       timerId: null as number | null,
       touchStartX: 0,
       touchMoveX: 0,
+      transitioning: false,  // Флаг для предотвращения быстрой смены слайдов
     };
   },
   mounted() {
@@ -34,24 +35,6 @@ import { Options, Vue } from "vue-class-component";
         this.nextSlide();
       }, this.interval);
     },
-    previousSlide() {
-      if (this.currentSlide === 0) {
-        this.currentSlide = this.images.length - 1;
-        this.transformValue = -100 * this.currentSlide;
-      } else {
-        this.currentSlide--;
-        this.transformValue += 100;
-      }
-    },
-    nextSlide() {
-      if (this.currentSlide === this.images.length - 1) {
-        this.currentSlide = 0;
-        this.transformValue = 0;
-      } else {
-        this.currentSlide++;
-        this.transformValue -= 100;
-      }
-    },
     stopAutoPlay() {
       if (this.timerId !== null) {
         clearInterval(this.timerId);
@@ -61,13 +44,51 @@ import { Options, Vue } from "vue-class-component";
         this.startAutoPlay();
       }, this.transitionDuration);
     },
+    nextSlide() {
+      if (!this.transitioning) {
+        this.transitioning = true;
+        this.currentSlide++;
+        this.transformValue -= 100;
+
+        if (this.currentSlide === this.images.length + 1) {
+          setTimeout(() => {
+            this.currentSlide = 1;
+            this.transformValue = -100;
+            this.transitioning = false;
+          }, this.transitionDuration);
+        } else {
+          setTimeout(() => {
+            this.transitioning = false;
+          }, this.transitionDuration);
+        }
+      }
+    },
+    previousSlide() {
+      if (!this.transitioning) {
+        this.transitioning = true;
+        this.currentSlide--;
+        this.transformValue += 100;
+
+        if (this.currentSlide === 0) {
+          setTimeout(() => {
+            this.currentSlide = this.images.length;
+            this.transformValue = -100 * this.images.length;
+            this.transitioning = false;
+          }, this.transitionDuration);
+        } else {
+          setTimeout(() => {
+            this.transitioning = false;
+          }, this.transitionDuration);
+        }
+      }
+    },
     openInNewWindow(index: number) {
       const imageUrl = this.images[index];
       window.open(imageUrl, '_blank');
     },
     goToSlide(index: number) {
-      this.currentSlide = index;
-      this.transformValue = -index * 100;
+      this.currentSlide = index + 1;
+      this.transformValue = -(index + 1) * 100;
       this.stopAutoPlay();
     },
     handleTouchStart(event: TouchEvent) {
@@ -94,11 +115,28 @@ export default class Slider extends Vue {}
 
 <template>
   <div class="slider-container" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">
-    <div class="slider-wrapper" :style="{ transform: 'translateX(' + transformValue + '%)' }">
+
+    <div class="slider-wrapper"
+         :style="{
+        transform: 'translateX(' + transformValue + '%)',
+        transition: transitioning ? 'transform ' + transitionDuration + 'ms' : 'none'
+      }"
+    >
+      <!-- Добавляем дубликат последнего слайда перед первым -->
+      <div class="slider-item" @dblclick="openInNewWindow(images.length - 1)">
+        <img :src="images[images.length - 1]" alt="slider image">
+      </div>
+
       <div class="slider-item" v-for="(image, index) in images" :key="index" @dblclick="openInNewWindow(index)">
         <img :src="image" alt="slider image">
       </div>
+
+      <!-- Добавляем дубликат первого слайда после последнего -->
+      <div class="slider-item" @dblclick="openInNewWindow(0)">
+        <img :src="images[0]" alt="slider image">
+      </div>
     </div>
+
     <div class="slider-controls">
       <button class="left-control" @click="previousSlide"><i class="fa fa-arrow-alt-circle-left"></i></button>
       <button class="right-control" @click="nextSlide"><i class="fa fa-arrow-alt-circle-right"></i></button>
@@ -107,7 +145,7 @@ export default class Slider extends Vue {}
     <div class="slider-dots">
       <span class="slider-dot"
             v-for="(image, index) in images" :key="index"
-            :class="{ active: index === currentSlide }"
+            :class="{ active: index + 1 === currentSlide }"
             @click="goToSlide(index)"
       ></span>
     </div>
