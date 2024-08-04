@@ -60,7 +60,7 @@ module.exports = defineConfig({
           {attributes: {property: 'twitter:image', content: 'https://zorin.expert/assets/ogimage/all/image_all.jpg'}},
           {attributes: {property: 'og:url', content: 'https://Zorin.Expert'}},
           {attributes: {property: 'og:type', content: 'website'}},
-          {attributes: {property: 'og:site_name', content: 'Zorin.Expert'}},
+          {attributes: {property: 'og:site_name', content: 'https://Zorin.Expert'}},
           {attributes: {property: 'twitter:card', content: 'summary_large_image'}}
         ]
       }),
