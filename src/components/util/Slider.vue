@@ -20,7 +20,7 @@ import {Options, Vue} from "vue-class-component";
     return {
       currentSlide: 0,
       transformValue: 0,
-      timerId: null,
+      timerId: null as number | null, // Указание типа timerId как number | null
       touchStartX: 0,
       touchMoveX: 0,
     };
@@ -32,7 +32,7 @@ import {Options, Vue} from "vue-class-component";
     startAutoPlay() {
       this.timerId = setInterval(() => {
         this.nextSlide();
-      }, this.interval);
+      }, this.interval) as unknown as number; // Приведение типа к числу
     },
     previousSlide() {
       if (this.currentSlide === 0) {
@@ -53,8 +53,10 @@ import {Options, Vue} from "vue-class-component";
       }
     },
     stopAutoPlay() {
-      clearInterval(this.timerId);
-      this.timerId = null;
+      if (this.timerId !== null) { // Проверка на null перед вызовом clearInterval
+        clearInterval(this.timerId);
+        this.timerId = null;
+      }
       setTimeout(() => {
         this.startAutoPlay();
       }, this.transitionDuration);
@@ -105,13 +107,15 @@ export default class Slider extends Vue {}
       <button class="left-control" @click="previousSlide"><i class="fa fa-arrow-alt-circle-left"></i></button>
       <button class="right-control" @click="nextSlide"><i class="fa fa-arrow-alt-circle-right"></i></button>
     </div>
+
     <div class="slider-dots">
       <span class="slider-dot"
-            v-for="(image, index) in images" :key="index"
-            :class="{ active: index === currentSlide }"
-            @click="goToSlide(index)"
+        v-for="(index) in images.length" :key="index - 1"
+        :class="{ active: index - 1 === currentSlide }"
+        @click="goToSlide(index - 1)"
       ></span>
     </div>
+
   </div>
 </template>
 
