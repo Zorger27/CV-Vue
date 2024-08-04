@@ -112,6 +112,14 @@ export default class Slider extends Vue {}
       ></span>
     </div>
 
+<!--    <div class="slider-dots">-->
+<!--      <span class="slider-dot"-->
+<!--        v-for="(index) in images.length" :key="index - 1" -->
+<!--        :class="{ active: index - 1 === currentSlide }"-->
+<!--        @click="goToSlide(index - 1)"-->
+<!--      ></span>-->
+<!--    </div>-->
+
   </div>
 </template>
 
