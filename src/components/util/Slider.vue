@@ -3,108 +3,122 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   props: {
+    // Пропсы, которые принимает слайдер
     images: {
       type: Array,
-      required: true,
+      required: true, // Массив изображений обязателен для работы слайдера
     },
     transitionDuration: {
       type: Number,
-      default: 500,
+      default: 500, // Длительность перехода между слайдами в миллисекундах
     },
     interval: {
       type: Number,
-      default: 5000,
+      default: 5000, // Интервал времени в миллисекундах между автоматическим переключением слайдов
     },
   },
   data() {
     return {
-      currentSlide: 1,  // Стартуем с 1-го, так как будет дубликат последнего слайда
-      transformValue: -100,
-      timerId: null as number | null,
-      touchStartX: 0,
-      touchMoveX: 0,
-      transitioning: false,  // Флаг для предотвращения быстрой смены слайдов
+      // Текущее состояние слайдера
+      currentSlide: 1,  // Индекс текущего слайда, начинаем с 1, чтобы учесть дубликат последнего слайда
+      transformValue: -100, // Позиция слайдера для CSS-трансформации (начинаем со второго слайда)
+      timerId: null as number | null, // ID таймера для автоматического переключения слайдов
+      touchStartX: 0, // Начальная координата X для отслеживания жестов
+      touchMoveX: 0, // Текущая координата X для отслеживания жестов
+      transitioning: false, // Флаг, указывающий, происходит ли в данный момент переход между слайдами
     };
   },
   mounted() {
-    this.startAutoPlay();
+    this.startAutoPlay(); // Запускаем автоматическое переключение слайдов при монтировании компонента
   },
   methods: {
     startAutoPlay() {
+      // Запуск автоматического переключения слайдов с интервалом, заданным в props
       this.timerId = window.setInterval(() => {
-        this.nextSlide();
+        this.nextSlide(); // Переключение на следующий слайд
       }, this.interval);
     },
     stopAutoPlay() {
+      // Остановка автоматического переключения слайдов
       if (this.timerId !== null) {
-        clearInterval(this.timerId);
+        clearInterval(this.timerId); // Очищаем таймер
         this.timerId = null;
       }
+      // Через время, равное длительности перехода, перезапускаем автоигру
       setTimeout(() => {
         this.startAutoPlay();
       }, this.transitionDuration);
     },
     nextSlide() {
-      if (!this.transitioning) {
-        this.transitioning = true;
+      // Переход к следующему слайду
+      if (!this.transitioning) { // Если в данный момент не происходит перехода
+        this.transitioning = true; // Устанавливаем флаг перехода
         this.currentSlide++;
         this.transformValue -= 100;
 
         if (this.currentSlide === this.images.length + 1) {
+          // Если мы достигли дубликата последнего слайда
           setTimeout(() => {
-            this.currentSlide = 1;
+            this.currentSlide = 1; // Перемещаемся на первый реальный слайд
             this.transformValue = -100;
-            this.transitioning = false;
+            this.transitioning = false; // Сбрасываем флаг перехода
           }, this.transitionDuration);
         } else {
           setTimeout(() => {
-            this.transitioning = false;
+            this.transitioning = false; // После завершения перехода сбрасываем флаг
           }, this.transitionDuration);
         }
       }
     },
     previousSlide() {
-      if (!this.transitioning) {
-        this.transitioning = true;
+      // Переход к предыдущему слайду
+      if (!this.transitioning) { // Если в данный момент не происходит перехода
+        this.transitioning = true; // Устанавливаем флаг перехода
         this.currentSlide--;
         this.transformValue += 100;
 
         if (this.currentSlide === 0) {
+          // Если мы достигли дубликата первого слайда
           setTimeout(() => {
-            this.currentSlide = this.images.length;
+            this.currentSlide = this.images.length; // Перемещаемся на последний реальный слайд
             this.transformValue = -100 * this.images.length;
-            this.transitioning = false;
+            this.transitioning = false; // Сбрасываем флаг перехода
           }, this.transitionDuration);
         } else {
           setTimeout(() => {
-            this.transitioning = false;
+            this.transitioning = false; // После завершения перехода сбрасываем флаг
           }, this.transitionDuration);
         }
       }
     },
     openInNewWindow(index: number) {
+      // Открытие изображения в новом окне по двойному клику
       const imageUrl = this.images[index];
       window.open(imageUrl, '_blank');
     },
     goToSlide(index: number) {
-      this.currentSlide = index + 1;
+      // Переключение на определённый слайд при клике на точку навигации
+      this.currentSlide = index + 1; // Учёт дубликата первого слайда
       this.transformValue = -(index + 1) * 100;
-      this.stopAutoPlay();
+      this.stopAutoPlay(); // Остановка автоигры при ручном переключении
     },
     handleTouchStart(event: TouchEvent) {
+      // Начало отслеживания жеста (начальная координата X)
       this.touchStartX = event.touches[0].clientX;
       this.touchMoveX = this.touchStartX;
     },
     handleTouchMove(event: TouchEvent) {
+      // Отслеживание движения пальца по экрану
       this.touchMoveX = event.touches[0].clientX;
     },
     handleTouchEnd() {
+      // Завершение отслеживания жеста и определение направления свайпа
       const deltaX = this.touchMoveX - this.touchStartX;
 
       if (deltaX > 50) {
-        this.previousSlide();
+        this.previousSlide(); // Свайп вправо - переход на предыдущий слайд
       } else if (deltaX < -50) {
-        this.nextSlide();
+        this.nextSlide(); // Свайп влево - переход на следующий слайд
       }
     },
   },
