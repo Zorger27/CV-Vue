@@ -6,7 +6,14 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 @Options({
   mixins: [openGraphMixin],
   computed: {databaseStore() {return databaseStore}},
-  data() {return {tableView: false}},
+  data() {
+    const images = require.context('@/assets/certificates/database/', false, /\.(jpg|jpeg|png|webp)$/);
+    return {
+      tableView: false,
+      images: images,
+      sliderImages: images.keys().map((key: string) => images(key))
+    }
+    },
   mounted() {
     const mainTitle = 'Database certificates';
     const title = 'Portfolio - Database certificates';
@@ -20,10 +27,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   },
   methods: {changeView() {this.tableView = !this.tableView;}},
   components: {Slider},})
-export default class Database extends Vue {
-  images = require.context('@/assets/certificates/database/', false, /\.(jpg|jpeg|png|webp)$/)
-  sliderImages = this.images.keys().map(key => this.images(key))
-}
+export default class Database extends Vue {}
 </script>
 
 <template>

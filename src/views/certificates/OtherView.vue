@@ -12,9 +12,12 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     }
   },
   data() {
+    const images = require.context('@/assets/certificates/other/', false, /\.(jpg|jpeg|png|webp)$/);
     return {
-      tableView: false
-    }
+      tableView: false,
+      images: images,
+      sliderImages: images.keys().map((key: string) => images(key))
+    };
   },
   mounted() {
     const mainTitle = 'Other certificates';
@@ -34,10 +37,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   },
   components: {Slider},
 })
-export default class Other extends Vue {
-  images = require.context('@/assets/certificates/other/', false, /\.(jpg|jpeg|png|webp)$/)
-  sliderImages = this.images.keys().map(key => this.images(key))
-}
+export default class Other extends Vue {}
 </script>
 
 <template>
