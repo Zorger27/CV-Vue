@@ -9,9 +9,12 @@ export const openGraphMixin = {
     setPageTitle(mainTitle: string): void {
       let pageTitle = document.querySelector('title');
 
+      // Проверка, существует ли уже тег <title>
       if (pageTitle) {
+        // Если тег <title> существует, обновить его содержимое
         pageTitle.innerText = mainTitle;
       } else {
+        // Если тег <title> не существует, создать новый
         const newTitleTag = document.createElement('title');
         newTitleTag.innerText = mainTitle;
         document.head.appendChild(newTitleTag);
@@ -42,11 +45,13 @@ export const openGraphMixin = {
         }
         meta.setAttribute('content', metaTag.content);
 
+        // Удалить существующие мета-теги с тем же property или name
         const existingMetaTags = document.querySelectorAll(
           `[property="${metaTag.property || ''}"], [name="${metaTag.name || ''}"]`
         );
         existingMetaTags.forEach((tag) => tag.remove());
 
+        // Добавить новый мета-тег
         document.head.appendChild(meta);
       });
     },
