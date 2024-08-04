@@ -1,5 +1,5 @@
 <script lang="ts">
-import {Options, Vue} from "vue-class-component";
+import { Options, Vue } from "vue-class-component";
 
 @Options({
   props: {
@@ -20,7 +20,7 @@ import {Options, Vue} from "vue-class-component";
     return {
       currentSlide: 0,
       transformValue: 0,
-      timerId: null as number | null, // Указание типа timerId как number | null
+      timerId: null as number | null,
       touchStartX: 0,
       touchMoveX: 0,
     };
@@ -30,9 +30,9 @@ import {Options, Vue} from "vue-class-component";
   },
   methods: {
     startAutoPlay() {
-      this.timerId = setInterval(() => {
+      this.timerId = window.setInterval(() => {
         this.nextSlide();
-      }, this.interval) as unknown as number; // Приведение типа к числу
+      }, this.interval);
     },
     previousSlide() {
       if (this.currentSlide === 0) {
@@ -53,7 +53,7 @@ import {Options, Vue} from "vue-class-component";
       }
     },
     stopAutoPlay() {
-      if (this.timerId !== null) { // Проверка на null перед вызовом clearInterval
+      if (this.timerId !== null) {
         clearInterval(this.timerId);
         this.timerId = null;
       }
@@ -100,19 +100,15 @@ export default class Slider extends Vue {}
       </div>
     </div>
     <div class="slider-controls">
-      <!--      <button class="left-control" @click="previousSlide"><i class="fa fa-hand-point-left"></i></button>-->
-      <!--      <button class="right-control" @click="nextSlide"><i class="fa fa-hand-point-right"></i></button>-->
-      <!--      <button class="left-control" @click="previousSlide"><i class="fa fa-chevron-circle-left"></i></button>-->
-      <!--      <button class="right-control" @click="nextSlide"><i class="fa fa-chevron-circle-right"></i></button>-->
       <button class="left-control" @click="previousSlide"><i class="fa fa-arrow-alt-circle-left"></i></button>
       <button class="right-control" @click="nextSlide"><i class="fa fa-arrow-alt-circle-right"></i></button>
     </div>
 
     <div class="slider-dots">
       <span class="slider-dot"
-        v-for="(index) in images.length" :key="index - 1"
-        :class="{ active: index - 1 === currentSlide }"
-        @click="goToSlide(index - 1)"
+            v-for="(image, index) in images" :key="index"
+            :class="{ active: index === currentSlide }"
+            @click="goToSlide(index)"
       ></span>
     </div>
 
