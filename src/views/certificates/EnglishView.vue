@@ -15,9 +15,12 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     },
   },
   data() {
+    const images = require.context('@/assets/certificates/english/', false, /\.(jpg|jpeg|png|webp)$/);
     return {
       tableView: false,
       reverseOrder: false, // Изначально установлен в false для последовательного порядка
+      images: images,
+      sliderImages: images.keys().map((key: string) => images(key))
     }
   },
   mounted() {
@@ -40,10 +43,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     },
   },
   components: {Slider},})
-export default class English extends Vue {
-  images = require.context('@/assets/certificates/english/', false, /\.(jpg|jpeg|png|webp)$/)
-  sliderImages = this.images.keys().map(key => this.images(key))
-}
+export default class English extends Vue {}
 </script>
 
 <template>

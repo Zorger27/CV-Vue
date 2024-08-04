@@ -7,7 +7,14 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 @Options({
   mixins: [openGraphMixin],
   computed: {pmStore() {return pmStore}},
-  data() {return {tableView: false}},
+  data() {
+    const images = require.context('@/assets/certificates/pm/', false, /\.(jpg|jpeg|png|webp)$/);
+    return {
+      tableView: false,
+      images: images,
+      sliderImages: images.keys().map((key: string) => images(key))
+      }
+    },
   mounted() {
     const mainTitle = 'Project Management';
     const title = 'Portfolio - Project Management certificates';
@@ -22,10 +29,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   methods: {changeView() {this.tableView = !this.tableView;}},
   components: {Slider},
 })
-export default class Pm extends Vue {
-  images = require.context('@/assets/certificates/pm/', false, /\.(jpg|jpeg|png|webp)$/)
-  sliderImages = this.images.keys().map(key => this.images(key))
-}
+export default class Pm extends Vue {}
 </script>
 
 <template>

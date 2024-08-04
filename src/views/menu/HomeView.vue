@@ -58,8 +58,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   },
   components: {Slider},
 })
-export default class Home extends Vue {
-};
+export default class Home extends Vue {};
 </script>
 
 <template>
