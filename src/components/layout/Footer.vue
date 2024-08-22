@@ -38,12 +38,12 @@ export default class Footer extends Vue {
     <p class="footer-text">{{ $t('footer.text1') }}
       <b><a href="https://zorger27.github.io" title="CV (Landing Page)" target="_blank">{{ $t('footer.text2') }}
       </a></b>{{ $t('footer.text3') }}
-      <b>&copy; {{ currentYear }}</b> - {{ $t('footer.text4') }}
+      <b>&copy; 2023―{{ currentYear }}</b> - {{ $t('footer.text4') }}
     </p>
     <p class="footer-text-mob">{{ $t('footer.text1') }}
       <b><a href="https://zorger27.github.io" title="CV (Landing Page)" target="_blank">{{ $t('footer.text2') }}
       </a></b>{{ $t('footer.text3') }}<br>
-      <b>&copy; {{ currentYear }}</b> - {{ $t('footer.text4') }}
+      <span style="font-size: 0.7rem"><b>&copy; 2023―{{ currentYear }}</b> - {{ $t('footer.text4') }}</span>
     </p>
     <SocialSharing></SocialSharing>
   </footer>
@@ -97,9 +97,10 @@ footer {
     display: none;
     @media (max-width: 768px) {
       display: block;
-      padding: 0 1rem 0 0;
+      //padding: 0 1rem 0 0;
+      padding: 0;
       margin: 0;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-style: italic;
       color: saddlebrown;
     }
