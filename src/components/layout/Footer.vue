@@ -43,7 +43,7 @@ export default class Footer extends Vue {
     <p class="footer-text-mob">{{ $t('footer.text1') }}
       <b><a href="https://zorger27.github.io" title="CV (Landing Page)" target="_blank">{{ $t('footer.text2') }}
       </a></b>{{ $t('footer.text3') }}<br>
-      <span style="font-size: 0.7rem"><b>&copy; 2023―{{ currentYear }}</b> - {{ $t('footer.text4') }}</span>
+      <span style="font-size: 0.65rem"><b>&copy; 2023―{{ currentYear }}</b> - {{ $t('footer.text4') }}</span>
     </p>
     <SocialSharing></SocialSharing>
   </footer>
