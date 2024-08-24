@@ -27,7 +27,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
       getPhotoImage: require('@/assets/img/photo.svg'),
       currentText: "main.job1",
       textIndex: 0,
-      texts: ["main.job1", "main.job2", "main.job3", "main.job4", "main.job5"],
+      texts: ["main.job1", "main.job2", "main.job3", "main.job4", "main.job5", "main.job6"],
       fadeIn: true
     }
   },
