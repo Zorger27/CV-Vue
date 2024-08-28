@@ -1,4 +1,4 @@
-import {createStore} from 'vuex'
+import {createStore} from 'vuex';
 import otherStore from "@/store/modules/certificates/otherStore";
 import englishStore from "@/store/modules/certificates/englishStore";
 import englishdomStore from "@/store/modules/education/englishdomStore";
