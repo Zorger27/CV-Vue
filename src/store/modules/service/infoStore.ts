@@ -4,13 +4,13 @@ const state = {
       {
         id: 1,
         title: "Vue.js",
-        version: "3.4.21",
+        version: "3.5.4",
         url: "https://v3.ru.vuejs.org"
       },
       {
         id: 2,
         title: "Vue Router",
-        version: "4.3.0",
+        version: "4.4.4",
         url: "https://router.vuejs.org"
       },
       {
@@ -21,14 +21,14 @@ const state = {
       },
       {
         id: 4,
-        title: "i18n",
-        version: "9.8.0",
+        title: "Vue i18n",
+        version: "10.0.0",
         url: "https://vue-i18n.intlify.dev"
       },
       {
         id: 5,
         title: "Three.js",
-        version: "162",
+        version: "168",
         url: "https://github.com/mrdoob/three.js/releases"
       },
       {
@@ -40,7 +40,7 @@ const state = {
       {
         id: 7,
         title: "Axios",
-        version: "1.6.8",
+        version: "1.7.7",
         url: "https://github.com/axios/axios"
       },
       {

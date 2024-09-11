@@ -8,18 +8,18 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "axios": "^1.6.8",
+    "axios": "^1.7.7",
     "core-js": "^3.36.0",
-    "three": "^0.162.0",
+    "three": "^0.168.0",
     "three-orbit-controls": "^82.1.0",
-    "vue": "^3.4.21",
+    "vue": "^3.5.4",
     "vue-class-component": "^8.0.0-0",
-    "vue-i18n": "^9.8.0",
-    "vue-router": "^4.3.0",
+    "vue-i18n": "^10.0.0",
+    "vue-router": "^4.4.4",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@types/three": "^0.162.0",
+    "@types/three": "^0.168.0",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
