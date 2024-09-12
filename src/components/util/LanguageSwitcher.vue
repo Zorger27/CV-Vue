@@ -18,7 +18,7 @@ import {useI18n} from "vue-i18n";
 export default {
   name: "LanguageSwitcher",
   setup() {
-    const {t, locale, availableLocales} = useI18n()
+    const { t, locale, availableLocales} = useI18n()
 
     // Функция, возвращающая строгий ключ для t()
     const getLocaleKey = (sLocale: string): string => {
