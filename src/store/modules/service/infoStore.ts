@@ -22,7 +22,7 @@ const state = {
       {
         id: 4,
         title: "Vue i18n",
-        version: "10.0.0",
+        version: "9.8.0",
         url: "https://vue-i18n.intlify.dev"
       },
       {
