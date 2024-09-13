@@ -463,6 +463,27 @@ const state = {
         sourcelink: "https://github.com/Zorger27/Weather",
         demolink: "https://weather-zorger.vercel.app"
       },
+      {
+        id: 23,
+        title_en: "3D Configurators",
+        title_ua: "3D-конфігуратори",
+        title_es: "Configuradores 3D",
+        start_date_en: "September 2024",
+        start_date_ua: "Вересень 2024",
+        start_date_es: "Septiembre de 2024",
+        end_date_en: "September 2024",
+        end_date_ua: "Вересень 2024",
+        end_date_es: "Septiembre de 2024",
+        description_en: "This web application allows the user to interactively change the model (product) they like. The changes occur in 3D mode. The user can examine this model (product) very carefully from different sides: approach it, move away from it, turn it in different directions.",
+        description_ua: "Цей веб-додаток дозволяє користувачеві інтерактивно змінювати модель (товар), що сподобалася. Зміни відбуваються у 3D режимі. Користувач може цю модель (товар) дуже уважно розглянути з різних сторін: наближатися, віддалятися від неї, повертати в різних напрямках.",
+        description_es: "Esta aplicación web permite al usuario modificar de forma interactiva el modelo (producto) que desee. Los cambios se realizan en modo 3D. El usuario puede examinar este modelo (producto) con mucho cuidado desde diferentes ángulos: acercarse a él, alejarse de él, girarlo en diferentes direcciones.",
+        type_en: "Single page application",
+        type_ua: "Односторінковий додаток",
+        type_es: "Aplicación de una sola página",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        sourcelink: "https://github.com/Zorger27/3dConfigurator",
+        demolink: "https://3d-configurator-max.vercel.app"
+      },
     ]
 };
 const getters = {};
