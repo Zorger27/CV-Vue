@@ -360,7 +360,7 @@ export default {
 .container {
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(229, 255, 229), rgb(250, 247, 234)) no-repeat center;
-  h1 {font-size: 2.5rem;margin: 0.7rem auto;color: black;}
+  //h1 {font-size: 2.5rem;margin: 0.7rem auto;color: black;}
   .scene-container {
     max-height: 70vh;
     position: relative;
@@ -513,7 +513,7 @@ export default {
 
 @media(max-width: 1020px) {
   .container {
-    h1 {font-size: 2.3rem;margin: 0.6rem auto;}
+    //h1 {font-size: 2.3rem;margin: 0.6rem auto;}
     .rotation-controls {
       right: 22px; /* Размещение кнопок справа */
       top: 60%;
@@ -556,7 +556,7 @@ export default {
 
 @media (max-width: 768px) {
   .container {
-    h1 {font-size: 2rem;margin: 0.5rem auto;}
+    //h1 {font-size: 2rem;margin: 0.5rem auto;}
     .rotation-controls {
       right: 20px; /* Размещение кнопок справа */
       top: 60%;
