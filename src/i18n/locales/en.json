@@ -209,7 +209,7 @@
       "cube3d": "Cube (Three.js)",
       "creep3d": "Creeping Lines",
       "configurator3d": {
-        "title": "3D Configurators",
+        "title": "3D Configurator",
         "rotating": {
           "clockwise": "Rotate clockwise",
           "counterclockwise": "Rotate counterclockwise",
