@@ -208,6 +208,27 @@
       "cubejs": "Cubo (JavaScript)",
       "cube3d": "Cubo (Three.js)",
       "creep3d": "Líneas progresivas",
+      "configurator3d": {
+        "title": "Configurador 3D",
+        "rotating": {
+          "clockwise": "Girar en sentido horario",
+          "counterclockwise": "Girar en sentido antihorario",
+          "stop": "Dejar de rotar",
+          "mixNo": "No está permitido mezclar textura con color",
+          "mixYes": "Se permite mezclar textura con color"
+        },
+        "changeColor": {
+          "green": "Verde",
+          "golden": "Dorado",
+          "picker": "Selección de colores"
+        },
+        "texture": {
+          "texture1": "Cargando textura #1",
+          "texture2": "Cargando textura #2",
+          "upload": "Cargar textura...",
+          "reset": "Volver a la textura inicial"
+        }
+      },
       "titles": {
         "weather-start": "Iniciando línea progresiva 3D del tiempo",
         "weather-close": "Cerrando línea progresiva 3D del tiempo",

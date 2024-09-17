@@ -37,6 +37,7 @@ import LoremPicsum from "@/views/ai/LoremPicsum.vue";
 import Pixabay from "@/views/ai/Pixabay.vue";
 import CubeScript from "@/views/graphics/CubeScriptView.vue";
 import CreepingLines3d from "@/views/graphics/CreepingLines3dView.vue";
+import Configurator3d from "@/views/graphics/Configurator3d.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -148,6 +149,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/extra/graphics/creep3d',
     name: 'creep3d',
     component: CreepingLines3d,
+  },
+  {
+    path: '/extra/graphics/configurator3d',
+    name: 'configurator3d',
+    component: Configurator3d,
   },
   {
     path: '/extra/rates',

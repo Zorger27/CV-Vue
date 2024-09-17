@@ -208,6 +208,27 @@
       "cubejs": "Cube (JavaScript)",
       "cube3d": "Cube (Three.js)",
       "creep3d": "Creeping Lines",
+      "configurator3d": {
+        "title": "3D Configurators",
+        "rotating": {
+          "clockwise": "Rotate clockwise",
+          "counterclockwise": "Rotate counterclockwise",
+          "stop": "Stop rotation",
+          "mixNo": "It is not allowed to mix texture with color",
+          "mixYes": "It is allowed to mix texture with color"
+        },
+        "changeColor": {
+          "green": "Green",
+          "golden": "Golden",
+          "picker": "Color selection"
+        },
+        "texture": {
+          "texture1": "Loading texture #1",
+          "texture2": "Loading texture #2",
+          "upload": "Load texture...",
+          "reset": "Return to the initial texture"
+        }
+      },
       "titles": {
         "weather-start": "Starting 3D Creeping line of Weather",
         "weather-close": "Closing 3D Creeping line of Weather",
