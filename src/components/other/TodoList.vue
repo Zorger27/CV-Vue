@@ -117,11 +117,13 @@ export default class TodoList extends Vue {
         </td>
       </tr>
       </tbody>
-      <tr>
-        <th colspan="4">
-          <button class="btn danger" @click="deleteAllTasks">{{ $t('extra.todo.delete-all') }}</button>
-        </th>
-      </tr>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            <button class="btn danger" @click="deleteAllTasks">{{ $t('extra.todo.delete-all') }}</button>
+          </th>
+        </tr>
+      </tfoot>
     </table>
   </div>
 </template>

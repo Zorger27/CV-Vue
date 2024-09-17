@@ -19,14 +19,14 @@ interface Note {
   computed: {
     formattedDate(): string {
       const locale = localStorage.getItem('user-locale') ?? 'en';
-      const dateOptions = {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: false
+      const dateOptions: Intl.DateTimeFormatOptions = {
+        weekday: 'long',    // "long" is valid for `weekday`
+        year: 'numeric',    // "numeric" is valid for `year`
+        month: 'long',      // "long" is valid for `month`
+        day: 'numeric',     // "numeric" is valid for `day`
+        hour: 'numeric',    // "numeric" is valid for `hour`
+        minute: 'numeric',  // "numeric" is valid for `minute`
+        hour12: false       // `boolean` value for `hour12`
       };
 
       if (locale === 'es') {
@@ -116,9 +116,9 @@ export default class Notes extends Vue {
       <tr v-for="(note, index) in notes" :key="note.id">
         <td>{{ index + 1 }}</td>
         <td class="text">
-            <span v-if="note.editing">
-              <textarea v-model="note.text" @keyup.enter="editNote(note)" @blur="editNote(note)"/>
-            </span>
+          <span v-if="note.editing">
+            <textarea v-model="note.text" @keyup.enter="editNote(note)" @blur="editNote(note)"/>
+          </span>
           <span v-else>{{ note.text }}</span>
         </td>
         <td class="updatedAt">{{ note.updatedAt }}</td>
@@ -134,11 +134,13 @@ export default class Notes extends Vue {
         </td>
       </tr>
       </tbody>
-      <tr>
-        <th colspan="4">
-          <button class="btn danger" @click="deleteAllNotes">{{ $t('extra.notes.delete-all') }}</button>
-        </th>
-      </tr>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            <button class="btn danger" @click="deleteAllNotes">{{ $t('extra.notes.delete-all') }}</button>
+          </th>
+        </tr>
+      </tfoot>
     </table>
   </div>
 </template>
