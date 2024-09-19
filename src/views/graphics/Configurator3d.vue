@@ -13,7 +13,7 @@ export default {
   mixins: [openGraphMixin],
   components: {CanvasFullScreen, ToggleFullScreen},
   mounted() {
-    const mainTitle = '3D Configurator - Multi Configurator';
+    const mainTitle = '3D Configurator';
     const title = 'Portfolio - 3D Configurator';
     const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
     const description = 'Anatolii Zorin\'s Portfolio - 3D Configurator';
