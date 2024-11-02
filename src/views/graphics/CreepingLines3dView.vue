@@ -12,7 +12,7 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
     return {
       cityName: '' as string,
       cities: [] as string[],
-      ratesCreepView3d: false,
+      ratesCreepView3d: true,
       weatherCreepView3d: false,
       cryptosCreepView3d: false,
     }
