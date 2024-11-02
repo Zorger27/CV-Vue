@@ -28,7 +28,7 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
 
-    this.ratesCreepView3d = JSON.parse(localStorage.getItem('ratesCreepView3d') || 'false');
+    this.ratesCreepView3d = JSON.parse(localStorage.getItem('ratesCreepView3d') || 'true');
     this.weatherCreepView3d = JSON.parse(localStorage.getItem('weatherCreepView3d') || 'false');
     this.cryptosCreepView3d = JSON.parse(localStorage.getItem('cryptosCreepView3d') || 'false');
 
