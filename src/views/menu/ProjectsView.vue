@@ -191,7 +191,7 @@ export default class Projects extends Vue {
     text-shadow: 2px 2px 4px black;
     border: 1px solid darkred;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-    background-color: red;
+    background-color: orangered;
   }
 
   .youtube:hover {
