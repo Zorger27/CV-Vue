@@ -20,7 +20,8 @@ const state = {
         type_es: "Página de destino",
         techno: "HTML5, CSS3, Grid CSS, FlexBox CSS",
         sourcelink: "https://github.com/Zorger27/zorger27.github.io",
-        demolink: "https://zorger27.github.io"
+        demolink: "https://zorger27.github.io",
+        youtubelink: ""
       },
       {
         id: 2,
@@ -41,7 +42,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3, JavaScript",
         sourcelink: "https://github.com/Zorger27/calculator",
-        demolink: "https://zorin.expert/extra/calculator"
+        demolink: "https://zorin.expert/extra/calculator",
+        youtubelink: ""
       },
       {
         id: 3,
@@ -62,7 +64,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3, FlexBox CSS",
         sourcelink: "https://github.com/Zorger27/Spinning-cube",
-        demolink: "https://zorin.expert/extra/graphics/cube"
+        demolink: "https://zorin.expert/extra/graphics/cube",
+        youtubelink: ""
       },
       {
         id: 4,
@@ -83,7 +86,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3, FlexBox CSS",
         sourcelink: "https://github.com/Zorger27/Scroll-Snap",
-        demolink: ""
+        demolink: "",
+        youtubelink: ""
       },
       {
         id: 5,
@@ -104,7 +108,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3, JavaScript",
         sourcelink: "https://github.com/Zorger27/Contact-Form",
-        demolink: ""
+        demolink: "",
+        youtubelink: ""
       },
       {
         id: 6,
@@ -125,7 +130,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3, JavaScript",
         sourcelink: "https://github.com/Zorger27/Hamburger-menu",
-        demolink: ""
+        demolink: "",
+        youtubelink: ""
       },
       {
         id: 7,
@@ -146,7 +152,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/To-Do-list",
-        demolink: "https://zorin.expert/extra/todo"
+        demolink: "https://zorin.expert/extra/todo",
+        youtubelink: ""
       },
       {
         id: 8,
@@ -167,7 +174,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Memory-game",
-        demolink: "https://zorin.expert/extra/games/memory"
+        demolink: "https://zorin.expert/extra/games/memory",
+        youtubelink: ""
       },
       {
         id: 9,
@@ -188,7 +196,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Typical-JS-tasks",
-        demolink: "https://zorin.expert/extra/tasks"
+        demolink: "https://zorin.expert/extra/tasks",
+        youtubelink: ""
       },
       {
         id: 10,
@@ -209,7 +218,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Blog-site",
-        demolink: ""
+        demolink: "",
+        youtubelink: ""
       },
       {
         id: 11,
@@ -230,7 +240,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3, FlexBox CSS",
         sourcelink: "https://github.com/Zorger27/Fav-buttons",
-        demolink: ""
+        demolink: "",
+        youtubelink: ""
       },
       {
         id: 12,
@@ -251,7 +262,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3",
         sourcelink: "https://github.com/Zorger27/Dropdown-Menu",
-        demolink: ""
+        demolink: "",
+        youtubelink: ""
       },
       {
         id: 13,
@@ -272,7 +284,8 @@ const state = {
         type_es: "Aplicación Web",
         techno: "HTML5, CSS3, Boxicons CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Sidebar-Menu",
-        demolink: ""
+        demolink: "",
+        youtubelink: ""
       },
       {
         id: 14,
@@ -293,7 +306,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Three.js, Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/CV-Vue",
-        demolink: "https://Zorin.Expert"
+        demolink: "https://Zorin.Expert",
+        youtubelink: "https://youtu.be/fwBFfrhPJyM"
       },
       {
         id: 15,
@@ -314,7 +328,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-TS-Template",
-        demolink: "https://vue-template-ts.vercel.app"
+        demolink: "https://vue-template-ts.vercel.app",
+        youtubelink: ""
       },
       {
         id: 16,
@@ -335,7 +350,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-1",
-        demolink: "https://vue-threejs-1.vercel.app"
+        demolink: "https://vue-threejs-1.vercel.app",
+        youtubelink: ""
       },
       {
         id: 17,
@@ -356,7 +372,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Vue.js, VueX, HTML5, CSS3, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-JS-Template",
-        demolink: "https://vue-template-js.vercel.app"
+        demolink: "https://vue-template-js.vercel.app",
+        youtubelink: ""
       },
       {
         id: 18,
@@ -377,7 +394,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-Template",
-        demolink: "https://vue-threejs-template.vercel.app"
+        demolink: "https://vue-threejs-template.vercel.app",
+        youtubelink: ""
       },
       {
         id: 19,
@@ -398,7 +416,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-2",
-        demolink: "https://vue-threejs-2.vercel.app"
+        demolink: "https://vue-threejs-2.vercel.app",
+        youtubelink: ""
       },
       {
         id: 20,
@@ -419,7 +438,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Currencies",
-        demolink: "https://currencies-zeta.vercel.app"
+        demolink: "https://currencies-zeta.vercel.app",
+        youtubelink: ""
       },
       {
         id: 21,
@@ -440,7 +460,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Cryptocurrencies",
-        demolink: "https://cryptocurrencies-gold.vercel.app"
+        demolink: "https://cryptocurrencies-gold.vercel.app",
+        youtubelink: ""
       },
       {
         id: 22,
@@ -461,7 +482,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Weather",
-        demolink: "https://weather-zorger.vercel.app"
+        demolink: "https://weather-zorger.vercel.app",
+        youtubelink: ""
       },
       {
         id: 23,
@@ -482,7 +504,8 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/3dConfigurator",
-        demolink: "https://3d-configurator-max.vercel.app"
+        demolink: "https://3d-configurator-max.vercel.app",
+        youtubelink: "https://youtu.be/uUofz_KBYuU"
       },
     ]
 };

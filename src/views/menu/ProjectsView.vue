@@ -76,11 +76,16 @@ export default class Projects extends Vue {
             <div class="work"><span>{{ this.$i18n.locale === "uk" ? prj.start_date_ua : this.$i18n.locale === "es" ? prj.start_date_es : prj.start_date_en }}</span><span class="tire">–</span><span>{{ this.$i18n.locale === "uk" ? prj.end_date_ua : this.$i18n.locale === "es" ? prj.end_date_es : prj.end_date_en }}</span></div>
             <div class="type">{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</div>
             <div class="link">
-              <div v-if="prj.demolink" class="link2">
+              <div v-if="prj.demolink && prj.youtubelink" class="link2">
                 <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
-                <a :href="prj.sourcelink" class="no-demolink" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+                <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+                <a :href="prj.youtubelink" class="youtube" title="Project at YouTube..." target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
               </div>
-              <div v-else><a :href="prj.sourcelink" class="no-demolink" title="Project at GitHub..." target="_blank"><b>{{$t('projects.github') }}</b></a></div>
+              <div v-else-if="prj.demolink" class="link2">
+                <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
+                <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+              </div>
+              <div v-else><a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{$t('projects.github') }}</b></a></div>
             </div>
           </td>
           <td class="description">{{ this.$i18n.locale === "uk" ? prj.description_ua : this.$i18n.locale === "es" ? prj.description_es : prj.description_en }}</td>
@@ -98,11 +103,16 @@ export default class Projects extends Vue {
           <div><strong>{{ $t('projects.type') }}: </strong>{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</div>
           <div><strong>{{ $t('projects.technologies') }}: </strong>{{ prj.techno }}</div>
           <div class="link">
-            <div v-if="prj.demolink" class="link2">
+            <div v-if="prj.demolink && prj.youtubelink" class="link2">
               <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
-              <a :href="prj.sourcelink" class="no-demolink" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+              <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+              <a :href="prj.youtubelink" class="youtube" title="Project at YouTube..." target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
             </div>
-            <div v-else><a :href="prj.sourcelink" class="no-demolink" title="Project at GitHub..." target="_blank"><b>{{$t('projects.github') }}</b></a></div>
+            <div v-else-if="prj.demolink" class="link2">
+              <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
+              <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+            </div>
+            <div v-else><a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{$t('projects.github') }}</b></a></div>
           </div>
         </div>
       </div>
@@ -143,7 +153,7 @@ export default class Projects extends Vue {
     border: 1px solid darkslateblue;
   }
 
-  .no-demolink {
+  .github {
     text-decoration: none;
     display: flex;
     width: max-content;
@@ -161,12 +171,36 @@ export default class Projects extends Vue {
     background-repeat: no-repeat;
   }
 
-  .no-demolink:hover {
+  .github:hover {
     color: darkblue;
     text-shadow: none;
     border: 1px solid lightskyblue;
     box-shadow: 3px 3px 4px 0 lightgrey;
     background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
+  }
+
+  .youtube {
+    text-decoration: none;
+    display: flex;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem auto;
+    border-radius: 5px;
+    box-shadow: none;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    border: 1px solid darkred;
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    background-color: red;
+  }
+
+  .youtube:hover {
+    color: black;
+    text-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    box-shadow: 3px 3px 4px 0 lightgrey;
+    //background-color: mistyrose;
+    background: linear-gradient(to bottom, rgb(255, 246, 209), rgb(255, 240, 244)) no-repeat center;
   }
 
   .table {
@@ -197,7 +231,7 @@ export default class Projects extends Vue {
         font-weight: normal;
         color: black;
       }
-      .demolink, .no-demolink {
+      .demolink, .github, .youtube {
         font-size: 1.3rem;
         display: inline-flex;
         width: max-content;
@@ -266,7 +300,7 @@ export default class Projects extends Vue {
         .type {
           font-size: 1rem;
         }
-        .demolink, .no-demolink {
+        .demolink, .github, .youtube {
           font-size: 1rem;
           padding: 0.4rem 0.6rem;
           margin: 0.2rem 0.6rem 0.2rem 0;
@@ -307,7 +341,7 @@ export default class Projects extends Vue {
         .type {
           font-size: 0.5rem;
         }
-        .demolink, .no-demolink {
+        .demolink, .github, .youtube {
           font-size: 0.6rem;
           padding: 0.3rem 0.5rem;
           margin: 0.2rem 0.5rem 0.2rem 0;
@@ -336,7 +370,7 @@ export default class Projects extends Vue {
         }
       }
     }
-    .demolink, .no-demolink {
+    .demolink, .github, .youtube {
       width: max-content;
       padding: 0.5rem 0.7rem;
       margin: 0.2rem auto;
