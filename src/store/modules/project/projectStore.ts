@@ -483,7 +483,7 @@ const state = {
         techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Weather",
         demolink: "https://weather-zorger.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/cg_zJ77DHhI"
       },
       {
         id: 23,
