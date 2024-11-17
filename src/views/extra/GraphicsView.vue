@@ -37,7 +37,7 @@ export default class Graphics extends Vue {
         <router-link to="/extra/graphics/cubejs" class="block" title="Cube (JavaScript)"><h3>{{ $t('extra.graphics.cubejs') }}</h3></router-link>
       </div>
       <div class="diploma">
-        <router-link to="/extra/graphics/cube3d" class="block" title="Cube (Three.js)"><h3>{{ $t('extra.graphics.cube3d') }}</h3></router-link>
+        <router-link to="/extra/graphics/cube3d" class="block" title="CuboVerse"><h3>{{ $t('extra.graphics.cube3d') }}</h3></router-link>
       </div>
       <div class="diploma">
         <router-link to="/extra/graphics/creep3d" class="block" title="Creeping Lines (Three.js)"><h3>{{ $t('extra.graphics.creep3d') }}</h3></router-link>

@@ -11,10 +11,10 @@ export default {
   components: {CanvasFullScreen, ToggleFullScreen},
   mixins: [openGraphMixin],
   mounted() {
-    const mainTitle = 'Cube (Three.js)';
-    const title = 'Portfolio - Cube (Three.js)';
+    const mainTitle = 'CuboVerse (Three.js)';
+    const title = 'Portfolio - CuboVerse (Three.js)';
     const metaDescription = 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.';
-    const description = 'Anatolii Zorin\'s Portfolio - Cube (Three.js)';
+    const description = 'Anatolii Zorin\'s Portfolio - CuboVerse (Three.js)';
     const imageUrl = 'https://zorin.expert/assets/ogimage/extra/graphics/OG_Image_Cube3D.jpg';
     const url = 'https://zorin.expert/extra/graphics/cube3d';
 
