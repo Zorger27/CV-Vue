@@ -417,7 +417,7 @@ const state = {
         techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-2",
         demolink: "https://vue-threejs-2.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/LJH-S5KKerw"
       },
       {
         id: 20,
