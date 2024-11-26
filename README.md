@@ -21,7 +21,7 @@
 ✨ JavaScript and TypeScript for reliability and interactivity.<br>
 ✨ Google Analytics & Search Console for performance optimization, SEO, and analytics.
 
-#### 🔗 *This site demonstrates my skills in developing modern, responsive, and multi-functional web applications, emphasizing attention to detail and quality. It's the perfect combination of technology and user experience!* 🌟 ####
+#### 🔗 *This site demonstrates my skills in developing modern, responsive and multi-functional web applications, emphasizing attention to detail and quality. It's the perfect combination of technology and user experience!* 🌟 ####
 
 ## Project setup
 ```
