@@ -8,7 +8,7 @@
 #### *This is a modern single-page application (SPA) that provides detailed and visually appealing information about me in three languages: Ukrainian, English and Spanish.* ####
 
 <ins>The site covers everything that matters:</ins> <br>
-1️⃣ Detailed resume: projects with descriptions, diplomas, certificates, work experience, skills, and education.<br>
+1️⃣ Detailed resume: projects with descriptions, diplomas, certificates, work experience, skills and education.<br>
 2️⃣ Extra section (examples of completed works): Calculator, To-do list, Notes, Weather, Exchange rates, Cryptocurrencies, 3D graphics, Games and much more.
 
 #### 📱 *The fully responsive design makes the site convenient to view on devices of any size.* ####
