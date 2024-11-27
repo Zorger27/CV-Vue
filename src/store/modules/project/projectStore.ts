@@ -439,7 +439,7 @@ const state = {
         techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Currencies",
         demolink: "https://currencies-zeta.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/5ofx4IjOSuw"
       },
       {
         id: 21,
