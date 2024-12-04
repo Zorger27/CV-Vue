@@ -461,7 +461,7 @@ const state = {
         techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Cryptocurrencies",
         demolink: "https://cryptocurrencies-gold.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/-kGUesQdUs8"
       },
       {
         id: 22,
