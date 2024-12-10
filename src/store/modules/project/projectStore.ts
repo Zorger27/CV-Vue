@@ -34,9 +34,9 @@ const state = {
         end_date_en: "April 2022",
         end_date_ua: "Квітень 2022",
         end_date_es: "Abril de 2022",
-        description_en: "My Calculator 2022 (Web application). Simple but functional calculator.",
-        description_ua: "Мій калькулятор 2022 (веб-додаток). Простий, але функціональний калькулятор.",
-        description_es: "Mi Calculadora 2022 (aplicación web). Calculadora sencilla pero funcional.",
+        description_en: "✨ A functional and user-friendly application, implemented with vanilla JavaScript and web development standards, allows you to perform basic arithmetic operations. 🛠️ The calculator can be used as a standalone application or integrated into existing financial systems. 💼💡",
+        description_ua: "✨ Функціональний та зручний додаток, реалізований на ванільному JavaScript і стандартах веброзробки, дозволяє виконувати основні арифметичні операції. 🛠️ Калькулятор можна використовувати як окремий додаток або інтегрувати в існуючі фінансові системи. 💼💡",
+        description_es: "✨ Una aplicación funcional y fácil de usar, implementada con JavaScript puro y estándares de desarrollo web, permite realizar operaciones aritméticas básicas. 🛠️ La calculadora se puede utilizar como una aplicación independiente o integrarse en sistemas financieros existentes. 💼💡",
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
@@ -216,7 +216,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Blog-site",
         demolink: "",
         youtubelink: ""
@@ -304,7 +304,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, HTML5, CSS3, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/CV-Vue",
         demolink: "https://Zorin.Expert",
         youtubelink: "https://youtu.be/fwBFfrhPJyM"
@@ -326,7 +326,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-TS-Template",
         demolink: "https://vue-template-ts.vercel.app",
         youtubelink: ""
@@ -348,7 +348,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-1",
         demolink: "https://vue-threejs-1.vercel.app",
         youtubelink: ""
@@ -370,7 +370,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, HTML5, CSS3, FlexBox CSS, JavaScript",
+        techno: "Vue.js, VueX, HTML5, SCSS, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-JS-Template",
         demolink: "https://vue-template-js.vercel.app",
         youtubelink: ""
@@ -392,7 +392,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-Template",
         demolink: "https://vue-threejs-template.vercel.app",
         youtubelink: ""
@@ -414,7 +414,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, JavaScript",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-2",
         demolink: "https://vue-threejs-2.vercel.app",
         youtubelink: "https://youtu.be/LJH-S5KKerw"
@@ -436,7 +436,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Currencies",
         demolink: "https://currencies-zeta.vercel.app",
         youtubelink: "https://youtu.be/5ofx4IjOSuw"
@@ -458,7 +458,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Cryptocurrencies",
         demolink: "https://cryptocurrencies-gold.vercel.app",
         youtubelink: "https://youtu.be/-kGUesQdUs8"
@@ -480,7 +480,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/Weather",
         demolink: "https://weather-zorger.vercel.app",
         youtubelink: "https://youtu.be/cg_zJ77DHhI"
@@ -502,7 +502,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, CSS3, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
         sourcelink: "https://github.com/Zorger27/3dConfigurator",
         demolink: "https://3d-configurator-max.vercel.app",
         youtubelink: "https://youtu.be/uUofz_KBYuU"
