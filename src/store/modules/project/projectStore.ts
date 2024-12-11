@@ -18,7 +18,7 @@ const state = {
         type_en: "Landing page",
         type_ua: "Цільова сторінка",
         type_es: "Página de destino",
-        techno: "HTML5, CSS3, Grid CSS, FlexBox CSS, JavaScript",
+        techno: "HTML5, CSS3, Grid CSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, GitHub Pages, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/zorger27.github.io",
         demolink: "https://zorger27.github.io",
         youtubelink: ""
@@ -40,7 +40,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3, JavaScript",
+        techno: "HTML5, CSS3, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/calculator",
         demolink: "https://zorin.expert/extra/calculator",
         youtubelink: ""
@@ -62,7 +62,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3, FlexBox CSS",
+        techno: "HTML5, CSS3, FlexBox CSS, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Spinning-cube",
         demolink: "https://zorin.expert/extra/graphics/cube",
         youtubelink: ""
@@ -84,7 +84,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3, FlexBox CSS",
+        techno: "HTML5, CSS3, FlexBox CSS, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Scroll-Snap",
         demolink: "",
         youtubelink: ""
@@ -106,7 +106,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3, JavaScript",
+        techno: "HTML5, CSS3, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Contact-Form",
         demolink: "",
         youtubelink: ""
@@ -128,7 +128,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3, JavaScript",
+        techno: "HTML5, CSS3, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Hamburger-menu",
         demolink: "",
         youtubelink: ""
@@ -150,7 +150,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3, FlexBox CSS, JavaScript",
+        techno: "HTML5, CSS3, FlexBox CSS, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/To-Do-list",
         demolink: "https://zorin.expert/extra/todo",
         youtubelink: ""
@@ -172,7 +172,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3, FlexBox CSS, JavaScript",
+        techno: "HTML5, CSS3, FlexBox CSS, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Memory-game",
         demolink: "https://zorin.expert/extra/games/memory",
         youtubelink: ""
@@ -194,7 +194,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3, FlexBox CSS, JavaScript",
+        techno: "HTML5, CSS3, FlexBox CSS, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Typical-JS-tasks",
         demolink: "https://zorin.expert/extra/tasks",
         youtubelink: ""
@@ -216,7 +216,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Blog-site",
         demolink: "",
         youtubelink: ""
@@ -238,7 +238,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3, FlexBox CSS",
+        techno: "HTML5, CSS3, FlexBox CSS, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Fav-buttons",
         demolink: "",
         youtubelink: ""
@@ -260,7 +260,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3",
+        techno: "HTML5, CSS3, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Dropdown-Menu",
         demolink: "",
         youtubelink: ""
@@ -282,7 +282,7 @@ const state = {
         type_en: "WEB-application",
         type_ua: "WEB-додаток",
         type_es: "Aplicación Web",
-        techno: "HTML5, CSS3, Boxicons CSS, JavaScript",
+        techno: "HTML5, CSS3, Boxicons CSS, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Sidebar-Menu",
         demolink: "",
         youtubelink: ""
@@ -304,7 +304,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, Grid CSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, Grid CSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/CV-Vue",
         demolink: "https://Zorin.Expert",
         youtubelink: "https://youtu.be/fwBFfrhPJyM"
@@ -326,7 +326,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/Vue-TS-Template",
         demolink: "https://vue-template-ts.vercel.app",
         youtubelink: ""
@@ -348,7 +348,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-1",
         demolink: "https://vue-threejs-1.vercel.app",
         youtubelink: ""
@@ -370,7 +370,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, HTML5, SCSS, FlexBox CSS, JavaScript",
+        techno: "Vue.js, VueX, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/Vue-JS-Template",
         demolink: "https://vue-template-js.vercel.app",
         youtubelink: ""
@@ -392,7 +392,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-Template",
         demolink: "https://vue-threejs-template.vercel.app",
         youtubelink: ""
@@ -414,7 +414,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-2",
         demolink: "https://vue-threejs-2.vercel.app",
         youtubelink: "https://youtu.be/LJH-S5KKerw"
@@ -436,7 +436,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/Currencies",
         demolink: "https://currencies-zeta.vercel.app",
         youtubelink: "https://youtu.be/5ofx4IjOSuw"
@@ -458,7 +458,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/Cryptocurrencies",
         demolink: "https://cryptocurrencies-gold.vercel.app",
         youtubelink: "https://youtu.be/-kGUesQdUs8"
@@ -480,7 +480,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/Weather",
         demolink: "https://weather-zorger.vercel.app",
         youtubelink: "https://youtu.be/cg_zJ77DHhI"
@@ -502,7 +502,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/3dConfigurator",
         demolink: "https://3d-configurator-max.vercel.app",
         youtubelink: "https://youtu.be/uUofz_KBYuU"
