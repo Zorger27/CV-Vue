@@ -21,102 +21,114 @@ const state = {
       },
       {
         id: 4,
+        title: "Webpack",
+        version: "5.5.0",
+        url: "https://webpack.js.org"
+      },
+      {
+        id: 5,
         title: "Vue i18n",
         version: "9.8.0",
         url: "https://vue-i18n.intlify.dev"
       },
       {
-        id: 5,
+        id: 6,
         title: "Three.js",
         version: "168",
         url: "https://github.com/mrdoob/three.js/releases"
       },
       {
-        id: 6,
+        id: 7,
         title: "Orbit controls",
         version: "82.1.0",
         url: "https://threejs.org/docs/#examples/en/controls/OrbitControls"
       },
       {
-        id: 7,
+        id: 8,
         title: "Axios",
         version: "1.7.7",
         url: "https://github.com/axios/axios"
       },
       {
-        id: 8,
+        id: 9,
         title: "HTML5",
         version: "",
         url: "https://developer.mozilla.org/ru/docs/Learn/HTML/Introduction_to_HTML"
       },
       {
-        id: 9,
+        id: 10,
         title: "CSS3",
         version: "",
         url: "https://developer.mozilla.org/ru/docs/Learn/CSS/First_steps"
       },
       {
-        id: 10,
+        id: 11,
         title: "FlexBox CSS",
         version: "",
         url: "https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox"
       },
       {
-        id: 11,
+        id: 12,
         title: "Grid CSS",
         version: "",
         url: "https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout"
       },
       {
-        id: 12,
+        id: 13,
         title: "JavaScript",
         version: "",
         url: "https://developer.mozilla.org/ru/docs/Learn/JavaScript"
       },
       {
-        id: 13,
+        id: 14,
         title: "TypeScript",
         version: "4.5.5",
         url: "https://www.typescriptlang.org/"
       },
       {
-        id: 14,
+        id: 15,
         title: "Google Search Console",
         version: "",
         url: "https://search.google.com/search-console"
       },
       {
-        id: 15,
+        id: 16,
         title: "Google Analytics",
         version: "4.0",
         url: "https://analytics.google.com"
       },
       {
-        id: 16,
+        id: 17,
+        title: "Open Graph protocol",
+        version: "",
+        url: "https://ogp.me"
+      },
+      {
+        id: 18,
         title: "OpenWeather Map API",
         version: "",
         url: "https://openweathermap.org"
       },
       {
-        id: 17,
+        id: 19,
         title: "CoinGecko API",
         version: "",
         url: "https://www.coingecko.com"
       },
       {
-        id: 18,
+        id: 20,
         title: "NBU API",
         version: "",
         url: "https://bank.gov.ua/ua/open-data/api-dev"
       },
       {
-        id: 19,
+        id: 21,
         title: "Lorem Picsum API",
         version: "",
         url: "https://picsum.photos"
       },
       {
-        id: 20,
+        id: 22,
         title: "Pixabay API",
         version: "",
         url: "https://pixabay.com"
