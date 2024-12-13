@@ -307,7 +307,7 @@ export default class Projects extends Vue {
         }
       }
       .description {width: 17rem;font-size: 1rem;}
-      .grade {font-size: 1.1rem;min-width: 9rem;}
+      .grade {font-size: 0.9rem;min-width: 9rem;}
       th {font-size: 1.3rem}
     }
 
