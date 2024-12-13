@@ -348,7 +348,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-1",
         demolink: "https://vue-threejs-1.vercel.app",
         youtubelink: ""
