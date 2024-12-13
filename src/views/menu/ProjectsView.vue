@@ -240,15 +240,15 @@ export default class Projects extends Vue {
       }
     }
     .description {
-      width: 22rem;
+      width: 20rem;
       text-align: left;
       font-style: italic;
       font-size: 1.2rem;
       color: midnightblue;
     }
     .grade {
-      font-size: 1.3rem;
-      width: 10rem;
+      font-size: 1.1rem;
+      width: 12rem;
       color: #0303af
     }
 
