@@ -502,7 +502,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics",
         sourcelink: "https://github.com/Zorger27/3dConfigurator",
         demolink: "https://3d-configurator-max.vercel.app",
         youtubelink: "https://youtu.be/uUofz_KBYuU"
