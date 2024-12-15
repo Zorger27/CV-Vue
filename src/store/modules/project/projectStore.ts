@@ -210,13 +210,13 @@ const state = {
         end_date_en: "July 2022",
         end_date_ua: "Липень 2022",
         end_date_es: "Julio de 2022",
-        description_en: "Website template for a blogger.",
-        description_ua: "Шаблон сайту для блогера.",
-        description_es: "Plantilla de sitio web para un blogger.",
+        description_en: "🌐 A convenient and flexible web application that easily adapts to the style and needs of any blogger. 🖋️ Its simplicity of modification, stylish interface, and readiness for use after customization make this project a perfect tool.",
+        description_ua: "🌐 Зручний і гнучкий веб-додаток, який легко адаптується під стиль і завдання будь-якого блогера. 🖋️ Простота модифікації, стильний інтерфейс і готовність до використання після налаштування роблять цей проект ідеальним інструментом.",
+        description_es: "🌐 Una aplicación web cómoda y flexible que se adapta fácilmente al estilo y las necesidades de cualquier bloguero. 🖋️ Su facilidad de modificación, interfaz elegante y preparación para su uso tras la personalización hacen de este proyecto una herramienta perfecta.",
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub",
+        techno: "Vue.js, VueX, Vue I18n, Webpack, Node.js, Express.js, Axios, JSON Web Tokens, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Element Plus, Cypress (E2E), Jest (Unit), Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Blog-site",
         demolink: "",
         youtubelink: ""
@@ -304,7 +304,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, Webpack, HTML5, SCSS, Grid CSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Three.js, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, Grid CSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/CV-Vue",
         demolink: "https://Zorin.Expert",
         youtubelink: "https://youtu.be/fwBFfrhPJyM"
@@ -326,7 +326,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Vue-TS-Template",
         demolink: "https://vue-template-ts.vercel.app",
         youtubelink: ""
@@ -348,7 +348,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-1",
         demolink: "https://vue-threejs-1.vercel.app",
         youtubelink: ""
@@ -370,7 +370,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Vue.js, VueX, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Vue-JS-Template",
         demolink: "https://vue-template-js.vercel.app",
         youtubelink: ""
@@ -392,7 +392,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-Template",
         demolink: "https://vue-threejs-template.vercel.app",
         youtubelink: ""
@@ -414,7 +414,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-2",
         demolink: "https://vue-threejs-2.vercel.app",
         youtubelink: "https://youtu.be/LJH-S5KKerw"
@@ -436,7 +436,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Three.js, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Currencies",
         demolink: "https://currencies-zeta.vercel.app",
         youtubelink: "https://youtu.be/5ofx4IjOSuw"
@@ -458,7 +458,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Three.js, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Cryptocurrencies",
         demolink: "https://cryptocurrencies-gold.vercel.app",
         youtubelink: "https://youtu.be/-kGUesQdUs8"
@@ -480,7 +480,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Three.js, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Weather",
         demolink: "https://weather-zorger.vercel.app",
         youtubelink: "https://youtu.be/cg_zJ77DHhI"
@@ -502,7 +502,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Orbit controls, Vue.js, VueX, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/3dConfigurator",
         demolink: "https://3d-configurator-max.vercel.app",
         youtubelink: "https://youtu.be/uUofz_KBYuU"
