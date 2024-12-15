@@ -87,51 +87,75 @@ const state = {
       },
       {
         id: 15,
-        title: "Google Search Console",
+        title: "Markdown",
         version: "",
-        url: "https://search.google.com/search-console"
+        url: "https://www.markdownguide.org"
       },
       {
         id: 16,
-        title: "Google Analytics",
-        version: "4.0",
-        url: "https://analytics.google.com"
-      },
-      {
-        id: 17,
-        title: "Open Graph protocol",
-        version: "",
-        url: "https://ogp.me"
-      },
-      {
-        id: 18,
         title: "OpenWeather Map API",
         version: "",
         url: "https://openweathermap.org"
       },
       {
-        id: 19,
+        id: 17,
         title: "CoinGecko API",
         version: "",
         url: "https://www.coingecko.com"
       },
       {
-        id: 20,
+        id: 18,
         title: "NBU API",
         version: "",
         url: "https://bank.gov.ua/ua/open-data/api-dev"
       },
       {
-        id: 21,
+        id: 19,
         title: "Lorem Picsum API",
         version: "",
         url: "https://picsum.photos"
       },
       {
-        id: 22,
+        id: 20,
         title: "Pixabay API",
         version: "",
         url: "https://pixabay.com"
+      },
+      {
+        id: 21,
+        title: "Google Search Console",
+        version: "",
+        url: "https://search.google.com/search-console"
+      },
+      {
+        id: 22,
+        title: "Google Analytics",
+        version: "4.0",
+        url: "https://analytics.google.com"
+      },
+      {
+        id: 23,
+        title: "Open Graph protocol",
+        version: "",
+        url: "https://ogp.me"
+      },
+      {
+        id: 24,
+        title: "Favicon",
+        version: "",
+        url: "https://developer.mozilla.org/en-US/docs/Glossary/Favicon"
+      },
+      {
+        id: 25,
+        title: "Sitemap",
+        version: "",
+        url: "https://www.sitemaps.org"
+      },
+      {
+        id: 26,
+        title: "Robots.txt",
+        version: "",
+        url: "https://developers.google.com/search/docs/crawling-indexing/robots/intro"
       },
     ]
 };

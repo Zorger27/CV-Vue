@@ -304,7 +304,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "Three.js, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, Grid CSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
+        techno: "Three.js, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, Grid CSS, FlexBox CSS, TypeScript, JavaScript, Axios, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, FavIcon, Sitemap.xml, Robots.txt",
         sourcelink: "https://github.com/Zorger27/CV-Vue",
         demolink: "https://Zorin.Expert",
         youtubelink: "https://youtu.be/fwBFfrhPJyM"
