@@ -22,7 +22,7 @@ const state = {
       {
         id: 4,
         title: "Webpack",
-        version: "5.5.0",
+        version: "5.94.0",
         url: "https://webpack.js.org"
       },
       {
