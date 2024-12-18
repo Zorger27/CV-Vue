@@ -4,13 +4,13 @@ const state = {
       {
         id: 1,
         title: "Vue.js",
-        version: "3.5.4",
+        version: "3.5.13",
         url: "https://v3.ru.vuejs.org"
       },
       {
         id: 2,
         title: "Vue Router",
-        version: "4.4.4",
+        version: "4.5.0",
         url: "https://router.vuejs.org"
       },
       {
@@ -22,7 +22,7 @@ const state = {
       {
         id: 4,
         title: "Webpack",
-        version: "5.94.0",
+        version: "5.97.1",
         url: "https://webpack.js.org"
       },
       {
@@ -34,7 +34,7 @@ const state = {
       {
         id: 6,
         title: "Three.js",
-        version: "168",
+        version: "171",
         url: "https://github.com/mrdoob/three.js/releases"
       },
       {
