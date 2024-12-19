@@ -15,7 +15,7 @@ const state = {
       },
       {
         id: 3,
-        title: "Vuex",
+        title: "VueX",
         version: "4.1.0",
         url: "https://vuex.vuejs.org"
       },
