@@ -27,7 +27,7 @@ export default {
   }
 
   @media (max-width: 768px) {
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.2rem;
     letter-spacing: normal;
     font-size: 0.9rem;
   }
