@@ -27,7 +27,7 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .copyright {
   font-size: 1.5rem;
   font-style: italic;
