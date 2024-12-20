@@ -19,6 +19,7 @@ export default {
 .author {
   font-size: 1.5rem;
   font-style: italic;
+  text-decoration: none;
   letter-spacing: 1px;
   color: saddlebrown;
 
