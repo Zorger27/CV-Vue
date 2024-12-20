@@ -1,0 +1,35 @@
+<script>
+export default {
+  name: "Author",
+};
+</script>
+
+<template>
+  <div class="author">
+    {{ $t('footer.text1') }}
+    <b>
+      <a href="https://zorger27.github.io" title="Curriculum VITAE" target="_blank">
+        {{ $t('footer.text2') }}
+      </a>
+    </b>{{ $t('footer.text3') }}
+  </div>
+</template>
+
+<style scoped>
+.author {
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: saddlebrown;
+
+  @media (max-width: 1020px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 0.1rem;
+    letter-spacing: normal;
+    font-size: 0.9rem;
+  }
+}
+</style>
