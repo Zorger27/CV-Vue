@@ -23,6 +23,9 @@ export default {
   letter-spacing: 1px;
   color: saddlebrown;
 
+  a {text-decoration: none;}
+  a:hover {text-decoration: underline; color: darkblue;}
+
   @media (max-width: 1020px) {
     font-size: 1.1rem;
   }
