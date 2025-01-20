@@ -21,7 +21,7 @@ const state = {
         techno: "HTML5, CSS3, Grid CSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, GitHub Pages, Google Search Console, Google Analytics, Open Graph protocol, Favicon, Sitemap, Robots.txt",
         sourcelink: "https://github.com/Zorger27/zorger27.github.io",
         demolink: "https://zorger27.github.io",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/jlpmGDHqhy8"
       },
       {
         id: 2,
@@ -43,7 +43,7 @@ const state = {
         techno: "HTML5, CSS3, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/calculator",
         demolink: "https://zorin.expert/extra/calculator",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/jlpmGDHqhy8"
       },
       {
         id: 3,
@@ -87,7 +87,7 @@ const state = {
         techno: "HTML5, CSS3, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Contact-Form",
         demolink: "",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/jlpmGDHqhy8"
       },
       {
         id: 5,
@@ -329,7 +329,7 @@ const state = {
         techno: "Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, Favicon, Sitemap, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Vue-TS-Template",
         demolink: "https://vue-template-ts.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/jlpmGDHqhy8"
       },
       {
         id: 16,
