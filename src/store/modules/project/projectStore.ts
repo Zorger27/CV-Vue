@@ -65,7 +65,7 @@ const state = {
         techno: "HTML5, CSS3, FlexBox CSS, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Spinning-cube",
         demolink: "https://zorin.expert/extra/graphics/cube",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/xXxQ1K_Syns"
       },
       {
         id: 4,
@@ -109,7 +109,7 @@ const state = {
         techno: "HTML5, CSS3, FlexBox CSS, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/To-Do-list",
         demolink: "https://zorin.expert/extra/todo",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/xXxQ1K_Syns"
       },
       {
         id: 6,
@@ -197,7 +197,7 @@ const state = {
         techno: "HTML5, CSS3, FlexBox CSS, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Typical-JS-tasks",
         demolink: "https://zorin.expert/extra/tasks",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/xXxQ1K_Syns"
       },
       {
         id: 10,
@@ -219,7 +219,7 @@ const state = {
         techno: "Vue.js, VueX, Vue I18n, Webpack, Node.js, Express.js, Axios, JSON Web Tokens, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Element Plus, Cypress (E2E), Jest (Unit), Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Blog-site",
         demolink: "",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/xXxQ1K_Syns"
       },
       {
         id: 11,
