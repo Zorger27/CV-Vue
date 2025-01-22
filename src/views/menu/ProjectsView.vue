@@ -81,9 +81,13 @@ export default class Projects extends Vue {
                 <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
                 <a :href="prj.youtubelink" class="youtube" title="Project at YouTube..." target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
               </div>
-              <div v-else-if="prj.demolink" class="link2">
+              <div v-else-if="prj.demolink && prj.sourcelink" class="link2">
                 <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
                 <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+              </div>
+              <div v-else-if="prj.sourcelink && prj.youtubelink" class="link2">
+                <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+                <a :href="prj.youtubelink" class="youtube" title="Project at YouTube..." target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
               </div>
               <div v-else><a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{$t('projects.github') }}</b></a></div>
             </div>
