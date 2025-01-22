@@ -131,7 +131,7 @@ const state = {
         techno: "HTML5, CSS3, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Hamburger-menu",
         demolink: "",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/u_PFNLi0Gb4"
       },
       {
         id: 7,
@@ -153,7 +153,7 @@ const state = {
         techno: "HTML5, CSS3, FlexBox CSS, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Scroll-Snap",
         demolink: "",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/u_PFNLi0Gb4"
       },
       {
         id: 8,
@@ -175,7 +175,7 @@ const state = {
         techno: "HTML5, CSS3, FlexBox CSS, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Memory-game",
         demolink: "https://zorin.expert/extra/games/memory",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/u_PFNLi0Gb4"
       },
       {
         id: 9,
@@ -241,7 +241,7 @@ const state = {
         techno: "HTML5, CSS3, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Dropdown-Menu",
         demolink: "",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/u_PFNLi0Gb4"
       },
       {
         id: 12,
@@ -373,7 +373,7 @@ const state = {
         techno: "Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, Favicon, Sitemap, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Vue-JS-Template",
         demolink: "https://vue-template-js.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/u_PFNLi0Gb4"
       },
       {
         id: 18,
