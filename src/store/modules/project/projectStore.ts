@@ -263,7 +263,7 @@ const state = {
         techno: "HTML5, CSS3, Boxicons CSS, JavaScript, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Sidebar-Menu",
         demolink: "",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/7rmrqh2TeI8"
       },
       {
         id: 13,
@@ -285,7 +285,7 @@ const state = {
         techno: "HTML5, CSS3, FlexBox CSS, Markdown, Git, GitHub",
         sourcelink: "https://github.com/Zorger27/Fav-buttons",
         demolink: "",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/7rmrqh2TeI8"
       },
       {
         id: 14,
@@ -351,7 +351,7 @@ const state = {
         techno: "Three.js, Orbit controls, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, TypeScript, JavaScript, Markdown, Git, GitHub, Open Graph protocol, Favicon, Sitemap, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-1",
         demolink: "https://vue-threejs-1.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/7rmrqh2TeI8"
       },
       {
         id: 17,
@@ -395,7 +395,7 @@ const state = {
         techno: "Three.js, Orbit controls, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, Favicon, Sitemap, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Vue-Threejs-Template",
         demolink: "https://vue-threejs-template.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/7rmrqh2TeI8"
       },
       {
         id: 19,
