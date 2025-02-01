@@ -139,18 +139,22 @@ export default class Projects extends Vue {
     text-shadow: 2px 2px 4px black;
     display: flex;
     width: max-content;
-    border: 1px solid darkred;
+    border: 1px solid darkgreen;
     padding: 0.5rem 1rem;
     margin: 0.3rem auto;
     border-radius: 5px;
-    background-color: hsla(0, 100%, 50%, 1);
-    background-image: radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
-    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
-    radial-gradient(at 76% 52%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+    background-image: url("@/assets/img/cube3/cube3-17.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    //background-color: hsl(48, 100%, 50%);
+    //background-image: radial-gradient(at 40% 20%, hsl(203, 85%, 87%) 0px, transparent 50%),
+    //radial-gradient(at 80% 0%, hsl(189, 87%, 68%) 0px, transparent 50%),
+    //radial-gradient(at 0% 50%, hsl(118, 100%, 93%) 0px, transparent 50%),
+    //radial-gradient(at 76% 52%, hsl(159, 100%, 76%) 0px, transparent 50%),
+    //radial-gradient(at 0% 100%, hsl(165, 53%, 81%) 0px, transparent 50%),
+    //radial-gradient(at 79% 100%, hsl(212, 78%, 79%) 0px, transparent 50%),
+    //radial-gradient(at 0% 0%, hsl(146, 100%, 76%) 0px, transparent 50%);
   }
 
   .demolink:hover {
@@ -183,7 +187,7 @@ export default class Projects extends Vue {
     color: darkblue;
     text-shadow: none;
     border: 1px solid lightskyblue;
-    box-shadow: 3px 3px 4px 0 lightgrey;
+    //box-shadow: 3px 3px 4px 0 lightgrey;
     background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
   }
 
@@ -198,17 +202,32 @@ export default class Projects extends Vue {
     color: white;
     text-shadow: 2px 2px 4px black;
     border: 1px solid darkred;
-    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-    background-color: orangered;
+    //transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    background-color: hsla(0, 100%, 50%, 1);
+    background-image: radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsl(14, 97%, 72%) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 76% 52%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 100%, hsl(0, 79%, 78%) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+    //background-color: orangered;
   }
 
   .youtube:hover {
     color: black;
-    text-shadow: none;
-    border: 1px solid rgba(0, 0, 0, 0.35);
-    box-shadow: 3px 3px 4px 0 lightgrey;
+    //text-shadow: none;
+    text-shadow: 2px 2px 4px white;
+    box-shadow: none;
+    //border: 1px solid rgba(0, 0, 0, 0.35);
+    //border: 1px solid darkred;
+    //box-shadow: 3px 3px 4px 0 lightgrey;
     //background-color: mistyrose;
-    background: linear-gradient(to bottom, rgb(255, 246, 209), rgb(255, 240, 244)) no-repeat center;
+    //background: linear-gradient(to bottom, rgb(255, 246, 209), rgb(255, 240, 244)) no-repeat center;
+    background-image: url("@/assets/img/cube3/cube3-18.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .table {
