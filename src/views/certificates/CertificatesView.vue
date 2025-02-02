@@ -21,10 +21,18 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
+
+    // Получаем значение 'searchView' из localStorage
+    const searchValue = localStorage.getItem('searchView');
+    if (searchValue) {
+      // Преобразует строку 'true' или 'false' в булевое значение true или false
+      this.searchView = searchValue === 'true';
+    }
   },
   methods: {
     changeView() {
       this.searchView = !this.searchView;
+      localStorage.setItem('searchView', this.searchView.toString());
     }
   },
   components: {TotalSert, Search},
