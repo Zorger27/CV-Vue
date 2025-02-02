@@ -31,8 +31,7 @@ import {Options, Vue} from "vue-class-component";
   },
   components: {},
 })
-export default class CurrentDate extends Vue {
-}
+export default class CurrentDate extends Vue {}
 </script>
 
 <template>

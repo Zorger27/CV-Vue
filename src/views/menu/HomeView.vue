@@ -2,6 +2,7 @@
 import {Options, Vue} from 'vue-class-component';
 import Slider from "@/components/util/Slider.vue";
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
+import MainPhoto from "@/components/util/MainPhoto.vue";
 
 @Options({
   mixins: [openGraphMixin],
@@ -24,7 +25,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
         require('@/assets/certificates/english/19_English_for_advanced.webp'),
         require('@/assets/certificates/diploma/TP88892276D.webp'),
       ],
-      getPhotoImage: require('@/assets/img/photo.svg'),
+      // getPhotoImage: require('@/assets/img/photo.svg'),
       currentText: "main.job1",
       textIndex: 0,
       texts: ["main.job1", "main.job2", "main.job3", "main.job4", "main.job5", "main.job6"],
@@ -56,7 +57,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
       }, 4000);
     }
   },
-  components: {Slider},
+  components: {MainPhoto, Slider},
 })
 export default class Home extends Vue {};
 </script>
@@ -73,8 +74,7 @@ export default class Home extends Vue {};
     <line></line>
     <div class="home">
       <div class="photo">
-        <img :src="getPhotoImage" class="photo-image" alt="My Photo Image">
-        <!--      <img src="@/assets/img/photo.png" alt="My photo" title="My photo">-->
+        <MainPhoto></MainPhoto>
       </div>
       <div class="icons">
         <!--        <a href="tel:+380504411801" title="Call me: +380 50 441-18-01" target="_blank"><img class=logo-image-->
@@ -161,11 +161,6 @@ export default class Home extends Vue {};
     .photo {
       grid-area: photo;
       text-align: center;
-
-      .photo-image {
-        width: 100%;
-        height: auto;
-      }
     }
 
     .icons {
