@@ -8,6 +8,7 @@ import { Options, Vue } from 'vue-class-component';
         require('@/assets/img/photo/photo1.svg'),
         require('@/assets/img/photo/photo2.svg'),
         require('@/assets/img/photo/photo3.svg'),
+        require('@/assets/img/photo/photo4.svg'),
       ],
       currentPhotoIndex: 1,
     };
