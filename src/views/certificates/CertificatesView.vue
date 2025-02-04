@@ -96,12 +96,8 @@ export default class Certificates extends Vue {
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(247, 234, 250), rgb(255, 250, 229)) no-repeat center;
 
-  .fa-search {
-    color: deepskyblue;
-  }
-  .fa-binoculars {
-    color: darkgoldenrod;
-  }
+  .fa-search {color: deepskyblue;}
+  .fa-binoculars {color: darkgoldenrod;}
 
   .container {
     display: inline-grid;

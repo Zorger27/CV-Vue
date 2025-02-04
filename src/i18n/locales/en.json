@@ -55,6 +55,8 @@
   },
   "projects": {
     "title": "Projects",
+    "search": "Search projects...",
+    "hasNoResults": "Sorry, but there are no results for your search! \uD83E\uDD37\u200D♀\uFE0F\uD83E\uDDD0\uD83E\uDD37\u200D♂\uFE0F",
     "name": "Name",
     "description": "Description",
     "type": "Type",

@@ -2,6 +2,7 @@
 import {Options, Vue} from "vue-class-component";
 import projectStore from "@/store/modules/project/projectStore";
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
+import ProjectsSearch from "@/components/util/ProjectsSearch.vue";
 
 @Options({
   mixins: [openGraphMixin],
@@ -23,6 +24,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     return {
       tableView: false,
       reverseOrder: true,
+      projectSearch: true,
     }
   },
   mounted() {
@@ -35,6 +37,13 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
+
+    // Получаем значение 'projectSearch' из localStorage
+    const searchValue = localStorage.getItem('projectSearch');
+    if (searchValue) {
+      // Преобразует строку 'true' или 'false' в булевое значение true или false
+      this.projectSearch = searchValue === 'true';
+    }
   },
   methods: {
     changeView() {
@@ -43,8 +52,12 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     toggleOrder() {
       this.reverseOrder = !this.reverseOrder; // Инвертируем значение reverseOrder при клике на кнопку
     },
+    pSearch() {
+      this.projectSearch = !this.projectSearch;
+      localStorage.setItem('projectSearch', this.projectSearch.toString());
+    },
   },
-  components: {},
+  components: {ProjectsSearch},
 })
 
 export default class Projects extends Vue {
@@ -55,9 +68,12 @@ export default class Projects extends Vue {
   <div class="projects">
     <h1>{{ $t('projects.title') }}
       <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
-        @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-arrow-alt-circle-up' : 'fa-arrow-alt-circle-down']"></span></i>
+        @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-arrow-alt-circle-up' : 'fa-arrow-alt-circle-down']"></span></i> <i
+        @click="pSearch" class="search"><span :class="['fas', projectSearch ? 'fa-binoculars' : 'fa-search']"></span></i>
     </h1>
     <line></line>
+    <ProjectsSearch v-if="projectSearch"></ProjectsSearch>
+    <line v-if="projectSearch"></line>
     <div v-if="tableView" class="table">
       <table>
         <thead>
@@ -132,6 +148,8 @@ export default class Projects extends Vue {
 .projects {
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(255, 249, 229), rgb(255, 240, 244)) no-repeat center;
+  .fa-search {color: deepskyblue;}
+  .fa-binoculars {color: darkgoldenrod;}
 
   .demolink {
     text-decoration: none;

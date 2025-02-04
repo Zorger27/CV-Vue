@@ -55,6 +55,8 @@
   },
   "projects": {
     "title": "Проекти",
+    "search": "Пошук проектів...",
+    "hasNoResults": "Вибачте, але за Вашим запитом нічого не знайдено! \uD83E\uDD37\u200D♀\uFE0F\uD83E\uDDD0\uD83E\uDD37\u200D♂\uFE0F",
     "name": "Найменування",
     "description": "Опис",
     "type": "Тип",
