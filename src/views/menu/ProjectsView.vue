@@ -24,7 +24,7 @@ import ProjectsSearch from "@/components/util/ProjectsSearch.vue";
     return {
       tableView: false,
       reverseOrder: true,
-      projectSearch: true,
+      projectSearch: false,
     }
   },
   mounted() {
