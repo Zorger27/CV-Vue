@@ -10,6 +10,10 @@ import projectStore from "@/store/modules/project/projectStore";
     hasResults() {
       return this.filteredProjects.length > 0;
     },
+    // Подсчёт количества проектов
+    foundProjectsCount() {
+      return this.filteredProjects.length;
+    },
   },
   data() {
     return {
@@ -51,6 +55,10 @@ export default class ProjectsSearch extends Vue {}
     <div class="search-bar">
       <input type="text" :placeholder="$t('projects.search')" v-model="searchValue"/>
       <i title="Clear" @click="clearSearch" class="fas fa-trash-alt"></i>
+    </div>
+    <!-- Сообщение о количестве найденных проектов -->
+    <div class="results-count" v-if="hasResults && searchValue.length !== 0">
+      {{ $t("projects.foundProjectsCount") }}<span class="tire2">―</span><span class="count">{{ foundProjectsCount }}</span> 👏😎
     </div>
     <div class="inner" v-if="searchValue.length !== 0">
       <template v-if="hasResults">
@@ -114,6 +122,15 @@ export default class ProjectsSearch extends Vue {}
 
     .fa-trash-alt {font-size: 1.6rem; margin-left: 7px;}
     .fa-trash-alt:hover {color: red;}
+  }
+
+  .results-count {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0.3rem;
+    color: darkslateblue;
+    .tire2 {color: black; margin: 0.3rem;}
+    .count {color: darkred;}
   }
 
   .inner {
@@ -233,7 +250,16 @@ export default class ProjectsSearch extends Vue {}
     }
   }
   @media(max-width: 1020px) {
+    .results-count {
+      font-size: 1.4rem;
+      margin: 0.3rem;
+      .tire2 {margin: 0 0.2rem;}
+    }
     .inner {
+      .hasResults {
+        font-size: 1.4rem;
+        margin: 0.3rem;
+      }
       .prj {
         .block {
           max-width: fit-content;
@@ -265,11 +291,15 @@ export default class ProjectsSearch extends Vue {}
         font-size: 1.3rem;
       }
     }
+    .results-count {
+      font-size: 1.3rem;
+      margin: 0.2rem;
+      .tire2 {margin: 0 0.1rem;}
+    }
     .inner {
       .hasResults {
         font-size: 1.3rem;
         margin: 0.2rem;
-        color: darkgreen;
       }
       .prj {
         max-width: 25rem;
