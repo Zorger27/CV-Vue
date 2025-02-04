@@ -148,7 +148,7 @@ export default class Projects extends Vue {
 .projects {
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(255, 249, 229), rgb(255, 240, 244)) no-repeat center;
-  .fa-search {color: deepskyblue;}
+  .fa-search {color: royalblue;}
   .fa-binoculars {color: darkgoldenrod;}
 
   .demolink {
