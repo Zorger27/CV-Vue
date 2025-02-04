@@ -48,8 +48,8 @@ export default class Certificates extends Vue {
       <i @click="changeView" class="dandruff"><span :class="['fas', searchView ? 'fa-binoculars' : 'fa-search']"></span></i>
     </h1>
     <line></line>
-    <TotalSert></TotalSert>
     <Search v-if="searchView"></Search>
+    <TotalSert></TotalSert>
     <line></line>
     <div class="container">
       <div class="prj back">
