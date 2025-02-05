@@ -10,7 +10,7 @@ import { Options, Vue } from 'vue-class-component';
         require('@/assets/img/photo/photo3.svg'),
         require('@/assets/img/photo/photo4.svg'),
       ],
-      currentPhotoIndex: 1,
+      currentPhotoIndex: 2,
     };
   },
   mounted() {
