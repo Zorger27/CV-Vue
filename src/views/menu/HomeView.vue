@@ -166,7 +166,8 @@ export default class Home extends Vue {};
     .icons {
       grid-area: icons;
       text-align: center;
-      align-self: center;
+      align-self: start;
+      margin-top: 1rem;
 
       .logo-image {
         width: 4.7rem;
@@ -249,6 +250,7 @@ export default class Home extends Vue {};
         grid-area: icons;
         align-self: center;
         padding-right: 1rem;
+        margin-top: 0;
       }
 
       .info {
@@ -284,6 +286,7 @@ export default class Home extends Vue {};
       .icons {
         grid-area: icons;
         padding-right: 0;
+        margin-top: 0;
         align-self: center;
 
         .logo-image {
