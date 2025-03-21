@@ -507,6 +507,28 @@ const state = {
         demolink: "https://3d-configurator-max.vercel.app",
         youtubelink: "https://youtu.be/uUofz_KBYuU"
       },
+      {
+        id: 24,
+        title_en: "Couture Metaverse 3D",
+        title_ua: "Метавсесвіт від кутюр 3D",
+        title_es: "Metaverso 3D de alta costura",
+        start_date_en: "February 2025",
+        start_date_ua: "Лютий 2025",
+        start_date_es: "Febrero de 2025",
+        end_date_en: "March 2025",
+        end_date_ua: "Березень 2025",
+        end_date_es: "Marzo de 2025",
+        description_en: "🎨 A unique platform for creating and customizing 3D models! 👗 Choose colors, add textures, apply branding, and create stylish looks! 🕶️👕 Experiment, mix, and customize – your design, your rules! 🚀 Save your creations in JPG, PNG, PDF or MP4 formats and share them with the world! 📸",
+        description_ua: "🎨 Унікальна платформа для створення та кастомізації 3D-моделей! 👗 Оберіть кольори, додайте текстури, нанесіть логотипи та створюйте стильні образи! 🕶️👕 Експериментуйте, поєднуйте та налаштовуйте – ваш дизайн, ваші правила! 🚀 Зберігайте свої творіння у форматах JPG, PNG, PDF чи MP4 та діліться ними зі світом! 📸",
+        description_es: "🎨 ¡Una plataforma única para crear y personalizar modelos 3D! 👗 ¡Elige colores, añade texturas, aplica marcas y crea looks elegantes! 🕶️👕 ¡Experimenta, combina y personaliza – tu diseño, tus reglas! 🚀 Guarda tus creaciones en formatos JPG, PNG, PDF o MP4 y ¡compártelas con el mundo! 📸",
+        type_en: "Single page application",
+        type_ua: "Односторінковий додаток",
+        type_es: "Aplicación de una sola página",
+        techno: "Three.js, Orbit controls, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, Favicon, Sitemap, Robots.txt",
+        sourcelink: "https://github.com/Zorger27/Couture-Metaverse",
+        demolink: "https://couture-metaverse.vercel.app",
+        youtubelink: ""
+      },
     ]
 };
 const getters = {};
