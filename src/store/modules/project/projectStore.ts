@@ -527,7 +527,7 @@ const state = {
         techno: "Three.js, Orbit controls, Vue.js, VueX, Vue I18n, Webpack, HTML5, SCSS, FlexBox CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, Favicon, Sitemap, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Couture-Metaverse",
         demolink: "https://couture-metaverse.vercel.app",
-        youtubelink: "https://youtu.be/XpyIgwZ_GlU"
+        youtubelink: "https://youtu.be/zUpIGDogcoI"
       },
     ]
 };
