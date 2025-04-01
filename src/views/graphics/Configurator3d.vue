@@ -383,7 +383,7 @@ export default {
 
   .rotation-controls {
     position: absolute;
-    top: 50%;
+    top: 55%;
     right: 40px; /* Размещение кнопок справа */
     transform: translateY(-50%);
     display: flex;
@@ -431,7 +431,7 @@ export default {
   .model-controls {
     position: absolute;
     left: 40px; /* Размещение кнопок слева */
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
 
     .color-controls {
