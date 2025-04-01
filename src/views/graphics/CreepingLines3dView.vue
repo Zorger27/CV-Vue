@@ -1,5 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
+import { inject } from 'vue';
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
 import CurrentDate from "@/components/util/CurrentDate.vue";
 import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
@@ -15,6 +16,8 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
       ratesCreepView3d: true,
       weatherCreepView3d: false,
       cryptosCreepView3d: false,
+      toggleFooter: inject('toggleFooter'),
+      isFooterHidden: inject('isFooterHidden')
     }
   },
   mounted() {
@@ -85,6 +88,9 @@ export default class CreepingLines3d extends Vue {}
       <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('extra.graphics.creep3d') }}
+      <button
+        @click="toggleFooter" class="toggle-footer-btn" :title="isFooterHidden ? $t('special.openFooter') : $t('special.closeFooter')"><i
+        :class="isFooterHidden ? 'fas fa-toggle-on' : 'fas fa-toggle-off'"></i></button>
       <i :title="weatherCreepView3d ? $t('extra.graphics.titles.weather-close') : $t('extra.graphics.titles.weather-start')"
          @click="changeWeatherCrip3d"> <span :class="['fa-solid', weatherCreepView3d ? 'fa-sun' : 'fa-umbrella']"></span></i>
       <i :title="ratesCreepView3d ? $t('extra.graphics.titles.currency-close') : $t('extra.graphics.titles.currency-start')"
@@ -123,14 +129,23 @@ export default class CreepingLines3d extends Vue {}
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(255, 250, 229), rgb(247, 234, 250)) no-repeat center;
 
-  .back {
-    display: none;
-    @media (max-width: 768px) {
-      display: inline-flex;
-      text-decoration: none;
-      margin-right: 0.1rem;
-    }
+  .back-to-menu {
+    display: inline-flex;
+    text-decoration: none;
+    margin-right: 0.1rem;
   }
+
+  .toggle-footer-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 7px;
+    font-size: 2.5rem;
+    color: mediumseagreen;
+  }
+  .toggle-footer-btn:hover {color: goldenrod;}
+
   .fa-solid.fa-umbrella, .fa-solid.fa-sun {margin-right: 0.5rem;}
   .fa-brands.fa-ethereum, .fa-brands.fa-bitcoin {margin-left: 0.5rem;}
   .fa-solid.fa-umbrella {color: mediumslateblue;}
@@ -276,6 +291,9 @@ export default class CreepingLines3d extends Vue {}
 
 @media(max-width: 1020px) {
   .creeping-lines {
+    .toggle-footer-btn {
+      font-size: 2.3rem;
+    }
     .inner {
       .title {
         font-size: 2.1rem;
@@ -301,6 +319,9 @@ export default class CreepingLines3d extends Vue {}
 
 @media (max-width: 768px) {
   .creeping-lines {
+    .toggle-footer-btn {
+      font-size: 2rem;
+    }
     .inner{
       grid-column-gap: 0;
       grid-row-gap: 0;
