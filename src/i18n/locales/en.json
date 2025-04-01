@@ -176,6 +176,8 @@
     "h1": "Extra (hidden) section for ",
     "h2": "Extra Projects",
     "loading": "loading...",
+    "closeFooter": "Hide footer",
+    "openFooter": "Show footer",
     "h1m": {
       "calculator": "Calculator",
       "cryptocur": "Cryptocurrencies",

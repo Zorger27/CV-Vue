@@ -89,7 +89,7 @@ export default class CreepingLines3d extends Vue {}
       </router-link>
       {{ $t('extra.graphics.creep3d') }}
       <button
-        @click="toggleFooter" class="toggle-footer-btn" :title="isFooterHidden ? $t('special.openFooter') : $t('special.closeFooter')"><i
+        @click="toggleFooter" class="toggle-footer-btn" :title="isFooterHidden ? $t('extra.openFooter') : $t('extra.closeFooter')"><i
         :class="isFooterHidden ? 'fas fa-toggle-on' : 'fas fa-toggle-off'"></i></button>
       <i :title="weatherCreepView3d ? $t('extra.graphics.titles.weather-close') : $t('extra.graphics.titles.weather-start')"
          @click="changeWeatherCrip3d"> <span :class="['fa-solid', weatherCreepView3d ? 'fa-sun' : 'fa-umbrella']"></span></i>
