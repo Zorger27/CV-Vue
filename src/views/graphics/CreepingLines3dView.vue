@@ -2,6 +2,7 @@
 import {Options, Vue} from "vue-class-component";
 import { inject } from 'vue';
 import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
+import ToggleFullScreen from "@/components/util/ToggleFullScreen.vue";
 import CurrentDate from "@/components/util/CurrentDate.vue";
 import WeatherCreep3d from "@/components/other/WeatherCreep3d.vue";
 import NBURatesCreep3d from "@/components/other/NBURatesCreep3d.vue";
@@ -77,7 +78,7 @@ import CryptosCreep3d from "@/components/other/CryptosCreep3d.vue";
       }
     },
   },
-  components: {CryptosCreep3d, NBURatesCreep3d, WeatherCreep3d, CurrentDate},
+  components: {ToggleFullScreen, CryptosCreep3d, NBURatesCreep3d, WeatherCreep3d, CurrentDate},
 })
 export default class CreepingLines3d extends Vue {}
 </script>
@@ -87,8 +88,7 @@ export default class CreepingLines3d extends Vue {}
     <h1>
       <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.graphics.creep3d') }}
-      <button
+      {{ $t('extra.graphics.creep3d') }} <ToggleFullScreen></ToggleFullScreen> <button
         @click="toggleFooter" class="toggle-footer-btn" :title="isFooterHidden ? $t('extra.openFooter') : $t('extra.closeFooter')"><i
         :class="isFooterHidden ? 'fas fa-toggle-on' : 'fas fa-toggle-off'"></i></button>
       <i :title="weatherCreepView3d ? $t('extra.graphics.titles.weather-close') : $t('extra.graphics.titles.weather-start')"
