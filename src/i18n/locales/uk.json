@@ -212,7 +212,7 @@
       "title": "3D Графіка",
       "cube": "Куб (CSS)",
       "cubejs": "Куб (JavaScript)",
-      "cube3d": "CuboVerse (Three.js)",
+      "cube3d": "CuboVerse",
       "creep3d": "Рядок, що біжить",
       "configurator3d": {
         "title": "3D-конфігуратор",

@@ -291,9 +291,7 @@ export default class CreepingLines3d extends Vue {}
 
 @media(max-width: 1020px) {
   .creeping-lines {
-    .toggle-footer-btn {
-      font-size: 2.3rem;
-    }
+    .toggle-footer-btn {font-size: 2.3rem;}
     .inner {
       .title {
         font-size: 2.1rem;
@@ -319,9 +317,7 @@ export default class CreepingLines3d extends Vue {}
 
 @media (max-width: 768px) {
   .creeping-lines {
-    .toggle-footer-btn {
-      font-size: 2rem;
-    }
+    .toggle-footer-btn {font-size: 2rem;}
     .inner{
       grid-column-gap: 0;
       grid-row-gap: 0;

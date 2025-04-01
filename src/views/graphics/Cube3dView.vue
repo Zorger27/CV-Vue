@@ -1,6 +1,7 @@
 <script>
-import {onMounted, onUnmounted, ref} from "vue";
+import {onMounted, onUnmounted, ref, inject} from "vue";
 import * as THREE from "three";
+import {useI18n} from 'vue-i18n';
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import ToggleFullScreen from "@/components/util/ToggleFullScreen.vue";
 import CanvasFullScreen from "@/components/util/CanvasFullScreen.vue";
@@ -23,6 +24,9 @@ export default {
   },
   methods: {},
   setup() {
+    const { t } = useI18n();
+    const toggleFooter = inject('toggleFooter');
+    const isFooterHidden = inject('isFooterHidden');
     const canvasContainer = ref(null);
     let scene, camera, renderer, controls;
     let rotationPaused = false;
@@ -366,7 +370,7 @@ export default {
     });
 
     return {
-      canvasContainer
+      t, isFooterHidden, toggleFooter, canvasContainer
     };
   },
 }
@@ -377,7 +381,9 @@ export default {
     <h1>
       <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
-      {{ $t('extra.graphics.cube3d') }} <CanvasFullScreen :canvasContainer="canvasContainer"></CanvasFullScreen> <ToggleFullScreen></ToggleFullScreen>
+      {{ t('extra.graphics.cube3d') }} <CanvasFullScreen :canvasContainer="canvasContainer"></CanvasFullScreen> <ToggleFullScreen></ToggleFullScreen> <button
+      @click="toggleFooter" class="toggle-footer-btn" :title="isFooterHidden ? t('extra.openFooter') : t('extra.closeFooter')"><i
+      :class="isFooterHidden ? 'fas fa-toggle-on' : 'fas fa-toggle-off'"></i></button>
     </h1>
     <line></line>
     <div class="scene-container" ref="canvasContainer"></div>
@@ -388,6 +394,17 @@ export default {
 .container {
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(255, 240, 244), rgb(255, 249, 229) ) no-repeat center;
+
+  .toggle-footer-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: mediumseagreen;
+  }
+  .toggle-footer-btn:hover {color: goldenrod;}
+
   //h1 {font-size: 2.5rem;margin: 0.7rem auto;color: black;}
   .scene-container {
     max-height: 70vh;
@@ -402,13 +419,13 @@ export default {
 
 @media(max-width: 1020px) {
   .container {
-    //h1 {font-size: 2.3rem;margin: 0.6rem auto;}
+    .toggle-footer-btn {font-size: 2.3rem;}
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    //h1 {font-size: 2rem;margin: 0.5rem auto;}
+    .toggle-footer-btn {font-size: 2rem;}
     .fa.fa-expand {display: none;}  }
 }
 </style>
