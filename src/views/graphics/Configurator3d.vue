@@ -1,5 +1,5 @@
 <script>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, inject } from 'vue';
 import * as THREE from 'three';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
@@ -7,6 +7,7 @@ import { TextureLoader } from "three";
 import CanvasFullScreen from "@/components/util/CanvasFullScreen.vue";
 import ToggleFullScreen from "@/components/util/ToggleFullScreen.vue";
 import { openGraphMixin } from "@/assets/ogimage/openGraphMixin";
+import {useI18n} from "vue-i18n";
 
 export default {
   name: 'Project1',
@@ -24,6 +25,9 @@ export default {
     this.setPageTitle(mainTitle);
   },
   setup() {
+    const { t } = useI18n();
+    const toggleFooter = inject('toggleFooter');
+    const isFooterHidden = inject('isFooterHidden');
     const canvasContainer = ref(null);
     let scene, camera, renderer, model;
     let isRotatingClockwise = true;
@@ -289,17 +293,11 @@ export default {
     });
 
     return {
-      canvasContainer,
-      uploadTexture,
-      changeColor,
-      changeColorFromPicker,
-      changeTexture,
-      toggleMixing, // Возвращаем функцию для переключения смешивания
-      isMixingEnabled, // Возвращаем состояние смешивания
+      t, isFooterHidden, toggleFooter, canvasContainer,
+      uploadTexture, changeColor, changeColorFromPicker, changeTexture,
+      toggleMixing, isMixingEnabled,
       resetModelSettings,
-      rotateClockwise,
-      rotateCounterClockwise,
-      stopRotation,
+      rotateClockwise, rotateCounterClockwise, stopRotation,
     };
   },
 }
@@ -309,24 +307,26 @@ export default {
   <div class="container">
     <h1><router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
     </router-link>
-      {{ $t('extra.graphics.configurator3d.title') }} <CanvasFullScreen :canvasContainer="canvasContainer"></CanvasFullScreen> <ToggleFullScreen></ToggleFullScreen>
+      {{ t('extra.graphics.configurator3d.title') }} <CanvasFullScreen :canvasContainer="canvasContainer"></CanvasFullScreen> <ToggleFullScreen></ToggleFullScreen> <button
+        @click="toggleFooter" class="toggle-footer-btn" :title="isFooterHidden ? t('extra.openFooter') : t('extra.closeFooter')"><i
+        :class="isFooterHidden ? 'fas fa-toggle-on' : 'fas fa-toggle-off'"></i></button>
     </h1>
     <line></line>
     <div class="scene-container" ref="canvasContainer"></div>
     <!-- Кнопки управления вращением -->
     <div class="rotation-controls">
-      <button @click="rotateClockwise" :title="$t ('extra.graphics.configurator3d.rotating.clockwise')">
+      <button @click="rotateClockwise" :title="t ('extra.graphics.configurator3d.rotating.clockwise')">
         <i class="fas fa-arrow-rotate-right"></i>
       </button>
-      <button @click="stopRotation" :title="$t ('extra.graphics.configurator3d.rotating.stop')">
+      <button @click="stopRotation" :title="t ('extra.graphics.configurator3d.rotating.stop')">
         <i class="fas fa-stop"></i>
       </button>
-      <button @click="rotateCounterClockwise" :title="$t ('extra.graphics.configurator3d.rotating.counterclockwise')">
+      <button @click="rotateCounterClockwise" :title="t ('extra.graphics.configurator3d.rotating.counterclockwise')">
         <i class="fas fa-arrow-rotate-left"></i>
       </button>
 
       <!-- Кнопка для включения/отключения смешивания -->
-      <button @click="toggleMixing" :title="isMixingEnabled ? $t('extra.graphics.configurator3d.rotating.mixYes') : $t('extra.graphics.configurator3d.rotating.mixNo')" class="mixing" :class="{'active': isMixingEnabled}">
+      <button @click="toggleMixing" :title="isMixingEnabled ? t('extra.graphics.configurator3d.rotating.mixYes') : t('extra.graphics.configurator3d.rotating.mixNo')" class="mixing" :class="{'active': isMixingEnabled}">
         <i :class="isMixingEnabled ? 'fas fa-sliders-h' : 'fas fa-gem'"></i>
       </button>
 
@@ -334,21 +334,21 @@ export default {
     <div class="model-controls">
       <!-- Кнопки выбора цвета -->
       <div class="color-controls">
-        <button @click="changeColor(0xc6fbc6)" :title="$t ('extra.graphics.configurator3d.changeColor.green')" class="color-button" style="background-color: #c6fbc6;"></button>
-        <button @click="changeColor(0xfaeeb2)" :title="$t ('extra.graphics.configurator3d.changeColor.golden')" class="color-button" style="background-color: #faeeb2;"></button>
-        <input type="color" @input="changeColorFromPicker" :title="$t ('extra.graphics.configurator3d.changeColor.picker')" class="color-button color-picker"/>
+        <button @click="changeColor(0xc6fbc6)" :title="t ('extra.graphics.configurator3d.changeColor.green')" class="color-button" style="background-color: #c6fbc6;"></button>
+        <button @click="changeColor(0xfaeeb2)" :title="t ('extra.graphics.configurator3d.changeColor.golden')" class="color-button" style="background-color: #faeeb2;"></button>
+        <input type="color" @input="changeColorFromPicker" :title="t ('extra.graphics.configurator3d.changeColor.picker')" class="color-button color-picker"/>
       </div>
       <!-- Кнопки управления текстурами -->
       <div class="texture-controls">
-        <img src="/assets/textures/texture3.webp" alt="texture3" @click="changeTexture('texture1')" class="button" :title="$t('extra.graphics.configurator3d.texture.texture1')">
-        <img src="/assets/textures/texture4.webp" alt="texture4" @click="changeTexture('texture2')" class="button" :title="$t('extra.graphics.configurator3d.texture.texture2')">
+        <img src="/assets/textures/texture3.webp" alt="texture3" @click="changeTexture('texture1')" class="button" :title="t('extra.graphics.configurator3d.texture.texture1')">
+        <img src="/assets/textures/texture4.webp" alt="texture4" @click="changeTexture('texture2')" class="button" :title="t('extra.graphics.configurator3d.texture.texture2')">
         <!-- Кнопка для загрузки текстуры с диска -->
         <input type="file" @change="uploadTexture" id="file-input" class="file-input">
-        <label for="file-input" class="button upload" :title="$t('extra.graphics.configurator3d.texture.upload')">
+        <label for="file-input" class="button upload" :title="t('extra.graphics.configurator3d.texture.upload')">
           <i class="fa-solid fa-upload"></i>
         </label>
         <!-- Кнопка сброса -->
-        <button @click="resetModelSettings" class="button reset" :title="$t('extra.graphics.configurator3d.texture.reset')">
+        <button @click="resetModelSettings" class="button reset" :title="t('extra.graphics.configurator3d.texture.reset')">
           <i class="fas fa-reply"></i>
         </button>
       </div>
@@ -361,6 +361,17 @@ export default {
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(229, 255, 229), rgb(250, 247, 234)) no-repeat center;
   //h1 {font-size: 2.5rem;margin: 0.7rem auto;color: black;}
+
+  .toggle-footer-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: mediumseagreen;
+  }
+  .toggle-footer-btn:hover {color: goldenrod;}
+
   .scene-container {
     max-height: 70vh;
     position: relative;
@@ -514,6 +525,8 @@ export default {
 @media(max-width: 1020px) {
   .container {
     //h1 {font-size: 2.3rem;margin: 0.6rem auto;}
+    .toggle-footer-btn {font-size: 2.3rem;}
+
     .rotation-controls {
       right: 22px; /* Размещение кнопок справа */
       top: 60%;
@@ -557,6 +570,8 @@ export default {
 @media (max-width: 768px) {
   .container {
     //h1 {font-size: 2rem;margin: 0.5rem auto;}
+    .toggle-footer-btn {font-size: 2rem;}
+
     .rotation-controls {
       right: 20px; /* Размещение кнопок справа */
       top: 60%;
