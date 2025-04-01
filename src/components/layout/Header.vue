@@ -1,7 +1,6 @@
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import languageSwitcher from "@/components/util/LanguageSwitcher.vue";
-// import Header3DLogo2 from "@/components/other/Header3DLogo2.vue";
 import {mapGetters} from "vuex";
 
 @Options({
@@ -33,13 +32,13 @@ import {mapGetters} from "vuex";
       }
     },
     search() {
-      this.$router.push('/certificates');
+      this.$router.push("/certificates");
     },
     extra() {
-      this.$router.push('/extra');
+      this.$router.push("/extra");
     },
     cube3d() {
-      this.$router.push('/extra/graphics/cube3d');
+      this.$router.push("/extra/graphics/cube3d");
     },
   },
   mounted() {
@@ -389,7 +388,7 @@ header {
 
       .dropdown-content {
         position: absolute;
-        margin-top: 1.2rem;
+        margin-top: 0.8rem;
         text-align: left;
         background-color: #f1f1f1;
         border: 1px solid rgba(59, 58, 58, 0.9);
