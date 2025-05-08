@@ -18,7 +18,7 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
         require('@/assets/certificates/other/02_TP18727720.webp')
       ],
       tableView: false,
-      isCodersrankSkillsChartVisible: true,
+      isCodersrankSkillsChartVisible: false,
       windowWidth: window.innerWidth,
     }
   },
