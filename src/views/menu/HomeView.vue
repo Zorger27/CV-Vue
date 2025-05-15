@@ -91,7 +91,7 @@ export default class Home extends Vue {};
         <a href="https://github.com/Zorger27" title="My Github profile..." target="_blank"><img class=logo-image
                                                                                                 src="@/assets/ico/github.svg"
                                                                                                 alt="Github"></a>
-        <a href="https://profile.codersrank.io/user/zorger27" title="My CodersRank profile..." target="_blank"><img
+        <a href="https://profile.codersrank.io/user/zorger27/" title="My CodersRank profile..." target="_blank"><img
           class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>
         <a href="https://www.pinterest.com/zorger27" title="My Pinterest profile..." target="_blank"><img class="logo-image"
                                                                                             src="@/assets/ico/pinterest.svg"
