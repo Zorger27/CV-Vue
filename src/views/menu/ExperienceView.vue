@@ -22,10 +22,10 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     if (savedValue) {this.isCodersrankSummaryVisible = savedValue === 'true';}
   },
   methods: {
-    changeSummary() {
-      this.isCodersrankSummaryVisible = !this.isCodersrankSummaryVisible;
-      localStorage.setItem('isCodersrankSummaryVisible', this.isCodersrankSummaryVisible.toString());
-      },
+    // changeSummary() {
+    //   this.isCodersrankSummaryVisible = !this.isCodersrankSummaryVisible;
+    //   localStorage.setItem('isCodersrankSummaryVisible', this.isCodersrankSummaryVisible.toString());
+    //   },
   },
   components: {},
 })
@@ -36,13 +36,14 @@ export default class Experience extends Vue {
 <template>
   <div class="experience">
     <h1>
-      {{ $t('experience.title') }} <i @click="changeSummary" class="dandruff"><span :class="['fa', isCodersrankSummaryVisible ? 'fa-check-circle' : 'fa-hat-wizard']"></span></i>
+      {{ $t('experience.title') }}
+<!--      <i @click="changeSummary" class="dandruff"><span :class="['fa', isCodersrankSummaryVisible ? 'fa-check-circle' : 'fa-hat-wizard']"></span></i>-->
     </h1>
     <line></line>
     <div class="container">
-      <div v-if="isCodersrankSummaryVisible">
-        <codersrank-summary username="zorger27" branding="false" layout="horizontal"></codersrank-summary>
-      </div>
+<!--      <div v-if="isCodersrankSummaryVisible">-->
+<!--        <codersrank-summary username="zorger27" branding="false" layout="horizontal"></codersrank-summary>-->
+<!--      </div>-->
       <div class="work">
         <div v-for="exp in experienceStore.state.experienceStore" :key="exp.id">
           <h3>{{ exp.data_start }} -

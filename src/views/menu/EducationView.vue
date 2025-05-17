@@ -40,7 +40,8 @@ export default class Education extends Vue {}
         <thead>
         <tr>
           <th class="title" colspan="5">
-            <i>11.2020 - {{ $t('education.present') }}</i>
+<!--            <i>11.2020 - {{ $t('education.present') }}</i>-->
+            <i>11.2020 - 11.2024</i>
           </th>
         </tr>
         <tr>
@@ -68,7 +69,9 @@ export default class Education extends Vue {}
       </table>
     </div>
     <div v-else class="container">
-      <h2><span>11.2020 - {{ $t('education.present') }}</span><br>
+      <h2>
+<!--        <span>11.2020 - {{ $t('education.present') }}</span><br>-->
+        <span>11.2020 - 11.2024</span><br>
         <a href="https://itvdn.com" title="Link to the ITVDN" target="_blank"><b>ITVDN - IT Video Developers Network</b></a>
       </h2>
       <div v-for="sert in itvdnStore.state.itvdnStore" :key="sert.id" class="diploma">
@@ -85,7 +88,8 @@ export default class Education extends Vue {}
         <thead>
         <tr>
           <th class="title" colspan="5">
-            <i>11.2021 - {{ $t('education.present') }}</i>
+<!--            <i>11.2021 - {{ $t('education.present') }}</i>-->
+            <i>11.2021 - 11.2023</i>
           </th>
         </tr>
         <tr>
@@ -113,7 +117,9 @@ export default class Education extends Vue {}
       </table>
     </div>
     <div v-else class="container">
-      <h2><span>11.2021 - {{ $t('education.present') }}</span><br>
+      <h2>
+<!--        <span>11.2021 - {{ $t('education.present') }}</span><br>-->
+        <span>11.2021 - 11.2023</span><br>
         <a href="https://www.englishdom.com" title="Link to the EnglishDom" target="_blank"><b>EnglishDom</b></a>
       </h2>
       <div v-for="sert in englishdomStore.state.englishdomStore" :key="sert.id" class="diploma">

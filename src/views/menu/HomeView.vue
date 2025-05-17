@@ -91,14 +91,11 @@ export default class Home extends Vue {};
         <a href="https://github.com/Zorger27" title="My Github profile..." target="_blank"><img class=logo-image
                                                                                                 src="@/assets/ico/github.svg"
                                                                                                 alt="Github"></a>
-        <a href="https://profile.codersrank.io/user/zorger27/" title="My CodersRank profile..." target="_blank"><img
-          class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>
+<!--        <a href="https://profile.codersrank.io/user/zorger27/" title="My CodersRank profile..." target="_blank"><img-->
+<!--          class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>-->
         <a href="https://www.pinterest.com/zorger27" title="My Pinterest profile..." target="_blank"><img class="logo-image"
                                                                                             src="@/assets/ico/pinterest.svg"
                                                                                             alt="Pinterest"></a>
-        <!--        <a href="skype:anatoliy.zorin?chat" title="Skype chat with me" target="_blank"><img class="logo-image"-->
-<!--                                                                                            src="@/assets/ico/skype.svg"-->
-<!--                                                                                            alt="Skype"></a>-->
         <a href="https://www.facebook.com/anatoliy.zorin" title="My Facebook profile..." target="_blank"><img
           class=logo-image src="@/assets/ico/facebook.svg" alt="Facebook"></a>
         <a href="https://www.youtube.com/c/AnatoliiZorin" title="My YouTube channel..." target="_blank"><img

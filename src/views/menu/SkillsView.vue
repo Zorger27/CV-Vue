@@ -86,27 +86,23 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
 
-    const savedValue = localStorage.getItem('isCodersrankSkillsChartVisible');
-      if (savedValue) {this.isCodersrankSkillsChartVisible = savedValue === 'true';}
+    // const savedValue = localStorage.getItem('isCodersrankSkillsChartVisible');
+    //   if (savedValue) {this.isCodersrankSkillsChartVisible = savedValue === 'true';}
     window.addEventListener('resize', this.handleResize);
     },
   beforeUnmount() {
     window.removeEventListener('resize', this.handleResize);
     },
-  // watch: {
-  //   isSmallScreen: 'updateLayout',
-  //   isMediumScreen: 'updateLayout',
-  // },
   watch: {
     isSmallScreen() { this.updateLayout(); },
     isMediumScreen() { this.updateLayout(); },
   },
   methods: {
     changeView() {this.tableView = !this.tableView;},
-    changeChart() {
-      this.isCodersrankSkillsChartVisible = !this.isCodersrankSkillsChartVisible;
-      localStorage.setItem('isCodersrankSkillsChartVisible', this.isCodersrankSkillsChartVisible.toString());
-      },
+    // changeChart() {
+    //   this.isCodersrankSkillsChartVisible = !this.isCodersrankSkillsChartVisible;
+    //   localStorage.setItem('isCodersrankSkillsChartVisible', this.isCodersrankSkillsChartVisible.toString());
+    //   },
     handleResize() {this.windowWidth = window.innerWidth;},
     updateLayout() {this.$forceUpdate();},
   },
@@ -118,13 +114,14 @@ export default class Skills extends Vue {}
 <template>
   <div class="skills">
     <h1>
-      {{$t('skills.title')}} <i @click="changeChart" class="dandruff"><span :class="['fa', isCodersrankSkillsChartVisible ? 'fa-check-circle' : 'fa-hat-wizard']"></span></i>
+      {{$t('skills.title')}}
+<!--      <i @click="changeChart" class="dandruff"><span :class="['fa', isCodersrankSkillsChartVisible ? 'fa-check-circle' : 'fa-hat-wizard']"></span></i>-->
     </h1>
     <line></line>
     <div class="container" :style="{gridTemplateColumns: gridColumns, gridTemplateAreas: gridAreas}">
-      <div v-if="isCodersrankSkillsChartVisible">
-        <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>
-      </div>
+<!--      <div v-if="isCodersrankSkillsChartVisible">-->
+<!--        <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>-->
+<!--      </div>-->
       <div :class="{'type-skills': true, 'additional-styles': shouldApplyAdditionalStyles}">
         <div class="hard-skills">
           <h3>{{$t('skills.hard')}}</h3>
@@ -381,12 +378,6 @@ export default class Skills extends Vue {}
     h1 {font-size: 1.8rem;}
     .container {
       grid-gap: 0.3rem;
-      //grid-template-columns: 1fr;
-      //grid-template-areas:
-      //  "codersrank-skills-chart"
-      //  "type-skills"
-      //  "iq-test"
-      //  "special-certificates";
 
       codersrank-skills-chart {
         padding: 0.2rem;
