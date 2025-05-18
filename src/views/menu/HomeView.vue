@@ -83,11 +83,14 @@ export default class Home extends Vue {};
         <a href="https://wa.me/380504411801" title="WhatsApp chat with me" target="_blank"><img class="logo-image"
                                                                                                 src="@/assets/ico/phone.svg"
                                                                                                 alt="WhatsApp"></a>
-        <a href="mailto:zorger27@gmail.com" title="Write me: Zorger27@GMail.com" target="_blank"><img class=logo-image
-                                                                                                      src="@/assets/ico/mail.svg"
-                                                                                                      alt="E-mail"></a>
-        <a href="https://www.linkedin.com/in/anatolii-zorin/" title="My LinkedIn profile..." target="_blank"><img
-          class=logo-image src="@/assets/ico/linkedin.svg" alt="LinkedIn"></a>
+        <a href="viber://chat?number=380504411801" title="Chat with me on Viber" target="_blank"><img class="logo-image"
+                                                                                                      src="@/assets/ico/viber.svg"
+                                                                                                      alt="Viber"></a>
+        <a href="https://t.me/Zorger27" title="Chat with me on Telegram" target="_blank"><img class="logo-image"
+                                                                                              src="@/assets/ico/telegram.svg"
+                                                                                              alt="Telegram"></a>
+        <a href="https://x.com/Regroz" title="My X (ex. Twitter) profile..." target="_blank"><img
+          class=logo-image src="@/assets/ico/twitter.svg" alt="Twitter"></a>
         <a href="https://github.com/Zorger27" title="My Github profile..." target="_blank"><img class=logo-image
                                                                                                 src="@/assets/ico/github.svg"
                                                                                                 alt="Github"></a>
@@ -96,12 +99,16 @@ export default class Home extends Vue {};
         <a href="https://www.pinterest.com/zorger27" title="My Pinterest profile..." target="_blank"><img class="logo-image"
                                                                                             src="@/assets/ico/pinterest.svg"
                                                                                             alt="Pinterest"></a>
+        <a href="https://www.linkedin.com/in/anatolii-zorin/" title="My LinkedIn profile..." target="_blank"><img
+          class=logo-image src="@/assets/ico/linkedin.svg" alt="LinkedIn"></a>
         <a href="https://www.facebook.com/anatoliy.zorin" title="My Facebook profile..." target="_blank"><img
           class=logo-image src="@/assets/ico/facebook.svg" alt="Facebook"></a>
         <a href="https://www.youtube.com/c/AnatoliiZorin" title="My YouTube channel..." target="_blank"><img
           class=logo-image src="@/assets/ico/youtube.svg" alt="YouTube"></a>
-        <a href="https://x.com/Regroz" title="My X (ex. Twitter) profile..." target="_blank"><img
-          class=logo-image src="@/assets/ico/twitter.svg" alt="Twitter"></a>
+
+        <a href="mailto:zorger27@gmail.com" title="Write me: Zorger27@GMail.com" target="_blank"><img class=logo-image
+                                                                                                      src="@/assets/ico/mail.svg"
+                                                                                                      alt="E-mail"></a>
         <a href="/assets/file/Curriculum_VITAE.pdf" title="Download my CV in pdf format..." target="_blank"><img
           class=logo-image src="@/assets/ico/download.svg" alt="Download file"></a>
       </div>
