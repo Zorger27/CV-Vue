@@ -80,7 +80,7 @@ export default class Home extends Vue {};
         <!--        <a href="tel:+380504411801" title="Call me: +380 50 441-18-01" target="_blank"><img class=logo-image-->
         <!--                                                                                            src="@/assets/ico/phone.svg"-->
         <!--                                                                                            alt="WhatsApp"></a>-->
-        <a href="https://wa.me/380504411801" title="WhatsApp chat with me" target="_blank"><img class="logo-image"
+        <a href="https://wa.me/380504411801" title="Chat with me on WhatsApp" target="_blank"><img class="logo-image"
                                                                                                 src="@/assets/ico/phone.svg"
                                                                                                 alt="WhatsApp"></a>
         <a href="viber://chat?number=380504411801" title="Chat with me on Viber" target="_blank"><img class="logo-image"
