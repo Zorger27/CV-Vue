@@ -50,6 +50,7 @@ module.exports = defineConfig({
         publicPath: false,
         useHash: false,
         metas: [
+          {attributes: {name: 'title', content: 'Portfolio'}},
           {attributes: {name: 'google-site-verification', content: 'Gq9vrXtN91P1JteGFo-xrlLKT0PR8u-4P4xs21oUr8Y'}},
           {attributes: {name: 'description', content: 'Anatolii Zorin\'s Portfolio with all diplomas, certificates, interesting projects and a detailed description of the experience gained at previous jobs.'}},
           {attributes: {property: 'og:title', content: 'Portfolio'}},
