@@ -45,6 +45,9 @@ export default class Graphics extends Vue {
       <div class="diploma">
         <router-link to="/extra/graphics/configurator3d" class="block" title="3D Configurator (Three.js)"><h3>{{ $t('extra.graphics.configurator3d.title') }}</h3></router-link>
       </div>
+      <div class="diploma">
+        <router-link to="/extra/graphics/couture3d" class="block" title="Couture Metaverse 3D (Three.js)"><h3>{{ $t('extra.graphics.couture3d.title') }}</h3></router-link>
+      </div>
     </div>
   </div>
 </template>

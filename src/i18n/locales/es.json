@@ -235,6 +235,80 @@
           "reset": "Volver a la textura inicial"
         }
       },
+      "couture3d": {
+        "title": "Metaverso 3D de alta costura",
+        "models": {
+          "menShirt1": "Camiseta regular masculina",
+          "womenShirt": "Camiseta mujer oversize",
+          "womenDress": "Vestido de noche de estilo victoriano medio",
+          "menShirt2": "Camiseta polo raglán para hombre",
+          "composition1x4": "Composición de modelos 1 x 4",
+          "composition2x2": "Composición de modelos 2 x 2"
+        },
+        "rotating": {
+          "clockwise": "Girar en sentido horario",
+          "counterclockwise": "Girar en sentido antihorario",
+          "pause": "Pausa la rotación",
+          "stop": "Dejar de rotar",
+          "180": "Girar 180°",
+          "mixNo": "No está permitido mezclar textura con color",
+          "mixYes": "Se permite mezclar textura con color"
+        },
+        "changeColor": {
+          "red": "Rojo",
+          "green": "Verde",
+          "blue": "Azul",
+          "white": "Blanco",
+          "golden": "Dorado",
+          "picker": "Selección de colores",
+          "reset": "Volver al color inicial",
+          "openColorMenu": "Abrir el menú de selección de colores",
+          "closeColorMenu": "Cerrar el menú de selección de colores"
+        },
+        "texture": {
+          "texture1": "Aplicar la textura № 1",
+          "texture2": "Aplicar la textura № 2",
+          "texture3": "Aplicar la textura № 3",
+          "texture4": "Aplicar la textura № 4",
+          "texture5": "Aplicar la textura № 5",
+          "upload": "Cargar textura...",
+          "reset": "Volver a la textura inicial",
+          "resetAll": "Volver a la configuración original",
+          "openTextureMenu": "Abrir el menú de selección de textura",
+          "closeTextureMenu": "Cerrar el menú de selección de textura"
+        },
+        "special": {
+          "delete": "Eliminar configuraciones de modelos del almacenamiento local",
+          "confirm": "¿Está seguro de que desea eliminar la configuración del modelo de la memoria local? \uD83E\uDDD0\uD83D\uDE27",
+          "alertYes": "¡Las configuraciones del modelo se han eliminado de la memoria local! ☹\uFE0F\uD83D\uDE2D",
+          "alertNo": "¡Eliminación de configuración del modelo cancelada! \uD83D\uDE01\uD83D\uDE0A",
+          "noData": "¡No se encontraron configuraciones de modelo en el almacenamiento local! \uD83D\uDE44\uD83E\uDEE4",
+          "created": "Creado con Couture Metaverse 3D",
+          "saving": {
+            "saveData": "Abra el menú de guardar datos en el disco",
+            "closeSaveData": "Cerrar el menú de guardar datos en el disco",
+            "saveJPG": "Guardar como archivo .jpg",
+            "savePNG": "Guardar como archivo .png",
+            "savePDF": "Guardar como archivo .pdf",
+            "startVideo": "Iniciar grabación de vídeo",
+            "stopVideo": "Detener la grabación de vídeo"
+          },
+          "branding": {
+            "openBranding": "Abrir menú para la marca del modelo",
+            "closeBranding": "Cerrar el menú para la marca del modelo",
+            "logo1": "Aplicar el logotipo № 1",
+            "logo2": "Aplicar el logotipo № 2",
+            "logo3": "Aplicar el logotipo № 3",
+            "logo4": "Aplicar el logotipo № 4",
+            "openLogoMenu": "Abrir el menú de selección de logotipos",
+            "closeLogoMenu": "Cerrar el menú de selección de logotipos",
+            "upload": "Cargar imagen de marca desde el disco",
+            "scale": "Escala",
+            "positionY": "Vertical",
+            "positionX": "Horizontal"
+          }
+        }
+      },
       "titles": {
         "weather-start": "Iniciando línea progresiva 3D del tiempo",
         "weather-close": "Cerrando línea progresiva 3D del tiempo",

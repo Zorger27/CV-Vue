@@ -235,6 +235,80 @@
           "reset": "Return to the initial texture"
         }
       },
+      "couture3d": {
+        "title": "Couture Metaverse 3D",
+        "models": {
+          "menShirt1": "Male regular T-shirt",
+          "womenShirt": "Women oversized T-shirt",
+          "womenDress": "Mid Victorian Evening Gown",
+          "menShirt2": "Male raglan polo T-shirt",
+          "composition1x4": "Models Composition 1 x 4",
+          "composition2x2": "Models Composition 2 x 2"
+        },
+        "rotating": {
+          "clockwise": "Rotate clockwise",
+          "counterclockwise": "Rotate counterclockwise",
+          "pause": "Pause rotation",
+          "stop": "Stop rotation",
+          "180": "Rotate 180°",
+          "mixNo": "It is not allowed to mix texture with color",
+          "mixYes": "It is allowed to mix texture with color"
+        },
+        "changeColor": {
+          "red": "Red",
+          "green": "Green",
+          "blue": "lue",
+          "white": "White",
+          "golden": "Golden",
+          "picker": "Color selection",
+          "reset": "Return to initial color",
+          "openColorMenu": "Open color selection menu",
+          "closeColorMenu": "Close color selection menu"
+        },
+        "texture": {
+          "texture1": "Apply the Texture № 1",
+          "texture2": "Apply the Texture № 2",
+          "texture3": "Apply the Texture № 3",
+          "texture4": "Apply the Texture № 4",
+          "texture5": "Apply the Texture № 5",
+          "upload": "Load texture...",
+          "reset": "Return to the initial texture",
+          "resetAll": "Return to original settings",
+          "openTextureMenu": "Open texture selection menu",
+          "closeTextureMenu": "Close texture selection menu"
+        },
+        "special": {
+          "delete": "Deleting models settings from local storage",
+          "confirm": "Are you sure you want to delete model settings from local storage? \uD83E\uDDD0\uD83D\uDE27",
+          "alertYes": "Model settings were deleted from local memory! ☹\uFE0F\uD83D\uDE2D",
+          "alertNo": "Model settings deletion canceled! \uD83D\uDE01\uD83D\uDE0A",
+          "noData": "No model settings found in local storage! \uD83D\uDE44\uD83E\uDEE4",
+          "created": "Created with Couture Metaverse 3D",
+          "saving": {
+            "saveData": "Open the save data menu to the disk",
+            "closeSaveData": "Close the save data menu to the disk",
+            "saveJPG": "Save as .jpg file",
+            "savePNG": "Save as .png file",
+            "savePDF": "Save as .pdf file",
+            "startVideo": "Start video recording",
+            "stopVideo": "Stop video recording"
+          },
+          "branding": {
+            "openBranding": "Open menu for model branding",
+            "closeBranding": "Close menu for model branding",
+            "logo1": "Apply the Logo № 1",
+            "logo2": "Apply the Logo № 2",
+            "logo3": "Apply the Logo № 3",
+            "logo4": "Apply the Logo № 4",
+            "openLogoMenu": "Open the logo selection menu",
+            "closeLogoMenu": "Close the logo selection menu",
+            "upload": "Load brand image from disk",
+            "scale": "Scale",
+            "positionY": "Vertical",
+            "positionX": "Horizontal"
+          }
+        }
+      },
       "titles": {
         "weather-start": "Starting 3D Creeping line of Weather",
         "weather-close": "Closing 3D Creeping line of Weather",
