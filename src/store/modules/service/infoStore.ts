@@ -51,108 +51,114 @@ const state = {
       },
       {
         id: 9,
+        title: "jsPDF",
+        version: "3.0.1",
+        url: "https://www.npmjs.com/package/jspdf"
+      },
+      {
+        id: 10,
         title: "HTML5",
         version: "",
         url: "https://developer.mozilla.org/ru/docs/Learn/HTML/Introduction_to_HTML"
       },
       {
-        id: 10,
+        id: 11,
         title: "CSS3",
         version: "",
         url: "https://developer.mozilla.org/ru/docs/Learn/CSS/First_steps"
       },
       {
-        id: 11,
+        id: 12,
         title: "FlexBox CSS",
         version: "",
         url: "https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox"
       },
       {
-        id: 12,
+        id: 13,
         title: "Grid CSS",
         version: "",
         url: "https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout"
       },
       {
-        id: 13,
+        id: 14,
         title: "JavaScript",
         version: "",
         url: "https://developer.mozilla.org/ru/docs/Learn/JavaScript"
       },
       {
-        id: 14,
+        id: 15,
         title: "TypeScript",
         version: "5.7.2",
         url: "https://www.typescriptlang.org/"
       },
       {
-        id: 15,
+        id: 16,
         title: "Markdown",
         version: "",
         url: "https://www.markdownguide.org"
       },
       {
-        id: 16,
+        id: 17,
         title: "OpenWeather Map API",
         version: "",
         url: "https://openweathermap.org"
       },
       {
-        id: 17,
+        id: 18,
         title: "CoinGecko API",
         version: "",
         url: "https://www.coingecko.com"
       },
       {
-        id: 18,
+        id: 19,
         title: "NBU API",
         version: "",
         url: "https://bank.gov.ua/ua/open-data/api-dev"
       },
       {
-        id: 19,
+        id: 20,
         title: "Lorem Picsum API",
         version: "",
         url: "https://picsum.photos"
       },
       {
-        id: 20,
+        id: 21,
         title: "Pixabay API",
         version: "",
         url: "https://pixabay.com"
       },
       {
-        id: 21,
+        id: 22,
         title: "Google Search Console",
         version: "",
         url: "https://search.google.com/search-console"
       },
       {
-        id: 22,
+        id: 23,
         title: "Google Analytics",
         version: "4.0",
         url: "https://analytics.google.com"
       },
       {
-        id: 23,
+        id: 24,
         title: "Open Graph protocol",
         version: "",
         url: "https://ogp.me"
       },
       {
-        id: 24,
+        id: 25,
         title: "Favicon",
         version: "",
         url: "https://developer.mozilla.org/en-US/docs/Glossary/Favicon"
       },
       {
-        id: 25,
+        id: 26,
         title: "Sitemap",
         version: "",
         url: "https://www.sitemaps.org"
       },
       {
-        id: 26,
+        id: 27,
         title: "Robots.txt",
         version: "",
         url: "https://developers.google.com/search/docs/crawling-indexing/robots/intro"
