@@ -10,7 +10,7 @@ import { openGraphMixin } from "@/assets/ogimage/openGraphMixin";
 import {useI18n} from "vue-i18n";
 
 export default {
-  name: 'Project1',
+  name: 'configurator3d',
   mixins: [openGraphMixin],
   components: {CanvasFullScreen, ToggleFullScreen},
   mounted() {
