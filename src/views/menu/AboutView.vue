@@ -33,7 +33,7 @@ export default class About extends Vue {}
 <template>
   <div class="about">
     <h1 class="main">
-      {{$t ('about.title')}} <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
+      {{$t ('about.title')}} <i @click="changeView" :title="tableView ? $t('extra.listView') : $t('extra.tableView')"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
     </h1>
     <line></line>
     <h2 @click="showMore = !showMore" class="more">{{$t ('about.more01')}}<i style="color: red; margin-left: 0.5rem"

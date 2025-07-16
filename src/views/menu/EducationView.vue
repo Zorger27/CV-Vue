@@ -33,7 +33,7 @@ export default class Education extends Vue {}
 
 <template>
   <div class="education">
-    <h1>{{ $t('education.title') }} <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i></h1>
+    <h1>{{ $t('education.title') }} <i @click="changeView" :title="tableView ? $t('extra.listView') : $t('extra.tableView')"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i></h1>
     <line></line>
     <div v-if="tableView" class="table">
       <table>

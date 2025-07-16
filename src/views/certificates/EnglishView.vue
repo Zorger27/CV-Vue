@@ -53,7 +53,7 @@ export default class English extends Vue {}
         <router-link class="back" to="/certificates" title="Back to Certificates"><i class="fa fa-arrow-circle-left"></i>
         </router-link>
         {{ $t('cert.english') }}
-        <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
+        <i @click="changeView" :title="tableView ? $t('extra.listView') : $t('extra.tableView')"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
         @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-arrow-alt-circle-up' : 'fa-arrow-alt-circle-down']"></span></i>
       </h1>
       <line></line>

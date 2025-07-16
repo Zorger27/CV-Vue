@@ -176,6 +176,8 @@
     "h1": "Extra (hidden) section for ",
     "h2": "Extra Projects",
     "loading": "loading...",
+    "tableView": "Table view",
+    "listView": "List view",
     "closeFooter": "Hide footer",
     "openFooter": "Show footer",
     "fullScreenView": "Canvas Full Screen",

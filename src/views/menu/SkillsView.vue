@@ -166,7 +166,7 @@ export default class Skills extends Vue {}
       </div>
       <div class="special-certificates">
         <line></line>
-        <h2>{{$t('skills.special')}} <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i></h2>
+        <h2>{{$t('skills.special')}} <i @click="changeView" :title="tableView ? $t('extra.listView') : $t('extra.tableView')"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i></h2>
         <div v-if="tableView" class="table">
           <table>
             <thead>
