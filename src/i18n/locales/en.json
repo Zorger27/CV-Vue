@@ -336,6 +336,7 @@
     },
     "game": {
       "title": "Games",
+      "back": "Back to Games page",
       "memory": {
         "name": "Memory game",
         "rules-h2": "Rules of the game ... ",

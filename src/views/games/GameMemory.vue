@@ -115,7 +115,7 @@ export default class GameMemory extends Vue {}
 <template>
   <div class="memory">
     <h1>
-      <router-link class="back" to="/extra/games" title="Back to Games page"><i class="fa fa-arrow-circle-left"></i>
+      <router-link class="back" to="/extra/games" :title="$t('extra.game.back')"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('extra.game.memory.name') }}
     </h1>
