@@ -440,6 +440,11 @@
     "weather": {
       "title1": "Weather forecast",
       "title2": "Weather",
+      "cripViewStart": "Start Creeping line",
+      "cripViewClose": "Close Creeping line",
+      "cripSpeed": "Changing speed of Creeping line",
+      "cripView3dStart": "Start 3D Creeping line",
+      "cripView3dClose": "Close 3D Creeping line",
       "h1": "Weather in ",
       "h2": "City",
       "city": "City:",

@@ -121,11 +121,11 @@ export default class WeatherView extends Vue {
            @click="changeOpenWeatherView"><span :class="['fa-solid', OpenWeatherView ? 'fa-sun' : 'fa-cloud']"></span></i>
         <i :title="tableView ? $t('extra.listView') : $t('extra.tableView')"
            @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
-        <i :title="[weatherCreepView3d ? 'Close 3D Creeping line' : 'Start 3D Creeping line']"
+        <i :title="changeWeatherCrip3d ? $t('extra.weather.cripView3dClose') : $t('extra.weather.cripView3dStart')"
            @click="changeWeatherCrip3d"> <span :class="['fa','fa-solid', weatherCreepView3d ? 'fa-yin-yang' : 'fa-cubes']"></span></i>
-        <i :title="[cripView ? 'Close Creeping line' : 'Start Creeping line']"
+        <i :title="cripView ? $t('extra.weather.cripViewClose') : $t('extra.weather.cripViewStart')"
            @click="changeCrip"> <span :class="['fa-solid', cripView ? 'fa-cloud-sun-rain' : 'fa-umbrella']"></span></i>
-        <input title="Changing speed of Creeping line" v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2" />
+        <input :title="$t('extra.weather.cripSpeed')" v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2" />
       </h2>
     </div>
     <div class="creep3d">
