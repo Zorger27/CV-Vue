@@ -1376,7 +1376,7 @@ export default {
 
       const dateTime = new Date().toLocaleString();
       const footer = t('extra.graphics.couture3d.special.created');
-      const site = "https://couture-metaverse.vercel.app";
+      const site = "https://zorin.expert/extra/graphics/couture3d";
 
       return { title, dateTime, footer, site };
     };
