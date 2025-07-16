@@ -2451,23 +2451,19 @@ export default {
 .container {
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(255, 249, 229), rgb(255, 240, 244)) no-repeat center;
-  h1 {
+
+  .toggle-footer-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
     font-size: 2.5rem;
-    margin: 0.7rem auto;
-    color: black;
-    .toggle-footer-btn {
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      font-size: 2.5rem;
-      color: mediumseagreen;
-    }
-    .toggle-footer-btn:hover {color: goldenrod;}
+    color: mediumseagreen;
   }
+  .toggle-footer-btn:hover {color: goldenrod;}
 
   .scene-container {
-    max-height: 70vh;
+    max-height: 75vh;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -2477,7 +2473,7 @@ export default {
 
   .model-selection {
     position: absolute;
-    top: 170px;
+    top: 200px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -2976,12 +2972,8 @@ export default {
 
 @media(max-width: 1020px) {
   .container {
-    h1 {
-      font-size: 2.3rem;
-      margin: 0.6rem auto;
 
-      .toggle-footer-btn {font-size: 2.3rem;}
-    }
+    .toggle-footer-btn {font-size: 2.3rem;}
 
     .model-selection {
       top: 165px;
@@ -3120,12 +3112,8 @@ export default {
 
 @media (max-width: 768px) {
   .container {
-    h1 {
-      font-size: 1.9rem;
-      margin: 0.5rem auto;
 
-      .toggle-footer-btn {font-size: 1.9rem;}
-    }
+    .toggle-footer-btn {font-size: 2rem;}
 
     .model-selection {
       top: 150px;
