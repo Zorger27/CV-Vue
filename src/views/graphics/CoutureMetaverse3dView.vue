@@ -177,7 +177,7 @@ export default {
       const modelsSettings = localStorage.getItem('modelsSettings');
 
       if (modelsSettings) {
-        const confirmed = confirm(t('special.confirm'));
+        const confirmed = confirm(t('extra.graphics.couture3d.special.confirm'));
 
         if (confirmed) {
           // Удаляем данные из localStorage
@@ -227,12 +227,12 @@ export default {
             }, 100);
           }
 
-          alert(t('special.alertYes'));
+          alert(t('extra.graphics.couture3d.special.alertYes'));
         } else {
-          alert(t('special.alertNo'));
+          alert(t('extra.graphics.couture3d.special.alertNo'));
         }
       } else {
-        alert(t('special.noData'));
+        alert(t('extra.graphics.couture3d.special.noData'));
       }
     };
 
