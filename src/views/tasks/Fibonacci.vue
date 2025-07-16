@@ -55,7 +55,7 @@ export default class Fibonacci extends Vue {
 <template>
   <div class="fibonacci">
     <h1>
-      <router-link class="back" to="/extra/tasks" title="Back to Tasks page"><i class="fa fa-arrow-circle-left"></i>
+      <router-link class="back" to="/extra/tasks" :title="$t('extra.tasks.back')"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('extra.h1m.tasks.fibonacci') }}
     </h1>

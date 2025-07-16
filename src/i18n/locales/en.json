@@ -359,6 +359,7 @@
     },
     "tasks": {
       "title": "JS tasks",
+      "back": "Back to the page \"Typical JavaScript Interview Tasks\"",
       "link-js": "Task solution on JavaScript",
       "link-vue": "Task solution on Vue.JS + TypeScript",
       "fibonacci": {

@@ -359,6 +359,7 @@
     },
     "tasks": {
       "title": "JS завдання",
+      "back": "Назад до сторінки \"Типові завдання на співбесіді з JavaScript\"",
       "link-js": "Рішення задачі на JavaScript",
       "link-vue": "Рішення задачі на Vue.JS + TypeScript",
       "fibonacci": {

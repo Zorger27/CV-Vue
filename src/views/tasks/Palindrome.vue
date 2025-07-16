@@ -44,7 +44,7 @@ export default class Palindrome extends Vue {
 <template>
   <div class="palindrome">
     <h1>
-      <router-link class="back" to="/extra/tasks" title="Back to Tasks page"><i class="fa fa-arrow-circle-left"></i>
+      <router-link class="back" to="/extra/tasks" :title="$t('extra.tasks.back')"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('extra.h1m.tasks.palindrome') }}
     </h1>
