@@ -440,6 +440,8 @@
     "weather": {
       "title1": "El Tiempo",
       "title2": "Tiempo",
+      "openWeatherStart": "Iniciar el módulo OpenWeather",
+      "openWeatherClose": "Cerrar el módulo OpenWeather",
       "cripViewStart": "Comienza la línea progresiva",
       "cripViewClose": "Cerrar la línea progresiva",
       "cripSpeed": "Cambio de velocidad de la línea progresiva",

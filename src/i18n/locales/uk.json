@@ -440,6 +440,8 @@
     "weather": {
       "title1": "Прогноз погоди",
       "title2": "Погодa",
+      "openWeatherStart": "Запустити модуль OpenWeather",
+      "openWeatherClose": "Закрити модуль OpenWeather",
       "cripViewStart": "Запустити рядок, що біжить",
       "cripViewClose": "Закрити рядок, що біжить",
       "cripSpeed": "Зміна швидкості рядка, що біжить",

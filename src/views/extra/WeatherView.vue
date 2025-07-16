@@ -117,7 +117,7 @@ export default class WeatherView extends Vue {
         </select>
       </div>
       <h2 class="title">
-        <i :title="[OpenWeatherView ? 'Close OpenWeather module' : 'Start OpenWeather module']"
+        <i :title="OpenWeatherView ? $t('extra.weather.openWeatherClose') : $t('extra.weather.openWeatherStart')"
            @click="changeOpenWeatherView"><span :class="['fa-solid', OpenWeatherView ? 'fa-sun' : 'fa-cloud']"></span></i>
         <i :title="tableView ? $t('extra.listView') : $t('extra.tableView')"
            @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
