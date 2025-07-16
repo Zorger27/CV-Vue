@@ -213,6 +213,11 @@
     },
     "cryptocur": {
       "title": "Criptomonedas",
+      "cripViewStart": "Comienza la línea progresiva",
+      "cripViewClose": "Cerrar la línea progresiva",
+      "cripSpeed": "Cambio de velocidad de la línea progresiva",
+      "cripView3dStart": "Comienza la línea progresiva 3D",
+      "cripView3dClose": "Cerrar la línea progresiva 3D",
       "h1": "Impulsadas por",
       "name": "Nombre",
       "price": "Precio"
