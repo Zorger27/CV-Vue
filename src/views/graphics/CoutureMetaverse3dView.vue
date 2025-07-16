@@ -2525,7 +2525,7 @@ export default {
 
   .rotation-controls {
     position: absolute;
-    bottom: 80px; // Перемещаем вниз
+    bottom: 50px; // Перемещаем вниз
     left: 50%; // Центрируем
     transform: translateX(-50%); // Смещаем на половину ширины
     display: flex;
@@ -2976,7 +2976,7 @@ export default {
     .toggle-footer-btn {font-size: 2.3rem;}
 
     .model-selection {
-      top: 165px;
+      top: 240px;
       gap: 15px;
 
       .button {
@@ -2990,7 +2990,7 @@ export default {
     }
 
     .rotation-controls {
-      bottom: 80px;
+      bottom: 40px;
       gap: 15px;
 
       button {@include btn;}
@@ -3116,7 +3116,7 @@ export default {
     .toggle-footer-btn {font-size: 2rem;}
 
     .model-selection {
-      top: 150px;
+      top: 220px;
       gap: 10px;
 
       .button {
@@ -3130,7 +3130,7 @@ export default {
     }
 
     .rotation-controls {
-      bottom: 20px;
+      bottom: -20px;
       gap: 10px;
 
       button {@include btn;}
@@ -3138,7 +3138,7 @@ export default {
 
     .model-controls {
       left: 20px;
-      top: 59%;
+      top: 69%;
       gap: 8px;
 
       .color-container,
@@ -3176,7 +3176,7 @@ export default {
 
     .special-controls {
       right: 20px; /* Размещение кнопок справа */
-      top: 59%;
+      top: 69%;
 
       .branding-container {
 
