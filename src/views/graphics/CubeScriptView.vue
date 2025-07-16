@@ -53,7 +53,7 @@ export default class CubeScript extends Vue {
 <template>
   <div class="cube">
     <h1>
-      <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
+      <router-link class="back-to-menu" to="/extra/graphics" :title="$t('extra.graphics.back')"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('extra.graphics.cubejs') }} <ToggleFullScreen></ToggleFullScreen> <input type="range" v-model="scale" min="0.5" max="2" step="0.1" />
     </h1>

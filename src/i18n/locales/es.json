@@ -213,6 +213,7 @@
     },
     "graphics": {
       "title": "Gráficos 3D",
+      "back": "Volver a la página de Gráficos 3D",
       "cube": "Cubo (CSS)",
       "cubejs": "Cubo (JavaScript)",
       "cube3d": "CuboVerse",

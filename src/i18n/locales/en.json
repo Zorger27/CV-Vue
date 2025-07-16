@@ -213,6 +213,7 @@
     },
     "graphics": {
       "title": "3D Graphics",
+      "back": "Back to 3D Graphics page",
       "cube": "Cube (CSS)",
       "cubejs": "Cube (JavaScript)",
       "cube3d": "CuboVerse",

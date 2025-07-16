@@ -2260,7 +2260,7 @@ export default {
 
 <template>
   <div class="container">
-    <h1> <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
+    <h1> <router-link class="back-to-menu" to="/extra/graphics" :title="t ('extra.graphics.back')"><i class="fa fa-arrow-circle-left"></i>
     </router-link>
       {{ t('extra.graphics.couture3d.title') }}
       <CanvasFullScreen :canvasContainer="canvasContainer" /> <ToggleFullScreen /> <button

@@ -379,7 +379,7 @@ export default {
 <template>
   <div class="container">
     <h1>
-      <router-link class="back-to-menu" to="/extra/graphics" title="Back to 3D Graphics page"><i class="fa fa-arrow-circle-left"></i>
+      <router-link class="back-to-menu" to="/extra/graphics" :title="t ('extra.graphics.back')"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ t('extra.graphics.cube3d') }} <CanvasFullScreen :canvasContainer="canvasContainer"></CanvasFullScreen> <ToggleFullScreen></ToggleFullScreen> <button
       @click="toggleFooter" class="toggle-footer-btn" :title="isFooterHidden ? t('extra.openFooter') : t('extra.closeFooter')"><i

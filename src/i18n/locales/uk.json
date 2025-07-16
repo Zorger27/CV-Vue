@@ -213,6 +213,7 @@
     },
     "graphics": {
       "title": "3D Графіка",
+      "back": "Повернутися на сторінку 3D Графіка",
       "cube": "Куб (CSS)",
       "cubejs": "Куб (JavaScript)",
       "cube3d": "CuboVerse",
