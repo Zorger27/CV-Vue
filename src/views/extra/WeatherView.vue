@@ -121,7 +121,7 @@ export default class WeatherView extends Vue {
            @click="changeOpenWeatherView"><span :class="['fa-solid', OpenWeatherView ? 'fa-sun' : 'fa-cloud']"></span></i>
         <i :title="tableView ? $t('extra.listView') : $t('extra.tableView')"
            @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
-        <i :title="changeWeatherCrip3d ? $t('extra.weather.cripView3dClose') : $t('extra.weather.cripView3dStart')"
+        <i :title="weatherCreepView3d ? $t('extra.weather.cripView3dClose') : $t('extra.weather.cripView3dStart')"
            @click="changeWeatherCrip3d"> <span :class="['fa','fa-solid', weatherCreepView3d ? 'fa-yin-yang' : 'fa-cubes']"></span></i>
         <i :title="cripView ? $t('extra.weather.cripViewClose') : $t('extra.weather.cripViewStart')"
            @click="changeCrip"> <span :class="['fa-solid', cripView ? 'fa-cloud-sun-rain' : 'fa-umbrella']"></span></i>
