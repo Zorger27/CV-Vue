@@ -54,7 +54,7 @@ export default class English extends Vue {}
         </router-link>
         {{ $t('cert.english') }}
         <i @click="changeView" :title="tableView ? $t('extra.listView') : $t('extra.tableView')"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
-        @click="toggleOrder"><span :class="['fas', reverseOrder ? 'fa-arrow-alt-circle-up' : 'fa-arrow-alt-circle-down']"></span></i>
+        @click="toggleOrder" :title="reverseOrder ? $t('extra.ascOrder') : $t('extra.desOrder')"><span :class="['fas', reverseOrder ? 'fa-arrow-alt-circle-up' : 'fa-arrow-alt-circle-down']"></span></i>
       </h1>
       <line></line>
       <div v-if="tableView" class="table">

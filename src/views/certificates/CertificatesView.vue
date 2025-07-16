@@ -45,7 +45,7 @@ export default class Certificates extends Vue {
   <div class="certificates">
     <h1>
       {{ $t('cert.title-main') }}
-      <i @click="changeView" class="dandruff"><span :class="['fas', searchView ? 'fa-binoculars' : 'fa-search']"></span></i>
+      <i @click="changeView" class="dandruff" :title="searchView ? $t('extra.closeSearch') : $t('extra.openSearch')"><span :class="['fas', searchView ? 'fa-binoculars' : 'fa-search']"></span></i>
     </h1>
     <line></line>
     <Search v-if="searchView"></Search>
