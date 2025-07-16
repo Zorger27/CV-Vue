@@ -178,6 +178,8 @@
     "loading": "йде завантаження...",
     "closeFooter": "Сховати футер",
     "openFooter": "Показати футер",
+    "fullScreenView": "Полотно на весь екран",
+    "toggleFullScreen": "Повноекранний режим документа",
     "h1m": {
       "calculator": "Калькулятор",
       "cryptocur": "Криптовалюти",

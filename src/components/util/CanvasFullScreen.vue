@@ -45,7 +45,7 @@ export default {
 </script>
 
 <template>
-    <i @click="fullScreenView" title="Canvas Full Screen">
+    <i @click="fullScreenView" :title="$t('extra.fullScreenView')">
       <span :class="['fa', 'fa-expand']"></span>
     </i>
 </template>

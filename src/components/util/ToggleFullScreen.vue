@@ -92,7 +92,7 @@ export default {
 </script>
 
 <template>
-    <i @click="toggleFullScreen" title="Document Full Screen">
+    <i @click="toggleFullScreen" :title="$t('extra.toggleFullScreen')">
       <span :class="['fa', isFullScreen ? 'fa-compress-arrows-alt' : 'fa-expand-arrows-alt']"></span>
     </i>
 </template>

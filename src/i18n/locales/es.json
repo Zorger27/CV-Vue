@@ -178,6 +178,8 @@
     "loading": "sobreprima...",
     "closeFooter": "Ocultar pie de página",
     "openFooter": "Mostrar pie de página",
+    "fullScreenView": "Lienzo en pantalla completa",
+    "toggleFullScreen": "Documento en pantalla completa",
     "h1m": {
       "calculator": "Calculadora",
       "cryptocur": "Criptomonedas",

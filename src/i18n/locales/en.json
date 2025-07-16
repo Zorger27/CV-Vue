@@ -178,6 +178,8 @@
     "loading": "loading...",
     "closeFooter": "Hide footer",
     "openFooter": "Show footer",
+    "fullScreenView": "Canvas Full Screen",
+    "toggleFullScreen": "Document Full Screen",
     "h1m": {
       "calculator": "Calculator",
       "cryptocur": "Cryptocurrencies",
