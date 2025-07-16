@@ -240,7 +240,7 @@ export default {
     const models = loadStoredModels() || {
       menShirt1: {
         path: '/assets/models/04_men_shirt.glb',
-        name: 'models.menShirt1',
+        name: 'extra.graphics.couture3d.models.menShirt1',
         icon: '/assets/img/models/01_men_shirt.webp',
         originalSettings: {
           texture: '/assets/textures/materialTexture1.webp',
@@ -271,7 +271,7 @@ export default {
       },
       womenShirt: {
         path: '/assets/models/05_women_shirt.glb',
-        name: 'models.womenShirt',
+        name: 'extra.graphics.couture3d.models.womenShirt',
         icon: '/assets/img/models/02_women_shirt.webp',
         originalSettings: {
           texture: '/assets/textures/materialTexture2.webp',
@@ -302,7 +302,7 @@ export default {
       },
       menShirt2: {
         path: '/assets/models/06_men_shirt.glb',
-        name: 'models.menShirt2',
+        name: 'extra.graphics.couture3d.models.menShirt2',
         icon: '/assets/img/models/03_men_shirt.webp',
         originalSettings: {
           texture: '/assets/textures/materialTexture3.webp',
@@ -333,7 +333,7 @@ export default {
       },
       womenDress: {
         path: '/assets/models/07_dress.glb',
-        name: 'models.womenDress',
+        name: 'extra.graphics.couture3d.models.womenDress',
         icon: '/assets/img/models/04_dress.webp',
         originalSettings: {
           texture: '/assets/textures/materialTexture1.webp',
@@ -1369,13 +1369,13 @@ export default {
         const model = models[currentModelKey.value];
         title = model ? t(model.name) : currentModelKey.value;
       } else if (isThreeDView.value) {
-        title = t('models.composition2x2');
+        title = t('extra.graphics.couture3d.models.composition2x2');
       } else if (isMultiModelView.value) {
-        title = t('models.composition1x4');
+        title = t('extra.graphics.couture3d.models.composition1x4');
       }
 
       const dateTime = new Date().toLocaleString();
-      const footer = t('special.created');
+      const footer = t('extra.graphics.couture3d.special.created');
       const site = "https://couture-metaverse.vercel.app";
 
       return { title, dateTime, footer, site };
