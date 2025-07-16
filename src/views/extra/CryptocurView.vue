@@ -55,7 +55,7 @@ export default class Cryptocur extends Vue {
     <h1 class="bank"> {{ $t('extra.cryptocur.h1') }}
       <a href="https://www.coingecko.com" title="In more detail..." target="_blank">
         CoinGecko
-      </a> <i @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
+      </a> <i @click="changeView" :title="tableView ? $t('extra.listView') : $t('extra.tableView')"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
         @click="changeCryptosCreepView3d"><span :class="['fa-brands', cryptosCreepView3d ? 'fa-ethereum' : 'fa-bitcoin']"></span></i> <i
         @click="changeCrip"> <span :class="['fa', cripView ? 'fa-face-grin-stars' : 'fa-wallet']"></span></i> <input
         v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2"/>

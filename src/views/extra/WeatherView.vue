@@ -119,7 +119,7 @@ export default class WeatherView extends Vue {
       <h2 class="title">
         <i :title="[OpenWeatherView ? 'Close OpenWeather module' : 'Start OpenWeather module']"
            @click="changeOpenWeatherView"><span :class="['fa-solid', OpenWeatherView ? 'fa-sun' : 'fa-cloud']"></span></i>
-        <i :title="[tableView ? 'Start viewing in List view' : 'Start viewing in Table view']"
+        <i :title="tableView ? $t('extra.listView') : $t('extra.tableView')"
            @click="changeView"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i>
         <i :title="[weatherCreepView3d ? 'Close 3D Creeping line' : 'Start 3D Creeping line']"
            @click="changeWeatherCrip3d"> <span :class="['fa','fa-solid', weatherCreepView3d ? 'fa-yin-yang' : 'fa-cubes']"></span></i>
