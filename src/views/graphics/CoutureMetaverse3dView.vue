@@ -69,9 +69,9 @@ export default {
 
     // Определение текстур
     const textures = {
-      texture1: '/assets/textures/texture1.webp',
-      texture2: '/assets/textures/texture2.webp',
-      texture3: '/assets/textures/texture3.webp',
+      texture1: '/assets/textures/texture6.webp',
+      texture2: '/assets/textures/texture7.webp',
+      texture3: '/assets/textures/texture8.webp',
       texture4: '/assets/textures/texture4.webp',
       texture5: '/assets/textures/texture5.webp'
     };
@@ -239,7 +239,7 @@ export default {
     // Загружаем данные из localStorage, иначе используем стандартные настройки
     const models = loadStoredModels() || {
       menShirt1: {
-        path: '/assets/models/01_men_shirt.glb',
+        path: '/assets/models/04_men_shirt.glb',
         name: 'models.menShirt1',
         icon: '/assets/img/models/01_men_shirt.webp',
         originalSettings: {
@@ -270,7 +270,7 @@ export default {
         },
       },
       womenShirt: {
-        path: '/assets/models/02_women_shirt.glb',
+        path: '/assets/models/05_women_shirt.glb',
         name: 'models.womenShirt',
         icon: '/assets/img/models/02_women_shirt.webp',
         originalSettings: {
@@ -301,7 +301,7 @@ export default {
         },
       },
       menShirt2: {
-        path: '/assets/models/03_men_shirt.glb',
+        path: '/assets/models/06_men_shirt.glb',
         name: 'models.menShirt2',
         icon: '/assets/img/models/03_men_shirt.webp',
         originalSettings: {
@@ -332,7 +332,7 @@ export default {
         },
       },
       womenDress: {
-        path: '/assets/models/04_dress.glb',
+        path: '/assets/models/07_dress.glb',
         name: 'models.womenDress',
         icon: '/assets/img/models/04_dress.webp',
         originalSettings: {
@@ -2318,9 +2318,9 @@ export default {
 
         <transition name="slide">
           <div v-show="showTextureMenu" class="texture-controls" :class="{'show': showTextureMenu}">
-            <img src="/assets/textures/texture1.webp" alt="texture1" @click="changeTexture('texture1'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture1')">
-            <img src="/assets/textures/texture2.webp" alt="texture2" @click="changeTexture('texture2'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture2')">
-            <img src="/assets/textures/texture3.webp" alt="texture3" @click="changeTexture('texture3'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture3')">
+            <img src="/assets/textures/texture6.webp" alt="texture1" @click="changeTexture('texture1'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture1')">
+            <img src="/assets/textures/texture7.webp" alt="texture2" @click="changeTexture('texture2'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture2')">
+            <img src="/assets/textures/texture8.webp" alt="texture3" @click="changeTexture('texture3'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture3')">
             <img src="/assets/textures/texture4.webp" alt="texture4" @click="changeTexture('texture4'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture4')">
             <img src="/assets/textures/texture5.webp" alt="texture5" @click="changeTexture('texture5'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture5')">
           </div>
