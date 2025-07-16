@@ -180,6 +180,7 @@
     "openFooter": "Show footer",
     "fullScreenView": "Canvas Full Screen",
     "toggleFullScreen": "Document Full Screen",
+    "closeFullScreen": "Close full-screen document mode",
     "h1m": {
       "calculator": "Calculator",
       "cryptocur": "Cryptocurrencies",
