@@ -460,6 +460,7 @@
     },
     "ai": {
       "title": "Inteligencia artificial",
+      "back": "Regresar a la página de \"Inteligencia Artificial\"",
       "picsum": {
         "title": "Aleatorizador de imágenes",
         "size": "Tamaño: ",

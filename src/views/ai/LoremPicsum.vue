@@ -57,7 +57,7 @@ export default class LoremPicsum extends Vue {
 <template>
   <div class="picsum">
     <h1>
-      <router-link class="back" to="/extra/ai" title="Back to AI page"><i class="fa fa-arrow-circle-left"></i>
+      <router-link class="back" to="/extra/ai" :title="$t('extra.ai.back')"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('extra.ai.picsum.title') }}
     </h1>

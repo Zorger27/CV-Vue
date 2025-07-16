@@ -101,7 +101,7 @@ export default class Pixabay extends Vue {
 <template>
   <div class="pixabay">
     <h1>
-      <router-link class="back" to="/extra/ai" title="Back to AI page"><i class="fa fa-arrow-circle-left"></i>
+      <router-link class="back" to="/extra/ai" :title="$t('extra.ai.back')"><i class="fa fa-arrow-circle-left"></i>
       </router-link>
       {{ $t('extra.ai.pixabay.title') }}
     </h1>
