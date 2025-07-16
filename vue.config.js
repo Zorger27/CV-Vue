@@ -113,6 +113,7 @@ module.exports = defineConfig({
           { path: '/extra/graphics/cube3d', priority: 0.8, changefreq: 'daily' },
           { path: '/extra/graphics/creep3d', priority: 0.8, changefreq: 'daily' },
           { path: '/extra/graphics/configurator3d', priority: 0.8, changefreq: 'daily' },
+          { path: '/extra/graphics/couture3d', priority: 0.8, changefreq: 'daily' },
           { path: '/extra/rates', priority: 0.8, changefreq: 'daily' },
           { path: '/extra/games', priority: 0.8, changefreq: 'daily' },
           { path: '/extra/games/memory', priority: 0.7, changefreq: 'daily' },
