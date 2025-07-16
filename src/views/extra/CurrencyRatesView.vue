@@ -57,9 +57,9 @@ export default class CurrencyRates extends Vue {
       <a href="https://bank.gov.ua/ua/open-data/api-dev" title="In more detail..." target="_blank">
         {{ $t('extra.exchange.nbu') }}
       </a> <i @click="changeView" :title="tableView ? $t('extra.listView') : $t('extra.tableView')"><span :class="['fa', tableView ? 'fa-list' : 'fa-th']"></span></i> <i
-      @click="changeRatesCreep3d"><span :class="['fa', ratesCreepView3d ? 'fa-yin-yang' : 'fa-sack-dollar']"></span></i> <i
-      @click="changeCrip"> <span :class="['fa', cripView ? 'fa-face-grin-stars' : 'fa-wallet']"></span></i> <input
-      v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2"/>
+      @click="changeRatesCreep3d" :title="ratesCreepView3d ? $t('extra.exchange.cripView3dClose') : $t('extra.exchange.cripView3dStart')"><span :class="['fa', ratesCreepView3d ? 'fa-yin-yang' : 'fa-sack-dollar']"></span></i> <i
+      @click="changeCrip" :title="cripView ? $t('extra.exchange.cripViewClose') : $t('extra.exchange.cripViewStart')"> <span :class="['fa', cripView ? 'fa-face-grin-stars' : 'fa-wallet']"></span></i> <input
+      :title="$t('extra.exchange.cripSpeed')" v-show="cripView" type="range" v-model.number="speed" min="0" max="6" step="0.2"/>
     </h1>
     <div class="creep3d">
       <NBURatesCreep3d :rates-creep-view3d="ratesCreepView3d"></NBURatesCreep3d>
