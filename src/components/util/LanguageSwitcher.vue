@@ -1,5 +1,5 @@
 <template>
-  <select v-model="locale" @change="savelocale(locale)">
+  <select v-model="locale" @change="savelocale(locale)" :title="t('header.languageSwitcher')">
     <option
       v-for="sLocale in availableLocales"
       :key="`locale.${sLocale}`"
