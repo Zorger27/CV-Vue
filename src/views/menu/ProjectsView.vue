@@ -93,19 +93,19 @@ export default class Projects extends Vue {
             <div class="type">{{ this.$i18n.locale === "uk" ? prj.type_ua : this.$i18n.locale === "es" ? prj.type_es : prj.type_en }}</div>
             <div class="link">
               <div v-if="prj.demolink && prj.youtubelink" class="link2">
-                <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
-                <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
-                <a :href="prj.youtubelink" class="youtube" title="Project at YouTube..." target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
+                <a :href="prj.demolink" class="demolink" :title="$t('projects.titleLink')" target="_blank"><b>{{ $t('projects.link') }}</b></a>
+                <a :href="prj.sourcelink" class="github" :title="$t('projects.titleGithub')" target="_blank"><b>{{ $t('projects.github') }}</b></a>
+                <a :href="prj.youtubelink" class="youtube" :title="$t('projects.titleYoutube')" target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
               </div>
               <div v-else-if="prj.demolink && prj.sourcelink" class="link2">
-                <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
-                <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+                <a :href="prj.demolink" class="demolink" :title="$t('projects.titleLink')" target="_blank"><b>{{ $t('projects.link') }}</b></a>
+                <a :href="prj.sourcelink" class="github" :title="$t('projects.titleGithub')" target="_blank"><b>{{ $t('projects.github') }}</b></a>
               </div>
               <div v-else-if="prj.sourcelink && prj.youtubelink" class="link2">
-                <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
-                <a :href="prj.youtubelink" class="youtube" title="Project at YouTube..." target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
+                <a :href="prj.sourcelink" class="github" :title="$t('projects.titleGithub')" target="_blank"><b>{{ $t('projects.github') }}</b></a>
+                <a :href="prj.youtubelink" class="youtube" :title="$t('projects.titleYoutube')" target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
               </div>
-              <div v-else><a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{$t('projects.github') }}</b></a></div>
+              <div v-else><a :href="prj.sourcelink" class="github" :title="$t('projects.titleGithub')" target="_blank"><b>{{$t('projects.github') }}</b></a></div>
             </div>
           </td>
           <td class="description">{{ this.$i18n.locale === "uk" ? prj.description_ua : this.$i18n.locale === "es" ? prj.description_es : prj.description_en }}</td>
@@ -124,19 +124,19 @@ export default class Projects extends Vue {
           <div><strong>{{ $t('projects.technologies') }}: </strong>{{ prj.techno }}</div>
           <div class="link">
             <div v-if="prj.demolink && prj.youtubelink" class="link2">
-              <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
-              <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
-              <a :href="prj.youtubelink" class="youtube" title="Project at YouTube..." target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
+              <a :href="prj.demolink" class="demolink" :title="$t('projects.titleLink')" target="_blank"><b>{{ $t('projects.link') }}</b></a>
+              <a :href="prj.sourcelink" class="github" :title="$t('projects.titleGithub')" target="_blank"><b>{{ $t('projects.github') }}</b></a>
+              <a :href="prj.youtubelink" class="youtube" :title="$t('projects.titleYoutube')" target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
             </div>
             <div v-else-if="prj.demolink && prj.sourcelink" class="link2">
-              <a :href="prj.demolink" class="demolink" title="Link to the project" target="_blank"><b>{{ $t('projects.link') }}</b></a>
-              <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
+              <a :href="prj.demolink" class="demolink" :title="$t('projects.titleLink')" target="_blank"><b>{{ $t('projects.link') }}</b></a>
+              <a :href="prj.sourcelink" class="github" :title="$t('projects.titleGithub')" target="_blank"><b>{{ $t('projects.github') }}</b></a>
             </div>
             <div v-else-if="prj.sourcelink && prj.youtubelink" class="link2">
-              <a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{ $t('projects.github') }}</b></a>
-              <a :href="prj.youtubelink" class="youtube" title="Project at YouTube..." target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
+              <a :href="prj.sourcelink" class="github" :title="$t('projects.titleGithub')" target="_blank"><b>{{ $t('projects.github') }}</b></a>
+              <a :href="prj.youtubelink" class="youtube" :title="$t('projects.titleYoutube')" target="_blank"><b>{{ $t('projects.youtube') }}</b></a>
             </div>
-            <div v-else><a :href="prj.sourcelink" class="github" title="Project at GitHub..." target="_blank"><b>{{$t('projects.github') }}</b></a></div>
+            <div v-else><a :href="prj.sourcelink" class="github" :title="$t('projects.titleGithub')" target="_blank"><b>{{$t('projects.github') }}</b></a></div>
           </div>
         </div>
       </div>

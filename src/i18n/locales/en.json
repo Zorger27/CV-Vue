@@ -77,7 +77,10 @@
     "linkCol": "Link",
     "link": "Project...",
     "github": "GitHub...",
-    "youtube": "YouTube..."
+    "youtube": "YouTube...",
+    "titleLink": "Open the project",
+    "titleGithub": "Open the project repository on GitHub",
+    "titleYoutube": "Watch the project video presentation"
   },
   "education": {
     "title": "Education",

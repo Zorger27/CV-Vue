@@ -77,7 +77,10 @@
     "linkCol": "Посилання",
     "link": "Проект...",
     "github": "GitHub...",
-    "youtube": "YouTube..."
+    "youtube": "YouTube...",
+    "titleLink": "Відкрити проект",
+    "titleGithub": "Відкрити репозиторій проекту на GitHub",
+    "titleYoutube": "Переглянути відеопрезентацію проекту"
   },
   "education": {
     "title": "Освіта",
