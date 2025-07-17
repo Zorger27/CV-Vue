@@ -36,7 +36,7 @@ export default class Footer extends Vue {
 <template>
   <footer>
     <div class="footer-logo" @click="cubejs">
-      <img :src="getFooterLogoImage" alt="Footer Logo Image">
+      <img :src="getFooterLogoImage" alt="Footer Logo Image" :title="$t('footer.footerLogo')">
     </div>
     <div class="footer-content">
       <Author />

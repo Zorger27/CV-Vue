@@ -8,7 +8,7 @@ export default {
   <div class="author">
     {{ $t('footer.text1') }}
     <b>
-      <a href="https://zorger27.github.io" title="Curriculum VITAE" target="_blank">
+      <a href="https://zorger27.github.io" :title="$t('footer.linkCV')" target="_blank">
         {{ $t('footer.text2') }}
       </a>
     </b>{{ $t('footer.text3') }}
