@@ -27,7 +27,13 @@
     "text1": "Спроектовано ",
     "text2": "Zorger",
     "text3": "-ом.",
-    "text4": "Усі права захищені"
+    "text4": "Усі права захищені",
+    "socialSharing": {
+      "shareOnFacebook": "Поділитися у Facebook",
+      "tweetOnExTwitter": "Поділитися в X (колишній Twitter)",
+      "shareOnLinkedIn": "Поділитися в LinkedIn",
+      "shareLink": "Поділитися цією сторінкою"
+    }
   },
   "main": {
     "name": "Анатолій Зорін",

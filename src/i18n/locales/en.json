@@ -27,7 +27,13 @@
     "text1": "Designed By ",
     "text2": "Zorger",
     "text3": ".",
-    "text4": "All rights reserved"
+    "text4": "All rights reserved",
+    "socialSharing": {
+      "shareOnFacebook": "Share on Facebook",
+      "tweetOnExTwitter": "Share on X (ex-Twitter)",
+      "shareOnLinkedIn": "Share on LinkedIn",
+      "shareLink": "Share this Page"
+    }
   },
   "main": {
     "name": "Anatolii Zorin",

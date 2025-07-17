@@ -34,10 +34,10 @@ export default {
 
 <template>
   <div class="social-sharing">
-    <i class="fab fa-facebook" @click="shareOnFacebook" title="Share on Facebook"></i>
-    <i class="fab fa-x-twitter" @click="tweetOnExTwitter" title="Tweet this Page"></i>
-    <i class="fab fa-linkedin" @click="shareOnLinkedIn" title="Share on LinkedIn"></i>
-    <i class="fas fa-link" @click="shareLink" title="Share this Page"></i>
+    <i class="fab fa-facebook" @click="shareOnFacebook" :title="$t('footer.socialSharing.shareOnFacebook')"></i>
+    <i class="fab fa-x-twitter" @click="tweetOnExTwitter" :title="$t('footer.socialSharing.tweetOnExTwitter')"></i>
+    <i class="fab fa-linkedin" @click="shareOnLinkedIn" :title="$t('footer.socialSharing.shareOnLinkedIn')"></i>
+    <i class="fas fa-link" @click="shareLink" :title="$t('footer.socialSharing.shareLink')"></i>
   </div>
 </template>
 
