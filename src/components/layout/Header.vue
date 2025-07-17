@@ -61,13 +61,13 @@ export default class Header extends Vue {}
       </div>
       <div class="logo" @click="cube3d">
 <!--        <Header3DLogo2 class="img"></Header3DLogo2>-->
-          <img :src="getHeaderImage" alt="Header Image">
+          <img :src="getHeaderImage" alt="Header Image" :title="$t('header.headerImage')">
       </div>
       <div class="login" @click="extra">
-        <img :src="getExtraImage" alt="Enter to Extra Page" title="Enter to Extra Page">
+        <img :src="getExtraImage" alt="Enter to Extra Page" :title="$t('header.extraPage')">
       </div>
       <div class="search" @click="search">
-        <img :src="getCertificatesImage" alt="Search certificates..." title="Search certificates...">
+        <img :src="getCertificatesImage" alt="Search certificates..." :title="$t('header.getCertificates')">
       </div>
       <language-switcher class="language"></language-switcher>
     </div>

@@ -5,6 +5,9 @@
     "es": "Іспанська"
   },
   "header": {
+    "headerImage": "Я люблю цей проект \uD83D\uDE0D",
+    "extraPage": "Екстра Проекти",
+    "getCertificates": "Дипломи & Сертифікати",
     "main": "Головна",
     "projects": "Проекти",
     "education": "Освіта",

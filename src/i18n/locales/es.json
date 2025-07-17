@@ -5,6 +5,9 @@
     "es": "Español"
   },
   "header": {
+    "headerImage": "Me encanta este proyecto \uD83D\uDE0D",
+    "extraPage": "Proyectos adicionales",
+    "getCertificates": "Diplomas y Certificados",
     "main": "Principal",
     "projects": "Proyectos",
     "education": "Educación",
