@@ -92,8 +92,7 @@ export default class Home extends Vue {};
 <!--        <a href="mailto:zorger27@gmail.com" :title="$t('main.email')" target="_blank"><img class=logo-image-->
 <!--                                                                                                      src="@/assets/ico/mail.svg"-->
 <!--                                                                                                      alt="E-mail"></a>-->
-<!--        <a href="/assets/file/Curriculum_VITAE.pdf" :title="$t('main.pdfFormat')" target="_blank"><img-->
-<!--          class=logo-image src="@/assets/ico/download.svg" alt="Download file"></a>-->
+        <a href="/assets/file/Curriculum_VITAE.pdf" :title="$t('main.pdfFormat')" target="_blank"><img class=logo-image src="@/assets/ico/download.svg" alt="Download file"></a>
       </div>
       <div class="info">
         <p>
