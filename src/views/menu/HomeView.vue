@@ -76,13 +76,8 @@ export default class Home extends Vue {};
       <div class="photo">
         <MainPhoto></MainPhoto>
       </div>
-<!--      <div class="icons">-->
-<!--        &lt;!&ndash;        <a href="tel:+380504411801" title="Call me: +380 50 441-18-01" target="_blank"><img class=logo-image&ndash;&gt;-->
-<!--        &lt;!&ndash;                                                                                            src="@/assets/ico/phone.svg"&ndash;&gt;-->
-<!--        &lt;!&ndash;                                                                                            alt="WhatsApp"></a>&ndash;&gt;-->
-<!--        <a href="https://wa.me/380504411801" :title="$t('main.whatsApp')" target="_blank"><img class="logo-image"-->
-<!--                                                                                                src="@/assets/ico/phone.svg"-->
-<!--                                                                                                alt="WhatsApp"></a>-->
+      <div class="icons">
+        <a href="https://wa.me/380504411801" :title="$t('main.whatsApp')" target="_blank"><img class="logo-image" src="@/assets/ico/phone.svg" alt="WhatsApp"></a>
 <!--        <a href="viber://chat?number=380504411801" :title="$t('main.viber')" target="_blank"><img class="logo-image"-->
 <!--                                                                                                      src="@/assets/ico/viber.svg"-->
 <!--                                                                                                      alt="Viber"></a>-->
@@ -111,7 +106,7 @@ export default class Home extends Vue {};
 <!--                                                                                                      alt="E-mail"></a>-->
 <!--        <a href="/assets/file/Curriculum_VITAE.pdf" :title="$t('main.pdfFormat')" target="_blank"><img-->
 <!--          class=logo-image src="@/assets/ico/download.svg" alt="Download file"></a>-->
-<!--      </div>-->
+      </div>
       <div class="info">
         <p>
           {{ $t('main.info.text01') }}<br>
