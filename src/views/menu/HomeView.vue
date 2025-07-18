@@ -78,17 +78,10 @@ export default class Home extends Vue {};
       </div>
       <div class="icons">
         <a href="https://wa.me/380504411801" :title="$t('main.whatsApp')" target="_blank"><img class="logo-image" src="@/assets/ico/phone.svg" alt="WhatsApp"></a>
-<!--        <a href="viber://chat?number=380504411801" :title="$t('main.viber')" target="_blank"><img class="logo-image"-->
-<!--                                                                                                      src="@/assets/ico/viber.svg"-->
-<!--                                                                                                      alt="Viber"></a>-->
-<!--        <a href="https://t.me/Zorger27" :title="$t('main.telegram')" target="_blank"><img class="logo-image"-->
-<!--                                                                                              src="@/assets/ico/telegram.svg"-->
-<!--                                                                                              alt="Telegram"></a>-->
-<!--        <a href="https://x.com/Regroz" :title="$t('main.twitter')" target="_blank"><img-->
-<!--          class=logo-image src="@/assets/ico/twitter.svg" alt="Twitter"></a>-->
-<!--        <a href="https://github.com/Zorger27" :title="$t('main.github')" target="_blank"><img class=logo-image-->
-<!--                                                                                                src="@/assets/ico/github.svg"-->
-<!--                                                                                                alt="Github"></a>-->
+        <a href="viber://chat?number=380504411801" :title="$t('main.viber')" target="_blank"><img class="logo-image" src="@/assets/ico/viber.svg" alt="Viber"></a>
+        <a href="https://t.me/Zorger27" :title="$t('main.telegram')" target="_blank"><img class="logo-image" src="@/assets/ico/telegram.svg" alt="Telegram"></a>
+        <a href="https://x.com/Regroz" :title="$t('main.twitter')" target="_blank"><img class=logo-image src="@/assets/ico/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/Zorger27" :title="$t('main.github')" target="_blank"><img class=logo-image src="@/assets/ico/github.svg" alt="Github"></a>
 <!--&lt;!&ndash;        <a href="https://profile.codersrank.io/user/zorger27/" title="My CodersRank profile..." target="_blank"><img&ndash;&gt;-->
 <!--&lt;!&ndash;          class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>&ndash;&gt;-->
 <!--        <a href="https://www.pinterest.com/zorger27" :title="$t('main.pinterest')" target="_blank"><img class="logo-image"-->
