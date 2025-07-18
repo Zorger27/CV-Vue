@@ -126,7 +126,8 @@
       "organization": "Organization: ",
       "date": "Fecha: ",
       "report": "Informe de coeficiente intelectual ",
-      "test": "Enlace de prueba"
+      "test": "Enlace de prueba",
+      "iqReport": "Descargue el informe de su prueba de CI en formato PDF"
     },
     "special": "Certificados Especiales"
   },

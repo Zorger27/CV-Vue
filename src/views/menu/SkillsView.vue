@@ -154,7 +154,7 @@ export default class Skills extends Vue {}
               <li>{{$t('skills.iq.organization')}}<span style="font-weight: bold">IMPULSE</span></li>
               <li>{{$t('skills.iq.date')}}<span style="font-weight: bold">17.07.2023</span></li>
               <li>
-                <a style="text-decoration: none" :href="getPdfUrl" title="Download IQ report pdf file" target="_blank">
+                <a style="text-decoration: none" :href="getPdfUrl" :title="$t('skills.iq.iqReport')" target="_blank">
                   <span>{{$t('skills.iq.report')}}</span>
                   <i class="fas fa-cloud-download"></i>
                 </a>

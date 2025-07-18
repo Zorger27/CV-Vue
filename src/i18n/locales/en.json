@@ -126,7 +126,8 @@
       "organization": "Organization: ",
       "date": "Date: ",
       "report": "IQ report ",
-      "test": "Testing link"
+      "test": "Testing link",
+      "iqReport": "Download your IQ test report in PDF format"
     },
     "special": "Special Certificates"
   },
