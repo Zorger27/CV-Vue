@@ -88,7 +88,7 @@ export default class Home extends Vue {};
         <a href="https://www.linkedin.com/in/anatolii-zorin/" :title="$t('main.linkedIn')" target="_blank"><img class=logo-image src="@/assets/ico/linkedin.svg" alt="LinkedIn"></a>
         <a href="https://www.facebook.com/anatoliy.zorin" :title="$t('main.facebook')" target="_blank"><img class=logo-image src="@/assets/ico/facebook.svg" alt="Facebook"></a>
         <a href="https://www.youtube.com/c/AnatoliiZorin" :title="$t('main.youTube')" target="_blank"><img class=logo-image src="@/assets/ico/youtube.svg" alt="YouTube"></a>
-        <a href="mailto:zorger27@gmail.com" :title="$t('main.eMail')" target="_blank"><img class=logo-image src="@/assets/ico/mail.svg" alt="E-mail"></a>
+        <a href="mailto:zorger27@gmail.com" target="_blank"><img class=logo-image src="@/assets/ico/mail.svg" :title="$t('main.eMail')" alt="E-mail"></a>
 <!--        <a href="mailto:zorger27@gmail.com" title="You can write to me at Zorger27@GMail.com" target="_blank"><img class=logo-image src="@/assets/ico/mail.svg" alt="E-mail"></a>-->
         <a href="/assets/file/Curriculum_VITAE.pdf" :title="$t('main.pdfFormat')" target="_blank"><img class=logo-image src="@/assets/ico/download.svg" alt="Download file"></a>
       </div>
