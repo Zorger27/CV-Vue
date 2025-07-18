@@ -82,17 +82,12 @@ export default class Home extends Vue {};
         <a href="https://t.me/Zorger27" :title="$t('main.telegram')" target="_blank"><img class="logo-image" src="@/assets/ico/telegram.svg" alt="Telegram"></a>
         <a href="https://x.com/Regroz" :title="$t('main.twitter')" target="_blank"><img class=logo-image src="@/assets/ico/twitter.svg" alt="Twitter"></a>
         <a href="https://github.com/Zorger27" :title="$t('main.github')" target="_blank"><img class=logo-image src="@/assets/ico/github.svg" alt="Github"></a>
-<!--&lt;!&ndash;        <a href="https://profile.codersrank.io/user/zorger27/" title="My CodersRank profile..." target="_blank"><img&ndash;&gt;-->
-<!--&lt;!&ndash;          class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>&ndash;&gt;-->
-<!--        <a href="https://www.pinterest.com/zorger27" :title="$t('main.pinterest')" target="_blank"><img class="logo-image"-->
-<!--                                                                                            src="@/assets/ico/pinterest.svg"-->
-<!--                                                                                            alt="Pinterest"></a>-->
-<!--        <a href="https://www.linkedin.com/in/anatolii-zorin/" :title="$t('main.linkedIn')" target="_blank"><img-->
-<!--          class=logo-image src="@/assets/ico/linkedin.svg" alt="LinkedIn"></a>-->
-<!--        <a href="https://www.facebook.com/anatoliy.zorin" :title="$t('main.facebook')" target="_blank"><img-->
-<!--          class=logo-image src="@/assets/ico/facebook.svg" alt="Facebook"></a>-->
-<!--        <a href="https://www.youtube.com/c/AnatoliiZorin" :title="$t('main.youTube')" target="_blank"><img-->
-<!--          class=logo-image src="@/assets/ico/youtube.svg" alt="YouTube"></a>-->
+<!--        <a href="https://profile.codersrank.io/user/zorger27/" title="My CodersRank profile..." target="_blank"><img-->
+<!--          class=logo-image src="@/assets/ico/codersrank.svg" alt="CodersRank.io"></a>-->
+        <a href="https://www.pinterest.com/zorger27" :title="$t('main.pinterest')" target="_blank"><img class="logo-image" src="@/assets/ico/pinterest.svg" alt="Pinterest"></a>
+        <a href="https://www.linkedin.com/in/anatolii-zorin/" :title="$t('main.linkedIn')" target="_blank"><img class=logo-image src="@/assets/ico/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.facebook.com/anatoliy.zorin" :title="$t('main.facebook')" target="_blank"><img class=logo-image src="@/assets/ico/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.youtube.com/c/AnatoliiZorin" :title="$t('main.youTube')" target="_blank"><img class=logo-image src="@/assets/ico/youtube.svg" alt="YouTube"></a>
 
 <!--        <a href="mailto:zorger27@gmail.com" :title="$t('main.email')" target="_blank"><img class=logo-image-->
 <!--                                                                                                      src="@/assets/ico/mail.svg"-->
