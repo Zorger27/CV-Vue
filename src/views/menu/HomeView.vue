@@ -180,9 +180,7 @@ export default class Home extends Vue {};
         border-radius: 5px;
       }
 
-      .logo-image:hover {
-        border-color: #9f18bd;
-      }
+      .logo-image:hover {border-color: #9f18bd;}
     }
 
     .info {
