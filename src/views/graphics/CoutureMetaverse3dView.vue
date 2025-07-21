@@ -72,7 +72,7 @@ export default {
       texture1: '/assets/textures/texture6.webp',
       texture2: '/assets/textures/texture7.webp',
       texture3: '/assets/textures/texture8.webp',
-      texture4: '/assets/textures/texture4.webp',
+      texture4: '/assets/textures/texture1.webp',
       texture5: '/assets/textures/texture5.webp'
     };
 
@@ -2321,7 +2321,7 @@ export default {
             <img src="/assets/textures/texture6.webp" alt="texture1" @click="changeTexture('texture1'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture1')">
             <img src="/assets/textures/texture7.webp" alt="texture2" @click="changeTexture('texture2'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture2')">
             <img src="/assets/textures/texture8.webp" alt="texture3" @click="changeTexture('texture3'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture3')">
-            <img src="/assets/textures/texture4.webp" alt="texture4" @click="changeTexture('texture4'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture4')">
+            <img src="/assets/textures/texture1.webp" alt="texture4" @click="changeTexture('texture4'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture4')">
             <img src="/assets/textures/texture5.webp" alt="texture5" @click="changeTexture('texture5'); closeTextureMenu()" class="button" :title="t('extra.graphics.couture3d.texture.texture5')">
           </div>
         </transition>
