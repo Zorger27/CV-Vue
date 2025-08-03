@@ -548,7 +548,7 @@ const state = {
         type_es: "Aplicación de una sola página",
         techno: "React, React Router, Redux Toolkit, React i18next, Vite, HTML5, SCSS, FlexBox CSS, Grid CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, Favicon, Sitemap, Robots.txt",
         sourcelink: "https://github.com/Zorger27/React-JS-Template",
-        demolink: "",
+        demolink: "https://react-js-template.vercel.app",
         youtubelink: ""
       },
     ]
