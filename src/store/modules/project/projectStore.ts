@@ -551,6 +551,28 @@ const state = {
         demolink: "https://react-js-template.vercel.app",
         youtubelink: ""
       },
+      {
+        id: 26,
+        title_en: "Reactorium",
+        title_ua: "Reactorium",
+        title_es: "Reactorium",
+        start_date_en: "July 2025",
+        start_date_ua: "Липень 2025",
+        start_date_es: "Julio de 2025",
+        end_date_en: "September 2025",
+        end_date_ua: "Вересень 2025",
+        end_date_es: "Septiembre de 2025",
+        description_en: "⚛️ Reactorium is a collection from several React web applications: a calculator, a to-do list, a memory game, and a rotating cube. The project demonstrates how modern technologies can be used to build complete and diverse solutions. 🚀",
+        description_ua: "⚛️ Reactorium — це колекція із декількох веб-застосунків на React: калькулятор, список завдань, memory-гра та обертальний куб. Проект демонструє, як сучасні технології можна використовувати для створення повноцінних і різноманітних рішень. 🚀",
+        description_es: "⚛️ Reactorium es una colección de varios aplicaciones web en React: una calculadora, una lista de tareas, un memory game y un cubo giratorio. El proyecto muestra cómo las tecnologías modernas pueden utilizarse para crear soluciones completas y diversas. 🚀",
+        type_en: "Single page application",
+        type_ua: "Односторінковий додаток",
+        type_es: "Aplicación de una sola página",
+        techno: "React, React Router, Redux Toolkit, React i18next, Vite, HTML5, SCSS, FlexBox CSS, Grid CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, Favicon, Sitemap, Robots.txt",
+        sourcelink: "https://github.com/Zorger27/Reactorium",
+        demolink: "https://reactorium-zorger.vercel.app",
+        youtubelink: ""
+      },
     ]
 };
 const getters = {};
