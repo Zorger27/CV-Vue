@@ -254,7 +254,7 @@ export default class Calculator extends Vue {
       padding: 0.2rem;
       margin: 10px 4px 10px 0;
       cursor: pointer;
-      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+      transition: c
     }
 
     .btn:hover {
