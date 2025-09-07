@@ -11,7 +11,7 @@ const state = {
         company_ua: "Самозайнятий",
         company_es: "Trabajador por cuenta propia",
         job_en: "Frontend Developer (Vue.js, React, Three.js)",
-        job_ua: "Frontend-розробник (Vue.js, React, Three.js)",
+        job_ua: "Фронтенд-розробник (Vue.js, React, Three.js)",
         job_es: "Desarrollador Frontend (Vue.js, React, Three.js)",
         main_duties_en: "Creation and maintenance of sites and web applications.",
         main_duties_ua: "Створення та підтримка сайтів та веб-додатків.",
