@@ -71,7 +71,7 @@ const state = {
         id: 12,
         title: "SASS",
         version: "1.32.7",
-        url: "https://developer.mozilla.org/ru/docs/Learn/CSS/First_steps"
+        url: "https://sass-lang.com"
       },
       {
         id: 13,
