@@ -91,7 +91,7 @@ export default class About extends Vue {}
   .version {width: 150px;}
 }
 .prj {
-  padding: 0.8rem;
+  padding: 0.6rem 0.7rem;
   a {
     background: inherit;
     padding: 1.2rem;
@@ -124,7 +124,9 @@ export default class About extends Vue {}
   cursor: pointer;
   border-bottom: 1px solid transparent;
   margin: 0.5rem;
+  font-size: 2.4rem;
 }
+.div {margin-bottom: 0.7rem;}
 
 .more:hover,
 .more:focus {
@@ -134,17 +136,21 @@ export default class About extends Vue {}
 @media(max-width: 1020px) {
   .title {font-size: 2rem;margin: 0.8rem 0;}
   .prj {
-    padding: 0.6rem;
+    padding: 0.5rem 0.6rem;
     a {padding: 1rem;}
   }
+  .more {margin: 0.5rem; font-size: 2rem;}
+  .div {margin-bottom: 0.6rem;}
 }
+
 @media (max-width: 768px) {
   .title {font-size: 1.6rem;margin: 0.8rem 0;}
   .table {margin-bottom: 0.5rem;}
   .prj {
-    padding: 0.3rem;
+    padding: 0.4rem 0.5rem;
     a {padding: 0.8rem;}
   }
+  .more {margin: 0.3rem 0 0.5rem; font-size: 1.7rem;}
   .div {margin-bottom: 0.5rem;}
 }
 </style>
