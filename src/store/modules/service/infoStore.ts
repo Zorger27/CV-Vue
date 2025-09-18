@@ -46,7 +46,7 @@ const state = {
       {
         id: 8,
         title: "Axios",
-        version: "1.7.9",
+        version: "1.12.2",
         url: "https://github.com/axios/axios"
       },
       {
@@ -70,7 +70,7 @@ const state = {
       {
         id: 12,
         title: "SASS",
-        version: "1.32.7",
+        version: "1.92.1",
         url: "https://sass-lang.com"
       },
       {
