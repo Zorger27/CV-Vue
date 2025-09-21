@@ -573,6 +573,28 @@ const state = {
         demolink: "https://reactorium-zorger.vercel.app",
         youtubelink: ""
       },
+      {
+        id: 27,
+        title_en: "Reactorium 3D",
+        title_ua: "Reactorium 3D",
+        title_es: "Reactorium 3D",
+        start_date_en: "September 2025",
+        start_date_ua: "Вересень 2025",
+        start_date_es: "Septiembre de 2025",
+        end_date_en: "November 2025",
+        end_date_ua: "Листопад 2025",
+        end_date_es: "Noviembre de 2025",
+        description_en: "🔮 Reactorium 3D is a “React laboratory in the space of three dimensions,” where React, Three.js, and React Three Fiber merge to create interactive worlds filled with shapes, motion, and light. 🧪 Each application here is a small experiment in a three-dimensional environment, ranging from abstract scenes and dynamic objects to interactive tools and games. ✨",
+        description_ua: "🔮 Reactorium 3D — це «лабораторія React у просторі трьох вимірів», де React, Three.js і React Three Fiber поєднуються, щоб створювати інтерактивні світи, наповнені формами, рухом і світлом. 🧪 Кожен застосунок тут — маленький експеримент у тривимірному середовищі: від абстрактних сцен і динамічних об’єктів до інтерактивних інструментів та ігор. ✨",
+        description_es: "🔮 Reactorium 3D es un «laboratorio de React en el espacio de tres dimensiones», donde React, Three.js y React Three Fiber se unen para crear mundos interactivos llenos de formas, movimiento y luz. 🧪 Cada aplicación aquí es un pequeño experimento en un entorno tridimensional: desde escenas abstractas y objetos dinámicos hasta herramientas e incluso juegos interactivos. ✨",
+        type_en: "Single page application",
+        type_ua: "Односторінковий додаток",
+        type_es: "Aplicación de una sola página",
+        techno: "React, Three.js, Orbit controls, React Three Fiber, React Router, Redux Toolkit, React i18next, Vite, HTML5, SCSS, FlexBox CSS, Grid CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, SEO toolkit (full)",
+        sourcelink: "https://github.com/Zorger27/Reactorium-3D",
+        demolink: "https://reactorium-3d.vercel.app",
+        youtubelink: ""
+      },
     ]
 };
 const getters = {};
