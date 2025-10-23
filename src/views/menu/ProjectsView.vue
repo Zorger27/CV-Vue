@@ -37,6 +37,7 @@ import ProjectsSearch from "@/components/util/ProjectsSearch.vue";
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
+    this.setCanonical(url);
 
     // Получаем значение 'projectSearch' из localStorage
     const searchValue = localStorage.getItem('projectSearch');

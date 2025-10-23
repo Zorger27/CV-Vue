@@ -16,6 +16,7 @@ import CubeCSS from "@/components/other/CubeCSS.vue";
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
+    this.setCanonical(url);
   },
   components: {CubeCSS, ToggleFullScreen},
 })

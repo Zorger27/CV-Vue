@@ -43,6 +43,7 @@ interface Card {
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
+    this.setCanonical(url);
 
     this.shuffledCards = this.shuffleCards();
   },

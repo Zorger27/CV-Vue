@@ -42,6 +42,7 @@ import MainPhoto from "@/components/util/MainPhoto.vue";
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
+    this.setCanonical(url);
 
     this.startTextRotation();
   },

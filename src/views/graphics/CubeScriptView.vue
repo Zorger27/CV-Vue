@@ -16,6 +16,7 @@ import CubeJS from "@/components/other/CubeJS.vue";
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
+    this.setCanonical(url);
 
     window.addEventListener('wheel', this.handleMouseWheel);
   },

@@ -22,6 +22,7 @@ interface MediaData {
 
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
+    this.setCanonical(url);
   },
   data() {
     return {

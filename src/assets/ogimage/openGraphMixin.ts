@@ -6,6 +6,8 @@ interface MetaTag {
 
 export const openGraphMixin = {
   methods: {
+
+    // Устанавливает заголовок страницы
     setPageTitle(mainTitle: string): void {
       let pageTitle = document.querySelector('title');
 
@@ -21,6 +23,23 @@ export const openGraphMixin = {
       }
     },
 
+    // Устанавливает или обновляет canonical URL
+    setCanonical(url?: string): void {
+      const canonicalUrl = url || window.location.href;
+
+      // Удаляем старый canonical, если есть
+      const existingCanonical = document.querySelector('link[rel="canonical"]');
+      if (existingCanonical) existingCanonical.remove();
+
+      // Создаём новый тег
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      link.setAttribute('href', canonicalUrl);
+      document.head.appendChild(link);
+    },
+
+
+    // Устанавливает Open Graph и Twitter мета-теги
     setOpenGraphTags(metaDescription: string, title: string, description: string, imageUrl: string, url: string): void {
       const metaTags: MetaTag[] = [
         { name: 'description', content: metaDescription },
