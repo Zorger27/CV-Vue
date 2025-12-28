@@ -590,7 +590,7 @@ const state = {
         type_en: "Single page application",
         type_ua: "Односторінковий додаток",
         type_es: "Aplicación de una sola página",
-        techno: "React, Three.js, Orbit controls, React Three Fiber, React Router, Redux Toolkit, React i18next, Vite, HTML5, SCSS, FlexBox CSS, Grid CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, SEO toolkit (full)",
+        techno: "React, Three.js, React Three Fiber, React Router, Redux Toolkit, React i18next, Vite, HTML5, SCSS, FlexBox CSS, Grid CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, SEO toolkit (full)",
         sourcelink: "https://github.com/Zorger27/Reactorium-3D",
         demolink: "https://reactorium-3d.vercel.app",
         youtubelink: ""
