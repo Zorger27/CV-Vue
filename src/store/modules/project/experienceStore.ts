@@ -10,9 +10,9 @@ const state = {
         company_en: "Self Employed",
         company_ua: "Самозайнятий",
         company_es: "Trabajador por cuenta propia",
-        job_en: "Frontend Developer (Vue.js, React, Three.js)",
-        job_ua: "Фронтенд-розробник (Vue.js, React, Three.js)",
-        job_es: "Desarrollador Frontend (Vue.js, React, Three.js)",
+        job_en: "3D Frontend Developer (React, Three.js, R3F, WebGL)",
+        job_ua: "3D Frontend-розробник (React, Three.js, R3F, WebGL)",
+        job_es: "Desarrollador frontend 3D (React, Three.js, R3F, WebGL)",
         main_duties_en: "Creation and maintenance of sites and web applications.",
         main_duties_ua: "Створення та підтримка сайтів та веб-додатків.",
         main_duties_es: "Creación y mantenimiento de sitios y aplicaciones web.",
@@ -22,7 +22,7 @@ const state = {
         tasks_en: "Creation of a site prototype. Website design development. Building a website (SPA) on Vue.js with using TypeScript. Domain name registration. Connecting a domain name to a site. Connecting Google Analytics 4.0. Registration of the site in Google Search Console and its subsequent indexing. Creation of Sitemap.xml and Robots.txt files. Animation of text, blocks. Creating 3D models and 3D configurators using Three.js.",
         tasks_ua: "Створення прототипу сайту. Розробка дизайну веб-сайту. Створення веб-сайту на Vue.js з використанням TypeScript. Реєстрація доменного імені. Підключення доменного імені до сайту. Підключення Google Analytics 4.0. Реєстрація сайту в Google Search Console та подальше проведення його індексації. Створення файлів Sitemap.xml та Robots.txt. Анімація тексту, блоків. Створення 3D моделей і 3D конфігураторів за допомогою Three.js.",
         tasks_es: "Creación de un prototipo de sitio. Desarrollo de diseño de sitios web. Creación de un sitio web (SPA) en Vue.js con el uso de TypeScript. Registro del nombre de dominio. Conexión de un nombre de dominio a un sitio. Conectando Google Analytics 4.0. Registro del sitio en Google Search Console y su posterior indexación. Creación de archivos Sitemap.xml y Robots.txt. Creación de modelos 3D y configuradores 3D utilizando Three.js.",
-        skills: "Vue.js, React, Front-end Development, JavaScript, TypeScript, Cybersecurity, CSS3, HTML, Git, Adobe Audition, Contract Negotiation, Angular, Agile, Object-oriented programming, Business Strategy, Adobe Premiere, Marketing, Strategic Planning, Node.js, Negotiation, Business Planning, Search Engine Marketing (SEM), Strategic Thinking, Digital marketing, Adobe Acrobat, IT operations, Microsoft Office, Business Analysis, Business Development, Adobe Photoshop, Marketing Strategy, XML, Windows Server, Google Analytics, Web Designer, Critical Thinking, Personal Development, Adobe Illustrator, Adobe Lightroom, Sales Management, Small Business, Search Engine Optimization, PostgreSQL, UI/UX Designer, Entrepreneurship, Management, Social Media Marketing."
+        skills: "Three.js, Vue.js, React, Front-end Development, JavaScript, TypeScript, Cybersecurity, CSS3, HTML, Git, Adobe Audition, Contract Negotiation, Angular, Agile, Object-oriented programming, Business Strategy, Adobe Premiere, Marketing, Strategic Planning, Node.js, Negotiation, Business Planning, Search Engine Marketing (SEM), Strategic Thinking, Digital marketing, Adobe Acrobat, IT operations, Microsoft Office, Business Analysis, Business Development, Adobe Photoshop, Marketing Strategy, XML, Windows Server, Google Analytics, Web Designer, Critical Thinking, Personal Development, Adobe Illustrator, Adobe Lightroom, Sales Management, Small Business, Search Engine Optimization, PostgreSQL, UI/UX Designer, Entrepreneurship, Management, Social Media Marketing."
       },
       {
         id: 2,
