@@ -121,7 +121,7 @@ export default class Home extends Vue {};
     display: grid;
     grid-template-columns: 2fr 1fr 3fr;
     grid-template-rows: auto;
-    grid-column-gap: 1rem;
+    grid-column-gap: 0.1rem;
     grid-row-gap: 0;
     grid-auto-flow: column;
     grid-template-areas:
@@ -152,7 +152,7 @@ export default class Home extends Vue {};
     .info {
       grid-area: info;
       text-align: left;
-      font-size: 1.3rem;
+      font-size: 1.22rem;
       padding: 0 1rem 0 0;
 
       p {
@@ -275,7 +275,7 @@ export default class Home extends Vue {};
       .info {
         grid-area: info;
         padding: 0 0.6rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
 
         p {
           margin: 0.5rem auto;
