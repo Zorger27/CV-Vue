@@ -59,19 +59,12 @@
     "job3": "Immersive Web Engineer",
     "job4": "Product-Minded Developer",
     "info": {
-      "text01": "My acquaintance with the world of IT began in 1992 with the languages Basic, Pascal and Fortran.",
-      "text02": "At university and after, I studied and worked with FoxPro and 1C languages.",
-      "text02add": "Thanks to working with vending machines, I had to learn the Assembly language.",
-      "text03": "Since",
-      "text04": ", I have combined the administrative work as CEO with the work of Digital Marketer (Google Ads, Analytics, SEM), Web Designer (Photoshop, Illustrator, Figma) and Frontend Developer (Javascript / HTML / CSS).",
-      "text05": "In",
-      "text06": ", I took up intensive study of Backend (Java, Scala, Kotlin).",
-      "text07": ", I restored and updated my knowledge of Frontend (Vue, Angular, React).",
-      "text08": ", I continued my IT education (PHP, Python, Ruby).",
-      "text09": ", I studied special IT technologies (Three.js, Gatsby, GraphQL).",
-      "text-end-1": "I'm easy learning.",
-      "text-end-2": "I have good analytical skills.",
-      "text-end-3": "I'm comfortable working in a team or solo."
+      "text01": "I have been developing digital products throughout my professional career — from low-level systems and assembler to modern 3D-oriented web applications built with WebGL and Three.js. My journey in IT started with applied development and automation and gradually evolved into building complex visual and interactive systems for real-world products.",
+      "text02": "For a significant part of my career, I combined leadership roles with hands-on engineering work: designing web systems, developing digital products, frontend development, and creating technical solutions at the intersection of business and technology. This experience shaped my product-driven and architectural mindset, result-oriented thinking, and responsibility for the full solution lifecycle.",
+      "text03": "Today, my primary focus is frontend development and interactive 3D graphics for the web.",
+      "text04": "I design and build complex scenes, configurators, and visual interfaces using Three.js, React, and WebGL, with strong attention to architecture, performance, and production quality. I am comfortable working with mathematics, graphics, state management, animations, and user interaction scenarios.",
+      "text05": "I learn new technologies quickly, analyze problems deeply, and work effectively both independently and within teams — from concept and R&D prototyping to final delivery.",
+      "text06": "Commercial frontend development experience since 2016, with a strong focus on 3D web and interactive visual products."
     }
   },
   "projects": {

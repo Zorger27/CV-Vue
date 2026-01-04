@@ -90,23 +90,12 @@ export default class Home extends Vue {};
         <a href="/assets/file/Curriculum_VITAE.pdf" :title="$t('main.pdfFormat')" target="_blank"><img class=logo-image src="@/assets/ico/download.svg" alt="Download file"></a>
       </div>
       <div class="info">
-        <p>
-          {{ $t('main.info.text01') }}<br>
-          {{ $t('main.info.text02') }}<br>
-          {{ $t('main.info.text02add') }}<br>
-        </p>
-        <p>
-          {{ $t('main.info.text03') }} <b>2016</b>{{ $t('main.info.text04') }}<br>
-          {{ $t('main.info.text05') }} <b>2020</b>{{ $t('main.info.text06') }}<br>
-          {{ $t('main.info.text05') }} <b>2021</b>{{ $t('main.info.text07') }}<br>
-          {{ $t('main.info.text05') }} <b>2022</b>{{ $t('main.info.text08') }}<br>
-          {{ $t('main.info.text05') }} <b>2023</b>{{ $t('main.info.text09') }}<br>
-        </p>
-        <p>
-          {{ $t('main.info.text-end-1') }}<br>
-          {{ $t('main.info.text-end-2') }}<br>
-          {{ $t('main.info.text-end-3') }}
-        </p>
+        <p>{{ $t('main.info.text01') }}</p>
+        <p>{{ $t('main.info.text02') }}</p>
+        <p style="font-weight: bold; font-style: italic">{{ $t('main.info.text03') }}</p>
+        <p>{{ $t('main.info.text04') }}</p>
+        <p>{{ $t('main.info.text05') }}</p>
+        <p style="font-weight: bold; font-style: italic">{{ $t('main.info.text06') }}</p>
       </div>
     </div>
     <div class="slider">
@@ -163,7 +152,8 @@ export default class Home extends Vue {};
     .info {
       grid-area: info;
       text-align: left;
-      font-size: 1.37rem;
+      font-size: 1.3rem;
+      padding: 0 1rem 0 0;
 
       p {
         margin: 1rem auto;
@@ -234,8 +224,8 @@ export default class Home extends Vue {};
 
       .info {
         grid-area: info;
-        font-size: 1.27rem;
-        padding: 0 0.5rem;
+        font-size: 1.2rem;
+        padding: 0 0.9rem;
       }
     }
   }
@@ -284,8 +274,8 @@ export default class Home extends Vue {};
 
       .info {
         grid-area: info;
-        padding: 0 0.3rem;
-        font-size: 1.17rem;
+        padding: 0 0.6rem;
+        font-size: 1.1rem;
 
         p {
           margin: 0.5rem auto;

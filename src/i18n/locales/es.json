@@ -59,19 +59,12 @@
     "job3": "Ingeniero Web Inmersivo",
     "job4": "Desarrollador de Producto",
     "info": {
-      "text01": "Mi conocimiento del mundo de la informática comenzó en 1992 con los lenguajes Basic, Pascal y Fortran.",
-      "text02": "En la universidad y después, estudié y trabajé con los lenguajes FoxPro y 1C.",
-      "text02add": "Gracias a trabajar con máquinas expendedoras, tuve que aprender el lenguaje Ensamblador.",
-      "text03": "Desde",
-      "text04": ", He combinado el trabajo administrativo como CEO con el trabajo de Marketer Digital (Google Ads, Analytics, SEM), Diseñador Web (Photoshop, Illustrator, Figma) y Desarrollador Frontend (Javascript/HTML/CSS).",
-      "text05": "En",
-      "text06": ", Empecé un estudio intensivo de Backend (Java, Scala, Kotlin).",
-      "text07": ", Restauré y actualicé mis conocimientos de Frontend (Vue, Angular, React).",
-      "text08": ", Continué mi educación en TI (PHP, Python, Ruby).",
-      "text09": ", Estudié tecnologías informáticas especiales (Three.js, Gatsby, GraphQL).",
-      "text-end-1": "Soy fácil de aprender.",
-      "text-end-2": "Tengo buenas habilidades analíticas.",
-      "text-end-3": "Me siento cómodo trabajando en equipo o solo."
+      "text01": "Me dedico al desarrollo de productos digitales a lo largo de toda mi carrera profesional — desde sistemas de bajo nivel y ensamblador hasta aplicaciones web modernas orientadas a 3D basadas en WebGL y Three.js. Mi trayectoria en IT comenzó con desarrollo aplicado y automatización, y con el tiempo evolucionó hacia la creación de sistemas visuales e interactivos complejos para productos reales.",
+      "text02": "Durante una parte significativa de mi carrera, combiné roles de liderazgo con trabajo técnico práctico: diseño de sistemas web, desarrollo de productos digitales, frontend y soluciones técnicas en la intersección entre negocio y tecnología. Esta experiencia formó en mí un enfoque orientado al producto y a la arquitectura, con responsabilidad por todo el ciclo de vida de las soluciones.",
+      "text03": "Actualmente, mi principal enfoque es el desarrollo frontend y la gráfica 3D interactiva para la web.",
+      "text04": "Diseño y construyo escenas complejas, configuradores e interfaces visuales utilizando Three.js, React y WebGL, prestando especial atención a la arquitectura, el rendimiento y la calidad de producción. Me siento cómodo trabajando con matemáticas, gráficos, gestión de estados, animaciones y escenarios de interacción del usuario.",
+      "text05": "Aprendo nuevas tecnologías con rapidez, analizo los problemas en profundidad y trabajo de forma eficaz tanto de manera independiente como en equipo — desde la idea y el prototipo R&D hasta la implementación final.",
+      "text06": "Experiencia comercial en desarrollo frontend desde 2016, con un enfoque sólido en web 3D y productos visuales interactivos."
     }
   },
   "projects": {
