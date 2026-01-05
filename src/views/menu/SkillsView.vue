@@ -346,7 +346,17 @@ export default class Skills extends Vue {}
       .type-skills {
         display: inline-flex;
         justify-content: space-around;
-        font-size: 1.7rem;
+
+        h3 {font-size: 1.5rem;}
+
+        .hard-skills {
+          font-size: 1.1rem;
+          ul {padding: 0 0.2rem 0.1rem 0.5rem;}
+        }
+        .soft-skills {
+          font-size: 1.1rem;
+          ul {padding: 0 0.2rem 0.1rem 0.5rem;}
+        }
       }
       .iq-test {
         .iq {
@@ -383,7 +393,18 @@ export default class Skills extends Vue {}
       .type-skills {
         display: grid;
         justify-content: left;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+
+        h3 {font-size: 1.3rem;}
+
+        .hard-skills {
+          font-size: 1.1rem;
+          ul {padding: 0 0.2rem 0.1rem 0.5rem;}
+        }
+        .soft-skills {
+          font-size: 1.1rem;
+          ul {padding: 0 0.2rem 0.1rem 0.5rem;}
+        }
       }
       .iq-test {
         .iq {
