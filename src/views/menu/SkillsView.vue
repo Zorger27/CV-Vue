@@ -18,34 +18,11 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
         require('@/assets/certificates/other/02_TP18727720.webp')
       ],
       tableView: false,
-      isCodersrankSkillsChartVisible: false,
-      windowWidth: window.innerWidth,
     }
   },
   computed: {
     otherStore() {return otherStore},
     pmStore() {return pmStore},
-    isSmallScreen() {return this.windowWidth <= 768;},
-    isMediumScreen() {return this.windowWidth > 768 && this.windowWidth <= 1020;},
-    gridColumns() {
-      if (!this.isCodersrankSkillsChartVisible) {
-        return '1fr';
-      } else if (this.isSmallScreen || this.isMediumScreen) {
-        return '1fr';
-      } else {
-        return '2fr 1fr';
-      }
-    },
-    gridAreas() {
-      if (!this.isCodersrankSkillsChartVisible) {
-        return '"type-skills" "iq-test" "special-certificates"';
-      } else if (this.isSmallScreen || this.isMediumScreen) {
-        return '"codersrank-skills-chart" "type-skills" "iq-test" "special-certificates"';
-      } else {
-        return '"codersrank-skills-chart type-skills" "iq-test iq-test" "special-certificates special-certificates"';
-      }
-    },
-    shouldApplyAdditionalStyles() {return !this.isCodersrankSkillsChartVisible && (!this.isSmallScreen || !this.isMediumScreen);},
     selectedOther() {
       return [
         otherStore.state.otherStore[8],
@@ -86,20 +63,9 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
     this.setCanonical(url);
-
-    window.addEventListener('resize', this.handleResize);
     },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-    },
-  watch: {
-    isSmallScreen() { this.updateLayout(); },
-    isMediumScreen() { this.updateLayout(); },
-  },
   methods: {
     changeView() {this.tableView = !this.tableView;},
-    handleResize() {this.windowWidth = window.innerWidth;},
-    updateLayout() {this.$forceUpdate();},
   },
   components: {Slider},
 })
@@ -112,8 +78,8 @@ export default class Skills extends Vue {}
       {{$t('skills.title')}}
     </h1>
     <line></line>
-    <div class="container" :style="{gridTemplateColumns: gridColumns, gridTemplateAreas: gridAreas}">
-      <div :class="{'type-skills': true, 'additional-styles': shouldApplyAdditionalStyles}">
+    <div class="container">
+      <div class="type-skills">
         <div class="hard-skills">
           <h3>{{$t('skills.hard.title')}}</h3>
           <ul>
@@ -216,6 +182,7 @@ export default class Skills extends Vue {}
   text-align: left;
 
   .table {background: white;}
+
   .certificate {
     .block {
       background: white;
@@ -226,10 +193,9 @@ export default class Skills extends Vue {}
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      //border-color: rebeccapurple;
-      //box-shadow: 3px 3px 4px mediumpurple;
     }
   }
+
   h2 {
     text-align: center;
     padding: 0;
@@ -239,28 +205,20 @@ export default class Skills extends Vue {}
   }
   .container {
     display: grid;
-    //grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-gap: 0.5rem;
+    grid-gap: 0.3rem;
     grid-auto-flow: column;
-    //grid-template-areas:
-    //  "codersrank-skills-chart type-skills"
-    //  "iq-test iq-test"
-    //  "special-certificates special-certificates";
-
-    codersrank-skills-chart {
-      grid-area: codersrank-skills-chart;
-      padding: 0.3rem;
-      //margin-top: 0.5rem;
-      //margin-bottom: 0.5rem;
-      width: 100%;
-    }
+    grid-template-areas:
+      "type-skills"
+      "iq-test"
+      "special-certificates";
 
     .type-skills {
       grid-area: type-skills;
-      //display: inline-flex;
-      //flex-wrap: wrap;
-      //justify-content: space-around;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
       margin: 0 0.5rem 0 0;
       font-size: 1.8rem;
 
@@ -271,31 +229,27 @@ export default class Skills extends Vue {}
         margin-bottom: -1.7rem;
         padding: 0 0 0.3rem 1.5rem;
       }
-      span {
-        margin-right: 0.5rem;
-      }
+      span {margin-right: 0.5rem;}
 
       .hard-skills {
         font-size: 1.6rem;
+        width: 47rem;
         ul {
           list-style: none;
           padding: 0 0 0.3rem 1.5rem;
           margin: 1.4rem 0 0;
         }
       }
+
       .soft-skills {
         font-size: 1.6rem;
+        width: 47rem;
         ul {
           list-style: none;
           padding: 0 0 0.3rem 1.5rem;
           margin: 1.4rem 0 0;
         }
       }
-    }
-    .additional-styles {
-      display: inline-flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
     }
 
     .iq-test {
@@ -311,6 +265,7 @@ export default class Skills extends Vue {}
         }
       }
     }
+
     .special-certificates {
       grid-area: special-certificates;
       text-align: center;
@@ -322,10 +277,7 @@ export default class Skills extends Vue {}
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        //margin-bottom: 0.5rem;
-        .certificate {
-          max-width: 27rem;
-        }
+        .certificate {max-width: 27rem;}
       }
     }
   }
@@ -333,31 +285,35 @@ export default class Skills extends Vue {}
 
 @media(max-width:1020px) {
   .skills {
-    //h1 {font-size: 1.9rem;}
     .container {
-      grid-gap: 0.4rem;
-      //grid-template-columns: 1fr;
-      //grid-template-areas:
-      //  "codersrank-skills-chart"
-      //  "type-skills"
-      //  "iq-test"
-      //  "special-certificates";
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "type-skills"
+        "iq-test"
+        "special-certificates";
 
       .type-skills {
+        grid-area: type-skills;
         display: inline-flex;
+        flex-wrap: wrap;
         justify-content: space-around;
-
-        h3 {font-size: 1.5rem;}
+        h3 {
+          font-size: 1.5rem;
+          padding: 0 0 0.3rem 1.8rem;
+        }
 
         .hard-skills {
           font-size: 1.1rem;
-          ul {padding: 0 0.2rem 0.1rem 0.5rem;}
+          width: 31.5rem;
+          ul {padding: 0 0 0 0.3rem;}
         }
         .soft-skills {
           font-size: 1.1rem;
-          ul {padding: 0 0.2rem 0.1rem 0.5rem;}
+          width: 31.5rem;
+          ul {padding: 0 0 0 0.3rem;}
         }
       }
+
       .iq-test {
         .iq {
           margin-left: 0.7rem;
@@ -365,6 +321,7 @@ export default class Skills extends Vue {}
           .iq-desc {font-size: 1.6rem;}
         }
       }
+
       .special-certificates {
         .table {
           font-size: 1.60rem;
@@ -382,20 +339,16 @@ export default class Skills extends Vue {}
   .skills {
     h1 {font-size: 1.8rem;}
     .container {
-      grid-gap: 0.3rem;
-
-      codersrank-skills-chart {
-        padding: 0.2rem;
-        --label-font-size: 9px;
-        --label-font-weight: 300;
-      }
 
       .type-skills {
         display: grid;
         justify-content: left;
         font-size: 1.3rem;
 
-        h3 {font-size: 1.3rem;}
+        h3 {
+          font-size: 1.3rem;
+          padding: 0 0 0.3rem 1.9rem;
+        }
 
         .hard-skills {
           font-size: 1.1rem;
@@ -406,6 +359,7 @@ export default class Skills extends Vue {}
           ul {padding: 0 0.2rem 0.1rem 0.5rem;}
         }
       }
+
       .iq-test {
         .iq {
           display: block;
@@ -423,6 +377,7 @@ export default class Skills extends Vue {}
           }
         }
       }
+
       .special-certificates {
         h2 {
           font-size: 1.6rem;
