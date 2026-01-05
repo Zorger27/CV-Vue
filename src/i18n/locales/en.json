@@ -96,10 +96,10 @@
   "experience": {
     "title": "Experience",
     "company": "Company",
-    "job": "Job title",
-    "main-duties": "Main responsibilities",
-    "related-duties": "Related Responsibilities",
-    "tasks": "Tasks",
+    "job": "Position",
+    "main-duties": "Primary Responsibilities",
+    "related-duties": "Additional Responsibilities",
+    "tasks": "Key Tasks",
     "skills": "Skills"
   },
   "skills": {

@@ -18,16 +18,8 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     this.setOpenGraphTags(metaDescription, title, description, imageUrl, url);
     this.setPageTitle(mainTitle);
     this.setCanonical(url);
-
-    const savedValue = localStorage.getItem('isCodersrankSummaryVisible');
-    if (savedValue) {this.isCodersrankSummaryVisible = savedValue === 'true';}
   },
-  methods: {
-    // changeSummary() {
-    //   this.isCodersrankSummaryVisible = !this.isCodersrankSummaryVisible;
-    //   localStorage.setItem('isCodersrankSummaryVisible', this.isCodersrankSummaryVisible.toString());
-    //   },
-  },
+  methods: {},
   components: {},
 })
 export default class Experience extends Vue {
@@ -38,13 +30,9 @@ export default class Experience extends Vue {
   <div class="experience">
     <h1>
       {{ $t('experience.title') }}
-<!--      <i @click="changeSummary" class="dandruff"><span :class="['fa', isCodersrankSummaryVisible ? 'fa-check-circle' : 'fa-hat-wizard']"></span></i>-->
     </h1>
     <line></line>
     <div class="container">
-<!--      <div v-if="isCodersrankSummaryVisible">-->
-<!--        <codersrank-summary username="zorger27" branding="false" layout="horizontal"></codersrank-summary>-->
-<!--      </div>-->
       <div class="work">
         <div v-for="exp in experienceStore.state.experienceStore" :key="exp.id">
           <h3>{{ exp.data_start }} -
@@ -116,24 +104,11 @@ export default class Experience extends Vue {
         font-style: italic;
       }
     }
-
-    codersrank-summary {
-      margin: 0.5rem auto;
-      max-width: 50%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-      border-radius: 5px;
-      --border-radius: 5px;
-      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-    }
-    codersrank-summary:hover {
-      box-shadow: 3px 3px 4px 0 lightgrey;
-    }
   }
 }
 
 @media(max-width: 1200px) {
   .experience {
-    //h1 {font-size: 1.9rem;}
     .container {
       .work {
         margin: 0.5rem 1rem;
@@ -145,19 +120,12 @@ export default class Experience extends Vue {
           font-size: 1.1rem;
         }
       }
-
-      codersrank-summary {
-        margin: 0.4rem auto;
-        max-width: 80%;
-        --border-radius: 5px;
-      }
     }
   }
 }
 
 @media(max-width: 768px) {
   .experience {
-    //h1 {font-size: 1.8rem;}
     .container {
       .work {
         margin: 0 0.3rem;
@@ -172,12 +140,6 @@ export default class Experience extends Vue {
         .skills {
           font-size: 0.7rem;
         }
-      }
-
-      codersrank-summary {
-        margin: 0.5rem auto;
-        max-width: 100%;
-        --border-radius: 5px;
       }
     }
   }

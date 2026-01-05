@@ -95,11 +95,11 @@
   },
   "experience": {
     "title": "Experiencia",
-    "company": "Compañía",
-    "job": "Título profesional",
-    "main-duties": "Principales Responsabilidades",
-    "related-duties": "Responsabilidades relacionadas",
-    "tasks": "Tareas",
+    "company": "Empresa",
+    "job": "Puesto",
+    "main-duties": "Responsabilidades principales",
+    "related-duties": "Responsabilidades adicionales",
+    "tasks": "Tareas clave",
     "skills": "Habilidades"
   },
   "skills": {
