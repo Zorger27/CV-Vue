@@ -13,7 +13,7 @@
     "projects": "Proyectos",
     "education": "Educación",
     "experience": "Experiencia",
-    "skills": "Habilidades",
+    "skills": "Competencias",
     "certificates": {
       "cert": "Certificados",
       "backend": "Backend",
@@ -103,24 +103,32 @@
     "skills": "Habilidades"
   },
   "skills": {
-    "title": "Habilidades duras y blandas",
-    "hard": "Habilidades duras",
+    "title": "Habilidades profesionales",
+    "hard": {
+      "title": "Habilidades técnicas",
+      "group01": "Three.js, WebGL, React Three Fiber, Blender",
+      "group02": "Vue.js, React, TypeScript, Arquitectura de frontend",
+      "group03": "Álgebra lineal aplicada a gráficos 3D",
+      "group04": "Matemáticas prácticas para renderizado en tiempo real",
+      "group05": "Experiencia en programación de bajo nivel (Assembler)"
+    },
     "soft": {
-      "sskills": "Habilidades blandas",
-      "management": "Gestión",
-      "strategic": "Pensamiento estrategico",
-      "critical": "Pensamiento crítico",
-      "negotiation": "Negociación"
+      "title": "Habilidades interpersonales",
+      "group01": "Liderazgo técnico, Planificación estratégica",
+      "group02": "Pensamiento analítico, Comunicación interfuncional",
+      "group03": "Mentalidad orientada al producto",
+      "group04": "Investigación y desarrollo propio",
+      "group05": "Mentalidad de responsabilidad y ownership"
     },
     "iq": {
-      "title": "Prueba general de CI",
+      "title": "Capacidades cognitivas",
       "organization": "Organization: ",
       "date": "Fecha: ",
       "report": "Informe de coeficiente intelectual ",
       "test": "Enlace de prueba",
       "iqReport": "Descargue el informe de su prueba de CI en formato PDF"
     },
-    "special": "Certificados Especiales"
+    "special": "Certificados especiales"
   },
   "cert": {
     "title-main": "Diplomas y Certificados",

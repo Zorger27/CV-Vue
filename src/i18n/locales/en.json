@@ -13,7 +13,7 @@
     "projects": "Projects",
     "education": "Education",
     "experience": "Experience",
-    "skills": "Skills",
+    "skills": "Competencies",
     "certificates": {
       "cert": "Certificates",
       "backend": "Backend",
@@ -103,24 +103,32 @@
     "skills": "Skills"
   },
   "skills": {
-    "title": "Hard & Soft skills",
-    "hard": "Hard skills",
+    "title": "Professional skills",
+    "hard": {
+      "title": "Hard skills",
+      "group01": "Three.js, WebGL, React Three Fiber, Blender",
+      "group02": "Vue.js, React, TypeScript, Frontend Architecture",
+      "group03": "Applied linear algebra for 3D graphics",
+      "group04": "Practical math for real-time rendering",
+      "group05": "Low-level programming background (Assembler)"
+    },
     "soft": {
-      "sskills": "Soft skills",
-      "management": "Management",
-      "strategic": "Strategic Thinking",
-      "critical": "Critical Thinking",
-      "negotiation": "Negotiation"
+      "title": "Soft skills",
+      "group01": "Technical leadership, Strategic planning",
+      "group02": "Analytical thinking, Cross-functional communication",
+      "group03": "Product-oriented mindset",
+      "group04": "Self-driven R&D",
+      "group05": "Ownership and responsibility mindset"
     },
     "iq": {
-      "title": "General IQ test",
+      "title": "Cognitive potential",
       "organization": "Organization: ",
       "date": "Date: ",
       "report": "IQ report ",
       "test": "Testing link",
       "iqReport": "Download your IQ test report in PDF format"
     },
-    "special": "Special Certificates"
+    "special": "Special certificates"
   },
   "cert": {
     "title-main": "Diplomas & Certificates",

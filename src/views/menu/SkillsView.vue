@@ -87,8 +87,6 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
     this.setPageTitle(mainTitle);
     this.setCanonical(url);
 
-    // const savedValue = localStorage.getItem('isCodersrankSkillsChartVisible');
-    //   if (savedValue) {this.isCodersrankSkillsChartVisible = savedValue === 'true';}
     window.addEventListener('resize', this.handleResize);
     },
   beforeUnmount() {
@@ -100,10 +98,6 @@ import {openGraphMixin} from "@/assets/ogimage/openGraphMixin";
   },
   methods: {
     changeView() {this.tableView = !this.tableView;},
-    // changeChart() {
-    //   this.isCodersrankSkillsChartVisible = !this.isCodersrankSkillsChartVisible;
-    //   localStorage.setItem('isCodersrankSkillsChartVisible', this.isCodersrankSkillsChartVisible.toString());
-    //   },
     handleResize() {this.windowWidth = window.innerWidth;},
     updateLayout() {this.$forceUpdate();},
   },
@@ -116,30 +110,28 @@ export default class Skills extends Vue {}
   <div class="skills">
     <h1>
       {{$t('skills.title')}}
-<!--      <i @click="changeChart" class="dandruff"><span :class="['fa', isCodersrankSkillsChartVisible ? 'fa-check-circle' : 'fa-hat-wizard']"></span></i>-->
     </h1>
     <line></line>
     <div class="container" :style="{gridTemplateColumns: gridColumns, gridTemplateAreas: gridAreas}">
-<!--      <div v-if="isCodersrankSkillsChartVisible">-->
-<!--        <codersrank-skills-chart username="zorger27" labels="true" legend="true" skills="JSON, JavaScript, Vue, CSS, SCSS, HTML, TypeScript" branding="false"></codersrank-skills-chart>-->
-<!--      </div>-->
       <div :class="{'type-skills': true, 'additional-styles': shouldApplyAdditionalStyles}">
         <div class="hard-skills">
-          <h3>{{$t('skills.hard')}}</h3>
+          <h3>{{$t('skills.hard.title')}}</h3>
           <ul>
-            <li><span>&#9745;</span>Html5, SCSS, JavaScript</li>
-            <li><span>&#9745;</span>Vue.js, React, Three.js</li>
-            <li><span>&#9745;</span>Git, GitHub</li>
-            <li><span>&#9745;</span>Figma, Photoshop</li>
+            <li><span>&#9745;</span>{{$t('skills.hard.group01')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.hard.group02')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.hard.group03')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.hard.group04')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.hard.group05')}}</li>
           </ul>
         </div>
         <div class="soft-skills">
-          <h3>{{$t('skills.soft.sskills')}}</h3>
+          <h3>{{$t('skills.soft.title')}}</h3>
           <ul>
-            <li><span>&#9745;</span>{{$t('skills.soft.management')}}</li>
-            <li><span>&#9745;</span>{{$t('skills.soft.strategic')}}</li>
-            <li><span>&#9745;</span>{{$t('skills.soft.critical')}}</li>
-            <li><span>&#9745;</span>{{$t('skills.soft.negotiation')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.soft.group01')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.soft.group02')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.soft.group03')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.soft.group04')}}</li>
+            <li><span>&#9745;</span>{{$t('skills.soft.group05')}}</li>
           </ul>
         </div>
       </div>
@@ -270,7 +262,7 @@ export default class Skills extends Vue {}
       //flex-wrap: wrap;
       //justify-content: space-around;
       margin: 0 0.5rem 0 0;
-      font-size: 2rem;
+      font-size: 1.8rem;
 
       h3 {
         text-decoration: underline;
@@ -284,6 +276,7 @@ export default class Skills extends Vue {}
       }
 
       .hard-skills {
+        font-size: 1.6rem;
         ul {
           list-style: none;
           padding: 0 0 0.3rem 1.5rem;
@@ -291,6 +284,7 @@ export default class Skills extends Vue {}
         }
       }
       .soft-skills {
+        font-size: 1.6rem;
         ul {
           list-style: none;
           padding: 0 0 0.3rem 1.5rem;
