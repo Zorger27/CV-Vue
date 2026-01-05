@@ -352,10 +352,12 @@ export default class Skills extends Vue {}
 
         .hard-skills {
           font-size: 1.1rem;
+          width: auto;
           ul {padding: 0 0.2rem 0.1rem 0.5rem;}
         }
         .soft-skills {
           font-size: 1.1rem;
+          width: auto;
           ul {padding: 0 0.2rem 0.1rem 0.5rem;}
         }
       }
