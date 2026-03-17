@@ -549,7 +549,7 @@ const state = {
         techno: "React, React Router, Redux Toolkit, React i18next, Vite, HTML5, SCSS, FlexBox CSS, Grid CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, Favicon, Sitemap, Robots.txt",
         sourcelink: "https://github.com/Zorger27/React-JS-Template",
         demolink: "https://react-js-template.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/nZTrEuyZIwg"
       },
       {
         id: 26,
