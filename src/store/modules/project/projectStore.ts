@@ -571,7 +571,7 @@ const state = {
         techno: "React, React Router, Redux Toolkit, React i18next, Vite, HTML5, SCSS, FlexBox CSS, Grid CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, Open Graph protocol, Favicon, Sitemap, Robots.txt",
         sourcelink: "https://github.com/Zorger27/Reactorium",
         demolink: "https://reactorium-zorger.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/dEIsnA3grT4"
       },
       {
         id: 27,
