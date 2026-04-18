@@ -593,7 +593,7 @@ const state = {
         techno: "React, Three.js, React Three Fiber, React Router, Redux Toolkit, React i18next, Vite, HTML5, SCSS, FlexBox CSS, Grid CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, SEO toolkit (full)",
         sourcelink: "https://github.com/Zorger27/Reactorium-3D",
         demolink: "https://reactorium-3d.vercel.app",
-        youtubelink: "https://youtu.be/JpEpBbEa2cI"
+        youtubelink: "https://youtu.be/Wt77Q8cDKgM"
       },
     ]
 };
