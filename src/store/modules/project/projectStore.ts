@@ -595,6 +595,28 @@ const state = {
         demolink: "https://reactorium-3d.vercel.app",
         youtubelink: "https://youtu.be/Wt77Q8cDKgM"
       },
+      {
+        id: 28,
+        title_en: "Shaders",
+        title_ua: "Shaders",
+        title_es: "Shaders",
+        start_date_en: "June 2026",
+        start_date_ua: "Червень 2026",
+        start_date_es: "Junio de 2026",
+        end_date_en: "September 2026",
+        end_date_ua: "Вересень 2026",
+        end_date_es: "Septiembre de 2026",
+        description_en: "⚡ Shaders is an interactive environment for exploring Vertex and Fragment Shaders in real time, where code is transformed into visual output and combines modules for working with geometry, pixels, noise, and scene parameters. 🚀 Built on WebGPU and TSL, it serves as a tool for prototyping, experimentation, and creating visual solutions that can be applied in modern web products and commercial interfaces. 🌐",
+        description_ua: "⚡ Shaders — інтерактивне середовище для дослідження Vertex і Fragment Shader’ів у реальному часі, де код перетворюється на візуальний результат, що об’єднує модулі для роботи з геометрією, пікселями, шумами та параметрами сцени. 🚀 Побудований на WebGPU та TSL, він слугує інструментом для прототипування, експериментів і створення візуальних рішень, які можуть застосовуватися в сучасних веб-продуктах і комерційних інтерфейсах. 🌐",
+        description_es: "⚡ Shaders es un entorno interactivo para explorar Vertex y Fragment Shaders en tiempo real, donde el código se transforma en resultados visuales y combina módulos para trabajar con geometría, píxeles, ruido y parámetros de escena. 🚀 Construido sobre WebGPU y TSL, sirve como herramienta para prototipado, experimentación y creación de soluciones visuales que pueden aplicarse en productos web modernos e interfaces comerciales. 🌐",
+        type_en: "Single page application",
+        type_ua: "Односторінковий додаток",
+        type_es: "Aplicación de una sola página",
+        techno: "React, Three.js, React Three Fiber, React Router, Redux Toolkit, React i18next, Vite, HTML5, SCSS, FlexBox CSS, Grid CSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, SEO toolkit (full)",
+        sourcelink: "",
+        demolink: "",
+        youtubelink: ""
+      },
     ]
 };
 const getters = {};
