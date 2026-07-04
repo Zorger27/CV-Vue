@@ -106,19 +106,19 @@
     "title": "Habilidades profesionales",
     "hard": {
       "title": "Habilidades técnicas",
-      "group01": "Three.js, WebGL, React Three Fiber, Blender",
-      "group02": "Vue.js, React, TypeScript, Arquitectura de frontend",
-      "group03": "Álgebra lineal aplicada a gráficos 3D",
-      "group04": "Matemáticas prácticas para renderizado en tiempo real",
-      "group05": "Experiencia en programación de bajo nivel (Assembler)"
+      "group01": "Three.js, WebGL, WebGPU, React Three Fiber (R3F)",
+      "group02": "React, Vue.js, TypeScript, Arquitectura Frontend",
+      "group03": "Shaders (TSL) y Computación GPU (GPGPU)",
+      "group04": "Álgebra Lineal y Matemáticas para Renderizado",
+      "group05": "Pipeline Gráfico y Programación de Bajo Nivel (Assembly)"
     },
     "soft": {
       "title": "Habilidades interpersonales",
-      "group01": "Liderazgo técnico, Planificación estratégica",
-      "group02": "Pensamiento analítico, Comunicación interfuncional",
-      "group03": "Mentalidad orientada al producto",
-      "group04": "Investigación y desarrollo propio",
-      "group05": "Mentalidad de responsabilidad y ownership"
+      "group01": "Liderazgo Técnico y Pensamiento Estratégico",
+      "group02": "Pensamiento Analítico y Colaboración Interfuncional",
+      "group03": "Mentalidad de Producto y Enfoque Centrado en el Usuario",
+      "group04": "Investigación, Prototipado e Innovación (I+D)",
+      "group05": "Responsabilidad por los Resultados"
     },
     "iq": {
       "title": "Capacidades cognitivas",

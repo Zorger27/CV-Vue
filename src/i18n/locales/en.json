@@ -106,19 +106,19 @@
     "title": "Professional skills",
     "hard": {
       "title": "Hard skills",
-      "group01": "Three.js, WebGL, React Three Fiber, Blender",
-      "group02": "Vue.js, React, TypeScript, Frontend Architecture",
-      "group03": "Applied linear algebra for 3D graphics",
-      "group04": "Practical math for real-time rendering",
-      "group05": "Low-level programming background (Assembler)"
+      "group01": "Three.js, WebGL, WebGPU, React Three Fiber (R3F)",
+      "group02": "React, Vue.js, TypeScript, Frontend Architecture",
+      "group03": "Shader Programming (TSL), GPU Computing (GPGPU)",
+      "group04": "Applied Linear Algebra & Real-Time Rendering Mathematics",
+      "group05": "Graphics Pipeline & Low-Level Programming (Assembly)"
     },
     "soft": {
       "title": "Soft skills",
-      "group01": "Technical leadership, Strategic planning",
-      "group02": "Analytical thinking, Cross-functional communication",
-      "group03": "Product-oriented mindset",
-      "group04": "Self-driven R&D",
-      "group05": "Ownership and responsibility mindset"
+      "group01": "Technical Leadership & Strategic Thinking",
+      "group02": "Analytical Thinking & Cross-Functional Collaboration",
+      "group03": "Product Mindset & User-Centered Thinking",
+      "group04": "Research, Prototyping & Innovation (R&D)",
+      "group05": "Ownership & Accountability"
     },
     "iq": {
       "title": "Cognitive potential",

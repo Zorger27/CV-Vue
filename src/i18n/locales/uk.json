@@ -106,19 +106,19 @@
     "title": "Професійні навички",
     "hard": {
       "title": "Технічні навички",
-      "group01": "Three.js, WebGL, React Three Fiber, Blender",
-      "group02": "Vue.js, React, TypeScript, Frontend архітектура",
-      "group03": "Прикладна лінійна алгебра для 3D-графіки",
-      "group04": "Практична математика для рендерингу в реальному часі",
-      "group05": "Досвід низькорівневого програмування (Assembler)"
+      "group01": "Three.js, WebGL, WebGPU, React Three Fiber (R3F)",
+      "group02": "React, Vue.js, TypeScript, Frontend Architecture",
+      "group03": "Shader Programming (TSL), GPU Computing (GPGPU)",
+      "group04": "Applied Linear Algebra & Real-Time Rendering Mathematics",
+      "group05": "Graphics Pipeline & Low-Level Programming (Assembly)"
     },
     "soft": {
       "title": "Особисті навички",
-      "group01": "Технічне лідерство, Стратегічне планування",
-      "group02": "Аналітичне мислення, Міжфункціональна комунікація",
-      "group03": "Продуктово-орієнтований спосіб мислення",
-      "group04": "Власні дослідження та розробки",
-      "group05": "Культура власності та відповідальності"
+      "group01": "Технічне лідерство та стратегічне мислення",
+      "group02": "Аналітичне мислення та міжфункціональна взаємодія",
+      "group03": "Продуктове мислення та орієнтація на користувача",
+      "group04": "Дослідження, прототипування та інновації (R&D)",
+      "group05": "Відповідальність за результат"
     },
     "iq": {
       "title": "Когнітивний потенціал",
