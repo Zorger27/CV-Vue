@@ -61,8 +61,8 @@
     "info": {
       "text01": "I have been developing digital products throughout my professional career — from low-level systems and assembler to modern 3D-oriented web applications built with WebGL and Three.js. My journey in IT started with applied development and automation and gradually evolved into building complex visual and interactive systems for real-world products.",
       "text02": "For a significant part of my career, I combined leadership roles with hands-on engineering work: designing web systems, developing digital products, frontend development, and creating technical solutions at the intersection of business and technology. This experience shaped my product-driven and architectural mindset, result-oriented thinking, and responsibility for the full solution lifecycle.",
-      "text03": "Today, my primary focus is frontend development and interactive 3D graphics for the web.",
-      "text04": "I design and build complex scenes, configurators, and visual interfaces using Three.js, React, and WebGL, with strong attention to architecture, performance, and production quality. I am comfortable working with mathematics, graphics, state management, animations, and user interaction scenarios.",
+      "text03": "Today, my primary focus is developing next-generation interactive web applications and graphics systems.",
+      "text04": "I design visual solutions using React, Three.js, WebGL, and WebGPU—from application architecture and user interfaces to shaders, GPU computing, and rendering optimization. I place a strong emphasis on architecture, performance, and production-ready reliability.",
       "text05": "I learn new technologies quickly, analyze problems deeply, and work effectively both independently and within teams — from concept and R&D prototyping to final delivery.",
       "text06": "Commercial frontend development experience since 2016, with a strong focus on 3D web and interactive visual products."
     }
