@@ -615,7 +615,7 @@ const state = {
         techno: "React, Three.js, Three.js Shading Language (TSL), React Three Fiber, React Three Drei, React Router, Redux Toolkit, React i18next, Vite, HTML5, SCSS, JavaScript, Markdown, Git, GitHub, Google Search Console, Google Analytics, SEO toolkit (full)",
         sourcelink: "https://github.com/Zorger27/Shaders",
         demolink: "https://shaders-zorger.vercel.app",
-        youtubelink: ""
+        youtubelink: "https://youtu.be/V_3cWkZJIrA"
       },
     ]
 };
