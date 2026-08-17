@@ -117,7 +117,7 @@ export default class About extends Vue {}
   background: inherit;
   margin-bottom: 1rem;
 }
-.title {color: darkgoldenrod;font-size: 2.5rem;margin: 0.8rem 0;}
+.title {color: darkgoldenrod; font-size: 2.5rem; margin: 0.8rem 0;}
 
 .more {
   display: inline-flex;
